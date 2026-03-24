@@ -1,0 +1,116 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USB-UCMUCSICX" guid="{569d11aa-5068-5ee5-da22-ce541c0b1481}" resourceFileName="Microsoft-Windows-USB-UCMUCSICX" messageFileName="Microsoft-Windows-USB-UCMUCSICX" symbol="MicrosoftWindowsUSBUCMUCSICX" source="Xml" >
+    <keywords>
+     <keyword name="Default" message="$(string.keyword_Default)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="FailureEncountered" message="$(string.task_FailureEncountered)" value="1"/>
+    </tasks>
+    <maps>
+     <valueMap name="FailureType">
+      <map value="0x0" message="$(string.map_FailureTypeCommand Timeout)"/>
+      <map value="0x1" message="$(string.map_FailureTypeCommand Execution Failed)"/>
+      <map value="0x2" message="$(string.map_FailureTypeIncorrect Connector Number)"/>
+      <map value="0x3" message="$(string.map_FailureTypeHardware Request Failed By Client Driver)"/>
+      <map value="0xfe" message="$(string.map_FailureTypeTest Simulated Failure)"/>
+      <map value="0xff" message="$(string.map_FailureTypeUndefined)"/>
+     </valueMap>
+     <valueMap name="UcsiCommand">
+      <map value="0x0" message="$(string.map_UcsiCommandUnavailable)"/>
+      <map value="0x1" message="$(string.map_UcsiCommandPpmReset)"/>
+      <map value="0x2" message="$(string.map_UcsiCommandCancel)"/>
+      <map value="0x3" message="$(string.map_UcsiCommandConnectorReset)"/>
+      <map value="0x4" message="$(string.map_UcsiCommandAckCcCi)"/>
+      <map value="0x5" message="$(string.map_UcsiCommandSetNotificationEnable)"/>
+      <map value="0x6" message="$(string.map_UcsiCommandGetCapability)"/>
+      <map value="0x7" message="$(string.map_UcsiCommandGetConnectorCapability)"/>
+      <map value="0x8" message="$(string.map_UcsiCommandSetUom)"/>
+      <map value="0x9" message="$(string.map_UcsiCommandSetUor)"/>
+      <map value="0xa" message="$(string.map_UcsiCommandSetPdm)"/>
+      <map value="0xb" message="$(string.map_UcsiCommandSetPdr)"/>
+      <map value="0xc" message="$(string.map_UcsiCommandGetAlternateModes)"/>
+      <map value="0xd" message="$(string.map_UcsiCommandGetCamSupported)"/>
+      <map value="0xe" message="$(string.map_UcsiCommandGetCurrentCam)"/>
+      <map value="0xf" message="$(string.map_UcsiCommandSetNewCam)"/>
+      <map value="0x10" message="$(string.map_UcsiCommandGetPdos)"/>
+      <map value="0x11" message="$(string.map_UcsiCommandGetCableProperty)"/>
+      <map value="0x12" message="$(string.map_UcsiCommandGetConnectorStatus)"/>
+      <map value="0x13" message="$(string.map_UcsiCommandGetErrorStatus)"/>
+      <map value="0x14" message="$(string.map_UcsiCommandSetPowerLevel)"/>
+      <map value="0x15" message="$(string.map_UcsiCommandGetPdMessage)"/>
+      <map value="0x16" message="$(string.map_UcsiCommandGetAttentionVdo)"/>
+      <map value="0x18" message="$(string.map_UcsiCommandGetCamCS)"/>
+      <map value="0x19" message="$(string.map_UcsiCommandLpmFwUpdateRequest)"/>
+      <map value="0x1a" message="$(string.map_UcsiCommandSecurityRequest)"/>
+      <map value="0x1b" message="$(string.map_UcsiCommandSetRetimerMode)"/>
+      <map value="0x1c" message="$(string.map_UcsiCommandSetSinkPath)"/>
+      <map value="0x1d" message="$(string.map_UcsiCommandSetPdos)"/>
+      <map value="0x1e" message="$(string.map_UcsiCommandReadPowerLevel)"/>
+      <map value="0x1f" message="$(string.map_UcsiCommandChunkingSupport)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="FailureEncountered" version="0" task="FailureEncountered" level="win:Error" keywords="Default" template="FailureEncounteredArgs"/>
+    </events>
+    <templates>
+     <template tid="FailureEncounteredArgs">
+      <data name="fid_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="fid_Service" inType="win:UnicodeString"/>
+      <data name="fid_FailureType" inType="win:UInt32" map="FailureType"/>
+      <data name="fid_FailureSubType" inType="win:UInt32"/>
+      <data name="fid_AssociatedUcsiCommand" inType="win:UInt32"/>
+      <data name="fid_UcsiCommand" inType="win:UInt32" map="UcsiCommand"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Default" value="Default"/>
+    <string id="task_FailureEncountered" value="FailureEncountered"/>
+    <string id="map_FailureTypeCommand Timeout" value="Command Timeout"/>
+    <string id="map_FailureTypeCommand Execution Failed" value="Command Execution Failed"/>
+    <string id="map_FailureTypeIncorrect Connector Number" value="Incorrect Connector Number"/>
+    <string id="map_FailureTypeHardware Request Failed By Client Driver" value="Hardware Request Failed By Client Driver"/>
+    <string id="map_FailureTypeTest Simulated Failure" value="Test Simulated Failure"/>
+    <string id="map_FailureTypeUndefined" value="Undefined"/>
+    <string id="map_UcsiCommandUnavailable" value="Unavailable"/>
+    <string id="map_UcsiCommandPpmReset" value="PpmReset"/>
+    <string id="map_UcsiCommandCancel" value="Cancel"/>
+    <string id="map_UcsiCommandConnectorReset" value="ConnectorReset"/>
+    <string id="map_UcsiCommandAckCcCi" value="AckCcCi"/>
+    <string id="map_UcsiCommandSetNotificationEnable" value="SetNotificationEnable"/>
+    <string id="map_UcsiCommandGetCapability" value="GetCapability"/>
+    <string id="map_UcsiCommandGetConnectorCapability" value="GetConnectorCapability"/>
+    <string id="map_UcsiCommandSetUom" value="SetUom"/>
+    <string id="map_UcsiCommandSetUor" value="SetUor"/>
+    <string id="map_UcsiCommandSetPdm" value="SetPdm"/>
+    <string id="map_UcsiCommandSetPdr" value="SetPdr"/>
+    <string id="map_UcsiCommandGetAlternateModes" value="GetAlternateModes"/>
+    <string id="map_UcsiCommandGetCamSupported" value="GetCamSupported"/>
+    <string id="map_UcsiCommandGetCurrentCam" value="GetCurrentCam"/>
+    <string id="map_UcsiCommandSetNewCam" value="SetNewCam"/>
+    <string id="map_UcsiCommandGetPdos" value="GetPdos"/>
+    <string id="map_UcsiCommandGetCableProperty" value="GetCableProperty"/>
+    <string id="map_UcsiCommandGetConnectorStatus" value="GetConnectorStatus"/>
+    <string id="map_UcsiCommandGetErrorStatus" value="GetErrorStatus"/>
+    <string id="map_UcsiCommandSetPowerLevel" value="SetPowerLevel"/>
+    <string id="map_UcsiCommandGetPdMessage" value="GetPdMessage"/>
+    <string id="map_UcsiCommandGetAttentionVdo" value="GetAttentionVdo"/>
+    <string id="map_UcsiCommandGetCamCS" value="GetCamCS"/>
+    <string id="map_UcsiCommandLpmFwUpdateRequest" value="LpmFwUpdateRequest"/>
+    <string id="map_UcsiCommandSecurityRequest" value="SecurityRequest"/>
+    <string id="map_UcsiCommandSetRetimerMode" value="SetRetimerMode"/>
+    <string id="map_UcsiCommandSetSinkPath" value="SetSinkPath"/>
+    <string id="map_UcsiCommandSetPdos" value="SetPdos"/>
+    <string id="map_UcsiCommandReadPowerLevel" value="ReadPowerLevel"/>
+    <string id="map_UcsiCommandChunkingSupport" value="ChunkingSupport"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,653 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PCI" guid="{1a9443d4-b099-44d6-8eb1-829b9c2fe290}" resourceFileName="Microsoft-Windows-PCI" messageFileName="Microsoft-Windows-PCI" symbol="MicrosoftWindowsPCI" source="Xml" >
+    <keywords>
+     <keyword name="PciDiag" message="$(string.keyword_PciDiag)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="Log" message="$(string.task_Log)" value="1"/>
+     <task name="AspmErrataRundown" message="$(string.task_AspmErrataRundown)" value="10"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="Log" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="LogArgs"/>
+     <event value="2" symbol="Log2" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="LogArgs"/>
+     <event value="3" symbol="Log3" version="0" task="Log" level="win:Error" keywords="PciDiag" template="LogArgs"/>
+     <event value="4" symbol="Log4" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log4Args"/>
+     <event value="5" symbol="Log5" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log4Args"/>
+     <event value="10" symbol="AspmErrataRundown" version="0" task="AspmErrataRundown" level="win:Informational" keywords="PciDiag"/>
+     <event value="11" symbol="Log11" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log11Args"/>
+     <event value="12" symbol="Log12" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="Log11Args"/>
+     <event value="13" symbol="Log13" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="14" symbol="Log14" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log11Args"/>
+     <event value="15" symbol="Log15" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="Log11Args"/>
+     <event value="16" symbol="Log16" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="17" symbol="Log17" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log11Args"/>
+     <event value="18" symbol="Log18" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="Log11Args"/>
+     <event value="19" symbol="Log19" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="20" symbol="Log20" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log20Args"/>
+     <event value="21" symbol="Log21" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="Log20Args"/>
+     <event value="22" symbol="Log22" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log20Args"/>
+     <event value="23" symbol="Log23" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="24" symbol="Log24" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="25" symbol="Log25" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log11Args"/>
+     <event value="26" symbol="Log26" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log20Args"/>
+     <event value="30" symbol="Log30" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log30Args"/>
+     <event value="31" symbol="Log31" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log30Args"/>
+     <event value="40" symbol="Log40" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log40Args"/>
+     <event value="41" symbol="Log41" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log40Args"/>
+     <event value="42" symbol="Log42" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log40Args"/>
+     <event value="43" symbol="Log43" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log40Args"/>
+     <event value="50" symbol="Log50" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log50Args"/>
+     <event value="51" symbol="Log51" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log51Args"/>
+     <event value="52" symbol="Log52" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log50Args"/>
+     <event value="53" symbol="Log53" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log50Args"/>
+     <event value="54" symbol="Log54" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log54Args"/>
+     <event value="55" symbol="Log55" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log54Args"/>
+     <event value="56" symbol="Log56" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log54Args"/>
+     <event value="57" symbol="Log57" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log54Args"/>
+     <event value="58" symbol="Log58" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log58Args"/>
+     <event value="59" symbol="Log59" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log58Args"/>
+     <event value="60" symbol="Log60" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log58Args"/>
+     <event value="61" symbol="Log61" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log58Args"/>
+     <event value="62" symbol="Log62" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log62Args"/>
+     <event value="63" symbol="Log63" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log63Args"/>
+     <event value="70" symbol="Log70" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log70Args"/>
+     <event value="71" symbol="Log71" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log70Args"/>
+     <event value="72" symbol="Log72" version="0" task="Log" level="win:Warning" keywords="PciDiag" template="Log70Args"/>
+     <event value="73" symbol="Log73" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log70Args"/>
+     <event value="74" symbol="Log74" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log70Args"/>
+     <event value="80" symbol="Log80" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log80Args"/>
+     <event value="81" symbol="Log81" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log80Args"/>
+     <event value="82" symbol="Log82" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log80Args"/>
+     <event value="83" symbol="Log83" version="0" task="Log" level="win:Error" keywords="PciDiag" template="Log80Args"/>
+     <event value="84" symbol="Log84" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log80Args"/>
+     <event value="85" symbol="Log85" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log80Args"/>
+     <event value="90" symbol="Log90" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log90Args"/>
+     <event value="91" symbol="Log91" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log91Args"/>
+     <event value="92" symbol="Log92" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log91Args"/>
+     <event value="93" symbol="Log93" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log93Args"/>
+     <event value="94" symbol="Log94" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log94Args"/>
+     <event value="95" symbol="Log95" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log95Args"/>
+     <event value="96" symbol="Log96" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log96Args"/>
+     <event value="97" symbol="Log97" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log97Args"/>
+     <event value="98" symbol="Log98" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log98Args"/>
+     <event value="99" symbol="Log99" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log99Args"/>
+     <event value="100" symbol="Log100" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log100Args"/>
+     <event value="101" symbol="Log101" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log101Args"/>
+     <event value="102" symbol="Log102" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log102Args"/>
+     <event value="103" symbol="Log103" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log103Args"/>
+     <event value="104" symbol="Log104" version="0" task="Log" level="win:Informational" keywords="PciDiag" template="Log104Args"/>
+    </events>
+    <templates>
+     <template tid="LogArgs">
+      <data name="Category" inType="win:HexInt64"/>
+      <data name="Rid" inType="win:HexInt32"/>
+      <data name="Secondary" inType="win:UInt8"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Log4Args">
+      <data name="Category" inType="win:HexInt64"/>
+      <data name="Rid" inType="win:HexInt32"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="MessageType" inType="win:HexInt32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="PrevLinkSpeed" inType="win:UInt16"/>
+      <data name="CurLinkSpeed" inType="win:UInt16"/>
+      <data name="PrevLinkWidth" inType="win:UInt16"/>
+      <data name="CurLinkWidth" inType="win:UInt16"/>
+     </template>
+     <template tid="Log11Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="ExtensionType" inType="win:UInt32"/>
+      <data name="ExtensionTypeStr" inType="win:UnicodeString"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="Category" inType="win:HexInt32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Log20Args">
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="Category" inType="win:HexInt32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Log30Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="ExtensionType" inType="win:UInt32"/>
+      <data name="ExtensionTypeStr" inType="win:UnicodeString"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="Category" inType="win:HexInt32"/>
+      <data name="MessageType" inType="win:HexInt32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="PrevLinkSpeed" inType="win:UInt16"/>
+      <data name="CurLinkSpeed" inType="win:UInt16"/>
+      <data name="PrevLinkWidth" inType="win:UInt16"/>
+      <data name="CurLinkWidth" inType="win:UInt16"/>
+     </template>
+     <template tid="Log40Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="ExtensionType" inType="win:UInt32"/>
+      <data name="ExtensionTypeStr" inType="win:UnicodeString"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="FromState" inType="win:UInt8"/>
+      <data name="FromStateStr" inType="win:UnicodeString"/>
+      <data name="ToState" inType="win:UInt8"/>
+      <data name="ToStateStr" inType="win:UnicodeString"/>
+      <data name="Change" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="Log50Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="ResourceType" inType="win:UInt8"/>
+      <data name="ResourceTypeStr" inType="win:UnicodeString"/>
+      <data name="ResourceBegin" inType="win:UInt64"/>
+      <data name="ResourceEnd" inType="win:UInt64"/>
+      <data name="ResourceLength" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt16"/>
+      <data name="BootConfig" inType="win:UInt8"/>
+      <data name="Translated" inType="win:UInt8"/>
+      <data name="Index" inType="win:UInt32"/>
+     </template>
+     <template tid="Log51Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="ResourceType" inType="win:UInt8"/>
+      <data name="ResourceTypeStr" inType="win:UnicodeString"/>
+      <data name="ResourceLength" inType="win:UInt64"/>
+      <data name="ResourceAlignment" inType="win:UInt64"/>
+      <data name="Maximum" inType="win:UInt64"/>
+      <data name="Minimum" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt16"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="SharedDisposition" inType="win:UInt8"/>
+      <data name="Alternative" inType="win:UInt32"/>
+     </template>
+     <template tid="Log54Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="MmioType" inType="win:UInt8"/>
+      <data name="MmioTypeStr" inType="win:UnicodeString"/>
+      <data name="MmioBegin" inType="win:UInt64"/>
+      <data name="MmioLength" inType="win:UInt64"/>
+      <data name="Index" inType="win:UInt8"/>
+      <data name="VF" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResType" inType="win:UInt8"/>
+      <data name="ReqType" inType="win:UInt8"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Log58Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="MmioType" inType="win:UInt8"/>
+      <data name="MmioTypeStr" inType="win:UnicodeString"/>
+      <data name="MmioAlignment" inType="win:UInt64"/>
+      <data name="MmioLength" inType="win:UInt64"/>
+      <data name="Index" inType="win:UInt8"/>
+      <data name="VF" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ReqType" inType="win:UInt8"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="MmioMin" inType="win:UInt64"/>
+      <data name="MmioMax" inType="win:UInt64"/>
+     </template>
+     <template tid="Log62Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="InterruptType" inType="win:UInt8"/>
+      <data name="InterruptTypeStr" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UInt64"/>
+      <data name="Data" inType="win:UInt32"/>
+      <data name="Index" inType="win:UInt8"/>
+     </template>
+     <template tid="Log63Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="InterruptType" inType="win:UInt8"/>
+      <data name="InterruptTypeStr" inType="win:UnicodeString"/>
+      <data name="MessageRequested" inType="win:UInt32"/>
+      <data name="MinVector" inType="win:UInt32"/>
+      <data name="MaxVector" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt16"/>
+      <data name="SharedDisposition" inType="win:UInt8"/>
+      <data name="AffinityPolicy" inType="win:UInt16"/>
+      <data name="Group" inType="win:UInt16"/>
+      <data name="PriorityPolicy" inType="win:UInt32"/>
+      <data name="TargetProcessors" inType="win:UInt64"/>
+     </template>
+     <template tid="Log70Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="Flag" inType="win:UInt32"/>
+      <data name="Processor" inType="win:UInt16"/>
+      <data name="Process" inType="win:UInt16"/>
+      <data name="Thread" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="Data" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Timestamp1" inType="win:UInt64"/>
+      <data name="Timestamp2" inType="win:UInt64"/>
+      <data name="Source" inType="win:UInt64"/>
+     </template>
+     <template tid="Log80Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="ExtensionType" inType="win:UInt32"/>
+      <data name="ExtensionTypeStr" inType="win:UnicodeString"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="PowerState" inType="win:UInt8"/>
+      <data name="PreviousPowerStateInterruptTime" inType="win:UInt64"/>
+      <data name="BeginTime" inType="win:UInt64"/>
+      <data name="ElapsedTimeMicroSecond" inType="win:UInt64"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="SystemPower" inType="win:UInt8"/>
+      <data name="IsKsr" inType="win:UInt8"/>
+      <data name="State" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="Log90Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="ExpressCapabilityRegister" inType="win:UInt16"/>
+      <data name="DeviceCapabilityRegister" inType="win:UInt32"/>
+      <data name="DeviceControlRegister" inType="win:UInt16"/>
+      <data name="DeviceStatusRegister" inType="win:UInt16"/>
+      <data name="LinkCapabilityRegister" inType="win:UInt32"/>
+      <data name="LinkControlRegister" inType="win:UInt16"/>
+      <data name="LinkStatusRegister" inType="win:UInt16"/>
+      <data name="SlotCapabilityRegister" inType="win:UInt32"/>
+      <data name="SlotControlRegister" inType="win:UInt16"/>
+      <data name="SlotStatusRegister" inType="win:UInt16"/>
+      <data name="RootControlRegister" inType="win:UInt16"/>
+      <data name="RootCapabilityRegister" inType="win:UInt16"/>
+      <data name="RootStatusRegister" inType="win:UInt32"/>
+      <data name="DeviceCapability2Register" inType="win:UInt32"/>
+      <data name="DeviceControl2Register" inType="win:UInt16"/>
+      <data name="DeviceStatus2Register" inType="win:UInt16"/>
+      <data name="LinkCapability2Register" inType="win:UInt32"/>
+      <data name="LinkControl2Register" inType="win:UInt16"/>
+      <data name="LinkStatus2Register" inType="win:UInt16"/>
+      <data name="NativeExpressMode" inType="win:UInt8"/>
+     </template>
+     <template tid="Log91Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="UncorrectableErrorStatus" inType="win:UInt32"/>
+      <data name="UncorrectableErrorMask" inType="win:UInt32"/>
+      <data name="UncorrectableErrorSeverity" inType="win:UInt32"/>
+      <data name="CorrectableErrorStatus" inType="win:UInt32"/>
+      <data name="CorrectableErrorMask" inType="win:UInt32"/>
+      <data name="CapAndControl" inType="win:UInt32"/>
+      <data name="HeaderLog0" inType="win:UInt32"/>
+      <data name="HeaderLog1" inType="win:UInt32"/>
+      <data name="HeaderLog2" inType="win:UInt32"/>
+      <data name="HeaderLog3" inType="win:UInt32"/>
+     </template>
+     <template tid="Log93Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="RootErrorCommand" inType="win:UInt32"/>
+      <data name="RootErrorStatus" inType="win:UInt32"/>
+      <data name="ErrorSourceId" inType="win:UInt32"/>
+     </template>
+     <template tid="Log94Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="DpcCapability" inType="win:UInt16"/>
+      <data name="DpcControl" inType="win:UInt16"/>
+      <data name="DpcStatus" inType="win:UInt16"/>
+      <data name="DpcErrorSourceId" inType="win:UInt16"/>
+     </template>
+     <template tid="Log95Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="DpcCapability" inType="win:UInt16"/>
+      <data name="DpcControl" inType="win:UInt16"/>
+      <data name="DpcStatus" inType="win:UInt16"/>
+      <data name="DpcErrorSourceId" inType="win:UInt16"/>
+      <data name="DpcRpPioStatus" inType="win:UInt32"/>
+      <data name="DpcRpPioMask" inType="win:UInt32"/>
+      <data name="DpcRpPioSeverity" inType="win:UInt32"/>
+      <data name="DpcRpPioSysErr" inType="win:UInt32"/>
+      <data name="DpcRpPioException" inType="win:UInt32"/>
+      <data name="DpcRpPioHeaderLog0" inType="win:UInt32"/>
+      <data name="DpcRpPioHeaderLog1" inType="win:UInt32"/>
+      <data name="DpcRpPioHeaderLog2" inType="win:UInt32"/>
+      <data name="DpcRpPioHeaderLog3" inType="win:UInt32"/>
+      <data name="DpcRpPioImplementationSpecificLog" inType="win:UInt32"/>
+      <data name="DpcRpPioTlpPrefixLog0" inType="win:UInt32"/>
+      <data name="DpcRpPioTlpPrefixLog1" inType="win:UInt32"/>
+      <data name="DpcRpPioTlpPrefixLog2" inType="win:UInt32"/>
+      <data name="DpcRpPioTlpPrefixLog3" inType="win:UInt32"/>
+     </template>
+     <template tid="Log96Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="DpcStatus" inType="win:UInt16"/>
+      <data name="DpcErrorSourceId" inType="win:UInt16"/>
+     </template>
+     <template tid="Log97Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="AcsCapability" inType="win:UInt16"/>
+      <data name="AcsControl" inType="win:UInt16"/>
+     </template>
+     <template tid="Log98Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="Offset" inType="win:UInt16"/>
+      <data name="SriovCapability" inType="win:UInt32"/>
+      <data name="SriovControl" inType="win:UInt16"/>
+      <data name="SriovStatus" inType="win:UInt16"/>
+      <data name="InitialVF" inType="win:UInt16"/>
+      <data name="TotalVF" inType="win:UInt16"/>
+      <data name="EnabledVF" inType="win:UInt16"/>
+      <data name="FunctionDependencyLink" inType="win:UInt8"/>
+      <data name="FirstVFOffset" inType="win:UInt16"/>
+      <data name="VFStride" inType="win:UInt16"/>
+      <data name="VFDeviceId" inType="win:UInt16"/>
+      <data name="SupportedPageSizes" inType="win:UInt32"/>
+      <data name="SystemPageSize" inType="win:UInt32"/>
+      <data name="VFBar0" inType="win:UInt32"/>
+      <data name="VFBar1" inType="win:UInt32"/>
+      <data name="VFBar2" inType="win:UInt32"/>
+      <data name="VFBar3" inType="win:UInt32"/>
+      <data name="VFBar4" inType="win:UInt32"/>
+      <data name="VFBar5" inType="win:UInt32"/>
+      <data name="VFMigrationStateArray" inType="win:UInt32"/>
+     </template>
+     <template tid="Log99Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="ProbedVFBar0" inType="win:UInt32"/>
+      <data name="ProbedVFBar1" inType="win:UInt32"/>
+      <data name="ProbedVFBar2" inType="win:UInt32"/>
+      <data name="ProbedVFBar3" inType="win:UInt32"/>
+      <data name="ProbedVFBar4" inType="win:UInt32"/>
+      <data name="ProbedVFBar5" inType="win:UInt32"/>
+     </template>
+     <template tid="Log100Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="RootStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="Log101Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="SlotStatus" inType="win:UInt16"/>
+      <data name="RetryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="Log102Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="PreciseTime" inType="win:UInt64"/>
+      <data name="Qpc" inType="win:UInt64"/>
+      <data name="LinkStatus" inType="win:UInt16"/>
+     </template>
+     <template tid="Log103Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="CommandRegister" inType="win:UInt16"/>
+      <data name="Bar0" inType="win:UInt32"/>
+      <data name="Bar1" inType="win:UInt32"/>
+      <data name="Bar2" inType="win:UInt32"/>
+      <data name="Bar3" inType="win:UInt32"/>
+      <data name="Bar4" inType="win:UInt32"/>
+      <data name="Bar5" inType="win:UInt32"/>
+      <data name="RomBar" inType="win:UInt32"/>
+      <data name="InterruptLine" inType="win:UInt8"/>
+      <data name="InterruptPin" inType="win:UInt8"/>
+     </template>
+     <template tid="Log104Args">
+      <data name="Segment" inType="win:UInt32"/>
+      <data name="Bus" inType="win:UInt8"/>
+      <data name="Device" inType="win:UInt8"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="SecondaryBus" inType="win:UInt8"/>
+      <data name="Slot" inType="win:UInt32"/>
+      <data name="VendorId" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UInt16"/>
+      <data name="RevId" inType="win:UInt8"/>
+      <data name="SubVendorId" inType="win:UInt16"/>
+      <data name="SubDeviceId" inType="win:UInt16"/>
+      <data name="CommandRegister" inType="win:UInt16"/>
+      <data name="Bar0" inType="win:UInt32"/>
+      <data name="Bar1" inType="win:UInt32"/>
+      <data name="PrimaryBusNumber" inType="win:UInt8"/>
+      <data name="SecondaryBusNumber" inType="win:UInt8"/>
+      <data name="SubordinateBusNumber" inType="win:UInt8"/>
+      <data name="IoBase" inType="win:UInt8"/>
+      <data name="IoBaseUpper16" inType="win:UInt16"/>
+      <data name="IoLimit" inType="win:UInt8"/>
+      <data name="IoLimitUpper16" inType="win:UInt16"/>
+      <data name="SecondaryStatus" inType="win:UInt16"/>
+      <data name="MemoryBase" inType="win:UInt16"/>
+      <data name="MemoryLimit" inType="win:UInt16"/>
+      <data name="PrefetchBase" inType="win:UInt16"/>
+      <data name="PrefetchLimit" inType="win:UInt16"/>
+      <data name="PrefetchBaseUpper32" inType="win:UInt32"/>
+      <data name="PrefetchLimitUpper32" inType="win:UInt32"/>
+      <data name="RomBar" inType="win:UInt32"/>
+      <data name="InterruptLine" inType="win:UInt8"/>
+      <data name="InterruptPin" inType="win:UInt8"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_PciDiag" value="PciDiag"/>
+    <string id="task_Log" value="Log"/>
+    <string id="task_AspmErrataRundown" value="AspmErrataRundown"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,365 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Dwm-Compositor" guid="{044a9015-d96c-5dd1-0199-72d258325298}" resourceFileName="Microsoft-Windows-Dwm-Compositor" messageFileName="Microsoft-Windows-Dwm-Compositor" symbol="MicrosoftWindowsDwmCompositor" source="Xml" >
+    <keywords>
+     <keyword name="Frame" message="$(string.keyword_Frame)" mask="0x1"/>
+     <keyword name="Batches" message="$(string.keyword_Batches)" mask="0x2"/>
+     <keyword name="Tokens" message="$(string.keyword_Tokens)" mask="0x4"/>
+     <keyword name="Animations" message="$(string.keyword_Animations)" mask="0x8"/>
+     <keyword name="Expressions" message="$(string.keyword_Expressions)" mask="0x10"/>
+     <keyword name="CleanTrees" message="$(string.keyword_CleanTrees)" mask="0x20"/>
+     <keyword name="PresentMon" message="$(string.keyword_PresentMon)" mask="0x40000000"/>
+     <keyword name="Summary" message="$(string.keyword_Summary)" mask="0x80000000"/>
+    </keywords>
+    <tasks>
+     <task name="WaitForWork_Start" message="$(string.task_WaitForWork_Start)" value="1"/>
+     <task name="WaitForWork_Stop" message="$(string.task_WaitForWork_Stop)" value="2"/>
+     <task name="WaitForVerticalBlank_Start" message="$(string.task_WaitForVerticalBlank_Start)" value="3"/>
+     <task name="WaitForVerticalBlank_Stop" message="$(string.task_WaitForVerticalBlank_Stop)" value="4"/>
+     <task name="UpdateAnimations_Start" message="$(string.task_UpdateAnimations_Start)" value="5"/>
+     <task name="UpdateAnimations_Stop" message="$(string.task_UpdateAnimations_Stop)" value="6"/>
+     <task name="Present_MPO" message="$(string.task_Present_MPO)" value="7"/>
+     <task name="Present_DFlip" message="$(string.task_Present_DFlip)" value="8"/>
+     <task name="Present_Legacy" message="$(string.task_Present_Legacy)" value="9"/>
+     <task name="Present_OverlayPlane" message="$(string.task_Present_OverlayPlane)" value="10"/>
+     <task name="TargetStats_Ready" message="$(string.task_TargetStats_Ready)" value="11"/>
+     <task name="UpdateExpressions_Start" message="$(string.task_UpdateExpressions_Start)" value="12"/>
+     <task name="UpdateExpressions_Stop" message="$(string.task_UpdateExpressions_Stop)" value="13"/>
+     <task name="CleanTrees_Start" message="$(string.task_CleanTrees_Start)" value="14"/>
+     <task name="CleanTrees_Stop" message="$(string.task_CleanTrees_Stop)" value="15"/>
+     <task name="BeginFrame" message="$(string.task_BeginFrame)" value="16"/>
+     <task name="ConfirmFrame" message="$(string.task_ConfirmFrame)" value="17"/>
+     <task name="RenderCVISnapshots" message="$(string.task_RenderCVISnapshots)" value="18"/>
+     <task name="RenderCVIs" message="$(string.task_RenderCVIs)" value="19"/>
+     <task name="TargetRender" message="$(string.task_TargetRender)" value="20"/>
+     <task name="FrameRender" message="$(string.task_FrameRender)" value="21"/>
+     <task name="WaitForCompositorClock_Start" message="$(string.task_WaitForCompositorClock_Start)" value="22"/>
+     <task name="WaitForCompositorClock_Stop" message="$(string.task_WaitForCompositorClock_Stop)" value="23"/>
+     <task name="TargetStats_TargetTime" message="$(string.task_TargetStats_TargetTime)" value="24"/>
+     <task name="ClockBoostChanged" message="$(string.task_ClockBoostChanged)" value="25"/>
+     <task name="SwapChain_DurationChanged" message="$(string.task_SwapChain_DurationChanged)" value="26"/>
+     <task name="ConnectedStandbyStateChanged" message="$(string.task_ConnectedStandbyStateChanged)" value="27"/>
+     <task name="MonitorPowerStateChanged" message="$(string.task_MonitorPowerStateChanged)" value="28"/>
+     <task name="Pinning_Start" message="$(string.task_Pinning_Start)" value="29"/>
+     <task name="Pinning_Stop" message="$(string.task_Pinning_Stop)" value="30"/>
+     <task name="UnPinning_Start" message="$(string.task_UnPinning_Start)" value="31"/>
+     <task name="UnPinning_Stop" message="$(string.task_UnPinning_Stop)" value="32"/>
+     <task name="ResourcePinned" message="$(string.task_ResourcePinned)" value="33"/>
+     <task name="ResourcePendingUnPin" message="$(string.task_ResourcePendingUnPin)" value="34"/>
+     <task name="ResourceReadyToUnPin" message="$(string.task_ResourceReadyToUnPin)" value="35"/>
+     <task name="ResourceUnPinned" message="$(string.task_ResourceUnPinned)" value="36"/>
+    </tasks>
+    <maps>
+     <valueMap name="ConnectedStandbyState">
+      <map value="0x0" message="$(string.map_ConnectedStandbyStateNotInConnectedStandby)"/>
+      <map value="0x1" message="$(string.map_ConnectedStandbyStateInConnectedStandby)"/>
+      <map value="0xffffffff" message="$(string.map_ConnectedStandbyStateExitingConnectedStandby)"/>
+     </valueMap>
+     <valueMap name="MONITOR_DISPLAY_STATE">
+      <map value="0x0" message="$(string.map_MONITOR_DISPLAY_STATEPowerMonitorOff)"/>
+      <map value="0x1" message="$(string.map_MONITOR_DISPLAY_STATEPowerMonitorOn)"/>
+      <map value="0x2" message="$(string.map_MONITOR_DISPLAY_STATEPowerMonitorDim)"/>
+     </valueMap>
+     <valueMap name="TargetOcclusion">
+      <map value="0x0" message="$(string.map_TargetOcclusionNotOccluded)"/>
+      <map value="0x1" message="$(string.map_TargetOcclusionOccluded)"/>
+      <map value="0x2" message="$(string.map_TargetOcclusionUn-Occluded)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="WaitForWork_Start" version="0" task="WaitForWork_Start" opcode="win:Start" level="win:Informational" keywords="Frame PresentMon"/>
+     <event value="2" symbol="WaitForWork_Stop_V2" version="2" task="WaitForWork_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame PresentMon" template="WaitForWork_StopArgs_V2"/>
+     <event value="3" symbol="WaitForVerticalBlank_Start" version="0" task="WaitForVerticalBlank_Start" opcode="win:Start" level="win:Informational" keywords="Frame PresentMon" template="WaitForVerticalBlank_StartArgs"/>
+     <event value="4" symbol="WaitForVerticalBlank_Stop" version="0" task="WaitForVerticalBlank_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame PresentMon" template="WaitForVerticalBlank_StopArgs"/>
+     <event value="5" symbol="UpdateAnimations_Start" version="0" task="UpdateAnimations_Start" opcode="win:Start" level="win:Informational" keywords="Frame"/>
+     <event value="6" symbol="UpdateAnimations_Stop" version="0" task="UpdateAnimations_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame" template="UpdateAnimations_StopArgs"/>
+     <event value="7" symbol="Present_MPO_V2" version="2" task="Present_MPO" level="win:Informational" keywords="Frame PresentMon" template="Present_MPOArgs_V2"/>
+     <event value="8" symbol="Present_DFlip" version="0" task="Present_DFlip" level="win:Informational" keywords="Frame PresentMon" template="Present_DFlipArgs"/>
+     <event value="9" symbol="Present_Legacy" version="0" task="Present_Legacy" level="win:Informational" keywords="Frame PresentMon" template="Present_LegacyArgs"/>
+     <event value="10" symbol="Present_OverlayPlane" version="0" task="Present_OverlayPlane" level="win:Informational" keywords="Frame PresentMon" template="Present_OverlayPlaneArgs"/>
+     <event value="11" symbol="TargetStats_Ready_V2" version="2" task="TargetStats_Ready" level="win:Informational" keywords="Frame PresentMon" template="TargetStats_ReadyArgs_V2"/>
+     <event value="12" symbol="UpdateExpressions_Start" version="0" task="UpdateExpressions_Start" opcode="win:Start" level="win:Informational" keywords="Frame"/>
+     <event value="13" symbol="UpdateExpressions_Stop" version="0" task="UpdateExpressions_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame" template="UpdateExpressions_StopArgs"/>
+     <event value="14" symbol="CleanTrees_Start" version="0" task="CleanTrees_Start" opcode="win:Start" level="win:Informational" keywords="Frame CleanTrees"/>
+     <event value="15" symbol="CleanTrees_Stop" version="0" task="CleanTrees_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame CleanTrees" template="CleanTrees_StopArgs"/>
+     <event value="16" symbol="BeginFrame" version="0" task="BeginFrame" level="win:Informational" keywords="Frame PresentMon" template="BeginFrameArgs"/>
+     <event value="17" symbol="ConfirmFrame" version="0" task="ConfirmFrame" level="win:Informational" keywords="Frame PresentMon" template="ConfirmFrameArgs"/>
+     <event value="18" symbol="RenderCVISnapshots" version="0" task="RenderCVISnapshots" level="win:Informational" keywords="Frame" template="RenderCVISnapshotsArgs"/>
+     <event value="19" symbol="RenderCVIs" version="0" task="RenderCVIs" level="win:Informational" keywords="Frame" template="RenderCVIsArgs"/>
+     <event value="20" symbol="TargetRender" version="0" task="TargetRender" level="win:Informational" keywords="Frame" template="TargetRenderArgs"/>
+     <event value="21" symbol="FrameRender" version="0" task="FrameRender" level="win:Informational" keywords="Frame" template="FrameRenderArgs"/>
+     <event value="22" symbol="WaitForCompositorClock_Start" version="0" task="WaitForCompositorClock_Start" opcode="win:Start" level="win:Informational" keywords="Frame PresentMon"/>
+     <event value="23" symbol="WaitForCompositorClock_Stop" version="0" task="WaitForCompositorClock_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame PresentMon" template="WaitForCompositorClock_StopArgs"/>
+     <event value="24" symbol="TargetStats_TargetTime" version="0" task="TargetStats_TargetTime" level="win:Informational" keywords="Frame PresentMon" template="TargetStats_TargetTimeArgs"/>
+     <event value="25" symbol="ClockBoostChanged" version="0" task="ClockBoostChanged" level="win:Informational" keywords="Frame" template="ClockBoostChangedArgs"/>
+     <event value="26" symbol="SwapChain_DurationChanged" version="0" task="SwapChain_DurationChanged" level="win:Informational" keywords="Frame PresentMon" template="SwapChain_DurationChangedArgs"/>
+     <event value="27" symbol="ConnectedStandbyStateChanged" version="0" task="ConnectedStandbyStateChanged" level="win:Informational" keywords="Frame" template="ConnectedStandbyStateChangedArgs"/>
+     <event value="28" symbol="MonitorPowerStateChanged" version="0" task="MonitorPowerStateChanged" level="win:Informational" keywords="Frame" template="MonitorPowerStateChangedArgs"/>
+     <event value="29" symbol="Pinning_Start" version="0" task="Pinning_Start" opcode="win:Start" level="win:Informational" keywords="Frame" template="Pinning_StartArgs"/>
+     <event value="30" symbol="Pinning_Stop" version="0" task="Pinning_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame" template="Pinning_StopArgs"/>
+     <event value="31" symbol="UnPinning_Start" version="0" task="UnPinning_Start" opcode="win:Start" level="win:Informational" keywords="Frame" template="Pinning_StartArgs"/>
+     <event value="32" symbol="UnPinning_Stop" version="0" task="UnPinning_Stop" opcode="win:Stop" level="win:Informational" keywords="Frame" template="Pinning_StopArgs"/>
+     <event value="33" symbol="ResourcePinned" version="0" task="ResourcePinned" level="win:Informational" keywords="Frame" template="ResourcePinnedArgs"/>
+     <event value="34" symbol="ResourcePendingUnPin" version="0" task="ResourcePendingUnPin" level="win:Informational" keywords="Frame" template="ResourcePendingUnPinArgs"/>
+     <event value="35" symbol="ResourceReadyToUnPin" version="0" task="ResourceReadyToUnPin" level="win:Informational" keywords="Frame" template="ResourceReadyToUnPinArgs"/>
+     <event value="36" symbol="ResourceUnPinned" version="0" task="ResourceUnPinned" level="win:Informational" keywords="Frame" template="ResourceUnPinnedArgs"/>
+    </events>
+    <templates>
+     <template tid="WaitForVerticalBlank_StartArgs">
+      <data name="duration" inType="win:UInt64"/>
+      <data name="targetId" inType="win:AnsiString"/>
+     </template>
+     <template tid="WaitForVerticalBlank_StopArgs">
+      <data name="waitResult" inType="win:UInt32"/>
+     </template>
+     <template tid="UpdateAnimations_StopArgs">
+      <data name="updatedAnimationCount" inType="win:UInt32"/>
+     </template>
+     <template tid="Present_DFlipArgs">
+      <data name="targetId" inType="win:UInt16"/>
+      <data name="hr" inType="win:UInt32"/>
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="bindId" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt64"/>
+      <data name="presentCount" inType="win:UInt32"/>
+     </template>
+     <template tid="Present_LegacyArgs">
+      <data name="targetId" inType="win:Int8"/>
+      <data name="hr" inType="win:UInt32"/>
+      <data name="presentFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="Present_OverlayPlaneArgs">
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="bindId" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt64"/>
+      <data name="presentCount" inType="win:UInt32"/>
+      <data name="Enabled" inType="win:UInt32"/>
+      <data name="PlaneIndex" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="srcRect" inType="win:Boolean"/>
+      <data name="dstRect" inType="win:FILETIME"/>
+      <data name="clipRect" inType="win:HexInt64"/>
+      <data name="Rotation" inType="win:UInt32"/>
+      <data name="Blend" inType="win:UInt32"/>
+      <data name="ColorSpace" inType="win:UInt32"/>
+     </template>
+     <template tid="UpdateExpressions_StopArgs">
+      <data name="expressionCalculatedCount" inType="win:UInt32"/>
+      <data name="tracedExpressionsCalculatedCount" inType="win:UInt32"/>
+      <data name="activeExpressionCount" inType="win:UInt32"/>
+      <data name="suspendedAnimationsCount" inType="win:UInt32"/>
+     </template>
+     <template tid="CleanTrees_StopArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="dirtyTreeCount" inType="win:UInt32"/>
+      <data name="treeLockWaitTimeUs" inType="win:UInt64"/>
+      <data name="desktopDirtyRectCount" inType="win:UInt32"/>
+      <data name="desktopDirtyRects" inType="win:Int16" count="desktopDirtyRectCount"/>
+     </template>
+     <template tid="BeginFrameArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="frameId" inType="win:UInt64"/>
+      <data name="targetTime" inType="win:UInt64"/>
+      <data name="batchSubmissionDeadline" inType="win:UInt64"/>
+      <data name="compositorClockDuration" inType="win:UInt64"/>
+      <data name="primaryMonitor" inType="win:UInt16"/>
+     </template>
+     <template tid="ConfirmFrameArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="frameId" inType="win:UInt64"/>
+      <data name="targetCount" inType="win:UInt32"/>
+      <data name="targetIdAndStats" inType="win:UInt8" count="targetCount"/>
+     </template>
+     <template tid="RenderCVISnapshotsArgs">
+      <data name="hr" inType="win:UInt32"/>
+      <data name="snapshotsToPerform" inType="win:UInt32"/>
+     </template>
+     <template tid="RenderCVIsArgs">
+      <data name="desktopLuid" inType="win:UInt64"/>
+      <data name="backdropVisualsRendered" inType="win:UInt32"/>
+      <data name="cachedVisualsRendered" inType="win:UInt32"/>
+     </template>
+     <template tid="TargetRenderArgs">
+      <data name="renderStartTime" inType="win:UInt64"/>
+      <data name="renderEndTime" inType="win:UInt64"/>
+      <data name="endDrawStartTime" inType="win:UInt64"/>
+      <data name="endDrawEndTime" inType="win:UInt64"/>
+      <data name="targetArea" inType="win:UInt64"/>
+      <data name="drawVisualTreeCount" inType="win:UInt32"/>
+      <data name="internalLayerCount" inType="win:UInt32"/>
+      <data name="internalLayerArea" inType="win:UInt64"/>
+      <data name="externalLayerCount" inType="win:UInt32"/>
+      <data name="externalLayerArea" inType="win:UInt64"/>
+      <data name="cviCount" inType="win:UInt32"/>
+      <data name="cviArea" inType="win:UInt64"/>
+      <data name="bviCount" inType="win:UInt32"/>
+      <data name="bviArea" inType="win:UInt64"/>
+      <data name="targetType" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameRenderArgs">
+      <data name="totalRenderTimeUs" inType="win:UInt64"/>
+      <data name="totalEndDrawTimeUs" inType="win:UInt64"/>
+      <data name="totalTargetArea" inType="win:UInt64"/>
+      <data name="totalDrawVisualTreeCount" inType="win:UInt32"/>
+      <data name="totalInternalLayerCount" inType="win:UInt32"/>
+      <data name="totalInternalLayerArea" inType="win:UInt64"/>
+      <data name="totalExternalLayerCount" inType="win:UInt32"/>
+      <data name="totalExternalLayerArea" inType="win:UInt64"/>
+      <data name="totalCviCount" inType="win:UInt32"/>
+      <data name="totalCviArea" inType="win:UInt64"/>
+      <data name="totalBviCount" inType="win:UInt32"/>
+      <data name="totalBviArea" inType="win:UInt64"/>
+     </template>
+     <template tid="WaitForCompositorClock_StopArgs">
+      <data name="waitResult" inType="win:Int32"/>
+      <data name="duration" inType="win:UInt64"/>
+      <data name="parallelMode" inType="win:Boolean"/>
+     </template>
+     <template tid="TargetStats_TargetTimeArgs">
+      <data name="targetId" inType="win:Int16"/>
+      <data name="targetError" inType="win:UInt64"/>
+      <data name="targetMonitorTime" inType="win:UInt64"/>
+      <data name="firstAvailableMonitorTime" inType="win:Boolean"/>
+      <data name="lastMonitorTime" inType="win:Pointer"/>
+     </template>
+     <template tid="ClockBoostChangedArgs">
+      <data name="clockBoost" inType="win:Boolean"/>
+     </template>
+     <template tid="SwapChain_DurationChangedArgs">
+      <data name="displayAdapterLuid" inType="win:UInt64"/>
+      <data name="vidPnSourceId" inType="win:UInt32"/>
+      <data name="vidPnTargetId" inType="win:UInt32"/>
+      <data name="duration" inType="win:UInt64"/>
+      <data name="vBlankMultiplier" inType="win:UInt32"/>
+      <data name="iFlipApprovedDuration" inType="win:UInt64"/>
+     </template>
+     <template tid="ConnectedStandbyStateChangedArgs">
+      <data name="ConnectedStandbyState" inType="win:UInt32" map="ConnectedStandbyState"/>
+     </template>
+     <template tid="MonitorPowerStateChangedArgs">
+      <data name="MonitorPowerState" inType="win:UInt32" map="MONITOR_DISPLAY_STATE"/>
+     </template>
+     <template tid="Pinning_StartArgs">
+      <data name="resourceCount" inType="win:UInt32"/>
+     </template>
+     <template tid="Pinning_StopArgs">
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="ResourcePinnedArgs">
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt32"/>
+      <data name="uniqueId" inType="win:UInt64"/>
+      <data name="alreadyPinned" inType="win:Boolean"/>
+     </template>
+     <template tid="ResourcePendingUnPinArgs">
+      <data name="displayAdapterLuid" inType="win:UInt64"/>
+      <data name="vidPnSourceId" inType="win:UInt32"/>
+      <data name="presentCount" inType="win:UInt32"/>
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt32"/>
+      <data name="uniqueId" inType="win:UInt64"/>
+     </template>
+     <template tid="ResourceReadyToUnPinArgs">
+      <data name="ready" inType="win:Boolean"/>
+      <data name="displayAdapterLuid" inType="win:UInt64"/>
+      <data name="vidPnSourceId" inType="win:UInt32"/>
+      <data name="completedPresentCount" inType="win:UInt32"/>
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt32"/>
+      <data name="uniqueId" inType="win:UInt64"/>
+     </template>
+     <template tid="ResourceUnPinnedArgs">
+      <data name="surfaceLuid" inType="win:UInt64"/>
+      <data name="realizationIndex" inType="win:UInt32"/>
+      <data name="uniqueId" inType="win:UInt64"/>
+     </template>
+     <template tid="WaitForWork_StopArgs_V2">
+      <data name="waitReturn" inType="win:UInt32"/>
+      <data name="Batches" inType="win:Boolean"/>
+      <data name="Tokens" inType="win:Boolean"/>
+      <data name="CompositionTimer" inType="win:Boolean"/>
+      <data name="AdaptersChanged" inType="win:Boolean"/>
+      <data name="OcclusionEvent" inType="win:Boolean"/>
+     </template>
+     <template tid="Present_MPOArgs_V2">
+      <data name="targetId" inType="win:UInt8"/>
+      <data name="hr" inType="win:UInt32"/>
+      <data name="presentedPlaneCount" inType="win:UInt32"/>
+      <data name="desktopPlanePresented" inType="win:Boolean"/>
+     </template>
+     <template tid="TargetStats_ReadyArgs_V2">
+      <data name="targetId" inType="win:Int64"/>
+      <data name="occlusion" inType="win:UInt32" map="TargetOcclusion"/>
+      <data name="ready" inType="win:Boolean"/>
+      <data name="outstandingPresents" inType="win:UInt32"/>
+      <data name="targetError" inType="win:UInt64"/>
+      <data name="nextFrameTargetError" inType="win:UInt64"/>
+      <data name="targetMonitorTime" inType="win:Binary"/>
+      <data name="firstAvailableMonitorTime" inType="win:FILETIME"/>
+      <data name="lastMonitorTime" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Frame" value="Frame"/>
+    <string id="keyword_Batches" value="Batches"/>
+    <string id="keyword_Tokens" value="Tokens"/>
+    <string id="keyword_Animations" value="Animations"/>
+    <string id="keyword_Expressions" value="Expressions"/>
+    <string id="keyword_CleanTrees" value="CleanTrees"/>
+    <string id="keyword_PresentMon" value="PresentMon"/>
+    <string id="keyword_Summary" value="Summary"/>
+    <string id="task_WaitForWork_Start" value="WaitForWork_Start"/>
+    <string id="task_WaitForWork_Stop" value="WaitForWork_Stop"/>
+    <string id="task_WaitForVerticalBlank_Start" value="WaitForVerticalBlank_Start"/>
+    <string id="task_WaitForVerticalBlank_Stop" value="WaitForVerticalBlank_Stop"/>
+    <string id="task_UpdateAnimations_Start" value="UpdateAnimations_Start"/>
+    <string id="task_UpdateAnimations_Stop" value="UpdateAnimations_Stop"/>
+    <string id="task_Present_MPO" value="Present_MPO"/>
+    <string id="task_Present_DFlip" value="Present_DFlip"/>
+    <string id="task_Present_Legacy" value="Present_Legacy"/>
+    <string id="task_Present_OverlayPlane" value="Present_OverlayPlane"/>
+    <string id="task_TargetStats_Ready" value="TargetStats_Ready"/>
+    <string id="task_UpdateExpressions_Start" value="UpdateExpressions_Start"/>
+    <string id="task_UpdateExpressions_Stop" value="UpdateExpressions_Stop"/>
+    <string id="task_CleanTrees_Start" value="CleanTrees_Start"/>
+    <string id="task_CleanTrees_Stop" value="CleanTrees_Stop"/>
+    <string id="task_BeginFrame" value="BeginFrame"/>
+    <string id="task_ConfirmFrame" value="ConfirmFrame"/>
+    <string id="task_RenderCVISnapshots" value="RenderCVISnapshots"/>
+    <string id="task_RenderCVIs" value="RenderCVIs"/>
+    <string id="task_TargetRender" value="TargetRender"/>
+    <string id="task_FrameRender" value="FrameRender"/>
+    <string id="task_WaitForCompositorClock_Start" value="WaitForCompositorClock_Start"/>
+    <string id="task_WaitForCompositorClock_Stop" value="WaitForCompositorClock_Stop"/>
+    <string id="task_TargetStats_TargetTime" value="TargetStats_TargetTime"/>
+    <string id="task_ClockBoostChanged" value="ClockBoostChanged"/>
+    <string id="task_SwapChain_DurationChanged" value="SwapChain_DurationChanged"/>
+    <string id="task_ConnectedStandbyStateChanged" value="ConnectedStandbyStateChanged"/>
+    <string id="task_MonitorPowerStateChanged" value="MonitorPowerStateChanged"/>
+    <string id="task_Pinning_Start" value="Pinning_Start"/>
+    <string id="task_Pinning_Stop" value="Pinning_Stop"/>
+    <string id="task_UnPinning_Start" value="UnPinning_Start"/>
+    <string id="task_UnPinning_Stop" value="UnPinning_Stop"/>
+    <string id="task_ResourcePinned" value="ResourcePinned"/>
+    <string id="task_ResourcePendingUnPin" value="ResourcePendingUnPin"/>
+    <string id="task_ResourceReadyToUnPin" value="ResourceReadyToUnPin"/>
+    <string id="task_ResourceUnPinned" value="ResourceUnPinned"/>
+    <string id="map_ConnectedStandbyStateNotInConnectedStandby" value="NotInConnectedStandby"/>
+    <string id="map_ConnectedStandbyStateInConnectedStandby" value="InConnectedStandby"/>
+    <string id="map_ConnectedStandbyStateExitingConnectedStandby" value="ExitingConnectedStandby"/>
+    <string id="map_MONITOR_DISPLAY_STATEPowerMonitorOff" value="PowerMonitorOff"/>
+    <string id="map_MONITOR_DISPLAY_STATEPowerMonitorOn" value="PowerMonitorOn"/>
+    <string id="map_MONITOR_DISPLAY_STATEPowerMonitorDim" value="PowerMonitorDim"/>
+    <string id="map_TargetOcclusionNotOccluded" value="NotOccluded"/>
+    <string id="map_TargetOcclusionOccluded" value="Occluded"/>
+    <string id="map_TargetOcclusionUn-Occluded" value="Un-Occluded"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

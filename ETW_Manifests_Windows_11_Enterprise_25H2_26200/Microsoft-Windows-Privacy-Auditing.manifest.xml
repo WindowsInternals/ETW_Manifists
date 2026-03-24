@@ -1,0 +1,187 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Privacy-Auditing" guid="{d67fbb76-d18a-5ae3-24a3-8c1db52d6c62}" resourceFileName="Microsoft-Windows-Privacy-Auditing" messageFileName="Microsoft-Windows-Privacy-Auditing" symbol="MicrosoftWindowsPrivacyAuditing" source="Xml" >
+    <keywords>
+     <keyword name="SystemGlobal" message="$(string.keyword_SystemGlobal)" mask="0x1"/>
+     <keyword name="UserGlobal" message="$(string.keyword_UserGlobal)" mask="0x2"/>
+     <keyword name="UserApp" message="$(string.keyword_UserApp)" mask="0x4"/>
+     <keyword name="Failure" message="$(string.keyword_Failure)" mask="0x40"/>
+    </keywords>
+    <tasks>
+     <task name="ValueChanged" message="$(string.task_ValueChanged)" value="10"/>
+     <task name="DefaultConsentCreated" message="$(string.task_DefaultConsentCreated)" value="20"/>
+     <task name="CapabilityConsentProvisioned" message="$(string.task_CapabilityConsentProvisioned)" value="30"/>
+     <task name="PromptAnswered" message="$(string.task_PromptAnswered)" value="40"/>
+     <task name="ProvisioningHandlerCalled" message="$(string.task_ProvisioningHandlerCalled)" value="50"/>
+     <task name="DatabaseCreation" message="$(string.task_DatabaseCreation)" value="60"/>
+     <task name="DatabaseMigration" message="$(string.task_DatabaseMigration)" value="70"/>
+     <task name="DatabaseRecovery" message="$(string.task_DatabaseRecovery)" value="80"/>
+     <task name="PackageDeprovisioned" message="$(string.task_PackageDeprovisioned)" value="90"/>
+     <task name="InvalidConsent" message="$(string.task_InvalidConsent)" value="100"/>
+     <task name="SettingsDatabaseRecovery" message="$(string.task_SettingsDatabaseRecovery)" value="110"/>
+     <task name="SettingsDatabaseMajorVersionMismatch" message="$(string.task_SettingsDatabaseMajorVersionMismatch)" value="120"/>
+     <task name="SettingsDatabaseCreation" message="$(string.task_SettingsDatabaseCreation)" value="130"/>
+     <task name="SettingsDatabaseMigration" message="$(string.task_SettingsDatabaseMigration)" value="140"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="ValueChanged" version="0" task="ValueChanged" level="win:Informational" keywords="SystemGlobal" template="ValueChangedArgs"/>
+     <event value="1001" symbol="ValueChanged1001" version="0" task="ValueChanged" level="win:Error" keywords="SystemGlobal Failure" template="ValueChangedArgs"/>
+     <event value="1002" symbol="ValueChanged1002" version="0" task="ValueChanged" level="win:Informational" keywords="UserGlobal" template="ValueChangedArgs"/>
+     <event value="1003" symbol="ValueChanged1003" version="0" task="ValueChanged" level="win:Error" keywords="UserGlobal Failure" template="ValueChangedArgs"/>
+     <event value="1004" symbol="ValueChanged1004" version="0" task="ValueChanged" level="win:Informational" keywords="UserApp" template="ValueChangedArgs"/>
+     <event value="1005" symbol="ValueChanged1005" version="0" task="ValueChanged" level="win:Error" keywords="UserApp Failure" template="ValueChangedArgs"/>
+     <event value="1006" symbol="DefaultConsentCreated" version="0" task="DefaultConsentCreated" level="win:Informational" keywords="SystemGlobal" template="DefaultConsentCreatedArgs"/>
+     <event value="1007" symbol="DefaultConsentCreated1007" version="0" task="DefaultConsentCreated" level="win:Error" keywords="SystemGlobal Failure" template="DefaultConsentCreatedArgs"/>
+     <event value="1008" symbol="DefaultConsentCreated1008" version="0" task="DefaultConsentCreated" level="win:Informational" keywords="UserGlobal" template="DefaultConsentCreatedArgs"/>
+     <event value="1009" symbol="DefaultConsentCreated1009" version="0" task="DefaultConsentCreated" level="win:Error" keywords="UserGlobal Failure" template="DefaultConsentCreatedArgs"/>
+     <event value="1010" symbol="DefaultConsentCreated1010" version="0" task="DefaultConsentCreated" level="win:Informational" keywords="UserApp" template="DefaultConsentCreatedArgs"/>
+     <event value="1011" symbol="DefaultConsentCreated1011" version="0" task="DefaultConsentCreated" level="win:Error" keywords="UserApp Failure" template="DefaultConsentCreatedArgs"/>
+     <event value="1012" symbol="CapabilityConsentProvisioned" version="0" task="CapabilityConsentProvisioned" level="win:Informational" keywords="UserApp" template="CapabilityConsentProvisionedArgs"/>
+     <event value="1013" symbol="CapabilityConsentProvisioned1013" version="0" task="CapabilityConsentProvisioned" level="win:Error" keywords="UserApp Failure" template="CapabilityConsentProvisionedArgs"/>
+     <event value="1014" symbol="PromptAnswered" version="0" task="PromptAnswered" level="win:Informational" keywords="UserApp" template="PromptAnsweredArgs"/>
+     <event value="1015" symbol="PromptAnswered1015" version="0" task="PromptAnswered" level="win:Error" keywords="UserApp Failure" template="PromptAnsweredArgs"/>
+     <event value="1016" symbol="ProvisioningHandlerCalled" version="0" task="ProvisioningHandlerCalled" level="win:Informational" template="ProvisioningHandlerCalledArgs"/>
+     <event value="1017" symbol="ProvisioningHandlerCalled1017" version="0" task="ProvisioningHandlerCalled" level="win:Error" template="ProvisioningHandlerCalledArgs"/>
+     <event value="1018" symbol="DatabaseCreation" version="0" task="DatabaseCreation" level="win:Informational" template="DatabaseCreationArgs"/>
+     <event value="1019" symbol="DatabaseCreation1019" version="0" task="DatabaseCreation" level="win:Error" template="DatabaseCreationArgs"/>
+     <event value="1020" symbol="DatabaseMigration" version="0" task="DatabaseMigration" level="win:Informational" template="DatabaseMigrationArgs"/>
+     <event value="1021" symbol="DatabaseMigration1021" version="0" task="DatabaseMigration" level="win:Error" template="DatabaseMigrationArgs"/>
+     <event value="1022" symbol="DatabaseRecovery" version="0" task="DatabaseRecovery" level="win:Warning" template="DatabaseRecoveryArgs"/>
+     <event value="1023" symbol="DatabaseRecovery1023" version="0" task="DatabaseRecovery" level="win:Error" template="DatabaseRecoveryArgs"/>
+     <event value="1024" symbol="PackageDeprovisioned" version="0" task="PackageDeprovisioned" level="win:Informational" template="PackageDeprovisionedArgs"/>
+     <event value="1025" symbol="InvalidConsent" version="0" task="InvalidConsent" level="win:Informational" template="InvalidConsentArgs"/>
+     <event value="1026" symbol="SettingsDatabaseRecovery" version="0" task="SettingsDatabaseRecovery" level="win:Warning" template="SettingsDatabaseRecoveryArgs"/>
+     <event value="1027" symbol="SettingsDatabaseRecovery1027" version="0" task="SettingsDatabaseRecovery" level="win:Error" template="SettingsDatabaseRecoveryArgs"/>
+     <event value="1028" symbol="SettingsDatabaseMajorVersionMismatch" version="0" task="SettingsDatabaseMajorVersionMismatch" level="win:Error" template="SettingsDatabaseMajorVersionMismatchArgs"/>
+     <event value="1029" symbol="SettingsDatabaseCreation" version="0" task="SettingsDatabaseCreation" level="win:Informational" template="SettingsDatabaseCreationArgs"/>
+     <event value="1030" symbol="SettingsDatabaseCreation1030" version="0" task="SettingsDatabaseCreation" level="win:Error" template="SettingsDatabaseCreationArgs"/>
+     <event value="1031" symbol="SettingsDatabaseMigration" version="0" task="SettingsDatabaseMigration" level="win:Informational" template="SettingsDatabaseMigrationArgs"/>
+     <event value="1032" symbol="SettingsDatabaseMigration1032" version="0" task="SettingsDatabaseMigration" level="win:Error" template="SettingsDatabaseMigrationArgs"/>
+    </events>
+    <templates>
+     <template tid="ValueChangedArgs">
+      <data name="CallerUserSid" inType="win:UnicodeString"/>
+      <data name="CallerProcessName" inType="win:UnicodeString"/>
+      <data name="CallerAppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="OldConsentValue" inType="win:UnicodeString"/>
+      <data name="NewConsentValue" inType="win:UnicodeString"/>
+      <data name="SetByHigherAuthority" inType="win:Boolean"/>
+      <data name="EffectiveConsentValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DefaultConsentCreatedArgs">
+      <data name="NewConsentValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+      <data name="Migrated" inType="win:Boolean"/>
+      <data name="Suppressed" inType="win:Boolean"/>
+     </template>
+     <template tid="CapabilityConsentProvisionedArgs">
+      <data name="NewConsentValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+      <data name="Migrated" inType="win:Boolean"/>
+     </template>
+     <template tid="PromptAnsweredArgs">
+      <data name="NewConsentValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="ConsentID" inType="win:UnicodeString"/>
+      <data name="AppID" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="SettingName" inType="win:UnicodeString"/>
+      <data name="AutoAccepted" inType="win:Boolean"/>
+      <data name="FileID" inType="win:UnicodeString"/>
+      <data name="ProgramID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ProvisioningHandlerCalledArgs">
+      <data name="NewConsentValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="Capability" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DatabaseCreationArgs">
+      <data name="DatabaseVersion" inType="win:HexInt32"/>
+      <data name="Duration" inType="win:HexInt64"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="DatabaseMigrationArgs">
+      <data name="OldDatabaseVersion" inType="win:HexInt32"/>
+      <data name="NewDatabaseVersion" inType="win:HexInt32"/>
+      <data name="Duration" inType="win:HexInt64"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="DatabaseRecoveryArgs">
+      <data name="DatabaseVersion" inType="win:HexInt32"/>
+      <data name="RuntimeVersion" inType="win:HexInt32"/>
+      <data name="Justification" inType="win:UnicodeString"/>
+      <data name="Duration" inType="win:HexInt64"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="PackageDeprovisionedArgs">
+      <data name="UserSid" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="InvalidConsentArgs">
+      <data name="UserSid" inType="win:UnicodeString"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="Capability" inType="win:UnicodeString"/>
+      <data name="Justification" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SettingsDatabaseRecoveryArgs">
+      <data name="RuntimeVersion" inType="win:HexInt32"/>
+      <data name="ContextString" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="SettingsDatabaseMajorVersionMismatchArgs">
+      <data name="RuntimeMajorVersion" inType="win:HexInt32"/>
+      <data name="DatabaseMajorVersion" inType="win:HexInt32"/>
+     </template>
+     <template tid="SettingsDatabaseCreationArgs">
+      <data name="DatabaseVersion" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="SettingsDatabaseMigrationArgs">
+      <data name="OldDatabaseVersion" inType="win:HexInt32"/>
+      <data name="NewDatabaseVersion" inType="win:HexInt32"/>
+      <data name="HResult" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_SystemGlobal" value="SystemGlobal"/>
+    <string id="keyword_UserGlobal" value="UserGlobal"/>
+    <string id="keyword_UserApp" value="UserApp"/>
+    <string id="keyword_Failure" value="Failure"/>
+    <string id="task_ValueChanged" value="ValueChanged"/>
+    <string id="task_DefaultConsentCreated" value="DefaultConsentCreated"/>
+    <string id="task_CapabilityConsentProvisioned" value="CapabilityConsentProvisioned"/>
+    <string id="task_PromptAnswered" value="PromptAnswered"/>
+    <string id="task_ProvisioningHandlerCalled" value="ProvisioningHandlerCalled"/>
+    <string id="task_DatabaseCreation" value="DatabaseCreation"/>
+    <string id="task_DatabaseMigration" value="DatabaseMigration"/>
+    <string id="task_DatabaseRecovery" value="DatabaseRecovery"/>
+    <string id="task_PackageDeprovisioned" value="PackageDeprovisioned"/>
+    <string id="task_InvalidConsent" value="InvalidConsent"/>
+    <string id="task_SettingsDatabaseRecovery" value="SettingsDatabaseRecovery"/>
+    <string id="task_SettingsDatabaseMajorVersionMismatch" value="SettingsDatabaseMajorVersionMismatch"/>
+    <string id="task_SettingsDatabaseCreation" value="SettingsDatabaseCreation"/>
+    <string id="task_SettingsDatabaseMigration" value="SettingsDatabaseMigration"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

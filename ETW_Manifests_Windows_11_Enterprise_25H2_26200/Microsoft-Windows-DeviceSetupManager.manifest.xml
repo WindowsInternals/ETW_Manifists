@@ -1,0 +1,459 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DeviceSetupManager" guid="{fcbb06bb-6a2a-46e3-abaa-246cb4e508b2}" resourceFileName="Microsoft-Windows-DeviceSetupManager" messageFileName="Microsoft-Windows-DeviceSetupManager" symbol="MicrosoftWindowsDeviceSetupManager" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+>
+      <opcodes>
+       <opcode name="DeviceUxReady" message="$(string.opcode_task_0DeviceUxReady)" value="10"/>
+       <opcode name="DeviceSetupComplete" message="$(string.opcode_task_0DeviceSetupComplete)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="DeviceSetupTask" message="$(string.task_DeviceSetupTask)" value="500"/>
+     <task name="DownloadDriverTask" message="$(string.task_DownloadDriverTask)" value="501"/>
+     <task name="BuildDriverListTask" message="$(string.task_BuildDriverListTask)" value="502"/>
+     <task name="InstallDriverTask" message="$(string.task_InstallDriverTask)" value="503"/>
+     <task name="MetadataInstallTask" message="$(string.task_MetadataInstallTask)" value="504"/>
+     <task name="InstallDriverUpdateTask" message="$(string.task_InstallDriverUpdateTask)" value="505"/>
+     <task name="InstallSoftware" message="$(string.task_InstallSoftware)" value="506"/>
+     <task name="SearchWindowsUpdate" message="$(string.task_SearchWindowsUpdate)" value="7022"/>
+     <task name="DownloadFromWindowsUpdate" message="$(string.task_DownloadFromWindowsUpdate)" value="7023"/>
+     <task name="InstallFromWindowsUpdate" message="$(string.task_InstallFromWindowsUpdate)" value="7024"/>
+    </tasks>
+    <maps>
+     <valueMap name="Enablement">
+      <map value="0x0" message="$(string.map_Enablementdisabled)"/>
+      <map value="0x1" message="$(string.map_Enablementenabled)"/>
+     </valueMap>
+     <valueMap name="ServiceIdleWait">
+      <map value="0x2" message="$(string.map_ServiceIdleWaitstop)"/>
+      <map value="0x8" message="$(string.map_ServiceIdleWaitretry)"/>
+     </valueMap>
+     <valueMap name="ServerSelection">
+      <map value="0x1" message="$(string.map_ServerSelectionWSUS)"/>
+      <map value="0x2" message="$(string.map_ServerSelectionWU)"/>
+     </valueMap>
+     <valueMap name="DsmCoreServiceModeEnum">
+      <map value="0x0" message="$(string.map_DsmCoreServiceModeEnumNormal)"/>
+      <map value="0x1" message="$(string.map_DsmCoreServiceModeEnumPaused)"/>
+      <map value="0x2" message="$(string.map_DsmCoreServiceModeEnumSetup)"/>
+      <map value="0x3" message="$(string.map_DsmCoreServiceModeEnumOOBE)"/>
+      <map value="0x4" message="$(string.map_DsmCoreServiceModeEnumSetup Audit)"/>
+     </valueMap>
+     <valueMap name="IsLegacySignatureCheck">
+      <map value="0x0" message="$(string.map_IsLegacySignatureChecksignature check)"/>
+      <map value="0x1" message="$(string.map_IsLegacySignatureChecklegacy signature check)"/>
+     </valueMap>
+     <valueMap name="AppInstallType">
+      <map value="0x1" message="$(string.map_AppInstallTypeupdate)"/>
+      <map value="0x2" message="$(string.map_AppInstallTypeall logged in users)"/>
+      <map value="0x3" message="$(string.map_AppInstallTypefuture logins)"/>
+      <map value="0x4" message="$(string.map_AppInstallTypeall users)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="11" symbol="task_011" version="0" task="task_0" level="win:Informational" template="task_011Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Informational"/>
+     <event value="21" symbol="task_021" version="0" task="task_0" level="win:Informational" template="task_021Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Informational" template="task_030Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Informational" template="task_040Args"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Informational" template="task_041Args"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Error" template="task_042Args"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Informational"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Informational" template="task_041Args"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Informational" template="task_050Args"/>
+     <event value="51" symbol="task_051" version="0" task="task_0" level="win:Informational"/>
+     <event value="52" symbol="task_052" version="0" task="task_0" level="win:Informational" template="task_052Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Informational" template="task_0100Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Error" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational"/>
+     <event value="105" symbol="task_0105_V1" version="1" task="task_0" level="win:Informational" template="task_0106Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" template="task_0106Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Informational"/>
+     <event value="108" symbol="task_0108" version="0" task="task_0" level="win:Informational" template="task_0108Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Informational" template="task_0109Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Informational" template="task_0110Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Informational" template="task_0111Args"/>
+     <event value="112" symbol="task_0112" version="0" task="task_0" level="win:Informational" template="task_0112Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Informational" template="task_0120Args"/>
+     <event value="121" symbol="task_0121" version="0" task="task_0" level="win:Error" template="task_0121Args"/>
+     <event value="122" symbol="task_0122" version="0" task="task_0" level="win:Warning"/>
+     <event value="122" symbol="task_0122_V1" version="1" task="task_0" level="win:Warning" template="task_0125Args"/>
+     <event value="123" symbol="task_0123" version="0" task="task_0" level="win:Warning" template="task_0123Args"/>
+     <event value="124" symbol="task_0124" version="0" task="task_0" level="win:Informational" template="task_0124Args"/>
+     <event value="125" symbol="task_0125" version="0" task="task_0" level="win:Warning" template="task_0125Args"/>
+     <event value="126" symbol="task_0126" version="0" task="task_0" level="win:Informational" template="task_0126Args"/>
+     <event value="127" symbol="task_0127" version="0" task="task_0" level="win:Informational" template="task_0125Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Informational" template="task_0130Args"/>
+     <event value="131" symbol="task_0131" version="0" task="task_0" level="win:Error" template="task_0131Args"/>
+     <event value="132" symbol="task_0132" version="0" task="task_0" level="win:Error" template="task_0132Args"/>
+     <event value="133" symbol="task_0133" version="0" task="task_0" level="win:Error" template="task_0133Args"/>
+     <event value="134" symbol="task_0134" version="0" task="task_0" level="win:Informational" template="task_0134Args"/>
+     <event value="135" symbol="task_0135" version="0" task="task_0" level="win:Informational" template="task_0135Args"/>
+     <event value="136" symbol="task_0136" version="0" task="task_0" level="win:Warning" template="task_0136Args"/>
+     <event value="137" symbol="task_0137" version="0" task="task_0" level="win:Warning" template="task_0137Args"/>
+     <event value="138" symbol="task_0138" version="0" task="task_0" level="win:Warning" template="task_0138Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Informational" template="task_0150Args"/>
+     <event value="151" symbol="task_0151" version="0" task="task_0" level="win:Error" template="task_0150Args"/>
+     <event value="152" symbol="task_0152" version="0" task="task_0" level="win:Error" template="task_0152Args"/>
+     <event value="160" symbol="task_0160" version="0" task="task_0" level="win:Informational" template="task_0160Args"/>
+     <event value="161" symbol="task_0161" version="0" task="task_0" level="win:Informational" template="task_0161Args"/>
+     <event value="162" symbol="task_0162" version="0" task="task_0" level="win:Error" template="task_0162Args"/>
+     <event value="162" symbol="task_0162_V1" version="1" task="task_0" level="win:Error" template="task_0162Args_V1"/>
+     <event value="163" symbol="task_0163" version="0" task="task_0" level="win:Error" template="task_0163Args"/>
+     <event value="163" symbol="task_0163_V1" version="1" task="task_0" level="win:Error" template="task_0163Args_V1"/>
+     <event value="164" symbol="task_0164" version="0" task="task_0" level="win:Warning" template="task_0162Args"/>
+     <event value="164" symbol="task_0164_V1" version="1" task="task_0" level="win:Warning" template="task_0162Args_V1"/>
+     <event value="165" symbol="task_0165" version="0" task="task_0" level="win:Informational" template="task_0165Args"/>
+     <event value="166" symbol="task_0166" version="0" task="task_0" level="win:Informational" template="task_0166Args"/>
+     <event value="167" symbol="task_0167" version="0" task="task_0" level="win:Informational" template="task_0167Args"/>
+     <event value="167" symbol="task_0167_V1" version="1" task="task_0" level="win:Informational" template="task_0167Args_V1"/>
+     <event value="168" symbol="task_0168" version="0" task="task_0" level="win:Informational" template="task_0168Args"/>
+     <event value="169" symbol="task_0169" version="0" task="task_0" level="win:Informational" template="task_0169Args"/>
+     <event value="170" symbol="task_0170" version="0" task="task_0" level="win:Informational" template="task_0169Args"/>
+     <event value="171" symbol="task_0171" version="0" task="task_0" level="win:Informational" template="task_0171Args"/>
+     <event value="171" symbol="task_0171_V1" version="1" task="task_0" level="win:Informational" template="task_0171Args_V1"/>
+     <event value="172" symbol="task_0172" version="0" task="task_0" level="win:Error" template="task_0172Args"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Error" template="task_0180Args"/>
+     <event value="190" symbol="task_0190" version="0" task="task_0" level="win:Informational" template="task_0190Args"/>
+     <event value="191" symbol="task_0191" version="0" task="task_0" level="win:Error" template="task_0191Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Warning"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Warning"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Warning"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Informational"/>
+     <event value="220" symbol="task_0220" version="0" task="task_0" level="win:Informational" template="task_0220Args"/>
+     <event value="221" symbol="task_0221" version="0" task="task_0" level="win:Informational" template="task_0134Args"/>
+     <event value="222" symbol="task_0222" version="0" task="task_0" level="win:Error" template="task_0222Args"/>
+     <event value="223" symbol="task_0223" version="0" task="task_0" level="win:Informational" template="task_0136Args"/>
+     <event value="224" symbol="task_0224" version="0" task="task_0" level="win:Informational" template="task_0136Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Informational" template="task_0134Args"/>
+     <event value="231" symbol="task_0231" version="0" task="task_0" level="win:Informational" template="task_0134Args"/>
+     <event value="232" symbol="task_0232" version="0" task="task_0" level="win:Warning" template="task_0134Args"/>
+     <event value="233" symbol="task_0233" version="0" task="task_0" level="win:Warning" template="task_0134Args"/>
+     <event value="234" symbol="task_0234" version="0" task="task_0" level="win:Informational" template="task_0234Args"/>
+     <event value="300" symbol="task_0DeviceUxReady" version="0" task="task_0" opcode="DeviceUxReady" level="win:Informational" template="task_0135Args"/>
+     <event value="301" symbol="task_0DeviceSetupComplete" version="0" task="task_0" opcode="DeviceSetupComplete" level="win:Informational" template="task_0135Args"/>
+     <event value="302" symbol="task_0302" version="0" task="task_0" level="win:Informational" template="task_0302Args"/>
+     <event value="400" symbol="DeviceSetupTaskStart" version="0" task="DeviceSetupTask" opcode="win:Start" level="win:Informational" template="task_030Args"/>
+     <event value="401" symbol="DeviceSetupTaskStop" version="0" task="DeviceSetupTask" opcode="win:Stop" level="win:Informational" template="task_030Args"/>
+     <event value="402" symbol="DownloadDriverTaskStart" version="0" task="DownloadDriverTask" opcode="win:Start" level="win:Informational" template="task_0125Args"/>
+     <event value="403" symbol="DownloadDriverTaskStop" version="0" task="DownloadDriverTask" opcode="win:Stop" level="win:Informational" template="task_0121Args"/>
+     <event value="404" symbol="BuildDriverListTaskStart" version="0" task="BuildDriverListTask" opcode="win:Start" level="win:Informational" template="BuildDriverListTaskStartArgs"/>
+     <event value="405" symbol="BuildDriverListTaskStop" version="0" task="BuildDriverListTask" opcode="win:Stop" level="win:Informational" template="BuildDriverListTaskStartArgs"/>
+     <event value="406" symbol="InstallDriverTaskStart" version="0" task="InstallDriverTask" opcode="win:Start" level="win:Informational" template="task_0125Args"/>
+     <event value="407" symbol="InstallDriverTaskStop" version="0" task="InstallDriverTask" opcode="win:Stop" level="win:Informational" template="task_0121Args"/>
+     <event value="408" symbol="MetadataInstallTaskStart" version="0" task="MetadataInstallTask" opcode="win:Start" level="win:Informational" template="task_0135Args"/>
+     <event value="409" symbol="MetadataInstallTaskStop" version="0" task="MetadataInstallTask" opcode="win:Stop" level="win:Informational" template="task_0135Args"/>
+     <event value="410" symbol="InstallDriverUpdateTaskStart" version="0" task="InstallDriverUpdateTask" opcode="win:Start" level="win:Informational" template="task_0125Args"/>
+     <event value="411" symbol="InstallDriverUpdateTaskStop" version="0" task="InstallDriverUpdateTask" opcode="win:Stop" level="win:Informational" template="task_0121Args"/>
+     <event value="412" symbol="InstallSoftwareStart" version="0" task="InstallSoftware" opcode="win:Start" level="win:Informational" template="task_0125Args"/>
+     <event value="413" symbol="InstallSoftwareStop" version="0" task="InstallSoftware" opcode="win:Stop" level="win:Informational" template="task_0125Args"/>
+     <event value="7710" symbol="SearchWindowsUpdateStart" version="0" task="SearchWindowsUpdate" opcode="win:Start" level="win:Informational"/>
+     <event value="7711" symbol="SearchWindowsUpdateStop" version="0" task="SearchWindowsUpdate" opcode="win:Stop" level="win:Informational"/>
+     <event value="7712" symbol="DownloadFromWindowsUpdateStart" version="0" task="DownloadFromWindowsUpdate" opcode="win:Start" level="win:Informational"/>
+     <event value="7713" symbol="DownloadFromWindowsUpdateStop" version="0" task="DownloadFromWindowsUpdate" opcode="win:Stop" level="win:Informational"/>
+     <event value="7714" symbol="InstallFromWindowsUpdateStart" version="0" task="InstallFromWindowsUpdate" opcode="win:Start" level="win:Informational"/>
+     <event value="7715" symbol="InstallFromWindowsUpdateStop" version="0" task="InstallFromWindowsUpdate" opcode="win:Stop" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Prop_FeatureId" inType="win:UInt32"/>
+      <data name="Prop_FeatureEnablement" inType="win:UInt8" map="Enablement"/>
+     </template>
+     <template tid="task_011Args">
+      <data name="Prop_IdleWait" inType="win:UInt32" map="ServiceIdleWait"/>
+     </template>
+     <template tid="task_021Args">
+      <data name="Prop_AppUpdatesEnablement" inType="win:UInt8"/>
+      <data name="Prop_WindowsUpdatesEnablement" inType="win:UInt8"/>
+     </template>
+     <template tid="task_030Args">
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+     </template>
+     <template tid="task_040Args">
+      <data name="Prop_ServerSelection" inType="win:UInt32" map="ServerSelection"/>
+     </template>
+     <template tid="task_041Args">
+      <data name="Prop_ServerSelection" inType="win:UInt32"/>
+     </template>
+     <template tid="task_042Args">
+      <data name="Prop_ServerSelection" inType="win:UInt32"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_050Args">
+      <data name="Prop_TaskEnablement" inType="win:UInt8"/>
+     </template>
+     <template tid="task_052Args">
+      <data name="Prop_DriverRecoveryRequest" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0100Args">
+      <data name="Prop_CoreServiceMode" inType="win:UInt32" map="DsmCoreServiceModeEnum"/>
+      <data name="Prop_Event_Window_Seconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="Prop_UpTime_Seconds" inType="win:Int64"/>
+      <data name="Prop_WorkTime_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="Prop_RetryCycleCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0108Args">
+      <data name="Prop_CoreServiceState" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0109Args">
+      <data name="Prop_CoreServiceMode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="Prop_JobId" inType="win:UInt32"/>
+      <data name="Prop_JobType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0111Args">
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="Prop_JobId" inType="win:UInt32"/>
+      <data name="Prop_JobStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0112Args">
+      <data name="Prop_DeviceName" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="Prop_TaskCount" inType="win:Int32"/>
+      <data name="Prop_PropertyCount" inType="win:Int32"/>
+      <data name="Prop_WorkTime_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0120Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Prop_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0121Args">
+      <data name="Prop_DevnodeId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0123Args">
+      <data name="Prop_Seconds" inType="win:Int32"/>
+      <data name="Prop_DeviceId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0124Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="Prop_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0125Args">
+      <data name="Prop_DevnodeId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0126Args">
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0130Args">
+      <data name="Prop_MetadataPackageId" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="Prop_StageTimeMilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0131Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0132Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+      <data name="HTTPCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0133Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0134Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0135Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0136Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0137Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0138Args">
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Prop_IsLegacySigCheckForFile1" inType="win:UInt8" map="IsLegacySignatureCheck"/>
+      <data name="Prop_FileName1" inType="win:UnicodeString"/>
+      <data name="HRESULT1" inType="win:HexInt32"/>
+      <data name="Prop_IsLegacySigCheckForFile2" inType="win:UInt8"/>
+      <data name="Prop_FileName2" inType="win:UnicodeString"/>
+      <data name="HRESULT2" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0150Args">
+      <data name="Prop_DeviceName" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0152Args">
+      <data name="Prop_DeviceName" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0160Args">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="Prop_InstallTime" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0161Args">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Prop_HiHighPartNew" inType="win:UInt32"/>
+      <data name="Prop_LoHighPartNew" inType="win:UInt32"/>
+      <data name="Prop_HiLowPartNew" inType="win:UInt32"/>
+      <data name="Prop_LoLowPartNew" inType="win:UInt32"/>
+      <data name="Prop_HiHighPartOld" inType="win:UInt32"/>
+      <data name="Prop_LoHighPartOld" inType="win:UInt32"/>
+      <data name="Prop_HiLowPartOld" inType="win:UInt32"/>
+      <data name="Prop_LoLowPartOld" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0162Args">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0163Args">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UInt32"/>
+      <data name="ExitCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0165Args">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Prop_CommandLine" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0166Args">
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="Prop_SoftwareLinks" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0167Args">
+      <data name="Prop_SoftwarePfn" inType="win:UnicodeString"/>
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="Prop_IsFramework" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0168Args">
+      <data name="Prop_SoftwarePfn" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0169Args">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0171Args">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="Prop_InstallType" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0172Args">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="Prop_InstallType" inType="win:UInt32"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0180Args">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0190Args">
+      <data name="Prop_DeviceName" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="Prop_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0191Args">
+      <data name="Prop_DeviceName" inType="win:UnicodeString"/>
+      <data name="Prop_ContainerId" inType="win:GUID"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+      <data name="Prop_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0220Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="Prop_NotificationHandler" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0222Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="Prop_PackageId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0234Args">
+      <data name="Prop_DevnodeId" inType="win:UnicodeString"/>
+      <data name="Prop_MilliSeconds" inType="win:Int64"/>
+     </template>
+     <template tid="task_0302Args">
+      <data name="Prop_ContainerId" inType="win:UnicodeString"/>
+      <data name="Prop_ServiceInfoNamespace" inType="win:UnicodeString"/>
+      <data name="Prop_CultureCode" inType="win:UnicodeString"/>
+     </template>
+     <template tid="BuildDriverListTaskStartArgs">
+      <data name="Prop_PackagePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0162Args_V1">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0163Args_V1">
+      <data name="Prop_SoftwareName" inType="win:UnicodeString"/>
+      <data name="Prop_DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UInt32"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0167Args_V1">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="Prop_SoftwarePfn" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0171Args_V1">
+      <data name="Prop_ProductId" inType="win:UnicodeString"/>
+      <data name="Prop_InstallType" inType="win:UInt32" map="AppInstallType"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0DeviceUxReady" value="DeviceUxReady"/>
+    <string id="opcode_task_0DeviceSetupComplete" value="DeviceSetupComplete"/>
+    <string id="task_DeviceSetupTask" value="DeviceSetupTask"/>
+    <string id="task_DownloadDriverTask" value="DownloadDriverTask"/>
+    <string id="task_BuildDriverListTask" value="BuildDriverListTask"/>
+    <string id="task_InstallDriverTask" value="InstallDriverTask"/>
+    <string id="task_MetadataInstallTask" value="MetadataInstallTask"/>
+    <string id="task_InstallDriverUpdateTask" value="InstallDriverUpdateTask"/>
+    <string id="task_InstallSoftware" value="InstallSoftware"/>
+    <string id="task_SearchWindowsUpdate" value="SearchWindowsUpdate"/>
+    <string id="task_DownloadFromWindowsUpdate" value="DownloadFromWindowsUpdate"/>
+    <string id="task_InstallFromWindowsUpdate" value="InstallFromWindowsUpdate"/>
+    <string id="map_Enablementdisabled" value="disabled"/>
+    <string id="map_Enablementenabled" value="enabled"/>
+    <string id="map_ServiceIdleWaitstop" value="stop"/>
+    <string id="map_ServiceIdleWaitretry" value="retry"/>
+    <string id="map_ServerSelectionWSUS" value="WSUS"/>
+    <string id="map_ServerSelectionWU" value="WU"/>
+    <string id="map_DsmCoreServiceModeEnumNormal" value="Normal"/>
+    <string id="map_DsmCoreServiceModeEnumPaused" value="Paused"/>
+    <string id="map_DsmCoreServiceModeEnumSetup" value="Setup"/>
+    <string id="map_DsmCoreServiceModeEnumOOBE" value="OOBE"/>
+    <string id="map_DsmCoreServiceModeEnumSetup Audit" value="Setup Audit"/>
+    <string id="map_IsLegacySignatureChecksignature check" value="signature check"/>
+    <string id="map_IsLegacySignatureChecklegacy signature check" value="legacy signature check"/>
+    <string id="map_AppInstallTypeupdate" value="update"/>
+    <string id="map_AppInstallTypeall logged in users" value="all logged in users"/>
+    <string id="map_AppInstallTypefuture logins" value="future logins"/>
+    <string id="map_AppInstallTypeall users" value="all users"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

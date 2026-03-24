@@ -1,0 +1,169 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MapControls" guid="{acd88d21-e1d4-4483-b974-0c1da66cc529}" resourceFileName="Microsoft-Windows-MapControls" messageFileName="Microsoft-Windows-MapControls" symbol="MicrosoftWindowsMapControls" source="Xml" >
+    <keywords>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x4"/>
+     <keyword name="Map" message="$(string.keyword_Map)" mask="0x10"/>
+     <keyword name="Touch" message="$(string.keyword_Touch)" mask="0x20"/>
+     <keyword name="Queries" message="$(string.keyword_Queries)" mask="0x40"/>
+     <keyword name="Serialization" message="$(string.keyword_Serialization)" mask="0x400"/>
+     <keyword name="MapAuthentication" message="$(string.keyword_MapAuthentication)" mask="0x2000"/>
+     <keyword name="MapFinder" message="$(string.keyword_MapFinder)" mask="0x4000"/>
+    </keywords>
+    <tasks>
+     <task name="MosThread_CreateInstance" message="$(string.task_MosThread_CreateInstance)" value="12"/>
+     <task name="MosThread_InitializeMos" message="$(string.task_MosThread_InitializeMos)" value="13"/>
+     <task name="RouterAdapter_Init" message="$(string.task_RouterAdapter_Init)" value="5001"/>
+     <task name="RouterAdapter_Uninit" message="$(string.task_RouterAdapter_Uninit)" value="5002"/>
+     <task name="RouterAdapter_CalculateRoute" message="$(string.task_RouterAdapter_CalculateRoute)" value="5003"/>
+     <task name="RouterAdapter_OnRouteDone" message="$(string.task_RouterAdapter_OnRouteDone)" value="5006"/>
+     <task name="RouterAdapter_Cancel" message="$(string.task_RouterAdapter_Cancel)" value="5007"/>
+     <task name="RouterAdapter_OnRouteProgress" message="$(string.task_RouterAdapter_OnRouteProgress)" value="5008"/>
+     <task name="Route_Initialize" message="$(string.task_Route_Initialize)" value="5020"/>
+     <task name="RouteLeg_Initialize" message="$(string.task_RouteLeg_Initialize)" value="5021"/>
+     <task name="RouteManeuver_Initialize" message="$(string.task_RouteManeuver_Initialize)" value="5022"/>
+     <task name="Route_Serialize" message="$(string.task_Route_Serialize)" value="5023"/>
+     <task name="Route_Deserialize" message="$(string.task_Route_Deserialize)" value="5024"/>
+     <task name="PointerEvent" message="$(string.task_PointerEvent)" value="11001"/>
+     <task name="JupiterMapOverlay" message="$(string.task_JupiterMapOverlay)" value="11104"/>
+     <task name="NoOutstandingMapControls" message="$(string.task_NoOutstandingMapControls)" value="11105"/>
+     <task name="Map_Authentication" message="$(string.task_Map_Authentication)" value="13001"/>
+     <task name="Map_Finder" message="$(string.task_Map_Finder)" value="14001"/>
+    </tasks>
+    <events>
+     <event value="12" symbol="MosThread_CreateInstanceStart" version="0" task="MosThread_CreateInstance" opcode="win:Start" level="win:Informational" keywords="Performance Map"/>
+     <event value="13" symbol="MosThread_CreateInstanceStop" version="0" task="MosThread_CreateInstance" opcode="win:Stop" level="win:Informational" keywords="Performance Map"/>
+     <event value="14" symbol="MosThread_InitializeMosStart" version="0" task="MosThread_InitializeMos" opcode="win:Start" level="win:Informational" keywords="Performance Map"/>
+     <event value="15" symbol="MosThread_InitializeMosStop" version="0" task="MosThread_InitializeMos" opcode="win:Stop" level="win:Informational" keywords="Performance Map"/>
+     <event value="5001" symbol="RouterAdapter_InitStart" version="0" task="RouterAdapter_Init" opcode="win:Start" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5002" symbol="RouterAdapter_InitStop" version="0" task="RouterAdapter_Init" opcode="win:Stop" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5003" symbol="RouterAdapter_UninitStart" version="0" task="RouterAdapter_Uninit" opcode="win:Start" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5004" symbol="RouterAdapter_UninitStop" version="0" task="RouterAdapter_Uninit" opcode="win:Stop" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5005" symbol="RouterAdapter_CalculateRoute" version="0" task="RouterAdapter_CalculateRoute" level="win:Informational" keywords="Queries" template="RouterAdapter_CalculateRouteArgs"/>
+     <event value="5006" symbol="RouterAdapter_CalculateRouteStart" version="0" task="RouterAdapter_CalculateRoute" opcode="win:Start" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5009" symbol="RouterAdapter_OnRouteDone" version="0" task="RouterAdapter_OnRouteDone" level="win:Informational" keywords="Queries" template="RouterAdapter_OnRouteDoneArgs"/>
+     <event value="5010" symbol="RouterAdapter_OnRouteDoneStop" version="0" task="RouterAdapter_OnRouteDone" opcode="win:Stop" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_OnRouteDoneArgs"/>
+     <event value="5011" symbol="RouterAdapter_Cancel" version="0" task="RouterAdapter_Cancel" level="win:Informational" keywords="Performance Queries" template="RouterAdapter_InitStartArgs"/>
+     <event value="5012" symbol="RouterAdapter_OnRouteProgress" version="0" task="RouterAdapter_OnRouteProgress" level="win:Informational" keywords="Queries" template="RouterAdapter_OnRouteProgressArgs"/>
+     <event value="5020" symbol="Route_Initialize" version="0" task="Route_Initialize" level="win:Verbose" keywords="Queries" template="Route_InitializeArgs"/>
+     <event value="5021" symbol="RouteLeg_Initialize" version="0" task="RouteLeg_Initialize" level="win:Verbose" keywords="Queries" template="RouteLeg_InitializeArgs"/>
+     <event value="5022" symbol="RouteManeuver_Initialize" version="0" task="RouteManeuver_Initialize" level="win:Verbose" keywords="Queries" template="RouteManeuver_InitializeArgs"/>
+     <event value="5023" symbol="Route_Serialize" version="0" task="Route_Serialize" level="win:Informational" keywords="Serialization" template="Route_SerializeArgs"/>
+     <event value="5024" symbol="Route_Deserialize" version="0" task="Route_Deserialize" level="win:Informational" keywords="Serialization" template="Route_SerializeArgs"/>
+     <event value="5025" symbol="Route_SerializeStart" version="0" task="Route_Serialize" opcode="win:Start" level="win:Informational" keywords="Performance Serialization"/>
+     <event value="5026" symbol="Route_DeserializeStop" version="0" task="Route_Deserialize" opcode="win:Stop" level="win:Informational" keywords="Performance Serialization"/>
+     <event value="5027" symbol="Route_DeserializeStart" version="0" task="Route_Deserialize" opcode="win:Start" level="win:Informational" keywords="Performance Serialization"/>
+     <event value="5028" symbol="Route_DeserializeStop5028" version="0" task="Route_Deserialize" opcode="win:Stop" level="win:Informational" keywords="Performance Serialization"/>
+     <event value="11001" symbol="PointerEvent" version="0" task="PointerEvent" level="win:Informational" keywords="Touch"/>
+     <event value="11002" symbol="PointerEvent11002" version="0" task="PointerEvent" level="win:Informational" keywords="Touch"/>
+     <event value="11003" symbol="PointerEvent11003" version="0" task="PointerEvent" level="win:Informational" keywords="Touch"/>
+     <event value="11004" symbol="PointerEvent11004" version="0" task="PointerEvent" level="win:Informational" keywords="Touch"/>
+     <event value="11042" symbol="JupiterMapOverlay" version="0" task="JupiterMapOverlay" level="win:Informational" template="JupiterMapOverlayArgs"/>
+     <event value="11043" symbol="JupiterMapOverlay11043" version="0" task="JupiterMapOverlay" level="win:Informational" template="JupiterMapOverlayArgs"/>
+     <event value="11044" symbol="JupiterMapOverlay11044" version="0" task="JupiterMapOverlay" level="win:Informational" template="JupiterMapOverlayArgs"/>
+     <event value="11045" symbol="JupiterMapOverlayStart" version="0" task="JupiterMapOverlay" opcode="win:Start" level="win:Informational"/>
+     <event value="11046" symbol="JupiterMapOverlayStop" version="0" task="JupiterMapOverlay" opcode="win:Stop" level="win:Informational"/>
+     <event value="11047" symbol="JupiterMapOverlay11047" version="0" task="JupiterMapOverlay" level="win:Informational"/>
+     <event value="11048" symbol="JupiterMapOverlay11048" version="0" task="JupiterMapOverlay" level="win:Informational"/>
+     <event value="11049" symbol="NoOutstandingMapControls" version="0" task="NoOutstandingMapControls" level="win:Informational" keywords="Map"/>
+     <event value="13001" symbol="Map_Authentication" version="0" task="Map_Authentication" level="win:Informational" keywords="MapAuthentication" template="Map_AuthenticationArgs"/>
+     <event value="13002" symbol="Map_Authentication13002" version="0" task="Map_Authentication" level="win:Informational" keywords="MapAuthentication" template="Map_AuthenticationArgs"/>
+     <event value="13003" symbol="Map_Authentication13003" version="0" task="Map_Authentication" level="win:Informational" keywords="MapAuthentication" template="Map_AuthenticationArgs"/>
+     <event value="13004" symbol="Map_Authentication13004" version="0" task="Map_Authentication" level="win:Informational" keywords="MapAuthentication" template="Map_AuthenticationArgs"/>
+     <event value="13005" symbol="Map_Authentication13005" version="0" task="Map_Authentication" level="win:Informational" keywords="MapAuthentication" template="Map_Authentication13005Args"/>
+     <event value="13006" symbol="Map_Finder" version="0" task="Map_Finder" level="win:Informational" keywords="MapFinder" template="Map_AuthenticationArgs"/>
+    </events>
+    <templates>
+     <template tid="RouterAdapter_InitStartArgs">
+      <data name="Id" inType="win:Int32"/>
+     </template>
+     <template tid="RouterAdapter_CalculateRouteArgs">
+      <data name="Id" inType="win:Int32"/>
+      <data name="FromLatitude" inType="win:Double"/>
+      <data name="FromLongitude" inType="win:Double"/>
+      <data name="ToLatitude" inType="win:Double"/>
+      <data name="ToLongitude" inType="win:Double"/>
+      <data name="WaypointCount" inType="win:Int32"/>
+      <data name="TravelMode" inType="win:Int32"/>
+      <data name="RouteOptimization" inType="win:Int32"/>
+      <data name="StartHeadingInDegrees" inType="win:Int32"/>
+     </template>
+     <template tid="RouterAdapter_OnRouteDoneArgs">
+      <data name="Id" inType="win:Int32"/>
+      <data name="HRESULT" inType="win:Int32"/>
+     </template>
+     <template tid="RouterAdapter_OnRouteProgressArgs">
+      <data name="Id" inType="win:Int32"/>
+      <data name="DWPercent" inType="win:Int32"/>
+     </template>
+     <template tid="Route_InitializeArgs">
+      <data name="LengthInMeters" inType="win:Int32"/>
+      <data name="DurationInSeconds" inType="win:Int32"/>
+      <data name="DurationWithoutTrafficInSeconds" inType="win:Int32"/>
+      <data name="GeometryCoordinatesCount" inType="win:Int32"/>
+      <data name="LegCount" inType="win:Int32"/>
+     </template>
+     <template tid="RouteLeg_InitializeArgs">
+      <data name="LengthInMeters" inType="win:Int32"/>
+      <data name="DurationInSeconds" inType="win:Int32"/>
+      <data name="DurationWithoutTrafficInSeconds" inType="win:Int32"/>
+      <data name="GeometryCoordinatesCount" inType="win:Int32"/>
+      <data name="ManeuverCount" inType="win:Int32"/>
+     </template>
+     <template tid="RouteManeuver_InitializeArgs">
+      <data name="DistanceInMetersToNext" inType="win:Int32"/>
+      <data name="ManeuverType" inType="win:Int32"/>
+      <data name="TrafficCircleExitNumber" inType="win:Int32"/>
+      <data name="InstructionText" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Route_SerializeArgs">
+      <data name="Hr" inType="win:Int32"/>
+      <data name="LegCount" inType="win:Int32"/>
+     </template>
+     <template tid="JupiterMapOverlayArgs">
+      <data name="dipX" inType="win:Int32"/>
+      <data name="dipY" inType="win:Int32"/>
+     </template>
+     <template tid="Map_AuthenticationArgs">
+      <data name="MapServiceTokenValue" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Map_Authentication13005Args">
+      <data name="BingKeyValidationStatus" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Map" value="Map"/>
+    <string id="keyword_Touch" value="Touch"/>
+    <string id="keyword_Queries" value="Queries"/>
+    <string id="keyword_Serialization" value="Serialization"/>
+    <string id="keyword_MapAuthentication" value="MapAuthentication"/>
+    <string id="keyword_MapFinder" value="MapFinder"/>
+    <string id="task_MosThread_CreateInstance" value="MosThread_CreateInstance"/>
+    <string id="task_MosThread_InitializeMos" value="MosThread_InitializeMos"/>
+    <string id="task_RouterAdapter_Init" value="RouterAdapter_Init"/>
+    <string id="task_RouterAdapter_Uninit" value="RouterAdapter_Uninit"/>
+    <string id="task_RouterAdapter_CalculateRoute" value="RouterAdapter_CalculateRoute"/>
+    <string id="task_RouterAdapter_OnRouteDone" value="RouterAdapter_OnRouteDone"/>
+    <string id="task_RouterAdapter_Cancel" value="RouterAdapter_Cancel"/>
+    <string id="task_RouterAdapter_OnRouteProgress" value="RouterAdapter_OnRouteProgress"/>
+    <string id="task_Route_Initialize" value="Route_Initialize"/>
+    <string id="task_RouteLeg_Initialize" value="RouteLeg_Initialize"/>
+    <string id="task_RouteManeuver_Initialize" value="RouteManeuver_Initialize"/>
+    <string id="task_Route_Serialize" value="Route_Serialize"/>
+    <string id="task_Route_Deserialize" value="Route_Deserialize"/>
+    <string id="task_PointerEvent" value="PointerEvent"/>
+    <string id="task_JupiterMapOverlay" value="JupiterMapOverlay"/>
+    <string id="task_NoOutstandingMapControls" value="NoOutstandingMapControls"/>
+    <string id="task_Map_Authentication" value="Map_Authentication"/>
+    <string id="task_Map_Finder" value="Map_Finder"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,87 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Privacy-Auditing-CPSS" guid="{15f4cd44-ca53-5422-db17-4e76821b5a69}" resourceFileName="Microsoft-Windows-Privacy-Auditing-CPSS" messageFileName="Microsoft-Windows-Privacy-Auditing-CPSS" symbol="MicrosoftWindowsPrivacyAuditingCPSS" source="Xml" >
+    <keywords>
+     <keyword name="SystemSetting" message="$(string.keyword_SystemSetting)" mask="0x1"/>
+     <keyword name="UserSetting" message="$(string.keyword_UserSetting)" mask="0x2"/>
+     <keyword name="Failure" message="$(string.keyword_Failure)" mask="0x40"/>
+    </keywords>
+    <tasks>
+     <task name="ValueChanged" message="$(string.task_ValueChanged)" value="10"/>
+     <task name="DefaultSettingCreated" message="$(string.task_DefaultSettingCreated)" value="20"/>
+     <task name="ValueRemoved" message="$(string.task_ValueRemoved)" value="30"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="ValueChanged" version="0" task="ValueChanged" level="win:Informational" keywords="SystemSetting" template="ValueChangedArgs"/>
+     <event value="1001" symbol="ValueChanged1001" version="0" task="ValueChanged" level="win:Error" keywords="SystemSetting Failure" template="ValueChangedArgs"/>
+     <event value="1002" symbol="ValueChanged1002" version="0" task="ValueChanged" level="win:Informational" keywords="UserSetting" template="ValueChangedArgs"/>
+     <event value="1003" symbol="ValueChanged1003" version="0" task="ValueChanged" level="win:Error" keywords="UserSetting Failure" template="ValueChangedArgs"/>
+     <event value="1004" symbol="DefaultSettingCreated" version="0" task="DefaultSettingCreated" level="win:Informational" keywords="SystemSetting" template="DefaultSettingCreatedArgs"/>
+     <event value="1005" symbol="DefaultSettingCreated1005" version="0" task="DefaultSettingCreated" level="win:Error" keywords="SystemSetting Failure" template="DefaultSettingCreatedArgs"/>
+     <event value="1006" symbol="DefaultSettingCreated1006" version="0" task="DefaultSettingCreated" level="win:Informational" keywords="UserSetting" template="DefaultSettingCreatedArgs"/>
+     <event value="1007" symbol="DefaultSettingCreated1007" version="0" task="DefaultSettingCreated" level="win:Error" keywords="UserSetting Failure" template="DefaultSettingCreatedArgs"/>
+     <event value="1008" symbol="ValueRemoved" version="0" task="ValueRemoved" level="win:Informational" keywords="UserSetting" template="ValueRemovedArgs"/>
+     <event value="1009" symbol="ValueRemoved1009" version="0" task="ValueRemoved" level="win:Error" keywords="UserSetting Failure" template="ValueRemovedArgs"/>
+     <event value="1010" symbol="ValueRemoved1010" version="0" task="ValueRemoved" level="win:Informational" keywords="SystemSetting" template="ValueRemovedArgs"/>
+     <event value="1011" symbol="ValueRemoved1011" version="0" task="ValueRemoved" level="win:Error" keywords="SystemSetting Failure" template="ValueRemovedArgs"/>
+    </events>
+    <templates>
+     <template tid="ValueChangedArgs">
+      <data name="ProcessUserSid" inType="win:UnicodeString"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ProcessAppPackageFullName" inType="win:UnicodeString"/>
+      <data name="OldSettingValue" inType="win:UnicodeString"/>
+      <data name="NewSettingValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="Component" inType="win:UnicodeString"/>
+      <data name="Area" inType="win:UnicodeString"/>
+      <data name="SubArea" inType="win:UnicodeString"/>
+      <data name="ID" inType="win:UnicodeString"/>
+      <data name="Justification" inType="win:UnicodeString"/>
+      <data name="TestCode" inType="win:Boolean"/>
+     </template>
+     <template tid="DefaultSettingCreatedArgs">
+      <data name="ProcessUserSid" inType="win:UnicodeString"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ProcessAppPackageFullName" inType="win:UnicodeString"/>
+      <data name="NewSettingValue" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="Component" inType="win:UnicodeString"/>
+      <data name="Area" inType="win:UnicodeString"/>
+      <data name="SubArea" inType="win:UnicodeString"/>
+      <data name="ID" inType="win:UnicodeString"/>
+      <data name="Source" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ValueRemovedArgs">
+      <data name="ProcessUserSid" inType="win:UnicodeString"/>
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ProcessAppPackageFullName" inType="win:UnicodeString"/>
+      <data name="TargetUserSid" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:HexInt32"/>
+      <data name="Component" inType="win:UnicodeString"/>
+      <data name="Area" inType="win:UnicodeString"/>
+      <data name="SubArea" inType="win:UnicodeString"/>
+      <data name="ID" inType="win:UnicodeString"/>
+      <data name="Justification" inType="win:UnicodeString"/>
+      <data name="TestCode" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_SystemSetting" value="SystemSetting"/>
+    <string id="keyword_UserSetting" value="UserSetting"/>
+    <string id="keyword_Failure" value="Failure"/>
+    <string id="task_ValueChanged" value="ValueChanged"/>
+    <string id="task_DefaultSettingCreated" value="DefaultSettingCreated"/>
+    <string id="task_ValueRemoved" value="ValueRemoved"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,450 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MediaFoundation-PlayAPI" guid="{b65471e1-019d-436f-bc38-e15fa8e87f53}" resourceFileName="Microsoft-Windows-MediaFoundation-PlayAPI" messageFileName="Microsoft-Windows-MediaFoundation-PlayAPI" symbol="MicrosoftWindowsMediaFoundationPlayAPI" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="MFPlay_MFPCreateMediaPlayer_Task" message="$(string.task_MFPlay_MFPCreateMediaPlayer_Task)" value="3"/>
+     <task name="MFPlay_Player_Construct_Task" message="$(string.task_MFPlay_Player_Construct_Task)" value="4">
+>
+      <opcodes>
+       <opcode name="Objectconstructed" message="$(string.opcode_MFPlay_Player_Construct_TaskObjectconstructed)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="MFPlay_Player_Destruct_Task" message="$(string.task_MFPlay_Player_Destruct_Task)" value="5">
+>
+      <opcodes>
+       <opcode name="Objectdestroyed" message="$(string.opcode_MFPlay_Player_Destruct_TaskObjectdestroyed)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="MFPlay_Item_Construct_Task" message="$(string.task_MFPlay_Item_Construct_Task)" value="6">
+>
+      <opcodes>
+       <opcode name="Objectconstructed" message="$(string.opcode_MFPlay_Item_Construct_TaskObjectconstructed)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="MFPlay_Item_Destruct_Task" message="$(string.task_MFPlay_Item_Destruct_Task)" value="7">
+>
+      <opcodes>
+       <opcode name="Objectdestroyed" message="$(string.opcode_MFPlay_Item_Destruct_TaskObjectdestroyed)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="MFPlay_Player_Play_Task" message="$(string.task_MFPlay_Player_Play_Task)" value="8"/>
+     <task name="MFPlay_Player_Pause_Task" message="$(string.task_MFPlay_Player_Pause_Task)" value="9"/>
+     <task name="MFPlay_Player_Stop_Task" message="$(string.task_MFPlay_Player_Stop_Task)" value="10"/>
+     <task name="MFPlay_Player_FrameStep_Task" message="$(string.task_MFPlay_Player_FrameStep_Task)" value="11"/>
+     <task name="MFPlay_Player_SetPosition_Task" message="$(string.task_MFPlay_Player_SetPosition_Task)" value="12"/>
+     <task name="MFPlay_Player_GetPosition_Task" message="$(string.task_MFPlay_Player_GetPosition_Task)" value="13"/>
+     <task name="MFPlay_Player_GetDuration_Task" message="$(string.task_MFPlay_Player_GetDuration_Task)" value="14"/>
+     <task name="MFPlay_Player_SetRate_Task" message="$(string.task_MFPlay_Player_SetRate_Task)" value="15"/>
+     <task name="MFPlay_Player_SetRateEx_Task" message="$(string.task_MFPlay_Player_SetRateEx_Task)" value="16"/>
+     <task name="MFPlay_Player_GetRate_Task" message="$(string.task_MFPlay_Player_GetRate_Task)" value="17"/>
+     <task name="MFPlay_Player_GetState_Task" message="$(string.task_MFPlay_Player_GetState_Task)" value="18"/>
+     <task name="MFPlay_Player_SetTimer_Task" message="$(string.task_MFPlay_Player_SetTimer_Task)" value="19"/>
+     <task name="MFPlay_Player_CreateMediaItemFromURL_Task" message="$(string.task_MFPlay_Player_CreateMediaItemFromURL_Task)" value="20"/>
+     <task name="MFPlay_Player_CreateMediaItemFromObject_Task" message="$(string.task_MFPlay_Player_CreateMediaItemFromObject_Task)" value="21"/>
+     <task name="MFPlay_Player_SetMediaItem_Task" message="$(string.task_MFPlay_Player_SetMediaItem_Task)" value="22"/>
+     <task name="MFPlay_Player_ClearMediaItem_Task" message="$(string.task_MFPlay_Player_ClearMediaItem_Task)" value="23"/>
+     <task name="MFPlay_Player_GetMediaItem_Task" message="$(string.task_MFPlay_Player_GetMediaItem_Task)" value="24"/>
+     <task name="MFPlay_Player_GetVolume_Task" message="$(string.task_MFPlay_Player_GetVolume_Task)" value="25"/>
+     <task name="MFPlay_Player_SetVolume_Task" message="$(string.task_MFPlay_Player_SetVolume_Task)" value="26"/>
+     <task name="MFPlay_Player_GetBalance_Task" message="$(string.task_MFPlay_Player_GetBalance_Task)" value="27"/>
+     <task name="MFPlay_Player_SetBalance_Task" message="$(string.task_MFPlay_Player_SetBalance_Task)" value="28"/>
+     <task name="MFPlay_Player_GetNativeVideoSize_Task" message="$(string.task_MFPlay_Player_GetNativeVideoSize_Task)" value="29"/>
+     <task name="MFPlay_Player_GetIdealVideoSize_Task" message="$(string.task_MFPlay_Player_GetIdealVideoSize_Task)" value="30"/>
+     <task name="MFPlay_Player_SetVideoSourceRect_Task" message="$(string.task_MFPlay_Player_SetVideoSourceRect_Task)" value="31"/>
+     <task name="MFPlay_Player_GetVideoSourceRect_Task" message="$(string.task_MFPlay_Player_GetVideoSourceRect_Task)" value="32"/>
+     <task name="MFPlay_Player_SetAspectRatioMode_Task" message="$(string.task_MFPlay_Player_SetAspectRatioMode_Task)" value="33"/>
+     <task name="MFPlay_Player_GetAspectRatioMode_Task" message="$(string.task_MFPlay_Player_GetAspectRatioMode_Task)" value="34"/>
+     <task name="MFPlay_Player_GetVideoWindow_Task" message="$(string.task_MFPlay_Player_GetVideoWindow_Task)" value="35"/>
+     <task name="MFPlay_Player_UpdateVideo_Task" message="$(string.task_MFPlay_Player_UpdateVideo_Task)" value="36"/>
+     <task name="MFPlay_Player_SetBorderColor_Task" message="$(string.task_MFPlay_Player_SetBorderColor_Task)" value="37"/>
+     <task name="MFPlay_Player_GetBorderColor_Task" message="$(string.task_MFPlay_Player_GetBorderColor_Task)" value="38"/>
+     <task name="MFPlay_Player_InsertEffect_Task" message="$(string.task_MFPlay_Player_InsertEffect_Task)" value="39"/>
+     <task name="MFPlay_Player_RemoveEffect_Task" message="$(string.task_MFPlay_Player_RemoveEffect_Task)" value="40"/>
+     <task name="MFPlay_Player_RemoveAllEffects_Task" message="$(string.task_MFPlay_Player_RemoveAllEffects_Task)" value="41"/>
+     <task name="MFPlay_Player_Shutdown_Task" message="$(string.task_MFPlay_Player_Shutdown_Task)" value="42"/>
+     <task name="MFPlay_Item_SetStartStopPosition_Task" message="$(string.task_MFPlay_Item_SetStartStopPosition_Task)" value="43"/>
+     <task name="MFPlay_Item_SetStreamSelection_Task" message="$(string.task_MFPlay_Item_SetStreamSelection_Task)" value="44"/>
+     <task name="MFPlay_Player_CancelTimer_Task" message="$(string.task_MFPlay_Player_CancelTimer_Task)" value="45"/>
+     <task name="MFPlay_Player_GetMute_Task" message="$(string.task_MFPlay_Player_GetMute_Task)" value="46"/>
+     <task name="MFPlay_Player_SetMute_Task" message="$(string.task_MFPlay_Player_SetMute_Task)" value="47"/>
+     <task name="MFPlay_Player_GetSupportedRates_Task" message="$(string.task_MFPlay_Player_GetSupportedRates_Task)" value="48"/>
+     <task name="MFPlay_Player_Callback_Fired_Task" message="$(string.task_MFPlay_Player_Callback_Fired_Task)" value="49"/>
+     <task name="MFPlay_Player_Callback_Task" message="$(string.task_MFPlay_Player_Callback_Task)" value="50"/>
+     <task name="MFPlay_Player_UpdatePMPCreationOptions_Task" message="$(string.task_MFPlay_Player_UpdatePMPCreationOptions_Task)" value="51"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="MFPlay_MFPCreateMediaPlayer_TaskStart" version="0" task="MFPlay_MFPCreateMediaPlayer_Task" opcode="win:Start" level="win:Informational" template="MFPlay_MFPCreateMediaPlayer_TaskStartArgs"/>
+     <event value="1" symbol="MFPlay_MFPCreateMediaPlayer_TaskStop" version="0" task="MFPlay_MFPCreateMediaPlayer_Task" opcode="win:Stop" level="win:Informational" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="2" symbol="MFPlay_Player_Construct_TaskObjectconstructed" version="0" task="MFPlay_Player_Construct_Task" opcode="Objectconstructed" level="win:Informational" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="3" symbol="MFPlay_Player_Destruct_TaskObjectdestroyed" version="0" task="MFPlay_Player_Destruct_Task" opcode="Objectdestroyed" level="win:Informational" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="4" symbol="MFPlay_Item_Construct_TaskObjectconstructed" version="0" task="MFPlay_Item_Construct_Task" opcode="Objectconstructed" level="win:Informational" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="5" symbol="MFPlay_Item_Destruct_TaskObjectdestroyed" version="0" task="MFPlay_Item_Destruct_Task" opcode="Objectdestroyed" level="win:Informational" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="6" symbol="MFPlay_Player_Play_TaskStart" version="0" task="MFPlay_Player_Play_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="7" symbol="MFPlay_Player_Play_TaskStop" version="0" task="MFPlay_Player_Play_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="8" symbol="MFPlay_Player_Pause_TaskStart" version="0" task="MFPlay_Player_Pause_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="9" symbol="MFPlay_Player_Pause_TaskStop" version="0" task="MFPlay_Player_Pause_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="10" symbol="MFPlay_Player_Stop_TaskStart" version="0" task="MFPlay_Player_Stop_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="11" symbol="MFPlay_Player_Stop_TaskStop" version="0" task="MFPlay_Player_Stop_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="12" symbol="MFPlay_Player_FrameStep_TaskStart" version="0" task="MFPlay_Player_FrameStep_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_FrameStep_TaskStartArgs"/>
+     <event value="13" symbol="MFPlay_Player_FrameStep_TaskStop" version="0" task="MFPlay_Player_FrameStep_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="14" symbol="MFPlay_Player_SetPosition_TaskStart_V1" version="1" task="MFPlay_Player_SetPosition_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetPosition_TaskStartArgs_V1"/>
+     <event value="15" symbol="MFPlay_Player_SetPosition_TaskStop" version="0" task="MFPlay_Player_SetPosition_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="16" symbol="MFPlay_Player_GetPosition_TaskStart" version="0" task="MFPlay_Player_GetPosition_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_GetPosition_TaskStartArgs"/>
+     <event value="17" symbol="MFPlay_Player_GetPosition_TaskStop_V1" version="1" task="MFPlay_Player_GetPosition_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetPosition_TaskStopArgs_V1"/>
+     <event value="18" symbol="MFPlay_Player_GetDuration_TaskStart" version="0" task="MFPlay_Player_GetDuration_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_GetPosition_TaskStartArgs"/>
+     <event value="19" symbol="MFPlay_Player_GetDuration_TaskStop_V1" version="1" task="MFPlay_Player_GetDuration_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetDuration_TaskStopArgs_V1"/>
+     <event value="20" symbol="MFPlay_Player_SetRate_TaskStart" version="0" task="MFPlay_Player_SetRate_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetRate_TaskStartArgs"/>
+     <event value="21" symbol="MFPlay_Player_SetRate_TaskStop" version="0" task="MFPlay_Player_SetRate_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="22" symbol="MFPlay_Player_GetRate_TaskStart" version="0" task="MFPlay_Player_GetRate_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="23" symbol="MFPlay_Player_GetRate_TaskStop" version="0" task="MFPlay_Player_GetRate_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetRate_TaskStopArgs"/>
+     <event value="24" symbol="MFPlay_Player_GetState_TaskStart" version="0" task="MFPlay_Player_GetState_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="25" symbol="MFPlay_Player_GetState_TaskStop" version="0" task="MFPlay_Player_GetState_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetState_TaskStopArgs"/>
+     <event value="26" symbol="MFPlay_Player_SetTimer_TaskStart" version="0" task="MFPlay_Player_SetTimer_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetTimer_TaskStartArgs"/>
+     <event value="27" symbol="MFPlay_Player_SetTimer_TaskStop" version="0" task="MFPlay_Player_SetTimer_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_SetTimer_TaskStopArgs"/>
+     <event value="28" symbol="MFPlay_Player_CreateMediaItemFromURL_TaskStart" version="0" task="MFPlay_Player_CreateMediaItemFromURL_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_CreateMediaItemFromURL_TaskStartArgs"/>
+     <event value="29" symbol="MFPlay_Player_CreateMediaItemFromURL_TaskStop" version="0" task="MFPlay_Player_CreateMediaItemFromURL_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_CreateMediaItemFromURL_TaskStopArgs"/>
+     <event value="30" symbol="MFPlay_Player_CreateMediaItemFromObject_TaskStart" version="0" task="MFPlay_Player_CreateMediaItemFromObject_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_CreateMediaItemFromObject_TaskStartArgs"/>
+     <event value="31" symbol="MFPlay_Player_CreateMediaItemFromObject_TaskStop" version="0" task="MFPlay_Player_CreateMediaItemFromObject_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_CreateMediaItemFromURL_TaskStopArgs"/>
+     <event value="32" symbol="MFPlay_Player_SetMediaItem_TaskStart" version="0" task="MFPlay_Player_SetMediaItem_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetMediaItem_TaskStartArgs"/>
+     <event value="33" symbol="MFPlay_Player_SetMediaItem_TaskStop" version="0" task="MFPlay_Player_SetMediaItem_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="34" symbol="MFPlay_Player_ClearMediaItem_TaskStart" version="0" task="MFPlay_Player_ClearMediaItem_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="35" symbol="MFPlay_Player_ClearMediaItem_TaskStop" version="0" task="MFPlay_Player_ClearMediaItem_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="36" symbol="MFPlay_Player_GetMediaItem_TaskStart" version="0" task="MFPlay_Player_GetMediaItem_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="37" symbol="MFPlay_Player_GetMediaItem_TaskStop" version="0" task="MFPlay_Player_GetMediaItem_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_CreateMediaItemFromURL_TaskStopArgs"/>
+     <event value="38" symbol="MFPlay_Player_GetVolume_TaskStart" version="0" task="MFPlay_Player_GetVolume_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="39" symbol="MFPlay_Player_GetVolume_TaskStop" version="0" task="MFPlay_Player_GetVolume_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetVolume_TaskStopArgs"/>
+     <event value="40" symbol="MFPlay_Player_SetVolume_TaskStart" version="0" task="MFPlay_Player_SetVolume_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetVolume_TaskStartArgs"/>
+     <event value="41" symbol="MFPlay_Player_SetVolume_TaskStop" version="0" task="MFPlay_Player_SetVolume_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="42" symbol="MFPlay_Player_GetBalance_TaskStart" version="0" task="MFPlay_Player_GetBalance_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="43" symbol="MFPlay_Player_GetBalance_TaskStop" version="0" task="MFPlay_Player_GetBalance_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetBalance_TaskStopArgs"/>
+     <event value="44" symbol="MFPlay_Player_SetBalance_TaskStart" version="0" task="MFPlay_Player_SetBalance_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetBalance_TaskStartArgs"/>
+     <event value="45" symbol="MFPlay_Player_SetBalance_TaskStop" version="0" task="MFPlay_Player_SetBalance_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="46" symbol="MFPlay_Player_GetNativeVideoSize_TaskStart" version="0" task="MFPlay_Player_GetNativeVideoSize_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="47" symbol="MFPlay_Player_GetNativeVideoSize_TaskStop_V1" version="1" task="MFPlay_Player_GetNativeVideoSize_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetNativeVideoSize_TaskStopArgs_V1"/>
+     <event value="48" symbol="MFPlay_Player_GetIdealVideoSize_TaskStart" version="0" task="MFPlay_Player_GetIdealVideoSize_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="49" symbol="MFPlay_Player_GetIdealVideoSize_TaskStop_V1" version="1" task="MFPlay_Player_GetIdealVideoSize_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetIdealVideoSize_TaskStopArgs_V1"/>
+     <event value="50" symbol="MFPlay_Player_SetVideoSourceRect_TaskStart" version="0" task="MFPlay_Player_SetVideoSourceRect_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetVideoSourceRect_TaskStartArgs"/>
+     <event value="51" symbol="MFPlay_Player_SetVideoSourceRect_TaskStop" version="0" task="MFPlay_Player_SetVideoSourceRect_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="52" symbol="MFPlay_Player_GetVideoSourceRect_TaskStart" version="0" task="MFPlay_Player_GetVideoSourceRect_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="53" symbol="MFPlay_Player_GetVideoSourceRect_TaskStop" version="0" task="MFPlay_Player_GetVideoSourceRect_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetVideoSourceRect_TaskStopArgs"/>
+     <event value="54" symbol="MFPlay_Player_SetAspectRatioMode_TaskStart" version="0" task="MFPlay_Player_SetAspectRatioMode_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetAspectRatioMode_TaskStartArgs"/>
+     <event value="55" symbol="MFPlay_Player_SetAspectRatioMode_TaskStop" version="0" task="MFPlay_Player_SetAspectRatioMode_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="56" symbol="MFPlay_Player_GetAspectRatioMode_TaskStart" version="0" task="MFPlay_Player_GetAspectRatioMode_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="57" symbol="MFPlay_Player_GetAspectRatioMode_TaskStop" version="0" task="MFPlay_Player_GetAspectRatioMode_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetAspectRatioMode_TaskStopArgs"/>
+     <event value="58" symbol="MFPlay_Player_GetVideoWindow_TaskStart" version="0" task="MFPlay_Player_GetVideoWindow_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="59" symbol="MFPlay_Player_GetVideoWindow_TaskStop" version="0" task="MFPlay_Player_GetVideoWindow_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetVideoWindow_TaskStopArgs"/>
+     <event value="60" symbol="MFPlay_Player_UpdateVideo_TaskStart" version="0" task="MFPlay_Player_UpdateVideo_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="61" symbol="MFPlay_Player_UpdateVideo_TaskStop" version="0" task="MFPlay_Player_UpdateVideo_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="62" symbol="MFPlay_Player_SetBorderColor_TaskStart" version="0" task="MFPlay_Player_SetBorderColor_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetBorderColor_TaskStartArgs"/>
+     <event value="63" symbol="MFPlay_Player_SetBorderColor_TaskStop" version="0" task="MFPlay_Player_SetBorderColor_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="64" symbol="MFPlay_Player_GetBorderColor_TaskStart" version="0" task="MFPlay_Player_GetBorderColor_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="65" symbol="MFPlay_Player_GetBorderColor_TaskStop" version="0" task="MFPlay_Player_GetBorderColor_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetBorderColor_TaskStopArgs"/>
+     <event value="66" symbol="MFPlay_Player_InsertEffect_TaskStart" version="0" task="MFPlay_Player_InsertEffect_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_InsertEffect_TaskStartArgs"/>
+     <event value="67" symbol="MFPlay_Player_InsertEffect_TaskStop" version="0" task="MFPlay_Player_InsertEffect_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="68" symbol="MFPlay_Player_RemoveEffect_TaskStart" version="0" task="MFPlay_Player_RemoveEffect_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_RemoveEffect_TaskStartArgs"/>
+     <event value="69" symbol="MFPlay_Player_RemoveEffect_TaskStop" version="0" task="MFPlay_Player_RemoveEffect_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="70" symbol="MFPlay_Player_RemoveAllEffects_TaskStart" version="0" task="MFPlay_Player_RemoveAllEffects_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="71" symbol="MFPlay_Player_RemoveAllEffects_TaskStop" version="0" task="MFPlay_Player_RemoveAllEffects_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="72" symbol="MFPlay_Player_Shutdown_TaskStart" version="0" task="MFPlay_Player_Shutdown_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="73" symbol="MFPlay_Player_Shutdown_TaskStop" version="0" task="MFPlay_Player_Shutdown_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="74" symbol="MFPlay_Item_SetStartStopPosition_TaskStart_V1" version="1" task="MFPlay_Item_SetStartStopPosition_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Item_SetStartStopPosition_TaskStartArgs_V1"/>
+     <event value="75" symbol="MFPlay_Item_SetStartStopPosition_TaskStop" version="0" task="MFPlay_Item_SetStartStopPosition_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="76" symbol="MFPlay_Item_SetStreamSelection_TaskStart" version="0" task="MFPlay_Item_SetStreamSelection_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Item_SetStreamSelection_TaskStartArgs"/>
+     <event value="77" symbol="MFPlay_Item_SetStreamSelection_TaskStop" version="0" task="MFPlay_Item_SetStreamSelection_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="78" symbol="MFPlay_Player_CancelTimer_TaskStart" version="0" task="MFPlay_Player_CancelTimer_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_CancelTimer_TaskStartArgs"/>
+     <event value="79" symbol="MFPlay_Player_CancelTimer_TaskStop" version="0" task="MFPlay_Player_CancelTimer_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="80" symbol="MFPlay_Player_GetMute_TaskStart" version="0" task="MFPlay_Player_GetMute_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="81" symbol="MFPlay_Player_GetMute_TaskStop" version="0" task="MFPlay_Player_GetMute_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetMute_TaskStopArgs"/>
+     <event value="82" symbol="MFPlay_Player_SetMute_TaskStart" version="0" task="MFPlay_Player_SetMute_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetMute_TaskStartArgs"/>
+     <event value="83" symbol="MFPlay_Player_SetMute_TaskStop" version="0" task="MFPlay_Player_SetMute_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="84" symbol="MFPlay_Player_GetSupportedRates_TaskStart" version="0" task="MFPlay_Player_GetSupportedRates_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Construct_TaskObjectconstructedArgs"/>
+     <event value="85" symbol="MFPlay_Player_GetSupportedRates_TaskStop" version="0" task="MFPlay_Player_GetSupportedRates_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_GetSupportedRates_TaskStopArgs"/>
+     <event value="101" symbol="MFPlay_Player_SetRateEx_TaskStart_V1" version="1" task="MFPlay_Player_SetRateEx_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_SetRateEx_TaskStartArgs_V1"/>
+     <event value="102" symbol="MFPlay_Player_SetRateEx_TaskStop" version="0" task="MFPlay_Player_SetRateEx_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+     <event value="500" symbol="MFPlay_Player_Callback_Fired_Task" version="0" task="MFPlay_Player_Callback_Fired_Task" level="win:Verbose" template="MFPlay_Player_Callback_Fired_TaskArgs"/>
+     <event value="501" symbol="MFPlay_Player_Callback_TaskStart" version="0" task="MFPlay_Player_Callback_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_Callback_TaskStartArgs"/>
+     <event value="502" symbol="MFPlay_Player_Callback_TaskStop" version="0" task="MFPlay_Player_Callback_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_Player_Callback_Fired_TaskArgs"/>
+     <event value="503" symbol="MFPlay_Player_UpdatePMPCreationOptions_TaskStart" version="0" task="MFPlay_Player_UpdatePMPCreationOptions_Task" opcode="win:Start" level="win:Verbose" template="MFPlay_Player_UpdatePMPCreationOptions_TaskStartArgs"/>
+     <event value="504" symbol="MFPlay_Player_UpdatePMPCreationOptions_TaskStop" version="0" task="MFPlay_Player_UpdatePMPCreationOptions_Task" opcode="win:Stop" level="win:Verbose" template="MFPlay_MFPCreateMediaPlayer_TaskStopArgs"/>
+    </events>
+    <templates>
+     <template tid="MFPlay_MFPCreateMediaPlayer_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="URL" inType="win:UnicodeString"/>
+      <data name="StartPlayback" inType="win:Boolean"/>
+      <data name="Options" inType="win:HexInt32"/>
+      <data name="Callback" inType="win:Pointer"/>
+      <data name="HWND" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_MFPCreateMediaPlayer_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_Construct_TaskObjectconstructedArgs">
+      <data name="Object" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_FrameStep_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Frames" inType="win:Int32"/>
+     </template>
+     <template tid="MFPlay_Player_GetPosition_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="PositionType" inType="win:GUID"/>
+     </template>
+     <template tid="MFPlay_Player_SetRate_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Rate" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_GetRate_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Rate" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_GetState_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="State" inType="win:Int32"/>
+     </template>
+     <template tid="MFPlay_Player_SetTimer_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="TimeIn100ns" inType="win:UInt64"/>
+      <data name="UserData" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_SetTimer_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="CancelCookiePtr" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_CreateMediaItemFromURL_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="URL" inType="win:UnicodeString"/>
+      <data name="Synchronous" inType="win:Boolean"/>
+      <data name="UserData" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_CreateMediaItemFromURL_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="MediaItem" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_CreateMediaItemFromObject_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="SourceObject" inType="win:Pointer"/>
+      <data name="Synchronous" inType="win:Boolean"/>
+      <data name="UserData" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_SetMediaItem_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="MediaItem" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_GetVolume_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Volume" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_SetVolume_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Volume" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_GetBalance_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Balance" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_SetBalance_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Balance" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_SetVideoSourceRect_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Left" inType="win:Float"/>
+      <data name="Top" inType="win:Float"/>
+      <data name="Right" inType="win:Float"/>
+      <data name="Bottom" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_GetVideoSourceRect_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Left" inType="win:Float"/>
+      <data name="Top" inType="win:Float"/>
+      <data name="Right" inType="win:Float"/>
+      <data name="Bottom" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_SetAspectRatioMode_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="AspectRatioFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_GetAspectRatioMode_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="AspectRatioFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_GetVideoWindow_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="HWND" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_SetBorderColor_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ColorRGB" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_GetBorderColor_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ColorRGB" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_InsertEffect_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Effect" inType="win:Pointer"/>
+      <data name="Optional" inType="win:Boolean"/>
+     </template>
+     <template tid="MFPlay_Player_RemoveEffect_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Effect" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Item_SetStreamSelection_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="Select" inType="win:Boolean"/>
+     </template>
+     <template tid="MFPlay_Player_CancelTimer_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="CancelCookiePtrPtr" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_GetMute_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Mute" inType="win:Boolean"/>
+     </template>
+     <template tid="MFPlay_Player_SetMute_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Mute" inType="win:Boolean"/>
+     </template>
+     <template tid="MFPlay_Player_GetSupportedRates_TaskStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ForwardDirection" inType="win:Boolean"/>
+      <data name="SlowestRate" inType="win:Float"/>
+      <data name="FastestRate" inType="win:Float"/>
+     </template>
+     <template tid="MFPlay_Player_Callback_Fired_TaskArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="EventCookie" inType="win:Pointer"/>
+     </template>
+     <template tid="MFPlay_Player_Callback_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="EventCookie" inType="win:Pointer"/>
+      <data name="EventType" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_UpdatePMPCreationOptions_TaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Options" inType="win:UInt32"/>
+     </template>
+     <template tid="MFPlay_Player_SetPosition_TaskStartArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="PositionType" inType="win:GUID"/>
+      <data name="Position" inType="win:Int64"/>
+     </template>
+     <template tid="MFPlay_Player_GetPosition_TaskStopArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Position" inType="win:Int64"/>
+     </template>
+     <template tid="MFPlay_Player_GetDuration_TaskStopArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Duration" inType="win:Int64"/>
+     </template>
+     <template tid="MFPlay_Player_GetNativeVideoSize_TaskStopArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="VideoSizeX" inType="win:Int32"/>
+      <data name="VideoSizeY" inType="win:Int32"/>
+      <data name="AspectSizeX" inType="win:Int32"/>
+      <data name="AspectSizeY" inType="win:Int32"/>
+     </template>
+     <template tid="MFPlay_Player_GetIdealVideoSize_TaskStopArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="MinSizeX" inType="win:Int32"/>
+      <data name="MinSizeY" inType="win:Int32"/>
+      <data name="MaxSizeX" inType="win:Int32"/>
+      <data name="MaxSizeY" inType="win:Int32"/>
+     </template>
+     <template tid="MFPlay_Item_SetStartStopPosition_TaskStartArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="StartPosition" inType="win:Int64"/>
+      <data name="StopPosition" inType="win:Int64"/>
+     </template>
+     <template tid="MFPlay_Player_SetRateEx_TaskStartArgs_V1">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Rate" inType="win:Float"/>
+      <data name="Thin" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_MFPlay_MFPCreateMediaPlayer_Task" value="MFPlay_MFPCreateMediaPlayer_Task"/>
+    <string id="task_MFPlay_Player_Construct_Task" value="MFPlay_Player_Construct_Task"/>
+    <string id="opcode_MFPlay_Player_Construct_TaskObjectconstructed" value="Objectconstructed"/>
+    <string id="task_MFPlay_Player_Destruct_Task" value="MFPlay_Player_Destruct_Task"/>
+    <string id="opcode_MFPlay_Player_Destruct_TaskObjectdestroyed" value="Objectdestroyed"/>
+    <string id="task_MFPlay_Item_Construct_Task" value="MFPlay_Item_Construct_Task"/>
+    <string id="opcode_MFPlay_Item_Construct_TaskObjectconstructed" value="Objectconstructed"/>
+    <string id="task_MFPlay_Item_Destruct_Task" value="MFPlay_Item_Destruct_Task"/>
+    <string id="opcode_MFPlay_Item_Destruct_TaskObjectdestroyed" value="Objectdestroyed"/>
+    <string id="task_MFPlay_Player_Play_Task" value="MFPlay_Player_Play_Task"/>
+    <string id="task_MFPlay_Player_Pause_Task" value="MFPlay_Player_Pause_Task"/>
+    <string id="task_MFPlay_Player_Stop_Task" value="MFPlay_Player_Stop_Task"/>
+    <string id="task_MFPlay_Player_FrameStep_Task" value="MFPlay_Player_FrameStep_Task"/>
+    <string id="task_MFPlay_Player_SetPosition_Task" value="MFPlay_Player_SetPosition_Task"/>
+    <string id="task_MFPlay_Player_GetPosition_Task" value="MFPlay_Player_GetPosition_Task"/>
+    <string id="task_MFPlay_Player_GetDuration_Task" value="MFPlay_Player_GetDuration_Task"/>
+    <string id="task_MFPlay_Player_SetRate_Task" value="MFPlay_Player_SetRate_Task"/>
+    <string id="task_MFPlay_Player_SetRateEx_Task" value="MFPlay_Player_SetRateEx_Task"/>
+    <string id="task_MFPlay_Player_GetRate_Task" value="MFPlay_Player_GetRate_Task"/>
+    <string id="task_MFPlay_Player_GetState_Task" value="MFPlay_Player_GetState_Task"/>
+    <string id="task_MFPlay_Player_SetTimer_Task" value="MFPlay_Player_SetTimer_Task"/>
+    <string id="task_MFPlay_Player_CreateMediaItemFromURL_Task" value="MFPlay_Player_CreateMediaItemFromURL_Task"/>
+    <string id="task_MFPlay_Player_CreateMediaItemFromObject_Task" value="MFPlay_Player_CreateMediaItemFromObject_Task"/>
+    <string id="task_MFPlay_Player_SetMediaItem_Task" value="MFPlay_Player_SetMediaItem_Task"/>
+    <string id="task_MFPlay_Player_ClearMediaItem_Task" value="MFPlay_Player_ClearMediaItem_Task"/>
+    <string id="task_MFPlay_Player_GetMediaItem_Task" value="MFPlay_Player_GetMediaItem_Task"/>
+    <string id="task_MFPlay_Player_GetVolume_Task" value="MFPlay_Player_GetVolume_Task"/>
+    <string id="task_MFPlay_Player_SetVolume_Task" value="MFPlay_Player_SetVolume_Task"/>
+    <string id="task_MFPlay_Player_GetBalance_Task" value="MFPlay_Player_GetBalance_Task"/>
+    <string id="task_MFPlay_Player_SetBalance_Task" value="MFPlay_Player_SetBalance_Task"/>
+    <string id="task_MFPlay_Player_GetNativeVideoSize_Task" value="MFPlay_Player_GetNativeVideoSize_Task"/>
+    <string id="task_MFPlay_Player_GetIdealVideoSize_Task" value="MFPlay_Player_GetIdealVideoSize_Task"/>
+    <string id="task_MFPlay_Player_SetVideoSourceRect_Task" value="MFPlay_Player_SetVideoSourceRect_Task"/>
+    <string id="task_MFPlay_Player_GetVideoSourceRect_Task" value="MFPlay_Player_GetVideoSourceRect_Task"/>
+    <string id="task_MFPlay_Player_SetAspectRatioMode_Task" value="MFPlay_Player_SetAspectRatioMode_Task"/>
+    <string id="task_MFPlay_Player_GetAspectRatioMode_Task" value="MFPlay_Player_GetAspectRatioMode_Task"/>
+    <string id="task_MFPlay_Player_GetVideoWindow_Task" value="MFPlay_Player_GetVideoWindow_Task"/>
+    <string id="task_MFPlay_Player_UpdateVideo_Task" value="MFPlay_Player_UpdateVideo_Task"/>
+    <string id="task_MFPlay_Player_SetBorderColor_Task" value="MFPlay_Player_SetBorderColor_Task"/>
+    <string id="task_MFPlay_Player_GetBorderColor_Task" value="MFPlay_Player_GetBorderColor_Task"/>
+    <string id="task_MFPlay_Player_InsertEffect_Task" value="MFPlay_Player_InsertEffect_Task"/>
+    <string id="task_MFPlay_Player_RemoveEffect_Task" value="MFPlay_Player_RemoveEffect_Task"/>
+    <string id="task_MFPlay_Player_RemoveAllEffects_Task" value="MFPlay_Player_RemoveAllEffects_Task"/>
+    <string id="task_MFPlay_Player_Shutdown_Task" value="MFPlay_Player_Shutdown_Task"/>
+    <string id="task_MFPlay_Item_SetStartStopPosition_Task" value="MFPlay_Item_SetStartStopPosition_Task"/>
+    <string id="task_MFPlay_Item_SetStreamSelection_Task" value="MFPlay_Item_SetStreamSelection_Task"/>
+    <string id="task_MFPlay_Player_CancelTimer_Task" value="MFPlay_Player_CancelTimer_Task"/>
+    <string id="task_MFPlay_Player_GetMute_Task" value="MFPlay_Player_GetMute_Task"/>
+    <string id="task_MFPlay_Player_SetMute_Task" value="MFPlay_Player_SetMute_Task"/>
+    <string id="task_MFPlay_Player_GetSupportedRates_Task" value="MFPlay_Player_GetSupportedRates_Task"/>
+    <string id="task_MFPlay_Player_Callback_Fired_Task" value="MFPlay_Player_Callback_Fired_Task"/>
+    <string id="task_MFPlay_Player_Callback_Task" value="MFPlay_Player_Callback_Task"/>
+    <string id="task_MFPlay_Player_UpdatePMPCreationOptions_Task" value="MFPlay_Player_UpdatePMPCreationOptions_Task"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

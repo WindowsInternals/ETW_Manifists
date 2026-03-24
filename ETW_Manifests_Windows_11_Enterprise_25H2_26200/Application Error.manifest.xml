@@ -1,0 +1,49 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Application Error" guid="{a0e9b465-b939-57d7-b27d-95d8e925ff57}" resourceFileName="Application Error" messageFileName="Application Error" symbol="ApplicationError" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="ApplicationCrashingEvents" message="$(string.task_ApplicationCrashingEvents)" value="100"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="ApplicationCrashingEvents" version="0" task="ApplicationCrashingEvents" level="win:Error" template="ApplicationCrashingEventsArgs"/>
+     <event value="1005" symbol="ApplicationCrashingEvents1005" version="0" task="ApplicationCrashingEvents" level="win:Error" template="ApplicationCrashingEvents1005Args"/>
+    </events>
+    <templates>
+     <template tid="ApplicationCrashingEventsArgs">
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="AppVersion" inType="win:UnicodeString"/>
+      <data name="AppTimeStamp" inType="win:UnicodeString"/>
+      <data name="ModuleName" inType="win:UnicodeString"/>
+      <data name="ModuleVersion" inType="win:UnicodeString"/>
+      <data name="ModuleTimeStamp" inType="win:UnicodeString"/>
+      <data name="ExceptionCode" inType="win:UnicodeString"/>
+      <data name="FaultingOffset" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:HexInt32"/>
+      <data name="ProcessCreationTime" inType="win:HexInt64"/>
+      <data name="AppPath" inType="win:UnicodeString"/>
+      <data name="ModulePath" inType="win:UnicodeString"/>
+      <data name="IntegratorReportId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="PackageRelativeAppId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="ApplicationCrashingEvents1005Args">
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="StatusCode" inType="win:HexInt32"/>
+      <data name="MediumType" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_ApplicationCrashingEvents" value="ApplicationCrashingEvents"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

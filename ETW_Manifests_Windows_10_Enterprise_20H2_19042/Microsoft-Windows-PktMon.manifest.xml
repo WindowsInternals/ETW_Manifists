@@ -1,0 +1,570 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PktMon" guid="{4d4f80d9-c8bd-4d73-bb5b-19c90402c5ac}" resourceFileName="Microsoft-Windows-PktMon" messageFileName="Microsoft-Windows-PktMon" symbol="MicrosoftWindowsPktMon" source="Xml" >
+    <keywords>
+     <keyword name="Config" message="$(string.keyword_Config)" mask="0x1"/>
+     <keyword name="Rundown" message="$(string.keyword_Rundown)" mask="0x2"/>
+     <keyword name="NblParsed" message="$(string.keyword_NblParsed)" mask="0x4"/>
+     <keyword name="NblInfo" message="$(string.keyword_NblInfo)" mask="0x8"/>
+     <keyword name="Payload" message="$(string.keyword_Payload)" mask="0x10"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="ComponentType">
+      <map value="0x1" message="$(string.map_ComponentTypeNDIS)"/>
+      <map value="0x2" message="$(string.map_ComponentTypeMiniport)"/>
+      <map value="0x3" message="$(string.map_ComponentTypeFilter)"/>
+      <map value="0x4" message="$(string.map_ComponentTypeProtocol)"/>
+      <map value="0x5" message="$(string.map_ComponentTypeVmsVmNic)"/>
+      <map value="0x6" message="$(string.map_ComponentTypeVmsMiniport)"/>
+      <map value="0x7" message="$(string.map_ComponentTypeVmsExtMiniport)"/>
+      <map value="0x8" message="$(string.map_ComponentTypeVmsProtocolNic)"/>
+      <map value="0x9" message="$(string.map_ComponentTypeNetVsc Miniport)"/>
+      <map value="0xa" message="$(string.map_ComponentTypeHTTP Protocol)"/>
+     </valueMap>
+     <valueMap name="PropertyType">
+      <map value="0x1" message="$(string.map_PropertyTypeIfIndex)"/>
+      <map value="0x2" message="$(string.map_PropertyTypeMiniportIfIndex)"/>
+      <map value="0x3" message="$(string.map_PropertyTypeLowerIfIndex)"/>
+      <map value="0x4" message="$(string.map_PropertyTypeIfGuid)"/>
+      <map value="0x5" message="$(string.map_PropertyTypeNdisMedium)"/>
+      <map value="0x6" message="$(string.map_PropertyTypePhysAddress)"/>
+      <map value="0x7" message="$(string.map_PropertyTypeEtherType)"/>
+      <map value="0x8" message="$(string.map_PropertyTypeOptDataPath)"/>
+      <map value="0x9" message="$(string.map_PropertyTypeNdisObject)"/>
+      <map value="0xa" message="$(string.map_PropertyTypeVMSwitchName)"/>
+      <map value="0xb" message="$(string.map_PropertyTypeVmsExtIfIndex)"/>
+      <map value="0xc" message="$(string.map_PropertyTypeLowestIfIndex)"/>
+      <map value="0xd" message="$(string.map_PropertyTypeIP Address)"/>
+     </valueMap>
+     <valueMap name="NdisMedium">
+      <map value="0x0" message="$(string.map_NdisMediumEthernet)"/>
+      <map value="0x10" message="$(string.map_NdisMediumWiFi)"/>
+      <map value="0x13" message="$(string.map_NdisMediumMBB)"/>
+     </valueMap>
+     <valueMap name="PacketDirectionTag">
+      <map value="0x0" message="$(string.map_PacketDirectionTagNone)"/>
+      <map value="0x1" message="$(string.map_PacketDirectionTagIn)"/>
+      <map value="0x2" message="$(string.map_PacketDirectionTagOut)"/>
+      <map value="0x3" message="$(string.map_PacketDirectionTagRx)"/>
+      <map value="0x4" message="$(string.map_PacketDirectionTagTx)"/>
+      <map value="0x5" message="$(string.map_PacketDirectionTagIngress)"/>
+      <map value="0x6" message="$(string.map_PacketDirectionTagEgress)"/>
+     </valueMap>
+     <valueMap name="EtherType">
+      <map value="0x800" message="$(string.map_EtherTypeIPv4)"/>
+      <map value="0x806" message="$(string.map_EtherTypeARP)"/>
+      <map value="0x8100" message="$(string.map_EtherTypeVLAN)"/>
+      <map value="0x86dd" message="$(string.map_EtherTypeIPv6)"/>
+      <map value="0x88cc" message="$(string.map_EtherTypeLLDP)"/>
+      <map value="0x88d9" message="$(string.map_EtherTypeLLTD)"/>
+     </valueMap>
+     <valueMap name="IPProtocol">
+      <map value="0x1" message="$(string.map_IPProtocolICMP)"/>
+      <map value="0x6" message="$(string.map_IPProtocolTCP)"/>
+      <map value="0x11" message="$(string.map_IPProtocolUDP)"/>
+      <map value="0x3a" message="$(string.map_IPProtocolICMPv6)"/>
+     </valueMap>
+     <bitMap name="TCPFlags">
+      <map value="0x1" message="$(string.map_TCPFlagsFIN)"/>
+      <map value="0x2" message="$(string.map_TCPFlagsSYN)"/>
+      <map value="0x4" message="$(string.map_TCPFlagsRST)"/>
+      <map value="0x8" message="$(string.map_TCPFlagsPSH)"/>
+      <map value="0x10" message="$(string.map_TCPFlagsACK)"/>
+      <map value="0x20" message="$(string.map_TCPFlagsURG)"/>
+      <map value="0x40" message="$(string.map_TCPFlagsECE)"/>
+      <map value="0x80" message="$(string.map_TCPFlagsCWR)"/>
+     </bitMap>
+     <valueMap name="PacketType">
+      <map value="0x0" message="$(string.map_PacketTypeUnknown)"/>
+      <map value="0x1" message="$(string.map_PacketTypeEthernet)"/>
+      <map value="0x2" message="$(string.map_PacketTypeWiFi)"/>
+      <map value="0x3" message="$(string.map_PacketTypeMBB)"/>
+      <map value="0x4" message="$(string.map_PacketTypeHTTP)"/>
+     </valueMap>
+     <valueMap name="DropReason">
+      <map value="0x0" message="$(string.map_DropReasonUnspecified)"/>
+      <map value="0x1" message="$(string.map_DropReasonInvalid Data)"/>
+      <map value="0x2" message="$(string.map_DropReasonInvalid Packet)"/>
+      <map value="0x3" message="$(string.map_DropReasonInsufficient resources)"/>
+      <map value="0x4" message="$(string.map_DropReasonAdapter not ready)"/>
+      <map value="0x5" message="$(string.map_DropReasonMedia Disconnected)"/>
+      <map value="0x6" message="$(string.map_DropReasonNot accepted)"/>
+      <map value="0x7" message="$(string.map_DropReasonDevice busy)"/>
+      <map value="0x8" message="$(string.map_DropReasonFiltered)"/>
+      <map value="0x9" message="$(string.map_DropReasonFiltered VLAN)"/>
+      <map value="0xa" message="$(string.map_DropReasonUnauthorized VLAN)"/>
+      <map value="0xb" message="$(string.map_DropReasonUnauthorized MAC)"/>
+      <map value="0xc" message="$(string.map_DropReasonFailed security policy)"/>
+      <map value="0xd" message="$(string.map_DropReasonFailed pVlan setting)"/>
+      <map value="0xe" message="$(string.map_DropReasonQoS drop)"/>
+      <map value="0xf" message="$(string.map_DropReasonIPSec drop)"/>
+      <map value="0x10" message="$(string.map_DropReasonSpoofed MAC address is not allowed)"/>
+      <map value="0x11" message="$(string.map_DropReasonFailed DHCP guard)"/>
+      <map value="0x12" message="$(string.map_DropReasonFailed Router Guard)"/>
+      <map value="0x13" message="$(string.map_DropReasonBridge is not allowed inside VM)"/>
+      <map value="0x14" message="$(string.map_DropReasonVirtual Subnet ID does not match)"/>
+      <map value="0x15" message="$(string.map_DropReasonRequired vSwitch extension is missing)"/>
+      <map value="0x16" message="$(string.map_DropReasonCreating vSwitch over another vSwitch is not allowed)"/>
+      <map value="0x17" message="$(string.map_DropReasonMTU mismatch)"/>
+      <map value="0x18" message="$(string.map_DropReasonNative forwarding required)"/>
+      <map value="0x19" message="$(string.map_DropReasonInvalid VLAN format)"/>
+      <map value="0x1a" message="$(string.map_DropReasonInvalid destination MAC)"/>
+      <map value="0x1b" message="$(string.map_DropReasonInvalid source MAC)"/>
+      <map value="0x1c" message="$(string.map_DropReasonFirst NB too small)"/>
+      <map value="0x1e" message="$(string.map_DropReasonStorm limit exceeded)"/>
+      <map value="0x1f" message="$(string.map_DropReasonICMP request injected by switch)"/>
+      <map value="0x20" message="$(string.map_DropReasonFailed to update destination list)"/>
+      <map value="0x21" message="$(string.map_DropReasonDestination NIC is disabled)"/>
+      <map value="0x22" message="$(string.map_DropReasonPacket does not match destination NIC packet filter)"/>
+      <map value="0x23" message="$(string.map_DropReasonvSwitch data flow is disabled)"/>
+      <map value="0x24" message="$(string.map_DropReasonPort isolation setting does not allow untagged traffic)"/>
+      <map value="0x25" message="$(string.map_DropReasonInvalid PD queue)"/>
+      <map value="0x26" message="$(string.map_DropReasonAdapter is in low power state)"/>
+      <map value="0xc9" message="$(string.map_DropReasonAdapter paused)"/>
+      <map value="0xca" message="$(string.map_DropReasonAdapter reset in progress)"/>
+      <map value="0xcb" message="$(string.map_DropReasonSend aborted)"/>
+      <map value="0xcc" message="$(string.map_DropReasonUnsupported EtherType)"/>
+      <map value="0x191" message="$(string.map_DropReasonMicroport error)"/>
+      <map value="0x192" message="$(string.map_DropReasonVF not ready)"/>
+      <map value="0x193" message="$(string.map_DropReasonMicroport not ready)"/>
+      <map value="0x194" message="$(string.map_DropReasonVMBus error)"/>
+      <map value="0x259" message="$(string.map_DropReasonLoopback Ethernet packet)"/>
+      <map value="0x25a" message="$(string.map_DropReasonInvalid SNAP header)"/>
+      <map value="0x25b" message="$(string.map_DropReasonInvalid Ethernet type)"/>
+      <map value="0x25c" message="$(string.map_DropReasonInvalid packet length)"/>
+      <map value="0x25d" message="$(string.map_DropReasonHeader not contiguous)"/>
+      <map value="0x25e" message="$(string.map_DropReasonInvalid destination type)"/>
+      <map value="0x25f" message="$(string.map_DropReasonInterface not ready)"/>
+      <map value="0x260" message="$(string.map_DropReasonProvider not ready)"/>
+      <map value="0x261" message="$(string.map_DropReasonInvalid LSO information)"/>
+      <map value="0x262" message="$(string.map_DropReasonInvalid USO information)"/>
+      <map value="0x263" message="$(string.map_DropReasonInvalid medium type)"/>
+      <map value="0x264" message="$(string.map_DropReasonInvalid ARP header)"/>
+      <map value="0x265" message="$(string.map_DropReasonNo interface available to receive packets for an isolation ID)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Config" template="task_0Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_020Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_030Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_040Args"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_030Args"/>
+     <event value="60" symbol="task_060" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_060Args"/>
+     <event value="65" symbol="task_065" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_065Args"/>
+     <event value="66" symbol="task_066" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_066Args"/>
+     <event value="70" symbol="task_070" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_070Args"/>
+     <event value="73" symbol="task_073" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_073Args"/>
+     <event value="75" symbol="task_075" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_075Args"/>
+     <event value="80" symbol="task_080" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_080Args"/>
+     <event value="90" symbol="task_090" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_090Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_0100Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Informational" keywords="Rundown" template="task_0110Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0120Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0130Args"/>
+     <event value="140" symbol="task_0140" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0140Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Informational" keywords="NblParsed" template="task_0150Args"/>
+     <event value="160" symbol="task_0160" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0160Args"/>
+     <event value="170" symbol="task_0170" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0160Args"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Informational" keywords="NblInfo" template="task_0180Args"/>
+     <event value="190" symbol="task_0190" version="0" task="task_0" level="win:Informational" keywords="NblInfo" template="task_0180Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0200Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0200Args"/>
+     <event value="220" symbol="task_0220" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0220Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Informational" keywords="Payload" template="task_0220Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_020Args">
+      <data name="Id" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16" map="ComponentType"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Description" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_030Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UInt32"/>
+     </template>
+     <template tid="task_040Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16" map="PropertyType"/>
+      <data name="Value" inType="win:GUID"/>
+     </template>
+     <template tid="task_060Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UInt16" map="NdisMedium"/>
+     </template>
+     <template tid="task_065Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="IpAddress" inType="win:UInt32"/>
+     </template>
+     <template tid="task_066Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="IpAddress" inType="win:Binary"/>
+     </template>
+     <template tid="task_070Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="Value" inType="win:Binary" length="Size"/>
+     </template>
+     <template tid="task_073Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="Value" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_075Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="EtherType" inType="win:UInt16"/>
+     </template>
+     <template tid="task_080Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="DirTagIn" inType="win:UInt16"/>
+      <data name="PacketsIn" inType="win:UInt64"/>
+      <data name="BytesIn" inType="win:UInt64"/>
+      <data name="DirTagOut" inType="win:UInt16" map="PacketDirectionTag"/>
+      <data name="PacketsOut" inType="win:UInt64"/>
+      <data name="BytesOut" inType="win:UInt64"/>
+     </template>
+     <template tid="task_090Args">
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeName" inType="win:UnicodeString"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="DirTagIn" inType="win:UInt16"/>
+      <data name="PacketsIn" inType="win:UInt64"/>
+      <data name="BytesIn" inType="win:UInt64"/>
+      <data name="DirTagOut" inType="win:UInt16"/>
+      <data name="PacketsOut" inType="win:UInt64"/>
+      <data name="BytesOut" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0100Args">
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="FilterName" inType="win:UnicodeString"/>
+      <data name="MacAddress1" inType="win:Binary"/>
+      <data name="MacAddress2" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16" map="EtherType"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="IpAddress1" inType="win:UInt32"/>
+      <data name="IpAddress2" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8" map="IPProtocol"/>
+      <data name="Port1" inType="win:UInt16"/>
+      <data name="Port2" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="FilterName" inType="win:UnicodeString"/>
+      <data name="MacAddress1" inType="win:Binary"/>
+      <data name="MacAddress2" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="IpAddress1" inType="win:Binary"/>
+      <data name="IpAddress2" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="Port1" inType="win:UInt16"/>
+      <data name="Port2" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8" map="TCPFlags"/>
+     </template>
+     <template tid="task_0120Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16" map="PacketType"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0130Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32" map="DropReason"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0140Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0150Args">
+      <data name="DestinationMAC" inType="win:Binary"/>
+      <data name="SourceMAC" inType="win:Binary"/>
+      <data name="EtherType" inType="win:UInt16"/>
+      <data name="VlanId" inType="win:UInt16"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="TCPFlags" inType="win:UInt8"/>
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0160Args">
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktNumber" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+     <template tid="task_0180Args">
+      <data name="PktGroupId" inType="win:UInt64"/>
+      <data name="PktCount" inType="win:UInt16"/>
+      <data name="AppearanceCount" inType="win:UInt16"/>
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="TcpIpChecksum" inType="win:Pointer"/>
+      <data name="TcpLargeSend" inType="win:Pointer"/>
+      <data name="Ieee8021Q" inType="win:Pointer"/>
+      <data name="HashInfo" inType="win:Pointer"/>
+      <data name="HashValue" inType="win:Pointer"/>
+      <data name="VirtualSubnetInfo" inType="win:Pointer"/>
+      <data name="TcpRecvSegCoalesceInfo" inType="win:Pointer"/>
+      <data name="NrtNameResolutionId" inType="win:Pointer"/>
+      <data name="TcpSendOffloadsSupplementalInfo" inType="win:Pointer"/>
+      <data name="SwitchForwardingDetail" inType="win:UInt64"/>
+      <data name="GftOffloadInfo" inType="win:UInt64"/>
+      <data name="GftFlowEntryId" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0200Args">
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="DestinationIP" inType="win:UInt32"/>
+      <data name="SourceIP" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+     <template tid="task_0220Args">
+      <data name="DirTag" inType="win:UInt16"/>
+      <data name="PacketType" inType="win:UInt16"/>
+      <data name="ComponentId" inType="win:UInt16"/>
+      <data name="EdgeId" inType="win:UInt16"/>
+      <data name="FilterId" inType="win:UInt16"/>
+      <data name="DropReason" inType="win:UInt32"/>
+      <data name="DropLocation" inType="win:UInt32"/>
+      <data name="DestinationIP" inType="win:Binary"/>
+      <data name="SourceIP" inType="win:Binary"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="DestinationPort" inType="win:UInt16"/>
+      <data name="SourcePort" inType="win:UInt16"/>
+      <data name="OriginalPayloadSize" inType="win:UInt16"/>
+      <data name="LoggedPayloadSize" inType="win:UInt16"/>
+      <data name="Payload" inType="win:Binary" length="LoggedPayloadSize"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Config" value="Config"/>
+    <string id="keyword_Rundown" value="Rundown"/>
+    <string id="keyword_NblParsed" value="NblParsed"/>
+    <string id="keyword_NblInfo" value="NblInfo"/>
+    <string id="keyword_Payload" value="Payload"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_ComponentTypeNDIS" value="NDIS"/>
+    <string id="map_ComponentTypeMiniport" value="Miniport"/>
+    <string id="map_ComponentTypeFilter" value="Filter"/>
+    <string id="map_ComponentTypeProtocol" value="Protocol"/>
+    <string id="map_ComponentTypeVmsVmNic" value="VmsVmNic"/>
+    <string id="map_ComponentTypeVmsMiniport" value="VmsMiniport"/>
+    <string id="map_ComponentTypeVmsExtMiniport" value="VmsExtMiniport"/>
+    <string id="map_ComponentTypeVmsProtocolNic" value="VmsProtocolNic"/>
+    <string id="map_ComponentTypeNetVsc Miniport" value="NetVsc Miniport"/>
+    <string id="map_ComponentTypeHTTP Protocol" value="HTTP Protocol"/>
+    <string id="map_PropertyTypeIfIndex" value="IfIndex"/>
+    <string id="map_PropertyTypeMiniportIfIndex" value="MiniportIfIndex"/>
+    <string id="map_PropertyTypeLowerIfIndex" value="LowerIfIndex"/>
+    <string id="map_PropertyTypeIfGuid" value="IfGuid"/>
+    <string id="map_PropertyTypeNdisMedium" value="NdisMedium"/>
+    <string id="map_PropertyTypePhysAddress" value="PhysAddress"/>
+    <string id="map_PropertyTypeEtherType" value="EtherType"/>
+    <string id="map_PropertyTypeOptDataPath" value="OptDataPath"/>
+    <string id="map_PropertyTypeNdisObject" value="NdisObject"/>
+    <string id="map_PropertyTypeVMSwitchName" value="VMSwitchName"/>
+    <string id="map_PropertyTypeVmsExtIfIndex" value="VmsExtIfIndex"/>
+    <string id="map_PropertyTypeLowestIfIndex" value="LowestIfIndex"/>
+    <string id="map_PropertyTypeIP Address" value="IP Address"/>
+    <string id="map_NdisMediumEthernet" value="Ethernet"/>
+    <string id="map_NdisMediumWiFi" value="WiFi"/>
+    <string id="map_NdisMediumMBB" value="MBB"/>
+    <string id="map_PacketDirectionTagNone" value="None"/>
+    <string id="map_PacketDirectionTagIn" value="In"/>
+    <string id="map_PacketDirectionTagOut" value="Out"/>
+    <string id="map_PacketDirectionTagRx" value="Rx"/>
+    <string id="map_PacketDirectionTagTx" value="Tx"/>
+    <string id="map_PacketDirectionTagIngress" value="Ingress"/>
+    <string id="map_PacketDirectionTagEgress" value="Egress"/>
+    <string id="map_EtherTypeIPv4" value="IPv4"/>
+    <string id="map_EtherTypeARP" value="ARP"/>
+    <string id="map_EtherTypeVLAN" value="VLAN"/>
+    <string id="map_EtherTypeIPv6" value="IPv6"/>
+    <string id="map_EtherTypeLLDP" value="LLDP"/>
+    <string id="map_EtherTypeLLTD" value="LLTD"/>
+    <string id="map_IPProtocolICMP" value="ICMP"/>
+    <string id="map_IPProtocolTCP" value="TCP"/>
+    <string id="map_IPProtocolUDP" value="UDP"/>
+    <string id="map_IPProtocolICMPv6" value="ICMPv6"/>
+    <string id="map_TCPFlagsFIN" value="FIN"/>
+    <string id="map_TCPFlagsSYN" value="SYN"/>
+    <string id="map_TCPFlagsRST" value="RST"/>
+    <string id="map_TCPFlagsPSH" value="PSH"/>
+    <string id="map_TCPFlagsACK" value="ACK"/>
+    <string id="map_TCPFlagsURG" value="URG"/>
+    <string id="map_TCPFlagsECE" value="ECE"/>
+    <string id="map_TCPFlagsCWR" value="CWR"/>
+    <string id="map_PacketTypeUnknown" value="Unknown"/>
+    <string id="map_PacketTypeEthernet" value="Ethernet"/>
+    <string id="map_PacketTypeWiFi" value="WiFi"/>
+    <string id="map_PacketTypeMBB" value="MBB"/>
+    <string id="map_PacketTypeHTTP" value="HTTP"/>
+    <string id="map_DropReasonUnspecified" value="Unspecified"/>
+    <string id="map_DropReasonInvalid Data" value="Invalid Data"/>
+    <string id="map_DropReasonInvalid Packet" value="Invalid Packet"/>
+    <string id="map_DropReasonInsufficient resources" value="Insufficient resources"/>
+    <string id="map_DropReasonAdapter not ready" value="Adapter not ready"/>
+    <string id="map_DropReasonMedia Disconnected" value="Media Disconnected"/>
+    <string id="map_DropReasonNot accepted" value="Not accepted"/>
+    <string id="map_DropReasonDevice busy" value="Device busy"/>
+    <string id="map_DropReasonFiltered" value="Filtered"/>
+    <string id="map_DropReasonFiltered VLAN" value="Filtered VLAN"/>
+    <string id="map_DropReasonUnauthorized VLAN" value="Unauthorized VLAN"/>
+    <string id="map_DropReasonUnauthorized MAC" value="Unauthorized MAC"/>
+    <string id="map_DropReasonFailed security policy" value="Failed security policy"/>
+    <string id="map_DropReasonFailed pVlan setting" value="Failed pVlan setting"/>
+    <string id="map_DropReasonQoS drop" value="QoS drop"/>
+    <string id="map_DropReasonIPSec drop" value="IPSec drop"/>
+    <string id="map_DropReasonSpoofed MAC address is not allowed" value="Spoofed MAC address is not allowed"/>
+    <string id="map_DropReasonFailed DHCP guard" value="Failed DHCP guard"/>
+    <string id="map_DropReasonFailed Router Guard" value="Failed Router Guard"/>
+    <string id="map_DropReasonBridge is not allowed inside VM" value="Bridge is not allowed inside VM"/>
+    <string id="map_DropReasonVirtual Subnet ID does not match" value="Virtual Subnet ID does not match"/>
+    <string id="map_DropReasonRequired vSwitch extension is missing" value="Required vSwitch extension is missing"/>
+    <string id="map_DropReasonCreating vSwitch over another vSwitch is not allowed" value="Creating vSwitch over another vSwitch is not allowed"/>
+    <string id="map_DropReasonMTU mismatch" value="MTU mismatch"/>
+    <string id="map_DropReasonNative forwarding required" value="Native forwarding required"/>
+    <string id="map_DropReasonInvalid VLAN format" value="Invalid VLAN format"/>
+    <string id="map_DropReasonInvalid destination MAC" value="Invalid destination MAC"/>
+    <string id="map_DropReasonInvalid source MAC" value="Invalid source MAC"/>
+    <string id="map_DropReasonFirst NB too small" value="First NB too small"/>
+    <string id="map_DropReasonStorm limit exceeded" value="Storm limit exceeded"/>
+    <string id="map_DropReasonICMP request injected by switch" value="ICMP request injected by switch"/>
+    <string id="map_DropReasonFailed to update destination list" value="Failed to update destination list"/>
+    <string id="map_DropReasonDestination NIC is disabled" value="Destination NIC is disabled"/>
+    <string id="map_DropReasonPacket does not match destination NIC packet filter" value="Packet does not match destination NIC packet filter"/>
+    <string id="map_DropReasonvSwitch data flow is disabled" value="vSwitch data flow is disabled"/>
+    <string id="map_DropReasonPort isolation setting does not allow untagged traffic" value="Port isolation setting does not allow untagged traffic"/>
+    <string id="map_DropReasonInvalid PD queue" value="Invalid PD queue"/>
+    <string id="map_DropReasonAdapter is in low power state" value="Adapter is in low power state"/>
+    <string id="map_DropReasonAdapter paused" value="Adapter paused"/>
+    <string id="map_DropReasonAdapter reset in progress" value="Adapter reset in progress"/>
+    <string id="map_DropReasonSend aborted" value="Send aborted"/>
+    <string id="map_DropReasonUnsupported EtherType" value="Unsupported EtherType"/>
+    <string id="map_DropReasonMicroport error" value="Microport error"/>
+    <string id="map_DropReasonVF not ready" value="VF not ready"/>
+    <string id="map_DropReasonMicroport not ready" value="Microport not ready"/>
+    <string id="map_DropReasonVMBus error" value="VMBus error"/>
+    <string id="map_DropReasonLoopback Ethernet packet" value="Loopback Ethernet packet"/>
+    <string id="map_DropReasonInvalid SNAP header" value="Invalid SNAP header"/>
+    <string id="map_DropReasonInvalid Ethernet type" value="Invalid Ethernet type"/>
+    <string id="map_DropReasonInvalid packet length" value="Invalid packet length"/>
+    <string id="map_DropReasonHeader not contiguous" value="Header not contiguous"/>
+    <string id="map_DropReasonInvalid destination type" value="Invalid destination type"/>
+    <string id="map_DropReasonInterface not ready" value="Interface not ready"/>
+    <string id="map_DropReasonProvider not ready" value="Provider not ready"/>
+    <string id="map_DropReasonInvalid LSO information" value="Invalid LSO information"/>
+    <string id="map_DropReasonInvalid USO information" value="Invalid USO information"/>
+    <string id="map_DropReasonInvalid medium type" value="Invalid medium type"/>
+    <string id="map_DropReasonInvalid ARP header" value="Invalid ARP header"/>
+    <string id="map_DropReasonNo interface available to receive packets for an isolation ID" value="No interface available to receive packets for an isolation ID"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

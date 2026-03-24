@@ -1,0 +1,41 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Sudo" guid="{9d74dc62-b75f-54cd-be9e-c28940b5feed}" resourceFileName="Microsoft-Windows-Sudo" messageFileName="Microsoft-Windows-Sudo" symbol="MicrosoftWindowsSudo" source="Xml" >
+    <keywords>
+     <keyword name="Client" message="$(string.keyword_Client)" mask="0x1"/>
+     <keyword name="Server" message="$(string.keyword_Server)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="Client" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" keywords="Server" template="task_0Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Application" inType="win:AnsiString"/>
+      <data name="ArgsCount" inType="win:UInt32"/>
+      <data name="Argument" inType="win:AnsiString" count="ArgsCount"/>
+      <data name="CurrentWorkingDirectory" inType="win:AnsiString"/>
+      <data name="Mode" inType="win:UInt32"/>
+      <data name="InheritEnvironment" inType="win:UInt8"/>
+      <data name="Redirected" inType="win:UInt8"/>
+      <data name="FullCommandline" inType="win:AnsiString"/>
+      <data name="RequestID" inType="win:GUID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Client" value="Client"/>
+    <string id="keyword_Server" value="Server"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

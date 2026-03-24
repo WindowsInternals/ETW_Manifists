@@ -1,0 +1,50 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Devices-AccessBroker" guid="{64fb8d23-f0b6-5d2d-b1f6-488303c1761f}" resourceFileName="Microsoft-Windows-Devices-AccessBroker" messageFileName="Microsoft-Windows-Devices-AccessBroker" symbol="MicrosoftWindowsDevicesAccessBroker" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="DeviceAccessCheck" message="$(string.task_DeviceAccessCheck)" value="100"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="DeviceAccessCheck" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="101" symbol="DeviceAccessCheck101" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="102" symbol="DeviceAccessCheck102" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="103" symbol="DeviceAccessCheck103" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="104" symbol="DeviceAccessCheck104" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="105" symbol="DeviceAccessCheck105" version="0" task="DeviceAccessCheck" level="win:Informational" template="DeviceAccessCheckArgs"/>
+     <event value="200" symbol="DeviceAccessCheck200" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="201" symbol="DeviceAccessCheck201" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="202" symbol="DeviceAccessCheck202" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="203" symbol="DeviceAccessCheck203" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="204" symbol="DeviceAccessCheck204" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="205" symbol="DeviceAccessCheck205" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="206" symbol="DeviceAccessCheck206" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="207" symbol="DeviceAccessCheck207" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+     <event value="208" symbol="DeviceAccessCheck208" version="0" task="DeviceAccessCheck" level="win:Error" template="DeviceAccessCheck200Args"/>
+    </events>
+    <templates>
+     <template tid="DeviceAccessCheckArgs">
+      <data name="ClientFileName" inType="win:UnicodeString"/>
+      <data name="ClientPid" inType="win:UInt32"/>
+      <data name="InterfacePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="DeviceAccessCheck200Args">
+      <data name="ClientFileName" inType="win:UnicodeString"/>
+      <data name="ClientPid" inType="win:UInt32"/>
+      <data name="InterfacePath" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_DeviceAccessCheck" value="DeviceAccessCheck"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,68 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Hyper-V-KMCL-Child" guid="{16d90d71-caca-5cd9-a618-8210d93015f3}" resourceFileName="Microsoft-Windows-Hyper-V-KMCL-Child" messageFileName="Microsoft-Windows-Hyper-V-KMCL-Child" symbol="MicrosoftWindowsHyperVKMCLChild" source="Xml" >
+    <keywords>
+     <keyword name="Normal_Send_Event" message="$(string.keyword_Normal_Send_Event)" mask="0x1"/>
+     <keyword name="Normal_Receive_Event" message="$(string.keyword_Normal_Receive_Event)" mask="0x2"/>
+     <keyword name="Perf_Issue" message="$(string.keyword_Perf_Issue)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="Queueandpacketeventtracing." message="$(string.task_Queueandpacketeventtracing.)" value="1">
+>
+      <opcodes>
+       <opcode name="Fetchasinglepacketfromtheringbuffer." message="$(string.opcode_Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer.)" value="10"/>
+       <opcode name="Finishfetchingpacketsfromtheringbuffer." message="$(string.opcode_Queueandpacketeventtracing.Finishfetchingpacketsfromtheringbuffer.)" value="11"/>
+       <opcode name="Puttingapackettotheringbuffer." message="$(string.opcode_Queueandpacketeventtracing.Puttingapackettotheringbuffer.)" value="12"/>
+       <opcode name="Nomorepacketscanbefetchedbecausethequotaismet." message="$(string.opcode_Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet.)" value="13"/>
+       <opcode name="DPCcyclelimitisexceeded." message="$(string.opcode_Queueandpacketeventtracing.DPCcyclelimitisexceeded.)" value="14"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer._V1" version="1" task="Queueandpacketeventtracing." opcode="Fetchasinglepacketfromtheringbuffer." level="win:Informational" keywords="Normal_Receive_Event" template="Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer.Args_V1"/>
+     <event value="2" symbol="Queueandpacketeventtracing.Puttingapackettotheringbuffer._V1" version="1" task="Queueandpacketeventtracing." opcode="Puttingapackettotheringbuffer." level="win:Informational" keywords="Normal_Send_Event" template="Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer.Args_V1"/>
+     <event value="3" symbol="Queueandpacketeventtracing.Finishfetchingpacketsfromtheringbuffer._V1" version="1" task="Queueandpacketeventtracing." opcode="Finishfetchingpacketsfromtheringbuffer." level="win:Informational" keywords="Normal_Receive_Event" template="Queueandpacketeventtracing.Finishfetchingpacketsfromtheringbuffer.Args_V1"/>
+     <event value="4" symbol="Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet._V1" version="1" task="Queueandpacketeventtracing." opcode="Nomorepacketscanbefetchedbecausethequotaismet." level="win:Informational" keywords="Perf_Issue" template="Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet.Args_V1"/>
+     <event value="5" symbol="Queueandpacketeventtracing.DPCcyclelimitisexceeded._V1" version="1" task="Queueandpacketeventtracing." opcode="DPCcyclelimitisexceeded." level="win:Informational" keywords="Perf_Issue" template="Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet.Args_V1"/>
+    </events>
+    <templates>
+     <template tid="Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer.Args_V1">
+      <data name="VmId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="TransactionId" inType="win:UInt64"/>
+      <data name="IsCompletionPacket" inType="win:Boolean"/>
+      <data name="Channel" inType="win:UInt16"/>
+     </template>
+     <template tid="Queueandpacketeventtracing.Finishfetchingpacketsfromtheringbuffer.Args_V1">
+      <data name="VmId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="PacketFetched" inType="win:UInt32"/>
+      <data name="MaximumFetchAllowed" inType="win:UInt32"/>
+      <data name="Channel" inType="win:UInt16"/>
+     </template>
+     <template tid="Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet.Args_V1">
+      <data name="VmId" inType="win:GUID"/>
+      <data name="InstanceId" inType="win:GUID"/>
+      <data name="Channel" inType="win:UInt16"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Normal_Send_Event" value="Normal_Send_Event"/>
+    <string id="keyword_Normal_Receive_Event" value="Normal_Receive_Event"/>
+    <string id="keyword_Perf_Issue" value="Perf_Issue"/>
+    <string id="task_Queueandpacketeventtracing." value="Queueandpacketeventtracing."/>
+    <string id="opcode_Queueandpacketeventtracing.Fetchasinglepacketfromtheringbuffer." value="Fetchasinglepacketfromtheringbuffer."/>
+    <string id="opcode_Queueandpacketeventtracing.Finishfetchingpacketsfromtheringbuffer." value="Finishfetchingpacketsfromtheringbuffer."/>
+    <string id="opcode_Queueandpacketeventtracing.Puttingapackettotheringbuffer." value="Puttingapackettotheringbuffer."/>
+    <string id="opcode_Queueandpacketeventtracing.Nomorepacketscanbefetchedbecausethequotaismet." value="Nomorepacketscanbefetchedbecausethequotaismet."/>
+    <string id="opcode_Queueandpacketeventtracing.DPCcyclelimitisexceeded." value="DPCcyclelimitisexceeded."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

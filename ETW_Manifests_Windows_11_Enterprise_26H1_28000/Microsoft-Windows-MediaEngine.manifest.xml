@@ -1,0 +1,1740 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MediaEngine" guid="{8f2048e0-f260-4f57-a8d1-932376291682}" resourceFileName="Microsoft-Windows-MediaEngine" messageFileName="Microsoft-Windows-MediaEngine" symbol="MicrosoftWindowsMediaEngine" source="Xml" >
+    <keywords>
+     <keyword name="Telemetry" message="$(string.keyword_Telemetry)" mask="0x100"/>
+     <keyword name="DiagTrack" message="$(string.keyword_DiagTrack)" mask="0x200"/>
+    </keywords>
+    <tasks>
+     <task name="MediaFoundationTransferFrame" message="$(string.task_MediaFoundationTransferFrame)" value="10"/>
+     <task name="MediaFoundationTransferFrameRemote" message="$(string.task_MediaFoundationTransferFrameRemote)" value="11"/>
+     <task name="MediaFoundationInitialize" message="$(string.task_MediaFoundationInitialize)" value="12"/>
+     <task name="MediaFoundationLifetime" message="$(string.task_MediaFoundationLifetime)" value="13"/>
+     <task name="MediaFoundationPlaybackRateChange" message="$(string.task_MediaFoundationPlaybackRateChange)" value="14"/>
+     <task name="MediaFoundationPlay" message="$(string.task_MediaFoundationPlay)" value="15"/>
+     <task name="MediaFoundationPause" message="$(string.task_MediaFoundationPause)" value="16"/>
+     <task name="MediaFoundationSeek" message="$(string.task_MediaFoundationSeek)" value="17"/>
+     <task name="MediaFoundationDroppedFrame" message="$(string.task_MediaFoundationDroppedFrame)" value="18"/>
+     <task name="MediaFoundationPresentedFrame" message="$(string.task_MediaFoundationPresentedFrame)" value="19"/>
+     <task name="MediaFoundationPresent_SubmittedFrame" message="$(string.task_MediaFoundationPresent_SubmittedFrame)" value="20"/>
+     <task name="MediaFoundationPresent_QueuedFrame" message="$(string.task_MediaFoundationPresent_QueuedFrame)" value="21"/>
+     <task name="MediaFoundationPresent_CompletedFrame" message="$(string.task_MediaFoundationPresent_CompletedFrame)" value="22"/>
+     <task name="MediaFoundationVideoFrameGlitch" message="$(string.task_MediaFoundationVideoFrameGlitch)" value="23"/>
+     <task name="MediaFoundationPresentAtSleep" message="$(string.task_MediaFoundationPresentAtSleep)" value="24"/>
+     <task name="PerfTrack:MediaFoundationPlay" message="$(string.task_PerfTrack:MediaFoundationPlay)" value="25"/>
+     <task name="PerfTrack:MediaFoundationPlayCancelled" message="$(string.task_PerfTrack:MediaFoundationPlayCancelled)" value="27"/>
+     <task name="PerfTrack:FirstFrameAfterPlayPresented" message="$(string.task_PerfTrack:FirstFrameAfterPlayPresented)" value="29"/>
+     <task name="MediaFoundationPresent_QueuedFrameStats" message="$(string.task_MediaFoundationPresent_QueuedFrameStats)" value="31"/>
+     <task name="MediaFoundationSuspend" message="$(string.task_MediaFoundationSuspend)" value="32"/>
+     <task name="MediaFoundationRestore" message="$(string.task_MediaFoundationRestore)" value="33"/>
+     <task name="MediaFoundationNotVisible" message="$(string.task_MediaFoundationNotVisible)" value="34"/>
+     <task name="MediaFoundationNotVisibleTimer" message="$(string.task_MediaFoundationNotVisibleTimer)" value="35"/>
+     <task name="MediaFoundationVisible" message="$(string.task_MediaFoundationVisible)" value="36"/>
+     <task name="PerfTrack:MediaFoundationVideoGlitch" message="$(string.task_PerfTrack:MediaFoundationVideoGlitch)" value="38"/>
+     <task name="Saveimage" message="$(string.task_Saveimage)" value="39"/>
+     <task name="SetSourceoperation" message="$(string.task_SetSourceoperation)" value="40"/>
+     <task name="MediaFoundationVideoFrameEarly" message="$(string.task_MediaFoundationVideoFrameEarly)" value="41"/>
+     <task name="MediaFoundationPresent_ProcessVSync" message="$(string.task_MediaFoundationPresent_ProcessVSync)" value="42"/>
+     <task name="MediaFoundationPresent_GetCorrelatedTime" message="$(string.task_MediaFoundationPresent_GetCorrelatedTime)" value="43"/>
+     <task name="MediaFoundationPresent_IgnoreVSync" message="$(string.task_MediaFoundationPresent_IgnoreVSync)" value="44"/>
+     <task name="MediaFoundationRequestNetwork" message="$(string.task_MediaFoundationRequestNetwork)" value="45"/>
+     <task name="Batchoperation" message="$(string.task_Batchoperation)" value="46"/>
+     <task name="DecodeSwapchainCreated" message="$(string.task_DecodeSwapchainCreated)" value="47"/>
+     <task name="YUVSwapchainConfigured" message="$(string.task_YUVSwapchainConfigured)" value="48"/>
+     <task name="DecodeSwapchainDestroyed" message="$(string.task_DecodeSwapchainDestroyed)" value="49"/>
+     <task name="DecodeSwapchainNotUsed" message="$(string.task_DecodeSwapchainNotUsed)" value="50"/>
+     <task name="MediaFoundationPresent_QualityNotify" message="$(string.task_MediaFoundationPresent_QualityNotify)" value="51"/>
+     <task name="ContentFramerateDetected" message="$(string.task_ContentFramerateDetected)" value="52"/>
+     <task name="CustomRefreshRateRequested" message="$(string.task_CustomRefreshRateRequested)" value="53"/>
+     <task name="CustomRefreshRate" message="$(string.task_CustomRefreshRate)" value="54"/>
+     <task name="CustomRefreshRateStateChange" message="$(string.task_CustomRefreshRateStateChange)" value="56"/>
+     <task name="MediaFoundationUpdateVideo" message="$(string.task_MediaFoundationUpdateVideo)" value="57"/>
+     <task name="Normal(non_decode)SwapchainCreated" message="$(string.task_Normal(non_decode)SwapchainCreated)" value="58"/>
+     <task name="MediaEngineSampleReceived" message="$(string.task_MediaEngineSampleReceived)" value="59"/>
+     <task name="MediaEnginePurgedFrames" message="$(string.task_MediaEnginePurgedFrames)" value="60"/>
+     <task name="MediaEngineYUVSwapchainQueue" message="$(string.task_MediaEngineYUVSwapchainQueue)" value="61"/>
+     <task name="MediaEngineGPUSwapchainWait" message="$(string.task_MediaEngineGPUSwapchainWait)" value="62"/>
+     <task name="MediaEngineGetPresentStats" message="$(string.task_MediaEngineGetPresentStats)" value="63"/>
+     <task name="MediaEnginePruneHistory" message="$(string.task_MediaEnginePruneHistory)" value="64"/>
+     <task name="MediaFoundationPresent_InitVSyncRefreshRate" message="$(string.task_MediaFoundationPresent_InitVSyncRefreshRate)" value="65"/>
+     <task name="MediaFoundationPresent_ClockSmooth" message="$(string.task_MediaFoundationPresent_ClockSmooth)" value="66"/>
+     <task name="UpdateLongRunningoperation" message="$(string.task_UpdateLongRunningoperation)" value="67"/>
+     <task name="MediaFoundationPresent_MapSample" message="$(string.task_MediaFoundationPresent_MapSample)" value="68"/>
+     <task name="MediaFoundationPresent_ProcessFlipMode" message="$(string.task_MediaFoundationPresent_ProcessFlipMode)" value="69"/>
+     <task name="MediaFoundationPresent_RealtimeShift_Sample" message="$(string.task_MediaFoundationPresent_RealtimeShift_Sample)" value="70"/>
+     <task name="MinLatencyDoneoperation" message="$(string.task_MinLatencyDoneoperation)" value="71"/>
+     <task name="MediaFoundationMirrorVideo" message="$(string.task_MediaFoundationMirrorVideo)" value="72"/>
+     <task name="MediaFoundationPresentAtProcessFrame" message="$(string.task_MediaFoundationPresentAtProcessFrame)" value="73"/>
+     <task name="UpdateDeadlineoperation" message="$(string.task_UpdateDeadlineoperation)" value="74"/>
+     <task name="MediaEngineGetEngineStatistics" message="$(string.task_MediaEngineGetEngineStatistics)" value="75"/>
+     <task name="SVRRequestSample" message="$(string.task_SVRRequestSample)" value="76"/>
+     <task name="SVRGPUBoost" message="$(string.task_SVRGPUBoost)" value="77"/>
+     <task name="MediaFoundationPresent_HistoryRecord" message="$(string.task_MediaFoundationPresent_HistoryRecord)" value="78"/>
+     <task name="MediaEngineClearHistory" message="$(string.task_MediaEngineClearHistory)" value="79"/>
+     <task name="UpdateGPUDeadlineoperation" message="$(string.task_UpdateGPUDeadlineoperation)" value="80"/>
+     <task name="MediaFoundationComputeRatioToPrimary" message="$(string.task_MediaFoundationComputeRatioToPrimary)" value="81"/>
+     <task name="MediaFoundationUpdateRatioToPrimary" message="$(string.task_MediaFoundationUpdateRatioToPrimary)" value="82"/>
+     <task name="MediaEngineYUVSwapchainQueueDrain" message="$(string.task_MediaEngineYUVSwapchainQueueDrain)" value="83"/>
+     <task name="CustomRefreshRateCheckDriverSupport" message="$(string.task_CustomRefreshRateCheckDriverSupport)" value="84"/>
+     <task name="CustomRefreshRateMatchFound" message="$(string.task_CustomRefreshRateMatchFound)" value="85"/>
+     <task name="MediaFoundationPresent_RealtimeShift_Status" message="$(string.task_MediaFoundationPresent_RealtimeShift_Status)" value="86"/>
+     <task name="MediaFoundationPresent_Flush" message="$(string.task_MediaFoundationPresent_Flush)" value="87"/>
+     <task name="TransferDeadlineoperation" message="$(string.task_TransferDeadlineoperation)" value="88"/>
+     <task name="SVRGPUDeadlinePriority" message="$(string.task_SVRGPUDeadlinePriority)" value="90"/>
+     <task name="EMENeedKey" message="$(string.task_EMENeedKey)" value="100"/>
+     <task name="EMEMediaKeys" message="$(string.task_EMEMediaKeys)" value="101"/>
+     <task name="EMEMediaKeySession" message="$(string.task_EMEMediaKeySession)" value="102"/>
+     <task name="EMEKeyMessage" message="$(string.task_EMEKeyMessage)" value="103"/>
+     <task name="EMEKeysAttribute" message="$(string.task_EMEKeysAttribute)" value="104"/>
+     <task name="ContentEnabler" message="$(string.task_ContentEnabler)" value="105"/>
+     <task name="BatchingReason" message="$(string.task_BatchingReason)" value="107"/>
+     <task name="MediaFoundationSubtitleQueued" message="$(string.task_MediaFoundationSubtitleQueued)" value="108"/>
+     <task name="EngineEnded" message="$(string.task_EngineEnded)" value="109"/>
+     <task name="MediaFoundationPresent_Delay" message="$(string.task_MediaFoundationPresent_Delay)" value="110"/>
+     <task name="PresentTimer" message="$(string.task_PresentTimer)" value="111"/>
+     <task name="PresentTimeCritical" message="$(string.task_PresentTimeCritical)" value="112"/>
+     <task name="TimedTextDtvCCSampleDecodeTask" message="$(string.task_TimedTextDtvCCSampleDecodeTask)" value="113"/>
+     <task name="TimedTextSendCueTask" message="$(string.task_TimedTextSendCueTask)" value="114"/>
+     <task name="OPMOpen" message="$(string.task_OPMOpen)" value="115"/>
+     <task name="OPMExecuteCmd" message="$(string.task_OPMExecuteCmd)" value="116"/>
+     <task name="OPMExecuteQuery" message="$(string.task_OPMExecuteQuery)" value="117"/>
+     <task name="OPMProcessCertificate" message="$(string.task_OPMProcessCertificate)" value="118"/>
+     <task name="OPMGetPublicKey" message="$(string.task_OPMGetPublicKey)" value="119"/>
+     <task name="Teardown" message="$(string.task_Teardown)" value="120"/>
+     <task name="Resizedswapchain" message="$(string.task_Resizedswapchain)" value="121"/>
+     <task name="EMENeedKey_122" message="$(string.task_EMENeedKey_122)" value="122"/>
+     <task name="EMEKeyMessage2" message="$(string.task_EMEKeyMessage2)" value="123"/>
+     <task name="EMEMediaKeySystemAccess" message="$(string.task_EMEMediaKeySystemAccess)" value="124"/>
+     <task name="MediaEngineQuantizeFrame" message="$(string.task_MediaEngineQuantizeFrame)" value="125"/>
+     <task name="PresentRestart" message="$(string.task_PresentRestart)" value="126"/>
+     <task name="DisplayRotationTask" message="$(string.task_DisplayRotationTask)" value="127"/>
+     <task name="DecodeSwapchainStateTask" message="$(string.task_DecodeSwapchainStateTask)" value="128"/>
+     <task name="ConfigureSwapchainTask" message="$(string.task_ConfigureSwapchainTask)" value="129"/>
+     <task name="MMCSSRequest" message="$(string.task_MMCSSRequest)" value="130"/>
+     <task name="ScrubbingStateTask" message="$(string.task_ScrubbingStateTask)" value="131"/>
+     <task name="DXPresent" message="$(string.task_DXPresent)" value="132"/>
+     <task name="EnumMonitors" message="$(string.task_EnumMonitors)" value="133"/>
+     <task name="HandleMonitorChange" message="$(string.task_HandleMonitorChange)" value="134"/>
+     <task name="ProcessIdleTasks" message="$(string.task_ProcessIdleTasks)" value="135"/>
+     <task name="DXWorkComplete" message="$(string.task_DXWorkComplete)" value="136"/>
+     <task name="SphericalVideoChangedTask" message="$(string.task_SphericalVideoChangedTask)" value="137"/>
+     <task name="SphericalVideoPropertiesChangedTask" message="$(string.task_SphericalVideoPropertiesChangedTask)" value="138"/>
+     <task name="ProfileCheck" message="$(string.task_ProfileCheck)" value="139"/>
+     <task name="SetHDRMetadataTask" message="$(string.task_SetHDRMetadataTask)" value="140"/>
+     <task name="EDRStateChangedTask" message="$(string.task_EDRStateChangedTask)" value="141"/>
+     <task name="WindowResizeOptimization" message="$(string.task_WindowResizeOptimization)" value="142"/>
+     <task name="ProcessIdleEDRTasks" message="$(string.task_ProcessIdleEDRTasks)" value="143"/>
+     <task name="ProcessPolicyEvent" message="$(string.task_ProcessPolicyEvent)" value="144"/>
+     <task name="MediaFoundationUpdateHistory" message="$(string.task_MediaFoundationUpdateHistory)" value="145"/>
+     <task name="MediaFoundationME_GetCurrentTime" message="$(string.task_MediaFoundationME_GetCurrentTime)" value="146"/>
+     <task name="MediaEngineCallMarshaling" message="$(string.task_MediaEngineCallMarshaling)" value="147"/>
+     <task name="LongCallDetected" message="$(string.task_LongCallDetected)" value="148"/>
+     <task name="CallMarshalingSlotsFull" message="$(string.task_CallMarshalingSlotsFull)" value="149"/>
+     <task name="FrameNotPresentedTask" message="$(string.task_FrameNotPresentedTask)" value="150"/>
+     <task name="PresentedContentPresentationHandlerTask" message="$(string.task_PresentedContentPresentationHandlerTask)" value="151"/>
+     <task name="PresentedContentPresentationHandler_ResourcesAvailableTask" message="$(string.task_PresentedContentPresentationHandler_ResourcesAvailableTask)" value="152"/>
+     <task name="PresentedContentPresentationHandler_BindTask" message="$(string.task_PresentedContentPresentationHandler_BindTask)" value="153"/>
+     <task name="PresentedContentPresentationHandler_PresentSubmittedTask" message="$(string.task_PresentedContentPresentationHandler_PresentSubmittedTask)" value="154"/>
+     <task name="SplitMultiBufferTask" message="$(string.task_SplitMultiBufferTask)" value="155"/>
+     <task name="RemoveEntireChunkTask" message="$(string.task_RemoveEntireChunkTask)" value="156"/>
+     <task name="DisplayUniquenessChange" message="$(string.task_DisplayUniquenessChange)" value="157"/>
+     <task name="PresentedContentPresentTask" message="$(string.task_PresentedContentPresentTask)" value="158"/>
+     <task name="PresentFrameTask" message="$(string.task_PresentFrameTask)" value="159"/>
+     <task name="PresentFrameConvertTask" message="$(string.task_PresentFrameConvertTask)" value="160"/>
+     <task name="PresentedContentPresentationHandler_HWMTask" message="$(string.task_PresentedContentPresentationHandler_HWMTask)" value="161"/>
+     <task name="PresentedContentPresentationHandler_RetiredResourceTask" message="$(string.task_PresentedContentPresentationHandler_RetiredResourceTask)" value="162"/>
+     <task name="MediaFoundationTelemetryassert" message="$(string.task_MediaFoundationTelemetryassert)" value="163"/>
+     <task name="MediaFoundationPresentedContentAsyncCallback" message="$(string.task_MediaFoundationPresentedContentAsyncCallback)" value="164"/>
+     <task name="PresentedContentPresentationHandlerCompletedCompTask" message="$(string.task_PresentedContentPresentationHandlerCompletedCompTask)" value="166"/>
+     <task name="PresentedContentPresentationHandlerCompletedIFlipTask" message="$(string.task_PresentedContentPresentationHandlerCompletedIFlipTask)" value="167"/>
+     <task name="PresentedContentPresentationHandlerGlitchDetectedTask" message="$(string.task_PresentedContentPresentationHandlerGlitchDetectedTask)" value="168"/>
+     <task name="PresentedContentPresentationHandlerDCompStatTask" message="$(string.task_PresentedContentPresentationHandlerDCompStatTask)" value="169"/>
+     <task name="PresentedContentPresentationHandlerGlitchDetectRenderMissingTask" message="$(string.task_PresentedContentPresentationHandlerGlitchDetectRenderMissingTask)" value="170"/>
+     <task name="PresentedContent_DrainAsyncPresentsTask" message="$(string.task_PresentedContent_DrainAsyncPresentsTask)" value="171"/>
+     <task name="MediaFoundationPresentedContentD3DFence" message="$(string.task_MediaFoundationPresentedContentD3DFence)" value="172"/>
+     <task name="PresentedContentPresentationHandler_InitializeQueueingModeTask" message="$(string.task_PresentedContentPresentationHandler_InitializeQueueingModeTask)" value="173"/>
+     <task name="PresentedContent_FlushTask" message="$(string.task_PresentedContent_FlushTask)" value="174"/>
+     <task name="PresentedContent_EnqueuedPendingResourceCountTask" message="$(string.task_PresentedContent_EnqueuedPendingResourceCountTask)" value="175"/>
+     <task name="MediaFoundationPresentedContentAsyncCallbackCreateSerializer" message="$(string.task_MediaFoundationPresentedContentAsyncCallbackCreateSerializer)" value="176"/>
+     <task name="PresentedContentPresentationHandler_ResourcesAllocateTask" message="$(string.task_PresentedContentPresentationHandler_ResourcesAllocateTask)" value="177"/>
+     <task name="PresentedContentPresentationHandler_QueuedResourceTask" message="$(string.task_PresentedContentPresentationHandler_QueuedResourceTask)" value="178"/>
+     <task name="MFMediaEngine_DriverVersionTask" message="$(string.task_MFMediaEngine_DriverVersionTask)" value="180"/>
+     <task name="PresentedContent_RetryPresent" message="$(string.task_PresentedContent_RetryPresent)" value="181"/>
+     <task name="PresentedContent_ConfigurationState" message="$(string.task_PresentedContent_ConfigurationState)" value="182"/>
+     <task name="PresentedContentPresentationHandlerCompositionPresentStatTask" message="$(string.task_PresentedContentPresentationHandlerCompositionPresentStatTask)" value="183"/>
+     <task name="PresentedContentPresentationHandlerProcessGlitchDetectTask" message="$(string.task_PresentedContentPresentationHandlerProcessGlitchDetectTask)" value="184"/>
+     <task name="PresentedContentPresentationMangagerLostTask" message="$(string.task_PresentedContentPresentationMangagerLostTask)" value="185"/>
+     <task name="PresentedContentPresentationHandlerQueueSkippedPresentTask" message="$(string.task_PresentedContentPresentationHandlerQueueSkippedPresentTask)" value="186"/>
+     <task name="PresentedContentPresentationHandlerPatchSkippedPresentTask" message="$(string.task_PresentedContentPresentationHandlerPatchSkippedPresentTask)" value="187"/>
+     <task name="GPUBoostInitTask" message="$(string.task_GPUBoostInitTask)" value="188"/>
+     <task name="PresentedContent_EnableVSyncsTask" message="$(string.task_PresentedContent_EnableVSyncsTask)" value="189"/>
+     <task name="MediaFoundationPresentedContentRegisterWakeFence" message="$(string.task_MediaFoundationPresentedContentRegisterWakeFence)" value="190"/>
+     <task name="MediaFoundationTriggeredGlitchTelemetryTracker" message="$(string.task_MediaFoundationTriggeredGlitchTelemetryTracker)" value="191"/>
+     <task name="MediaFoundationTrackLeakedStats" message="$(string.task_MediaFoundationTrackLeakedStats)" value="192"/>
+     <task name="IsEdrEnabledCheck" message="$(string.task_IsEdrEnabledCheck)" value="193"/>
+     <task name="CloneDXDevice" message="$(string.task_CloneDXDevice)" value="194"/>
+     <task name="HandleClockStart" message="$(string.task_HandleClockStart)" value="195"/>
+     <task name="HandlePreroll" message="$(string.task_HandlePreroll)" value="196"/>
+     <task name="MediaFoundationPlaybackStallDetectedTask" message="$(string.task_MediaFoundationPlaybackStallDetectedTask)" value="197"/>
+     <task name="MediaFoundationPlaybackStallDetectionTask" message="$(string.task_MediaFoundationPlaybackStallDetectionTask)" value="198"/>
+     <task name="ProcessSampleLockTask" message="$(string.task_ProcessSampleLockTask)" value="199"/>
+     <task name="ProcessSampleTask" message="$(string.task_ProcessSampleTask)" value="200"/>
+     <task name="AsyncQueuePresentTask" message="$(string.task_AsyncQueuePresentTask)" value="201"/>
+     <task name="PresentedContentPresentationHandler_FakePresentSubmittedTask" message="$(string.task_PresentedContentPresentationHandler_FakePresentSubmittedTask)" value="202"/>
+     <task name="MediaFoundationFrameRateDetection" message="$(string.task_MediaFoundationFrameRateDetection)" value="203"/>
+     <task name="PresentedContentPresentationHandlerMonitorEnumTask" message="$(string.task_PresentedContentPresentationHandlerMonitorEnumTask)" value="204"/>
+     <task name="MediaFoundationFrameRateDetectionUpdate" message="$(string.task_MediaFoundationFrameRateDetectionUpdate)" value="205"/>
+     <task name="MediaFoundationFrameRateDetectionReset" message="$(string.task_MediaFoundationFrameRateDetectionReset)" value="206"/>
+     <task name="PresentedContentPresentationHandlerDeferRealtimeDeadlineTask" message="$(string.task_PresentedContentPresentationHandlerDeferRealtimeDeadlineTask)" value="207"/>
+     <task name="PresentedContentPresentationHandlerProcessGlitchInformationTask" message="$(string.task_PresentedContentPresentationHandlerProcessGlitchInformationTask)" value="208"/>
+     <task name="OnFrameQueued" message="$(string.task_OnFrameQueued)" value="209"/>
+     <task name="PresentedContentPresentationHandler_ResourcesRegisteredTask" message="$(string.task_PresentedContentPresentationHandler_ResourcesRegisteredTask)" value="210"/>
+     <task name="PresentedContentPresentationHandler_ResourcesDeferredTask" message="$(string.task_PresentedContentPresentationHandler_ResourcesDeferredTask)" value="211"/>
+     <task name="PresentedContentPresentationHandler_ResourcesTextureAllocateTask" message="$(string.task_PresentedContentPresentationHandler_ResourcesTextureAllocateTask)" value="212"/>
+     <task name="MediaFoundationTriggeredPendingPresentStatLargeSizeTracker" message="$(string.task_MediaFoundationTriggeredPendingPresentStatLargeSizeTracker)" value="213"/>
+     <task name="EDRStateChanged2Task" message="$(string.task_EDRStateChanged2Task)" value="214"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="MediaFoundationTransferFrameStart" version="0" task="MediaFoundationTransferFrame" opcode="win:Start" level="win:Verbose" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="101" symbol="MediaFoundationTransferFrameStop" version="0" task="MediaFoundationTransferFrame" opcode="win:Stop" level="win:Verbose" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="102" symbol="MediaFoundationTransferFrameRemoteStart" version="0" task="MediaFoundationTransferFrameRemote" opcode="win:Start" level="win:Verbose" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="103" symbol="MediaFoundationTransferFrameRemoteStop" version="0" task="MediaFoundationTransferFrameRemote" opcode="win:Stop" level="win:Verbose" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="104" symbol="MediaFoundationInitialize" version="0" task="MediaFoundationInitialize" level="win:Informational" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="105" symbol="MediaFoundationLifetimeStart" version="0" task="MediaFoundationLifetime" opcode="win:Start" level="win:Informational" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="106" symbol="MediaFoundationPlaybackRateChange" version="0" task="MediaFoundationPlaybackRateChange" level="win:Informational" template="MediaFoundationPlaybackRateChangeArgs"/>
+     <event value="107" symbol="MediaFoundationPlayStart" version="0" task="MediaFoundationPlay" opcode="win:Start" level="win:Informational" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="108" symbol="MediaFoundationPlayStop" version="0" task="MediaFoundationPlay" opcode="win:Stop" level="win:Informational" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="109" symbol="MediaFoundationPauseStart" version="0" task="MediaFoundationPause" opcode="win:Start" level="win:Informational" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="110" symbol="MediaFoundationPauseStop" version="0" task="MediaFoundationPause" opcode="win:Stop" level="win:Informational" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="111" symbol="MediaFoundationSeekStart" version="0" task="MediaFoundationSeek" opcode="win:Start" level="win:Informational" template="MediaFoundationPlaybackRateChangeArgs"/>
+     <event value="112" symbol="MediaFoundationSeekStop" version="0" task="MediaFoundationSeek" opcode="win:Stop" level="win:Informational" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="113" symbol="MediaFoundationLifetimeStop" version="0" task="MediaFoundationLifetime" opcode="win:Stop" level="win:Informational" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="114" symbol="MediaFoundationDroppedFrame" version="0" task="MediaFoundationDroppedFrame" level="win:Verbose" template="MediaFoundationDroppedFrameArgs"/>
+     <event value="115" symbol="MediaFoundationPresentedFrame" version="0" task="MediaFoundationPresentedFrame" level="win:Verbose" template="MediaFoundationPresentedFrameArgs"/>
+     <event value="116" symbol="MediaFoundationPresent_SubmittedFrame" version="0" task="MediaFoundationPresent_SubmittedFrame" level="win:Verbose" template="MediaFoundationPresent_SubmittedFrameArgs"/>
+     <event value="117" symbol="MediaFoundationPresent_QueuedFrame" version="0" task="MediaFoundationPresent_QueuedFrame" level="win:Verbose" template="MediaFoundationPresent_QueuedFrameArgs"/>
+     <event value="118" symbol="MediaFoundationPresent_CompletedFrame" version="0" task="MediaFoundationPresent_CompletedFrame" level="win:Verbose" template="MediaFoundationPresent_CompletedFrameArgs"/>
+     <event value="119" symbol="MediaFoundationVideoFrameGlitch_V1" version="1" task="MediaFoundationVideoFrameGlitch" level="win:Verbose" keywords="Telemetry" template="MediaFoundationVideoFrameGlitchArgs_V1"/>
+     <event value="120" symbol="MediaFoundationPresentAtSleepStart" version="0" task="MediaFoundationPresentAtSleep" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="121" symbol="PerfTrack:MediaFoundationPlay" version="0" task="PerfTrack:MediaFoundationPlay" level="win:Informational" template="PerfTrack:MediaFoundationPlayArgs"/>
+     <event value="123" symbol="PerfTrack:MediaFoundationPlayCancelled" version="0" task="PerfTrack:MediaFoundationPlayCancelled" level="win:Informational" template="PerfTrack:MediaFoundationPlayArgs"/>
+     <event value="125" symbol="PerfTrack:FirstFrameAfterPlayPresented" version="0" task="PerfTrack:FirstFrameAfterPlayPresented" level="win:Informational" template="PerfTrack:MediaFoundationPlayArgs"/>
+     <event value="127" symbol="MediaFoundationPresent_QueuedFrameStats" version="0" task="MediaFoundationPresent_QueuedFrameStats" level="win:Verbose" template="MediaFoundationPresent_QueuedFrameStatsArgs"/>
+     <event value="128" symbol="MediaFoundationSuspend" version="0" task="MediaFoundationSuspend" level="win:Informational" template="MediaFoundationSuspendArgs"/>
+     <event value="129" symbol="MediaFoundationRestore" version="0" task="MediaFoundationRestore" level="win:Informational" template="MediaFoundationRestoreArgs"/>
+     <event value="130" symbol="MediaFoundationNotVisible" version="0" task="MediaFoundationNotVisible" level="win:Informational" template="MediaFoundationNotVisibleArgs"/>
+     <event value="131" symbol="MediaFoundationNotVisibleTimer" version="0" task="MediaFoundationNotVisibleTimer" level="win:Informational" template="MediaFoundationNotVisibleArgs"/>
+     <event value="132" symbol="MediaFoundationVisible" version="0" task="MediaFoundationVisible" level="win:Informational" template="MediaFoundationRestoreArgs"/>
+     <event value="133" symbol="MediaFoundationVisible133" version="0" task="MediaFoundationVisible" level="win:Informational" template="MediaFoundationVisible133Args"/>
+     <event value="134" symbol="PerfTrack:MediaFoundationVideoGlitch" version="0" task="PerfTrack:MediaFoundationVideoGlitch" level="win:Informational" template="PerfTrack:MediaFoundationVideoGlitchArgs"/>
+     <event value="135" symbol="SaveimageStart" version="0" task="Saveimage" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="136" symbol="SaveimageStop" version="0" task="Saveimage" opcode="win:Stop" level="win:Verbose" template="SaveimageStopArgs"/>
+     <event value="137" symbol="SetSourceoperationStart" version="0" task="SetSourceoperation" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="138" symbol="SetSourceoperationStop" version="0" task="SetSourceoperation" opcode="win:Stop" level="win:Verbose" template="SetSourceoperationStopArgs"/>
+     <event value="139" symbol="MediaFoundationVideoFrameEarly" version="0" task="MediaFoundationVideoFrameEarly" level="win:Verbose" template="MediaFoundationVideoFrameEarlyArgs"/>
+     <event value="140" symbol="MediaFoundationPresent_ProcessVSync_V3" version="3" task="MediaFoundationPresent_ProcessVSync" level="win:Verbose" template="MediaFoundationPresent_ProcessVSyncArgs_V3"/>
+     <event value="141" symbol="MediaFoundationPresent_GetCorrelatedTimeStart" version="0" task="MediaFoundationPresent_GetCorrelatedTime" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="142" symbol="MediaFoundationPresent_IgnoreVSync" version="0" task="MediaFoundationPresent_IgnoreVSync" level="win:Verbose" template="MediaFoundationPresent_IgnoreVSyncArgs"/>
+     <event value="143" symbol="MediaFoundationRequestNetwork" version="0" task="MediaFoundationRequestNetwork" level="win:Informational" template="MediaFoundationRequestNetworkArgs"/>
+     <event value="144" symbol="BatchoperationStart" version="0" task="Batchoperation" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="145" symbol="BatchoperationStop" version="0" task="Batchoperation" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="146" symbol="DecodeSwapchainCreated" version="0" task="DecodeSwapchainCreated" level="win:Informational" template="DecodeSwapchainCreatedArgs"/>
+     <event value="147" symbol="YUVSwapchainConfigured" version="0" task="YUVSwapchainConfigured" level="win:Informational" template="YUVSwapchainConfiguredArgs"/>
+     <event value="148" symbol="DecodeSwapchainDestroyed" version="0" task="DecodeSwapchainDestroyed" level="win:Informational" template="DecodeSwapchainDestroyedArgs"/>
+     <event value="149" symbol="DecodeSwapchainNotUsed" version="0" task="DecodeSwapchainNotUsed" level="win:Informational" template="DecodeSwapchainNotUsedArgs"/>
+     <event value="151" symbol="MediaFoundationSeek" version="0" task="MediaFoundationSeek" level="win:Informational" template="MediaFoundationPlaybackRateChangeArgs"/>
+     <event value="152" symbol="MediaFoundationPresent_QualityNotify_V3" version="3" task="MediaFoundationPresent_QualityNotify" level="win:Verbose" template="MediaFoundationPresent_QualityNotifyArgs_V3"/>
+     <event value="153" symbol="ContentFramerateDetected" version="0" task="ContentFramerateDetected" level="win:Informational" template="ContentFramerateDetectedArgs"/>
+     <event value="154" symbol="CustomRefreshRateRequested" version="0" task="CustomRefreshRateRequested" level="win:Informational" template="CustomRefreshRateRequestedArgs"/>
+     <event value="155" symbol="CustomRefreshRateStart" version="0" task="CustomRefreshRate" opcode="win:Start" level="win:Informational" template="CustomRefreshRateStartArgs"/>
+     <event value="156" symbol="CustomRefreshRateStop" version="0" task="CustomRefreshRate" opcode="win:Stop" level="win:Informational" template="CustomRefreshRateStopArgs"/>
+     <event value="157" symbol="CustomRefreshRateStateChange" version="0" task="CustomRefreshRateStateChange" level="win:Verbose" template="CustomRefreshRateStopArgs"/>
+     <event value="158" symbol="MediaFoundationUpdateVideo" version="0" task="MediaFoundationUpdateVideo" level="win:Verbose" template="MediaFoundationUpdateVideoArgs"/>
+     <event value="159" symbol="Normal(non_decode)SwapchainCreated_V1" version="1" task="Normal(non_decode)SwapchainCreated" level="win:Informational" template="Normal(non_decode)SwapchainCreatedArgs_V1"/>
+     <event value="160" symbol="MediaEngineSampleReceived_V2" version="2" task="MediaEngineSampleReceived" level="win:Verbose" template="MediaEngineSampleReceivedArgs_V2"/>
+     <event value="161" symbol="MediaEnginePurgedFrames" version="0" task="MediaEnginePurgedFrames" level="win:Verbose" template="MediaEnginePurgedFramesArgs"/>
+     <event value="162" symbol="MediaEngineYUVSwapchainQueue" version="0" task="MediaEngineYUVSwapchainQueue" level="win:Verbose" template="MediaEnginePurgedFramesArgs"/>
+     <event value="163" symbol="MediaEngineGPUSwapchainWaitStart" version="0" task="MediaEngineGPUSwapchainWait" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="164" symbol="MediaEngineGPUSwapchainWaitStop" version="0" task="MediaEngineGPUSwapchainWait" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="165" symbol="MediaEngineGetPresentStats" version="0" task="MediaEngineGetPresentStats" level="win:Verbose" template="MediaEngineGetPresentStatsArgs"/>
+     <event value="166" symbol="MediaEnginePruneHistory" version="0" task="MediaEnginePruneHistory" level="win:Verbose" template="MediaEnginePruneHistoryArgs"/>
+     <event value="167" symbol="MediaFoundationPresent_InitVSyncRefreshRate_V1" version="1" task="MediaFoundationPresent_InitVSyncRefreshRate" level="win:Verbose" template="MediaFoundationPresent_InitVSyncRefreshRateArgs_V1"/>
+     <event value="168" symbol="MediaFoundationPresent_ClockSmooth" version="0" task="MediaFoundationPresent_ClockSmooth" level="win:Verbose" template="MediaFoundationPresent_ClockSmoothArgs"/>
+     <event value="169" symbol="MediaEngineQuantizeFrame_V1" version="1" task="MediaEngineQuantizeFrame" level="win:Verbose" template="MediaEngineQuantizeFrameArgs_V1"/>
+     <event value="170" symbol="UpdateLongRunningoperation" version="0" task="UpdateLongRunningoperation" level="win:Verbose" template="UpdateLongRunningoperationArgs"/>
+     <event value="171" symbol="MediaFoundationPresent_MapSample" version="0" task="MediaFoundationPresent_MapSample" level="win:Verbose" template="MediaFoundationPresent_MapSampleArgs"/>
+     <event value="172" symbol="MediaFoundationPresent_GetCorrelatedTimeStop" version="0" task="MediaFoundationPresent_GetCorrelatedTime" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresent_GetCorrelatedTimeStopArgs"/>
+     <event value="173" symbol="MediaFoundationPresent_ProcessFlipMode_V2" version="2" task="MediaFoundationPresent_ProcessFlipMode" level="win:Verbose" template="MediaFoundationPresent_ProcessFlipModeArgs_V2"/>
+     <event value="174" symbol="MediaFoundationPresent_RealtimeShift_Sample_V1" version="1" task="MediaFoundationPresent_RealtimeShift_Sample" level="win:Verbose" template="MediaFoundationPresent_RealtimeShift_SampleArgs_V1"/>
+     <event value="175" symbol="MinLatencyDoneoperation" version="0" task="MinLatencyDoneoperation" level="win:Verbose" template="MinLatencyDoneoperationArgs"/>
+     <event value="176" symbol="MediaFoundationMirrorVideo" version="0" task="MediaFoundationMirrorVideo" level="win:Verbose" template="MediaFoundationMirrorVideoArgs"/>
+     <event value="177" symbol="UpdateDeadlineoperation_V1" version="1" task="UpdateDeadlineoperation" level="win:Verbose" template="UpdateDeadlineoperationArgs_V1"/>
+     <event value="178" symbol="MediaEngineGetEngineStatisticsStart" version="0" task="MediaEngineGetEngineStatistics" opcode="win:Start" level="win:Verbose" template="MediaEngineGetEngineStatisticsStartArgs"/>
+     <event value="179" symbol="MediaEngineGetEngineStatisticsStop" version="0" task="MediaEngineGetEngineStatistics" opcode="win:Stop" level="win:Verbose" template="MediaFoundationTransferFrameStopArgs"/>
+     <event value="180" symbol="SVRRequestSample" version="0" task="SVRRequestSample" level="win:Verbose" template="SVRRequestSampleArgs"/>
+     <event value="181" symbol="SVRGPUBoost" version="0" task="SVRGPUBoost" level="win:Verbose" template="SVRGPUBoostArgs"/>
+     <event value="182" symbol="MediaFoundationPresent_HistoryRecordStart" version="0" task="MediaFoundationPresent_HistoryRecord" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresent_HistoryRecordStartArgs"/>
+     <event value="183" symbol="MediaFoundationPresent_HistoryRecordStop" version="0" task="MediaFoundationPresent_HistoryRecord" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresent_HistoryRecordStopArgs"/>
+     <event value="184" symbol="MediaEngineClearHistory" version="0" task="MediaEngineClearHistory" level="win:Verbose" template="MediaEngineClearHistoryArgs"/>
+     <event value="185" symbol="MediaFoundationME_GetCurrentTimeStart" version="0" task="MediaFoundationME_GetCurrentTime" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="186" symbol="MediaFoundationME_GetCurrentTimeStop" version="0" task="MediaFoundationME_GetCurrentTime" opcode="win:Stop" level="win:Verbose" template="MediaFoundationME_GetCurrentTimeStopArgs"/>
+     <event value="187" symbol="UpdateGPUDeadlineoperationStart_V1" version="1" task="UpdateGPUDeadlineoperation" opcode="win:Start" level="win:Verbose" template="UpdateGPUDeadlineoperationStartArgs_V1"/>
+     <event value="188" symbol="MediaFoundationComputeRatioToPrimary" version="0" task="MediaFoundationComputeRatioToPrimary" level="win:Verbose" template="MediaFoundationComputeRatioToPrimaryArgs"/>
+     <event value="189" symbol="MediaFoundationUpdateRatioToPrimary" version="0" task="MediaFoundationUpdateRatioToPrimary" level="win:Verbose" template="MediaFoundationUpdateRatioToPrimaryArgs"/>
+     <event value="190" symbol="MediaEngineYUVSwapchainQueueDrainStart" version="0" task="MediaEngineYUVSwapchainQueueDrain" opcode="win:Start" level="win:Verbose" template="MediaEnginePurgedFramesArgs"/>
+     <event value="191" symbol="MediaEngineYUVSwapchainQueueDrainStop" version="0" task="MediaEngineYUVSwapchainQueueDrain" opcode="win:Stop" level="win:Verbose" template="MediaEnginePurgedFramesArgs"/>
+     <event value="192" symbol="CustomRefreshRateCheckDriverSupport" version="0" task="CustomRefreshRateCheckDriverSupport" level="win:Informational" template="CustomRefreshRateCheckDriverSupportArgs"/>
+     <event value="193" symbol="CustomRefreshRateMatchFound" version="0" task="CustomRefreshRateMatchFound" level="win:Informational" template="ContentFramerateDetectedArgs"/>
+     <event value="194" symbol="MediaFoundationPresent_RealtimeShift_Status_V1" version="1" task="MediaFoundationPresent_RealtimeShift_Status" level="win:Verbose" template="MediaFoundationPresent_RealtimeShift_StatusArgs_V1"/>
+     <event value="195" symbol="MediaFoundationPresent_Flush_V1" version="1" task="MediaFoundationPresent_Flush" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="196" symbol="MediaFoundationUpdateVideoStart" version="0" task="MediaFoundationUpdateVideo" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="197" symbol="MediaFoundationUpdateVideoStop" version="0" task="MediaFoundationUpdateVideo" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="198" symbol="TransferDeadlineoperation" version="0" task="TransferDeadlineoperation" level="win:Verbose" template="TransferDeadlineoperationArgs"/>
+     <event value="200" symbol="EMENeedKey" version="0" task="EMENeedKey" level="win:Informational" template="EMENeedKeyArgs"/>
+     <event value="201" symbol="EMEMediaKeys" version="0" task="EMEMediaKeys" level="win:Informational" template="EMEMediaKeysArgs"/>
+     <event value="202" symbol="EMEMediaKeySessionStart" version="0" task="EMEMediaKeySession" opcode="win:Start" level="win:Informational" template="EMEMediaKeySessionStartArgs"/>
+     <event value="203" symbol="EMEMediaKeySessionStop" version="0" task="EMEMediaKeySession" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStopArgs"/>
+     <event value="204" symbol="EMEKeyMessageStart" version="0" task="EMEKeyMessage" opcode="win:Start" level="win:Informational" template="EMEKeyMessageStartArgs"/>
+     <event value="205" symbol="EMEKeyMessage" version="0" task="EMEKeyMessage" level="win:Informational" template="EMEKeyMessageArgs"/>
+     <event value="206" symbol="EMEKeyMessageStop" version="0" task="EMEKeyMessage" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStopArgs"/>
+     <event value="207" symbol="EMEKeyMessageStart207" version="0" task="EMEKeyMessage" opcode="win:Start" level="win:Informational" template="EMEKeyMessageStart207Args"/>
+     <event value="208" symbol="EMEKeysAttribute" version="0" task="EMEKeysAttribute" level="win:Informational" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="209" symbol="ContentEnablerStart" version="0" task="ContentEnabler" opcode="win:Start" level="win:Informational" template="ContentEnablerStartArgs"/>
+     <event value="210" symbol="ContentEnablerStop" version="0" task="ContentEnabler" opcode="win:Stop" level="win:Informational" template="ContentEnablerStopArgs"/>
+     <event value="212" symbol="BatchingReason_V1" version="1" task="BatchingReason" level="win:Verbose" template="BatchingReasonArgs_V1"/>
+     <event value="213" symbol="MediaFoundationSubtitleQueued" version="0" task="MediaFoundationSubtitleQueued" level="win:Verbose" template="MediaFoundationSubtitleQueuedArgs"/>
+     <event value="214" symbol="EngineEnded" version="0" task="EngineEnded" level="win:Informational" template="MediaFoundationTransferFrameStartArgs"/>
+     <event value="215" symbol="MediaFoundationPresent_DelayStart" version="0" task="MediaFoundationPresent_Delay" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="216" symbol="PresentTimerStart" version="0" task="PresentTimer" opcode="win:Start" level="win:Verbose" template="PresentTimerStartArgs"/>
+     <event value="217" symbol="PresentTimerStop" version="0" task="PresentTimer" opcode="win:Stop" level="win:Verbose" template="PresentTimerStartArgs"/>
+     <event value="218" symbol="PresentTimeCriticalStart" version="0" task="PresentTimeCritical" opcode="win:Start" level="win:Verbose" template="PresentTimeCriticalStartArgs"/>
+     <event value="219" symbol="PresentTimeCriticalStop" version="0" task="PresentTimeCritical" opcode="win:Stop" level="win:Verbose" template="PresentTimeCriticalStartArgs"/>
+     <event value="220" symbol="TimedTextDtvCCSampleDecodeTaskStart" version="0" task="TimedTextDtvCCSampleDecodeTask" opcode="win:Start" level="win:Informational" template="TimedTextDtvCCSampleDecodeTaskStartArgs"/>
+     <event value="221" symbol="TimedTextDtvCCSampleDecodeTaskStop" version="0" task="TimedTextDtvCCSampleDecodeTask" opcode="win:Stop" level="win:Informational" template="TimedTextDtvCCSampleDecodeTaskStopArgs"/>
+     <event value="222" symbol="TimedTextSendCueTaskStart" version="0" task="TimedTextSendCueTask" opcode="win:Start" level="win:Informational" template="TimedTextDtvCCSampleDecodeTaskStartArgs"/>
+     <event value="223" symbol="TimedTextSendCueTaskStop" version="0" task="TimedTextSendCueTask" opcode="win:Stop" level="win:Informational" template="TimedTextDtvCCSampleDecodeTaskStartArgs"/>
+     <event value="224" symbol="OPMOpenStart" version="0" task="OPMOpen" opcode="win:Start" level="win:Informational"/>
+     <event value="225" symbol="OPMOpenStop" version="0" task="OPMOpen" opcode="win:Stop" level="win:Informational"/>
+     <event value="226" symbol="OPMExecuteCmdStart" version="0" task="OPMExecuteCmd" opcode="win:Start" level="win:Informational"/>
+     <event value="227" symbol="OPMExecuteCmdStop" version="0" task="OPMExecuteCmd" opcode="win:Stop" level="win:Informational"/>
+     <event value="228" symbol="OPMExecuteQueryStart" version="0" task="OPMExecuteQuery" opcode="win:Start" level="win:Informational"/>
+     <event value="229" symbol="OPMExecuteQueryStop" version="0" task="OPMExecuteQuery" opcode="win:Stop" level="win:Informational"/>
+     <event value="230" symbol="OPMProcessCertificateStart" version="0" task="OPMProcessCertificate" opcode="win:Start" level="win:Informational"/>
+     <event value="231" symbol="OPMProcessCertificateStop" version="0" task="OPMProcessCertificate" opcode="win:Stop" level="win:Informational"/>
+     <event value="232" symbol="OPMGetPublicKeyStart" version="0" task="OPMGetPublicKey" opcode="win:Start" level="win:Informational"/>
+     <event value="233" symbol="OPMGetPublicKeyStop" version="0" task="OPMGetPublicKey" opcode="win:Stop" level="win:Informational"/>
+     <event value="234" symbol="TeardownStart" version="0" task="Teardown" opcode="win:Start" level="win:Informational"/>
+     <event value="235" symbol="TeardownStop" version="0" task="Teardown" opcode="win:Stop" level="win:Informational"/>
+     <event value="236" symbol="Resizedswapchain" version="0" task="Resizedswapchain" level="win:Informational" template="ResizedswapchainArgs"/>
+     <event value="237" symbol="EMEMediaKeySessionStop237" version="0" task="EMEMediaKeySession" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStopArgs"/>
+     <event value="238" symbol="EMEMediaKeySessionStop238" version="0" task="EMEMediaKeySession" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStop238Args"/>
+     <event value="239" symbol="EMEMediaKeySessionStop239" version="0" task="EMEMediaKeySession" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStopArgs"/>
+     <event value="240" symbol="EMENeedKey_122" version="0" task="EMENeedKey_122" level="win:Informational" template="EMENeedKeyArgs"/>
+     <event value="241" symbol="EMEMediaKeySessionStart241" version="0" task="EMEMediaKeySession" opcode="win:Start" level="win:Informational" template="EMEMediaKeySessionStart241Args"/>
+     <event value="242" symbol="EMEKeyMessage2Start" version="0" task="EMEKeyMessage2" opcode="win:Start" level="win:Informational" template="EMEKeyMessage2StartArgs"/>
+     <event value="243" symbol="EMEMediaKeySessionStop243" version="0" task="EMEMediaKeySession" opcode="win:Stop" level="win:Informational" template="EMEMediaKeySessionStopArgs"/>
+     <event value="244" symbol="EMEMediaKeys244" version="0" task="EMEMediaKeys" level="win:Informational" template="EMENeedKeyArgs"/>
+     <event value="245" symbol="EMEMediaKeys245" version="0" task="EMEMediaKeys" level="win:Informational" template="EMEMediaKeys245Args"/>
+     <event value="246" symbol="EMEMediaKeySystemAccess" version="0" task="EMEMediaKeySystemAccess" level="win:Informational" template="EMEMediaKeySystemAccessArgs"/>
+     <event value="247" symbol="PresentRestart" version="0" task="PresentRestart" level="win:Verbose" template="PresentRestartArgs"/>
+     <event value="248" symbol="DisplayRotationTask" version="0" task="DisplayRotationTask" level="win:Verbose" template="DisplayRotationTaskArgs"/>
+     <event value="249" symbol="DecodeSwapchainStateTask" version="0" task="DecodeSwapchainStateTask" level="win:Verbose" template="DecodeSwapchainStateTaskArgs"/>
+     <event value="250" symbol="ConfigureSwapchainTask" version="0" task="ConfigureSwapchainTask" level="win:Verbose" template="ConfigureSwapchainTaskArgs"/>
+     <event value="251" symbol="PresentTimerStart251" version="0" task="PresentTimer" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="252" symbol="MMCSSRequestStop" version="0" task="MMCSSRequest" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="253" symbol="ScrubbingStateTask" version="0" task="ScrubbingStateTask" level="win:Verbose" template="ScrubbingStateTaskArgs"/>
+     <event value="254" symbol="DXPresentStart" version="0" task="DXPresent" opcode="win:Start" level="win:Verbose" template="DXPresentStartArgs"/>
+     <event value="255" symbol="DXPresentStop" version="0" task="DXPresent" opcode="win:Stop" level="win:Verbose" template="DXPresentStopArgs"/>
+     <event value="256" symbol="EnumMonitorsStart" version="0" task="EnumMonitors" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="257" symbol="EnumMonitorsStop" version="0" task="EnumMonitors" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="258" symbol="HandleMonitorChangeStart" version="0" task="HandleMonitorChange" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="259" symbol="HandleMonitorChangeStop" version="0" task="HandleMonitorChange" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="260" symbol="ProcessIdleTasksStart" version="0" task="ProcessIdleTasks" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="261" symbol="ProcessIdleTasksStop" version="0" task="ProcessIdleTasks" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="262" symbol="DXWorkCompleteStart" version="0" task="DXWorkComplete" opcode="win:Start" level="win:Verbose" template="DXWorkCompleteStartArgs"/>
+     <event value="263" symbol="DXWorkCompleteStop" version="0" task="DXWorkComplete" opcode="win:Stop" level="win:Verbose" template="DXWorkCompleteStopArgs"/>
+     <event value="264" symbol="SphericalVideoChangedTask" version="0" task="SphericalVideoChangedTask" level="win:Verbose" template="SphericalVideoChangedTaskArgs"/>
+     <event value="265" symbol="SphericalVideoPropertiesChangedTask" version="0" task="SphericalVideoPropertiesChangedTask" level="win:Verbose" template="SphericalVideoPropertiesChangedTaskArgs"/>
+     <event value="266" symbol="ProfileCheck_V2" version="2" task="ProfileCheck" level="win:Informational" template="ProfileCheckArgs_V2"/>
+     <event value="267" symbol="SetHDRMetadataTask" version="0" task="SetHDRMetadataTask" level="win:Verbose" template="SetHDRMetadataTaskArgs"/>
+     <event value="268" symbol="EDRStateChangedTask_V1" version="1" task="EDRStateChangedTask" level="win:Verbose" template="EDRStateChangedTaskArgs_V1"/>
+     <event value="269" symbol="MediaFoundationPresentAtSleepStop" version="0" task="MediaFoundationPresentAtSleep" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="270" symbol="MediaFoundationPresentAtProcessFrameStart" version="0" task="MediaFoundationPresentAtProcessFrame" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="271" symbol="MediaFoundationPresentAtProcessFrameStop" version="0" task="MediaFoundationPresentAtProcessFrame" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtProcessFrameStopArgs"/>
+     <event value="272" symbol="WindowResizeOptimizationStart" version="0" task="WindowResizeOptimization" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="273" symbol="WindowResizeOptimizationStop" version="0" task="WindowResizeOptimization" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="274" symbol="ProcessIdleEDRTasksStart" version="0" task="ProcessIdleEDRTasks" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="275" symbol="ProcessIdleEDRTasksStop" version="0" task="ProcessIdleEDRTasks" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="276" symbol="ProcessPolicyEventStart" version="0" task="ProcessPolicyEvent" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="277" symbol="ProcessPolicyEventStop" version="0" task="ProcessPolicyEvent" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="278" symbol="MediaFoundationPresent_DelayStop" version="0" task="MediaFoundationPresent_Delay" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresent_DelayStopArgs"/>
+     <event value="279" symbol="MediaFoundationUpdateHistoryStart" version="0" task="MediaFoundationUpdateHistory" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="280" symbol="MediaFoundationUpdateHistoryStop" version="0" task="MediaFoundationUpdateHistory" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="281" symbol="MediaEngineCallMarshalingStart" version="0" task="MediaEngineCallMarshaling" opcode="win:Start" level="win:Informational" template="MediaEngineCallMarshalingStartArgs"/>
+     <event value="282" symbol="MediaEngineCallMarshalingStop" version="0" task="MediaEngineCallMarshaling" opcode="win:Stop" level="win:Informational" template="MediaEngineCallMarshalingStopArgs"/>
+     <event value="283" symbol="MediaEngineCallMarshalingStart283" version="0" task="MediaEngineCallMarshaling" opcode="win:Start" level="win:Verbose" template="MediaEngineCallMarshalingStartArgs"/>
+     <event value="284" symbol="MediaEngineCallMarshalingStop284" version="0" task="MediaEngineCallMarshaling" opcode="win:Stop" level="win:Verbose" template="MediaEngineCallMarshalingStopArgs"/>
+     <event value="285" symbol="LongCallDetected" version="0" task="LongCallDetected" level="win:Informational" template="LongCallDetectedArgs"/>
+     <event value="286" symbol="CallMarshalingSlotsFull" version="0" task="CallMarshalingSlotsFull" level="win:Informational" template="PresentTimerStart251Args"/>
+     <event value="287" symbol="FrameNotPresentedTask" version="0" task="FrameNotPresentedTask" level="win:Informational" template="FrameNotPresentedTaskArgs"/>
+     <event value="288" symbol="PresentedContentPresentationHandlerTask" version="0" task="PresentedContentPresentationHandlerTask" level="win:Verbose" template="PresentedContentPresentationHandlerTaskArgs"/>
+     <event value="289" symbol="PresentedContentPresentationHandler_ResourcesAvailableTask_V1" version="1" task="PresentedContentPresentationHandler_ResourcesAvailableTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesDeferredTaskArgs"/>
+     <event value="290" symbol="PresentedContentPresentationHandler_BindTask" version="0" task="PresentedContentPresentationHandler_BindTask" level="win:Verbose" template="PresentedContentPresentationHandler_BindTaskArgs"/>
+     <event value="291" symbol="PresentedContentPresentationHandler_PresentSubmittedTask_V3" version="3" task="PresentedContentPresentationHandler_PresentSubmittedTask" level="win:Verbose" template="PresentedContentPresentationHandler_PresentSubmittedTaskArgs_V3"/>
+     <event value="292" symbol="SplitMultiBufferTask" version="0" task="SplitMultiBufferTask" level="win:Verbose" template="SplitMultiBufferTaskArgs"/>
+     <event value="293" symbol="RemoveEntireChunkTask" version="0" task="RemoveEntireChunkTask" level="win:Verbose" template="RemoveEntireChunkTaskArgs"/>
+     <event value="294" symbol="DisplayUniquenessChange" version="0" task="DisplayUniquenessChange" level="win:Verbose" template="DisplayUniquenessChangeArgs"/>
+     <event value="295" symbol="PresentedContentPresentTaskStart" version="0" task="PresentedContentPresentTask" opcode="win:Start" level="win:Verbose" template="PresentedContentPresentTaskStartArgs"/>
+     <event value="296" symbol="PresentedContentPresentTaskStop" version="0" task="PresentedContentPresentTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentTaskStopArgs"/>
+     <event value="297" symbol="PresentFrameTaskStart" version="0" task="PresentFrameTask" opcode="win:Start" level="win:Verbose" template="PresentFrameTaskStartArgs"/>
+     <event value="298" symbol="PresentFrameTaskStop" version="0" task="PresentFrameTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="299" symbol="PresentFrameConvertTaskStart" version="0" task="PresentFrameConvertTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="300" symbol="PresentFrameConvertTaskStop" version="0" task="PresentFrameConvertTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="301" symbol="PresentedContentPresentationHandler_HWMTask" version="0" task="PresentedContentPresentationHandler_HWMTask" level="win:Verbose" template="PresentedContentPresentationHandler_HWMTaskArgs"/>
+     <event value="302" symbol="PresentedContentPresentationHandler_RetiredResourceTask" version="0" task="PresentedContentPresentationHandler_RetiredResourceTask" level="win:Verbose" template="PresentedContentPresentationHandler_RetiredResourceTaskArgs"/>
+     <event value="303" symbol="MediaFoundationTelemetryassertStart" version="0" task="MediaFoundationTelemetryassert" opcode="win:Start" level="win:Verbose"/>
+     <event value="304" symbol="MediaFoundationTelemetryassertStop" version="0" task="MediaFoundationTelemetryassert" opcode="win:Stop" level="win:Verbose"/>
+     <event value="305" symbol="MediaFoundationPresentedContentAsyncCallbackStart_V1" version="1" task="MediaFoundationPresentedContentAsyncCallback" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentedContentAsyncCallbackStartArgs_V1"/>
+     <event value="306" symbol="MediaFoundationPresentedContentAsyncCallbackStop" version="0" task="MediaFoundationPresentedContentAsyncCallback" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentedContentAsyncCallbackStopArgs"/>
+     <event value="307" symbol="PresentedContentPresentationHandlerCompletedCompTask_V6" version="6" task="PresentedContentPresentationHandlerCompletedCompTask" level="win:Verbose" template="PresentedContentPresentationHandlerCompletedCompTaskArgs_V6"/>
+     <event value="308" symbol="PresentedContentPresentationHandlerCompletedCompTaskStart_V5" version="5" task="PresentedContentPresentationHandlerCompletedCompTask" opcode="win:Start" level="win:Verbose" template="PresentedContentPresentationHandlerCompletedCompTaskStartArgs_V5"/>
+     <event value="309" symbol="PresentedContentPresentationHandlerCompletedCompTaskStop_V2" version="2" task="PresentedContentPresentationHandlerCompletedCompTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentationHandlerCompletedCompTaskStopArgs_V2"/>
+     <event value="310" symbol="PresentedContentPresentationHandlerCompletedIFlipTask_V2" version="2" task="PresentedContentPresentationHandlerCompletedIFlipTask" level="win:Verbose" template="PresentedContentPresentationHandlerCompletedIFlipTaskArgs_V2"/>
+     <event value="311" symbol="PresentedContentPresentationHandlerGlitchDetectedTask_V9" version="9" task="PresentedContentPresentationHandlerGlitchDetectedTask" level="win:Verbose" keywords="Telemetry" template="PresentedContentPresentationHandlerProcessGlitchDetectTaskArgs_V7"/>
+     <event value="312" symbol="PresentedContentPresentationHandlerDCompStatTask_V4" version="4" task="PresentedContentPresentationHandlerDCompStatTask" level="win:Verbose" template="PresentedContentPresentationHandlerDCompStatTaskArgs_V4"/>
+     <event value="313" symbol="PresentedContentPresentationHandlerGlitchDetectRenderMissingTask_V3" version="3" task="PresentedContentPresentationHandlerGlitchDetectRenderMissingTask" level="win:Verbose" template="PresentedContentPresentationHandlerGlitchDetectRenderMissingTaskArgs_V3"/>
+     <event value="314" symbol="PresentedContent_DrainAsyncPresentsTaskStart" version="0" task="PresentedContent_DrainAsyncPresentsTask" opcode="win:Start" level="win:Verbose" template="PresentedContent_DrainAsyncPresentsTaskStartArgs"/>
+     <event value="315" symbol="PresentedContent_DrainAsyncPresentsTaskStop" version="0" task="PresentedContent_DrainAsyncPresentsTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="316" symbol="MediaFoundationPresentedContentD3DFenceStart" version="0" task="MediaFoundationPresentedContentD3DFence" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="317" symbol="MediaFoundationPresentedContentD3DFenceStop" version="0" task="MediaFoundationPresentedContentD3DFence" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="318" symbol="PresentedContent_FlushTask" version="0" task="PresentedContent_FlushTask" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="319" symbol="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStart_V1" version="1" task="MediaFoundationPresentedContentAsyncCallbackCreateSerializer" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStartArgs_V1"/>
+     <event value="320" symbol="MFMediaEngine_DriverVersionTask_V2" version="2" task="MFMediaEngine_DriverVersionTask" level="win:Verbose" template="MFMediaEngine_DriverVersionTaskArgs_V2"/>
+     <event value="321" symbol="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStop_V1" version="1" task="MediaFoundationPresentedContentAsyncCallbackCreateSerializer" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStopArgs_V1"/>
+     <event value="322" symbol="PresentedContent_RetryPresentStart" version="0" task="PresentedContent_RetryPresent" opcode="win:Start" level="win:Verbose" template="PresentedContent_RetryPresentStartArgs"/>
+     <event value="323" symbol="PresentedContent_RetryPresentStop" version="0" task="PresentedContent_RetryPresent" opcode="win:Stop" level="win:Verbose" template="PresentedContent_RetryPresentStartArgs"/>
+     <event value="324" symbol="PresentedContent_ConfigurationState_V2" version="2" task="PresentedContent_ConfigurationState" level="win:Verbose" template="PresentedContent_ConfigurationStateArgs_V2"/>
+     <event value="325" symbol="PresentedContentPresentationHandlerCompositionPresentStatTask_V2" version="2" task="PresentedContentPresentationHandlerCompositionPresentStatTask" level="win:Verbose" template="PresentedContentPresentationHandlerCompositionPresentStatTaskArgs_V2"/>
+     <event value="326" symbol="PresentedContentPresentationHandlerProcessGlitchDetectTask_V7" version="7" task="PresentedContentPresentationHandlerProcessGlitchDetectTask" level="win:Verbose" template="PresentedContentPresentationHandlerProcessGlitchDetectTaskArgs_V7"/>
+     <event value="327" symbol="PresentedContentPresentationMangagerLostTask_V1" version="1" task="PresentedContentPresentationMangagerLostTask" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="328" symbol="PresentedContentPresentationHandlerPatchSkippedPresentTask" version="0" task="PresentedContentPresentationHandlerPatchSkippedPresentTask" level="win:Verbose" template="PresentedContentPresentationHandlerPatchSkippedPresentTaskArgs"/>
+     <event value="329" symbol="PresentedContentPresentationHandlerQueueSkippedPresentTask" version="0" task="PresentedContentPresentationHandlerQueueSkippedPresentTask" level="win:Verbose" template="PresentedContentPresentationHandlerQueueSkippedPresentTaskArgs"/>
+     <event value="330" symbol="GPUBoostInitTaskStart_V1" version="1" task="GPUBoostInitTask" opcode="win:Start" level="win:Verbose" template="GPUBoostInitTaskStartArgs_V1"/>
+     <event value="331" symbol="GPUBoostInitTaskStop_V1" version="1" task="GPUBoostInitTask" opcode="win:Stop" level="win:Verbose" template="GPUBoostInitTaskStartArgs_V1"/>
+     <event value="332" symbol="UpdateGPUDeadlineoperationStop_V1" version="1" task="UpdateGPUDeadlineoperation" opcode="win:Stop" level="win:Verbose" template="UpdateGPUDeadlineoperationStopArgs_V1"/>
+     <event value="333" symbol="PresentedContent_EnableVSyncsTask" version="0" task="PresentedContent_EnableVSyncsTask" level="win:Verbose" template="PresentedContent_EnableVSyncsTaskArgs"/>
+     <event value="334" symbol="MediaFoundationPresentedContentRegisterWakeFenceStart_V1" version="1" task="MediaFoundationPresentedContentRegisterWakeFence" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentedContentRegisterWakeFenceStartArgs_V1"/>
+     <event value="335" symbol="MediaFoundationPresentedContentRegisterWakeFenceStop_V1" version="1" task="MediaFoundationPresentedContentRegisterWakeFence" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="336" symbol="PresentedContentPresentationHandler_InitializeQueueingModeTask" version="0" task="PresentedContentPresentationHandler_InitializeQueueingModeTask" level="win:Verbose" template="PresentedContentPresentationHandler_InitializeQueueingModeTaskArgs"/>
+     <event value="337" symbol="PresentedContentPresentationHandlerMonitorEnumTask" version="0" task="PresentedContentPresentationHandlerMonitorEnumTask" level="win:Verbose" template="PresentedContentPresentationHandlerMonitorEnumTaskArgs"/>
+     <event value="338" symbol="PresentedContent_EnqueuedPendingResourceCountTask" version="0" task="PresentedContent_EnqueuedPendingResourceCountTask" level="win:Verbose" template="PresentedContent_EnqueuedPendingResourceCountTaskArgs"/>
+     <event value="339" symbol="PresentedContentPresentationHandlerProcessGlitchInformationTaskStart" version="0" task="PresentedContentPresentationHandlerProcessGlitchInformationTask" opcode="win:Start" level="win:Verbose" template="PresentedContentPresentationHandlerProcessGlitchInformationTaskStartArgs"/>
+     <event value="340" symbol="PresentedContentPresentationHandlerProcessGlitchInformationTaskStop" version="0" task="PresentedContentPresentationHandlerProcessGlitchInformationTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentationHandlerProcessGlitchInformationTaskStartArgs"/>
+     <event value="341" symbol="OnFrameQueuedStart" version="0" task="OnFrameQueued" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="342" symbol="OnFrameQueuedStop" version="0" task="OnFrameQueued" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="343" symbol="OnFrameQueued" version="0" task="OnFrameQueued" level="win:Verbose" template="OnFrameQueuedArgs"/>
+     <event value="344" symbol="PresentedContentPresentationHandler_ResourcesAllocateTask" version="0" task="PresentedContentPresentationHandler_ResourcesAllocateTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesAllocateTaskArgs"/>
+     <event value="345" symbol="PresentedContentPresentationHandler_QueuedResourceTaskStart" version="0" task="PresentedContentPresentationHandler_QueuedResourceTask" opcode="win:Start" level="win:Verbose" template="PresentedContentPresentationHandler_QueuedResourceTaskStartArgs"/>
+     <event value="346" symbol="PresentedContentPresentationHandler_QueuedResourceTaskStop" version="0" task="PresentedContentPresentationHandler_QueuedResourceTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentationHandler_QueuedResourceTaskStartArgs"/>
+     <event value="347" symbol="PresentedContentPresentationHandler_ResourcesRegisteredTask" version="0" task="PresentedContentPresentationHandler_ResourcesRegisteredTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesRegisteredTaskArgs"/>
+     <event value="348" symbol="PresentedContentPresentationHandler_ResourcesTextureAllocateTask" version="0" task="PresentedContentPresentationHandler_ResourcesTextureAllocateTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesTextureAllocateTaskArgs"/>
+     <event value="349" symbol="PresentedContentPresentationHandler_ResourcesTextureAllocateTask349" version="0" task="PresentedContentPresentationHandler_ResourcesTextureAllocateTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesTextureAllocateTaskArgs"/>
+     <event value="350" symbol="MediaFoundationTriggeredGlitchTelemetryTrackerStart_V1" version="1" task="MediaFoundationTriggeredGlitchTelemetryTracker" opcode="win:Start" level="win:Verbose" keywords="DiagTrack" template="MediaFoundationTriggeredGlitchTelemetryTrackerStartArgs_V1"/>
+     <event value="351" symbol="MediaFoundationTriggeredGlitchTelemetryTrackerStop_V2" version="2" task="MediaFoundationTriggeredGlitchTelemetryTracker" opcode="win:Stop" level="win:Verbose" keywords="Telemetry" template="MediaFoundationTriggeredGlitchTelemetryTrackerStopArgs_V2"/>
+     <event value="352" symbol="PresentedContentPresentationHandler_ResourcesDeferredTask" version="0" task="PresentedContentPresentationHandler_ResourcesDeferredTask" level="win:Verbose" template="PresentedContentPresentationHandler_ResourcesDeferredTaskArgs"/>
+     <event value="353" symbol="PresentedContentPresentationHandler_ResourcesDeferredTaskStart" version="0" task="PresentedContentPresentationHandler_ResourcesDeferredTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="354" symbol="PresentedContentPresentationHandler_ResourcesDeferredTaskStop" version="0" task="PresentedContentPresentationHandler_ResourcesDeferredTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="360" symbol="MediaFoundationTrackLeakedStats_V1" version="1" task="MediaFoundationTrackLeakedStats" level="win:Verbose" keywords="DiagTrack" template="MediaEnginePurgedFramesArgs"/>
+     <event value="361" symbol="IsEdrEnabledCheckStart" version="0" task="IsEdrEnabledCheck" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="362" symbol="IsEdrEnabledCheckStop" version="0" task="IsEdrEnabledCheck" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="363" symbol="CloneDXDeviceStart" version="0" task="CloneDXDevice" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="364" symbol="CloneDXDeviceStop" version="0" task="CloneDXDevice" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="365" symbol="HandleClockStart" version="0" task="HandleClockStart" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="366" symbol="HandleClockStartStop" version="0" task="HandleClockStart" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="367" symbol="HandlePrerollStart" version="0" task="HandlePreroll" opcode="win:Start" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="368" symbol="HandlePrerollStop" version="0" task="HandlePreroll" opcode="win:Stop" level="win:Verbose" template="PresentTimerStart251Args"/>
+     <event value="369" symbol="MediaFoundationPlaybackStallDetectedTask" version="0" task="MediaFoundationPlaybackStallDetectedTask" level="win:Verbose" keywords="Telemetry" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="370" symbol="MediaFoundationPlaybackStallDetectionTaskStart" version="0" task="MediaFoundationPlaybackStallDetectionTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="371" symbol="MediaFoundationPlaybackStallDetectionTaskStop" version="0" task="MediaFoundationPlaybackStallDetectionTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="372" symbol="ProcessSampleLockTaskStart" version="0" task="ProcessSampleLockTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="373" symbol="ProcessSampleLockTaskStop" version="0" task="ProcessSampleLockTask" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="374" symbol="ProcessSampleTaskStart" version="0" task="ProcessSampleTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="375" symbol="ProcessSampleTaskStop" version="0" task="ProcessSampleTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentTaskStopArgs"/>
+     <event value="376" symbol="AsyncQueuePresentTaskStart" version="0" task="AsyncQueuePresentTask" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="377" symbol="AsyncQueuePresentTaskStop" version="0" task="AsyncQueuePresentTask" opcode="win:Stop" level="win:Verbose" template="PresentedContentPresentTaskStopArgs"/>
+     <event value="378" symbol="MediaFoundationNotVisibleStart" version="0" task="MediaFoundationNotVisible" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="379" symbol="MediaFoundationNotVisibleStop" version="0" task="MediaFoundationNotVisible" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="380" symbol="PresentedContentPresentationHandler_FakePresentSubmittedTask" version="0" task="PresentedContentPresentationHandler_FakePresentSubmittedTask" level="win:Verbose" template="PresentedContentPresentationHandler_FakePresentSubmittedTaskArgs"/>
+     <event value="381" symbol="MediaFoundationFrameRateDetection" version="0" task="MediaFoundationFrameRateDetection" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="382" symbol="MediaFoundationFrameRateDetectionStart" version="0" task="MediaFoundationFrameRateDetection" opcode="win:Start" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="383" symbol="MediaFoundationFrameRateDetectionStop" version="0" task="MediaFoundationFrameRateDetection" opcode="win:Stop" level="win:Verbose" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="384" symbol="MediaFoundationFrameRateDetectionUpdate" version="0" task="MediaFoundationFrameRateDetectionUpdate" level="win:Verbose" template="MediaFoundationFrameRateDetectionUpdateArgs"/>
+     <event value="385" symbol="MediaFoundationFrameRateDetectionReset" version="0" task="MediaFoundationFrameRateDetectionReset" level="win:Verbose" template="MediaFoundationFrameRateDetectionUpdateArgs"/>
+     <event value="386" symbol="PresentedContentPresentationHandlerDeferRealtimeDeadlineTask_V1" version="1" task="PresentedContentPresentationHandlerDeferRealtimeDeadlineTask" level="win:Verbose" template="PresentedContentPresentationHandlerDeferRealtimeDeadlineTaskArgs_V1"/>
+     <event value="390" symbol="SVRGPUDeadlinePriority" version="0" task="SVRGPUDeadlinePriority" level="win:Verbose" template="SVRGPUDeadlinePriorityArgs"/>
+     <event value="391" symbol="MediaFoundationTriggeredPendingPresentStatLargeSizeTrackerStart" version="0" task="MediaFoundationTriggeredPendingPresentStatLargeSizeTracker" opcode="win:Start" level="win:Verbose" keywords="DiagTrack" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="392" symbol="MediaFoundationTriggeredPendingPresentStatLargeSizeTrackerStop" version="0" task="MediaFoundationTriggeredPendingPresentStatLargeSizeTracker" opcode="win:Stop" level="win:Verbose" keywords="Telemetry" template="MediaFoundationPresentAtSleepStartArgs"/>
+     <event value="393" symbol="EDRStateChanged2Task" version="0" task="EDRStateChanged2Task" level="win:Verbose" template="EDRStateChanged2TaskArgs"/>
+    </events>
+    <templates>
+     <template tid="MediaFoundationTransferFrameStartArgs">
+      <data name="id" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationTransferFrameStopArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="MediaFoundationPlaybackRateChangeArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="rate" inType="win:Float"/>
+     </template>
+     <template tid="MediaFoundationDroppedFrameArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="location" inType="win:UInt32"/>
+      <data name="pts" inType="win:Int64"/>
+      <data name="clock" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresentedFrameArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="pts" inType="win:Int64"/>
+      <data name="clock" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_SubmittedFrameArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="QPC" inType="win:Int64"/>
+      <data name="Ahead" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_QueuedFrameArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="QPC" inType="win:Int64"/>
+      <data name="QPC_snapped" inType="win:Int64"/>
+      <data name="PresentFlags" inType="win:UInt32"/>
+      <data name="SyncInterval" inType="win:UInt32"/>
+      <data name="Repeat" inType="win:UInt32"/>
+      <data name="Restart" inType="win:UInt32"/>
+      <data name="Now" inType="win:Int64"/>
+      <data name="DeltaToTarget_MS" inType="win:Int32"/>
+      <data name="PresentCount" inType="win:UInt32"/>
+      <data name="FrameCount" inType="win:UInt32"/>
+      <data name="History_QueuedFrames" inType="win:UInt32"/>
+      <data name="History_QueuedFramesWithRepeats" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationPresent_CompletedFrameArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="QPC_target" inType="win:Int64"/>
+      <data name="QPC_actual" inType="win:Int64"/>
+      <data name="QPC_actual_behind" inType="win:Int64"/>
+      <data name="FramePeriod" inType="win:Int64"/>
+      <data name="FrameAdjustment" inType="win:Int32"/>
+      <data name="PresentCount" inType="win:Int32"/>
+      <data name="FrameCount" inType="win:Int32"/>
+      <data name="RatioAverage" inType="win:Float"/>
+     </template>
+     <template tid="MediaFoundationPresentAtSleepStartArgs">
+      <data name="object" inType="win:Pointer"/>
+     </template>
+     <template tid="PerfTrack:MediaFoundationPlayArgs">
+      <data name="object" inType="win:UInt64"/>
+      <data name="protected" inType="win:UInt32"/>
+      <data name="width" inType="win:UInt32"/>
+      <data name="height" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationPresent_QueuedFrameStatsArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="MaxPresentLatency" inType="win:UInt32"/>
+      <data name="Queued" inType="win:UInt32"/>
+      <data name="QueuedWithRepeats" inType="win:UInt32"/>
+      <data name="EstimatedFramesNeeded" inType="win:UInt32"/>
+      <data name="Free" inType="win:UInt32"/>
+      <data name="DeltaToTarget" inType="win:Int64"/>
+      <data name="SubmittedAheadDelta" inType="win:Int64"/>
+      <data name="TimeInQueue" inType="win:Int64"/>
+      <data name="MinLatency" inType="win:Int64"/>
+      <data name="MaxLatency" inType="win:Int32"/>
+      <data name="FramePeriod" inType="win:Int64"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="TargetQPC" inType="win:Int64"/>
+      <data name="HistoryPresents" inType="win:Int32"/>
+      <data name="TimeToDeadline" inType="win:Int64"/>
+      <data name="BufferIndex" inType="win:UInt32"/>
+      <data name="StateFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationSuspendArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="paused" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationRestoreArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="resumed" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationNotVisibleArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="thinning" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationVisible133Args">
+      <data name="id" inType="win:UInt32"/>
+      <data name="priority" inType="win:Int32"/>
+     </template>
+     <template tid="PerfTrack:MediaFoundationVideoGlitchArgs">
+      <data name="NumGlitches" inType="win:UInt32"/>
+     </template>
+     <template tid="SaveimageStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="NativeWidth" inType="win:UInt32"/>
+      <data name="NativeHeight" inType="win:UInt32"/>
+      <data name="EncodedWidth" inType="win:UInt32"/>
+      <data name="EncodedHeight" inType="win:UInt32"/>
+      <data name="EncodedSize" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="SetSourceoperationStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationVideoFrameEarlyArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="FramesEarly" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresent_IgnoreVSyncArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPC" inType="win:Int64"/>
+      <data name="Delta" inType="win:Int64"/>
+      <data name="Frames" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationRequestNetworkArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Requested" inType="win:Boolean"/>
+      <data name="ReferenceCounter" inType="win:UInt32"/>
+     </template>
+     <template tid="DecodeSwapchainCreatedArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Swapchain" inType="win:Pointer"/>
+      <data name="TextureArray" inType="win:Pointer"/>
+     </template>
+     <template tid="YUVSwapchainConfiguredArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Swapchain" inType="win:Pointer"/>
+      <data name="SrcRect_Left" inType="win:Int32"/>
+      <data name="SrcRect_Top" inType="win:Int32"/>
+      <data name="SrcRect_Right" inType="win:Int32"/>
+      <data name="SrcRect_Bottom" inType="win:Int32"/>
+      <data name="DstRect_Left" inType="win:Int32"/>
+      <data name="DstRect_Top" inType="win:Int32"/>
+      <data name="DstRect_Right" inType="win:Int32"/>
+      <data name="DstRect_Bottom" inType="win:Int32"/>
+      <data name="DstSize_Width" inType="win:Int32"/>
+      <data name="DstRect_Height" inType="win:Int32"/>
+     </template>
+     <template tid="DecodeSwapchainDestroyedArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Swapchain" inType="win:Pointer"/>
+      <data name="SwapchainState" inType="win:UInt32"/>
+     </template>
+     <template tid="DecodeSwapchainNotUsedArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="SwapchainState" inType="win:UInt32"/>
+     </template>
+     <template tid="ContentFramerateDetectedArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="FrameDuration" inType="win:UInt64"/>
+     </template>
+     <template tid="CustomRefreshRateRequestedArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="FrameDuration" inType="win:UInt64"/>
+      <data name="RefreshDuration" inType="win:UInt64"/>
+     </template>
+     <template tid="CustomRefreshRateStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="RequestedRefreshDuration" inType="win:UInt64"/>
+      <data name="ActualRefreshDuration" inType="win:UInt64"/>
+     </template>
+     <template tid="CustomRefreshRateStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationUpdateVideoArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Dst_left" inType="win:Int32"/>
+      <data name="Dst_top" inType="win:Int32"/>
+      <data name="Dst_right" inType="win:Int32"/>
+      <data name="Dst_bottom" inType="win:Int32"/>
+      <data name="Src_left" inType="win:Float"/>
+      <data name="Src_top" inType="win:Float"/>
+      <data name="Src_right" inType="win:Float"/>
+      <data name="Src_bottom" inType="win:Float"/>
+      <data name="flags" inType="win:Int32"/>
+     </template>
+     <template tid="MediaEnginePurgedFramesArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Count" inType="win:Int32"/>
+     </template>
+     <template tid="MediaEngineGetPresentStatsArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="hr" inType="win:UInt32"/>
+      <data name="PresentCount" inType="win:Int32"/>
+      <data name="PresentRefreshCount" inType="win:Int32"/>
+      <data name="SyncRefreshCount" inType="win:Int32"/>
+      <data name="SyncQPC_us" inType="win:UInt64"/>
+      <data name="CompMode" inType="win:Int32"/>
+      <data name="Duration" inType="win:Int32"/>
+      <data name="SyncQPC_rel_now_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaEnginePruneHistoryArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PresentCount" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresent_ClockSmoothArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="ClockTime0_us" inType="win:Int64"/>
+      <data name="QPC0_us" inType="win:Int64"/>
+      <data name="SmoothedQPC0_us" inType="win:Int64"/>
+      <data name="QPCDelta_us" inType="win:Int64"/>
+      <data name="WindowCount" inType="win:Int32"/>
+      <data name="WindowWidth_us" inType="win:Int64"/>
+      <data name="Accepted" inType="win:Boolean"/>
+     </template>
+     <template tid="UpdateLongRunningoperationArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="newState" inType="win:Int32"/>
+      <data name="oldState" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresent_MapSampleArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPCnow_us" inType="win:Int64"/>
+      <data name="rate" inType="win:Float"/>
+      <data name="ClockTime0_us" inType="win:Int64"/>
+      <data name="QPC0_us" inType="win:Int64"/>
+      <data name="SampleTime_us" inType="win:Int64"/>
+      <data name="SampleQPC_us" inType="win:Int64"/>
+      <data name="SampleQPCAhead_us" inType="win:Int64"/>
+      <data name="Dejitter" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationPresent_GetCorrelatedTimeStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPCnow_us" inType="win:Int64"/>
+      <data name="ClockTime0_us" inType="win:Int64"/>
+      <data name="QPC0_us" inType="win:Int64"/>
+      <data name="ApproxClockJitter_us" inType="win:Int64"/>
+     </template>
+     <template tid="MinLatencyDoneoperationArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="TimeRemaining" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationMirrorVideoArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="old" inType="win:Int32"/>
+      <data name="new" inType="win:Int32"/>
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaEngineGetEngineStatisticsStartArgs">
+      <data name="id" inType="win:UInt32"/>
+      <data name="Type" inType="win:UInt32"/>
+     </template>
+     <template tid="SVRRequestSampleArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="RequestsPending" inType="win:UInt32"/>
+      <data name="FrameQueueCount" inType="win:UInt32"/>
+     </template>
+     <template tid="SVRGPUBoostArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="TimeToDeadline_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_HistoryRecordStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="pRecord" inType="win:Pointer"/>
+      <data name="ListCount" inType="win:Int32"/>
+      <data name="DecodeYUV" inType="win:Boolean"/>
+      <data name="FrameCount" inType="win:Int32"/>
+      <data name="PresentCount" inType="win:Int64"/>
+      <data name="Repeat" inType="win:Boolean"/>
+      <data name="SampleTime" inType="win:UInt64"/>
+      <data name="TargetQPC" inType="win:UInt64"/>
+     </template>
+     <template tid="MediaFoundationPresent_HistoryRecordStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="pRecord" inType="win:Pointer"/>
+      <data name="PresentCount" inType="win:Int64"/>
+      <data name="ListCount" inType="win:Int32"/>
+     </template>
+     <template tid="MediaEngineClearHistoryArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="ListCount" inType="win:Int32"/>
+      <data name="Location" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationME_GetCurrentTimeStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="now" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationComputeRatioToPrimaryArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Ratio" inType="win:Float"/>
+      <data name="Ratio_x100" inType="win:Float"/>
+     </template>
+     <template tid="MediaFoundationUpdateRatioToPrimaryArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Ratio" inType="win:Float"/>
+     </template>
+     <template tid="CustomRefreshRateCheckDriverSupportArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="FrameDuration" inType="win:UInt64"/>
+      <data name="MinDuration" inType="win:UInt64"/>
+      <data name="MaxDuration" inType="win:UInt64"/>
+     </template>
+     <template tid="TransferDeadlineoperationArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="target" inType="win:Pointer"/>
+      <data name="hDeadline" inType="win:Pointer"/>
+      <data name="hVideoDeadline" inType="win:Pointer"/>
+      <data name="GPUdeadline" inType="win:Int64"/>
+      <data name="GPUDeadlineDeltaFromNow_us" inType="win:Int64"/>
+     </template>
+     <template tid="EMENeedKeyArgs">
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+     </template>
+     <template tid="EMEMediaKeysArgs">
+      <data name="keysystem" inType="win:UnicodeString"/>
+      <data name="defaultCdmStorePath" inType="win:UnicodeString"/>
+      <data name="inprivateCdmStorePath" inType="win:UnicodeString"/>
+      <data name="object" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEMediaKeySessionStartArgs">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="keySystem" inType="win:UnicodeString"/>
+      <data name="type" inType="win:UnicodeString"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEMediaKeySessionStopArgs">
+      <data name="sessionId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="EMEKeyMessageStartArgs">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="url" inType="win:UnicodeString"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+     </template>
+     <template tid="EMEKeyMessageArgs">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="code" inType="win:UInt16"/>
+      <data name="systemError" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEKeyMessageStart207Args">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="ContentEnablerStartArgs">
+      <data name="enabletype" inType="win:GUID"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="ContentEnablerStopArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationSubtitleQueuedArgs">
+      <data name="buffer" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="sampleDuration" inType="win:Int64"/>
+     </template>
+     <template tid="PresentTimerStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Period" inType="win:Int32"/>
+     </template>
+     <template tid="PresentTimeCriticalStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="TimeDelta" inType="win:Int64"/>
+     </template>
+     <template tid="TimedTextDtvCCSampleDecodeTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="SampleStartTime" inType="win:Int64"/>
+      <data name="SampleEndTime" inType="win:Int64"/>
+     </template>
+     <template tid="TimedTextDtvCCSampleDecodeTaskStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="CueStartTime" inType="win:Int64"/>
+      <data name="CueEndTime" inType="win:Int64"/>
+      <data name="CueTicket" inType="win:Int64"/>
+     </template>
+     <template tid="ResizedswapchainArgs">
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="Backbuffers" inType="win:UInt32"/>
+      <data name="Format" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEMediaKeySessionStop238Args">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="keySystem" inType="win:UnicodeString"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+     </template>
+     <template tid="EMEMediaKeySessionStart241Args">
+      <data name="SessionType" inType="win:UInt32"/>
+      <data name="keySystem" inType="win:UnicodeString"/>
+      <data name="UseDistinctiveIdentifier" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEKeyMessage2StartArgs">
+      <data name="sessionId" inType="win:UnicodeString"/>
+      <data name="MessageType" inType="win:UInt32"/>
+      <data name="url" inType="win:UnicodeString"/>
+      <data name="length" inType="win:UInt32"/>
+      <data name="data" inType="win:Binary" length="length"/>
+     </template>
+     <template tid="EMEMediaKeys245Args">
+      <data name="keysystem" inType="win:UnicodeString"/>
+      <data name="CDMAccess" inType="win:Pointer"/>
+      <data name="CDMCustomConfig" inType="win:Pointer"/>
+      <data name="MediaKeysObject" inType="win:Pointer"/>
+      <data name="SoftwareOverride" inType="win:UInt32"/>
+     </template>
+     <template tid="EMEMediaKeySystemAccessArgs">
+      <data name="keysystem" inType="win:UnicodeString"/>
+      <data name="configCount" inType="win:UInt32"/>
+      <data name="selectedConfigCount" inType="win:UInt32"/>
+      <data name="object" inType="win:Pointer"/>
+     </template>
+     <template tid="PresentRestartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="PresentCount" inType="win:UInt32"/>
+     </template>
+     <template tid="DisplayRotationTaskArgs">
+      <data name="Rotation" inType="win:UInt32"/>
+     </template>
+     <template tid="DecodeSwapchainStateTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="DecodeSwapchainState" inType="win:UInt32"/>
+     </template>
+     <template tid="ConfigureSwapchainTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="IsDecode" inType="win:Boolean"/>
+      <data name="DxgiFormat" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="ColorSpaceType" inType="win:UInt32"/>
+      <data name="BufferCount" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Dst_Left" inType="win:Int32"/>
+      <data name="Dst_Top" inType="win:Int32"/>
+      <data name="Dst_Right" inType="win:Int32"/>
+      <data name="Dst_Bottom" inType="win:Int32"/>
+     </template>
+     <template tid="PresentTimerStart251Args">
+      <data name="Object" inType="win:Pointer"/>
+     </template>
+     <template tid="ScrubbingStateTaskArgs">
+      <data name="ScrubbingState" inType="win:UInt32"/>
+     </template>
+     <template tid="DXPresentStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="Inverval" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="DXPresentStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="hrResult" inType="win:UInt32"/>
+     </template>
+     <template tid="DXWorkCompleteStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+     </template>
+     <template tid="DXWorkCompleteStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="hrResult" inType="win:UInt32"/>
+     </template>
+     <template tid="SphericalVideoChangedTaskArgs">
+      <data name="IsEnabled" inType="win:Boolean"/>
+      <data name="Format" inType="win:UInt32"/>
+      <data name="ProjectionMode" inType="win:UInt32"/>
+     </template>
+     <template tid="SphericalVideoPropertiesChangedTaskArgs">
+      <data name="QuaternionW" inType="win:Float"/>
+      <data name="QuaternionX" inType="win:Float"/>
+      <data name="QuaternionY" inType="win:Float"/>
+      <data name="QuaternionZ" inType="win:Float"/>
+      <data name="FieldOfView" inType="win:UInt32"/>
+     </template>
+     <template tid="SetHDRMetadataTaskArgs">
+      <data name="IsDisplayMetadata" inType="win:Boolean"/>
+      <data name="MinLuminance" inType="win:UInt32"/>
+      <data name="MaxLuminance" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationPresentAtProcessFrameStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="MediaFoundationPresent_DelayStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Delay" inType="win:UInt32"/>
+      <data name="TimeToDeadline" inType="win:Int64"/>
+      <data name="Location" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaEngineCallMarshalingStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="CallId" inType="win:UInt32"/>
+      <data name="Id" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaEngineCallMarshalingStopArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="CallId" inType="win:UInt32"/>
+      <data name="Id" inType="win:UInt32"/>
+      <data name="hrResult" inType="win:UInt32"/>
+     </template>
+     <template tid="LongCallDetectedArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="CallId" inType="win:UInt32"/>
+      <data name="Id" inType="win:UInt32"/>
+      <data name="Start" inType="win:UInt64"/>
+      <data name="Now" inType="win:UInt64"/>
+     </template>
+     <template tid="FrameNotPresentedTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Timestamp" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerTaskArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ResourceManagerObject" inType="win:Pointer"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_BindTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="bufferCount" inType="win:UInt32"/>
+      <data name="Format" inType="win:UInt32"/>
+      <data name="colorSpaceType" inType="win:UInt32"/>
+      <data name="isHWProtected" inType="win:UInt32"/>
+      <data name="width" inType="win:UInt32"/>
+      <data name="height" inType="win:UInt32"/>
+     </template>
+     <template tid="SplitMultiBufferTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="dwOldIndex" inType="win:UInt32"/>
+      <data name="dwNewIndex" inType="win:UInt32"/>
+      <data name="Changed" inType="win:Boolean"/>
+     </template>
+     <template tid="RemoveEntireChunkTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="dwEndIndex" inType="win:UInt32"/>
+      <data name="fRemoveEntireChunk" inType="win:Boolean"/>
+     </template>
+     <template tid="DisplayUniquenessChangeArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Old" inType="win:UInt64"/>
+      <data name="New" inType="win:UInt64"/>
+      <data name="RealDisplayChange" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContentPresentTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="targetTime" inType="win:Int64"/>
+      <data name="avgDuration" inType="win:Int64"/>
+      <data name="PresentId" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentTaskStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="hrResult" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentFrameTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="regeerated" inType="win:UInt32"/>
+      <data name="height" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_HWMTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="TimeInQueueAtHWMThreshold" inType="win:Int64"/>
+      <data name="LWM" inType="win:Int64"/>
+      <data name="HWM" inType="win:Int64"/>
+      <data name="ApproxSleepDuration" inType="win:Int64"/>
+      <data name="LWM_PresentId" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_RetiredResourceTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PresentRetiredCount" inType="win:Int64"/>
+      <data name="RemainingInFlightResourceCount" inType="win:Int64"/>
+      <data name="FenceValue" inType="win:Int64"/>
+      <data name="FrameReturnedTimeDelta_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresentedContentAsyncCallbackStopArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AsyncCallbackType" inType="win:Int32"/>
+     </template>
+     <template tid="PresentedContent_DrainAsyncPresentsTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PendingAsyncPresentCount" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContent_RetryPresentStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="RetryPresentTimerKey" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerPatchSkippedPresentTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PresentId_Skipped" inType="win:Int64"/>
+      <data name="PresentId_displayed" inType="win:Int64"/>
+      <data name="PresentId_delta" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerQueueSkippedPresentTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="CompositionID" inType="win:Int64"/>
+      <data name="targetQPC" inType="win:Int64"/>
+      <data name="SkippedFramePendingCount" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContent_EnableVSyncsTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Enabled" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_InitializeQueueingModeTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QueueingMode" inType="win:Int32"/>
+      <data name="LWM" inType="win:Int64"/>
+      <data name="HWM" inType="win:Int64"/>
+      <data name="LwmOverride" inType="win:Boolean"/>
+      <data name="SteadyStateQueueingMode" inType="win:Int32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerMonitorEnumTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="index" inType="win:Int32"/>
+      <data name="TotalMonitors" inType="win:Int32"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="width" inType="win:Int32"/>
+      <data name="height" inType="win:Int32"/>
+      <data name="vsyncDuration" inType="win:Int64"/>
+      <data name="IsPrimary" inType="win:Boolean"/>
+      <data name="IsTimingDisplay" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContent_EnqueuedPendingResourceCountTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Count" inType="win:UInt64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerProcessGlitchInformationTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="TotalOutputs" inType="win:UInt32"/>
+     </template>
+     <template tid="OnFrameQueuedArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="WorkQueue" inType="win:Int32"/>
+      <data name="CallbackWorkQueue" inType="win:Int32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_ResourcesAllocateTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Format" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="bufferCount" inType="win:UInt32"/>
+      <data name="MiscFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_QueuedResourceTaskStartArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="IsDirectPresentation" inType="win:Boolean"/>
+      <data name="QPC" inType="win:UInt64"/>
+      <data name="PresentId" inType="win:UInt64"/>
+      <data name="DXGIResource" inType="win:Pointer"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_ResourcesRegisteredTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_ResourcesTextureAllocateTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_ResourcesDeferredTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_FakePresentSubmittedTaskArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="targetQPC" inType="win:Int64"/>
+      <data name="deltaToTarget" inType="win:Int64"/>
+      <data name="HWM" inType="win:Int64"/>
+      <data name="LWM" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationFrameRateDetectionUpdateArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Duration" inType="win:Int64"/>
+      <data name="Count" inType="win:Int32"/>
+      <data name="MinCount" inType="win:Int32"/>
+      <data name="Delta" inType="win:Int64"/>
+     </template>
+     <template tid="SVRGPUDeadlinePriorityArgs">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Changed" inType="win:Boolean"/>
+      <data name="Priority" inType="win:Int32"/>
+      <data name="Deadline_us" inType="win:Int64"/>
+      <data name="TimeToDeadline_us" inType="win:Int64"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="EDRStateChanged2TaskArgs">
+      <data name="Enabled" inType="win:Boolean"/>
+      <data name="IsAC" inType="win:Boolean"/>
+      <data name="IsHDRDisabledOnBattery" inType="win:Boolean"/>
+      <data name="IsLowerScreenBrightnessActive" inType="win:Boolean"/>
+      <data name="IsBrightnessPolicyActive" inType="win:Boolean"/>
+      <data name="ContentMaxLuminance" inType="win:UInt32"/>
+      <data name="DisplayMaxLuminance" inType="win:UInt32"/>
+      <data name="EnableHDRForPlayback" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationVideoFrameGlitchArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="FramesLate" inType="win:Int32"/>
+      <data name="qpcDeltaFromNow" inType="win:Int64"/>
+     </template>
+     <template tid="Normal(non_decode)SwapchainCreatedArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Swapchain" inType="win:Pointer"/>
+      <data name="Format" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="Backbuffers" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="ColorSpaceType" inType="win:UInt32"/>
+      <data name="SwapChainType" inType="win:UInt32"/>
+      <data name="SwapChainRotation" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationPresent_InitVSyncRefreshRateArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="FrameRate" inType="win:Float"/>
+      <data name="minFrameRate" inType="win:Float"/>
+      <data name="maxFrameRate" inType="win:Float"/>
+      <data name="Ratio" inType="win:Int32"/>
+      <data name="MaxRatio" inType="win:Int32"/>
+      <data name="Reason" inType="win:Int32"/>
+     </template>
+     <template tid="MediaEngineQuantizeFrameArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="sampleTime_us" inType="win:Int64"/>
+      <data name="OrigTargetQPC_us" inType="win:Int64"/>
+      <data name="TargetQPC_us" inType="win:Int64"/>
+      <data name="DeltaQPC_us" inType="win:Int64"/>
+      <data name="framePeriod_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_RealtimeShift_SampleArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPCtarget_us" inType="win:Int64"/>
+      <data name="Delta_us" inType="win:Int64"/>
+      <data name="AverageLateness_us" inType="win:Int64"/>
+      <data name="Correction_us" inType="win:Int64"/>
+     </template>
+     <template tid="UpdateDeadlineoperationArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="WorkQueueID" inType="win:Int32"/>
+      <data name="VideoBranchWorkQueueID" inType="win:Int32"/>
+      <data name="deadline" inType="win:Int64"/>
+      <data name="hnsDeltaFromNow" inType="win:Int64"/>
+     </template>
+     <template tid="UpdateGPUDeadlineoperationStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="DXObject" inType="win:Pointer"/>
+      <data name="DXType" inType="win:UInt32"/>
+      <data name="deadline" inType="win:Int64"/>
+      <data name="hnsDeltaFromNow" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_RealtimeShift_StatusArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPCtarget_us" inType="win:Int64"/>
+      <data name="Ahead_us" inType="win:Int64"/>
+      <data name="AverageAhead_us" inType="win:Int64"/>
+      <data name="AverageDeviation_us" inType="win:Int64"/>
+      <data name="SimpleAverageAhead_us" inType="win:Int64"/>
+      <data name="SimpleAverageDeviation_us" inType="win:Int64"/>
+      <data name="Diff_us" inType="win:Int64"/>
+      <data name="RenderLatency_us" inType="win:Int64"/>
+     </template>
+     <template tid="BatchingReasonArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Ok" inType="win:Boolean"/>
+      <data name="Bits" inType="win:Int32"/>
+      <data name="FullScreenPercent" inType="win:Int32"/>
+      <data name="FullScreenThreshold" inType="win:Int32"/>
+      <data name="Format" inType="win:UInt32"/>
+     </template>
+     <template tid="EDRStateChangedTaskArgs_V1">
+      <data name="Enabled" inType="win:Boolean"/>
+      <data name="IsAC" inType="win:Boolean"/>
+      <data name="IsHDRDisabledOnBattery" inType="win:Boolean"/>
+      <data name="IsLowerScreenBrightnessActive" inType="win:Boolean"/>
+      <data name="IsBrightnessPolicyActive" inType="win:Boolean"/>
+      <data name="ContentMaxLuminance" inType="win:UInt32"/>
+      <data name="DisplayMaxLuminance" inType="win:UInt32"/>
+     </template>
+     <template tid="MediaFoundationPresentedContentAsyncCallbackStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AsyncCallbackType" inType="win:Int32"/>
+      <data name="WorkQueueId" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="SerializerWorkQueueId" inType="win:Int32"/>
+      <data name="WorkQueueId" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresentedContentAsyncCallbackCreateSerializerStopArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="SerializerWorkQueueId" inType="win:Int32"/>
+     </template>
+     <template tid="GPUBoostInitTaskStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="DXDevice" inType="win:Pointer"/>
+     </template>
+     <template tid="UpdateGPUDeadlineoperationStopArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="DXObject" inType="win:Pointer"/>
+      <data name="DXType" inType="win:UInt32"/>
+      <data name="hrUpdate" inType="win:HexInt32"/>
+     </template>
+     <template tid="MediaFoundationPresentedContentRegisterWakeFenceStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="timeInQueue_hns" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationTriggeredGlitchTelemetryTrackerStartArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="MainEventType" inType="win:Int32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerDeferRealtimeDeadlineTaskArgs_V1">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Timestamp" inType="win:Int64"/>
+      <data name="AvgFrameDuration" inType="win:Int64"/>
+      <data name="displayFramePeriod" inType="win:Int64"/>
+      <data name="delta" inType="win:Int64"/>
+      <data name="timestamp_Ahead_us" inType="win:Int64"/>
+      <data name="timestamp_shift_Ahead_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaEngineSampleReceivedArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="TimeStamp" inType="win:Int64"/>
+      <data name="Duration" inType="win:Int64"/>
+      <data name="FirstFrameReady" inType="win:Int32"/>
+      <data name="Dropped" inType="win:Int32"/>
+      <data name="deltaFromLastSample_us" inType="win:Int64"/>
+      <data name="Now_us" inType="win:Int64"/>
+      <data name="deltaFromNow_us" inType="win:Int64"/>
+     </template>
+     <template tid="MediaFoundationPresent_ProcessFlipModeArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="SampleTime" inType="win:Int64"/>
+      <data name="LastQueuedStartQPC" inType="win:Int64"/>
+      <data name="TargetQPC" inType="win:Int64"/>
+      <data name="nowQPC" inType="win:Int64"/>
+      <data name="AheadQPC" inType="win:Int64"/>
+      <data name="RepeatCount_Rounded" inType="win:Int32"/>
+      <data name="RepeatCount_x1000" inType="win:Int32"/>
+      <data name="TimeUntilFrame_Orig" inType="win:Int64"/>
+      <data name="TimeUntilFrame_postRepeat" inType="win:Int64"/>
+      <data name="FramesBehindAdjustment" inType="win:Int32"/>
+      <data name="PresentCount" inType="win:UInt32"/>
+      <data name="FrameCount" inType="win:UInt32"/>
+      <data name="PrimaryFramePeriod" inType="win:Int64"/>
+      <data name="FramePeriod" inType="win:Int64"/>
+     </template>
+     <template tid="ProfileCheckArgs_V2">
+      <data name="Present" inType="win:Boolean"/>
+      <data name="DcValue" inType="win:UInt32"/>
+      <data name="Provisioned" inType="win:Boolean"/>
+      <data name="QoS" inType="win:Boolean"/>
+      <data name="Memory" inType="win:Int64"/>
+      <data name="DeadlineQoS_MinFreq_Set" inType="win:Boolean"/>
+      <data name="DeadlineQoS_MinFreq_Value" inType="win:UInt32"/>
+      <data name="DeadlineQoS_EPP_Set" inType="win:Boolean"/>
+      <data name="DeadlineQoS_EPP_Value" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerCompletedCompTaskStopArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="IterationCount" inType="win:Int32"/>
+      <data name="hrResult" inType="win:UInt32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerCompletedIFlipTaskArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="displayedQPC" inType="win:Int64"/>
+      <data name="frameDuration" inType="win:Int64"/>
+      <data name="minCompositionDelay_ns" inType="win:Int64"/>
+     </template>
+     <template tid="MFMediaEngine_DriverVersionTaskArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="VendorId" inType="win:HexInt32"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="Ver0" inType="win:UInt16"/>
+      <data name="Ver1" inType="win:UInt16"/>
+      <data name="Ver2" inType="win:UInt16"/>
+      <data name="Ver3" inType="win:UInt16"/>
+      <data name="HWS_SupportedLevel" inType="win:UInt32"/>
+      <data name="HWS_Enabled" inType="win:Boolean"/>
+      <data name="HWFQ_SupportedLevel" inType="win:UInt32"/>
+      <data name="HWFQ_Enabled" inType="win:Boolean"/>
+      <data name="Displayables_Supported" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContent_ConfigurationStateArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="ForceXVP" inType="win:Boolean"/>
+      <data name="SupportsDisplayables" inType="win:Boolean"/>
+      <data name="ForceDisabled" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerCompositionPresentStatTaskArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="CompositionFrameId" inType="win:Int64"/>
+      <data name="InstanceKind" inType="win:Int32"/>
+      <data name="EntryIndex" inType="win:Int32"/>
+      <data name="TotalEntries" inType="win:Int32"/>
+      <data name="WasFound" inType="win:Boolean"/>
+      <data name="LookUpOutputIdex" inType="win:Int32"/>
+      <data name="TotalOutputs" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationTriggeredGlitchTelemetryTrackerStopArgs_V2">
+      <data name="object" inType="win:Pointer"/>
+      <data name="MainEventType" inType="win:Int32"/>
+      <data name="Duration" inType="win:Int64"/>
+      <data name="GlitchCount" inType="win:Int32"/>
+      <data name="DisplayGlitchCount" inType="win:Int32"/>
+      <data name="SeenEventTypes" inType="win:Int32"/>
+     </template>
+     <template tid="MediaFoundationPresent_ProcessVSyncArgs_V3">
+      <data name="object" inType="win:Pointer"/>
+      <data name="QPC_Prev" inType="win:Int64"/>
+      <data name="Delta_us" inType="win:Int64"/>
+      <data name="Delta_Frames" inType="win:Int32"/>
+      <data name="DeltaPerFrame_us" inType="win:Int64"/>
+      <data name="RatioToPrimary" inType="win:Float"/>
+      <data name="InputFrameIndex" inType="win:Int32"/>
+      <data name="FrameIndex" inType="win:Int32"/>
+      <data name="PreviousFramerate" inType="win:Float"/>
+      <data name="Framerate" inType="win:Float"/>
+      <data name="MinFramerate" inType="win:Float"/>
+      <data name="MaxFramerate" inType="win:Float"/>
+      <data name="QPC_Actual" inType="win:Int64"/>
+      <data name="QPC_Smoothed" inType="win:Int64"/>
+      <data name="QPC_SmoothedNonQuant" inType="win:Int64"/>
+      <data name="Accepted" inType="win:Boolean"/>
+      <data name="IsIFlip" inType="win:Boolean"/>
+     </template>
+     <template tid="MediaFoundationPresent_QualityNotifyArgs_V3">
+      <data name="object" inType="win:Pointer"/>
+      <data name="NumGlitches" inType="win:UInt32"/>
+      <data name="NumDisplayGlitches" inType="win:UInt32"/>
+      <data name="SampleTime" inType="win:Int64"/>
+      <data name="ReceiveLateness" inType="win:Int64"/>
+      <data name="DisplayGlitchDelta" inType="win:Int64"/>
+      <data name="DidGlitch" inType="win:Boolean"/>
+      <data name="FlushLateSamplesOnDisplayChange" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContentPresentationHandler_PresentSubmittedTaskArgs_V3">
+      <data name="object" inType="win:Pointer"/>
+      <data name="presentId" inType="win:Int64"/>
+      <data name="sampleTime" inType="win:Int64"/>
+      <data name="targetTime" inType="win:Int64"/>
+      <data name="timeRemainingInQueue" inType="win:Int64"/>
+      <data name="submittedAhead_us" inType="win:Int64"/>
+      <data name="nowvsQPCus" inType="win:Int64"/>
+      <data name="QueuedFrames" inType="win:Int64"/>
+      <data name="IsDirectPresentation" inType="win:Boolean"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerGlitchDetectRenderMissingTaskArgs_V3">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="OutputIndex" inType="win:Int32"/>
+      <data name="totalOutputs" inType="win:Int32"/>
+      <data name="targetQPC" inType="win:Int64"/>
+      <data name="nowQPC" inType="win:Int64"/>
+      <data name="targetDeltaFromNowQPC" inType="win:Int64"/>
+      <data name="framePeriod_ns" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerDCompStatTaskArgs_V4">
+      <data name="object" inType="win:Pointer"/>
+      <data name="TargetIndex" inType="win:Int32"/>
+      <data name="TotalCount" inType="win:Int32"/>
+      <data name="displayAdapterLuid" inType="win:Int64"/>
+      <data name="renderAdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="VidPnTarget" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="CompositionframeId" inType="win:Int64"/>
+      <data name="CompletedTimeHNS" inType="win:Int64"/>
+      <data name="StartedTimeHNS" inType="win:Int64"/>
+      <data name="VBlankDuration_ps" inType="win:Int64"/>
+      <data name="framePeriod_ps" inType="win:Int64"/>
+      <data name="OutstandingPresents" inType="win:Int32"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerCompletedCompTaskStartArgs_V5">
+      <data name="object" inType="win:Pointer"/>
+      <data name="PendingCompositioncount" inType="win:Int32"/>
+      <data name="CompositionFrameId" inType="win:Int64"/>
+      <data name="targetQPC_hns" inType="win:Int64"/>
+      <data name="presentID" inType="win:Int64"/>
+      <data name="OutputCount" inType="win:Int32"/>
+      <data name="AdapterLuid0" inType="win:Int64"/>
+      <data name="VidPnSrc0" inType="win:Int32"/>
+      <data name="uniqueId0" inType="win:Int64"/>
+      <data name="AdapterLuid1" inType="win:Int64"/>
+      <data name="VidPnSrc1" inType="win:Int32"/>
+      <data name="uniqueId1" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerCompletedCompTaskArgs_V6">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="CompID" inType="win:Int64"/>
+      <data name="PresentID" inType="win:Int64"/>
+      <data name="OutputIndex" inType="win:Int32"/>
+      <data name="FragmentCount" inType="win:Int32"/>
+      <data name="ScanoutType" inType="win:Int32"/>
+      <data name="CompletedOutputs" inType="win:Int32"/>
+      <data name="NumOutputs" inType="win:Int32"/>
+      <data name="CompositionLatency" inType="win:Int32"/>
+      <data name="targetQPC" inType="win:Int64"/>
+      <data name="displayedQPC" inType="win:Int64"/>
+      <data name="deltaQPC_ns" inType="win:Int64"/>
+      <data name="dwmSmoothedTargetQPC" inType="win:Int64"/>
+      <data name="deltaDwmTargetQPC_ns" inType="win:Int64"/>
+      <data name="deltaSmoothedJitter_ns" inType="win:Int64"/>
+      <data name="minCompositionDelay_ns" inType="win:Int64"/>
+      <data name="framePeriod_ns" inType="win:Int64"/>
+     </template>
+     <template tid="PresentedContentPresentationHandlerProcessGlitchDetectTaskArgs_V7">
+      <data name="object" inType="win:Pointer"/>
+      <data name="AdapterLuid" inType="win:Int64"/>
+      <data name="VidPnSrc" inType="win:Int32"/>
+      <data name="uniqueId" inType="win:Int64"/>
+      <data name="PresentId" inType="win:Int64"/>
+      <data name="OutputIndex" inType="win:Int32"/>
+      <data name="totalOutputs" inType="win:Int32"/>
+      <data name="targetQPC" inType="win:Int64"/>
+      <data name="displayedQPC" inType="win:Int64"/>
+      <data name="nowQPC" inType="win:Int64"/>
+      <data name="targetDeltaFromNowQPC" inType="win:Int64"/>
+      <data name="deltaQPC_us" inType="win:Int64"/>
+      <data name="framePeriod_us" inType="win:Int64"/>
+      <data name="timingFramePeriod_us" inType="win:Int64"/>
+      <data name="lowerTolerance_us" inType="win:Int64"/>
+      <data name="upperTolerance_us" inType="win:Int64"/>
+      <data name="targetIndex" inType="win:Int64"/>
+      <data name="timingTargetIndex" inType="win:Int64"/>
+      <data name="wasIFlip" inType="win:Boolean"/>
+      <data name="SkipReconType" inType="win:Int32"/>
+      <data name="AdjustmentType" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Telemetry" value="Telemetry"/>
+    <string id="keyword_DiagTrack" value="DiagTrack"/>
+    <string id="task_MediaFoundationTransferFrame" value="MediaFoundationTransferFrame"/>
+    <string id="task_MediaFoundationTransferFrameRemote" value="MediaFoundationTransferFrameRemote"/>
+    <string id="task_MediaFoundationInitialize" value="MediaFoundationInitialize"/>
+    <string id="task_MediaFoundationLifetime" value="MediaFoundationLifetime"/>
+    <string id="task_MediaFoundationPlaybackRateChange" value="MediaFoundationPlaybackRateChange"/>
+    <string id="task_MediaFoundationPlay" value="MediaFoundationPlay"/>
+    <string id="task_MediaFoundationPause" value="MediaFoundationPause"/>
+    <string id="task_MediaFoundationSeek" value="MediaFoundationSeek"/>
+    <string id="task_MediaFoundationDroppedFrame" value="MediaFoundationDroppedFrame"/>
+    <string id="task_MediaFoundationPresentedFrame" value="MediaFoundationPresentedFrame"/>
+    <string id="task_MediaFoundationPresent_SubmittedFrame" value="MediaFoundationPresent_SubmittedFrame"/>
+    <string id="task_MediaFoundationPresent_QueuedFrame" value="MediaFoundationPresent_QueuedFrame"/>
+    <string id="task_MediaFoundationPresent_CompletedFrame" value="MediaFoundationPresent_CompletedFrame"/>
+    <string id="task_MediaFoundationVideoFrameGlitch" value="MediaFoundationVideoFrameGlitch"/>
+    <string id="task_MediaFoundationPresentAtSleep" value="MediaFoundationPresentAtSleep"/>
+    <string id="task_PerfTrack:MediaFoundationPlay" value="PerfTrack:MediaFoundationPlay"/>
+    <string id="task_PerfTrack:MediaFoundationPlayCancelled" value="PerfTrack:MediaFoundationPlayCancelled"/>
+    <string id="task_PerfTrack:FirstFrameAfterPlayPresented" value="PerfTrack:FirstFrameAfterPlayPresented"/>
+    <string id="task_MediaFoundationPresent_QueuedFrameStats" value="MediaFoundationPresent_QueuedFrameStats"/>
+    <string id="task_MediaFoundationSuspend" value="MediaFoundationSuspend"/>
+    <string id="task_MediaFoundationRestore" value="MediaFoundationRestore"/>
+    <string id="task_MediaFoundationNotVisible" value="MediaFoundationNotVisible"/>
+    <string id="task_MediaFoundationNotVisibleTimer" value="MediaFoundationNotVisibleTimer"/>
+    <string id="task_MediaFoundationVisible" value="MediaFoundationVisible"/>
+    <string id="task_PerfTrack:MediaFoundationVideoGlitch" value="PerfTrack:MediaFoundationVideoGlitch"/>
+    <string id="task_Saveimage" value="Saveimage"/>
+    <string id="task_SetSourceoperation" value="SetSourceoperation"/>
+    <string id="task_MediaFoundationVideoFrameEarly" value="MediaFoundationVideoFrameEarly"/>
+    <string id="task_MediaFoundationPresent_ProcessVSync" value="MediaFoundationPresent_ProcessVSync"/>
+    <string id="task_MediaFoundationPresent_GetCorrelatedTime" value="MediaFoundationPresent_GetCorrelatedTime"/>
+    <string id="task_MediaFoundationPresent_IgnoreVSync" value="MediaFoundationPresent_IgnoreVSync"/>
+    <string id="task_MediaFoundationRequestNetwork" value="MediaFoundationRequestNetwork"/>
+    <string id="task_Batchoperation" value="Batchoperation"/>
+    <string id="task_DecodeSwapchainCreated" value="DecodeSwapchainCreated"/>
+    <string id="task_YUVSwapchainConfigured" value="YUVSwapchainConfigured"/>
+    <string id="task_DecodeSwapchainDestroyed" value="DecodeSwapchainDestroyed"/>
+    <string id="task_DecodeSwapchainNotUsed" value="DecodeSwapchainNotUsed"/>
+    <string id="task_MediaFoundationPresent_QualityNotify" value="MediaFoundationPresent_QualityNotify"/>
+    <string id="task_ContentFramerateDetected" value="ContentFramerateDetected"/>
+    <string id="task_CustomRefreshRateRequested" value="CustomRefreshRateRequested"/>
+    <string id="task_CustomRefreshRate" value="CustomRefreshRate"/>
+    <string id="task_CustomRefreshRateStateChange" value="CustomRefreshRateStateChange"/>
+    <string id="task_MediaFoundationUpdateVideo" value="MediaFoundationUpdateVideo"/>
+    <string id="task_Normal(non_decode)SwapchainCreated" value="Normal(non_decode)SwapchainCreated"/>
+    <string id="task_MediaEngineSampleReceived" value="MediaEngineSampleReceived"/>
+    <string id="task_MediaEnginePurgedFrames" value="MediaEnginePurgedFrames"/>
+    <string id="task_MediaEngineYUVSwapchainQueue" value="MediaEngineYUVSwapchainQueue"/>
+    <string id="task_MediaEngineGPUSwapchainWait" value="MediaEngineGPUSwapchainWait"/>
+    <string id="task_MediaEngineGetPresentStats" value="MediaEngineGetPresentStats"/>
+    <string id="task_MediaEnginePruneHistory" value="MediaEnginePruneHistory"/>
+    <string id="task_MediaFoundationPresent_InitVSyncRefreshRate" value="MediaFoundationPresent_InitVSyncRefreshRate"/>
+    <string id="task_MediaFoundationPresent_ClockSmooth" value="MediaFoundationPresent_ClockSmooth"/>
+    <string id="task_UpdateLongRunningoperation" value="UpdateLongRunningoperation"/>
+    <string id="task_MediaFoundationPresent_MapSample" value="MediaFoundationPresent_MapSample"/>
+    <string id="task_MediaFoundationPresent_ProcessFlipMode" value="MediaFoundationPresent_ProcessFlipMode"/>
+    <string id="task_MediaFoundationPresent_RealtimeShift_Sample" value="MediaFoundationPresent_RealtimeShift_Sample"/>
+    <string id="task_MinLatencyDoneoperation" value="MinLatencyDoneoperation"/>
+    <string id="task_MediaFoundationMirrorVideo" value="MediaFoundationMirrorVideo"/>
+    <string id="task_MediaFoundationPresentAtProcessFrame" value="MediaFoundationPresentAtProcessFrame"/>
+    <string id="task_UpdateDeadlineoperation" value="UpdateDeadlineoperation"/>
+    <string id="task_MediaEngineGetEngineStatistics" value="MediaEngineGetEngineStatistics"/>
+    <string id="task_SVRRequestSample" value="SVRRequestSample"/>
+    <string id="task_SVRGPUBoost" value="SVRGPUBoost"/>
+    <string id="task_MediaFoundationPresent_HistoryRecord" value="MediaFoundationPresent_HistoryRecord"/>
+    <string id="task_MediaEngineClearHistory" value="MediaEngineClearHistory"/>
+    <string id="task_UpdateGPUDeadlineoperation" value="UpdateGPUDeadlineoperation"/>
+    <string id="task_MediaFoundationComputeRatioToPrimary" value="MediaFoundationComputeRatioToPrimary"/>
+    <string id="task_MediaFoundationUpdateRatioToPrimary" value="MediaFoundationUpdateRatioToPrimary"/>
+    <string id="task_MediaEngineYUVSwapchainQueueDrain" value="MediaEngineYUVSwapchainQueueDrain"/>
+    <string id="task_CustomRefreshRateCheckDriverSupport" value="CustomRefreshRateCheckDriverSupport"/>
+    <string id="task_CustomRefreshRateMatchFound" value="CustomRefreshRateMatchFound"/>
+    <string id="task_MediaFoundationPresent_RealtimeShift_Status" value="MediaFoundationPresent_RealtimeShift_Status"/>
+    <string id="task_MediaFoundationPresent_Flush" value="MediaFoundationPresent_Flush"/>
+    <string id="task_TransferDeadlineoperation" value="TransferDeadlineoperation"/>
+    <string id="task_SVRGPUDeadlinePriority" value="SVRGPUDeadlinePriority"/>
+    <string id="task_EMENeedKey" value="EMENeedKey"/>
+    <string id="task_EMEMediaKeys" value="EMEMediaKeys"/>
+    <string id="task_EMEMediaKeySession" value="EMEMediaKeySession"/>
+    <string id="task_EMEKeyMessage" value="EMEKeyMessage"/>
+    <string id="task_EMEKeysAttribute" value="EMEKeysAttribute"/>
+    <string id="task_ContentEnabler" value="ContentEnabler"/>
+    <string id="task_BatchingReason" value="BatchingReason"/>
+    <string id="task_MediaFoundationSubtitleQueued" value="MediaFoundationSubtitleQueued"/>
+    <string id="task_EngineEnded" value="EngineEnded"/>
+    <string id="task_MediaFoundationPresent_Delay" value="MediaFoundationPresent_Delay"/>
+    <string id="task_PresentTimer" value="PresentTimer"/>
+    <string id="task_PresentTimeCritical" value="PresentTimeCritical"/>
+    <string id="task_TimedTextDtvCCSampleDecodeTask" value="TimedTextDtvCCSampleDecodeTask"/>
+    <string id="task_TimedTextSendCueTask" value="TimedTextSendCueTask"/>
+    <string id="task_OPMOpen" value="OPMOpen"/>
+    <string id="task_OPMExecuteCmd" value="OPMExecuteCmd"/>
+    <string id="task_OPMExecuteQuery" value="OPMExecuteQuery"/>
+    <string id="task_OPMProcessCertificate" value="OPMProcessCertificate"/>
+    <string id="task_OPMGetPublicKey" value="OPMGetPublicKey"/>
+    <string id="task_Teardown" value="Teardown"/>
+    <string id="task_Resizedswapchain" value="Resizedswapchain"/>
+    <string id="task_EMENeedKey_122" value="EMENeedKey_122"/>
+    <string id="task_EMEKeyMessage2" value="EMEKeyMessage2"/>
+    <string id="task_EMEMediaKeySystemAccess" value="EMEMediaKeySystemAccess"/>
+    <string id="task_MediaEngineQuantizeFrame" value="MediaEngineQuantizeFrame"/>
+    <string id="task_PresentRestart" value="PresentRestart"/>
+    <string id="task_DisplayRotationTask" value="DisplayRotationTask"/>
+    <string id="task_DecodeSwapchainStateTask" value="DecodeSwapchainStateTask"/>
+    <string id="task_ConfigureSwapchainTask" value="ConfigureSwapchainTask"/>
+    <string id="task_MMCSSRequest" value="MMCSSRequest"/>
+    <string id="task_ScrubbingStateTask" value="ScrubbingStateTask"/>
+    <string id="task_DXPresent" value="DXPresent"/>
+    <string id="task_EnumMonitors" value="EnumMonitors"/>
+    <string id="task_HandleMonitorChange" value="HandleMonitorChange"/>
+    <string id="task_ProcessIdleTasks" value="ProcessIdleTasks"/>
+    <string id="task_DXWorkComplete" value="DXWorkComplete"/>
+    <string id="task_SphericalVideoChangedTask" value="SphericalVideoChangedTask"/>
+    <string id="task_SphericalVideoPropertiesChangedTask" value="SphericalVideoPropertiesChangedTask"/>
+    <string id="task_ProfileCheck" value="ProfileCheck"/>
+    <string id="task_SetHDRMetadataTask" value="SetHDRMetadataTask"/>
+    <string id="task_EDRStateChangedTask" value="EDRStateChangedTask"/>
+    <string id="task_WindowResizeOptimization" value="WindowResizeOptimization"/>
+    <string id="task_ProcessIdleEDRTasks" value="ProcessIdleEDRTasks"/>
+    <string id="task_ProcessPolicyEvent" value="ProcessPolicyEvent"/>
+    <string id="task_MediaFoundationUpdateHistory" value="MediaFoundationUpdateHistory"/>
+    <string id="task_MediaFoundationME_GetCurrentTime" value="MediaFoundationME_GetCurrentTime"/>
+    <string id="task_MediaEngineCallMarshaling" value="MediaEngineCallMarshaling"/>
+    <string id="task_LongCallDetected" value="LongCallDetected"/>
+    <string id="task_CallMarshalingSlotsFull" value="CallMarshalingSlotsFull"/>
+    <string id="task_FrameNotPresentedTask" value="FrameNotPresentedTask"/>
+    <string id="task_PresentedContentPresentationHandlerTask" value="PresentedContentPresentationHandlerTask"/>
+    <string id="task_PresentedContentPresentationHandler_ResourcesAvailableTask" value="PresentedContentPresentationHandler_ResourcesAvailableTask"/>
+    <string id="task_PresentedContentPresentationHandler_BindTask" value="PresentedContentPresentationHandler_BindTask"/>
+    <string id="task_PresentedContentPresentationHandler_PresentSubmittedTask" value="PresentedContentPresentationHandler_PresentSubmittedTask"/>
+    <string id="task_SplitMultiBufferTask" value="SplitMultiBufferTask"/>
+    <string id="task_RemoveEntireChunkTask" value="RemoveEntireChunkTask"/>
+    <string id="task_DisplayUniquenessChange" value="DisplayUniquenessChange"/>
+    <string id="task_PresentedContentPresentTask" value="PresentedContentPresentTask"/>
+    <string id="task_PresentFrameTask" value="PresentFrameTask"/>
+    <string id="task_PresentFrameConvertTask" value="PresentFrameConvertTask"/>
+    <string id="task_PresentedContentPresentationHandler_HWMTask" value="PresentedContentPresentationHandler_HWMTask"/>
+    <string id="task_PresentedContentPresentationHandler_RetiredResourceTask" value="PresentedContentPresentationHandler_RetiredResourceTask"/>
+    <string id="task_MediaFoundationTelemetryassert" value="MediaFoundationTelemetryassert"/>
+    <string id="task_MediaFoundationPresentedContentAsyncCallback" value="MediaFoundationPresentedContentAsyncCallback"/>
+    <string id="task_PresentedContentPresentationHandlerCompletedCompTask" value="PresentedContentPresentationHandlerCompletedCompTask"/>
+    <string id="task_PresentedContentPresentationHandlerCompletedIFlipTask" value="PresentedContentPresentationHandlerCompletedIFlipTask"/>
+    <string id="task_PresentedContentPresentationHandlerGlitchDetectedTask" value="PresentedContentPresentationHandlerGlitchDetectedTask"/>
+    <string id="task_PresentedContentPresentationHandlerDCompStatTask" value="PresentedContentPresentationHandlerDCompStatTask"/>
+    <string id="task_PresentedContentPresentationHandlerGlitchDetectRenderMissingTask" value="PresentedContentPresentationHandlerGlitchDetectRenderMissingTask"/>
+    <string id="task_PresentedContent_DrainAsyncPresentsTask" value="PresentedContent_DrainAsyncPresentsTask"/>
+    <string id="task_MediaFoundationPresentedContentD3DFence" value="MediaFoundationPresentedContentD3DFence"/>
+    <string id="task_PresentedContentPresentationHandler_InitializeQueueingModeTask" value="PresentedContentPresentationHandler_InitializeQueueingModeTask"/>
+    <string id="task_PresentedContent_FlushTask" value="PresentedContent_FlushTask"/>
+    <string id="task_PresentedContent_EnqueuedPendingResourceCountTask" value="PresentedContent_EnqueuedPendingResourceCountTask"/>
+    <string id="task_MediaFoundationPresentedContentAsyncCallbackCreateSerializer" value="MediaFoundationPresentedContentAsyncCallbackCreateSerializer"/>
+    <string id="task_PresentedContentPresentationHandler_ResourcesAllocateTask" value="PresentedContentPresentationHandler_ResourcesAllocateTask"/>
+    <string id="task_PresentedContentPresentationHandler_QueuedResourceTask" value="PresentedContentPresentationHandler_QueuedResourceTask"/>
+    <string id="task_MFMediaEngine_DriverVersionTask" value="MFMediaEngine_DriverVersionTask"/>
+    <string id="task_PresentedContent_RetryPresent" value="PresentedContent_RetryPresent"/>
+    <string id="task_PresentedContent_ConfigurationState" value="PresentedContent_ConfigurationState"/>
+    <string id="task_PresentedContentPresentationHandlerCompositionPresentStatTask" value="PresentedContentPresentationHandlerCompositionPresentStatTask"/>
+    <string id="task_PresentedContentPresentationHandlerProcessGlitchDetectTask" value="PresentedContentPresentationHandlerProcessGlitchDetectTask"/>
+    <string id="task_PresentedContentPresentationMangagerLostTask" value="PresentedContentPresentationMangagerLostTask"/>
+    <string id="task_PresentedContentPresentationHandlerQueueSkippedPresentTask" value="PresentedContentPresentationHandlerQueueSkippedPresentTask"/>
+    <string id="task_PresentedContentPresentationHandlerPatchSkippedPresentTask" value="PresentedContentPresentationHandlerPatchSkippedPresentTask"/>
+    <string id="task_GPUBoostInitTask" value="GPUBoostInitTask"/>
+    <string id="task_PresentedContent_EnableVSyncsTask" value="PresentedContent_EnableVSyncsTask"/>
+    <string id="task_MediaFoundationPresentedContentRegisterWakeFence" value="MediaFoundationPresentedContentRegisterWakeFence"/>
+    <string id="task_MediaFoundationTriggeredGlitchTelemetryTracker" value="MediaFoundationTriggeredGlitchTelemetryTracker"/>
+    <string id="task_MediaFoundationTrackLeakedStats" value="MediaFoundationTrackLeakedStats"/>
+    <string id="task_IsEdrEnabledCheck" value="IsEdrEnabledCheck"/>
+    <string id="task_CloneDXDevice" value="CloneDXDevice"/>
+    <string id="task_HandleClockStart" value="HandleClockStart"/>
+    <string id="task_HandlePreroll" value="HandlePreroll"/>
+    <string id="task_MediaFoundationPlaybackStallDetectedTask" value="MediaFoundationPlaybackStallDetectedTask"/>
+    <string id="task_MediaFoundationPlaybackStallDetectionTask" value="MediaFoundationPlaybackStallDetectionTask"/>
+    <string id="task_ProcessSampleLockTask" value="ProcessSampleLockTask"/>
+    <string id="task_ProcessSampleTask" value="ProcessSampleTask"/>
+    <string id="task_AsyncQueuePresentTask" value="AsyncQueuePresentTask"/>
+    <string id="task_PresentedContentPresentationHandler_FakePresentSubmittedTask" value="PresentedContentPresentationHandler_FakePresentSubmittedTask"/>
+    <string id="task_MediaFoundationFrameRateDetection" value="MediaFoundationFrameRateDetection"/>
+    <string id="task_PresentedContentPresentationHandlerMonitorEnumTask" value="PresentedContentPresentationHandlerMonitorEnumTask"/>
+    <string id="task_MediaFoundationFrameRateDetectionUpdate" value="MediaFoundationFrameRateDetectionUpdate"/>
+    <string id="task_MediaFoundationFrameRateDetectionReset" value="MediaFoundationFrameRateDetectionReset"/>
+    <string id="task_PresentedContentPresentationHandlerDeferRealtimeDeadlineTask" value="PresentedContentPresentationHandlerDeferRealtimeDeadlineTask"/>
+    <string id="task_PresentedContentPresentationHandlerProcessGlitchInformationTask" value="PresentedContentPresentationHandlerProcessGlitchInformationTask"/>
+    <string id="task_OnFrameQueued" value="OnFrameQueued"/>
+    <string id="task_PresentedContentPresentationHandler_ResourcesRegisteredTask" value="PresentedContentPresentationHandler_ResourcesRegisteredTask"/>
+    <string id="task_PresentedContentPresentationHandler_ResourcesDeferredTask" value="PresentedContentPresentationHandler_ResourcesDeferredTask"/>
+    <string id="task_PresentedContentPresentationHandler_ResourcesTextureAllocateTask" value="PresentedContentPresentationHandler_ResourcesTextureAllocateTask"/>
+    <string id="task_MediaFoundationTriggeredPendingPresentStatLargeSizeTracker" value="MediaFoundationTriggeredPendingPresentStatLargeSizeTracker"/>
+    <string id="task_EDRStateChanged2Task" value="EDRStateChanged2Task"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

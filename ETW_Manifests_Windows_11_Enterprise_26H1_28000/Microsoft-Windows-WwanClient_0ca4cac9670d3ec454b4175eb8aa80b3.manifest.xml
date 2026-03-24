@@ -1,0 +1,687 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WwanClient_0ca4cac9670d3ec454b4175eb8aa80b3" guid="{0ca4cac9-670d-3ec4-54b4-175eb8aa80b3}" resourceFileName="Microsoft-Windows-WwanClient_0ca4cac9670d3ec454b4175eb8aa80b3" messageFileName="Microsoft-Windows-WwanClient_0ca4cac9670d3ec454b4175eb8aa80b3" symbol="MicrosoftWindowsWwanClient_0ca4cac9670d3ec454b4175eb8aa80b3" source="Xml" >
+    <keywords>
+     <keyword name="WWAN_TRACE_FLAG_CLIENT" message="$(string.keyword_WWAN_TRACE_FLAG_CLIENT)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="Opcode">
+      <map value="0x0" message="$(string.map_OpcodeWwanIntfOpcodePin)"/>
+      <map value="0x1" message="$(string.map_OpcodeWwanIntfOpcodeRadioState)"/>
+      <map value="0x2" message="$(string.map_OpcodeWwanIntfOpcodePreferredProviders)"/>
+      <map value="0x3" message="$(string.map_OpcodeWwanIntfOpcodeCurrentConnection)"/>
+      <map value="0x4" message="$(string.map_OpcodeWwanIntfOpcodeProvisionedContexts)"/>
+      <map value="0x5" message="$(string.map_OpcodeWwanIntfOpcodeActivateUserAccount)"/>
+      <map value="0x6" message="$(string.map_OpcodeWwanIntfOpcodeVendorSpecific)"/>
+      <map value="0x7" message="$(string.map_OpcodeWwanIntfOpcodeInterfaceObject)"/>
+      <map value="0x8" message="$(string.map_OpcodeWwanIntfOpcodeConnectionObject)"/>
+      <map value="0x9" message="$(string.map_OpcodeWwanIntfOpcodeAcState)"/>
+      <map value="0xa" message="$(string.map_OpcodeWwanIntfOpcodeClearConnectionStates)"/>
+      <map value="0xb" message="$(string.map_OpcodeWwanIntfOpcodeStoredRadioState)"/>
+      <map value="0xc" message="$(string.map_OpcodeWwanIntfOpcodeGetRadioInfo)"/>
+      <map value="0xd" message="$(string.map_OpcodeWwanIntfOpcodeHomeProvider)"/>
+      <map value="0xe" message="$(string.map_OpcodeWwanIntfOpcodePreferredMultiCarrierProviders)"/>
+      <map value="0xf" message="$(string.map_OpcodeWwanIntfOpcodeDataEnablement)"/>
+      <map value="0x10" message="$(string.map_OpcodeWwanIntfOpcodeDataRoamControl)"/>
+      <map value="0x11" message="$(string.map_OpcodeWWanIntfOpcodeGetProfileExists)"/>
+      <map value="0x12" message="$(string.map_OpcodeWWanIntfOpcodeGetProfileConnectMode)"/>
+      <map value="0x13" message="$(string.map_OpcodeWWanIntfOpcodeVoiceDomain)"/>
+      <map value="0x14" message="$(string.map_OpcodeWwanIntfOpcodeImsCapabilities)"/>
+      <map value="0x15" message="$(string.map_OpcodeWWanIntfOpcodeModemDataAffinity)"/>
+      <map value="0x16" message="$(string.map_OpcodeWWanIntfOpcodeModemReset)"/>
+      <map value="0x17" message="$(string.map_OpcodeWWanIntfOpcodeUiccBindings)"/>
+      <map value="0x18" message="$(string.map_OpcodeWWanIntfOpcodeUiccCardInfo)"/>
+      <map value="0x19" message="$(string.map_OpcodeWWanIntfOpcodeUiccRead)"/>
+      <map value="0x1a" message="$(string.map_OpcodeWWanIntfOpcodeUiccRecordStatus)"/>
+      <map value="0x1b" message="$(string.map_OpcodeWWanIntfOpcodeSupportedOpcodes)"/>
+      <map value="0x1c" message="$(string.map_OpcodeWwanIntfOpCodeMultiSimInternetDataUsage)"/>
+      <map value="0x1d" message="$(string.map_OpcodeWwanIntfOpcodeUpdateIWlanPreference)"/>
+      <map value="0x1e" message="$(string.map_OpcodeWwanIntfOpcodeTransientDataEnablement)"/>
+      <map value="0x1f" message="$(string.map_OpcodeWwanIntfOpcodeNetworkLTEAttachAPNInfo)"/>
+      <map value="0x20" message="$(string.map_OpcodeWWanIntfOpcodePsMediaPref)"/>
+      <map value="0x21" message="$(string.map_OpcodeWwanIntfOpcodeHighestConnCategory)"/>
+      <map value="0x22" message="$(string.map_OpcodeWwanIntfOpcodeEnterpriseAPNParams)"/>
+      <map value="0x23" message="$(string.map_OpcodeWWanIntfOpcodeAtrInfo)"/>
+      <map value="0x24" message="$(string.map_OpcodeWWanIntfOpcodeSubscriberInfo)"/>
+      <map value="0x25" message="$(string.map_OpcodeWWanIntfOpcodeUiccCardAdditionalInfo)"/>
+      <map value="0x26" message="$(string.map_OpcodeWWanIntfOpcodeOperatorProfileSelection)"/>
+      <map value="0x27" message="$(string.map_OpcodeWWanIntfOpcodeDisallowAutoConnect)"/>
+      <map value="0x28" message="$(string.map_OpcodeWWanIntfOpcodeManualConnectSessionState)"/>
+      <map value="0x29" message="$(string.map_OpcodeWWanIntfOpcodeProvisioningState)"/>
+      <map value="0x2a" message="$(string.map_OpcodeWwanIntfOpcodeSarConfig)"/>
+      <map value="0x2b" message="$(string.map_OpcodeWwanIntfOpcodeSarTransmissionStatus)"/>
+      <map value="0x2c" message="$(string.map_OpcodeWwanIntfOpcodeOperatorServiceEnablement)"/>
+      <map value="0x2d" message="$(string.map_OpcodeWwanIntfOpcodeReconnectHint)"/>
+      <map value="0x2e" message="$(string.map_OpcodeWwanIntfOpcodeMultiSIMInfo)"/>
+      <map value="0x2f" message="$(string.map_OpcodeWwanIntfOpcodeMultiSIMSlotMaping)"/>
+      <map value="0x30" message="$(string.map_OpcodeWwanIntfOpcodeModemConfigMode)"/>
+      <map value="0x31" message="$(string.map_OpcodeWWanIntfOpcodeSeqNumLastCellStateChgWnf)"/>
+      <map value="0x32" message="$(string.map_OpcodeWwanIntfOpcodeCellInfo)"/>
+      <map value="0x33" message="$(string.map_OpcodeWwanIntfOpcodePcoStatus)"/>
+      <map value="0x34" message="$(string.map_OpcodeWWanIntfOpcodeUiccReset)"/>
+      <map value="0x35" message="$(string.map_OpcodeWwanIntfOpcodeServiceOptionalCapabilities)"/>
+      <map value="0x36" message="$(string.map_OpcodeWwanIntOpcodeNetworkIsolation)"/>
+      <map value="0x37" message="$(string.map_OpcodeWwanIntfOpcodeProvisionedContextsV2)"/>
+      <map value="0x38" message="$(string.map_OpcodeWwanIntfOpcodeCOSAAppConfigured)"/>
+      <map value="0x39" message="$(string.map_OpcodeWwanIntfOpcodeRegisterPSRegStatus)"/>
+      <map value="0x3a" message="$(string.map_OpcodeWwanIntfOpcodeTestMode)"/>
+      <map value="0x3b" message="$(string.map_OpcodeWwanIntfOpcodeDSS)"/>
+      <map value="0x3c" message="$(string.map_OpcodeWwanIntfOpcodeDataServiceState)"/>
+      <map value="0x3d" message="$(string.map_OpcodeWwanIntfOpcodeNssaiLists)"/>
+      <map value="0x3e" message="$(string.map_OpcodeWwanIntfOpcodeDeviceCaps)"/>
+      <map value="0x3f" message="$(string.map_OpcodeWwanIntfOpcodeConnectionDetails)"/>
+      <map value="0x40" message="$(string.map_OpcodeWwanIntfOpcodeRestrictedStandby)"/>
+      <map value="0x41" message="$(string.map_OpcodeWwanIntfOpcodeLpeState)"/>
+      <map value="0x42" message="$(string.map_OpcodeWWanIntfOpcodeUiccCardEFInfo)"/>
+      <map value="0x43" message="$(string.map_OpcodeWWanIntfOpcodeMax)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Critical" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="11" symbol="task_011" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_011Args"/>
+     <event value="12" symbol="task_012" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_012Args"/>
+     <event value="13" symbol="task_013" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_013Args"/>
+     <event value="14" symbol="task_014" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_015Args"/>
+     <event value="16" symbol="task_016" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="21" symbol="task_021" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="22" symbol="task_022" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_015Args"/>
+     <event value="23" symbol="task_023" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_023Args"/>
+     <event value="24" symbol="task_024" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="25" symbol="task_025" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_015Args"/>
+     <event value="26" symbol="task_026" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="27" symbol="task_027" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_027Args"/>
+     <event value="28" symbol="task_028" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="29" symbol="task_029" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_015Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="31" symbol="task_031" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="32" symbol="task_032" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="33" symbol="task_033" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="34" symbol="task_034" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="35" symbol="task_035" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="36" symbol="task_036" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="37" symbol="task_037" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="38" symbol="task_038" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="39" symbol="task_039" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_043Args"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_045Args"/>
+     <event value="46" symbol="task_046" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="47" symbol="task_047" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="48" symbol="task_048" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_048Args"/>
+     <event value="49" symbol="task_049" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_050Args"/>
+     <event value="51" symbol="task_051" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="52" symbol="task_052" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="53" symbol="task_053" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_053Args"/>
+     <event value="54" symbol="task_054" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="55" symbol="task_055" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_055Args"/>
+     <event value="56" symbol="task_056" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="57" symbol="task_057" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="58" symbol="task_058" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_058Args"/>
+     <event value="59" symbol="task_059" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="60" symbol="task_060" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_060Args"/>
+     <event value="61" symbol="task_061" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="62" symbol="task_062" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="63" symbol="task_063" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_063Args"/>
+     <event value="64" symbol="task_064" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="65" symbol="task_065" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="66" symbol="task_066" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="67" symbol="task_067" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="68" symbol="task_068" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_068Args"/>
+     <event value="69" symbol="task_069" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="70" symbol="task_070" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_070Args"/>
+     <event value="71" symbol="task_071" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="72" symbol="task_072" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_072Args"/>
+     <event value="73" symbol="task_073" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="74" symbol="task_074" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_074Args"/>
+     <event value="75" symbol="task_075" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="76" symbol="task_076" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_076Args"/>
+     <event value="77" symbol="task_077" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="78" symbol="task_078" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="79" symbol="task_079" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_079Args"/>
+     <event value="80" symbol="task_080" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="81" symbol="task_081" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_081Args"/>
+     <event value="82" symbol="task_082" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="83" symbol="task_083" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="84" symbol="task_084" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_084Args"/>
+     <event value="85" symbol="task_085" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="86" symbol="task_086" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_086Args"/>
+     <event value="87" symbol="task_087" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="88" symbol="task_088" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="89" symbol="task_089" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="90" symbol="task_090" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="91" symbol="task_091" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="92" symbol="task_092" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="93" symbol="task_093" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="94" symbol="task_094" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="95" symbol="task_095" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="96" symbol="task_096" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="97" symbol="task_097" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="98" symbol="task_098" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="99" symbol="task_099" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0106Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="108" symbol="task_0108" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0106Args"/>
+     <event value="112" symbol="task_0112" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="113" symbol="task_0113" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="114" symbol="task_0114" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="115" symbol="task_0115" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="116" symbol="task_0116" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="117" symbol="task_0117" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="118" symbol="task_0118" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0118Args"/>
+     <event value="119" symbol="task_0119" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="121" symbol="task_0121" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0121Args"/>
+     <event value="122" symbol="task_0122" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="123" symbol="task_0123" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0118Args"/>
+     <event value="124" symbol="task_0124" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="125" symbol="task_0125" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="126" symbol="task_0126" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0126Args"/>
+     <event value="127" symbol="task_0127" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="128" symbol="task_0128" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="129" symbol="task_0129" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="131" symbol="task_0131" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0131Args"/>
+     <event value="132" symbol="task_0132" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="133" symbol="task_0133" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0133Args"/>
+     <event value="134" symbol="task_0134" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="135" symbol="task_0135" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="136" symbol="task_0136" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0131Args"/>
+     <event value="137" symbol="task_0137" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="138" symbol="task_0138" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0133Args"/>
+     <event value="139" symbol="task_0139" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT"/>
+     <event value="140" symbol="task_0140" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0140Args"/>
+     <event value="141" symbol="task_0141" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="142" symbol="task_0142" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0142Args"/>
+     <event value="143" symbol="task_0143" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="144" symbol="task_0144" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="145" symbol="task_0145" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="146" symbol="task_0146" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="147" symbol="task_0147" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="148" symbol="task_0148" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="149" symbol="task_0149" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="151" symbol="task_0151" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="152" symbol="task_0152" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="153" symbol="task_0153" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="154" symbol="task_0154" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="155" symbol="task_0155" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0155Args"/>
+     <event value="156" symbol="task_0156" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="157" symbol="task_0157" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0157Args"/>
+     <event value="158" symbol="task_0158" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT"/>
+     <event value="159" symbol="task_0159" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="160" symbol="task_0160" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="161" symbol="task_0161" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0Args"/>
+     <event value="162" symbol="task_0162" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_014Args"/>
+     <event value="163" symbol="task_0163" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="164" symbol="task_0164" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="165" symbol="task_0165" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="166" symbol="task_0166" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="167" symbol="task_0167" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="168" symbol="task_0168" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="169" symbol="task_0169" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="170" symbol="task_0170" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="171" symbol="task_0171" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="172" symbol="task_0172" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="173" symbol="task_0173" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="174" symbol="task_0174" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="175" symbol="task_0175" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="176" symbol="task_0176" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="177" symbol="task_0177" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="178" symbol="task_0178" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="179" symbol="task_0179" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="181" symbol="task_0181" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="182" symbol="task_0182" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="183" symbol="task_0183" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="184" symbol="task_0184" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="185" symbol="task_0185" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="186" symbol="task_0186" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="187" symbol="task_0187" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="188" symbol="task_0188" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="189" symbol="task_0189" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="190" symbol="task_0190" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="191" symbol="task_0191" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="192" symbol="task_0192" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="193" symbol="task_0193" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="194" symbol="task_0194" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="195" symbol="task_0195" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="196" symbol="task_0196" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="197" symbol="task_0197" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="198" symbol="task_0198" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0106Args"/>
+     <event value="199" symbol="task_0199" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Verbose" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0106Args"/>
+     <event value="207" symbol="task_0207" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="208" symbol="task_0208" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="209" symbol="task_0209" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_033Args"/>
+     <event value="211" symbol="task_0211" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0116Args"/>
+     <event value="212" symbol="task_0212" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_037Args"/>
+     <event value="213" symbol="task_0213" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_065Args"/>
+     <event value="214" symbol="task_0214" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="215" symbol="task_0215" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="216" symbol="task_0216" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0133Args"/>
+     <event value="217" symbol="task_0217" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="218" symbol="task_0218" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0218Args"/>
+     <event value="219" symbol="task_0219" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="220" symbol="task_0220" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="221" symbol="task_0221" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0221Args"/>
+     <event value="222" symbol="task_0222" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="223" symbol="task_0223" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0223Args"/>
+     <event value="224" symbol="task_0224" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="225" symbol="task_0225" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="226" symbol="task_0226" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0226Args"/>
+     <event value="227" symbol="task_0227" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="228" symbol="task_0228" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0228Args"/>
+     <event value="229" symbol="task_0229" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="231" symbol="task_0231" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="232" symbol="task_0232" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="233" symbol="task_0233" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="234" symbol="task_0234" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="235" symbol="task_0235" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="236" symbol="task_0236" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="237" symbol="task_0237" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="238" symbol="task_0238" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="239" symbol="task_0239" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="240" symbol="task_0240" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="241" symbol="task_0241" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="242" symbol="task_0242" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="243" symbol="task_0243" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="244" symbol="task_0244" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="245" symbol="task_0245" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="246" symbol="task_0246" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="247" symbol="task_0247" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="248" symbol="task_0248" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="249" symbol="task_0249" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="250" symbol="task_0250" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="251" symbol="task_0251" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="252" symbol="task_0252" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="253" symbol="task_0253" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="254" symbol="task_0254" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="255" symbol="task_0255" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="256" symbol="task_0256" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="257" symbol="task_0257" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="258" symbol="task_0258" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="259" symbol="task_0259" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="260" symbol="task_0260" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="261" symbol="task_0261" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="262" symbol="task_0262" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="263" symbol="task_0263" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="264" symbol="task_0264" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0264Args"/>
+     <event value="265" symbol="task_0265" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="266" symbol="task_0266" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0264Args"/>
+     <event value="267" symbol="task_0267" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="268" symbol="task_0268" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="269" symbol="task_0269" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0269Args"/>
+     <event value="270" symbol="task_0270" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="271" symbol="task_0271" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0269Args"/>
+     <event value="272" symbol="task_0272" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="273" symbol="task_0273" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_056Args"/>
+     <event value="274" symbol="task_0274" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0264Args"/>
+     <event value="275" symbol="task_0275" version="0" task="task_0" level="win:Error" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_059Args"/>
+     <event value="276" symbol="task_0276" version="0" task="task_0" level="win:Informational" keywords="WWAN_TRACE_FLAG_CLIENT" template="task_0276Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="A10_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_011Args">
+      <data name="A10_pAsyncState" inType="win:Pointer"/>
+     </template>
+     <template tid="task_012Args">
+      <data name="A10_ctx" inType="win:Pointer"/>
+      <data name="A11_pAsyncState" inType="win:Pointer"/>
+     </template>
+     <template tid="task_013Args">
+      <data name="A10_ctxhandle" inType="win:Pointer"/>
+      <data name="A11_evt" inType="win:UInt32"/>
+      <data name="A12_errCode" inType="win:UInt32"/>
+      <data name="A13_retCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_014Args">
+      <data name="A10_ctxhandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_015Args">
+      <data name="A10_ctxhandle" inType="win:Pointer"/>
+      <data name="A11_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_023Args">
+      <data name="A10_ctxhandle" inType="win:Pointer"/>
+      <data name="A11_notificationSourceBits" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_027Args">
+      <data name="A10_ctxhandle" inType="win:Pointer"/>
+      <data name="A11__serviceStatuserrCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_033Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_037Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_043Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_dwFlags" inType="win:Int32"/>
+     </template>
+     <template tid="task_045Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_ppInterfaceListdwNumberOfItems" inType="win:Int32"/>
+     </template>
+     <template tid="task_048Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32" map="Opcode"/>
+     </template>
+     <template tid="task_050Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32"/>
+      <data name="A13_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_053Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_055Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32"/>
+      <data name="A13_opCode" inType="win:Int32"/>
+      <data name="A14_errCode" inType="win:UInt32"/>
+      <data name="A15_errCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_056Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_058Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_059Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_060Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:UInt32"/>
+      <data name="A13_opCode" inType="win:Int32"/>
+      <data name="A14_errCode" inType="win:UInt32"/>
+      <data name="A15_errCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_063Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_dwScanType" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_065Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_068Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_registerMode" inType="win:Int32"/>
+      <data name="A13_strProviderId" inType="win:UnicodeString"/>
+      <data name="A14_wwanDataClass" inType="win:Int32"/>
+     </template>
+     <template tid="task_070Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_registerMode" inType="win:Int32"/>
+      <data name="A13_strProviderId" inType="win:UnicodeString"/>
+      <data name="A14_wwanDataClass" inType="win:Int32"/>
+      <data name="A15_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_072Args">
+      <data name="A10_pConnectReservedType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_074Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_connMode" inType="win:Int32"/>
+      <data name="A13_connectionFlags" inType="win:Int32"/>
+      <data name="A14_str" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_076Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_pulConnectionId" inType="win:Int32"/>
+     </template>
+     <template tid="task_079Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pPhysicalInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ulConnectionFlags" inType="win:Int32"/>
+      <data name="A13_strProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_081Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pPhysicalInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_pulConnectionId" inType="win:Int32"/>
+      <data name="A13_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_084Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ctxtId" inType="win:Int32"/>
+     </template>
+     <template tid="task_086Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ctxtId" inType="win:Int32"/>
+      <data name="A13_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_flags" inType="win:Int32"/>
+      <data name="A13_overwrite" inType="win:Int32"/>
+      <data name="A14_strProfileXml" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_strProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0116Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_0118Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ppProfileListdwNumberOfItems" inType="win:Int32"/>
+     </template>
+     <template tid="task_0121Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_pPurposeGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_0126Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_ProfileName" inType="win:UnicodeString"/>
+      <data name="A12_passwordProtection" inType="win:Int32"/>
+     </template>
+     <template tid="task_0131Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_strProfileName" inType="win:UnicodeString"/>
+      <data name="A13_dwFlags" inType="win:Int32"/>
+      <data name="A14_strMetaDataName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0133Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_0140Args">
+      <data name="A10_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A11_strProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0142Args">
+      <data name="A10_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A11_pdwProfileIndex" inType="win:Int32"/>
+      <data name="A12_pdwRoamingProfileIndexpdwRoamingProfileIndex0" inType="win:Int32"/>
+     </template>
+     <template tid="task_0155Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pModemId" inType="win:GUID"/>
+      <data name="A12_opCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0157Args">
+      <data name="A10_handle" inType="win:Pointer"/>
+      <data name="A11_pModemId" inType="win:GUID"/>
+      <data name="A12_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0218Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ppDMConfigProfileListdwNumberOfItems" inType="win:Int32"/>
+     </template>
+     <template tid="task_0221Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_strProfileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0223Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0226Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_strDMConfigProfileXml" inType="win:UnicodeString"/>
+      <data name="A13_fOverwrite" inType="win:Int32"/>
+     </template>
+     <template tid="task_0228Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_pReasonCode" inType="win:Int32"/>
+      <data name="A13_errCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0264Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pParentInterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_0269Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pChildInterfaceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="task_0276Args">
+      <data name="A10_hClientHandle" inType="win:Pointer"/>
+      <data name="A11_pParentInterfaceGuid" inType="win:GUID"/>
+      <data name="A12_ppTrafficDescriptorListdwNumberOfItems" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_WWAN_TRACE_FLAG_CLIENT" value="WWAN_TRACE_FLAG_CLIENT"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_OpcodeWwanIntfOpcodePin" value="WwanIntfOpcodePin"/>
+    <string id="map_OpcodeWwanIntfOpcodeRadioState" value="WwanIntfOpcodeRadioState"/>
+    <string id="map_OpcodeWwanIntfOpcodePreferredProviders" value="WwanIntfOpcodePreferredProviders"/>
+    <string id="map_OpcodeWwanIntfOpcodeCurrentConnection" value="WwanIntfOpcodeCurrentConnection"/>
+    <string id="map_OpcodeWwanIntfOpcodeProvisionedContexts" value="WwanIntfOpcodeProvisionedContexts"/>
+    <string id="map_OpcodeWwanIntfOpcodeActivateUserAccount" value="WwanIntfOpcodeActivateUserAccount"/>
+    <string id="map_OpcodeWwanIntfOpcodeVendorSpecific" value="WwanIntfOpcodeVendorSpecific"/>
+    <string id="map_OpcodeWwanIntfOpcodeInterfaceObject" value="WwanIntfOpcodeInterfaceObject"/>
+    <string id="map_OpcodeWwanIntfOpcodeConnectionObject" value="WwanIntfOpcodeConnectionObject"/>
+    <string id="map_OpcodeWwanIntfOpcodeAcState" value="WwanIntfOpcodeAcState"/>
+    <string id="map_OpcodeWwanIntfOpcodeClearConnectionStates" value="WwanIntfOpcodeClearConnectionStates"/>
+    <string id="map_OpcodeWwanIntfOpcodeStoredRadioState" value="WwanIntfOpcodeStoredRadioState"/>
+    <string id="map_OpcodeWwanIntfOpcodeGetRadioInfo" value="WwanIntfOpcodeGetRadioInfo"/>
+    <string id="map_OpcodeWwanIntfOpcodeHomeProvider" value="WwanIntfOpcodeHomeProvider"/>
+    <string id="map_OpcodeWwanIntfOpcodePreferredMultiCarrierProviders" value="WwanIntfOpcodePreferredMultiCarrierProviders"/>
+    <string id="map_OpcodeWwanIntfOpcodeDataEnablement" value="WwanIntfOpcodeDataEnablement"/>
+    <string id="map_OpcodeWwanIntfOpcodeDataRoamControl" value="WwanIntfOpcodeDataRoamControl"/>
+    <string id="map_OpcodeWWanIntfOpcodeGetProfileExists" value="WWanIntfOpcodeGetProfileExists"/>
+    <string id="map_OpcodeWWanIntfOpcodeGetProfileConnectMode" value="WWanIntfOpcodeGetProfileConnectMode"/>
+    <string id="map_OpcodeWWanIntfOpcodeVoiceDomain" value="WWanIntfOpcodeVoiceDomain"/>
+    <string id="map_OpcodeWwanIntfOpcodeImsCapabilities" value="WwanIntfOpcodeImsCapabilities"/>
+    <string id="map_OpcodeWWanIntfOpcodeModemDataAffinity" value="WWanIntfOpcodeModemDataAffinity"/>
+    <string id="map_OpcodeWWanIntfOpcodeModemReset" value="WWanIntfOpcodeModemReset"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccBindings" value="WWanIntfOpcodeUiccBindings"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccCardInfo" value="WWanIntfOpcodeUiccCardInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccRead" value="WWanIntfOpcodeUiccRead"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccRecordStatus" value="WWanIntfOpcodeUiccRecordStatus"/>
+    <string id="map_OpcodeWWanIntfOpcodeSupportedOpcodes" value="WWanIntfOpcodeSupportedOpcodes"/>
+    <string id="map_OpcodeWwanIntfOpCodeMultiSimInternetDataUsage" value="WwanIntfOpCodeMultiSimInternetDataUsage"/>
+    <string id="map_OpcodeWwanIntfOpcodeUpdateIWlanPreference" value="WwanIntfOpcodeUpdateIWlanPreference"/>
+    <string id="map_OpcodeWwanIntfOpcodeTransientDataEnablement" value="WwanIntfOpcodeTransientDataEnablement"/>
+    <string id="map_OpcodeWwanIntfOpcodeNetworkLTEAttachAPNInfo" value="WwanIntfOpcodeNetworkLTEAttachAPNInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodePsMediaPref" value="WWanIntfOpcodePsMediaPref"/>
+    <string id="map_OpcodeWwanIntfOpcodeHighestConnCategory" value="WwanIntfOpcodeHighestConnCategory"/>
+    <string id="map_OpcodeWwanIntfOpcodeEnterpriseAPNParams" value="WwanIntfOpcodeEnterpriseAPNParams"/>
+    <string id="map_OpcodeWWanIntfOpcodeAtrInfo" value="WWanIntfOpcodeAtrInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodeSubscriberInfo" value="WWanIntfOpcodeSubscriberInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccCardAdditionalInfo" value="WWanIntfOpcodeUiccCardAdditionalInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodeOperatorProfileSelection" value="WWanIntfOpcodeOperatorProfileSelection"/>
+    <string id="map_OpcodeWWanIntfOpcodeDisallowAutoConnect" value="WWanIntfOpcodeDisallowAutoConnect"/>
+    <string id="map_OpcodeWWanIntfOpcodeManualConnectSessionState" value="WWanIntfOpcodeManualConnectSessionState"/>
+    <string id="map_OpcodeWWanIntfOpcodeProvisioningState" value="WWanIntfOpcodeProvisioningState"/>
+    <string id="map_OpcodeWwanIntfOpcodeSarConfig" value="WwanIntfOpcodeSarConfig"/>
+    <string id="map_OpcodeWwanIntfOpcodeSarTransmissionStatus" value="WwanIntfOpcodeSarTransmissionStatus"/>
+    <string id="map_OpcodeWwanIntfOpcodeOperatorServiceEnablement" value="WwanIntfOpcodeOperatorServiceEnablement"/>
+    <string id="map_OpcodeWwanIntfOpcodeReconnectHint" value="WwanIntfOpcodeReconnectHint"/>
+    <string id="map_OpcodeWwanIntfOpcodeMultiSIMInfo" value="WwanIntfOpcodeMultiSIMInfo"/>
+    <string id="map_OpcodeWwanIntfOpcodeMultiSIMSlotMaping" value="WwanIntfOpcodeMultiSIMSlotMaping"/>
+    <string id="map_OpcodeWwanIntfOpcodeModemConfigMode" value="WwanIntfOpcodeModemConfigMode"/>
+    <string id="map_OpcodeWWanIntfOpcodeSeqNumLastCellStateChgWnf" value="WWanIntfOpcodeSeqNumLastCellStateChgWnf"/>
+    <string id="map_OpcodeWwanIntfOpcodeCellInfo" value="WwanIntfOpcodeCellInfo"/>
+    <string id="map_OpcodeWwanIntfOpcodePcoStatus" value="WwanIntfOpcodePcoStatus"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccReset" value="WWanIntfOpcodeUiccReset"/>
+    <string id="map_OpcodeWwanIntfOpcodeServiceOptionalCapabilities" value="WwanIntfOpcodeServiceOptionalCapabilities"/>
+    <string id="map_OpcodeWwanIntOpcodeNetworkIsolation" value="WwanIntOpcodeNetworkIsolation"/>
+    <string id="map_OpcodeWwanIntfOpcodeProvisionedContextsV2" value="WwanIntfOpcodeProvisionedContextsV2"/>
+    <string id="map_OpcodeWwanIntfOpcodeCOSAAppConfigured" value="WwanIntfOpcodeCOSAAppConfigured"/>
+    <string id="map_OpcodeWwanIntfOpcodeRegisterPSRegStatus" value="WwanIntfOpcodeRegisterPSRegStatus"/>
+    <string id="map_OpcodeWwanIntfOpcodeTestMode" value="WwanIntfOpcodeTestMode"/>
+    <string id="map_OpcodeWwanIntfOpcodeDSS" value="WwanIntfOpcodeDSS"/>
+    <string id="map_OpcodeWwanIntfOpcodeDataServiceState" value="WwanIntfOpcodeDataServiceState"/>
+    <string id="map_OpcodeWwanIntfOpcodeNssaiLists" value="WwanIntfOpcodeNssaiLists"/>
+    <string id="map_OpcodeWwanIntfOpcodeDeviceCaps" value="WwanIntfOpcodeDeviceCaps"/>
+    <string id="map_OpcodeWwanIntfOpcodeConnectionDetails" value="WwanIntfOpcodeConnectionDetails"/>
+    <string id="map_OpcodeWwanIntfOpcodeRestrictedStandby" value="WwanIntfOpcodeRestrictedStandby"/>
+    <string id="map_OpcodeWwanIntfOpcodeLpeState" value="WwanIntfOpcodeLpeState"/>
+    <string id="map_OpcodeWWanIntfOpcodeUiccCardEFInfo" value="WWanIntfOpcodeUiccCardEFInfo"/>
+    <string id="map_OpcodeWWanIntfOpcodeMax" value="WWanIntfOpcodeMax"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

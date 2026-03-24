@@ -1,0 +1,142 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Security-Netlogon" guid="{e5ba83f6-07d0-46b1-8bc7-7e669a1d31dc}" resourceFileName="Microsoft-Windows-Security-Netlogon" messageFileName="Microsoft-Windows-Security-Netlogon" symbol="MicrosoftWindowsSecurityNetlogon" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="BlockingNTLM" message="$(string.task_BlockingNTLM)" value="1"/>
+     <task name="AuditingNTLM" message="$(string.task_AuditingNTLM)" value="2"/>
+     <task name="MSA" message="$(string.task_MSA)" value="3"/>
+     <task name="LOCATOR" message="$(string.task_LOCATOR)" value="4"/>
+     <task name="Securechannelsetup" message="$(string.task_Securechannelsetup)" value="5"/>
+    </tasks>
+    <events>
+     <event value="4004" symbol="BlockingNTLM" version="0" task="BlockingNTLM" level="win:Warning" template="BlockingNTLMArgs"/>
+     <event value="4005" symbol="BlockingNTLM4005" version="0" task="BlockingNTLM" level="win:Warning" template="BlockingNTLMArgs"/>
+     <event value="4006" symbol="BlockingNTLM4006" version="0" task="BlockingNTLM" level="win:Warning" template="BlockingNTLMArgs"/>
+     <event value="4030" symbol="AuditingNTLM" version="0" task="AuditingNTLM" level="win:Informational" template="AuditingNTLMArgs"/>
+     <event value="4031" symbol="AuditingNTLM4031" version="0" task="AuditingNTLM" level="win:Warning" template="AuditingNTLMArgs"/>
+     <event value="4032" symbol="AuditingNTLM4032" version="0" task="AuditingNTLM" level="win:Informational" template="AuditingNTLM4032Args"/>
+     <event value="4033" symbol="AuditingNTLM4033" version="0" task="AuditingNTLM" level="win:Warning" template="AuditingNTLM4032Args"/>
+     <event value="8004" symbol="AuditingNTLM8004" version="0" task="AuditingNTLM" level="win:Informational" template="BlockingNTLMArgs"/>
+     <event value="8005" symbol="AuditingNTLM8005" version="0" task="AuditingNTLM" level="win:Informational" template="BlockingNTLMArgs"/>
+     <event value="8006" symbol="AuditingNTLM8006" version="0" task="AuditingNTLM" level="win:Informational" template="BlockingNTLMArgs"/>
+     <event value="9000" symbol="MSA" version="0" task="MSA" level="win:Error" template="MSAArgs"/>
+     <event value="9001" symbol="MSA9001" version="0" task="MSA" level="win:Error" template="MSA9001Args"/>
+     <event value="9002" symbol="MSA9002" version="0" task="MSA" level="win:Error" template="MSA9002Args"/>
+     <event value="9003" symbol="MSA9003" version="0" task="MSA" level="win:Error" template="MSA9002Args"/>
+     <event value="9004" symbol="LOCATOR" version="0" task="LOCATOR" level="win:Warning" template="LOCATORArgs"/>
+     <event value="9005" symbol="Securechannelsetup" version="0" task="Securechannelsetup" level="win:Warning" template="SecurechannelsetupArgs"/>
+     <event value="9006" symbol="Securechannelsetup9006" version="0" task="Securechannelsetup" level="win:Warning" template="Securechannelsetup9006Args"/>
+     <event value="9007" symbol="LOCATOR9007" version="0" task="LOCATOR" level="win:Warning"/>
+     <event value="9008" symbol="LOCATOR9008" version="0" task="LOCATOR" level="win:Warning"/>
+     <event value="9009" symbol="LOCATOR9009" version="0" task="LOCATOR" level="win:Warning" template="LOCATOR9009Args"/>
+     <event value="9010" symbol="LOCATOR9010" version="0" task="LOCATOR" level="win:Warning" template="LOCATOR9010Args"/>
+     <event value="9011" symbol="LOCATOR9011" version="0" task="LOCATOR" level="win:Informational"/>
+     <event value="9012" symbol="LOCATOR9012" version="0" task="LOCATOR" level="win:Warning"/>
+     <event value="9013" symbol="LOCATOR9013" version="0" task="LOCATOR" level="win:Informational"/>
+     <event value="9014" symbol="LOCATOR9014" version="0" task="LOCATOR" level="win:Warning"/>
+     <event value="9015" symbol="LOCATOR9015" version="0" task="LOCATOR" level="win:Informational" template="LOCATOR9015Args"/>
+     <event value="9016" symbol="LOCATOR9016" version="0" task="LOCATOR" level="win:Informational" template="LOCATOR9015Args"/>
+    </events>
+    <templates>
+     <template tid="BlockingNTLMArgs">
+      <data name="SChannelName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="DomainName" inType="win:UnicodeString"/>
+      <data name="WorkstationName" inType="win:UnicodeString"/>
+      <data name="SChannelType" inType="win:UInt32"/>
+     </template>
+     <template tid="AuditingNTLMArgs">
+      <data name="DCName" inType="win:UnicodeString"/>
+      <data name="AccountName" inType="win:UnicodeString"/>
+      <data name="AccountDomain" inType="win:UnicodeString"/>
+      <data name="AccountMachine" inType="win:UnicodeString"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+      <data name="ServerDomain" inType="win:UnicodeString"/>
+      <data name="ForwarderType" inType="win:UnicodeString"/>
+      <data name="ForwarderName" inType="win:UnicodeString"/>
+      <data name="ForwarderDomain" inType="win:UnicodeString"/>
+      <data name="ForwarderIP" inType="win:UnicodeString"/>
+      <data name="NtlmVersion" inType="win:UnicodeString"/>
+      <data name="ServiceBinding" inType="win:UnicodeString"/>
+      <data name="TargetMachine" inType="win:UnicodeString"/>
+      <data name="TargetDomain" inType="win:UnicodeString"/>
+      <data name="MicStatus" inType="win:UnicodeString"/>
+      <data name="AvFlags" inType="win:HexInt32"/>
+      <data name="AvFlagsStr" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="StatusMsg" inType="win:UInt32"/>
+     </template>
+     <template tid="AuditingNTLM4032Args">
+      <data name="DCName" inType="win:UnicodeString"/>
+      <data name="AccountName" inType="win:UnicodeString"/>
+      <data name="AccountDomain" inType="win:UnicodeString"/>
+      <data name="AccountMachine" inType="win:UnicodeString"/>
+      <data name="ServerName" inType="win:UnicodeString"/>
+      <data name="ServerDomain" inType="win:UnicodeString"/>
+      <data name="ServerIP" inType="win:UnicodeString"/>
+      <data name="ServerOS" inType="win:UnicodeString"/>
+      <data name="NtlmVersion" inType="win:UnicodeString"/>
+      <data name="ServiceBinding" inType="win:UnicodeString"/>
+      <data name="TargetMachine" inType="win:UnicodeString"/>
+      <data name="TargetDomain" inType="win:UnicodeString"/>
+      <data name="MicStatus" inType="win:UnicodeString"/>
+      <data name="AvFlags" inType="win:HexInt32"/>
+      <data name="AvFlagsStr" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="StatusMsg" inType="win:UInt32"/>
+     </template>
+     <template tid="MSAArgs">
+      <data name="AccountName" inType="win:UnicodeString"/>
+      <data name="AccountDomain" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MSA9001Args">
+      <data name="Account" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MSA9002Args">
+      <data name="Account" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="LOCATORArgs">
+      <data name="RequestsRejected" inType="win:UInt32"/>
+     </template>
+     <template tid="SecurechannelsetupArgs">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="Securechannelsetup9006Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LOCATOR9009Args">
+      <data name="DomainName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LOCATOR9010Args">
+      <data name="DNSDomainName" inType="win:UnicodeString"/>
+      <data name="DomainName" inType="win:UnicodeString"/>
+      <data name="DomainController" inType="win:UnicodeString"/>
+     </template>
+     <template tid="LOCATOR9015Args">
+      <data name="MethodName" inType="win:AnsiString"/>
+      <data name="MethodOpnum" inType="win:UInt32"/>
+      <data name="ClientAddress" inType="win:UnicodeString"/>
+      <data name="ClientSid" inType="win:SID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_BlockingNTLM" value="BlockingNTLM"/>
+    <string id="task_AuditingNTLM" value="AuditingNTLM"/>
+    <string id="task_MSA" value="MSA"/>
+    <string id="task_LOCATOR" value="LOCATOR"/>
+    <string id="task_Securechannelsetup" value="Securechannelsetup"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

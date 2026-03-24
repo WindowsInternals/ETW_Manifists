@@ -1,0 +1,1116 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-FltMgrTrace_307b3ab035ae31a8462e37b4da258d1a" guid="{307b3ab0-35ae-31a8-462e-37b4da258d1a}" resourceFileName="Microsoft-Windows-FltMgrTrace_307b3ab035ae31a8462e37b4da258d1a" messageFileName="Microsoft-Windows-FltMgrTrace_307b3ab035ae31a8462e37b4da258d1a" symbol="MicrosoftWindowsFltMgrTrace_307b3ab035ae31a8462e37b4da258d1a" source="Xml" >
+    <keywords>
+     <keyword name="GFL_TRACE_ERROR" message="$(string.keyword_GFL_TRACE_ERROR)" mask="0x1"/>
+     <keyword name="GFL_TRACE_WARNING" message="$(string.keyword_GFL_TRACE_WARNING)" mask="0x2"/>
+     <keyword name="GFL_TRACE_INFO" message="$(string.keyword_GFL_TRACE_INFO)" mask="0x4"/>
+     <keyword name="GFL_TRACE_HIDDEN_OPERATIONS" message="$(string.keyword_GFL_TRACE_HIDDEN_OPERATIONS)" mask="0x8"/>
+     <keyword name="GFL_TRACE_PENDING_IRPS" message="$(string.keyword_GFL_TRACE_PENDING_IRPS)" mask="0x10"/>
+     <keyword name="GFL_TRACE_TERMINATE_IRP" message="$(string.keyword_GFL_TRACE_TERMINATE_IRP)" mask="0x20"/>
+     <keyword name="GFL_TRACE_STREAM_LIST_CTRL" message="$(string.keyword_GFL_TRACE_STREAM_LIST_CTRL)" mask="0x40"/>
+     <keyword name="GFL_TRACE_POST_OPERATION_PROCESSING" message="$(string.keyword_GFL_TRACE_POST_OPERATION_PROCESSING)" mask="0x80"/>
+     <keyword name="GFL_TRACE_FILE_NAME_CACHING" message="$(string.keyword_GFL_TRACE_FILE_NAME_CACHING)" mask="0x100"/>
+     <keyword name="GFL_TRACE_PAGING_FILE_OPERATIONS" message="$(string.keyword_GFL_TRACE_PAGING_FILE_OPERATIONS)" mask="0x200"/>
+     <keyword name="GFL_TRACE_FILE_OPEN_CLOSE" message="$(string.keyword_GFL_TRACE_FILE_OPEN_CLOSE)" mask="0x400"/>
+     <keyword name="GFL_TRACE_INSTANCE" message="$(string.keyword_GFL_TRACE_INSTANCE)" mask="0x800"/>
+     <keyword name="GFL_TRACE_MESSAGE" message="$(string.keyword_GFL_TRACE_MESSAGE)" mask="0x1000"/>
+     <keyword name="GFL_TRACE_IRP" message="$(string.keyword_GFL_TRACE_IRP)" mask="0x2000"/>
+     <keyword name="GFL_TRACE_FAST_IO" message="$(string.keyword_GFL_TRACE_FAST_IO)" mask="0x4000"/>
+     <keyword name="GFL_TRACE_FILE_NAMES" message="$(string.keyword_GFL_TRACE_FILE_NAMES)" mask="0x8000"/>
+     <keyword name="GFL_TRACE_ATTACH_DETACH" message="$(string.keyword_GFL_TRACE_ATTACH_DETACH)" mask="0x10000"/>
+     <keyword name="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" message="$(string.keyword_GFL_TRACE_SETUP_TEARDOWN_NOTIFIES)" mask="0x20000"/>
+     <keyword name="GFL_TRACE_STATIC_IRPCTRL" message="$(string.keyword_GFL_TRACE_STATIC_IRPCTRL)" mask="0x40000"/>
+     <keyword name="GFL_TRACE_EXTEND_COMPLETION_STACK" message="$(string.keyword_GFL_TRACE_EXTEND_COMPLETION_STACK)" mask="0x80000"/>
+     <keyword name="GFL_TRACE_BUFFER_SWAPPED" message="$(string.keyword_GFL_TRACE_BUFFER_SWAPPED)" mask="0x100000"/>
+     <keyword name="GFL_TRACE_COMPLETION_NODES" message="$(string.keyword_GFL_TRACE_COMPLETION_NODES)" mask="0x200000"/>
+     <keyword name="GFL_TRACE_PARSE_FILE_NAME" message="$(string.keyword_GFL_TRACE_PARSE_FILE_NAME)" mask="0x400000"/>
+     <keyword name="GFL_TRACE_RELEASE_FILE_NAME" message="$(string.keyword_GFL_TRACE_RELEASE_FILE_NAME)" mask="0x800000"/>
+     <keyword name="GFL_TRACE_WORK" message="$(string.keyword_GFL_TRACE_WORK)" mask="0x1000000"/>
+     <keyword name="GFL_TRACE_FILE_NAMES_ERROR" message="$(string.keyword_GFL_TRACE_FILE_NAMES_ERROR)" mask="0x2000000"/>
+     <keyword name="GFL_TRACE_FLTIO_FAST_IO" message="$(string.keyword_GFL_TRACE_FLTIO_FAST_IO)" mask="0x4000000"/>
+     <keyword name="FLTMGR_TRACE_MINIFILTER_IOSTATUS" message="$(string.keyword_FLTMGR_TRACE_MINIFILTER_IOSTATUS)" mask="0x8000000"/>
+     <keyword name="FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS" message="$(string.keyword_FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS)" mask="0x10000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="IrpMajorFunctions">
+      <map value="0x0" message="$(string.map_IrpMajorFunctionsCREATE)"/>
+      <map value="0x1" message="$(string.map_IrpMajorFunctionsCREATE_NAMED_PIPE)"/>
+      <map value="0x2" message="$(string.map_IrpMajorFunctionsCLOSE)"/>
+      <map value="0x3" message="$(string.map_IrpMajorFunctionsREAD)"/>
+      <map value="0x4" message="$(string.map_IrpMajorFunctionsWRITE)"/>
+      <map value="0x5" message="$(string.map_IrpMajorFunctionsQUERY_INFORMATION)"/>
+      <map value="0x6" message="$(string.map_IrpMajorFunctionsSET_INFORMATION)"/>
+      <map value="0x7" message="$(string.map_IrpMajorFunctionsQUERY_EA)"/>
+      <map value="0x8" message="$(string.map_IrpMajorFunctionsSET_EA)"/>
+      <map value="0x9" message="$(string.map_IrpMajorFunctionsFLUSH_BUFFERS)"/>
+      <map value="0xa" message="$(string.map_IrpMajorFunctionsQUERY_VOLUME_INFORMATION)"/>
+      <map value="0xb" message="$(string.map_IrpMajorFunctionsSET_VOLUME_INFORMATION)"/>
+      <map value="0xc" message="$(string.map_IrpMajorFunctionsDIRECTORY_CONTROL)"/>
+      <map value="0xd" message="$(string.map_IrpMajorFunctionsFILE_SYSTEM_CONTROL)"/>
+      <map value="0xe" message="$(string.map_IrpMajorFunctionsDEVICE_CONTROL)"/>
+      <map value="0xf" message="$(string.map_IrpMajorFunctionsINTERNAL_DEVICE_CONTROL)"/>
+      <map value="0x10" message="$(string.map_IrpMajorFunctionsSHUTDOWN)"/>
+      <map value="0x11" message="$(string.map_IrpMajorFunctionsLOCK_CONTROL)"/>
+      <map value="0x12" message="$(string.map_IrpMajorFunctionsCLEANUP)"/>
+      <map value="0x13" message="$(string.map_IrpMajorFunctionsCREATE_MAILSLOT)"/>
+      <map value="0x14" message="$(string.map_IrpMajorFunctionsQUERY_SECURITY)"/>
+      <map value="0x15" message="$(string.map_IrpMajorFunctionsSET_SECURITY)"/>
+      <map value="0x16" message="$(string.map_IrpMajorFunctionsPOWERSYSTEM_CONTROL)"/>
+      <map value="0x17" message="$(string.map_IrpMajorFunctionsDEVICE_CHANGE)"/>
+      <map value="0x18" message="$(string.map_IrpMajorFunctionsQUERY_QUOTA)"/>
+      <map value="0x19" message="$(string.map_IrpMajorFunctionsSET_QUOTA)"/>
+      <map value="0x1a" message="$(string.map_IrpMajorFunctionsPNP)"/>
+      <map value="0x1b" message="$(string.map_IrpMajorFunctionsPNP_POWER)"/>
+      <map value="0xea" message="$(string.map_IrpMajorFunctionsNORMALIZE_NAME_COMPONENT)"/>
+      <map value="0xeb" message="$(string.map_IrpMajorFunctionsGENERATE_FILE_NAME)"/>
+      <map value="0xec" message="$(string.map_IrpMajorFunctionsVOLUME_DISMOUNT)"/>
+      <map value="0xed" message="$(string.map_IrpMajorFunctionsVOLUME_MOUNT)"/>
+      <map value="0xee" message="$(string.map_IrpMajorFunctionsMDL_WRITE_COMPLETE)"/>
+      <map value="0xef" message="$(string.map_IrpMajorFunctionsPREPARE_MDL_WRITE)"/>
+      <map value="0xf0" message="$(string.map_IrpMajorFunctionsMDL_READ_COMPLETE)"/>
+      <map value="0xf1" message="$(string.map_IrpMajorFunctionsMDL_READ)"/>
+      <map value="0xf2" message="$(string.map_IrpMajorFunctionsNETWORK_QUERY_OPEN)"/>
+      <map value="0xf3" message="$(string.map_IrpMajorFunctionsFAST_IO_CHECK_IF_POSSIBLE)"/>
+      <map value="0xfa" message="$(string.map_IrpMajorFunctionsRELEASE_FOR_CC_FLUSH)"/>
+      <map value="0xfb" message="$(string.map_IrpMajorFunctionsACQUIRE_FOR_CC_FLUSH)"/>
+      <map value="0xfc" message="$(string.map_IrpMajorFunctionsRELEASE_FOR_MOD_WRITE)"/>
+      <map value="0xfd" message="$(string.map_IrpMajorFunctionsACQUIRE_FOR_MOD_WRITE)"/>
+      <map value="0xfe" message="$(string.map_IrpMajorFunctionsRELEASE_FOR_SECTION_SYNCHRONIZATION)"/>
+      <map value="0xff" message="$(string.map_IrpMajorFunctionsACQUIRE_FOR_SECTION_SYNCHRONIZATION)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_EXTEND_COMPLETION_STACK" template="task_0Args"/>
+     <event value="11" symbol="task_011" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_EXTEND_COMPLETION_STACK" template="task_011Args"/>
+     <event value="12" symbol="task_012" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_012Args"/>
+     <event value="13" symbol="task_013" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_012Args"/>
+     <event value="14" symbol="task_014" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_EXTEND_COMPLETION_STACK" template="task_014Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_EXTEND_COMPLETION_STACK" template="task_015Args"/>
+     <event value="16" symbol="task_016" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STATIC_IRPCTRL" template="task_016Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STATIC_IRPCTRL" template="task_017Args"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STATIC_IRPCTRL" template="task_018Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STATIC_IRPCTRL" template="task_018Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STATIC_IRPCTRL" template="task_020Args"/>
+     <event value="21" symbol="task_021" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_021Args"/>
+     <event value="22" symbol="task_022" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ATTACH_DETACH" template="task_022Args"/>
+     <event value="23" symbol="task_023" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ATTACH_DETACH" template="task_022Args"/>
+     <event value="24" symbol="task_024" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ATTACH_DETACH" template="task_022Args"/>
+     <event value="25" symbol="task_025" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_025Args"/>
+     <event value="26" symbol="task_026" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_026Args"/>
+     <event value="27" symbol="task_027" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_027Args"/>
+     <event value="28" symbol="task_028" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_028Args"/>
+     <event value="29" symbol="task_029" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_029Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_029Args"/>
+     <event value="31" symbol="task_031" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_BUFFER_SWAPPED" template="task_031Args"/>
+     <event value="32" symbol="task_032" version="0" task="task_0" level="win:Verbose" keywords="FLTMGR_TRACE_MINIFILTER_IOSTATUS" template="task_032Args"/>
+     <event value="33" symbol="task_033" version="0" task="task_0" level="win:Informational" keywords="FLTMGR_TRACE_MINIFILTER_IOSTATUS" template="task_033Args"/>
+     <event value="34" symbol="task_034" version="0" task="task_0" level="win:Verbose" keywords="FLTMGR_TRACE_MINIFILTER_IOSTATUS" template="task_034Args"/>
+     <event value="35" symbol="task_035" version="0" task="task_0" level="win:Informational" keywords="FLTMGR_TRACE_MINIFILTER_IOSTATUS" template="task_034Args"/>
+     <event value="36" symbol="task_036" version="0" task="task_0" level="win:Verbose" keywords="FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS" template="task_036Args"/>
+     <event value="37" symbol="task_037" version="0" task="task_0" level="win:Informational" keywords="FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS" template="task_036Args"/>
+     <event value="38" symbol="task_038" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_HIDDEN_OPERATIONS" template="task_038Args"/>
+     <event value="39" symbol="task_039" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PENDING_IRPS" template="task_039Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_040Args"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_041Args"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_041Args"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_043Args"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_044Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_044Args"/>
+     <event value="46" symbol="task_046" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_043Args"/>
+     <event value="47" symbol="task_047" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_047Args"/>
+     <event value="48" symbol="task_048" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_041Args"/>
+     <event value="49" symbol="task_049" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_043Args"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_044Args"/>
+     <event value="51" symbol="task_051" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_044Args"/>
+     <event value="52" symbol="task_052" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_043Args"/>
+     <event value="53" symbol="task_053" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_047Args"/>
+     <event value="54" symbol="task_054" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_041Args"/>
+     <event value="55" symbol="task_055" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_015Args"/>
+     <event value="56" symbol="task_056" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_056Args"/>
+     <event value="57" symbol="task_057" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_057Args"/>
+     <event value="58" symbol="task_058" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_047Args"/>
+     <event value="59" symbol="task_059" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_047Args"/>
+     <event value="60" symbol="task_060" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_COMPLETION_NODES" template="task_057Args"/>
+     <event value="61" symbol="task_061" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_TERMINATE_IRP" template="task_047Args"/>
+     <event value="62" symbol="task_062" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_062Args"/>
+     <event value="63" symbol="task_063" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_062Args"/>
+     <event value="64" symbol="task_064" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_064Args"/>
+     <event value="65" symbol="task_065" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="66" symbol="task_066" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="67" symbol="task_067" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="68" symbol="task_068" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="69" symbol="task_069" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="70" symbol="task_070" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="71" symbol="task_071" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="72" symbol="task_072" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="73" symbol="task_073" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="74" symbol="task_074" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="75" symbol="task_075" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="76" symbol="task_076" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="77" symbol="task_077" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="78" symbol="task_078" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="79" symbol="task_079" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="80" symbol="task_080" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FAST_IO" template="task_015Args"/>
+     <event value="81" symbol="task_081" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_081Args"/>
+     <event value="82" symbol="task_082" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_029Args"/>
+     <event value="83" symbol="task_083" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_083Args"/>
+     <event value="84" symbol="task_084" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_083Args"/>
+     <event value="85" symbol="task_085" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_085Args"/>
+     <event value="86" symbol="task_086" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_083Args"/>
+     <event value="87" symbol="task_087" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_085Args"/>
+     <event value="88" symbol="task_088" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_088Args"/>
+     <event value="89" symbol="task_089" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_088Args"/>
+     <event value="90" symbol="task_090" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_088Args"/>
+     <event value="91" symbol="task_091" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="92" symbol="task_092" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="93" symbol="task_093" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_093Args"/>
+     <event value="94" symbol="task_094" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_094Args"/>
+     <event value="95" symbol="task_095" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_095Args"/>
+     <event value="96" symbol="task_096" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_015Args"/>
+     <event value="97" symbol="task_097" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_015Args"/>
+     <event value="98" symbol="task_098" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_015Args"/>
+     <event value="99" symbol="task_099" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_015Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WARNING" template="task_022Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0105Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_015Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0105Args"/>
+     <event value="108" symbol="task_0108" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_015Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0109Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PAGING_FILE_OPERATIONS" template="task_0110Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_OPEN_CLOSE" template="task_0111Args"/>
+     <event value="112" symbol="task_0112" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_IRP" template="task_0112Args"/>
+     <event value="113" symbol="task_0113" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_IRP" template="task_0113Args"/>
+     <event value="114" symbol="task_0114" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_IRP" template="task_0114Args"/>
+     <event value="115" symbol="task_0115" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_HIDDEN_OPERATIONS" template="task_0115Args"/>
+     <event value="116" symbol="task_0116" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_015Args"/>
+     <event value="117" symbol="task_0117" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_OPEN_CLOSE" template="task_0117Args"/>
+     <event value="118" symbol="task_0118" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_HIDDEN_OPERATIONS" template="task_0118Args"/>
+     <event value="119" symbol="task_0119" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_HIDDEN_OPERATIONS" template="task_0118Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_015Args"/>
+     <event value="121" symbol="task_0121" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0121Args"/>
+     <event value="122" symbol="task_0122" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0122Args"/>
+     <event value="123" symbol="task_0123" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0123Args"/>
+     <event value="124" symbol="task_0124" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_015Args"/>
+     <event value="125" symbol="task_0125" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0125Args"/>
+     <event value="126" symbol="task_0126" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0126Args"/>
+     <event value="127" symbol="task_0127" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="128" symbol="task_0128" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WARNING" template="task_0128Args"/>
+     <event value="129" symbol="task_0129" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WARNING" template="task_0128Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_0130Args"/>
+     <event value="131" symbol="task_0131" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_015Args"/>
+     <event value="132" symbol="task_0132" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_015Args"/>
+     <event value="133" symbol="task_0133" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0133Args"/>
+     <event value="134" symbol="task_0134" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ATTACH_DETACH" template="task_0133Args"/>
+     <event value="135" symbol="task_0135" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_0135Args"/>
+     <event value="136" symbol="task_0136" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_0136Args"/>
+     <event value="137" symbol="task_0137" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_0137Args"/>
+     <event value="138" symbol="task_0138" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_0137Args"/>
+     <event value="139" symbol="task_0139" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_INSTANCE" template="task_0139Args"/>
+     <event value="140" symbol="task_0140" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_INSTANCE" template="task_0140Args"/>
+     <event value="141" symbol="task_0141" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_0141Args"/>
+     <event value="142" symbol="task_0142" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0142Args"/>
+     <event value="143" symbol="task_0143" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0142Args"/>
+     <event value="144" symbol="task_0144" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="145" symbol="task_0145" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0142Args"/>
+     <event value="146" symbol="task_0146" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0142Args"/>
+     <event value="147" symbol="task_0147" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="148" symbol="task_0148" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="149" symbol="task_0149" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0150Args"/>
+     <event value="151" symbol="task_0151" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="152" symbol="task_0152" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0152Args"/>
+     <event value="153" symbol="task_0153" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="154" symbol="task_0154" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0150Args"/>
+     <event value="155" symbol="task_0155" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="156" symbol="task_0156" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_0156Args"/>
+     <event value="157" symbol="task_0157" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FLTIO_FAST_IO" template="task_015Args"/>
+     <event value="158" symbol="task_0158" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="159" symbol="task_0159" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="160" symbol="task_0160" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="161" symbol="task_0161" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="162" symbol="task_0162" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="163" symbol="task_0163" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="164" symbol="task_0164" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0164Args"/>
+     <event value="165" symbol="task_0165" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0164Args"/>
+     <event value="166" symbol="task_0166" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0166Args"/>
+     <event value="167" symbol="task_0167" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_022Args"/>
+     <event value="168" symbol="task_0168" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="169" symbol="task_0169" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0169Args"/>
+     <event value="170" symbol="task_0170" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="171" symbol="task_0171" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0171Args"/>
+     <event value="172" symbol="task_0172" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0113Args"/>
+     <event value="173" symbol="task_0173" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0164Args"/>
+     <event value="174" symbol="task_0174" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0174Args"/>
+     <event value="175" symbol="task_0175" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0175Args"/>
+     <event value="176" symbol="task_0176" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="177" symbol="task_0177" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="178" symbol="task_0178" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="179" symbol="task_0179" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="181" symbol="task_0181" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_015Args"/>
+     <event value="182" symbol="task_0182" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0113Args"/>
+     <event value="183" symbol="task_0183" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_MESSAGE" template="task_0113Args"/>
+     <event value="184" symbol="task_0184" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0184Args"/>
+     <event value="185" symbol="task_0185" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0185Args"/>
+     <event value="186" symbol="task_0186" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0186Args"/>
+     <event value="187" symbol="task_0187" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0187Args"/>
+     <event value="188" symbol="task_0188" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0187Args"/>
+     <event value="189" symbol="task_0189" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0187Args"/>
+     <event value="190" symbol="task_0190" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0184Args"/>
+     <event value="191" symbol="task_0191" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0184Args"/>
+     <event value="192" symbol="task_0192" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0184Args"/>
+     <event value="193" symbol="task_0193" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0193Args"/>
+     <event value="194" symbol="task_0194" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0184Args"/>
+     <event value="195" symbol="task_0195" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0195Args"/>
+     <event value="196" symbol="task_0196" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0195Args"/>
+     <event value="197" symbol="task_0197" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_RELEASE_FILE_NAME" template="task_0197Args"/>
+     <event value="198" symbol="task_0198" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_RELEASE_FILE_NAME" template="task_0198Args"/>
+     <event value="199" symbol="task_0199" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_RELEASE_FILE_NAME" template="task_015Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_RELEASE_FILE_NAME" template="task_015Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0201Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAME_CACHING" template="task_0202Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_022Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES_ERROR" template="task_0204Args"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0205Args"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0206Args"/>
+     <event value="207" symbol="task_0207" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0207Args"/>
+     <event value="208" symbol="task_0208" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0208Args"/>
+     <event value="209" symbol="task_0209" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_FILE_NAMES" template="task_0187Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PARSE_FILE_NAME" template="task_0210Args"/>
+     <event value="211" symbol="task_0211" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PARSE_FILE_NAME" template="task_0210Args"/>
+     <event value="212" symbol="task_0212" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PARSE_FILE_NAME" template="task_0210Args"/>
+     <event value="213" symbol="task_0213" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PARSE_FILE_NAME" template="task_0198Args"/>
+     <event value="214" symbol="task_0214" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_PENDING_IRPS" template="task_0214Args"/>
+     <event value="215" symbol="task_0215" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_POST_OPERATION_PROCESSING" template="task_0215Args"/>
+     <event value="216" symbol="task_0216" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_POST_OPERATION_PROCESSING" template="task_0215Args"/>
+     <event value="217" symbol="task_0217" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_POST_OPERATION_PROCESSING" template="task_0215Args"/>
+     <event value="218" symbol="task_0218" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0218Args"/>
+     <event value="219" symbol="task_0219" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_0219Args"/>
+     <event value="220" symbol="task_0220" version="0" task="task_0" level="win:Informational" keywords="GFL_TRACE_INFO" template="task_0220Args"/>
+     <event value="221" symbol="task_0221" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_081Args"/>
+     <event value="222" symbol="task_0222" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_029Args"/>
+     <event value="223" symbol="task_0223" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0223Args"/>
+     <event value="224" symbol="task_0224" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0223Args"/>
+     <event value="225" symbol="task_0225" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0225Args"/>
+     <event value="226" symbol="task_0226" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0223Args"/>
+     <event value="227" symbol="task_0227" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0225Args"/>
+     <event value="228" symbol="task_0228" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0228Args"/>
+     <event value="229" symbol="task_0229" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0228Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_STREAM_LIST_CTRL" template="task_0228Args"/>
+     <event value="231" symbol="task_0231" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ERROR" template="task_0231Args"/>
+     <event value="232" symbol="task_0232" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_ERROR" template="task_0231Args"/>
+     <event value="233" symbol="task_0233" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0233Args"/>
+     <event value="234" symbol="task_0234" version="0" task="task_0" level="win:Error" keywords="GFL_TRACE_ERROR" template="task_0234Args"/>
+     <event value="235" symbol="task_0235" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" template="task_0235Args"/>
+     <event value="236" symbol="task_0236" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_HIDDEN_OPERATIONS" template="task_0236Args"/>
+     <event value="237" symbol="task_0237" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0237Args"/>
+     <event value="238" symbol="task_0238" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0237Args"/>
+     <event value="239" symbol="task_0239" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0239Args"/>
+     <event value="240" symbol="task_0240" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0240Args"/>
+     <event value="241" symbol="task_0241" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0241Args"/>
+     <event value="242" symbol="task_0242" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0242Args"/>
+     <event value="243" symbol="task_0243" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0243Args"/>
+     <event value="244" symbol="task_0244" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0244Args"/>
+     <event value="245" symbol="task_0245" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0245Args"/>
+     <event value="246" symbol="task_0246" version="0" task="task_0" level="win:Verbose" keywords="GFL_TRACE_WORK" template="task_0246Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_stackSize" inType="win:Int32"/>
+      <data name="A11_oldStackSize" inType="win:Int32"/>
+     </template>
+     <template tid="task_011Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_IrpCtrlCompletionStackLength" inType="win:Int32"/>
+      <data name="A11_newStackSize" inType="win:Int32"/>
+      <data name="A12_IrpCtrl" inType="win:Pointer"/>
+     </template>
+     <template tid="task_012Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_newCNodeIrpCtrl" inType="win:Pointer"/>
+      <data name="A11_newCNode" inType="win:Pointer"/>
+      <data name="A12_newCNodeDataSnapshotMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_014Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_IrpCtrl" inType="win:Pointer"/>
+      <data name="A11_CHARnewCNodeDataSnapshotMajorFunction" inType="win:Int32"/>
+      <data name="A12_CHARnewCNodeDataSnapshotMinorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_015Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_016Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_OpType" inType="win:Int32"/>
+      <data name="A11_irpCtrl" inType="win:Pointer"/>
+      <data name="A12_FrameReserveIrpCtrlsStaticOwningThreadOpType" inType="win:Pointer"/>
+     </template>
+     <template tid="task_017Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_OpType" inType="win:Int32"/>
+      <data name="A11_IrpCtrl" inType="win:Pointer"/>
+      <data name="A12_FrameReserveIrpCtrlsStaticOwningThreadOpType" inType="win:Pointer"/>
+     </template>
+     <template tid="task_018Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpCtrl" inType="win:Pointer"/>
+      <data name="A11_th" inType="win:Pointer"/>
+      <data name="A12_FrameReserveIrpCtrlsEntriesiCount" inType="win:Int32"/>
+      <data name="A13_i" inType="win:Int32"/>
+     </template>
+     <template tid="task_020Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_IrpCtrl" inType="win:Pointer"/>
+      <data name="A11_IrpCtrlDataThread" inType="win:Pointer"/>
+      <data name="A12_FrameReserveIrpCtrlsEntriesiCount" inType="win:Int32"/>
+      <data name="A13_i" inType="win:Int32"/>
+     </template>
+     <template tid="task_021Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FsControlDeviceObject" inType="win:Pointer"/>
+      <data name="A11_NULL" inType="win:Pointer"/>
+      <data name="A12_ControlDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_GET_DEVICE_TYPE_NAMEFsControlDeviceObjectDeviceType" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_022Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_025Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_NewDeviceObject" inType="win:Pointer"/>
+      <data name="A11_NULL" inType="win:Pointer"/>
+      <data name="A12__cdoDevExtControlDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_GET_DEVICE_TYPE_NAMENewDeviceObjectDeviceType" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_026Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_NewDeviceObject" inType="win:Pointer"/>
+      <data name="A11_volume" inType="win:Pointer"/>
+      <data name="A12__volumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_GET_DEVICE_TYPE_NAMENewDeviceObjectDeviceType" inType="win:AnsiString"/>
+      <data name="A14_DeviceObjectToAttachTo" inType="win:Pointer"/>
+     </template>
+     <template tid="task_027Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeviceObject" inType="win:Pointer"/>
+      <data name="A11_NULL" inType="win:Pointer"/>
+      <data name="A12__cdoDevExtControlDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_GET_DEVICE_TYPE_NAMEDeviceObjectDeviceType" inType="win:AnsiString"/>
+      <data name="A14_NotifyFlags" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_028Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeviceObject" inType="win:Pointer"/>
+      <data name="A11_volume" inType="win:Pointer"/>
+      <data name="A12__volumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_GET_DEVICE_TYPE_NAMEDeviceObjectDeviceType" inType="win:AnsiString"/>
+      <data name="A14_NotifyFlags" inType="win:HexInt32"/>
+      <data name="A15_devExtHeaderAttachedToDeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_029Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__VolumeDeviceName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_031Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_origBufferPtr" inType="win:Pointer"/>
+      <data name="A11_origMdlAddressPtrorigMdlAddressPtrNULL" inType="win:Pointer"/>
+      <data name="A12_newBufferPtr" inType="win:Pointer"/>
+      <data name="A13_newMdlAddressPtrnewMdlAddressPtrNULL" inType="win:Pointer"/>
+     </template>
+     <template tid="task_032Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_eventIrpPtr" inType="win:Pointer"/>
+      <data name="A11_eventMajorFunction" inType="win:UInt32" map="IrpMajorFunctions"/>
+      <data name="A12_CallbackNodeInstance" inType="win:Pointer"/>
+      <data name="A13__CallbackNodeInstanceAltitude" inType="win:CountedUtf16String"/>
+      <data name="A14_CallbackNodeInstanceFilter" inType="win:Pointer"/>
+      <data name="A15__CallbackNodeInstanceFilterName" inType="win:CountedUtf16String"/>
+      <data name="A16_IrpCtrlInitiatingInstance" inType="win:Pointer"/>
+      <data name="A17_eventFileObject" inType="win:Pointer"/>
+      <data name="A18_eventFsContext" inType="win:Pointer"/>
+      <data name="A19_status" inType="win:HexInt32"/>
+      <data name="A20_IrpCtrlTraceStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_033Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_eventIrpPtr" inType="win:Pointer"/>
+      <data name="A11_eventMajorFunction" inType="win:UInt32"/>
+      <data name="A12_CallbackNodeInstance" inType="win:Pointer"/>
+      <data name="A13__CallbackNodeInstanceAltitude" inType="win:CountedUtf16String"/>
+      <data name="A14_CallbackNodeInstanceFilter" inType="win:Pointer"/>
+      <data name="A15__CallbackNodeInstanceFilterName" inType="win:CountedUtf16String"/>
+      <data name="A16_IrpCtrlInitiatingInstance" inType="win:Pointer"/>
+      <data name="A17_eventFileObject" inType="win:Pointer"/>
+      <data name="A18_eventFsContext" inType="win:Pointer"/>
+      <data name="A19_status" inType="win:HexInt32"/>
+      <data name="A20_IrpCtrlTraceStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_034Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_eventIrpPtr" inType="win:Pointer"/>
+      <data name="A11_eventMajorFunction" inType="win:UInt32"/>
+      <data name="A12_CallbackNodeInstance" inType="win:Pointer"/>
+      <data name="A13__CallbackNodeInstanceAltitude" inType="win:CountedUtf16String"/>
+      <data name="A14_CallbackNodeInstanceFilter" inType="win:Pointer"/>
+      <data name="A15__CallbackNodeInstanceFilterName" inType="win:CountedUtf16String"/>
+      <data name="A16_IrpCtrlInitiatingInstance" inType="win:Pointer"/>
+      <data name="A17_eventFileObject" inType="win:Pointer"/>
+      <data name="A18_eventFsContext" inType="win:Pointer"/>
+      <data name="A19_status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_036Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_eventIrpPtr" inType="win:Pointer"/>
+      <data name="A11_eventMajorFunction" inType="win:UInt32"/>
+      <data name="A12_IrpCtrlInitiatingInstance" inType="win:Pointer"/>
+      <data name="A13_eventFileObject" inType="win:Pointer"/>
+      <data name="A14_eventFsContext" inType="win:Pointer"/>
+      <data name="A15_status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_038Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_KeGetCurrentThread" inType="win:Pointer"/>
+      <data name="A11_irpCtrlFileObject" inType="win:Pointer"/>
+      <data name="A12_volume" inType="win:Pointer"/>
+      <data name="A13_CHARirpMajorId" inType="win:Int32"/>
+      <data name="A14_FltGetIrpNameirpMajorId" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_039Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpMajorId" inType="win:HexInt32"/>
+      <data name="A11_irpCtrl" inType="win:Pointer"/>
+      <data name="A12_callbackNode" inType="win:Pointer"/>
+      <data name="A13_FlagOnirpCtrlFlagsIRPCTRFL_SYNCHRONIZESYNCNotSYNC" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_040Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_TrackingCtrlPointerToFree" inType="win:Pointer"/>
+     </template>
+     <template tid="task_041Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CompNodeIrpCtrl" inType="win:Pointer"/>
+      <data name="A11_CompNode" inType="win:Pointer"/>
+      <data name="A12_CHARCompNodeDataSnapshotMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_043Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpCtrl" inType="win:Pointer"/>
+      <data name="A11_CompNode" inType="win:Pointer"/>
+      <data name="A12_CHARCompNodeDataSnapshotMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_044Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CHARirpCtrlDataIopbMajorFunction" inType="win:Int32"/>
+      <data name="A11_CHARirpCtrlDataIopbMinorFunction" inType="win:Int32"/>
+      <data name="A12_FltGetIrpNameirpCtrlDataIopbMajorFunction" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_047Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CHARirpCtrlDataIopbMajorFunction" inType="win:Int32"/>
+      <data name="A11_CHARirpCtrlDataIopbMinorFunction" inType="win:Int32"/>
+      <data name="A12_FltGetIrpNameirpCtrlDataIopbMajorFunction" inType="win:AnsiString"/>
+      <data name="A13_irpCtrl" inType="win:Pointer"/>
+     </template>
+     <template tid="task_056Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CHARlocalIrpCtrlDataIopbMajorFunction" inType="win:Int32"/>
+      <data name="A11_CHARlocalIrpCtrlDataIopbMinorFunction" inType="win:Int32"/>
+      <data name="A12_FltGetIrpNamelocalIrpCtrlDataIopbMajorFunction" inType="win:AnsiString"/>
+      <data name="A13_localCompNodeIrpCtrl" inType="win:Pointer"/>
+     </template>
+     <template tid="task_057Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_completionNodeIrpCtrl" inType="win:Pointer"/>
+      <data name="A11_completionNode" inType="win:Pointer"/>
+      <data name="A12_CHARcompletionNodeDataSnapshotMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_062Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_064Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_ExceptionPointerExceptionRecordExceptionCode" inType="win:HexInt32"/>
+      <data name="A11_ExceptionPointerContextRecord" inType="win:Pointer"/>
+      <data name="A12_ExceptionPointerExceptionRecord" inType="win:Pointer"/>
+      <data name="A13_ExceptionPointerExceptionRecordExceptionAddress" inType="win:Pointer"/>
+     </template>
+     <template tid="task_081Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__localHead" inType="win:Pointer"/>
+     </template>
+     <template tid="task_083Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_fileList" inType="win:Pointer"/>
+      <data name="A11_fileListFlags" inType="win:HexInt32"/>
+      <data name="A12_fileListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_085Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_newFileList" inType="win:Pointer"/>
+      <data name="A11_newFileListFlags" inType="win:HexInt32"/>
+      <data name="A12_newFileListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_088Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FileList" inType="win:Pointer"/>
+      <data name="A11_FileListFlags" inType="win:HexInt32"/>
+      <data name="A12_FileListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_093Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltGlobalsNumProcessors" inType="win:Int32"/>
+     </template>
+     <template tid="task_094Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_KeQueryMaximumProcessorCountExALL_PROCESSOR_GROUPS" inType="win:Int32"/>
+     </template>
+     <template tid="task_095Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltGlobalsCacheLineSize" inType="win:Int32"/>
+      <data name="A11_FltGlobalsCacheLineSize" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DriverObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_i" inType="win:Int32"/>
+     </template>
+     <template tid="task_0109Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FsActiveActivatingfilesystemDeactivatingfilesystem" inType="win:AnsiString"/>
+      <data name="A11_FsControlDeviceObject" inType="win:Pointer"/>
+      <data name="A12_NULL" inType="win:Pointer"/>
+      <data name="A13__controlDeviceNameCtrlName" inType="win:CountedUtf16String"/>
+      <data name="A14_GET_DEVICE_TYPE_NAMEFsControlDeviceObjectDeviceType" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltGetIrpNameirpSpMajorFunction" inType="win:AnsiString"/>
+      <data name="A11_irpSpMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_0111Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpSpFileObject" inType="win:Pointer"/>
+      <data name="A11__irpSpFileObjectFileName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0112Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_IrpCtrlIrp" inType="win:Pointer"/>
+      <data name="A11_IrpCtrlDataIopbMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_0113Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0114Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpSpMajorFunction" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0115Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_KeGetCurrentThread" inType="win:Pointer"/>
+      <data name="A11_fileObject" inType="win:Pointer"/>
+      <data name="A12_iccVolume" inType="win:Pointer"/>
+      <data name="A13_fileObjectFileName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0117Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_fileObject" inType="win:Pointer"/>
+      <data name="A11__fileObjectFileName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0118Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_KeGetCurrentThread" inType="win:Pointer"/>
+      <data name="A11_IrpCtrlFileObject" inType="win:Pointer"/>
+      <data name="A12_volume" inType="win:Pointer"/>
+      <data name="A13_IrpCtrlDataIoStatusStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0121Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_newDeviceObject" inType="win:Pointer"/>
+      <data name="A11_volume" inType="win:Pointer"/>
+      <data name="A12__volumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_status" inType="win:HexInt32"/>
+      <data name="A14_FltpGetFsDeviceObjectAfterMountdiskDeviceObject" inType="win:Pointer"/>
+      <data name="A15_FsControlDeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0122Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeviceObject" inType="win:Pointer"/>
+      <data name="A11__devExtControlDeviceName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0123Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeviceObject" inType="win:Pointer"/>
+      <data name="A11_NULL" inType="win:Pointer"/>
+      <data name="A12__devExtControlDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13_IrpIoStatusStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0125Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Context" inType="win:Pointer"/>
+      <data name="A11_regWatchContextNotificationStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0126Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_regWatchContext" inType="win:Pointer"/>
+      <data name="A11_regWatchContextNotificationStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0128Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_status" inType="win:HexInt32"/>
+      <data name="A11__tempString" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0130Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_frameFrameID" inType="win:Int32"/>
+      <data name="A11__frameAltitudeIntervalLow" inType="win:CountedUtf16String"/>
+      <data name="A12__frameAltitudeIntervalHigh" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0133Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_ctxFlags" inType="win:Pointer"/>
+      <data name="A11_FltGlobalsManualAttachDelayCounter" inType="win:Int32"/>
+      <data name="A12_FltGlobalsManualDeviceAttachLimit" inType="win:Int32"/>
+     </template>
+     <template tid="task_0135Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_TopFrameFrameID" inType="win:Int32"/>
+      <data name="A11__TopFrameAltitudeIntervalLow" inType="win:CountedUtf16String"/>
+      <data name="A12__TopFrameAltitudeIntervalHigh" inType="win:CountedUtf16String"/>
+      <data name="A13__TopFrameAltitudeIntervalLow" inType="win:CountedUtf16String"/>
+      <data name="A14_legacyAltitude" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0136Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__DriverObjDriverExtensionServiceKeyName" inType="win:CountedUtf16String"/>
+      <data name="A11_PCWCHARvalueInfoData" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0137Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Filter" inType="win:Pointer"/>
+      <data name="A11__FilterName" inType="win:CountedUtf16String"/>
+      <data name="A12_instance" inType="win:Pointer"/>
+      <data name="A13_Volume" inType="win:Pointer"/>
+      <data name="A14__VolumeDeviceName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0139Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_InstanceFilter" inType="win:Pointer"/>
+      <data name="A11__InstanceFilterName" inType="win:CountedUtf16String"/>
+      <data name="A12__InstanceAltitude" inType="win:CountedUtf16String"/>
+      <data name="A13_Volume" inType="win:Pointer"/>
+      <data name="A14__VolumeDeviceName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0140Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_currentInstance" inType="win:Pointer"/>
+      <data name="A11_currentInstanceFilter" inType="win:Pointer"/>
+      <data name="A12__currentInstanceFilterName" inType="win:CountedUtf16String"/>
+      <data name="A13__InstanceAltitude" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0141Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_filter" inType="win:Pointer"/>
+      <data name="A11__filterName" inType="win:CountedUtf16String"/>
+      <data name="A12_Instance" inType="win:Pointer"/>
+      <data name="A13_volume" inType="win:Pointer"/>
+      <data name="A14__volumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A15_Reason" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0142Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Buffer" inType="win:Pointer"/>
+      <data name="A11_fileOffsetQuadPart" inType="win:HexInt64"/>
+      <data name="A12_Length" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0150Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_MdlChain" inType="win:Pointer"/>
+      <data name="A11_FileOffsetQuadPart" inType="win:HexInt64"/>
+      <data name="A12_Length" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0152Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_MdlChain" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0156Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_MdlChain" inType="win:Pointer"/>
+      <data name="A11_FileOffsetQuadPart" inType="win:HexInt64"/>
+     </template>
+     <template tid="task_0164Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irp" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0166Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__replyWaiter" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0169Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_currentWaiter" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0171Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_ULONGreplyMessageId" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0174Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Queue" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0175Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_currentLink" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0184Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_nameCacheNode" inType="win:Pointer"/>
+      <data name="A11_GenCtxFileObject" inType="win:Pointer"/>
+      <data name="A12_nameCacheNodeTreeLinkFlags" inType="win:HexInt32"/>
+      <data name="A13_nameCacheNodeUseCount" inType="win:Int32"/>
+      <data name="A14__nameCacheNodeNameInfoName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0185Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_nameCacheNode" inType="win:Pointer"/>
+      <data name="A11_nameCacheNodeTreeLinkFlagsflagToClear" inType="win:HexInt32"/>
+      <data name="A12_nameCacheNodeUseCount" inType="win:Int32"/>
+      <data name="A13__nameCacheNodeNameInfoName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0186Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_nameCacheNode" inType="win:Pointer"/>
+      <data name="A11_FlagOnnameCacheNodeTreeLinkFlags0x0ffff" inType="win:HexInt32"/>
+      <data name="A12__nameCacheNodeNameInfoName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0187Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_GenCtxFileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0193Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_foundNameCacheNode" inType="win:Pointer"/>
+      <data name="A11_GenCtxFileObject" inType="win:Pointer"/>
+      <data name="A12_foundNameCacheNodeTreeLinkFlags" inType="win:HexInt32"/>
+      <data name="A13_foundNameCacheNodeUseCount" inType="win:Int32"/>
+      <data name="A14__foundNameCacheNodeNameInfoName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0195Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_IrpCtrlNULLIrpCtrlDataIopbMajorFunction0xff" inType="win:HexInt32"/>
+      <data name="A11_IrpCtrlNULLIrpCtrlDataIopbMinorFunction0xff" inType="win:HexInt32"/>
+      <data name="A12__VolumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A13__FileObjectFileName" inType="win:CountedUtf16String"/>
+      <data name="A14_FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0197Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FileNameInformation" inType="win:Pointer"/>
+      <data name="A11_nameCacheNodeUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_0198Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FileNameInformation" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0201Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__GenCtxShortFileName" inType="win:CountedUtf16String"/>
+      <data name="A11__localGenCtxFileNameInformationName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__VolumeDeviceName" inType="win:CountedUtf16String"/>
+      <data name="A11__FileObjectFileName" inType="win:CountedUtf16String"/>
+      <data name="A12_FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0204Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_NameCtrl" inType="win:Pointer"/>
+      <data name="A11_NameCtrlNameGenerationFlags" inType="win:HexInt32"/>
+      <data name="A12_NameCtrlError" inType="win:HexInt32"/>
+      <data name="A13_NameCtrlShareNameLength" inType="win:HexInt32"/>
+      <data name="A14_NameCtrlStreamNameLength" inType="win:HexInt32"/>
+      <data name="A15__NameCtrlName" inType="win:CountedUtf16String"/>
+      <data name="A16__NameCtrlCurrentShortName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0205Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_NameCtrl" inType="win:Pointer"/>
+      <data name="A11_NameCtrlBufferSize" inType="win:HexInt32"/>
+      <data name="A12_NewSize" inType="win:HexInt32"/>
+      <data name="A13__NameCtrlName" inType="win:CountedUtf16String"/>
+      <data name="A14_NameCtrlFlags" inType="win:HexInt32"/>
+      <data name="A15_FlagsToSet" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0206Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_GET_NAME_SUPPORT_VOLUME_DEVICE_NAMEGenCtx" inType="win:CountedUtf16String"/>
+      <data name="A11_GenCtxFileObjectFileNameBuffer0" inType="win:HexInt32"/>
+      <data name="A12_GenCtxFileObjectFileNameBuffer1" inType="win:HexInt32"/>
+      <data name="A13_GenCtxFileObjectFileNameBuffer2" inType="win:HexInt32"/>
+      <data name="A14_GenCtxFileObjectFileNameBuffer3" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0207Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__GenCtxShortFileName" inType="win:CountedUtf16String"/>
+      <data name="A11__GenCtxExpandedFileName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0208Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__GenCtxNameCtrlName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0210Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FileNameInformation" inType="win:Pointer"/>
+      <data name="A11__FileNameInformationName" inType="win:CountedUtf16String"/>
+      <data name="A12__FileNameInformationVolume" inType="win:CountedUtf16String"/>
+      <data name="A13__FileNameInformationFinalComponent" inType="win:CountedUtf16String"/>
+      <data name="A14__FileNameInformationExtension" inType="win:CountedUtf16String"/>
+      <data name="A15__FileNameInformationStream" inType="win:CountedUtf16String"/>
+      <data name="A16__FileNameInformationParentDir" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0214Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CallbackDataIopbMajorFunction" inType="win:HexInt32"/>
+      <data name="A11_iccIrpCtrl" inType="win:Pointer"/>
+      <data name="A12_iccIrpCtrlPendingCallbackNode" inType="win:Pointer"/>
+      <data name="A13_FlagOniccIrpCtrlFlagsIRPCTRFL_SYNCHRONIZESYNCNotSYNC" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0215Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_irpCtrlIrp" inType="win:Pointer"/>
+      <data name="A11_irpCtrlDataIopbMajorFunction" inType="win:Int32"/>
+     </template>
+     <template tid="task_0218Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_status" inType="win:HexInt32"/>
+      <data name="A11__filterName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0219Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__filterName" inType="win:CountedUtf16String"/>
+      <data name="A11__filterDefaultAltitude" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0220Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10__FilterName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0223Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_streamList" inType="win:Pointer"/>
+      <data name="A11_streamListFlags" inType="win:HexInt32"/>
+      <data name="A12_streamListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_0225Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_newStreamList" inType="win:Pointer"/>
+      <data name="A11_newStreamListFlags" inType="win:HexInt32"/>
+      <data name="A12_newStreamListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_0228Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_StreamList" inType="win:Pointer"/>
+      <data name="A11_StreamListFlags" inType="win:HexInt32"/>
+      <data name="A12_StreamListUseCount" inType="win:Int32"/>
+     </template>
+     <template tid="task_0231Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltObject" inType="win:Pointer"/>
+      <data name="A11_PFLT_OBJECTFltObjectPointerCount" inType="win:Int32"/>
+      <data name="A12_reason" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0233Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_deviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0234Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_CDODriverName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0235Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_Volume" inType="win:Pointer"/>
+      <data name="A11__VolumeDeviceName" inType="win:CountedUtf16String"/>
+     </template>
+     <template tid="task_0236Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_KeGetCurrentThread" inType="win:Pointer"/>
+      <data name="A11_FileObject" inType="win:Pointer"/>
+      <data name="A12_Volume" inType="win:Pointer"/>
+      <data name="A13_IrpMajor" inType="win:Int32"/>
+     </template>
+     <template tid="task_0237Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltWork" inType="win:Pointer"/>
+      <data name="A11_QueueType" inType="win:Int32"/>
+      <data name="A12_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningCount" inType="win:Int32"/>
+      <data name="A13_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningLimit" inType="win:Int32"/>
+     </template>
+     <template tid="task_0239Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_fltWork" inType="win:Pointer"/>
+      <data name="A11_QueueType" inType="win:Int32"/>
+      <data name="A12_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningCount" inType="win:Int32"/>
+      <data name="A13_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningLimit" inType="win:Int32"/>
+     </template>
+     <template tid="task_0240Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_NULL" inType="win:Pointer"/>
+      <data name="A11_QueueType" inType="win:Int32"/>
+      <data name="A12_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningCount" inType="win:Int32"/>
+      <data name="A13_FltGlobalsThrottledWorkCtrlQueuesQueueTypeRunningLimit" inType="win:Int32"/>
+     </template>
+     <template tid="task_0241Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_GenericWorkItem" inType="win:Pointer"/>
+      <data name="A11_qtype" inType="win:Int32"/>
+      <data name="A12_fltObject" inType="win:Pointer"/>
+      <data name="A13_GenericWorkItemGenericWorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_GenericWorkItemContext" inType="win:Pointer"/>
+      <data name="A15_GenericWorkItemIoPriorityInfoIoPriority" inType="win:Int32"/>
+     </template>
+     <template tid="task_0242Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_DeferredWorkItem" inType="win:Pointer"/>
+      <data name="A11_qtype" inType="win:Int32"/>
+      <data name="A12_instance" inType="win:Pointer"/>
+      <data name="A13_DeferredWorkItemDeferredWorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_DeferredWorkItemContext" inType="win:Pointer"/>
+      <data name="A15_DeferredWorkItemIoPriorityInfoIoPriority" inType="win:Int32"/>
+     </template>
+     <template tid="task_0243Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltWorkItem" inType="win:Pointer"/>
+      <data name="A11_FltWorkItemQueueType" inType="win:Int32"/>
+      <data name="A12_FltWorkItemFltObject" inType="win:Pointer"/>
+      <data name="A13_FltWorkItemGenericWorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_FltWorkItemContext" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0244Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltWorkItem" inType="win:Pointer"/>
+      <data name="A11_FltWorkItemQueueType" inType="win:Int32"/>
+      <data name="A12_FltWorkItemInstance" inType="win:Pointer"/>
+      <data name="A13_FltWorkItemDeferredWorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_FltWorkItemContext" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0245Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltWorkItem" inType="win:Pointer"/>
+      <data name="A11_QueueType" inType="win:Int32"/>
+      <data name="A12_FltObject" inType="win:Pointer"/>
+      <data name="A13_WorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_Context" inType="win:Pointer"/>
+      <data name="A15_FltWorkItemIoPriorityInfoIoPriority" inType="win:Int32"/>
+     </template>
+     <template tid="task_0246Args">
+      <data name="FUNC" inType="win:AnsiString"/>
+      <data name="A10_FltWorkItem" inType="win:Pointer"/>
+      <data name="A11_QueueType" inType="win:Int32"/>
+      <data name="A12_FltWorkItemInstance" inType="win:Pointer"/>
+      <data name="A13_WorkerRoutine" inType="win:Pointer"/>
+      <data name="A14_Context" inType="win:Pointer"/>
+      <data name="A15_FltWorkItemIoPriorityInfoIoPriority" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_GFL_TRACE_ERROR" value="GFL_TRACE_ERROR"/>
+    <string id="keyword_GFL_TRACE_WARNING" value="GFL_TRACE_WARNING"/>
+    <string id="keyword_GFL_TRACE_INFO" value="GFL_TRACE_INFO"/>
+    <string id="keyword_GFL_TRACE_HIDDEN_OPERATIONS" value="GFL_TRACE_HIDDEN_OPERATIONS"/>
+    <string id="keyword_GFL_TRACE_PENDING_IRPS" value="GFL_TRACE_PENDING_IRPS"/>
+    <string id="keyword_GFL_TRACE_TERMINATE_IRP" value="GFL_TRACE_TERMINATE_IRP"/>
+    <string id="keyword_GFL_TRACE_STREAM_LIST_CTRL" value="GFL_TRACE_STREAM_LIST_CTRL"/>
+    <string id="keyword_GFL_TRACE_POST_OPERATION_PROCESSING" value="GFL_TRACE_POST_OPERATION_PROCESSING"/>
+    <string id="keyword_GFL_TRACE_FILE_NAME_CACHING" value="GFL_TRACE_FILE_NAME_CACHING"/>
+    <string id="keyword_GFL_TRACE_PAGING_FILE_OPERATIONS" value="GFL_TRACE_PAGING_FILE_OPERATIONS"/>
+    <string id="keyword_GFL_TRACE_FILE_OPEN_CLOSE" value="GFL_TRACE_FILE_OPEN_CLOSE"/>
+    <string id="keyword_GFL_TRACE_INSTANCE" value="GFL_TRACE_INSTANCE"/>
+    <string id="keyword_GFL_TRACE_MESSAGE" value="GFL_TRACE_MESSAGE"/>
+    <string id="keyword_GFL_TRACE_IRP" value="GFL_TRACE_IRP"/>
+    <string id="keyword_GFL_TRACE_FAST_IO" value="GFL_TRACE_FAST_IO"/>
+    <string id="keyword_GFL_TRACE_FILE_NAMES" value="GFL_TRACE_FILE_NAMES"/>
+    <string id="keyword_GFL_TRACE_ATTACH_DETACH" value="GFL_TRACE_ATTACH_DETACH"/>
+    <string id="keyword_GFL_TRACE_SETUP_TEARDOWN_NOTIFIES" value="GFL_TRACE_SETUP_TEARDOWN_NOTIFIES"/>
+    <string id="keyword_GFL_TRACE_STATIC_IRPCTRL" value="GFL_TRACE_STATIC_IRPCTRL"/>
+    <string id="keyword_GFL_TRACE_EXTEND_COMPLETION_STACK" value="GFL_TRACE_EXTEND_COMPLETION_STACK"/>
+    <string id="keyword_GFL_TRACE_BUFFER_SWAPPED" value="GFL_TRACE_BUFFER_SWAPPED"/>
+    <string id="keyword_GFL_TRACE_COMPLETION_NODES" value="GFL_TRACE_COMPLETION_NODES"/>
+    <string id="keyword_GFL_TRACE_PARSE_FILE_NAME" value="GFL_TRACE_PARSE_FILE_NAME"/>
+    <string id="keyword_GFL_TRACE_RELEASE_FILE_NAME" value="GFL_TRACE_RELEASE_FILE_NAME"/>
+    <string id="keyword_GFL_TRACE_WORK" value="GFL_TRACE_WORK"/>
+    <string id="keyword_GFL_TRACE_FILE_NAMES_ERROR" value="GFL_TRACE_FILE_NAMES_ERROR"/>
+    <string id="keyword_GFL_TRACE_FLTIO_FAST_IO" value="GFL_TRACE_FLTIO_FAST_IO"/>
+    <string id="keyword_FLTMGR_TRACE_MINIFILTER_IOSTATUS" value="FLTMGR_TRACE_MINIFILTER_IOSTATUS"/>
+    <string id="keyword_FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS" value="FLTMGR_TRACE_FILE_SYSTEM_IOSTATUS"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_IrpMajorFunctionsCREATE" value="CREATE"/>
+    <string id="map_IrpMajorFunctionsCREATE_NAMED_PIPE" value="CREATE_NAMED_PIPE"/>
+    <string id="map_IrpMajorFunctionsCLOSE" value="CLOSE"/>
+    <string id="map_IrpMajorFunctionsREAD" value="READ"/>
+    <string id="map_IrpMajorFunctionsWRITE" value="WRITE"/>
+    <string id="map_IrpMajorFunctionsQUERY_INFORMATION" value="QUERY_INFORMATION"/>
+    <string id="map_IrpMajorFunctionsSET_INFORMATION" value="SET_INFORMATION"/>
+    <string id="map_IrpMajorFunctionsQUERY_EA" value="QUERY_EA"/>
+    <string id="map_IrpMajorFunctionsSET_EA" value="SET_EA"/>
+    <string id="map_IrpMajorFunctionsFLUSH_BUFFERS" value="FLUSH_BUFFERS"/>
+    <string id="map_IrpMajorFunctionsQUERY_VOLUME_INFORMATION" value="QUERY_VOLUME_INFORMATION"/>
+    <string id="map_IrpMajorFunctionsSET_VOLUME_INFORMATION" value="SET_VOLUME_INFORMATION"/>
+    <string id="map_IrpMajorFunctionsDIRECTORY_CONTROL" value="DIRECTORY_CONTROL"/>
+    <string id="map_IrpMajorFunctionsFILE_SYSTEM_CONTROL" value="FILE_SYSTEM_CONTROL"/>
+    <string id="map_IrpMajorFunctionsDEVICE_CONTROL" value="DEVICE_CONTROL"/>
+    <string id="map_IrpMajorFunctionsINTERNAL_DEVICE_CONTROL" value="INTERNAL_DEVICE_CONTROL"/>
+    <string id="map_IrpMajorFunctionsSHUTDOWN" value="SHUTDOWN"/>
+    <string id="map_IrpMajorFunctionsLOCK_CONTROL" value="LOCK_CONTROL"/>
+    <string id="map_IrpMajorFunctionsCLEANUP" value="CLEANUP"/>
+    <string id="map_IrpMajorFunctionsCREATE_MAILSLOT" value="CREATE_MAILSLOT"/>
+    <string id="map_IrpMajorFunctionsQUERY_SECURITY" value="QUERY_SECURITY"/>
+    <string id="map_IrpMajorFunctionsSET_SECURITY" value="SET_SECURITY"/>
+    <string id="map_IrpMajorFunctionsPOWERSYSTEM_CONTROL" value="POWERSYSTEM_CONTROL"/>
+    <string id="map_IrpMajorFunctionsDEVICE_CHANGE" value="DEVICE_CHANGE"/>
+    <string id="map_IrpMajorFunctionsQUERY_QUOTA" value="QUERY_QUOTA"/>
+    <string id="map_IrpMajorFunctionsSET_QUOTA" value="SET_QUOTA"/>
+    <string id="map_IrpMajorFunctionsPNP" value="PNP"/>
+    <string id="map_IrpMajorFunctionsPNP_POWER" value="PNP_POWER"/>
+    <string id="map_IrpMajorFunctionsNORMALIZE_NAME_COMPONENT" value="NORMALIZE_NAME_COMPONENT"/>
+    <string id="map_IrpMajorFunctionsGENERATE_FILE_NAME" value="GENERATE_FILE_NAME"/>
+    <string id="map_IrpMajorFunctionsVOLUME_DISMOUNT" value="VOLUME_DISMOUNT"/>
+    <string id="map_IrpMajorFunctionsVOLUME_MOUNT" value="VOLUME_MOUNT"/>
+    <string id="map_IrpMajorFunctionsMDL_WRITE_COMPLETE" value="MDL_WRITE_COMPLETE"/>
+    <string id="map_IrpMajorFunctionsPREPARE_MDL_WRITE" value="PREPARE_MDL_WRITE"/>
+    <string id="map_IrpMajorFunctionsMDL_READ_COMPLETE" value="MDL_READ_COMPLETE"/>
+    <string id="map_IrpMajorFunctionsMDL_READ" value="MDL_READ"/>
+    <string id="map_IrpMajorFunctionsNETWORK_QUERY_OPEN" value="NETWORK_QUERY_OPEN"/>
+    <string id="map_IrpMajorFunctionsFAST_IO_CHECK_IF_POSSIBLE" value="FAST_IO_CHECK_IF_POSSIBLE"/>
+    <string id="map_IrpMajorFunctionsRELEASE_FOR_CC_FLUSH" value="RELEASE_FOR_CC_FLUSH"/>
+    <string id="map_IrpMajorFunctionsACQUIRE_FOR_CC_FLUSH" value="ACQUIRE_FOR_CC_FLUSH"/>
+    <string id="map_IrpMajorFunctionsRELEASE_FOR_MOD_WRITE" value="RELEASE_FOR_MOD_WRITE"/>
+    <string id="map_IrpMajorFunctionsACQUIRE_FOR_MOD_WRITE" value="ACQUIRE_FOR_MOD_WRITE"/>
+    <string id="map_IrpMajorFunctionsRELEASE_FOR_SECTION_SYNCHRONIZATION" value="RELEASE_FOR_SECTION_SYNCHRONIZATION"/>
+    <string id="map_IrpMajorFunctionsACQUIRE_FOR_SECTION_SYNCHRONIZATION" value="ACQUIRE_FOR_SECTION_SYNCHRONIZATION"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

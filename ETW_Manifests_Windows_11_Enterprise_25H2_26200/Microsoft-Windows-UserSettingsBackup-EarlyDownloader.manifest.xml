@@ -1,0 +1,101 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-UserSettingsBackup-EarlyDownloader" guid="{c675305e-51bd-5da6-08b4-d4cb88d198f0}" resourceFileName="Microsoft-Windows-UserSettingsBackup-EarlyDownloader" messageFileName="Microsoft-Windows-UserSettingsBackup-EarlyDownloader" symbol="MicrosoftWindowsUserSettingsBackupEarlyDownloader" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" template="task_02Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="4" symbol="task_04" version="0" task="task_0" level="win:Informational" template="task_04Args"/>
+     <event value="5" symbol="task_05" version="0" task="task_0" level="win:Informational"/>
+     <event value="6" symbol="task_06" version="0" task="task_0" level="win:Informational" template="task_06Args"/>
+     <event value="7" symbol="task_07" version="0" task="task_0" level="win:Informational" template="task_07Args"/>
+     <event value="8" symbol="task_08" version="0" task="task_0" level="win:Informational" template="task_08Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Warning" template="task_015Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational" template="task_0105Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Informational" template="task_0107Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Warning" template="task_0109Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Informational" template="task_0111Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02Args">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04Args">
+      <data name="ContextTag" inType="win:AnsiString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_06Args">
+      <data name="OverallResult" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_07Args">
+      <data name="DownloadUnitIdTypeName" inType="win:UnicodeString"/>
+      <data name="DownloadUnitIdCollectionName" inType="win:UnicodeString"/>
+      <data name="DownloadUnitIdIsPerDevice" inType="win:Boolean"/>
+      <data name="CorrelationVector" inType="win:AnsiString"/>
+      <data name="DownloadRequestUri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_08Args">
+      <data name="DownloadAssetIdName" inType="win:UnicodeString"/>
+      <data name="DownloadAssetUriName" inType="win:UnicodeString"/>
+      <data name="CorrelationVector" inType="win:AnsiString"/>
+      <data name="DownloadRequestUri" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_015Args">
+      <data name="Uri" inType="win:UnicodeString"/>
+      <data name="CorrelationVector" inType="win:AnsiString"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="Response" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="ActivityId" inType="win:UnicodeString"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="Version" inType="win:UInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0107Args">
+      <data name="DownloadAssetIdName" inType="win:UnicodeString"/>
+      <data name="DownloadAssetUriName" inType="win:UnicodeString"/>
+      <data name="FilePath" inType="win:UnicodeString"/>
+      <data name="Size" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0109Args">
+      <data name="Uri" inType="win:UnicodeString"/>
+      <data name="CorrelationVector" inType="win:AnsiString"/>
+      <data name="Response" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0111Args">
+      <data name="Partition" inType="win:UnicodeString"/>
+      <data name="Type" inType="win:UnicodeString"/>
+      <data name="Collection" inType="win:UnicodeString"/>
+      <data name="Instance" inType="win:UnicodeString"/>
+      <data name="CorrelationVector" inType="win:AnsiString"/>
+      <data name="Encoding" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

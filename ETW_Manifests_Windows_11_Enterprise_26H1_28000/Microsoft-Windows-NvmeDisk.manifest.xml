@@ -1,0 +1,226 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-NvmeDisk" guid="{9799276c-fb04-47e8-845e-36946045c218}" resourceFileName="Microsoft-Windows-NvmeDisk" messageFileName="Microsoft-Windows-NvmeDisk" symbol="MicrosoftWindowsNvmeDisk" source="Xml" >
+    <keywords>
+     <keyword name="IO_Performance" message="$(string.keyword_IO_Performance)" mask="0x100000"/>
+     <keyword name="Read" message="$(string.keyword_Read)" mask="0x200000"/>
+     <keyword name="Write" message="$(string.keyword_Write)" mask="0x400000"/>
+     <keyword name="PagingRead" message="$(string.keyword_PagingRead)" mask="0x800000"/>
+     <keyword name="PagingWrite" message="$(string.keyword_PagingWrite)" mask="0x1000000"/>
+     <keyword name="RemovePolicy" message="$(string.keyword_RemovePolicy)" mask="0x4000000"/>
+     <keyword name="NonReadWrite" message="$(string.keyword_NonReadWrite)" mask="0x8000000"/>
+     <keyword name="PassThrough" message="$(string.keyword_PassThrough)" mask="0x10000000"/>
+     <keyword name="NVMCommand" message="$(string.keyword_NVMCommand)" mask="0x20000000"/>
+     <keyword name="IOCTL" message="$(string.keyword_IOCTL)" mask="0x40000000"/>
+     <keyword name="PnP" message="$(string.keyword_PnP)" mask="0x200000000"/>
+     <keyword name="Enum" message="$(string.keyword_Enum)" mask="0x400000000"/>
+     <keyword name="ISR" message="$(string.keyword_ISR)" mask="0x1000000000"/>
+     <keyword name="DPC" message="$(string.keyword_DPC)" mask="0x2000000000"/>
+     <keyword name="Timer" message="$(string.keyword_Timer)" mask="0x4000000000"/>
+     <keyword name="Protocol" message="$(string.keyword_Protocol)" mask="0x8000000000"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Class" message="$(string.task_Class)" value="200">
+>
+      <opcodes>
+       <opcode name="Dispatchingofrequest." message="$(string.opcode_ClassDispatchingofrequest.)" value="100"/>
+       <opcode name="Completionofrequest." message="$(string.opcode_ClassCompletionofrequest.)" value="101"/>
+       <opcode name="Retryhandling." message="$(string.opcode_ClassRetryhandling.)" value="104"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="200" symbol="Class_V1" version="1" task="Class" level="win:Informational" keywords="IO_Performance" template="ClassArgs_V1"/>
+     <event value="201" symbol="ClassDispatchingofrequest._V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="Read" template="ClassDispatchingofrequest.Args_V1"/>
+     <event value="202" symbol="ClassDispatchingofrequest.202_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="Write" template="ClassDispatchingofrequest.Args_V1"/>
+     <event value="203" symbol="ClassDispatchingofrequest.203_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="Read PagingRead" template="ClassDispatchingofrequest.Args_V1"/>
+     <event value="204" symbol="ClassDispatchingofrequest.204_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="Write PagingWrite" template="ClassDispatchingofrequest.Args_V1"/>
+     <event value="205" symbol="ClassCompletionofrequest._V1" version="1" task="Class" opcode="Completionofrequest." level="win:Informational" keywords="Read Write PagingRead PagingWrite" template="ClassCompletionofrequest.Args_V1"/>
+     <event value="206" symbol="ClassRetryhandling._V1" version="1" task="Class" opcode="Retryhandling." level="win:Informational" keywords="Read Write PagingRead PagingWrite" template="ClassRetryhandling.Args_V1"/>
+     <event value="207" symbol="ClassDispatchingofrequest.207_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="IOCTL" template="ClassDispatchingofrequest.207Args_V1"/>
+     <event value="208" symbol="ClassCompletionofrequest.208_V1" version="1" task="Class" opcode="Completionofrequest." level="win:Informational" keywords="IOCTL" template="ClassCompletionofrequest.208Args_V1"/>
+     <event value="209" symbol="ClassDispatchingofrequest.209_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="PnP" template="ClassDispatchingofrequest.209Args_V1"/>
+     <event value="210" symbol="ClassCompletionofrequest.210_V1" version="1" task="Class" opcode="Completionofrequest." level="win:Informational" keywords="PnP" template="ClassCompletionofrequest.208Args_V1"/>
+     <event value="211" symbol="ClassCompletionofrequest.211_V1" version="1" task="Class" opcode="Completionofrequest." level="win:Informational" keywords="PnP Enum" template="ClassCompletionofrequest.211Args_V1"/>
+     <event value="212" symbol="ClassDispatchingofrequest.212_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="PassThrough IOCTL" template="ClassDispatchingofrequest.207Args_V1"/>
+     <event value="213" symbol="ClassDispatchingofrequest.213_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="NVMCommand" template="ClassDispatchingofrequest.213Args_V1"/>
+     <event value="214" symbol="ClassCompletionofrequest.214_V1" version="1" task="Class" opcode="Completionofrequest." level="win:Informational" keywords="NVMCommand" template="ClassCompletionofrequest.Args_V1"/>
+     <event value="215" symbol="ClassDispatchingofrequest.215_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="RemovePolicy" template="ClassDispatchingofrequest.215Args_V1"/>
+     <event value="500" symbol="ClassCompletionofrequest.500_V1" version="1" task="Class" opcode="Completionofrequest." level="win:Error" keywords="NVMCommand" template="ClassCompletionofrequest.Args_V1"/>
+     <event value="501" symbol="ClassDispatchingofrequest.501_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Warning" keywords="keyword_400000000000" template="ClassDispatchingofrequest.501Args_V1"/>
+     <event value="502" symbol="ClassDispatchingofrequest.502_V1" version="1" task="Class" opcode="Dispatchingofrequest." level="win:Informational" keywords="keyword_400000000000" template="ClassDispatchingofrequest.501Args_V1"/>
+    </events>
+    <templates>
+     <template tid="ClassArgs_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="RequestDuration_100ns" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="CommandType" inType="win:UnicodeString"/>
+      <data name="CommandTag" inType="win:UInt32"/>
+      <data name="NTStatus" inType="win:HexInt32"/>
+      <data name="Command" inType="win:HexInt32"/>
+      <data name="CDW10" inType="win:HexInt32"/>
+      <data name="CDW11" inType="win:HexInt32"/>
+      <data name="CDW12" inType="win:HexInt32"/>
+      <data name="CDW13" inType="win:HexInt32"/>
+      <data name="CDW14" inType="win:HexInt32"/>
+      <data name="CDW15" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Command" inType="win:UInt8"/>
+      <data name="LengthOfTransfer" inType="win:UInt64"/>
+      <data name="LBA" inType="win:HexInt64"/>
+     </template>
+     <template tid="ClassCompletionofrequest.Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="NTStatus" inType="win:HexInt32"/>
+      <data name="CommandTag" inType="win:UInt32"/>
+      <data name="OPC" inType="win:HexInt32"/>
+      <data name="CID" inType="win:UInt32"/>
+      <data name="SQID" inType="win:UInt32"/>
+      <data name="DW0" inType="win:UInt32"/>
+      <data name="DW1" inType="win:UInt32"/>
+      <data name="SCT" inType="win:HexInt32"/>
+      <data name="SC" inType="win:HexInt32"/>
+      <data name="DNR" inType="win:UInt8"/>
+     </template>
+     <template tid="ClassRetryhandling.Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="CurrentRetryCount" inType="win:UInt32"/>
+      <data name="SCT" inType="win:UInt8"/>
+      <data name="SC" inType="win:UInt8"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.207Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:HexInt32"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Parameter" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassCompletionofrequest.208Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.209Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Type" inType="win:HexInt32"/>
+      <data name="DeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="ClassCompletionofrequest.211Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="NumberOfChildren" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.213Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="CommandTag" inType="win:UInt32"/>
+      <data name="OPC" inType="win:HexInt32"/>
+      <data name="CID" inType="win:UInt32"/>
+      <data name="NSID" inType="win:UInt32"/>
+      <data name="PRP1" inType="win:HexInt64"/>
+      <data name="PRP2" inType="win:HexInt64"/>
+      <data name="CDW10" inType="win:HexInt32"/>
+      <data name="CDW11" inType="win:HexInt32"/>
+      <data name="CDW12" inType="win:HexInt32"/>
+      <data name="CDW13" inType="win:HexInt32"/>
+      <data name="CDW14" inType="win:HexInt32"/>
+      <data name="CDW15" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.215Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="RemovalPolicy" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="ClassDispatchingofrequest.501Args_V1">
+      <data name="DeviceGUID" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="Model" inType="win:AnsiString"/>
+      <data name="FirmwareVersion" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="NamespaceID" inType="win:UInt32"/>
+      <data name="VwcEnabled" inType="win:Boolean"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_IO_Performance" value="IO_Performance"/>
+    <string id="keyword_Read" value="Read"/>
+    <string id="keyword_Write" value="Write"/>
+    <string id="keyword_PagingRead" value="PagingRead"/>
+    <string id="keyword_PagingWrite" value="PagingWrite"/>
+    <string id="keyword_RemovePolicy" value="RemovePolicy"/>
+    <string id="keyword_NonReadWrite" value="NonReadWrite"/>
+    <string id="keyword_PassThrough" value="PassThrough"/>
+    <string id="keyword_NVMCommand" value="NVMCommand"/>
+    <string id="keyword_IOCTL" value="IOCTL"/>
+    <string id="keyword_PnP" value="PnP"/>
+    <string id="keyword_Enum" value="Enum"/>
+    <string id="keyword_ISR" value="ISR"/>
+    <string id="keyword_DPC" value="DPC"/>
+    <string id="keyword_Timer" value="Timer"/>
+    <string id="keyword_Protocol" value="Protocol"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_Class" value="Class"/>
+    <string id="opcode_ClassDispatchingofrequest." value="Dispatchingofrequest."/>
+    <string id="opcode_ClassCompletionofrequest." value="Completionofrequest."/>
+    <string id="opcode_ClassRetryhandling." value="Retryhandling."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,107 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USB-USB4DeviceRouter-EventLogs" guid="{d07e8c3f-78fb-4c22-b77c-2203d00bfdf3}" resourceFileName="Microsoft-Windows-USB-USB4DeviceRouter-EventLogs" messageFileName="Microsoft-Windows-USB-USB4DeviceRouter-EventLogs" symbol="MicrosoftWindowsUSBUSB4DeviceRouterEventLogs" source="Xml" >
+    <keywords>
+     <keyword name="Default" message="$(string.keyword_Default)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="DPtunnelcreation" message="$(string.task_DPtunnelcreation)" value="1">
+>
+      <opcodes>
+       <opcode name="Error" message="$(string.opcode_DPtunnelcreationError)" value="10"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="DPtunnelcreation" version="0" task="DPtunnelcreation" level="win:Informational" keywords="Default" template="DPtunnelcreationArgs"/>
+     <event value="1" symbol="DPtunnelcreation_V1" version="1" task="DPtunnelcreation" level="win:Informational" keywords="Default" template="DPtunnelcreationArgs_V1"/>
+     <event value="1" symbol="DPtunnelcreation_V2" version="2" task="DPtunnelcreation" level="win:Informational" keywords="Default" template="DPtunnelcreationArgs_V2"/>
+     <event value="2" symbol="DPtunnelcreationError" version="0" task="DPtunnelcreation" opcode="Error" level="win:Error" keywords="Default" template="DPtunnelcreationErrorArgs"/>
+    </events>
+    <templates>
+     <template tid="DPtunnelcreationArgs">
+      <data name="fid_DomainId" inType="win:UInt32"/>
+      <data name="fid_DpOutRouterTopologyId" inType="win:UInt8"/>
+      <data name="fid_DpcdCmId" inType="win:UInt8"/>
+      <data name="fid_DpOutAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_DpInRouterDepth" inType="win:UInt8"/>
+      <data name="fid_DpInAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_IsRebuilding" inType="win:Boolean"/>
+      <data name="fid_Attempts" inType="win:UInt32"/>
+      <data name="fid_DpOutLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpInLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_MaskedRemoteCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpRxPollingDuration" inType="win:UInt64"/>
+      <data name="fid_CommonCapabilities" inType="win:UInt32"/>
+      <data name="fid_BandwidthUsed" inType="win:UInt16"/>
+     </template>
+     <template tid="DPtunnelcreationErrorArgs">
+      <data name="fid_DomainId" inType="win:UInt32"/>
+      <data name="fid_DpOutRouterTopologyId" inType="win:UInt8"/>
+      <data name="fid_DpcdCmId" inType="win:UInt8"/>
+      <data name="fid_DPOutAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_DpInRouterDepth" inType="win:UInt8"/>
+      <data name="fid_DPInAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_IsRebuilding" inType="win:Boolean"/>
+      <data name="fid_Attempts" inType="win:UInt32"/>
+      <data name="fid_DpOutLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpInLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_MaskedRemoteCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpRxPollingDuration" inType="win:UInt64"/>
+      <data name="fid_ReasonCode1" inType="win:UInt64"/>
+      <data name="fid_ReasonCode2" inType="win:UInt64"/>
+      <data name="fid_Status" inType="win:UInt32"/>
+     </template>
+     <template tid="DPtunnelcreationArgs_V1">
+      <data name="fid_DomainId" inType="win:UInt32"/>
+      <data name="fid_DpOutRouterTopologyId" inType="win:UInt8"/>
+      <data name="fid_DpcdCmId" inType="win:UInt8"/>
+      <data name="fid_DpOutAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_DpInRouterDepth" inType="win:UInt8"/>
+      <data name="fid_DpInAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_IsRebuilding" inType="win:Boolean"/>
+      <data name="fid_Attempts" inType="win:UInt32"/>
+      <data name="fid_DpOutLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpInLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_MaskedRemoteCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpRxPollingDuration" inType="win:UInt64"/>
+      <data name="fid_CommonCapabilities" inType="win:UInt32"/>
+      <data name="fid_BandwidthUsed" inType="win:UInt16"/>
+      <data name="fid_DpBwAllocationModeSupported" inType="win:Boolean"/>
+      <data name="fid_DpBwAllocationModeEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="DPtunnelcreationArgs_V2">
+      <data name="fid_DomainId" inType="win:UInt32"/>
+      <data name="fid_DpOutRouterTopologyId" inType="win:UInt8"/>
+      <data name="fid_DpcdCmId" inType="win:UInt8"/>
+      <data name="fid_DpOutAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_DpInRouterDepth" inType="win:UInt8"/>
+      <data name="fid_DpInAdapterNumber" inType="win:UInt8"/>
+      <data name="fid_IsRebuilding" inType="win:Boolean"/>
+      <data name="fid_Attempts" inType="win:UInt32"/>
+      <data name="fid_DpOutLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpInLocalCapabilities" inType="win:UInt32"/>
+      <data name="fid_MaskedRemoteCapabilities" inType="win:UInt32"/>
+      <data name="fid_DpRxPollingDuration" inType="win:UInt64"/>
+      <data name="fid_CommonCapabilities" inType="win:UInt32"/>
+      <data name="fid_BandwidthUsed" inType="win:UInt16"/>
+      <data name="fid_DpBwAllocationModeSupported" inType="win:Boolean"/>
+      <data name="fid_DpBwAllocationModeEnabled" inType="win:Boolean"/>
+      <data name="fid_ALPMEnabled" inType="win:Boolean"/>
+      <data name="fid_LastCL1ExitTime" inType="win:UInt8"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Default" value="Default"/>
+    <string id="task_DPtunnelcreation" value="DPtunnelcreation"/>
+    <string id="opcode_DPtunnelcreationError" value="Error"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

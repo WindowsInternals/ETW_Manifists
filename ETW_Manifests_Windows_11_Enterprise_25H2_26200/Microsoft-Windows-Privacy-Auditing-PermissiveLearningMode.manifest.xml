@@ -1,0 +1,34 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Privacy-Auditing-PermissiveLearningMode" guid="{811a1ddb-2e69-5f25-adc0-4b186170e760}" resourceFileName="Microsoft-Windows-Privacy-Auditing-PermissiveLearningMode" messageFileName="Microsoft-Windows-Privacy-Auditing-PermissiveLearningMode" symbol="MicrosoftWindowsPrivacyAuditingPermissiveLearningMode" source="Xml" >
+    <keywords>
+     <keyword name="AccessCheck" message="$(string.keyword_AccessCheck)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="AccessCheck" message="$(string.task_AccessCheck)" value="10"/>
+    </tasks>
+    <events>
+     <event value="2000" symbol="AccessCheck" version="0" task="AccessCheck" level="win:Informational" keywords="AccessCheck" template="AccessCheckArgs"/>
+    </events>
+    <templates>
+     <template tid="AccessCheckArgs">
+      <data name="TargetUserSid" inType="win:SID"/>
+      <data name="CapabilityName" inType="win:UnicodeString"/>
+      <data name="CapabilitySid" inType="win:SID"/>
+      <data name="AppPackageFamilyName" inType="win:UnicodeString"/>
+      <data name="PackageSid" inType="win:SID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_AccessCheck" value="AccessCheck"/>
+    <string id="task_AccessCheck" value="AccessCheck"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

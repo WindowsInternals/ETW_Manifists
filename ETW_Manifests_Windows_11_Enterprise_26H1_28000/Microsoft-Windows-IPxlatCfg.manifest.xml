@@ -1,0 +1,162 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-IPxlatCfg" guid="{3e5ac668-af52-4c15-b99b-a3e7a6616ebd}" resourceFileName="Microsoft-Windows-IPxlatCfg" messageFileName="Microsoft-Windows-IPxlatCfg" symbol="MicrosoftWindowsIPxlatCfg" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="IpxlatTriggerSource_ValueMap">
+      <map value="0x0" message="$(string.map_IpxlatTriggerSource_ValueMapUnknown)"/>
+      <map value="0x1" message="$(string.map_IpxlatTriggerSource_ValueMapPref64 RA)"/>
+      <map value="0x2" message="$(string.map_IpxlatTriggerSource_ValueMapDHCP Option 108)"/>
+      <map value="0x3" message="$(string.map_IpxlatTriggerSource_ValueMapNo IPv4)"/>
+      <map value="0x4" message="$(string.map_IpxlatTriggerSource_ValueMapWWAN)"/>
+      <map value="0x5" message="$(string.map_IpxlatTriggerSource_ValueMapManual)"/>
+      <map value="0x6" message="$(string.map_IpxlatTriggerSource_ValueMapDevelopment)"/>
+     </valueMap>
+     <valueMap name="RemotePrefixOrigin_ValueMap">
+      <map value="0x1" message="$(string.map_RemotePrefixOrigin_ValueMapDNS)"/>
+      <map value="0x2" message="$(string.map_RemotePrefixOrigin_ValueMapRA)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1001" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="1002" symbol="task_01002" version="0" task="task_0" level="win:Error" template="task_01002Args"/>
+     <event value="1003" symbol="task_01003" version="0" task="task_0" level="win:Informational" template="task_01003Args"/>
+     <event value="1005" symbol="task_01005" version="0" task="task_0" level="win:Informational" template="task_01005Args"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Informational" template="task_01006Args"/>
+     <event value="1007" symbol="task_01007" version="0" task="task_0" level="win:Informational" template="task_01007Args"/>
+     <event value="1008" symbol="task_01008" version="0" task="task_0" level="win:Informational" template="task_01008Args"/>
+     <event value="1009" symbol="task_01009" version="0" task="task_0" level="win:Informational" template="task_01009Args"/>
+     <event value="1010" symbol="task_01010" version="0" task="task_0" level="win:Informational" template="task_01010Args"/>
+     <event value="1011" symbol="task_01011" version="0" task="task_0" level="win:Informational" template="task_01011Args"/>
+     <event value="1101" symbol="task_0Start" version="0" task="task_0" opcode="win:Start" level="win:Informational" template="task_0StartArgs"/>
+     <event value="1102" symbol="task_0Stop" version="0" task="task_0" opcode="win:Stop" level="win:Informational" template="task_0StartArgs"/>
+     <event value="1103" symbol="task_01103" version="0" task="task_0" level="win:Informational" template="task_01007Args"/>
+     <event value="1104" symbol="task_01104" version="0" task="task_0" level="win:Informational" template="task_01104Args"/>
+     <event value="1105" symbol="task_01105" version="0" task="task_0" level="win:Error" template="task_01105Args"/>
+     <event value="1106" symbol="task_0Start1106" version="0" task="task_0" opcode="win:Start" level="win:Informational" template="task_0Start1106Args"/>
+     <event value="1107" symbol="task_0Stop1107" version="0" task="task_0" opcode="win:Stop" level="win:Informational" template="task_0Stop1107Args"/>
+     <event value="1108" symbol="task_01108" version="0" task="task_0" level="win:Informational" template="task_01108Args"/>
+     <event value="1109" symbol="task_0Start1109" version="0" task="task_0" opcode="win:Start" level="win:Informational" template="task_0Start1109Args"/>
+     <event value="1110" symbol="task_0Stop1110" version="0" task="task_0" opcode="win:Stop" level="win:Informational" template="task_01010Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="ErrorString" inType="win:AnsiString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01002Args">
+      <data name="ErrorString" inType="win:AnsiString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01003Args">
+      <data name="InfoString" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_01005Args">
+      <data name="IPv4Address" inType="win:UInt32"/>
+      <data name="IPv4Prefix" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01006Args">
+      <data name="InfoString" inType="win:AnsiString"/>
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01007Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="Prefix" inType="win:Binary"/>
+      <data name="PrefixLength" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01008Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="IPv4Address" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01009Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="IPv6Address" inType="win:Binary"/>
+     </template>
+     <template tid="task_01010Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01011Args">
+      <data name="InfoString" inType="win:AnsiString"/>
+      <data name="MTU" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0StartArgs">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="Metric" inType="win:UInt32"/>
+      <data name="RemotePrefix" inType="win:Binary"/>
+      <data name="RemotePrefixLength" inType="win:UInt32"/>
+      <data name="LocalPrefix" inType="win:Binary"/>
+      <data name="LocalPrefixLength" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01104Args">
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01105Args">
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Start1106Args">
+      <data name="TriggerSource" inType="win:UInt32" map="IpxlatTriggerSource_ValueMap"/>
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="Metric" inType="win:UInt32"/>
+      <data name="RemotePrefixLengthBytes" inType="win:UInt32"/>
+      <data name="RemotePrefix" inType="win:Binary" length="RemotePrefixLengthBytes"/>
+      <data name="RemotePrefixLengthBits" inType="win:UInt32"/>
+      <data name="LocalPrefixLengthBytes" inType="win:UInt32"/>
+      <data name="LocalPrefix" inType="win:Binary" length="LocalPrefixLengthBytes"/>
+      <data name="LocalPrefixLengthBits" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0Stop1107Args">
+      <data name="TriggerSource" inType="win:UInt32"/>
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="Metric" inType="win:UInt32"/>
+      <data name="RemotePrefixLengthBytes" inType="win:UInt32"/>
+      <data name="RemotePrefix" inType="win:Binary" length="RemotePrefixLengthBytes"/>
+      <data name="RemotePrefixLengthBits" inType="win:UInt32"/>
+      <data name="LocalPrefixLengthBytes" inType="win:UInt32"/>
+      <data name="LocalPrefix" inType="win:Binary" length="LocalPrefixLengthBytes"/>
+      <data name="LocalPrefixLengthBits" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01108Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="RemotePrefixLengthBytes" inType="win:UInt32"/>
+      <data name="RemotePrefix" inType="win:Binary" length="RemotePrefixLengthBytes"/>
+      <data name="RemotePrefixLengthBits" inType="win:UInt32"/>
+      <data name="RemotePrefixLifetimeSeconds" inType="win:UInt32"/>
+      <data name="RemotePrefixOrigin" inType="win:UInt32" map="RemotePrefixOrigin_ValueMap"/>
+     </template>
+     <template tid="task_0Start1109Args">
+      <data name="InterfaceLuid" inType="win:UInt64"/>
+      <data name="RemotePrefixLengthBytes" inType="win:UInt32"/>
+      <data name="RemotePrefix" inType="win:Binary" length="RemotePrefixLengthBytes"/>
+      <data name="RemotePrefixLengthBits" inType="win:UInt32"/>
+      <data name="SyntheticIPv6AddressLengthBytes" inType="win:UInt32"/>
+      <data name="SyntheticIPv6Address" inType="win:Binary" length="SyntheticIPv6AddressLengthBytes"/>
+      <data name="SyntheticIPv4Address" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_IpxlatTriggerSource_ValueMapUnknown" value="Unknown"/>
+    <string id="map_IpxlatTriggerSource_ValueMapPref64 RA" value="Pref64 RA"/>
+    <string id="map_IpxlatTriggerSource_ValueMapDHCP Option 108" value="DHCP Option 108"/>
+    <string id="map_IpxlatTriggerSource_ValueMapNo IPv4" value="No IPv4"/>
+    <string id="map_IpxlatTriggerSource_ValueMapWWAN" value="WWAN"/>
+    <string id="map_IpxlatTriggerSource_ValueMapManual" value="Manual"/>
+    <string id="map_IpxlatTriggerSource_ValueMapDevelopment" value="Development"/>
+    <string id="map_RemotePrefixOrigin_ValueMapDNS" value="DNS"/>
+    <string id="map_RemotePrefixOrigin_ValueMapRA" value="RA"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

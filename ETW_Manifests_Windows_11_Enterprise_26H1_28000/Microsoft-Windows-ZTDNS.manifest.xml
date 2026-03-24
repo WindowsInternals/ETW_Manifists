@@ -1,0 +1,191 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-ZTDNS" guid="{8507cd07-f18b-54f0-b871-23c43a5bf118}" resourceFileName="Microsoft-Windows-ZTDNS" messageFileName="Microsoft-Windows-ZTDNS" symbol="MicrosoftWindowsZTDNS" source="Xml" >
+    <keywords>
+     <keyword name="Keyword_Classify_Permit" message="$(string.keyword_Keyword_Classify_Permit)" mask="0x1"/>
+     <keyword name="Keyword_Classify_Block" message="$(string.keyword_Keyword_Classify_Block)" mask="0x2"/>
+     <keyword name="Keyword_Trusted_Servers_Update" message="$(string.keyword_Keyword_Trusted_Servers_Update)" mask="0x4"/>
+     <keyword name="Keyword_Exceptions_Removal" message="$(string.keyword_Keyword_Exceptions_Removal)" mask="0x8"/>
+     <keyword name="Keyword_Exceptions_Addition" message="$(string.keyword_Keyword_Exceptions_Addition)" mask="0x10"/>
+     <keyword name="Keyword_State_Update" message="$(string.keyword_Keyword_State_Update)" mask="0x20"/>
+     <keyword name="Keyword_Service_Start" message="$(string.keyword_Keyword_Service_Start)" mask="0x40"/>
+     <keyword name="Keyword_Service_Stop" message="$(string.keyword_Keyword_Service_Stop)" mask="0x80"/>
+     <keyword name="Keyword_Zt_Validate_Configuration" message="$(string.keyword_Keyword_Zt_Validate_Configuration)" mask="0x100"/>
+    </keywords>
+    <tasks>
+     <task name="Task_Classify" message="$(string.task_Task_Classify)" value="1">
+>
+      <opcodes>
+       <opcode name="Opcode_Classify" message="$(string.opcode_Task_ClassifyOpcode_Classify)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="Task_Notify" message="$(string.task_Task_Notify)" value="2">
+>
+      <opcodes>
+       <opcode name="Opcode_Notify" message="$(string.opcode_Task_NotifyOpcode_Notify)" value="20"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="Map.PermitType">
+      <map value="0x0" message="$(string.map_Map.PermitTypeUnknown)"/>
+      <map value="0x1" message="$(string.map_Map.PermitTypeTrusted Name Server)"/>
+      <map value="0x2" message="$(string.map_Map.PermitTypeStatic Exception)"/>
+      <map value="0x3" message="$(string.map_Map.PermitTypeResolved)"/>
+      <map value="0x4" message="$(string.map_Map.PermitTypeDHCP Exception)"/>
+      <map value="0x5" message="$(string.map_Map.PermitTypeNeighbor Discovery Exception)"/>
+      <map value="0x6" message="$(string.map_Map.PermitTypemDNS Exception)"/>
+      <map value="0x7" message="$(string.map_Map.PermitTypeLocal Machine IP Exception)"/>
+      <map value="0x8" message="$(string.map_Map.PermitTypeICS DHCP Server Exception)"/>
+     </valueMap>
+     <valueMap name="Map.ExceptionsUpdateType">
+      <map value="0x0" message="$(string.map_Map.ExceptionsUpdateTypeNo exceptions)"/>
+      <map value="0x1" message="$(string.map_Map.ExceptionsUpdateTypeSubnet exception)"/>
+      <map value="0x2" message="$(string.map_Map.ExceptionsUpdateTypeMultiple subnet exceptions)"/>
+     </valueMap>
+     <valueMap name="Map.ServiceState">
+      <map value="0x0" message="$(string.map_Map.ServiceStateUnknown)"/>
+      <map value="0x1" message="$(string.map_Map.ServiceStateDisabled)"/>
+      <map value="0x2" message="$(string.map_Map.ServiceStateEnabled)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="Task_ClassifyOpcode_Classify" version="0" task="Task_Classify" opcode="Opcode_Classify" level="win:Informational" keywords="Keyword_Classify_Permit" template="Task_ClassifyOpcode_ClassifyArgs"/>
+     <event value="2" symbol="Task_ClassifyOpcode_Classify2" version="0" task="Task_Classify" opcode="Opcode_Classify" level="win:Informational" keywords="Keyword_Classify_Block" template="Task_ClassifyOpcode_Classify2Args"/>
+     <event value="3" symbol="Task_NotifyOpcode_Notify" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Trusted_Servers_Update" template="Task_NotifyOpcode_NotifyArgs"/>
+     <event value="4" symbol="Task_NotifyOpcode_Notify4" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Exceptions_Removal" template="Task_NotifyOpcode_Notify4Args"/>
+     <event value="5" symbol="Task_NotifyOpcode_Notify5" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Exceptions_Addition" template="Task_NotifyOpcode_Notify5Args"/>
+     <event value="6" symbol="Task_NotifyOpcode_Notify6" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_State_Update" template="Task_NotifyOpcode_Notify6Args"/>
+     <event value="7" symbol="Task_NotifyOpcode_Notify7" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Service_Start" template="Task_NotifyOpcode_Notify7Args"/>
+     <event value="8" symbol="Task_NotifyOpcode_Notify8" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Service_Stop" template="Task_NotifyOpcode_Notify7Args"/>
+     <event value="9" symbol="Task_NotifyOpcode_Notify9" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify9Args"/>
+     <event value="10" symbol="Task_NotifyOpcode_Notify10" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify10Args"/>
+     <event value="11" symbol="Task_NotifyOpcode_Notify11" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify11Args"/>
+     <event value="12" symbol="Task_NotifyOpcode_Notify12" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify12Args"/>
+     <event value="13" symbol="Task_NotifyOpcode_Notify13" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify13Args"/>
+     <event value="14" symbol="Task_NotifyOpcode_Notify14" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify11Args"/>
+     <event value="15" symbol="Task_NotifyOpcode_Notify15" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify11Args"/>
+     <event value="16" symbol="Task_NotifyOpcode_Notify16" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify11Args"/>
+     <event value="17" symbol="Task_NotifyOpcode_Notify17" version="0" task="Task_Notify" opcode="Opcode_Notify" level="win:Informational" keywords="Keyword_Zt_Validate_Configuration" template="Task_NotifyOpcode_Notify17Args"/>
+    </events>
+    <templates>
+     <template tid="Task_ClassifyOpcode_ClassifyArgs">
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="LocalPort" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="RemotePort" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+      <data name="PermitType" inType="win:UInt32" map="Map.PermitType"/>
+      <data name="PermitInfo" inType="win:UnicodeString"/>
+      <data name="ServiceName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_ClassifyOpcode_Classify2Args">
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="LocalPort" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="RemotePort" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+      <data name="ServiceName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_NotifyOpcode_NotifyArgs">
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify4Args">
+      <data name="ExceptionsUpdateType" inType="win:UInt32" map="Map.ExceptionsUpdateType"/>
+      <data name="ExceptionName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify5Args">
+      <data name="ExceptionsUpdateType" inType="win:UInt32"/>
+      <data name="ExceptionName" inType="win:UnicodeString"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify6Args">
+      <data name="ServiceState" inType="win:UInt32" map="Map.ServiceState"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ProcessPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify7Args">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify9Args">
+      <data name="Servers" inType="win:UnicodeString"/>
+      <data name="TrustedCAs" inType="win:UnicodeString"/>
+      <data name="ClientCertificateHashes" inType="win:UnicodeString"/>
+      <data name="ClientCertificateEKUs" inType="win:UnicodeString"/>
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify10Args">
+      <data name="TrustedCAsReady" inType="win:Boolean"/>
+      <data name="ClientCertificatesReady" inType="win:Boolean"/>
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify11Args">
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify12Args">
+      <data name="Servers" inType="win:UnicodeString"/>
+      <data name="RetryCount" inType="win:UInt64"/>
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify13Args">
+      <data name="Servers" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="RetryCount" inType="win:UInt64"/>
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+     <template tid="Task_NotifyOpcode_Notify17Args">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="CorrelationId" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Keyword_Classify_Permit" value="Keyword_Classify_Permit"/>
+    <string id="keyword_Keyword_Classify_Block" value="Keyword_Classify_Block"/>
+    <string id="keyword_Keyword_Trusted_Servers_Update" value="Keyword_Trusted_Servers_Update"/>
+    <string id="keyword_Keyword_Exceptions_Removal" value="Keyword_Exceptions_Removal"/>
+    <string id="keyword_Keyword_Exceptions_Addition" value="Keyword_Exceptions_Addition"/>
+    <string id="keyword_Keyword_State_Update" value="Keyword_State_Update"/>
+    <string id="keyword_Keyword_Service_Start" value="Keyword_Service_Start"/>
+    <string id="keyword_Keyword_Service_Stop" value="Keyword_Service_Stop"/>
+    <string id="keyword_Keyword_Zt_Validate_Configuration" value="Keyword_Zt_Validate_Configuration"/>
+    <string id="task_Task_Classify" value="Task_Classify"/>
+    <string id="opcode_Task_ClassifyOpcode_Classify" value="Opcode_Classify"/>
+    <string id="task_Task_Notify" value="Task_Notify"/>
+    <string id="opcode_Task_NotifyOpcode_Notify" value="Opcode_Notify"/>
+    <string id="map_Map.PermitTypeUnknown" value="Unknown"/>
+    <string id="map_Map.PermitTypeTrusted Name Server" value="Trusted Name Server"/>
+    <string id="map_Map.PermitTypeStatic Exception" value="Static Exception"/>
+    <string id="map_Map.PermitTypeResolved" value="Resolved"/>
+    <string id="map_Map.PermitTypeDHCP Exception" value="DHCP Exception"/>
+    <string id="map_Map.PermitTypeNeighbor Discovery Exception" value="Neighbor Discovery Exception"/>
+    <string id="map_Map.PermitTypemDNS Exception" value="mDNS Exception"/>
+    <string id="map_Map.PermitTypeLocal Machine IP Exception" value="Local Machine IP Exception"/>
+    <string id="map_Map.PermitTypeICS DHCP Server Exception" value="ICS DHCP Server Exception"/>
+    <string id="map_Map.ExceptionsUpdateTypeNo exceptions" value="No exceptions"/>
+    <string id="map_Map.ExceptionsUpdateTypeSubnet exception" value="Subnet exception"/>
+    <string id="map_Map.ExceptionsUpdateTypeMultiple subnet exceptions" value="Multiple subnet exceptions"/>
+    <string id="map_Map.ServiceStateUnknown" value="Unknown"/>
+    <string id="map_Map.ServiceStateDisabled" value="Disabled"/>
+    <string id="map_Map.ServiceStateEnabled" value="Enabled"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

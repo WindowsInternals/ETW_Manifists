@@ -1,0 +1,80 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MosHost" guid="{d116f0f2-a6d6-4f1f-bdda-0c88c8d1f2e9}" resourceFileName="Microsoft-Windows-MosHost" messageFileName="Microsoft-Windows-MosHost" symbol="MicrosoftWindowsMosHost" source="Xml" >
+    <keywords>
+     <keyword name="API" message="$(string.keyword_API)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="MosHost" message="$(string.task_MosHost)" value="1"/>
+     <task name="Odml" message="$(string.task_Odml)" value="2"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="MosHost" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHostArgs"/>
+     <event value="2" symbol="MosHost2" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost2Args"/>
+     <event value="3" symbol="MosHost3" version="0" task="MosHost" level="win:Error" keywords="API" template="MosHost3Args"/>
+     <event value="10" symbol="MosHost10" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost10Args"/>
+     <event value="20" symbol="MosHost20" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="21" symbol="MosHost21" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="30" symbol="MosHost30" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="31" symbol="MosHost31" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="50" symbol="MosHost50" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="70" symbol="MosHost70" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="80" symbol="MosHost80" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="90" symbol="MosHost90" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="100" symbol="MosHost100" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="101" symbol="MosHost101" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost101Args"/>
+     <event value="110" symbol="MosHost110" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="111" symbol="MosHost111" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost101Args"/>
+     <event value="120" symbol="MosHost120" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="121" symbol="MosHost121" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost101Args"/>
+     <event value="130" symbol="MosHost130" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="131" symbol="MosHost131" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost2Args"/>
+     <event value="150" symbol="MosHost150" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="151" symbol="MosHost151" version="0" task="MosHost" level="win:Informational" keywords="API"/>
+     <event value="152" symbol="MosHost152" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost152Args"/>
+     <event value="153" symbol="MosHost153" version="0" task="MosHost" level="win:Informational" keywords="API" template="MosHost152Args"/>
+     <event value="1000" symbol="Odml" version="0" task="Odml" level="win:Informational" keywords="API"/>
+     <event value="1001" symbol="Odml1001" version="0" task="Odml" level="win:Informational" keywords="API"/>
+     <event value="1010" symbol="OdmlStart" version="0" task="Odml" opcode="win:Start" level="win:Informational" keywords="API Performance"/>
+     <event value="1011" symbol="OdmlStop" version="0" task="Odml" opcode="win:Stop" level="win:Informational" keywords="API Performance"/>
+    </events>
+    <templates>
+     <template tid="MosHostArgs">
+      <data name="String1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MosHost2Args">
+      <data name="String1" inType="win:UnicodeString"/>
+      <data name="String2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="MosHost3Args">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MosHost10Args">
+      <data name="HRESULT" inType="win:UInt32"/>
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="MosHost101Args">
+      <data name="Dword1" inType="win:UInt32"/>
+      <data name="Dword2" inType="win:UInt32"/>
+     </template>
+     <template tid="MosHost152Args">
+      <data name="Dword1" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_API" value="API"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="task_MosHost" value="MosHost"/>
+    <string id="task_Odml" value="Odml"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

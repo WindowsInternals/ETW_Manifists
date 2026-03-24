@@ -1,0 +1,198 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-TPM-WMI" guid="{7d5387b0-cbe0-11da-a94d-0800200c9a66}" resourceFileName="Microsoft-Windows-TPM-WMI" messageFileName="Microsoft-Windows-TPM-WMI" symbol="MicrosoftWindowsTPMWMI" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="ProvisionAuthLevelMap">
+      <map value="0x0" message="$(string.map_ProvisionAuthLevelMapLegacy)"/>
+      <map value="0x1" message="$(string.map_ProvisionAuthLevelMapResetLockPlusUser)"/>
+      <map value="0x2" message="$(string.map_ProvisionAuthLevelMapBalanced)"/>
+      <map value="0x3" message="$(string.map_ProvisionAuthLevelMapFullOwnerAuth)"/>
+      <map value="0x4" message="$(string.map_ProvisionAuthLevelMapFull)"/>
+      <map value="0x5" message="$(string.map_ProvisionAuthLevelMapLevelCount)"/>
+      <map value="0x8" message="$(string.map_ProvisionAuthLevelMapNullBitValue)"/>
+      <map value="0xa" message="$(string.map_ProvisionAuthLevelMapNull)"/>
+      <map value="0xc" message="$(string.map_ProvisionAuthLevelMapLockout)"/>
+      <map value="0xffffffff" message="$(string.map_ProvisionAuthLevelMapInvalid)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="513" symbol="task_0" version="0" task="task_0" level="win:Informational"/>
+     <event value="514" symbol="task_0514" version="0" task="task_0" level="win:Warning" template="task_0514Args"/>
+     <event value="515" symbol="task_0515" version="0" task="task_0" level="win:Warning"/>
+     <event value="516" symbol="task_0516" version="0" task="task_0" level="win:Informational"/>
+     <event value="517" symbol="task_0517" version="0" task="task_0" level="win:Warning" template="task_0517Args"/>
+     <event value="518" symbol="task_0518" version="0" task="task_0" level="win:Informational" template="task_0517Args"/>
+     <event value="519" symbol="task_0519" version="0" task="task_0" level="win:Informational" template="task_0519Args"/>
+     <event value="769" symbol="task_0769" version="0" task="task_0" level="win:Informational" template="task_0769Args"/>
+     <event value="1025" symbol="task_01025" version="0" task="task_0" level="win:Informational"/>
+     <event value="1026" symbol="task_01026" version="0" task="task_0" level="win:Informational" template="task_01026Args"/>
+     <event value="1027" symbol="task_01027" version="0" task="task_0" level="win:Informational"/>
+     <event value="1028" symbol="task_01028" version="0" task="task_0" level="win:Informational"/>
+     <event value="1029" symbol="task_01029" version="0" task="task_0" level="win:Informational" template="task_0514Args"/>
+     <event value="1030" symbol="task_01030" version="0" task="task_0" level="win:Informational"/>
+     <event value="1031" symbol="task_01031" version="0" task="task_0" level="win:Informational" template="task_0514Args"/>
+     <event value="1032" symbol="task_01032" version="0" task="task_0" level="win:Error"/>
+     <event value="1032" symbol="task_01032_V2" version="2" task="task_0" level="win:Error" template="task_01032Args_V2"/>
+     <event value="1033" symbol="task_01033" version="0" task="task_0" level="win:Error" template="task_01033Args"/>
+     <event value="1034" symbol="task_01034" version="0" task="task_0" level="win:Informational"/>
+     <event value="1035" symbol="task_01035" version="0" task="task_0" level="win:Informational"/>
+     <event value="1036" symbol="task_01036" version="0" task="task_0" level="win:Informational"/>
+     <event value="1037" symbol="task_01037" version="0" task="task_0" level="win:Informational"/>
+     <event value="1038" symbol="task_01038" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1039" symbol="task_01039" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1040" symbol="task_01040" version="0" task="task_0" level="win:Error" template="task_01033Args"/>
+     <event value="1041" symbol="task_01041" version="0" task="task_0" level="win:Informational" template="task_01041Args"/>
+     <event value="1042" symbol="task_01042" version="0" task="task_0" level="win:Informational"/>
+     <event value="1043" symbol="task_01043" version="0" task="task_0" level="win:Informational"/>
+     <event value="1044" symbol="task_01044" version="0" task="task_0" level="win:Informational"/>
+     <event value="1045" symbol="task_01045" version="0" task="task_0" level="win:Informational"/>
+     <event value="1046" symbol="task_01046" version="0" task="task_0" level="win:Informational" template="task_01046Args"/>
+     <event value="1047" symbol="task_01047" version="0" task="task_0" level="win:Warning" template="task_01047Args"/>
+     <event value="1281" symbol="task_01281" version="0" task="task_0" level="win:Informational"/>
+     <event value="1282" symbol="task_01282" version="0" task="task_0" level="win:Informational"/>
+     <event value="1283" symbol="task_01283" version="0" task="task_0" level="win:Informational"/>
+     <event value="1284" symbol="task_01284" version="0" task="task_0" level="win:Informational" template="task_01284Args"/>
+     <event value="1285" symbol="task_01285" version="0" task="task_0" level="win:Informational" template="task_01285Args"/>
+     <event value="1537" symbol="task_01537" version="0" task="task_0" level="win:Informational" template="task_01537Args"/>
+     <event value="1538" symbol="task_01538" version="0" task="task_0" level="win:Warning" template="task_01538Args"/>
+     <event value="1539" symbol="task_01539" version="0" task="task_0" level="win:Warning" template="task_01539Args"/>
+     <event value="1793" symbol="task_01793" version="0" task="task_0" level="win:Informational"/>
+     <event value="1794" symbol="task_01794" version="0" task="task_0" level="win:Error"/>
+     <event value="1795" symbol="task_01795_V1" version="1" task="task_0" level="win:Error" template="task_0517Args"/>
+     <event value="1795" symbol="task_01795_V2" version="2" task="task_0" level="win:Error" template="task_01795Args_V2"/>
+     <event value="1795" symbol="task_01795_V4" version="4" task="task_0" level="win:Error" template="task_01795Args_V4"/>
+     <event value="1796" symbol="task_01796_V1" version="1" task="task_0" level="win:Error" template="task_0517Args"/>
+     <event value="1796" symbol="task_01796_V2" version="2" task="task_0" level="win:Error" template="task_01795Args_V2"/>
+     <event value="1796" symbol="task_01796_V3" version="3" task="task_0" level="win:Error" template="task_01796Args_V3"/>
+     <event value="1797" symbol="task_01797" version="0" task="task_0" level="win:Error"/>
+     <event value="1798" symbol="task_01798" version="0" task="task_0" level="win:Error"/>
+     <event value="1799" symbol="task_01799" version="0" task="task_0" level="win:Informational"/>
+     <event value="1800" symbol="task_01800_V1" version="1" task="task_0" level="win:Warning" template="task_01800Args_V1"/>
+     <event value="1800" symbol="task_01800_V2" version="2" task="task_0" level="win:Warning" template="task_01800Args_V2"/>
+     <event value="1800" symbol="task_01800_V3" version="3" task="task_0" level="win:Warning" template="task_01032Args_V2"/>
+     <event value="1801" symbol="task_01801_V2" version="2" task="task_0" level="win:Error" template="task_01801Args_V2"/>
+     <event value="1802" symbol="task_01802_V1" version="1" task="task_0" level="win:Error" template="task_01802Args_V1"/>
+     <event value="1803" symbol="task_01803_V1" version="1" task="task_0" level="win:Error" template="task_01803Args_V1"/>
+     <event value="1808" symbol="task_01808_V2" version="2" task="task_0" level="win:Informational" template="task_01801Args_V2"/>
+    </events>
+    <templates>
+     <template tid="task_0514Args">
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0517Args">
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0519Args">
+      <data name="ClearReason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0769Args">
+      <data name="OldOSManagedAuthLevel" inType="win:UInt32" map="ProvisionAuthLevelMap"/>
+      <data name="NewOSManagedAuthLevel" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01026Args">
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="StatusInformation" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_01033Args">
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01041Args">
+      <data name="Json" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01046Args">
+      <data name="FilesCount" inType="win:UInt16"/>
+      <data name="Files" inType="win:UnicodeString" count="FilesCount"/>
+     </template>
+     <template tid="task_01047Args">
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01284Args">
+      <data name="Millisecondstaken" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01285Args">
+      <data name="Millisecondstaken" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_01537Args">
+      <data name="HealthAttestationServer" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01538Args">
+      <data name="HealthAttestationServer" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_01539Args">
+      <data name="HealthAttestationServer" inType="win:UnicodeString"/>
+      <data name="HTTPStatus" inType="win:Int32"/>
+      <data name="ServerResponse" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01800Args_V1">
+      <data name="RebootReason" inType="win:Int32"/>
+     </template>
+     <template tid="task_01802Args_V1">
+      <data name="UpdateType" inType="win:UnicodeString"/>
+      <data name="DeviceAttributes" inType="win:UnicodeString"/>
+      <data name="BucketId" inType="win:UnicodeString"/>
+      <data name="BucketConfidenceLevel" inType="win:UnicodeString"/>
+      <data name="SkipReason" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01803Args_V1">
+      <data name="DeviceAttributes" inType="win:UnicodeString"/>
+      <data name="BucketId" inType="win:UnicodeString"/>
+      <data name="BucketConfidenceLevel" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01032Args_V2">
+      <data name="UpdateType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01795Args_V2">
+      <data name="HResult" inType="win:Int32"/>
+      <data name="UpdateType" inType="win:Int32"/>
+     </template>
+     <template tid="task_01800Args_V2">
+      <data name="UpdateType" inType="win:Int32"/>
+     </template>
+     <template tid="task_01801Args_V2">
+      <data name="DeviceAttributes" inType="win:UnicodeString"/>
+      <data name="BucketId" inType="win:UnicodeString"/>
+      <data name="BucketConfidenceLevel" inType="win:UnicodeString"/>
+      <data name="UpdateType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01796Args_V3">
+      <data name="UpdateType" inType="win:UnicodeString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_01795Args_V4">
+      <data name="HResult" inType="win:Int32"/>
+      <data name="UpdateType" inType="win:UnicodeString"/>
+      <data name="DeviceAttributes" inType="win:UnicodeString"/>
+      <data name="BucketId" inType="win:UnicodeString"/>
+      <data name="BucketConfidenceLevel" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_ProvisionAuthLevelMapLegacy" value="Legacy"/>
+    <string id="map_ProvisionAuthLevelMapResetLockPlusUser" value="ResetLockPlusUser"/>
+    <string id="map_ProvisionAuthLevelMapBalanced" value="Balanced"/>
+    <string id="map_ProvisionAuthLevelMapFullOwnerAuth" value="FullOwnerAuth"/>
+    <string id="map_ProvisionAuthLevelMapFull" value="Full"/>
+    <string id="map_ProvisionAuthLevelMapLevelCount" value="LevelCount"/>
+    <string id="map_ProvisionAuthLevelMapNullBitValue" value="NullBitValue"/>
+    <string id="map_ProvisionAuthLevelMapNull" value="Null"/>
+    <string id="map_ProvisionAuthLevelMapLockout" value="Lockout"/>
+    <string id="map_ProvisionAuthLevelMapInvalid" value="Invalid"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

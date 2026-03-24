@@ -1,0 +1,54 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PDH" guid="{04d66358-c4a1-419b-8023-23b73902de2c}" resourceFileName="Microsoft-Windows-PDH" messageFileName="Microsoft-Windows-PDH" symbol="MicrosoftWindowsPDH" source="Xml" >
+    <keywords>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+>
+      <opcodes>
+       <opcode name="opcode_192" message="$(string.opcode_task_0opcode_192)" value="192"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1000" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Debug" template="task_0Args"/>
+     <event value="1000" symbol="task_0_V1" version="1" task="task_0" level="win:Informational" keywords="Debug" template="task_0Args_V1"/>
+     <event value="3040" symbol="task_0PCODE_192pcode_192" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3041" symbol="task_0PCODE_192pcode_1923041" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3042" symbol="task_0PCODE_192pcode_1923042" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3043" symbol="task_0PCODE_192pcode_1923043" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3044" symbol="task_0PCODE_192pcode_1923044" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3045" symbol="task_0PCODE_192pcode_1923045" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3046" symbol="task_0PCODE_192pcode_1923046" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+     <event value="3047" symbol="task_0PCODE_192pcode_1923047" version="0" task="task_0" opcode="opcode_192" level="win:Always"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="NativeError" inType="win:UInt32"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="OdbcApi" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0Args_V1">
+      <data name="Message" inType="win:AnsiString"/>
+      <data name="NativeError" inType="win:UInt32"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="OdbcApi" inType="win:AnsiString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcode_192" value="opcode_192"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,48 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-ReFsDedupSvc" guid="{596cb176-fb71-587a-8ffb-f5cf15ee1e36}" resourceFileName="Microsoft-Windows-ReFsDedupSvc" messageFileName="Microsoft-Windows-ReFsDedupSvc" symbol="MicrosoftWindowsReFsDedupSvc" source="Xml" >
+    <keywords>
+     <keyword name="svc" message="$(string.keyword_svc)" mask="0x10"/>
+     <keyword name="job" message="$(string.keyword_job)" mask="0x20"/>
+     <keyword name="vol" message="$(string.keyword_vol)" mask="0x40"/>
+    </keywords>
+    <tasks>
+     <task name="Status" message="$(string.task_Status)" value="1"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="StatusStart" version="0" task="Status" opcode="win:Start" level="win:Informational" keywords="svc"/>
+     <event value="2" symbol="StatusStop" version="0" task="Status" opcode="win:Stop" level="win:Informational" keywords="svc" template="StatusStopArgs"/>
+     <event value="3" symbol="StatusStart3" version="0" task="Status" opcode="win:Start" level="win:Informational" keywords="job vol" template="StatusStopArgs"/>
+     <event value="4" symbol="StatusStop4_V1" version="1" task="Status" opcode="win:Stop" level="win:Informational" keywords="job vol" template="StatusStopArgs"/>
+     <event value="5" symbol="Status" version="0" task="Status" level="win:Informational" keywords="vol" template="StatusStopArgs"/>
+     <event value="6" symbol="StatusStart6" version="0" task="Status" opcode="win:Start" level="win:Informational" keywords="vol" template="StatusStopArgs"/>
+     <event value="7" symbol="StatusStop7" version="0" task="Status" opcode="win:Stop" level="win:Informational" keywords="vol" template="StatusStopArgs"/>
+     <event value="8" symbol="Status8" version="0" task="Status" level="win:Warning" keywords="job vol" template="StatusStopArgs"/>
+     <event value="9" symbol="Status9" version="0" task="Status" level="win:Warning" keywords="vol" template="StatusStopArgs"/>
+     <event value="10" symbol="Status10" version="0" task="Status" level="win:Warning" keywords="vol" template="StatusStopArgs"/>
+     <event value="11" symbol="Status11" version="0" task="Status" level="win:Error" keywords="vol" template="StatusStopArgs"/>
+     <event value="12" symbol="Status12" version="0" task="Status" level="win:Informational" keywords="vol" template="StatusStopArgs"/>
+     <event value="13" symbol="StatusStop13" version="0" task="Status" opcode="win:Stop" level="win:Error" keywords="job vol" template="StatusStopArgs"/>
+     <event value="14" symbol="Status14" version="0" task="Status" level="win:Informational" keywords="vol" template="StatusStopArgs"/>
+     <event value="15" symbol="Status15" version="0" task="Status" level="win:Warning" keywords="vol" template="StatusStopArgs"/>
+    </events>
+    <templates>
+     <template tid="StatusStopArgs">
+      <data name="JSON" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_svc" value="svc"/>
+    <string id="keyword_job" value="job"/>
+    <string id="keyword_vol" value="vol"/>
+    <string id="task_Status" value="Status"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

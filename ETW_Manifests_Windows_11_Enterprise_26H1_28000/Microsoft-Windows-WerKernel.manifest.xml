@@ -1,0 +1,51 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WerKernel" guid="{87a623f0-8db5-5c11-7c80-a2ebbcbe5189}" resourceFileName="Microsoft-Windows-WerKernel" messageFileName="Microsoft-Windows-WerKernel" symbol="MicrosoftWindowsWerKernel" source="Xml" >
+    <keywords>
+     <keyword name="Werkernel" message="$(string.keyword_Werkernel)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="CreateReport" message="$(string.task_CreateReport)" value="1"/>
+    </tasks>
+    <maps>
+     <valueMap name="DumpType">
+      <map value="0x0" message="$(string.map_DumpTypeNo Dump)"/>
+      <map value="0x1" message="$(string.map_DumpTypeMini Dump)"/>
+      <map value="0x2" message="$(string.map_DumpTypeKernel Dump)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1001" symbol="CreateReport" version="0" task="CreateReport" level="win:Informational" keywords="Werkernel" template="CreateReportArgs"/>
+     <event value="1002" symbol="CreateReport1002" version="0" task="CreateReport" level="win:Informational" keywords="Werkernel" template="CreateReport1002Args"/>
+    </events>
+    <templates>
+     <template tid="CreateReportArgs">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+      <data name="RequestedPolicy" inType="win:UInt32" map="DumpType"/>
+      <data name="GrantedPolicy" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ThrottleCheckResult" inType="win:UInt32"/>
+     </template>
+     <template tid="CreateReport1002Args">
+      <data name="ComponentName" inType="win:UnicodeString"/>
+      <data name="Policy" inType="win:UInt32"/>
+      <data name="ReportId" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Werkernel" value="Werkernel"/>
+    <string id="task_CreateReport" value="CreateReport"/>
+    <string id="map_DumpTypeNo Dump" value="No Dump"/>
+    <string id="map_DumpTypeMini Dump" value="Mini Dump"/>
+    <string id="map_DumpTypeKernel Dump" value="Kernel Dump"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

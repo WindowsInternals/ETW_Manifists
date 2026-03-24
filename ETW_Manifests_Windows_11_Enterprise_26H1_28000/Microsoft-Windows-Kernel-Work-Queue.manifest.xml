@@ -1,0 +1,49 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-Work-Queue" guid="{5071a971-a047-58c9-ffda-4df1788ef21a}" resourceFileName="Microsoft-Windows-Kernel-Work-Queue" messageFileName="Microsoft-Windows-Kernel-Work-Queue" symbol="MicrosoftWindowsKernelWorkQueue" source="Xml" >
+    <keywords>
+     <keyword name="WorkQueueHealthMetrics" message="$(string.keyword_WorkQueueHealthMetrics)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="Kernelworkqueuehealthmetrics" message="$(string.task_Kernelworkqueuehealthmetrics)" value="1">
+>
+      <opcodes>
+       <opcode name="Loggingaqueuedelayhistogramforaspecifickernelworkqueue." message="$(string.opcode_KernelworkqueuehealthmetricsLoggingaqueuedelayhistogramforaspecifickernelworkqueue.)" value="11"/>
+       <opcode name="Loggingthebucketupperboundsforthehealthmetricshistogram." message="$(string.opcode_KernelworkqueuehealthmetricsLoggingthebucketupperboundsforthehealthmetricshistogram.)" value="12"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="KernelworkqueuehealthmetricsLoggingaqueuedelayhistogramforaspecifickernelworkqueue." version="0" task="Kernelworkqueuehealthmetrics" opcode="Loggingaqueuedelayhistogramforaspecifickernelworkqueue." level="win:Informational" keywords="WorkQueueHealthMetrics" template="KernelworkqueuehealthmetricsLoggingaqueuedelayhistogramforaspecifickernelworkqueue.Args"/>
+     <event value="2" symbol="KernelworkqueuehealthmetricsLoggingthebucketupperboundsforthehealthmetricshistogram." version="0" task="Kernelworkqueuehealthmetrics" opcode="Loggingthebucketupperboundsforthehealthmetricshistogram." level="win:Informational" keywords="WorkQueueHealthMetrics" template="KernelworkqueuehealthmetricsLoggingthebucketupperboundsforthehealthmetricshistogram.Args"/>
+    </events>
+    <templates>
+     <template tid="KernelworkqueuehealthmetricsLoggingaqueuedelayhistogramforaspecifickernelworkqueue.Args">
+      <data name="NodeIndex" inType="win:UInt16"/>
+      <data name="Priority" inType="win:UInt8"/>
+      <data name="QueueIndex" inType="win:UInt8"/>
+      <data name="SubQueueIndex" inType="win:UInt16"/>
+      <data name="CurrentWorkItemCount" inType="win:Int32"/>
+      <data name="HistogramBucketCount" inType="win:UInt32"/>
+      <data name="HistogramBuckets" inType="win:Int32" count="HistogramBucketCount"/>
+     </template>
+     <template tid="KernelworkqueuehealthmetricsLoggingthebucketupperboundsforthehealthmetricshistogram.Args">
+      <data name="HistogramBucketCount" inType="win:UInt32"/>
+      <data name="HistogramBucketUpperBounds" inType="win:AnsiString" count="HistogramBucketCount"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_WorkQueueHealthMetrics" value="WorkQueueHealthMetrics"/>
+    <string id="task_Kernelworkqueuehealthmetrics" value="Kernelworkqueuehealthmetrics"/>
+    <string id="opcode_KernelworkqueuehealthmetricsLoggingaqueuedelayhistogramforaspecifickernelworkqueue." value="Loggingaqueuedelayhistogramforaspecifickernelworkqueue."/>
+    <string id="opcode_KernelworkqueuehealthmetricsLoggingthebucketupperboundsforthehealthmetricshistogram." value="Loggingthebucketupperboundsforthehealthmetricshistogram."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

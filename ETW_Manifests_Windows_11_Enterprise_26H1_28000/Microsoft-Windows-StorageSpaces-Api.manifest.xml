@@ -1,0 +1,309 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-StorageSpaces-Api" guid="{bcf0c6a7-6130-5208-f27d-fa77a91f12df}" resourceFileName="Microsoft-Windows-StorageSpaces-Api" messageFileName="Microsoft-Windows-StorageSpaces-Api" symbol="MicrosoftWindowsStorageSpacesApi" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="Version">
+      <map value="0x0" message="$(string.map_VersionUnknown)"/>
+      <map value="0x1" message="$(string.map_VersionWindows 8)"/>
+      <map value="0x2" message="$(string.map_VersionWindows Blue Internal 1)"/>
+      <map value="0x3" message="$(string.map_VersionWindows Blue Internal 2)"/>
+      <map value="0x4" message="$(string.map_VersionWindows Blue Internal 3)"/>
+      <map value="0x5" message="$(string.map_VersionWindows Blue Internal 4)"/>
+      <map value="0x6" message="$(string.map_VersionWindows Blue Internal 5)"/>
+      <map value="0x7" message="$(string.map_VersionWindows Blue)"/>
+      <map value="0x8" message="$(string.map_VersionWindows Threshold Internal 1)"/>
+      <map value="0x9" message="$(string.map_VersionWindows Threshold Internal 2)"/>
+      <map value="0xa" message="$(string.map_VersionWindows Threshold Internal 3)"/>
+      <map value="0xb" message="$(string.map_VersionThresholdInternal4)"/>
+      <map value="0xc" message="$(string.map_VersionWindows Threshold Internal 5)"/>
+      <map value="0xd" message="$(string.map_VersionWindows Threshold Internal 6)"/>
+      <map value="0xe" message="$(string.map_VersionWindows Threshold)"/>
+      <map value="0xf" message="$(string.map_VersionWindows Threshold 2)"/>
+      <map value="0x10" message="$(string.map_VersionWindows Redstone 1 Internal 1)"/>
+      <map value="0x11" message="$(string.map_VersionWindows Redstone 1 Internal 2)"/>
+      <map value="0x12" message="$(string.map_VersionWindows Redstone 1 Internal 3)"/>
+      <map value="0x13" message="$(string.map_VersionWwindows Redstone 1)"/>
+      <map value="0x14" message="$(string.map_VersionWindows Redstone 3)"/>
+      <map value="0x15" message="$(string.map_VersionWindows Redstone 5 Internal 1)"/>
+      <map value="0x16" message="$(string.map_VersionWindows Redstone 5)"/>
+      <map value="0x17" message="$(string.map_VersionWindows 19H1 Internal 1)"/>
+      <map value="0x18" message="$(string.map_VersionWindows 19H1)"/>
+      <map value="0x19" message="$(string.map_VersionWindows Vibranium)"/>
+      <map value="0x1a" message="$(string.map_VersionWindows Manganese)"/>
+     </valueMap>
+     <valueMap name="SpaceUsage">
+      <map value="0x0" message="$(string.map_SpaceUsageUnknown)"/>
+      <map value="0x1" message="$(string.map_SpaceUsageConfig)"/>
+      <map value="0x2" message="$(string.map_SpaceUsageData)"/>
+      <map value="0x3" message="$(string.map_SpaceUsageJournal)"/>
+      <map value="0x4" message="$(string.map_SpaceUsageRead Cache)"/>
+      <map value="0x5" message="$(string.map_SpaceUsageWrite Cache)"/>
+      <map value="0x6" message="$(string.map_SpaceUsageDirty Region Tracking)"/>
+      <map value="0x7" message="$(string.map_SpaceUsageStripe State Tracking)"/>
+      <map value="0x8" message="$(string.map_SpaceUsageSnapshot)"/>
+      <map value="0x9" message="$(string.map_SpaceUsageReserve)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0_V1" version="1" task="task_0" level="win:Error" template="task_0Args_V1"/>
+     <event value="3" symbol="task_03_V1" version="1" task="task_0" level="win:Error" template="task_0Args_V1"/>
+     <event value="100" symbol="task_0100_V1" version="1" task="task_0" level="win:Informational" template="task_0100Args_V1"/>
+     <event value="101" symbol="task_0101_V1" version="1" task="task_0" level="win:Error" template="task_0101Args_V1"/>
+     <event value="102" symbol="task_0102_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="103" symbol="task_0103_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="105" symbol="task_0105_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="200" symbol="task_0200_V1" version="1" task="task_0" level="win:Informational" template="task_0200Args_V1"/>
+     <event value="201" symbol="task_0201_V1" version="1" task="task_0" level="win:Error" template="task_0201Args_V1"/>
+     <event value="202" symbol="task_0202_V1" version="1" task="task_0" level="win:Informational" template="task_0202Args_V1"/>
+     <event value="203" symbol="task_0203_V1" version="1" task="task_0" level="win:Error" template="task_0203Args_V1"/>
+     <event value="204" symbol="task_0204_V1" version="1" task="task_0" level="win:Informational" template="task_0204Args_V1"/>
+     <event value="205" symbol="task_0205_V1" version="1" task="task_0" level="win:Error" template="task_0205Args_V1"/>
+     <event value="206" symbol="task_0206_V1" version="1" task="task_0" level="win:Informational" template="task_0206Args_V1"/>
+     <event value="207" symbol="task_0207_V1" version="1" task="task_0" level="win:Error" template="task_0207Args_V1"/>
+     <event value="208" symbol="task_0208_V1" version="1" task="task_0" level="win:Informational" template="task_0206Args_V1"/>
+     <event value="209" symbol="task_0209_V1" version="1" task="task_0" level="win:Error" template="task_0207Args_V1"/>
+     <event value="211" symbol="task_0211_V1" version="1" task="task_0" level="win:Informational" template="task_0103Args_V1"/>
+     <event value="212" symbol="task_0212_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="213" symbol="task_0213_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="214" symbol="task_0214_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="215" symbol="task_0215_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="216" symbol="task_0216_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="217" symbol="task_0217_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="300" symbol="task_0300_V1" version="1" task="task_0" level="win:Informational" template="task_0300Args_V1"/>
+     <event value="301" symbol="task_0301_V1" version="1" task="task_0" level="win:Error" template="task_0301Args_V1"/>
+     <event value="302" symbol="task_0302_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="303" symbol="task_0303_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="304" symbol="task_0304_V1" version="1" task="task_0" level="win:Informational" template="task_0304Args_V1"/>
+     <event value="305" symbol="task_0305_V1" version="1" task="task_0" level="win:Error" template="task_0305Args_V1"/>
+     <event value="306" symbol="task_0306_V1" version="1" task="task_0" level="win:Informational" template="task_0304Args_V1"/>
+     <event value="307" symbol="task_0307_V1" version="1" task="task_0" level="win:Error" template="task_0305Args_V1"/>
+     <event value="308" symbol="task_0308_V1" version="1" task="task_0" level="win:Informational" template="task_0308Args_V1"/>
+     <event value="309" symbol="task_0309_V1" version="1" task="task_0" level="win:Error" template="task_0309Args_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0100Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="CompatibleVersion" inType="win:UInt32" map="Version"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0101Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="CompatibleVersion" inType="win:UInt32"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0102Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Id" inType="win:GUID"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0103Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Id" inType="win:GUID"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0200Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="Persist" inType="win:Boolean"/>
+      <data name="RelinquishOwnership" inType="win:Boolean"/>
+      <data name="Attributes" inType="win:UInt64"/>
+      <data name="AttributesMask" inType="win:UInt64"/>
+      <data name="Owner" inType="win:GUID"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0201Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="Persist" inType="win:Boolean"/>
+      <data name="RelinquishOwnership" inType="win:Boolean"/>
+      <data name="Attributes" inType="win:UInt64"/>
+      <data name="AttributesMask" inType="win:UInt64"/>
+      <data name="Owner" inType="win:GUID"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0202Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Enable" inType="win:Boolean"/>
+      <data name="TimeoutInSeconds" inType="win:UInt32"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0203Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Enable" inType="win:Boolean"/>
+      <data name="TimeoutInSeconds" inType="win:UInt32"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0204Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Enable" inType="win:Boolean"/>
+      <data name="TimeoutInSeconds" inType="win:UInt32"/>
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0205Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Enable" inType="win:Boolean"/>
+      <data name="TimeoutInSeconds" inType="win:UInt32"/>
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0206Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0207Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0300Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Usage" inType="win:UInt32" map="SpaceUsage"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0301Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Usage" inType="win:UInt32"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0304Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Owner" inType="win:GUID"/>
+      <data name="Hidden" inType="win:Boolean"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0305Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Owner" inType="win:GUID"/>
+      <data name="Hidden" inType="win:Boolean"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0308Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="DeviceId" inType="win:GUID"/>
+      <data name="FirstDataIndex" inType="win:UInt32"/>
+      <data name="DataLength" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0309Args_V1">
+      <data name="Module" inType="win:UnicodeString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="DeviceId" inType="win:GUID"/>
+      <data name="FirstDataIndex" inType="win:UInt32"/>
+      <data name="DataLength" inType="win:UInt64"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_VersionUnknown" value="Unknown"/>
+    <string id="map_VersionWindows 8" value="Windows 8"/>
+    <string id="map_VersionWindows Blue Internal 1" value="Windows Blue Internal 1"/>
+    <string id="map_VersionWindows Blue Internal 2" value="Windows Blue Internal 2"/>
+    <string id="map_VersionWindows Blue Internal 3" value="Windows Blue Internal 3"/>
+    <string id="map_VersionWindows Blue Internal 4" value="Windows Blue Internal 4"/>
+    <string id="map_VersionWindows Blue Internal 5" value="Windows Blue Internal 5"/>
+    <string id="map_VersionWindows Blue" value="Windows Blue"/>
+    <string id="map_VersionWindows Threshold Internal 1" value="Windows Threshold Internal 1"/>
+    <string id="map_VersionWindows Threshold Internal 2" value="Windows Threshold Internal 2"/>
+    <string id="map_VersionWindows Threshold Internal 3" value="Windows Threshold Internal 3"/>
+    <string id="map_VersionThresholdInternal4" value="ThresholdInternal4"/>
+    <string id="map_VersionWindows Threshold Internal 5" value="Windows Threshold Internal 5"/>
+    <string id="map_VersionWindows Threshold Internal 6" value="Windows Threshold Internal 6"/>
+    <string id="map_VersionWindows Threshold" value="Windows Threshold"/>
+    <string id="map_VersionWindows Threshold 2" value="Windows Threshold 2"/>
+    <string id="map_VersionWindows Redstone 1 Internal 1" value="Windows Redstone 1 Internal 1"/>
+    <string id="map_VersionWindows Redstone 1 Internal 2" value="Windows Redstone 1 Internal 2"/>
+    <string id="map_VersionWindows Redstone 1 Internal 3" value="Windows Redstone 1 Internal 3"/>
+    <string id="map_VersionWwindows Redstone 1" value="Wwindows Redstone 1"/>
+    <string id="map_VersionWindows Redstone 3" value="Windows Redstone 3"/>
+    <string id="map_VersionWindows Redstone 5 Internal 1" value="Windows Redstone 5 Internal 1"/>
+    <string id="map_VersionWindows Redstone 5" value="Windows Redstone 5"/>
+    <string id="map_VersionWindows 19H1 Internal 1" value="Windows 19H1 Internal 1"/>
+    <string id="map_VersionWindows 19H1" value="Windows 19H1"/>
+    <string id="map_VersionWindows Vibranium" value="Windows Vibranium"/>
+    <string id="map_VersionWindows Manganese" value="Windows Manganese"/>
+    <string id="map_SpaceUsageUnknown" value="Unknown"/>
+    <string id="map_SpaceUsageConfig" value="Config"/>
+    <string id="map_SpaceUsageData" value="Data"/>
+    <string id="map_SpaceUsageJournal" value="Journal"/>
+    <string id="map_SpaceUsageRead Cache" value="Read Cache"/>
+    <string id="map_SpaceUsageWrite Cache" value="Write Cache"/>
+    <string id="map_SpaceUsageDirty Region Tracking" value="Dirty Region Tracking"/>
+    <string id="map_SpaceUsageStripe State Tracking" value="Stripe State Tracking"/>
+    <string id="map_SpaceUsageSnapshot" value="Snapshot"/>
+    <string id="map_SpaceUsageReserve" value="Reserve"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

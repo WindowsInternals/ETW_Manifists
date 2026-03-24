@@ -1,0 +1,188 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-User Profiles General" guid="{db00dfb6-29f9-4a9c-9b3b-1f4f9e7d9770}" resourceFileName="Microsoft-Windows-User Profiles General" messageFileName="Microsoft-Windows-User Profiles General" symbol="MicrosoftWindowsUserProfilesGeneral" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="69" symbol="task_0" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="77" symbol="task_077" version="0" task="task_0" level="win:Informational" template="task_077Args"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Informational" template="task_01006Args"/>
+     <event value="1007" symbol="task_01007" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="1509" symbol="task_01509" version="0" task="task_0" level="win:Warning" template="task_01509Args"/>
+     <event value="1534" symbol="task_01534" version="0" task="task_0" level="win:Warning"/>
+     <event value="1600" symbol="task_01600" version="0" task="task_0" level="win:Warning" template="task_01600Args"/>
+     <event value="1601" symbol="task_01601" version="0" task="task_0" level="win:Warning" template="task_01600Args"/>
+     <event value="3100" symbol="task_03100" version="0" task="task_0" level="win:Informational" template="task_03100Args"/>
+     <event value="3101" symbol="task_03101" version="0" task="task_0" level="win:Informational" template="task_03101Args"/>
+     <event value="3102" symbol="task_03102" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3103" symbol="task_03103" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3104" symbol="task_03104" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3105" symbol="task_03105" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3106" symbol="task_03106" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3107" symbol="task_03107" version="0" task="task_0" level="win:Informational" template="task_03107Args"/>
+     <event value="3108" symbol="task_03108" version="0" task="task_0" level="win:Warning"/>
+     <event value="3109" symbol="task_03109" version="0" task="task_0" level="win:Informational" template="task_03109Args"/>
+     <event value="3110" symbol="task_03110" version="0" task="task_0" level="win:Informational" template="task_03109Args"/>
+     <event value="3111" symbol="task_03111" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3112" symbol="task_03112" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3113" symbol="task_03113" version="0" task="task_0" level="win:Informational"/>
+     <event value="3114" symbol="task_03114" version="0" task="task_0" level="win:Informational"/>
+     <event value="3115" symbol="task_03115" version="0" task="task_0" level="win:Informational"/>
+     <event value="3116" symbol="task_03116" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3117" symbol="task_03117" version="0" task="task_0" level="win:Informational"/>
+     <event value="3118" symbol="task_03118" version="0" task="task_0" level="win:Informational" template="task_03118Args"/>
+     <event value="3119" symbol="task_03119" version="0" task="task_0" level="win:Error" template="task_03119Args"/>
+     <event value="3120" symbol="task_03120" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3121" symbol="task_03121" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3122" symbol="task_03122" version="0" task="task_0" level="win:Informational" template="task_03102Args"/>
+     <event value="3123" symbol="task_03123" version="0" task="task_0" level="win:Informational" template="task_03123Args"/>
+     <event value="3124" symbol="task_03124" version="0" task="task_0" level="win:Informational" template="task_03124Args"/>
+     <event value="3125" symbol="task_03125" version="0" task="task_0" level="win:Informational" template="task_03125Args"/>
+     <event value="3126" symbol="task_03126" version="0" task="task_0" level="win:Informational" template="task_03126Args"/>
+     <event value="3127" symbol="task_03127" version="0" task="task_0" level="win:Error" template="task_03127Args"/>
+     <event value="3128" symbol="task_03128" version="0" task="task_0" level="win:Warning" template="task_03128Args"/>
+     <event value="3129" symbol="task_03129" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3130" symbol="task_03130" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3131" symbol="task_03131" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3132" symbol="task_03132" version="0" task="task_0" level="win:Error" template="task_03127Args"/>
+     <event value="3133" symbol="task_03133" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3134" symbol="task_03134" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3135" symbol="task_03135" version="0" task="task_0" level="win:Warning" template="task_03129Args"/>
+     <event value="3136" symbol="task_03136" version="0" task="task_0" level="win:Error" template="task_03127Args"/>
+     <event value="3137" symbol="task_03137" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3138" symbol="task_03138" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3139" symbol="task_03139" version="0" task="task_0" level="win:Informational" template="task_03129Args"/>
+     <event value="3140" symbol="task_03140" version="0" task="task_0" level="win:Error" template="task_03127Args"/>
+     <event value="3141" symbol="task_03141" version="0" task="task_0" level="win:Error" template="task_03141Args"/>
+     <event value="3142" symbol="task_03142" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3143" symbol="task_03143" version="0" task="task_0" level="win:Error" template="task_03143Args"/>
+     <event value="3144" symbol="task_03144" version="0" task="task_0" level="win:Error" template="task_03143Args"/>
+     <event value="3145" symbol="task_03145" version="0" task="task_0" level="win:Error"/>
+     <event value="3146" symbol="task_03146" version="0" task="task_0" level="win:Error"/>
+     <event value="3147" symbol="task_03147" version="0" task="task_0" level="win:Informational" template="task_03143Args"/>
+     <event value="3148" symbol="task_03148" version="0" task="task_0" level="win:Informational" template="task_03143Args"/>
+     <event value="3149" symbol="task_03149" version="0" task="task_0" level="win:Error" template="task_03149Args"/>
+     <event value="3150" symbol="task_03150" version="0" task="task_0" level="win:Error" template="task_03143Args"/>
+     <event value="3151" symbol="task_03151" version="0" task="task_0" level="win:Error" template="task_03102Args"/>
+     <event value="3152" symbol="task_03152" version="0" task="task_0" level="win:Informational" template="task_03152Args"/>
+     <event value="3153" symbol="task_03153" version="0" task="task_0" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="SourceFile" inType="win:UnicodeString"/>
+      <data name="SourceTimestamp" inType="win:UnicodeString"/>
+      <data name="DestinationFile" inType="win:UnicodeString"/>
+      <data name="DestinationTimestamp" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_077Args">
+      <data name="EffectiveSid" inType="win:UnicodeString"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01006Args">
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="FileSizeInKb" inType="win:UInt64"/>
+      <data name="SourceLocation" inType="win:UnicodeString"/>
+      <data name="DestinationLocation" inType="win:UnicodeString"/>
+      <data name="CopyTimeInSec" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01509Args">
+      <data name="Source" inType="win:UnicodeString"/>
+      <data name="Target" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01600Args">
+      <data name="Source" inType="win:UnicodeString"/>
+      <data name="Target" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03100Args">
+      <data name="lpSourceDir" inType="win:UnicodeString"/>
+      <data name="lpDestinationDir" inType="win:UnicodeString"/>
+      <data name="dwFlags" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03101Args">
+      <data name="dwErr" inType="win:HexInt32"/>
+      <data name="bResult" inType="win:Boolean"/>
+     </template>
+     <template tid="task_03102Args">
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03107Args">
+      <data name="Available" inType="win:UInt64"/>
+      <data name="Needed" inType="win:UInt64"/>
+      <data name="SrcSize" inType="win:UInt64"/>
+      <data name="DstSize" inType="win:UInt64"/>
+      <data name="LargestHiveFile" inType="win:UInt64"/>
+      <data name="Quota" inType="win:UInt64"/>
+      <data name="TotalFree" inType="win:UInt64"/>
+     </template>
+     <template tid="task_03109Args">
+      <data name="FilePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03118Args">
+      <data name="TargetThreadCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_03119Args">
+      <data name="dwThreadCount" inType="win:UInt32"/>
+      <data name="dwResult" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03123Args">
+      <data name="SrcFile" inType="win:UnicodeString"/>
+      <data name="DstFile" inType="win:UnicodeString"/>
+      <data name="dwFlags" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03124Args">
+      <data name="iCopyFile" inType="win:UInt32"/>
+      <data name="dwErr" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03125Args">
+      <data name="SrcFile" inType="win:UnicodeString"/>
+      <data name="TempFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03126Args">
+      <data name="DestFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03127Args">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03128Args">
+      <data name="SrcDir" inType="win:UnicodeString"/>
+      <data name="DestDir" inType="win:UnicodeString"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03129Args">
+      <data name="Path" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03141Args">
+      <data name="SrcDir" inType="win:UnicodeString"/>
+      <data name="DestDir" inType="win:UnicodeString"/>
+      <data name="Error" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_03143Args">
+      <data name="Directory" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03149Args">
+      <data name="Directory" inType="win:UnicodeString"/>
+      <data name="SID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03152Args">
+      <data name="NumCopyThreads" inType="win:Int32"/>
+      <data name="MaxSize" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

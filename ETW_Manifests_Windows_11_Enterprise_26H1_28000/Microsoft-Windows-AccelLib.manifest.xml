@@ -1,0 +1,54 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-AccelLib" guid="{1dfda998-7f9c-5651-d262-07f4a04eaefe}" resourceFileName="Microsoft-Windows-AccelLib" messageFileName="Microsoft-Windows-AccelLib" symbol="MicrosoftWindowsAccelLib" source="Xml" >
+    <keywords>
+     <keyword name="keyword_800000000000" message="$(string.keyword_keyword_800000000000)" mask="0x800000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_02Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_03Args"/>
+     <event value="4" symbol="task_04" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_04Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="WorkspaceGuid" inType="win:GUID"/>
+      <data name="ResourceType" inType="win:UInt32"/>
+      <data name="ResourceSubType" inType="win:UInt32"/>
+      <data name="WorkspaceResourceHandleCount" inType="win:UInt32"/>
+      <data name="Synchronous" inType="win:Boolean"/>
+     </template>
+     <template tid="task_02Args">
+      <data name="WorkspaceGuid" inType="win:GUID"/>
+      <data name="ResourceType" inType="win:UInt32"/>
+      <data name="ResourceSubType" inType="win:UInt32"/>
+      <data name="WorkspaceResourceHandleCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_03Args">
+      <data name="LibraryFunction" inType="win:UInt32"/>
+      <data name="LibraryErrorReason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04Args">
+      <data name="WorkspaceGuid" inType="win:GUID"/>
+      <data name="LibraryFunction" inType="win:UInt32"/>
+      <data name="LibraryErrorReason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_keyword_800000000000" value="keyword_800000000000"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

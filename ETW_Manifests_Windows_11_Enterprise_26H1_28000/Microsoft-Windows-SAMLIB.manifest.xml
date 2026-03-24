@@ -1,0 +1,395 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SAMLIB" guid="{80dd5d4d-edc5-50f4-bf8e-df008b752dd6}" resourceFileName="Microsoft-Windows-SAMLIB" messageFileName="Microsoft-Windows-SAMLIB" symbol="MicrosoftWindowsSAMLIB" source="Xml" >
+    <keywords>
+     <keyword name="api" message="$(string.keyword_api)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="api" template="task_0Args"/>
+     <event value="1001" symbol="task_01001" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01001Args"/>
+     <event value="1002" symbol="task_01002" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01002Args"/>
+     <event value="1003" symbol="task_01003" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1004" symbol="task_01004" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01004Args"/>
+     <event value="1005" symbol="task_01005" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01004Args"/>
+     <event value="1007" symbol="task_01007" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1008" symbol="task_01008" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01008Args"/>
+     <event value="1009" symbol="task_01009" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1010" symbol="task_01010" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01010Args"/>
+     <event value="1011" symbol="task_01011" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01011Args"/>
+     <event value="1012" symbol="task_01012" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01012Args"/>
+     <event value="1013" symbol="task_01013" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01013Args"/>
+     <event value="1014" symbol="task_01014" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01014Args"/>
+     <event value="1015" symbol="task_01015" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01015Args"/>
+     <event value="1016" symbol="task_01016" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01016Args"/>
+     <event value="1017" symbol="task_01017" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1018" symbol="task_01018" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01016Args"/>
+     <event value="1019" symbol="task_01019" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1020" symbol="task_01020" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01020Args"/>
+     <event value="1021" symbol="task_01021" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01021Args"/>
+     <event value="1022" symbol="task_01022" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01022Args"/>
+     <event value="1023" symbol="task_01023" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01013Args"/>
+     <event value="1024" symbol="task_01024" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01020Args"/>
+     <event value="1025" symbol="task_01025" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01025Args"/>
+     <event value="1026" symbol="task_01026" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01026Args"/>
+     <event value="1027" symbol="task_01027" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01027Args"/>
+     <event value="1028" symbol="task_01028" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01028Args"/>
+     <event value="1029" symbol="task_01029" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01013Args"/>
+     <event value="1030" symbol="task_01030" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01030Args"/>
+     <event value="1031" symbol="task_01031" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01013Args"/>
+     <event value="1032" symbol="task_01032" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01020Args"/>
+     <event value="1033" symbol="task_01033" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01033Args"/>
+     <event value="1034" symbol="task_01034" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01022Args"/>
+     <event value="1035" symbol="task_01035" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01013Args"/>
+     <event value="1036" symbol="task_01036" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01036Args"/>
+     <event value="1037" symbol="task_01037" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1038" symbol="task_01038" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01038Args"/>
+     <event value="1039" symbol="task_01039" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01039Args"/>
+     <event value="1040" symbol="task_01040" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01040Args"/>
+     <event value="1041" symbol="task_01041" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1042" symbol="task_01042" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01040Args"/>
+     <event value="1043" symbol="task_01043" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1044" symbol="task_01044" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01040Args"/>
+     <event value="1045" symbol="task_01045" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1046" symbol="task_01046" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01046Args"/>
+     <event value="1047" symbol="task_01047" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01047Args"/>
+     <event value="1048" symbol="task_01048" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01048Args"/>
+     <event value="1049" symbol="task_01049" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1050" symbol="task_01050" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01048Args"/>
+     <event value="1051" symbol="task_01051" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1052" symbol="task_01052" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01052Args"/>
+     <event value="1053" symbol="task_01053" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1054" symbol="task_01054" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01054Args"/>
+     <event value="1055" symbol="task_01055" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1056" symbol="task_01056" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01056Args"/>
+     <event value="1057" symbol="task_01057" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1058" symbol="task_01058" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01054Args"/>
+     <event value="1059" symbol="task_01059" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01059Args"/>
+     <event value="1060" symbol="task_01060" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01052Args"/>
+     <event value="1061" symbol="task_01061" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1062" symbol="task_01062" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01062Args"/>
+     <event value="1063" symbol="task_01063" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01063Args"/>
+     <event value="1064" symbol="task_01064" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01064Args"/>
+     <event value="1065" symbol="task_01065" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1066" symbol="task_01066" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01064Args"/>
+     <event value="1067" symbol="task_01067" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1068" symbol="task_01068" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01068Args"/>
+     <event value="1069" symbol="task_01069" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1070" symbol="task_01070" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01070Args"/>
+     <event value="1071" symbol="task_01071" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1072" symbol="task_01072" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01072Args"/>
+     <event value="1073" symbol="task_01073" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1074" symbol="task_01074" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01070Args"/>
+     <event value="1075" symbol="task_01075" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1076" symbol="task_01076" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01072Args"/>
+     <event value="1077" symbol="task_01077" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1078" symbol="task_01078" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01068Args"/>
+     <event value="1079" symbol="task_01079" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01059Args"/>
+     <event value="1080" symbol="task_01080" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01080Args"/>
+     <event value="1081" symbol="task_01081" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01081Args"/>
+     <event value="1082" symbol="task_01082" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01082Args"/>
+     <event value="1083" symbol="task_01083" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1084" symbol="task_01084" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01084Args"/>
+     <event value="1085" symbol="task_01085" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1086" symbol="task_01086" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01084Args"/>
+     <event value="1087" symbol="task_01087" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1088" symbol="task_01088" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01082Args"/>
+     <event value="1089" symbol="task_01089" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1090" symbol="task_01090" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01090Args"/>
+     <event value="1091" symbol="task_01091" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+     <event value="1092" symbol="task_01092" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01082Args"/>
+     <event value="1093" symbol="task_01093" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01039Args"/>
+     <event value="1094" symbol="task_01094" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01094Args"/>
+     <event value="1095" symbol="task_01095" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01095Args"/>
+     <event value="1096" symbol="task_01096" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01096Args"/>
+     <event value="1097" symbol="task_01097" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01097Args"/>
+     <event value="1098" symbol="task_01098" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01098Args"/>
+     <event value="1099" symbol="task_01099" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01099Args"/>
+     <event value="1100" symbol="task_01100" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01100Args"/>
+     <event value="1101" symbol="task_01101" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01101Args"/>
+     <event value="1102" symbol="task_01102" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01102Args"/>
+     <event value="1103" symbol="task_01103" version="0" task="task_0" level="win:Informational" keywords="api" template="task_01003Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="ServerName" inType="win:UnicodeString"/>
+      <data name="DesiredAccess" inType="win:HexInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01001Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ServerHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01002Args">
+      <data name="SamHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01003Args">
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_01004Args">
+      <data name="ObjectHandle" inType="win:Pointer"/>
+      <data name="SecurityInformation" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01008Args">
+      <data name="ServerHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01010Args">
+      <data name="ServerHandle" inType="win:Pointer"/>
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01011Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="DomainId" inType="win:SID"/>
+     </template>
+     <template tid="task_01012Args">
+      <data name="ServerHandle" inType="win:Pointer"/>
+      <data name="PreferredMaximumLength" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01013Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="CountReturned" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01014Args">
+      <data name="ServerHandle" inType="win:Pointer"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="DomainId" inType="win:SID"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01015Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="DomainHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01016Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DomainInformationClass" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01020Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="AccountName" inType="win:UnicodeString"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01021Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="GroupHandle" inType="win:Pointer"/>
+      <data name="RelativeId" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01022Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="PreferredMaximumLength" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01025Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="UserHandle" inType="win:Pointer"/>
+      <data name="RelativeId" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01026Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="AccountName" inType="win:UnicodeString"/>
+      <data name="AccountType" inType="win:UInt32"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01027Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="UserHandle" inType="win:Pointer"/>
+      <data name="GrantedAccess" inType="win:UInt32"/>
+      <data name="RelativeId" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01028Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="UserAccountControl" inType="win:UInt32"/>
+      <data name="PreferredMaximumLength" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01030Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="UserAccountControl" inType="win:UInt32"/>
+      <data name="Filter" inType="win:UInt32"/>
+      <data name="PreferredMaximumLength" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01033Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="AliasHandle" inType="win:Pointer"/>
+      <data name="RelativeId" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01036Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="MemberId" inType="win:SID"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01038Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="PassedCount" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01039Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="MembershipCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01040Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="Count" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01046Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="GroupId" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01047Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="GroupHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01048Args">
+      <data name="GroupHandle" inType="win:Pointer"/>
+      <data name="GroupInformationClass" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01052Args">
+      <data name="GroupHandle" inType="win:Pointer"/>
+      <data name="MemberId" inType="win:UInt32"/>
+      <data name="Attributes" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01054Args">
+      <data name="GroupHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01056Args">
+      <data name="GroupHandle" inType="win:Pointer"/>
+      <data name="MemberId" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01059Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="MemberCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01062Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="AliasId" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01063Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="AliasHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01064Args">
+      <data name="AliasHandle" inType="win:Pointer"/>
+      <data name="AliasInformationClass" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01068Args">
+      <data name="AliasHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01070Args">
+      <data name="AliasHandle" inType="win:Pointer"/>
+      <data name="MemberId" inType="win:SID"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01072Args">
+      <data name="AliasHandle" inType="win:Pointer"/>
+      <data name="MemberCount" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01080Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DesiredAccess" inType="win:UInt32"/>
+      <data name="UserId" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01081Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="UserHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_01082Args">
+      <data name="UserHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01084Args">
+      <data name="UserHandle" inType="win:Pointer"/>
+      <data name="UserInformationClass" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01090Args">
+      <data name="ServerName" inType="win:UnicodeString"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01094Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DisplayInformation" inType="win:UInt32"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="EntryCount" inType="win:UInt32"/>
+      <data name="PreferredMaximumLength" inType="win:UInt32"/>
+      <data name="TotalAvailable" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01095Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="TotalAvailable" inType="win:UInt32"/>
+      <data name="TotalReturned" inType="win:UInt32"/>
+      <data name="ReturnedEntryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01096Args">
+      <data name="DomainHandle" inType="win:Pointer"/>
+      <data name="DisplayInformation" inType="win:UInt32"/>
+      <data name="Prefix" inType="win:UnicodeString"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01097Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="Index" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01098Args">
+      <data name="Handle" inType="win:Pointer"/>
+      <data name="Rid" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01099Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="Sid" inType="win:SID"/>
+     </template>
+     <template tid="task_01100Args">
+      <data name="ObjectHandle" inType="win:Pointer"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01101Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="Mode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01102Args">
+      <data name="Domain" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="LanguageId" inType="win:UInt32"/>
+      <data name="Class" inType="win:UInt32"/>
+      <data name="CallingProcess" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_api" value="api"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

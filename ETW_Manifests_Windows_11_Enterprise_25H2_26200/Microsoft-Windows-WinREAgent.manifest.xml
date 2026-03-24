@@ -1,0 +1,36 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WinREAgent" guid="{1f7a6c55-5532-573b-35b7-2107e43a6ef5}" resourceFileName="Microsoft-Windows-WinREAgent" messageFileName="Microsoft-Windows-WinREAgent" symbol="MicrosoftWindowsWinREAgent" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="4500" symbol="task_0" version="0" task="task_0" level="win:Informational"/>
+     <event value="4501" symbol="task_04501" version="0" task="task_0" level="win:Informational" template="task_04501Args"/>
+     <event value="4502" symbol="task_04502" version="0" task="task_0" level="win:Critical" template="task_04502Args"/>
+     <event value="4503" symbol="task_04503" version="0" task="task_0" level="win:Critical"/>
+     <event value="4504" symbol="task_04504" version="0" task="task_0" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="task_04501Args">
+      <data name="Version" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_04502Args">
+      <data name="ErrorPhase" inType="win:Int32"/>
+      <data name="Errorcode" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

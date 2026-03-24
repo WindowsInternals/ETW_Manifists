@@ -1,0 +1,246 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MultiTierMemory-CxlType3" guid="{8305d25b-17bd-5e51-6788-718a4a4599a2}" resourceFileName="Microsoft-Windows-MultiTierMemory-CxlType3" messageFileName="Microsoft-Windows-MultiTierMemory-CxlType3" symbol="MicrosoftWindowsMultiTierMemoryCxlType3" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="StartDeviceFailure">
+      <map value="0x0" message="$(string.map_StartDeviceFailureThe driver encountered an internal error.)"/>
+      <map value="0x1" message="$(string.map_StartDeviceFailureThe driver encountered an error while defer processing.)"/>
+      <map value="0x2" message="$(string.map_StartDeviceFailureThe driver encountered a bus interface error.)"/>
+      <map value="0x3" message="$(string.map_StartDeviceFailureThe driver encountered a CXL bus interface error.)"/>
+      <map value="0x4" message="$(string.map_StartDeviceFailureThe driver could not create device handle.)"/>
+      <map value="0x5" message="$(string.map_StartDeviceFailureThe driver could not read the device&apos;s identify information.)"/>
+      <map value="0x6" message="$(string.map_StartDeviceFailureThe driver could not create device GUID.)"/>
+      <map value="0x7" message="$(string.map_StartDeviceFailureThe driver could not create the device&apos;s symbolic link.)"/>
+      <map value="0x8" message="$(string.map_StartDeviceFailureThe driver could not enable the device interface.)"/>
+      <map value="0x9" message="$(string.map_StartDeviceFailureThe driver could not get the device&apos;s PCIe Dvsec0 information.)"/>
+      <map value="0xa" message="$(string.map_StartDeviceFailureThe driver could not get the device&apos;s register locator information.)"/>
+      <map value="0xb" message="$(string.map_StartDeviceFailureThe driver could not get the device&apos;s PCI configuration information.)"/>
+      <map value="0xc" message="$(string.map_StartDeviceFailureThe driver could not get the device&apos;s resource list information.)"/>
+      <map value="0xd" message="$(string.map_StartDeviceFailureThe driver encountered an error while initializing the device registers.)"/>
+      <map value="0xe" message="$(string.map_StartDeviceFailureThe driver could not get the device&apos;s status register.)"/>
+      <map value="0xf" message="$(string.map_StartDeviceFailureThe driver encountered an error while making the mailbox interface ready.)"/>
+      <map value="0x10" message="$(string.map_StartDeviceFailureThe driver encountered an error while initializing the mailbox registers.)"/>
+      <map value="0x11" message="$(string.map_StartDeviceFailureThe driver encountered an error while querying the mailbox capabilities.)"/>
+      <map value="0x12" message="$(string.map_StartDeviceFailureThe driver encountered an error while initializing the HDM registers.)"/>
+      <map value="0x13" message="$(string.map_StartDeviceFailureThe driver encountered a multi-tier memory bus interface error.)"/>
+      <map value="0x14" message="$(string.map_StartDeviceFailureThe driver encountered an error while connecting the interrupts.)"/>
+      <map value="0x15" message="$(string.map_StartDeviceFailureThe driver could not read the device&apos;s identify information (phase 2).)"/>
+      <map value="0x16" message="$(string.map_StartDeviceFailureThe driver could not create the location string.)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="101" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" template="task_0103Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational" template="task_0105Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Critical" template="task_0201Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Informational" template="task_0202Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Informational" template="task_0203Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Error" template="task_0203Args"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Informational" template="task_0205Args"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Error" template="task_0205Args"/>
+     <event value="207" symbol="task_0207" version="0" task="task_0" level="win:Error" template="task_0207Args"/>
+     <event value="208" symbol="task_0208" version="0" task="task_0" level="win:Informational" template="task_0208Args"/>
+     <event value="209" symbol="task_0209" version="0" task="task_0" level="win:Warning" template="task_0208Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Error" template="task_0208Args"/>
+     <event value="211" symbol="task_0211" version="0" task="task_0" level="win:Critical" template="task_0208Args"/>
+     <event value="212" symbol="task_0212" version="0" task="task_0" level="win:Informational" template="task_0212Args"/>
+     <event value="213" symbol="task_0213" version="0" task="task_0" level="win:Error" template="task_0212Args"/>
+     <event value="214" symbol="task_0214" version="0" task="task_0" level="win:Error" template="task_0214Args"/>
+     <event value="500" symbol="task_0500" version="0" task="task_0" level="win:Error" template="task_0500Args"/>
+     <event value="900" symbol="task_0900" version="0" task="task_0" level="win:Always" template="task_0500Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="CommandOpcode" inType="win:HexInt32"/>
+      <data name="ReturnCode" inType="win:HexInt32"/>
+      <data name="VendorSpecificCode" inType="win:HexInt32"/>
+      <data name="BufferLength" inType="win:UInt32"/>
+      <data name="Buffer" inType="win:Binary" length="BufferLength"/>
+     </template>
+     <template tid="task_0103Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="MajorFunction" inType="win:HexInt32"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Parameter" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="MinorFunction" inType="win:HexInt32"/>
+      <data name="Type" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0201Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="Reason" inType="win:UInt32" map="StartDeviceFailure"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0203Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="Slot" inType="win:Int32"/>
+      <data name="DataTransferred" inType="win:Int32"/>
+      <data name="DurationInMSec" inType="win:Int32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0205Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="Slot" inType="win:Int32"/>
+      <data name="DurationInMSec" inType="win:Int32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0207Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="FailureReason" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0208Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="EventRecordType" inType="win:HexInt32"/>
+      <data name="EventRecordIdentifier" inType="win:GUID"/>
+      <data name="EventRecordFlags" inType="win:HexInt32"/>
+      <data name="EventRecordHandle" inType="win:HexInt32"/>
+      <data name="RelatedEventRecordHandle" inType="win:HexInt32"/>
+      <data name="EventRecordTimestamp" inType="win:HexInt64"/>
+      <data name="EventRecordLength" inType="win:HexInt32"/>
+      <data name="Buffer" inType="win:Binary" length="EventRecordLength"/>
+     </template>
+     <template tid="task_0212Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="EventRecordType" inType="win:Int32"/>
+      <data name="EventRecordSeverity" inType="win:Int32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0214Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="VendorId" inType="win:AnsiString"/>
+      <data name="ProductId" inType="win:AnsiString"/>
+      <data name="SerialNumber" inType="win:AnsiString"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="FirmwareRevision" inType="win:AnsiString"/>
+      <data name="ErrorSource" inType="win:HexInt32"/>
+      <data name="MediaErrorAddress" inType="win:HexInt64"/>
+      <data name="MediaErrorLength" inType="win:HexInt64"/>
+     </template>
+     <template tid="task_0500Args">
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="Location" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:AnsiString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_StartDeviceFailureThe driver encountered an internal error." value="The driver encountered an internal error."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while defer processing." value="The driver encountered an error while defer processing."/>
+    <string id="map_StartDeviceFailureThe driver encountered a bus interface error." value="The driver encountered a bus interface error."/>
+    <string id="map_StartDeviceFailureThe driver encountered a CXL bus interface error." value="The driver encountered a CXL bus interface error."/>
+    <string id="map_StartDeviceFailureThe driver could not create device handle." value="The driver could not create device handle."/>
+    <string id="map_StartDeviceFailureThe driver could not read the device&apos;s identify information." value="The driver could not read the device&apos;s identify information."/>
+    <string id="map_StartDeviceFailureThe driver could not create device GUID." value="The driver could not create device GUID."/>
+    <string id="map_StartDeviceFailureThe driver could not create the device&apos;s symbolic link." value="The driver could not create the device&apos;s symbolic link."/>
+    <string id="map_StartDeviceFailureThe driver could not enable the device interface." value="The driver could not enable the device interface."/>
+    <string id="map_StartDeviceFailureThe driver could not get the device&apos;s PCIe Dvsec0 information." value="The driver could not get the device&apos;s PCIe Dvsec0 information."/>
+    <string id="map_StartDeviceFailureThe driver could not get the device&apos;s register locator information." value="The driver could not get the device&apos;s register locator information."/>
+    <string id="map_StartDeviceFailureThe driver could not get the device&apos;s PCI configuration information." value="The driver could not get the device&apos;s PCI configuration information."/>
+    <string id="map_StartDeviceFailureThe driver could not get the device&apos;s resource list information." value="The driver could not get the device&apos;s resource list information."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while initializing the device registers." value="The driver encountered an error while initializing the device registers."/>
+    <string id="map_StartDeviceFailureThe driver could not get the device&apos;s status register." value="The driver could not get the device&apos;s status register."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while making the mailbox interface ready." value="The driver encountered an error while making the mailbox interface ready."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while initializing the mailbox registers." value="The driver encountered an error while initializing the mailbox registers."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while querying the mailbox capabilities." value="The driver encountered an error while querying the mailbox capabilities."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while initializing the HDM registers." value="The driver encountered an error while initializing the HDM registers."/>
+    <string id="map_StartDeviceFailureThe driver encountered a multi-tier memory bus interface error." value="The driver encountered a multi-tier memory bus interface error."/>
+    <string id="map_StartDeviceFailureThe driver encountered an error while connecting the interrupts." value="The driver encountered an error while connecting the interrupts."/>
+    <string id="map_StartDeviceFailureThe driver could not read the device&apos;s identify information (phase 2)." value="The driver could not read the device&apos;s identify information (phase 2)."/>
+    <string id="map_StartDeviceFailureThe driver could not create the location string." value="The driver could not create the location string."/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

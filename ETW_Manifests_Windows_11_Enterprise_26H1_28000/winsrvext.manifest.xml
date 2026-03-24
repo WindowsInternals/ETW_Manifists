@@ -1,0 +1,35 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="winsrvext" guid="{2b9537f0-4a90-557b-1313-d0ce2827a94a}" resourceFileName="winsrvext" messageFileName="winsrvext" symbol="winsrvext" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="task_0" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Warning" template="task_0101Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="ProcessImageFileNameWin32" inType="win:UnicodeString"/>
+      <data name="ShutdownDuration" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="ProcessImageFileNameWin32" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="ShutdownDuration" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

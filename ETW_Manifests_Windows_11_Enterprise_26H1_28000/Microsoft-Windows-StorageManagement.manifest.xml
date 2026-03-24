@@ -1,0 +1,83 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-StorageManagement" guid="{7e58e69a-e361-4f06-b880-ad2f4b64c944}" resourceFileName="Microsoft-Windows-StorageManagement" messageFileName="Microsoft-Windows-StorageManagement" symbol="MicrosoftWindowsStorageManagement" source="Xml" >
+    <keywords>
+     <keyword name="EnterExit" message="$(string.keyword_EnterExit)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0_V1" version="1" task="task_0" level="win:Informational" keywords="EnterExit" template="task_0Args_V1"/>
+     <event value="2" symbol="task_02_V1" version="1" task="task_0" level="win:Error" template="task_02Args_V1"/>
+     <event value="3" symbol="task_03_V1" version="1" task="task_0" level="win:Informational" template="task_0Args_V1"/>
+     <event value="4" symbol="task_04_V1" version="1" task="task_0" level="win:Error" template="task_04Args_V1"/>
+     <event value="5" symbol="task_05_V1" version="1" task="task_0" level="win:Error" template="task_05Args_V1"/>
+     <event value="6" symbol="task_06_V2" version="2" task="task_0" level="win:Error" template="task_06Args_V2"/>
+     <event value="7" symbol="task_07_V1" version="1" task="task_0" level="win:Informational" template="task_07Args_V1"/>
+     <event value="8" symbol="task_08_V1" version="1" task="task_0" level="win:Informational" template="task_08Args_V1"/>
+     <event value="9" symbol="task_09_V1" version="1" task="task_0" level="win:Informational" template="task_09Args_V1"/>
+     <event value="10" symbol="task_010_V1" version="1" task="task_0" level="win:Informational" template="task_010Args_V1"/>
+     <event value="11" symbol="task_011_V1" version="1" task="task_0" level="win:Informational" template="task_011Args_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args_V1">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02Args_V1">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="FileName" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="MessageString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_05Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_07Args_V1">
+      <data name="StartTime_msecs" inType="win:UInt32"/>
+     </template>
+     <template tid="task_08Args_V1">
+      <data name="LoadTime_msecs" inType="win:UInt32"/>
+     </template>
+     <template tid="task_09Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="ResultCount" inType="win:UInt32"/>
+      <data name="OperationTime_msecs" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="OperationTime_msecs" inType="win:UInt32"/>
+     </template>
+     <template tid="task_011Args_V1">
+      <data name="ClassName" inType="win:UnicodeString"/>
+      <data name="MethodName" inType="win:UnicodeString"/>
+      <data name="OperationTime_msecs" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06Args_V2">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_EnterExit" value="EnterExit"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

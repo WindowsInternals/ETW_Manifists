@@ -1,0 +1,355 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MF-FrameServer" guid="{9e22a3ed-7b32-4b99-b6c2-21dd6ace01e1}" resourceFileName="Microsoft-Windows-MF-FrameServer" messageFileName="Microsoft-Windows-MF-FrameServer" symbol="MicrosoftWindowsMFFrameServer" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="FrameServerFsProxySetOutputType" message="$(string.task_FrameServerFsProxySetOutputType)" value="1"/>
+     <task name="FrameServerFsProxyD3dManager" message="$(string.task_FrameServerFsProxyD3dManager)" value="2"/>
+     <task name="FrameServerFsProxyInitialization" message="$(string.task_FrameServerFsProxyInitialization)" value="3"/>
+     <task name="FrameServerFsClientCreateSample" message="$(string.task_FrameServerFsClientCreateSample)" value="4"/>
+     <task name="FrameServerCaptureStatistics" message="$(string.task_FrameServerCaptureStatistics)" value="5"/>
+     <task name="FrameServerWatchdogTimerTask" message="$(string.task_FrameServerWatchdogTimerTask)" value="6"/>
+     <task name="FrameServer_FSSourceMediaStream_SetWorkQueueTask" message="$(string.task_FrameServer_FSSourceMediaStream_SetWorkQueueTask)" value="10"/>
+     <task name="FrameServer_FSSourceMediaStream_UpdateCountsTask" message="$(string.task_FrameServer_FSSourceMediaStream_UpdateCountsTask)" value="11"/>
+     <task name="FrameServer_FSSourceMediaSource_SetWorkQueueTask" message="$(string.task_FrameServer_FSSourceMediaSource_SetWorkQueueTask)" value="12"/>
+     <task name="FrameServer_FSSourceMediaStream_DropFrameTask" message="$(string.task_FrameServer_FSSourceMediaStream_DropFrameTask)" value="13"/>
+     <task name="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask" message="$(string.task_FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask)" value="14"/>
+     <task name="FrameServer_CameraToast_PostTask" message="$(string.task_FrameServer_CameraToast_PostTask)" value="15"/>
+     <task name="FrameServer_FSStreamPipeline_DecodedOutputTask" message="$(string.task_FrameServer_FSStreamPipeline_DecodedOutputTask)" value="16"/>
+     <task name="FrameServer_FSStreamPipeline_DecodedInputTask" message="$(string.task_FrameServer_FSStreamPipeline_DecodedInputTask)" value="17"/>
+     <task name="FrameServer_FSSourceMediaStream_ProcessSampleTask" message="$(string.task_FrameServer_FSSourceMediaStream_ProcessSampleTask)" value="18"/>
+     <task name="CameraDeviceMFTInitialization" message="$(string.task_CameraDeviceMFTInitialization)" value="20"/>
+     <task name="CameraDeviceMFTSetOutputTypeInitialization" message="$(string.task_CameraDeviceMFTSetOutputTypeInitialization)" value="21"/>
+     <task name="CameraDeviceMFTInputStreamStateChanged" message="$(string.task_CameraDeviceMFTInputStreamStateChanged)" value="22"/>
+     <task name="CameraDeviceMFTProcessOutput" message="$(string.task_CameraDeviceMFTProcessOutput)" value="23"/>
+     <task name="CameraDeviceMFTMErrorThrown" message="$(string.task_CameraDeviceMFTMErrorThrown)" value="24"/>
+     <task name="CameraDeviceTransformSetOutputType" message="$(string.task_CameraDeviceTransformSetOutputType)" value="25"/>
+     <task name="CameraDeviceTransformOutputSample" message="$(string.task_CameraDeviceTransformOutputSample)" value="26"/>
+     <task name="FrameServer_FSDeadline_SetGPUPriorityTask" message="$(string.task_FrameServer_FSDeadline_SetGPUPriorityTask)" value="27"/>
+     <task name="FrameServer_SetDXGIManagerTask" message="$(string.task_FrameServer_SetDXGIManagerTask)" value="28"/>
+     <task name="FrameServer_FSDeadline_WaitGPUTask" message="$(string.task_FrameServer_FSDeadline_WaitGPUTask)" value="29"/>
+     <task name="FrameServer_FSStreamPipeline_ProcessInputTask" message="$(string.task_FrameServer_FSStreamPipeline_ProcessInputTask)" value="30"/>
+     <task name="FrameServer_FSStreamPipeline_ProcessOutputTask" message="$(string.task_FrameServer_FSStreamPipeline_ProcessOutputTask)" value="31"/>
+     <task name="FrameServer_FSStreamPipeline_SetWorkQueueTask" message="$(string.task_FrameServer_FSStreamPipeline_SetWorkQueueTask)" value="32"/>
+     <task name="FrameServer_FSStreamPipeline_NullSampleTask" message="$(string.task_FrameServer_FSStreamPipeline_NullSampleTask)" value="33"/>
+    </tasks>
+    <maps>
+     <valueMap name="StreamType">
+      <map value="0x0" message="$(string.map_StreamTypeMASTER)"/>
+      <map value="0x1" message="$(string.map_StreamTypeSHARED)"/>
+     </valueMap>
+     <valueMap name="StatSource">
+      <map value="0x0" message="$(string.map_StatSourceKsPin)"/>
+      <map value="0x1" message="$(string.map_StatSourceDMFT)"/>
+      <map value="0x2" message="$(string.map_StatSourceMFT0)"/>
+      <map value="0x3" message="$(string.map_StatSourceDeviceStream)"/>
+      <map value="0x4" message="$(string.map_StatSourceMJPGDecoder)"/>
+      <map value="0x5" message="$(string.map_StatSourceXVP)"/>
+      <map value="0x6" message="$(string.map_StatSourceFSStream)"/>
+     </valueMap>
+     <valueMap name="TimerScope">
+      <map value="0x0" message="$(string.map_TimerScopeFSService)"/>
+      <map value="0x1" message="$(string.map_TimerScopeFSSource)"/>
+      <map value="0x2" message="$(string.map_TimerScopeFSStream)"/>
+     </valueMap>
+     <valueMap name="WatchdogOperation">
+      <map value="0x0" message="$(string.map_WatchdogOperationInitialize)"/>
+      <map value="0x1" message="$(string.map_WatchdogOperationActivate)"/>
+      <map value="0x2" message="$(string.map_WatchdogOperationStart)"/>
+      <map value="0x3" message="$(string.map_WatchdogOperationStop)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="2" symbol="FrameServerFsProxySetOutputTypeStart" version="0" task="FrameServerFsProxySetOutputType" opcode="win:Start" level="win:Informational" template="FrameServerFsProxySetOutputTypeStartArgs"/>
+     <event value="3" symbol="FrameServerFsProxySetOutputTypeStop" version="0" task="FrameServerFsProxySetOutputType" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="4" symbol="FrameServerFsProxyD3dManagerStart" version="0" task="FrameServerFsProxyD3dManager" opcode="win:Start" level="win:Informational" template="FrameServerFsProxyD3dManagerStartArgs"/>
+     <event value="5" symbol="FrameServerFsProxyD3dManagerStop" version="0" task="FrameServerFsProxyD3dManager" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="6" symbol="FrameServerFsProxyInitializationStart" version="0" task="FrameServerFsProxyInitialization" opcode="win:Start" level="win:Informational" template="FrameServerFsProxyInitializationStartArgs"/>
+     <event value="7" symbol="FrameServerFsProxyInitializationStop" version="0" task="FrameServerFsProxyInitialization" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxyInitializationStopArgs"/>
+     <event value="8" symbol="FrameServerFsClientCreateSampleStart" version="0" task="FrameServerFsClientCreateSample" opcode="win:Start" level="win:Verbose" template="FrameServerFsClientCreateSampleStartArgs"/>
+     <event value="9" symbol="FrameServerFsClientCreateSampleStart9" version="0" task="FrameServerFsClientCreateSample" opcode="win:Start" level="win:Verbose" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="10" symbol="FrameServerCaptureStatisticsStart" version="0" task="FrameServerCaptureStatistics" opcode="win:Start" level="win:Verbose" template="FrameServerCaptureStatisticsStartArgs"/>
+     <event value="11" symbol="FrameServerWatchdogTimerTaskStart" version="0" task="FrameServerWatchdogTimerTask" opcode="win:Start" level="win:Informational" template="FrameServerWatchdogTimerTaskStartArgs"/>
+     <event value="12" symbol="FrameServerWatchdogTimerTaskStop" version="0" task="FrameServerWatchdogTimerTask" opcode="win:Stop" level="win:Informational" template="FrameServerWatchdogTimerTaskStopArgs"/>
+     <event value="13" symbol="FrameServerWatchdogTimerTaskStop13" version="0" task="FrameServerWatchdogTimerTask" opcode="win:Stop" level="win:Error" template="FrameServerWatchdogTimerTaskStop13Args"/>
+     <event value="20" symbol="FrameServer_FSSourceMediaStream_SetWorkQueueTask" version="0" task="FrameServer_FSSourceMediaStream_SetWorkQueueTask" level="win:Informational" template="FrameServer_FSSourceMediaStream_SetWorkQueueTaskArgs"/>
+     <event value="21" symbol="FrameServer_FSSourceMediaStream_UpdateCountsTask_V2" version="2" task="FrameServer_FSSourceMediaStream_UpdateCountsTask" level="win:Verbose" template="FrameServer_FSSourceMediaStream_UpdateCountsTaskArgs_V2"/>
+     <event value="22" symbol="FrameServer_FSSourceMediaSource_SetWorkQueueTask" version="0" task="FrameServer_FSSourceMediaSource_SetWorkQueueTask" level="win:Informational" template="FrameServer_FSSourceMediaSource_SetWorkQueueTaskArgs"/>
+     <event value="23" symbol="FrameServer_FSSourceMediaStream_DropFrameTask" version="0" task="FrameServer_FSSourceMediaStream_DropFrameTask" level="win:Informational" template="FrameServer_FSSourceMediaStream_DropFrameTaskArgs"/>
+     <event value="24" symbol="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTaskStart" version="0" task="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask" opcode="win:Start" level="win:Verbose" template="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTaskStartArgs"/>
+     <event value="25" symbol="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTaskStop" version="0" task="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask" opcode="win:Stop" level="win:Verbose" template="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTaskStartArgs"/>
+     <event value="26" symbol="FrameServer_CameraToast_PostTask" version="0" task="FrameServer_CameraToast_PostTask" level="win:Warning" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="27" symbol="FrameServer_FSStreamPipeline_DecodedOutputTaskStart" version="0" task="FrameServer_FSStreamPipeline_DecodedOutputTask" opcode="win:Start" level="win:Verbose" template="FrameServer_FSStreamPipeline_DecodedOutputTaskStartArgs"/>
+     <event value="28" symbol="FrameServer_FSStreamPipeline_DecodedOutputTaskStop" version="0" task="FrameServer_FSStreamPipeline_DecodedOutputTask" opcode="win:Stop" level="win:Verbose" template="FrameServer_FSStreamPipeline_DecodedOutputTaskStopArgs"/>
+     <event value="29" symbol="FrameServer_FSStreamPipeline_DecodedInputTaskStart" version="0" task="FrameServer_FSStreamPipeline_DecodedInputTask" opcode="win:Start" level="win:Verbose" template="FrameServer_FSStreamPipeline_DecodedOutputTaskStartArgs"/>
+     <event value="30" symbol="FrameServer_FSStreamPipeline_DecodedInputTaskStop" version="0" task="FrameServer_FSStreamPipeline_DecodedInputTask" opcode="win:Stop" level="win:Verbose" template="FrameServer_FSStreamPipeline_DecodedInputTaskStopArgs"/>
+     <event value="31" symbol="FrameServer_FSSourceMediaStream_ProcessSampleTaskStart" version="0" task="FrameServer_FSSourceMediaStream_ProcessSampleTask" opcode="win:Start" level="win:Verbose" template="FrameServer_FSSourceMediaStream_ProcessSampleTaskStartArgs"/>
+     <event value="32" symbol="FrameServer_FSSourceMediaStream_ProcessSampleTaskStop" version="0" task="FrameServer_FSSourceMediaStream_ProcessSampleTask" opcode="win:Stop" level="win:Verbose" template="FrameServer_FSSourceMediaStream_ProcessSampleTaskStartArgs"/>
+     <event value="33" symbol="FrameServer_FSDeadline_SetGPUPriorityTask_V1" version="1" task="FrameServer_FSDeadline_SetGPUPriorityTask" level="win:Verbose" template="FrameServer_FSDeadline_SetGPUPriorityTaskArgs_V1"/>
+     <event value="34" symbol="FrameServer_SetDXGIManagerTask" version="0" task="FrameServer_SetDXGIManagerTask" level="win:Informational" template="FrameServer_SetDXGIManagerTaskArgs"/>
+     <event value="35" symbol="FrameServer_FSDeadline_WaitGPUTaskStart" version="0" task="FrameServer_FSDeadline_WaitGPUTask" opcode="win:Start" level="win:Verbose" template="FrameServer_FSDeadline_WaitGPUTaskStartArgs"/>
+     <event value="36" symbol="FrameServer_FSDeadline_WaitGPUTaskStop" version="0" task="FrameServer_FSDeadline_WaitGPUTask" opcode="win:Stop" level="win:Verbose" template="FrameServer_FSDeadline_WaitGPUTaskStartArgs"/>
+     <event value="37" symbol="FrameServer_FSStreamPipeline_ProcessInputTaskStart" version="0" task="FrameServer_FSStreamPipeline_ProcessInputTask" opcode="win:Start" level="win:Informational" template="FrameServer_FSStreamPipeline_ProcessInputTaskStartArgs"/>
+     <event value="38" symbol="FrameServer_FSStreamPipeline_ProcessInputTaskStop" version="0" task="FrameServer_FSStreamPipeline_ProcessInputTask" opcode="win:Stop" level="win:Informational" template="FrameServer_FSStreamPipeline_ProcessInputTaskStopArgs"/>
+     <event value="39" symbol="FrameServer_FSStreamPipeline_ProcessOutputTaskStart" version="0" task="FrameServer_FSStreamPipeline_ProcessOutputTask" opcode="win:Start" level="win:Informational" template="FrameServer_FSStreamPipeline_ProcessInputTaskStartArgs"/>
+     <event value="40" symbol="FrameServer_FSStreamPipeline_ProcessOutputTaskStop" version="0" task="FrameServer_FSStreamPipeline_ProcessOutputTask" opcode="win:Stop" level="win:Informational" template="FrameServer_FSStreamPipeline_ProcessInputTaskStopArgs"/>
+     <event value="41" symbol="FrameServer_FSStreamPipeline_SetWorkQueueTask" version="0" task="FrameServer_FSStreamPipeline_SetWorkQueueTask" level="win:Informational" template="FrameServer_FSStreamPipeline_SetWorkQueueTaskArgs"/>
+     <event value="42" symbol="FrameServer_FSStreamPipeline_NullSampleTask" version="0" task="FrameServer_FSStreamPipeline_NullSampleTask" level="win:Informational" template="FrameServer_FSStreamPipeline_NullSampleTaskArgs"/>
+     <event value="50" symbol="CameraDeviceMFTInitializationStart" version="0" task="CameraDeviceMFTInitialization" opcode="win:Start" level="win:Informational" template="CameraDeviceMFTInitializationStartArgs"/>
+     <event value="51" symbol="CameraDeviceMFTInitializationStop" version="0" task="CameraDeviceMFTInitialization" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="52" symbol="CameraDeviceMFTSetOutputTypeInitializationStart" version="0" task="CameraDeviceMFTSetOutputTypeInitialization" opcode="win:Start" level="win:Informational" template="CameraDeviceMFTSetOutputTypeInitializationStartArgs"/>
+     <event value="53" symbol="CameraDeviceMFTSetOutputTypeInitializationStop" version="0" task="CameraDeviceMFTSetOutputTypeInitialization" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="54" symbol="CameraDeviceMFTInputStreamStateChangedStart" version="0" task="CameraDeviceMFTInputStreamStateChanged" opcode="win:Start" level="win:Informational" template="CameraDeviceMFTSetOutputTypeInitializationStartArgs"/>
+     <event value="55" symbol="CameraDeviceMFTInputStreamStateChangedStop" version="0" task="CameraDeviceMFTInputStreamStateChanged" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="56" symbol="CameraDeviceMFTProcessOutput" version="0" task="CameraDeviceMFTProcessOutput" level="win:Verbose" template="CameraDeviceMFTProcessOutputArgs"/>
+     <event value="57" symbol="CameraDeviceMFTMErrorThrown" version="0" task="CameraDeviceMFTMErrorThrown" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="58" symbol="CameraDeviceTransformSetOutputTypeStart" version="0" task="CameraDeviceTransformSetOutputType" opcode="win:Start" level="win:Informational" template="CameraDeviceMFTSetOutputTypeInitializationStartArgs"/>
+     <event value="59" symbol="CameraDeviceTransformSetOutputTypeStop" version="0" task="CameraDeviceTransformSetOutputType" opcode="win:Stop" level="win:Informational" template="FrameServerFsProxySetOutputTypeStopArgs"/>
+     <event value="60" symbol="CameraDeviceTransformOutputSample" version="0" task="CameraDeviceTransformOutputSample" level="win:Verbose" template="CameraDeviceTransformOutputSampleArgs"/>
+    </events>
+    <templates>
+     <template tid="FrameServerFsProxySetOutputTypeStartArgs">
+      <data name="PinId" inType="win:UInt32"/>
+      <data name="MediaType" inType="win:AnsiString"/>
+     </template>
+     <template tid="FrameServerFsProxySetOutputTypeStopArgs">
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServerFsProxyD3dManagerStartArgs">
+      <data name="D3dDesc" inType="win:UnicodeString"/>
+      <data name="LUID" inType="win:HexInt64"/>
+      <data name="VendorId" inType="win:UInt32"/>
+      <data name="DeviceId" inType="win:UInt32"/>
+      <data name="SubSysId" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServerFsProxyInitializationStartArgs">
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+      <data name="Devices" inType="win:UInt32"/>
+      <data name="Streams" inType="win:UInt32"/>
+      <data name="StreamType" inType="win:UInt32" map="StreamType"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServerFsProxyInitializationStopArgs">
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+      <data name="Devices" inType="win:UInt32"/>
+      <data name="Streams" inType="win:UInt32"/>
+      <data name="StreamType" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServerFsClientCreateSampleStartArgs">
+      <data name="StreamId" inType="win:UInt32"/>
+      <data name="TimeStamp" inType="win:UInt64"/>
+      <data name="Duration" inType="win:UInt32"/>
+      <data name="MemoryType" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServerCaptureStatisticsStartArgs">
+      <data name="StreamId" inType="win:UInt32"/>
+      <data name="StatSource" inType="win:UInt32" map="StatSource"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Requests" inType="win:UInt64"/>
+      <data name="Input" inType="win:UInt64"/>
+      <data name="Output" inType="win:UInt64"/>
+      <data name="Dropped" inType="win:UInt64"/>
+      <data name="FrameDelayRMSAccumulator" inType="win:Double"/>
+      <data name="FrameDelayRMSCounter" inType="win:UInt32"/>
+      <data name="ExpectedFrameDelay" inType="win:UInt64"/>
+      <data name="hr" inType="win:HexInt32"/>
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FrameServerWatchdogTimerTaskStartArgs">
+      <data name="TimerScope" inType="win:UInt32" map="TimerScope"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32"/>
+      <data name="DurationToTriggerInHns" inType="win:UInt64"/>
+      <data name="SymbolicLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="FrameServerWatchdogTimerTaskStopArgs">
+      <data name="TimerScope" inType="win:UInt32"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32" map="WatchdogOperation"/>
+      <data name="DurationToCompletionInHns" inType="win:UInt64"/>
+     </template>
+     <template tid="FrameServerWatchdogTimerTaskStop13Args">
+      <data name="TimerScope" inType="win:UInt32"/>
+      <data name="TimerScopeId" inType="win:UInt64"/>
+      <data name="WatchdogOperation" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaStream_SetWorkQueueTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="WorkQueueId" inType="win:UInt32"/>
+      <data name="Priority" inType="win:Int32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaSource_SetWorkQueueTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="WorkQueueId" inType="win:UInt32"/>
+      <data name="Priority" inType="win:Int32"/>
+      <data name="MediaStreamCount" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaStream_DropFrameTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="StreamId" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTaskStartArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="WorkQueueId" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_DecodedOutputTaskStartArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="StreamID" inType="win:UInt32"/>
+      <data name="IsAsyncMFT" inType="win:Boolean"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_DecodedOutputTaskStopArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="StreamID" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+      <data name="dwStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_DecodedInputTaskStopArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="StreamIndex" inType="win:UInt32"/>
+      <data name="StreamID" inType="win:UInt32"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaStream_ProcessSampleTaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Timestamp" inType="win:Int64"/>
+     </template>
+     <template tid="FrameServer_SetDXGIManagerTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="DXDevice" inType="win:Pointer"/>
+     </template>
+     <template tid="FrameServer_FSDeadline_WaitGPUTaskStartArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="DXDevice" inType="win:Pointer"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_ProcessInputTaskStartArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="Luid" inType="win:UInt64"/>
+      <data name="MFT" inType="win:Pointer"/>
+      <data name="Sample" inType="win:Pointer"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_ProcessInputTaskStopArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="Luid" inType="win:UInt64"/>
+      <data name="MFT" inType="win:Pointer"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_SetWorkQueueTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="SubObject" inType="win:Pointer"/>
+      <data name="ObjectType" inType="win:UInt32"/>
+      <data name="WorkQueueId" inType="win:UInt32"/>
+     </template>
+     <template tid="FrameServer_FSStreamPipeline_NullSampleTaskArgs">
+      <data name="StreamObject" inType="win:Pointer"/>
+     </template>
+     <template tid="CameraDeviceMFTInitializationStartArgs">
+      <data name="SymLink" inType="win:UnicodeString"/>
+     </template>
+     <template tid="CameraDeviceMFTSetOutputTypeInitializationStartArgs">
+      <data name="PinId" inType="win:UInt32"/>
+      <data name="MediaType" inType="win:AnsiString"/>
+      <data name="PinState" inType="win:UInt32"/>
+     </template>
+     <template tid="CameraDeviceMFTProcessOutputArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="StreamID" inType="win:Int32"/>
+      <data name="Sample" inType="win:Pointer"/>
+      <data name="Timestamp" inType="win:Int64"/>
+     </template>
+     <template tid="CameraDeviceTransformOutputSampleArgs">
+      <data name="DMFTPtr" inType="win:Pointer"/>
+      <data name="StreamId" inType="win:UInt32"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Duration" inType="win:UInt64"/>
+      <data name="CaptureTimestamp" inType="win:UInt64"/>
+      <data name="CaptureTimestampPresent" inType="win:Boolean"/>
+      <data name="CaptureDelta" inType="win:Int64"/>
+     </template>
+     <template tid="FrameServer_FSDeadline_SetGPUPriorityTaskArgs_V1">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="DXDevice" inType="win:Pointer"/>
+      <data name="Changed" inType="win:Boolean"/>
+      <data name="Priority" inType="win:Int32"/>
+      <data name="hnsDeadline" inType="win:Int64"/>
+      <data name="DeltaFromNow_us" inType="win:Int64"/>
+      <data name="hr" inType="win:HexInt32"/>
+     </template>
+     <template tid="FrameServer_FSSourceMediaStream_UpdateCountsTaskArgs_V2">
+      <data name="StreamObject" inType="win:Pointer"/>
+      <data name="Send" inType="win:Int64"/>
+      <data name="Cached" inType="win:Int64"/>
+      <data name="Dropped" inType="win:Int64"/>
+      <data name="Diff" inType="win:Int64"/>
+      <data name="FramesFree" inType="win:Int64"/>
+      <data name="hnsTimestamp" inType="win:Int64"/>
+      <data name="hnsDuration" inType="win:Int64"/>
+      <data name="captureTimestamp" inType="win:Int64"/>
+      <data name="interIimestampDelta" inType="win:Int64"/>
+      <data name="captureLatency" inType="win:Int64"/>
+      <data name="processingLatency" inType="win:Int64"/>
+      <data name="nextPreDeadlineDeltaFromNow_us" inType="win:Int64"/>
+      <data name="nextDeadlineDeltaFromNow_us" inType="win:Int64"/>
+      <data name="IsMEP" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_FrameServerFsProxySetOutputType" value="FrameServerFsProxySetOutputType"/>
+    <string id="task_FrameServerFsProxyD3dManager" value="FrameServerFsProxyD3dManager"/>
+    <string id="task_FrameServerFsProxyInitialization" value="FrameServerFsProxyInitialization"/>
+    <string id="task_FrameServerFsClientCreateSample" value="FrameServerFsClientCreateSample"/>
+    <string id="task_FrameServerCaptureStatistics" value="FrameServerCaptureStatistics"/>
+    <string id="task_FrameServerWatchdogTimerTask" value="FrameServerWatchdogTimerTask"/>
+    <string id="task_FrameServer_FSSourceMediaStream_SetWorkQueueTask" value="FrameServer_FSSourceMediaStream_SetWorkQueueTask"/>
+    <string id="task_FrameServer_FSSourceMediaStream_UpdateCountsTask" value="FrameServer_FSSourceMediaStream_UpdateCountsTask"/>
+    <string id="task_FrameServer_FSSourceMediaSource_SetWorkQueueTask" value="FrameServer_FSSourceMediaSource_SetWorkQueueTask"/>
+    <string id="task_FrameServer_FSSourceMediaStream_DropFrameTask" value="FrameServer_FSSourceMediaStream_DropFrameTask"/>
+    <string id="task_FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask" value="FrameServer_FSSourceMediaStream_ProcessingOnBehalfTask"/>
+    <string id="task_FrameServer_CameraToast_PostTask" value="FrameServer_CameraToast_PostTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_DecodedOutputTask" value="FrameServer_FSStreamPipeline_DecodedOutputTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_DecodedInputTask" value="FrameServer_FSStreamPipeline_DecodedInputTask"/>
+    <string id="task_FrameServer_FSSourceMediaStream_ProcessSampleTask" value="FrameServer_FSSourceMediaStream_ProcessSampleTask"/>
+    <string id="task_CameraDeviceMFTInitialization" value="CameraDeviceMFTInitialization"/>
+    <string id="task_CameraDeviceMFTSetOutputTypeInitialization" value="CameraDeviceMFTSetOutputTypeInitialization"/>
+    <string id="task_CameraDeviceMFTInputStreamStateChanged" value="CameraDeviceMFTInputStreamStateChanged"/>
+    <string id="task_CameraDeviceMFTProcessOutput" value="CameraDeviceMFTProcessOutput"/>
+    <string id="task_CameraDeviceMFTMErrorThrown" value="CameraDeviceMFTMErrorThrown"/>
+    <string id="task_CameraDeviceTransformSetOutputType" value="CameraDeviceTransformSetOutputType"/>
+    <string id="task_CameraDeviceTransformOutputSample" value="CameraDeviceTransformOutputSample"/>
+    <string id="task_FrameServer_FSDeadline_SetGPUPriorityTask" value="FrameServer_FSDeadline_SetGPUPriorityTask"/>
+    <string id="task_FrameServer_SetDXGIManagerTask" value="FrameServer_SetDXGIManagerTask"/>
+    <string id="task_FrameServer_FSDeadline_WaitGPUTask" value="FrameServer_FSDeadline_WaitGPUTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_ProcessInputTask" value="FrameServer_FSStreamPipeline_ProcessInputTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_ProcessOutputTask" value="FrameServer_FSStreamPipeline_ProcessOutputTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_SetWorkQueueTask" value="FrameServer_FSStreamPipeline_SetWorkQueueTask"/>
+    <string id="task_FrameServer_FSStreamPipeline_NullSampleTask" value="FrameServer_FSStreamPipeline_NullSampleTask"/>
+    <string id="map_StreamTypeMASTER" value="MASTER"/>
+    <string id="map_StreamTypeSHARED" value="SHARED"/>
+    <string id="map_StatSourceKsPin" value="KsPin"/>
+    <string id="map_StatSourceDMFT" value="DMFT"/>
+    <string id="map_StatSourceMFT0" value="MFT0"/>
+    <string id="map_StatSourceDeviceStream" value="DeviceStream"/>
+    <string id="map_StatSourceMJPGDecoder" value="MJPGDecoder"/>
+    <string id="map_StatSourceXVP" value="XVP"/>
+    <string id="map_StatSourceFSStream" value="FSStream"/>
+    <string id="map_TimerScopeFSService" value="FSService"/>
+    <string id="map_TimerScopeFSSource" value="FSSource"/>
+    <string id="map_TimerScopeFSStream" value="FSStream"/>
+    <string id="map_WatchdogOperationInitialize" value="Initialize"/>
+    <string id="map_WatchdogOperationActivate" value="Activate"/>
+    <string id="map_WatchdogOperationStart" value="Start"/>
+    <string id="map_WatchdogOperationStop" value="Stop"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

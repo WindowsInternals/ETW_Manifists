@@ -1,0 +1,414 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-CloudRestoreLauncher" guid="{dc327e90-7748-58ed-f39c-8a8987cfac58}" resourceFileName="Microsoft-Windows-CloudRestoreLauncher" messageFileName="Microsoft-Windows-CloudRestoreLauncher" symbol="MicrosoftWindowsCloudRestoreLauncher" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="map_OperationType">
+      <map value="0x0" message="$(string.map_map_OperationTypeunknown)"/>
+      <map value="0x1" message="$(string.map_map_OperationTypebackup)"/>
+      <map value="0x2" message="$(string.map_map_OperationTyperestore)"/>
+     </valueMap>
+     <valueMap name="map_RestorableTileRemoveKind">
+      <map value="0x0" message="$(string.map_map_RestorableTileRemoveKindNotRemoved)"/>
+      <map value="0x1" message="$(string.map_map_RestorableTileRemoveKindRemovedByUser)"/>
+      <map value="0x2" message="$(string.map_map_RestorableTileRemoveKindRemovedByReplacement)"/>
+      <map value="0x3" message="$(string.map_map_RestorableTileRemoveKindRemovedBySystem)"/>
+     </valueMap>
+     <valueMap name="map_CloudStorePolicyOperation">
+      <map value="0x0" message="$(string.map_map_CloudStorePolicyOperationGetPolicy Started)"/>
+      <map value="0x1" message="$(string.map_map_CloudStorePolicyOperationGetPolicy Completed)"/>
+      <map value="0x2" message="$(string.map_map_CloudStorePolicyOperationSetPolicy Started)"/>
+      <map value="0x3" message="$(string.map_map_CloudStorePolicyOperationSetPolicy Completed)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="4" symbol="task_04" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="5" symbol="task_05" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="6" symbol="task_06" version="0" task="task_0" level="win:Verbose" template="task_06Args"/>
+     <event value="7" symbol="task_07" version="0" task="task_0" level="win:Warning" template="task_06Args"/>
+     <event value="8" symbol="task_08" version="0" task="task_0" level="win:Verbose" template="task_08Args"/>
+     <event value="9" symbol="task_09" version="0" task="task_0" level="win:Error" template="task_09Args"/>
+     <event value="10" symbol="task_010" version="0" task="task_0" level="win:Verbose" template="task_010Args"/>
+     <event value="11" symbol="task_011" version="0" task="task_0" level="win:Error" template="task_011Args"/>
+     <event value="12" symbol="task_012" version="0" task="task_0" level="win:Verbose" template="task_012Args"/>
+     <event value="13" symbol="task_013" version="0" task="task_0" level="win:Verbose" template="task_013Args"/>
+     <event value="14" symbol="task_014" version="0" task="task_0" level="win:Verbose" template="task_012Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Verbose" template="task_013Args"/>
+     <event value="16" symbol="task_016" version="0" task="task_0" level="win:Verbose" template="task_016Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Warning" template="task_016Args"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Verbose" template="task_018Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Verbose" template="task_019Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Verbose" template="task_020Args"/>
+     <event value="21" symbol="task_021" version="0" task="task_0" level="win:Verbose" template="task_021Args"/>
+     <event value="22" symbol="task_022" version="0" task="task_0" level="win:Verbose" template="task_022Args"/>
+     <event value="23" symbol="task_023" version="0" task="task_0" level="win:Verbose" template="task_022Args"/>
+     <event value="24" symbol="task_024" version="0" task="task_0" level="win:Verbose" template="task_024Args"/>
+     <event value="25" symbol="task_025" version="0" task="task_0" level="win:Verbose" template="task_025Args"/>
+     <event value="26" symbol="task_026" version="0" task="task_0" level="win:Verbose" template="task_025Args"/>
+     <event value="27" symbol="task_027" version="0" task="task_0" level="win:Verbose" template="task_027Args"/>
+     <event value="28" symbol="task_028" version="0" task="task_0" level="win:Verbose" template="task_028Args"/>
+     <event value="29" symbol="task_029" version="0" task="task_0" level="win:Verbose" template="task_029Args"/>
+     <event value="30" symbol="task_030" version="0" task="task_0" level="win:Warning" template="task_029Args"/>
+     <event value="31" symbol="task_031" version="0" task="task_0" level="win:Error" template="task_031Args"/>
+     <event value="32" symbol="task_032" version="0" task="task_0" level="win:Verbose" template="task_032Args"/>
+     <event value="33" symbol="task_033" version="0" task="task_0" level="win:Informational" template="task_033Args"/>
+     <event value="34" symbol="task_034" version="0" task="task_0" level="win:Informational"/>
+     <event value="35" symbol="task_035" version="0" task="task_0" level="win:Informational" template="task_035Args"/>
+     <event value="36" symbol="task_036" version="0" task="task_0" level="win:Verbose" template="task_036Args"/>
+     <event value="37" symbol="task_037" version="0" task="task_0" level="win:Verbose" template="task_036Args"/>
+     <event value="38" symbol="task_038" version="0" task="task_0" level="win:Verbose" template="task_038Args"/>
+     <event value="39" symbol="task_039" version="0" task="task_0" level="win:Informational"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Informational"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Informational"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Informational"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Informational" template="task_043Args"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Informational" template="task_044Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Informational" template="task_044Args"/>
+     <event value="46" symbol="task_046" version="0" task="task_0" level="win:Verbose" template="task_032Args"/>
+     <event value="47" symbol="task_047" version="0" task="task_0" level="win:Verbose" template="task_047Args"/>
+     <event value="48" symbol="task_048" version="0" task="task_0" level="win:Verbose" template="task_047Args"/>
+     <event value="49" symbol="task_049" version="0" task="task_0" level="win:Informational"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Informational"/>
+     <event value="51" symbol="task_051" version="0" task="task_0" level="win:Informational"/>
+     <event value="52" symbol="task_052" version="0" task="task_0" level="win:Informational" template="task_052Args"/>
+     <event value="53" symbol="task_053" version="0" task="task_0" level="win:Verbose" template="task_053Args"/>
+     <event value="54" symbol="task_054" version="0" task="task_0" level="win:Verbose" template="task_053Args"/>
+     <event value="55" symbol="task_055" version="0" task="task_0" level="win:Verbose" template="task_055Args"/>
+     <event value="56" symbol="task_056" version="0" task="task_0" level="win:Verbose" template="task_056Args"/>
+     <event value="57" symbol="task_057" version="0" task="task_0" level="win:Verbose" template="task_055Args"/>
+     <event value="58" symbol="task_058" version="0" task="task_0" level="win:Verbose" template="task_056Args"/>
+     <event value="59" symbol="task_059" version="0" task="task_0" level="win:Verbose" template="task_059Args"/>
+     <event value="60" symbol="task_060" version="0" task="task_0" level="win:Verbose" template="task_060Args"/>
+     <event value="61" symbol="task_061" version="0" task="task_0" level="win:Verbose" template="task_061Args"/>
+     <event value="62" symbol="task_062" version="0" task="task_0" level="win:Verbose" template="task_061Args"/>
+     <event value="63" symbol="task_063" version="0" task="task_0" level="win:Verbose" template="task_063Args"/>
+     <event value="64" symbol="task_064" version="0" task="task_0" level="win:Verbose" template="task_064Args"/>
+     <event value="65" symbol="task_065" version="0" task="task_0" level="win:Verbose" template="task_064Args"/>
+     <event value="66" symbol="task_066" version="0" task="task_0" level="win:Error" template="task_066Args"/>
+     <event value="67" symbol="task_067" version="0" task="task_0" level="win:Informational" template="task_067Args"/>
+     <event value="68" symbol="task_068" version="0" task="task_0" level="win:Verbose" template="task_068Args"/>
+     <event value="69" symbol="task_069" version="0" task="task_0" level="win:Verbose" template="task_068Args"/>
+     <event value="70" symbol="task_070" version="0" task="task_0" level="win:Verbose" template="task_059Args"/>
+     <event value="71" symbol="task_071" version="0" task="task_0" level="win:Verbose" template="task_059Args"/>
+     <event value="72" symbol="task_072" version="0" task="task_0" level="win:Verbose" template="task_072Args"/>
+     <event value="73" symbol="task_073" version="0" task="task_0" level="win:Verbose" template="task_072Args"/>
+     <event value="74" symbol="task_074" version="0" task="task_0" level="win:Warning" template="task_072Args"/>
+     <event value="75" symbol="task_075" version="0" task="task_0" level="win:Informational" template="task_075Args"/>
+     <event value="76" symbol="task_076" version="0" task="task_0" level="win:Error" template="task_076Args"/>
+     <event value="77" symbol="task_077" version="0" task="task_0" level="win:Verbose" template="task_077Args"/>
+     <event value="78" symbol="task_078" version="0" task="task_0" level="win:Verbose" template="task_077Args"/>
+     <event value="79" symbol="task_079" version="0" task="task_0" level="win:Verbose" template="task_079Args"/>
+     <event value="80" symbol="task_080" version="0" task="task_0" level="win:Verbose" template="task_079Args"/>
+     <event value="81" symbol="task_081" version="0" task="task_0" level="win:Verbose" template="task_081Args"/>
+     <event value="82" symbol="task_082" version="0" task="task_0" level="win:Error" template="task_082Args"/>
+     <event value="83" symbol="task_083" version="0" task="task_0" level="win:Verbose" template="task_083Args"/>
+     <event value="84" symbol="task_084" version="0" task="task_0" level="win:Warning"/>
+     <event value="85" symbol="task_085" version="0" task="task_0" level="win:Warning"/>
+     <event value="86" symbol="task_086" version="0" task="task_0" level="win:Informational" template="task_02Args"/>
+     <event value="87" symbol="task_087" version="0" task="task_0" level="win:Informational"/>
+     <event value="88" symbol="task_088" version="0" task="task_0" level="win:Informational" template="task_088Args"/>
+     <event value="89" symbol="task_089" version="0" task="task_0" level="win:Informational" template="task_089Args"/>
+     <event value="90" symbol="task_090" version="0" task="task_0" level="win:Verbose" template="task_090Args"/>
+     <event value="91" symbol="task_091" version="0" task="task_0" level="win:Verbose" template="task_091Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02Args">
+      <data name="activityId" inType="win:GUID"/>
+      <data name="cv" inType="win:AnsiString"/>
+      <data name="Trigger" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06Args">
+      <data name="HandlerIndex" inType="win:UInt32"/>
+      <data name="HandlerId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_08Args">
+      <data name="Variant" inType="win:UInt8"/>
+      <data name="Payload" inType="win:UInt32"/>
+     </template>
+     <template tid="task_09Args">
+      <data name="OperationMode" inType="win:UInt32" map="map_OperationType"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_010Args">
+      <data name="OperationMode" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="ManifestId" inType="win:UnicodeString"/>
+      <data name="Scope" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_011Args">
+      <data name="OperationMode" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="ManifestId" inType="win:UnicodeString"/>
+      <data name="Scope" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_012Args">
+      <data name="ItemId" inType="win:UnicodeString"/>
+      <data name="ContentUri" inType="win:UnicodeString"/>
+      <data name="SyncRootRelativePath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_013Args">
+      <data name="LocalPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_016Args">
+      <data name="TypeName" inType="win:AnsiString"/>
+      <data name="Version" inType="win:UInt64"/>
+      <data name="IsDefault" inType="win:Boolean"/>
+     </template>
+     <template tid="task_018Args">
+      <data name="TypeName" inType="win:AnsiString"/>
+      <data name="LoadedVersion" inType="win:UInt64"/>
+      <data name="SavedVersion" inType="win:UInt64"/>
+     </template>
+     <template tid="task_019Args">
+      <data name="Operation" inType="win:UnicodeString"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_020Args">
+      <data name="Operation" inType="win:UnicodeString"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+      <data name="CloudStorePolicyOption" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_021Args">
+      <data name="HandlerType" inType="win:UnicodeString"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_022Args">
+      <data name="type" inType="win:UInt64"/>
+      <data name="currentThemePath" inType="win:UnicodeString"/>
+      <data name="contrastThemePath" inType="win:UnicodeString"/>
+      <data name="baseContrastThemeName" inType="win:UnicodeString"/>
+      <data name="customThemeName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_024Args">
+      <data name="ContrastThemeLocalPath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_025Args">
+      <data name="isAutoTimeZoneEnabled" inType="win:UInt64"/>
+      <data name="timezone" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_027Args">
+      <data name="HandlerType" inType="win:UnicodeString"/>
+      <data name="Red" inType="win:UInt8"/>
+      <data name="Green" inType="win:UInt8"/>
+      <data name="Blue" inType="win:UInt8"/>
+     </template>
+     <template tid="task_028Args">
+      <data name="HandlerType" inType="win:UnicodeString"/>
+      <data name="Position" inType="win:UInt64"/>
+     </template>
+     <template tid="task_029Args">
+      <data name="ProfileId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_031Args">
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="ProfileId" inType="win:UnicodeString"/>
+      <data name="Stage" inType="win:UInt8"/>
+     </template>
+     <template tid="task_032Args">
+      <data name="type" inType="win:UInt64"/>
+      <data name="basePersonalizationThemeName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_033Args">
+      <data name="PlaceholderCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_035Args">
+      <data name="Origin" inType="win:UInt32"/>
+      <data name="OriginContext" inType="win:UnicodeString"/>
+      <data name="AppIdOrProducCode" inType="win:UnicodeString"/>
+      <data name="TileId" inType="win:UnicodeString"/>
+      <data name="RemoveKind" inType="win:UInt32" map="map_RestorableTileRemoveKind"/>
+      <data name="Heuristic" inType="win:UInt32"/>
+      <data name="ReplacedByTileId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_036Args">
+      <data name="accountName" inType="win:UnicodeString"/>
+      <data name="safeCustomerID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_038Args">
+      <data name="propertyName" inType="win:UnicodeString"/>
+      <data name="propertyValue" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_043Args">
+      <data name="CommandLine" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_044Args">
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="task_047Args">
+      <data name="AppColorMode" inType="win:UInt64"/>
+      <data name="SystemColorMode" inType="win:UInt64"/>
+      <data name="enableTransperency" inType="win:UInt64"/>
+      <data name="colorPrevalnce" inType="win:UInt64"/>
+      <data name="accentColorMode" inType="win:UInt64"/>
+      <data name="dwmColorPrevalence" inType="win:UInt64"/>
+      <data name="Red" inType="win:UInt8"/>
+      <data name="Green" inType="win:UInt8"/>
+      <data name="Blue" inType="win:UInt8"/>
+     </template>
+     <template tid="task_052Args">
+      <data name="StoreResult" inType="win:Int32"/>
+      <data name="AppraiserResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_053Args">
+      <data name="CalendarType" inType="win:UInt64"/>
+     </template>
+     <template tid="task_055Args">
+      <data name="automaticOnSchedule" inType="win:UInt64"/>
+      <data name="automaticOnSunset" inType="win:UInt64"/>
+      <data name="manualScheduleBlueLightReductionOnHours" inType="win:UInt64"/>
+      <data name="manualScheduleBlueLightReductionOffHours" inType="win:UInt64"/>
+      <data name="targetColorTemperature" inType="win:UInt64"/>
+      <data name="sunsetHours" inType="win:UInt64"/>
+      <data name="sunriseHours" inType="win:UInt64"/>
+      <data name="previewColorTemperatureChanges" inType="win:UInt64"/>
+      <data name="darkMode" inType="win:UInt64"/>
+     </template>
+     <template tid="task_056Args">
+      <data name="state" inType="win:UInt64"/>
+      <data name="source" inType="win:UInt64"/>
+      <data name="isSupported" inType="win:UInt64"/>
+     </template>
+     <template tid="task_059Args">
+      <data name="Operation" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_060Args">
+      <data name="CurrentSoundSchemeFile" inType="win:UnicodeString"/>
+      <data name="DefaultSoundSchemeFile" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_061Args">
+      <data name="singleClickOverride" inType="win:UInt64"/>
+      <data name="singleClickPenWorkspaceVerb" inType="win:UInt64"/>
+      <data name="doubleClickOverride" inType="win:UInt64"/>
+      <data name="doubleClickPenWorkspaceVerb" inType="win:UInt64"/>
+      <data name="longPressOverride" inType="win:UInt64"/>
+      <data name="longPressPenWorkspaceVerb" inType="win:UInt64"/>
+      <data name="penWorkspaceAppLaunchOnPenDetachEnabled" inType="win:UInt64"/>
+      <data name="penEnablePenButtonOverride" inType="win:UInt64"/>
+      <data name="singleClickCustomAppPath" inType="win:UnicodeString"/>
+      <data name="doubleClickCustomAppPath" inType="win:UnicodeString"/>
+      <data name="longPressCustomAppPath" inType="win:UnicodeString"/>
+      <data name="singleClickCustomAppID" inType="win:UnicodeString"/>
+      <data name="doubleClickCustomAppID" inType="win:UnicodeString"/>
+      <data name="longPressCustomAppID" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_063Args">
+      <data name="Setting" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_064Args">
+      <data name="OneDrivefolder" inType="win:UInt64"/>
+      <data name="Shuffle" inType="win:UInt64"/>
+      <data name="TimeInMillSec" inType="win:UInt64"/>
+     </template>
+     <template tid="task_066Args">
+      <data name="LogMessage" inType="win:UnicodeString"/>
+      <data name="RegKeyPath" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_067Args">
+      <data name="LogMessage" inType="win:UnicodeString"/>
+      <data name="EventName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_068Args">
+      <data name="SettingName" inType="win:UnicodeString"/>
+      <data name="SettingDataValue" inType="win:Boolean"/>
+     </template>
+     <template tid="task_072Args">
+      <data name="Operation" inType="win:UnicodeString"/>
+      <data name="LogMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_075Args">
+      <data name="AppIDs" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_076Args">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="File" inType="win:AnsiString"/>
+      <data name="LineNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_077Args">
+      <data name="themeType" inType="win:UnicodeString"/>
+      <data name="currentThemePath" inType="win:UnicodeString"/>
+      <data name="contrastThemePath" inType="win:UnicodeString"/>
+      <data name="baseContrastThemeName" inType="win:UnicodeString"/>
+      <data name="customThemeName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_079Args">
+      <data name="type" inType="win:UnicodeString"/>
+      <data name="basePersonalizationThemeName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_081Args">
+      <data name="OperationMode" inType="win:UInt32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Status" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="ManifestId" inType="win:UnicodeString"/>
+      <data name="Scope" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_082Args">
+      <data name="OperationMode" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+      <data name="StatusCode" inType="win:UInt32"/>
+      <data name="Status" inType="win:UnicodeString"/>
+      <data name="Context" inType="win:UInt32"/>
+      <data name="ManifestId" inType="win:UnicodeString"/>
+      <data name="Scope" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_083Args">
+      <data name="HandlerType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_088Args">
+      <data name="OperationStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_089Args">
+      <data name="Result" inType="win:Boolean"/>
+     </template>
+     <template tid="task_090Args">
+      <data name="Operation" inType="win:UInt32" map="map_CloudStorePolicyOperation"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_091Args">
+      <data name="Operation" inType="win:UInt32"/>
+      <data name="PolicyName" inType="win:UnicodeString"/>
+      <data name="CloudStorePolicyOption" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_map_OperationTypeunknown" value="unknown"/>
+    <string id="map_map_OperationTypebackup" value="backup"/>
+    <string id="map_map_OperationTyperestore" value="restore"/>
+    <string id="map_map_RestorableTileRemoveKindNotRemoved" value="NotRemoved"/>
+    <string id="map_map_RestorableTileRemoveKindRemovedByUser" value="RemovedByUser"/>
+    <string id="map_map_RestorableTileRemoveKindRemovedByReplacement" value="RemovedByReplacement"/>
+    <string id="map_map_RestorableTileRemoveKindRemovedBySystem" value="RemovedBySystem"/>
+    <string id="map_map_CloudStorePolicyOperationGetPolicy Started" value="GetPolicy Started"/>
+    <string id="map_map_CloudStorePolicyOperationGetPolicy Completed" value="GetPolicy Completed"/>
+    <string id="map_map_CloudStorePolicyOperationSetPolicy Started" value="SetPolicy Started"/>
+    <string id="map_map_CloudStorePolicyOperationSetPolicy Completed" value="SetPolicy Completed"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

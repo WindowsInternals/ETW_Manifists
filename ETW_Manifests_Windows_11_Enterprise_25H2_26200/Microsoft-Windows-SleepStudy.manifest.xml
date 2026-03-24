@@ -1,0 +1,1400 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SleepStudy" guid="{d37687e7-8bf0-4d11-b589-a7abe080756a}" resourceFileName="Microsoft-Windows-SleepStudy" messageFileName="Microsoft-Windows-SleepStudy" symbol="MicrosoftWindowsSleepStudy" source="Xml" >
+    <keywords>
+     <keyword name="sleepstudy" message="$(string.keyword_sleepstudy)" mask="0x1"/>
+     <keyword name="sleepstudycontrol" message="$(string.keyword_sleepstudycontrol)" mask="0x2"/>
+     <keyword name="sleepstudyverbose" message="$(string.keyword_sleepstudyverbose)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="ScenarioBlocker" message="$(string.task_ScenarioBlocker)" value="1"/>
+     <task name="ScenarioBlockerData" message="$(string.task_ScenarioBlockerData)" value="2"/>
+     <task name="TopOffendersPerfTrack" message="$(string.task_TopOffendersPerfTrack)" value="3"/>
+     <task name="SubsystemContextInfo" message="$(string.task_SubsystemContextInfo)" value="4"/>
+     <task name="ScenarioBlockerVerboseAccounting" message="$(string.task_ScenarioBlockerVerboseAccounting)" value="5"/>
+     <task name="ScenarioBlockerDetailed" message="$(string.task_ScenarioBlockerDetailed)" value="6"/>
+     <task name="ScenarioExitReason" message="$(string.task_ScenarioExitReason)" value="7"/>
+     <task name="ScenarioStartReason" message="$(string.task_ScenarioStartReason)" value="8"/>
+     <task name="ScenarioStopReason" message="$(string.task_ScenarioStopReason)" value="9"/>
+     <task name="ScenarioDeviceRundown" message="$(string.task_ScenarioDeviceRundown)" value="10"/>
+     <task name="ScenarioComponentAccounting" message="$(string.task_ScenarioComponentAccounting)" value="11"/>
+     <task name="ScenarioDeviceAccounting" message="$(string.task_ScenarioDeviceAccounting)" value="12"/>
+     <task name="ScenarioDripsWakeAccounting" message="$(string.task_ScenarioDripsWakeAccounting)" value="13"/>
+     <task name="ScenarioSessionSwitch" message="$(string.task_ScenarioSessionSwitch)" value="14"/>
+     <task name="SystemStartControl" message="$(string.task_SystemStartControl)" value="15"/>
+     <task name="SystemStopControl" message="$(string.task_SystemStopControl)" value="16"/>
+     <task name="PreSleepNotificationControl" message="$(string.task_PreSleepNotificationControl)" value="17"/>
+     <task name="PostSleepNotificationControl" message="$(string.task_PostSleepNotificationControl)" value="18"/>
+     <task name="DirtyTransitionControl" message="$(string.task_DirtyTransitionControl)" value="19"/>
+     <task name="CsEnterReasonControl" message="$(string.task_CsEnterReasonControl)" value="20"/>
+     <task name="CsExitReasonControl" message="$(string.task_CsExitReasonControl)" value="21"/>
+     <task name="ShutdownActionControl" message="$(string.task_ShutdownActionControl)" value="22"/>
+     <task name="BatteryCountChangeControl" message="$(string.task_BatteryCountChangeControl)" value="23"/>
+     <task name="AcDcStateChangeControl" message="$(string.task_AcDcStateChangeControl)" value="24"/>
+     <task name="BootBatteryStatusControl" message="$(string.task_BootBatteryStatusControl)" value="25"/>
+     <task name="BlockerStateChange" message="$(string.task_BlockerStateChange)" value="26"/>
+     <task name="CollectionStateChange" message="$(string.task_CollectionStateChange)" value="27"/>
+     <task name="BlockerStateRundown" message="$(string.task_BlockerStateRundown)" value="28"/>
+     <task name="CollectionStateRundown" message="$(string.task_CollectionStateRundown)" value="29"/>
+     <task name="BlockerCreated" message="$(string.task_BlockerCreated)" value="30"/>
+     <task name="BlockerDeleted" message="$(string.task_BlockerDeleted)" value="31"/>
+     <task name="SessionStateRundown" message="$(string.task_SessionStateRundown)" value="32"/>
+    </tasks>
+    <maps>
+     <valueMap name="Spr:MapMsEnterExitReason">
+      <map value="0x0" message="$(string.map_Spr:MapMsEnterExitReasonUnknown)"/>
+      <map value="0x1" message="$(string.map_Spr:MapMsEnterExitReasonPower Button)"/>
+      <map value="0x2" message="$(string.map_Spr:MapMsEnterExitReasonRemote Connection)"/>
+      <map value="0x3" message="$(string.map_Spr:MapMsEnterExitReasonSC_MONITORPOWER)"/>
+      <map value="0x4" message="$(string.map_Spr:MapMsEnterExitReasonUser Input)"/>
+      <map value="0x5" message="$(string.map_Spr:MapMsEnterExitReasonAC/DC Display Burst)"/>
+      <map value="0x6" message="$(string.map_Spr:MapMsEnterExitReasonUser Display Burst)"/>
+      <map value="0x7" message="$(string.map_Spr:MapMsEnterExitReasonPoSetSystemState)"/>
+      <map value="0x8" message="$(string.map_Spr:MapMsEnterExitReasonSetThreadExecutionState)"/>
+      <map value="0x9" message="$(string.map_Spr:MapMsEnterExitReasonFull Wake)"/>
+      <map value="0xa" message="$(string.map_Spr:MapMsEnterExitReasonSession Unlock)"/>
+      <map value="0xb" message="$(string.map_Spr:MapMsEnterExitReasonScreen Off Request)"/>
+      <map value="0xc" message="$(string.map_Spr:MapMsEnterExitReasonIdle Timeout)"/>
+      <map value="0xd" message="$(string.map_Spr:MapMsEnterExitReasonPolicy Change)"/>
+      <map value="0xe" message="$(string.map_Spr:MapMsEnterExitReasonSleep Button)"/>
+      <map value="0xf" message="$(string.map_Spr:MapMsEnterExitReasonLid)"/>
+      <map value="0x10" message="$(string.map_Spr:MapMsEnterExitReasonBattery Count Change)"/>
+      <map value="0x11" message="$(string.map_Spr:MapMsEnterExitReasonGrace Period)"/>
+      <map value="0x12" message="$(string.map_Spr:MapMsEnterExitReasonGraphics PnP Operation)"/>
+      <map value="0x13" message="$(string.map_Spr:MapMsEnterExitReasonDynamic Partitioning)"/>
+      <map value="0x14" message="$(string.map_Spr:MapMsEnterExitReasonSleep, Hibernate, or Shutdown)"/>
+      <map value="0x15" message="$(string.map_Spr:MapMsEnterExitReasonSystem Idle Timeout)"/>
+      <map value="0x16" message="$(string.map_Spr:MapMsEnterExitReasonProximity Sensor)"/>
+      <map value="0x17" message="$(string.map_Spr:MapMsEnterExitReasonThermal Standby)"/>
+      <map value="0x18" message="$(string.map_Spr:MapMsEnterExitReasonResume PDC)"/>
+      <map value="0x19" message="$(string.map_Spr:MapMsEnterExitReasonResume from Hibernate)"/>
+      <map value="0x1a" message="$(string.map_Spr:MapMsEnterExitReasonTerminal Arrival/Departure)"/>
+      <map value="0x1b" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal)"/>
+      <map value="0x1c" message="$(string.map_Spr:MapMsEnterExitReasonAC/DC Display Burst Suppressed)"/>
+      <map value="0x1d" message="$(string.map_Spr:MapMsEnterExitReasonTransition to System Sleep State S4/S5)"/>
+      <map value="0x1e" message="$(string.map_Spr:MapMsEnterExitReasonWinrt)"/>
+      <map value="0x1f" message="$(string.map_Spr:MapMsEnterExitReasonInput Keyboard)"/>
+      <map value="0x20" message="$(string.map_Spr:MapMsEnterExitReasonInput Mouse)"/>
+      <map value="0x21" message="$(string.map_Spr:MapMsEnterExitReasonInput Touchpad)"/>
+      <map value="0x22" message="$(string.map_Spr:MapMsEnterExitReasonInput Pen)"/>
+      <map value="0x23" message="$(string.map_Spr:MapMsEnterExitReasonInput Accelerometer)"/>
+      <map value="0x24" message="$(string.map_Spr:MapMsEnterExitReasonInput Hid Device)"/>
+      <map value="0x25" message="$(string.map_Spr:MapMsEnterExitReasonInput User Present)"/>
+      <map value="0x26" message="$(string.map_Spr:MapMsEnterExitReasonInput Session Switch)"/>
+      <map value="0x27" message="$(string.map_Spr:MapMsEnterExitReasonInput Initialization)"/>
+      <map value="0x28" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal: Windows Mobile Power Notification)"/>
+      <map value="0x29" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal: Windows Mobile Shell)"/>
+      <map value="0x2a" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal: Hey Cortana)"/>
+      <map value="0x2b" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal: Holographic Shell)"/>
+      <map value="0x2c" message="$(string.map_Spr:MapMsEnterExitReasonPDC Signal: Windows Biometric Framework Fingerprint)"/>
+      <map value="0x2d" message="$(string.map_Spr:MapMsEnterExitReasonDirected DRIPS)"/>
+      <map value="0x2e" message="$(string.map_Spr:MapMsEnterExitReasonMonitor Dim)"/>
+      <map value="0x2f" message="$(string.map_Spr:MapMsEnterExitReasonBuiltin Panel)"/>
+      <map value="0x30" message="$(string.map_Spr:MapMsEnterExitReasonDisplay Required Undim)"/>
+      <map value="0x31" message="$(string.map_Spr:MapMsEnterExitReasonBattery Count Change Suppressed)"/>
+      <map value="0x32" message="$(string.map_Spr:MapMsEnterExitReasonTransition From Sleep)"/>
+      <map value="0x33" message="$(string.map_Spr:MapMsEnterExitReasonTerminal Initialization)"/>
+      <map value="0x36" message="$(string.map_Spr:MapMsEnterExitReasonInput Touch)"/>
+      <map value="0x37" message="$(string.map_Spr:MapMsEnterExitReasonAusterity Battery Drain Budget Exceeded)"/>
+     </valueMap>
+     <valueMap name="Spr:MapMsScenarioStopReason">
+      <map value="0x0" message="$(string.map_Spr:MapMsScenarioStopReasonCsExit)"/>
+      <map value="0x1" message="$(string.map_Spr:MapMsScenarioStopReasonCritical Battery)"/>
+     </valueMap>
+     <valueMap name="Spr:SprSessionType">
+      <map value="0x0" message="$(string.map_Spr:SprSessionTypeActive)"/>
+      <map value="0x1" message="$(string.map_Spr:SprSessionTypeScreen Off)"/>
+      <map value="0x2" message="$(string.map_Spr:SprSessionTypeModern Standby)"/>
+      <map value="0x3" message="$(string.map_Spr:SprSessionTypeSystem Transition)"/>
+     </valueMap>
+     <valueMap name="Spr:SuppressionState">
+      <map value="0x0" message="$(string.map_Spr:SuppressionStateDisengaged)"/>
+      <map value="0x1" message="$(string.map_Spr:SuppressionStateEngaged)"/>
+      <map value="0x2" message="$(string.map_Spr:SuppressionStateTelemetry Only)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="ScenarioBlocker" version="0" task="ScenarioBlocker" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerArgs"/>
+     <event value="1" symbol="ScenarioBlocker_V1" version="1" task="ScenarioBlocker" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerArgs_V1"/>
+     <event value="1" symbol="ScenarioBlocker_V2" version="2" task="ScenarioBlocker" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerArgs_V2"/>
+     <event value="2" symbol="ScenarioBlockerData" version="0" task="ScenarioBlockerData" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerDataArgs"/>
+     <event value="2" symbol="ScenarioBlockerData_V1" version="1" task="ScenarioBlockerData" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerDataArgs_V1"/>
+     <event value="3" symbol="TopOffendersPerfTrack" version="0" task="TopOffendersPerfTrack" level="win:Informational" template="TopOffendersPerfTrackArgs"/>
+     <event value="4" symbol="SubsystemContextInfo" version="0" task="SubsystemContextInfo" level="win:Informational" keywords="sleepstudy" template="SubsystemContextInfoArgs"/>
+     <event value="5" symbol="ScenarioBlockerVerboseAccounting" version="0" task="ScenarioBlockerVerboseAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerVerboseAccountingArgs"/>
+     <event value="5" symbol="ScenarioBlockerVerboseAccounting_V1" version="1" task="ScenarioBlockerVerboseAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerVerboseAccountingArgs_V1"/>
+     <event value="5" symbol="ScenarioBlockerVerboseAccounting_V2" version="2" task="ScenarioBlockerVerboseAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerVerboseAccountingArgs_V2"/>
+     <event value="6" symbol="ScenarioBlockerDetailed" version="0" task="ScenarioBlockerDetailed" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerDetailedArgs"/>
+     <event value="6" symbol="ScenarioBlockerDetailed_V1" version="1" task="ScenarioBlockerDetailed" level="win:Informational" keywords="sleepstudy" template="ScenarioBlockerDetailedArgs_V1"/>
+     <event value="7" symbol="ScenarioExitReason" version="0" task="ScenarioExitReason" level="win:Informational" keywords="sleepstudy" template="ScenarioExitReasonArgs"/>
+     <event value="7" symbol="ScenarioExitReason_V1" version="1" task="ScenarioExitReason" level="win:Informational" keywords="sleepstudy" template="ScenarioExitReasonArgs_V1"/>
+     <event value="8" symbol="ScenarioStartReason" version="0" task="ScenarioStartReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStartReasonArgs"/>
+     <event value="8" symbol="ScenarioStartReason_V1" version="1" task="ScenarioStartReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStartReasonArgs_V1"/>
+     <event value="9" symbol="ScenarioStopReason" version="0" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs"/>
+     <event value="9" symbol="ScenarioStopReason_V1" version="1" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V1"/>
+     <event value="9" symbol="ScenarioStopReason_V2" version="2" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V2"/>
+     <event value="9" symbol="ScenarioStopReason_V3" version="3" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V3"/>
+     <event value="9" symbol="ScenarioStopReason_V4" version="4" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V4"/>
+     <event value="9" symbol="ScenarioStopReason_V5" version="5" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V5"/>
+     <event value="9" symbol="ScenarioStopReason_V6" version="6" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V6"/>
+     <event value="9" symbol="ScenarioStopReason_V7" version="7" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V7"/>
+     <event value="9" symbol="ScenarioStopReason_V8" version="8" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V8"/>
+     <event value="9" symbol="ScenarioStopReason_V9" version="9" task="ScenarioStopReason" level="win:Informational" keywords="sleepstudy" template="ScenarioStopReasonArgs_V9"/>
+     <event value="10" symbol="ScenarioDeviceRundown" version="0" task="ScenarioDeviceRundown" level="win:Informational" keywords="sleepstudy" template="ScenarioDeviceRundownArgs"/>
+     <event value="10" symbol="ScenarioDeviceRundown_V1" version="1" task="ScenarioDeviceRundown" level="win:Informational" keywords="sleepstudy" template="ScenarioDeviceRundownArgs_V1"/>
+     <event value="11" symbol="ScenarioComponentAccounting" version="0" task="ScenarioComponentAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioComponentAccountingArgs"/>
+     <event value="12" symbol="ScenarioDeviceAccounting" version="0" task="ScenarioDeviceAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioDeviceAccountingArgs"/>
+     <event value="13" symbol="ScenarioDripsWakeAccounting" version="0" task="ScenarioDripsWakeAccounting" level="win:Informational" keywords="sleepstudy" template="ScenarioDripsWakeAccountingArgs"/>
+     <event value="14" symbol="ScenarioSessionSwitch" version="0" task="ScenarioSessionSwitch" level="win:Informational" keywords="sleepstudy sleepstudyverbose" template="ScenarioSessionSwitchArgs"/>
+     <event value="15" symbol="SystemStartControl" version="0" task="SystemStartControl" level="win:Informational" keywords="sleepstudycontrol" template="SystemStartControlArgs"/>
+     <event value="16" symbol="SystemStopControl" version="0" task="SystemStopControl" level="win:Informational" keywords="sleepstudycontrol" template="SystemStartControlArgs"/>
+     <event value="16" symbol="SystemStopControl_V1" version="1" task="SystemStopControl" level="win:Informational" keywords="sleepstudycontrol" template="SystemStopControlArgs_V1"/>
+     <event value="16" symbol="SystemStopControl_V2" version="2" task="SystemStopControl" level="win:Informational" keywords="sleepstudycontrol" template="SystemStopControlArgs_V2"/>
+     <event value="16" symbol="SystemStopControl_V3" version="3" task="SystemStopControl" level="win:Informational" keywords="sleepstudycontrol" template="SystemStopControlArgs_V3"/>
+     <event value="17" symbol="PreSleepNotificationControl" version="0" task="PreSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PreSleepNotificationControlArgs"/>
+     <event value="17" symbol="PreSleepNotificationControl_V1" version="1" task="PreSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PreSleepNotificationControlArgs_V1"/>
+     <event value="17" symbol="PreSleepNotificationControl_V2" version="2" task="PreSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PreSleepNotificationControlArgs_V2"/>
+     <event value="17" symbol="PreSleepNotificationControl_V3" version="3" task="PreSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PreSleepNotificationControlArgs_V3"/>
+     <event value="17" symbol="PreSleepNotificationControl_V4" version="4" task="PreSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PreSleepNotificationControlArgs_V4"/>
+     <event value="18" symbol="PostSleepNotificationControl" version="0" task="PostSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PostSleepNotificationControlArgs"/>
+     <event value="18" symbol="PostSleepNotificationControl_V1" version="1" task="PostSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PostSleepNotificationControlArgs_V1"/>
+     <event value="18" symbol="PostSleepNotificationControl_V2" version="2" task="PostSleepNotificationControl" level="win:Informational" keywords="sleepstudycontrol" template="PostSleepNotificationControlArgs_V2"/>
+     <event value="19" symbol="DirtyTransitionControl" version="0" task="DirtyTransitionControl" level="win:Informational" keywords="sleepstudycontrol" template="DirtyTransitionControlArgs"/>
+     <event value="19" symbol="DirtyTransitionControl_V1" version="1" task="DirtyTransitionControl" level="win:Informational" keywords="sleepstudycontrol" template="DirtyTransitionControlArgs_V1"/>
+     <event value="19" symbol="DirtyTransitionControl_V2" version="2" task="DirtyTransitionControl" level="win:Informational" keywords="sleepstudycontrol" template="DirtyTransitionControlArgs_V2"/>
+     <event value="20" symbol="CsEnterReasonControl" version="0" task="CsEnterReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsEnterReasonControlArgs"/>
+     <event value="20" symbol="CsEnterReasonControl_V1" version="1" task="CsEnterReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsEnterReasonControlArgs_V1"/>
+     <event value="20" symbol="CsEnterReasonControl_V2" version="2" task="CsEnterReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsEnterReasonControlArgs_V2"/>
+     <event value="20" symbol="CsEnterReasonControl_V3" version="3" task="CsEnterReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsEnterReasonControlArgs_V3"/>
+     <event value="21" symbol="CsExitReasonControl" version="0" task="CsExitReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsExitReasonControlArgs"/>
+     <event value="21" symbol="CsExitReasonControl_V1" version="1" task="CsExitReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsExitReasonControlArgs_V1"/>
+     <event value="21" symbol="CsExitReasonControl_V2" version="2" task="CsExitReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsExitReasonControlArgs_V2"/>
+     <event value="21" symbol="CsExitReasonControl_V3" version="3" task="CsExitReasonControl" level="win:Informational" keywords="sleepstudycontrol" template="CsExitReasonControlArgs_V3"/>
+     <event value="22" symbol="ShutdownActionControl" version="0" task="ShutdownActionControl" level="win:Informational" keywords="sleepstudycontrol" template="ShutdownActionControlArgs"/>
+     <event value="23" symbol="BatteryCountChangeControl" version="0" task="BatteryCountChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="BatteryCountChangeControlArgs"/>
+     <event value="23" symbol="BatteryCountChangeControl_V1" version="1" task="BatteryCountChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="BatteryCountChangeControlArgs_V1"/>
+     <event value="23" symbol="BatteryCountChangeControl_V2" version="2" task="BatteryCountChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="BatteryCountChangeControlArgs_V2"/>
+     <event value="24" symbol="AcDcStateChangeControl" version="0" task="AcDcStateChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="AcDcStateChangeControlArgs"/>
+     <event value="24" symbol="AcDcStateChangeControl_V1" version="1" task="AcDcStateChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="AcDcStateChangeControlArgs_V1"/>
+     <event value="24" symbol="AcDcStateChangeControl_V2" version="2" task="AcDcStateChangeControl" level="win:Informational" keywords="sleepstudycontrol" template="AcDcStateChangeControlArgs_V2"/>
+     <event value="25" symbol="BootBatteryStatusControl" version="0" task="BootBatteryStatusControl" level="win:Informational" keywords="sleepstudycontrol" template="BootBatteryStatusControlArgs"/>
+     <event value="26" symbol="BlockerStateChange" version="0" task="BlockerStateChange" level="win:Informational" keywords="sleepstudyverbose" template="BlockerStateChangeArgs"/>
+     <event value="27" symbol="CollectionStateChange" version="0" task="CollectionStateChange" level="win:Informational" keywords="sleepstudyverbose" template="CollectionStateChangeArgs"/>
+     <event value="28" symbol="BlockerStateRundown" version="0" task="BlockerStateRundown" level="win:Informational" keywords="sleepstudyverbose" template="BlockerStateRundownArgs"/>
+     <event value="29" symbol="CollectionStateRundown" version="0" task="CollectionStateRundown" level="win:Informational" keywords="sleepstudyverbose" template="CollectionStateRundownArgs"/>
+     <event value="30" symbol="BlockerCreated" version="0" task="BlockerCreated" level="win:Informational" keywords="sleepstudyverbose" template="BlockerStateRundownArgs"/>
+     <event value="31" symbol="BlockerDeleted" version="0" task="BlockerDeleted" level="win:Informational" keywords="sleepstudyverbose" template="BlockerStateRundownArgs"/>
+     <event value="32" symbol="SessionStateRundown" version="0" task="SessionStateRundown" level="win:Informational" keywords="sleepstudyverbose" template="SessionStateRundownArgs"/>
+    </events>
+    <templates>
+     <template tid="ScenarioBlockerArgs">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="ParentGuid" inType="win:GUID"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioBlockerDataArgs">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="DataCount" inType="win:UInt32"/>
+      <data name="Data" inType="win:Int8" count="DataCount"/>
+     </template>
+     <template tid="TopOffendersPerfTrackArgs">
+      <data name="ActiveTimeAndCommonData" inType="win:UInt32"/>
+      <data name="TopLevelActiveTime" inType="win:UInt32"/>
+      <data name="BlockerHierarchyLevel1" inType="win:UnicodeString"/>
+      <data name="BlockerHierarchyLevel2" inType="win:UnicodeString"/>
+      <data name="BlockerHierarchyLevel3" inType="win:UnicodeString"/>
+     </template>
+     <template tid="SubsystemContextInfoArgs">
+      <data name="DataCount" inType="win:UInt32"/>
+      <data name="Data" inType="win:AnsiString" count="DataCount"/>
+     </template>
+     <template tid="ScenarioBlockerVerboseAccountingArgs">
+      <data name="ScenarioId" inType="win:UInt64"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ParentBlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="ActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="NonActiveTime" inType="win:UInt64"/>
+      <data name="NonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="NonActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedNonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedNonActiveTimePerBucket" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioBlockerDetailedArgs">
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="ParentGuid" inType="win:GUID"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ResourceId" inType="win:UInt16"/>
+      <data name="ResourceFileNameLength" inType="win:UInt32"/>
+      <data name="ResourceFileName" inType="win:UnicodeString" length="ResourceFileNameLength"/>
+      <data name="SubstitutionStringCount" inType="win:UInt32"/>
+      <data name="SubstitutionStrings" inType="win:Float" count="SubstitutionStringCount"/>
+     </template>
+     <template tid="ScenarioExitReasonArgs">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="ActiveResidencyInUs" inType="win:UInt64"/>
+      <data name="NonDripsTimeActivatedInUs" inType="win:UInt64"/>
+      <data name="FirstDripsEntryInUs" inType="win:UInt64"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="FullChargeCapacityRatio" inType="win:UInt8"/>
+      <data name="AudioPlaying" inType="win:Boolean"/>
+      <data name="Reason" inType="win:UInt32" map="Spr:MapMsEnterExitReason"/>
+      <data name="AudioPlaybackInUs" inType="win:UInt64"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="ExitLatencyInUs" inType="win:UInt64"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="LidOpenState" inType="win:Boolean"/>
+      <data name="ExternalMonitorConnectedState" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="BatteryRemainingCapacityOnExit" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnExit" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="InputSuppressionActionCount" inType="win:UInt32"/>
+      <data name="NonResiliencyTimeInUs" inType="win:UInt64"/>
+      <data name="ResiliencyDripsTimeInUs" inType="win:UInt64"/>
+      <data name="ResiliencyHwDripsTimeInUs" inType="win:UInt64"/>
+      <data name="GdiOnTime" inType="win:UInt64"/>
+      <data name="DwmSyncFlushTime" inType="win:UInt64"/>
+      <data name="MonitorPowerOnTime" inType="win:UInt64"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="PowerSchemeInfo" inType="win:UInt32"/>
+     </template>
+     <template tid="ScenarioStartReasonArgs">
+      <data name="ScenarioGuid" inType="win:GUID"/>
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="CsEnterReason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="CurrentSystemTime" inType="win:Int64"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32" map="Spr:MapMsScenarioStopReason"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="ScenarioDeviceRundownArgs">
+      <data name="DeviceNode" inType="win:Pointer"/>
+      <data name="DeviceIdLength" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UnicodeString" length="DeviceIdLength"/>
+      <data name="InstancePathLength" inType="win:UInt16"/>
+      <data name="InstancePath" inType="win:UnicodeString" length="InstancePathLength"/>
+      <data name="ServiceNameLength" inType="win:UInt16"/>
+      <data name="ServiceName" inType="win:UnicodeString" length="ServiceNameLength"/>
+      <data name="PlatformStateDependents" inType="win:UInt32"/>
+      <data name="Pdo" inType="win:Pointer"/>
+      <data name="ParentDeviceNode" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt16"/>
+      <data name="FriendlyName" inType="win:UnicodeString" length="FriendlyNameLength"/>
+      <data name="DripsRequiredState" inType="win:UInt32"/>
+     </template>
+     <template tid="ScenarioComponentAccountingArgs">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="DeviceNode" inType="win:Pointer"/>
+      <data name="Component" inType="win:UInt32"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioDeviceAccountingArgs">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="DeviceNode" inType="win:Pointer"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioDripsWakeAccountingArgs">
+      <data name="CsSessionId" inType="win:UInt8"/>
+      <data name="Count" inType="win:UInt32"/>
+      <data name="IdleMinDurationInUs" inType="win:UInt64"/>
+      <data name="IdleMaxDurationInUs" inType="win:UInt64"/>
+      <data name="IdleTotalDurationInUs" inType="win:UInt64"/>
+      <data name="ReasonDescriptionLength" inType="win:UInt32"/>
+      <data name="ReasonDescription" inType="win:UnicodeString" length="ReasonDescriptionLength"/>
+      <data name="GroupCount" inType="win:UInt16"/>
+      <data name="Group" inType="win:UInt64" count="GroupCount"/>
+      <data name="CsSessionIdV2" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioSessionSwitchArgs">
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="PreviousSessionId" inType="win:UInt64"/>
+      <data name="PreviousSessionType" inType="win:UInt32"/>
+      <data name="PreviousSessionDurationInUs" inType="win:UInt64"/>
+      <data name="PreviousEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="PreviousFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="PreviousEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="PreviousFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="NextSessionId" inType="win:UInt64"/>
+      <data name="NextSessionType" inType="win:UInt32" map="Spr:SprSessionType"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="MonitorReason" inType="win:UInt32"/>
+     </template>
+     <template tid="SystemStartControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+     </template>
+     <template tid="PreSleepNotificationControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="TargetState" inType="win:UInt32"/>
+      <data name="EffectiveState" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="PostSleepNotificationControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeAc" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeDc" inType="win:UInt64"/>
+      <data name="WakeRequesterTypeAc" inType="win:UInt32"/>
+      <data name="WakeRequesterTypeDc" inType="win:UInt32"/>
+     </template>
+     <template tid="DirtyTransitionControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BugcheckCode" inType="win:UInt32"/>
+      <data name="BugcheckParameter1" inType="win:Pointer"/>
+      <data name="BugcheckParameter2" inType="win:Pointer"/>
+      <data name="BugcheckParameter3" inType="win:Pointer"/>
+      <data name="BugcheckParameter4" inType="win:Pointer"/>
+      <data name="SleepInProgress" inType="win:UInt32"/>
+      <data name="PowerButtonTimestamp" inType="win:UInt64"/>
+      <data name="BootAppStatus" inType="win:UInt32"/>
+      <data name="Checkpoint" inType="win:UInt8"/>
+      <data name="ConnectedStandbyInProgress" inType="win:Boolean"/>
+      <data name="SystemSleepTransitionsToOn" inType="win:UInt32"/>
+      <data name="CsEntryScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="CheckpointStatus" inType="win:UInt8"/>
+      <data name="LongPowerButtonPressDetected" inType="win:Boolean"/>
+     </template>
+     <template tid="CsEnterReasonControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+     </template>
+     <template tid="CsExitReasonControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="ShutdownActionControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ShutdownActionType" inType="win:UInt32"/>
+      <data name="ShutdownEventCode" inType="win:UInt32"/>
+      <data name="ShutdownReason" inType="win:UInt32"/>
+     </template>
+     <template tid="BatteryCountChangeControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ValidBatteryCount" inType="win:UInt32"/>
+      <data name="ErrorBatteryCount" inType="win:UInt32"/>
+      <data name="AbandonedBatteryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="AcDcStateChangeControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="AcOnline" inType="win:Boolean"/>
+      <data name="RemainingCapacity" inType="win:UInt32"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="BootBatteryStatusControlArgs">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="RemainingCapacity" inType="win:UInt32"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="BlockerStateChangeArgs">
+      <data name="BlockerHandle" inType="win:UInt64"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BlockerActive" inType="win:Boolean"/>
+     </template>
+     <template tid="CollectionStateChangeArgs">
+      <data name="CollectionId" inType="win:GUID"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="CollectionActive" inType="win:Boolean"/>
+     </template>
+     <template tid="BlockerStateRundownArgs">
+      <data name="BlockerHandle" inType="win:Pointer"/>
+      <data name="BlockerId" inType="win:GUID"/>
+      <data name="ParentId" inType="win:GUID"/>
+      <data name="CollectionId" inType="win:GUID"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BlockerActive" inType="win:Boolean"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+     </template>
+     <template tid="CollectionStateRundownArgs">
+      <data name="CollectionId" inType="win:GUID"/>
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="CollectionActive" inType="win:Boolean"/>
+      <data name="CollectionNameLength" inType="win:UInt32"/>
+      <data name="CollectionName" inType="win:UnicodeString" length="CollectionNameLength"/>
+     </template>
+     <template tid="SessionStateRundownArgs">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="SessionType" inType="win:UInt32"/>
+     </template>
+     <template tid="ScenarioBlockerArgs_V1">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="ParentGuid" inType="win:GUID"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioBlockerDataArgs_V1">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="DataCount" inType="win:UInt32"/>
+      <data name="Data" inType="win:UInt8" count="DataCount"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioBlockerVerboseAccountingArgs_V1">
+      <data name="ScenarioId" inType="win:UInt64"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ParentBlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="ActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="NonActiveTime" inType="win:UInt64"/>
+      <data name="NonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="NonActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedNonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedNonActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="BlockerType" inType="win:UInt32"/>
+      <data name="DeviceClassNameLength" inType="win:UInt32"/>
+      <data name="DeviceClassName" inType="win:UnicodeString" length="DeviceClassNameLength"/>
+      <data name="DeviceClassGuidLength" inType="win:UInt32"/>
+      <data name="DeviceClassGuid" inType="win:UnicodeString" length="DeviceClassGuidLength"/>
+      <data name="DeviceHardwareIdLength" inType="win:UInt32"/>
+      <data name="DeviceHardwareId" inType="win:UnicodeString" length="DeviceHardwareIdLength"/>
+     </template>
+     <template tid="ScenarioBlockerDetailedArgs_V1">
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="ParentGuid" inType="win:GUID"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ResourceId" inType="win:UInt16"/>
+      <data name="ResourceFileNameLength" inType="win:UInt32"/>
+      <data name="ResourceFileName" inType="win:UnicodeString" length="ResourceFileNameLength"/>
+      <data name="SubstitutionStringCount" inType="win:UInt32"/>
+      <data name="SubstitutionStrings" inType="win:Double" count="SubstitutionStringCount"/>
+      <data name="Flags" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioExitReasonArgs_V1">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="ActiveResidencyInUs" inType="win:UInt64"/>
+      <data name="NonDripsTimeActivatedInUs" inType="win:UInt64"/>
+      <data name="FirstDripsEntryInUs" inType="win:UInt64"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="FullChargeCapacityRatio" inType="win:UInt8"/>
+      <data name="AudioPlaying" inType="win:Boolean"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="AudioPlaybackInUs" inType="win:UInt64"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="ExitLatencyInUs" inType="win:UInt64"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="LidOpenState" inType="win:Boolean"/>
+      <data name="ExternalMonitorConnectedState" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="BatteryRemainingCapacityOnExit" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnExit" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="InputSuppressionActionCount" inType="win:UInt32"/>
+      <data name="NonResiliencyTimeInUs" inType="win:UInt64"/>
+      <data name="ResiliencyDripsTimeInUs" inType="win:UInt64"/>
+      <data name="ResiliencyHwDripsTimeInUs" inType="win:UInt64"/>
+      <data name="GdiOnTime" inType="win:UInt64"/>
+      <data name="DwmSyncFlushTime" inType="win:UInt64"/>
+      <data name="MonitorPowerOnTime" inType="win:UInt64"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="PowerSchemeInfo" inType="win:UInt32"/>
+      <data name="PowerButtonSuppressionActionCount" inType="win:UInt32"/>
+     </template>
+     <template tid="ScenarioStartReasonArgs_V1">
+      <data name="ScenarioGuid" inType="win:GUID"/>
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="CsEnterReason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="CurrentSystemTime" inType="win:Int64"/>
+      <data name="LidOpenState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V1">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioDeviceRundownArgs_V1">
+      <data name="DeviceNode" inType="win:Pointer"/>
+      <data name="DeviceIdLength" inType="win:UInt16"/>
+      <data name="DeviceId" inType="win:UnicodeString" length="DeviceIdLength"/>
+      <data name="InstancePathLength" inType="win:UInt16"/>
+      <data name="InstancePath" inType="win:UnicodeString" length="InstancePathLength"/>
+      <data name="ServiceNameLength" inType="win:UInt16"/>
+      <data name="ServiceName" inType="win:UnicodeString" length="ServiceNameLength"/>
+      <data name="PlatformStateDependents" inType="win:UInt32"/>
+      <data name="Pdo" inType="win:Pointer"/>
+      <data name="ParentDeviceNode" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt16"/>
+      <data name="FriendlyName" inType="win:UnicodeString" length="FriendlyNameLength"/>
+      <data name="DripsRequiredState" inType="win:UInt32"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+     </template>
+     <template tid="SystemStopControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BatteryRemainingCapacity" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="PreSleepNotificationControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="TargetState" inType="win:UInt32"/>
+      <data name="EffectiveState" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="PostSleepNotificationControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeAc" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeDc" inType="win:UInt64"/>
+      <data name="WakeRequesterTypeAc" inType="win:UInt32"/>
+      <data name="WakeRequesterTypeDc" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+     </template>
+     <template tid="DirtyTransitionControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BugcheckCode" inType="win:UInt32"/>
+      <data name="BugcheckParameter1" inType="win:Pointer"/>
+      <data name="BugcheckParameter2" inType="win:Pointer"/>
+      <data name="BugcheckParameter3" inType="win:Pointer"/>
+      <data name="BugcheckParameter4" inType="win:Pointer"/>
+      <data name="SleepInProgress" inType="win:UInt32"/>
+      <data name="PowerButtonTimestamp" inType="win:UInt64"/>
+      <data name="BootAppStatus" inType="win:UInt32"/>
+      <data name="Checkpoint" inType="win:UInt8"/>
+      <data name="ConnectedStandbyInProgress" inType="win:Boolean"/>
+      <data name="SystemSleepTransitionsToOn" inType="win:UInt32"/>
+      <data name="CsEntryScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="CheckpointStatus" inType="win:UInt8"/>
+      <data name="LongPowerButtonPressDetected" inType="win:Boolean"/>
+      <data name="LidReliability" inType="win:Boolean"/>
+      <data name="InputSuppressionState" inType="win:UInt8" map="Spr:SuppressionState"/>
+      <data name="PowerButtonSuppressionState" inType="win:UInt8"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="CsEnterReasonControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="CsExitReasonControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="BatteryCountChangeControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ValidBatteryCount" inType="win:UInt32"/>
+      <data name="ErrorBatteryCount" inType="win:UInt32"/>
+      <data name="AbandonedBatteryCount" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="AcDcStateChangeControlArgs_V1">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="AcOnline" inType="win:Boolean"/>
+      <data name="RemainingCapacity" inType="win:UInt32"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioBlockerArgs_V2">
+      <data name="ScenarioInstanceId" inType="win:UInt8"/>
+      <data name="ParentGuid" inType="win:GUID"/>
+      <data name="BlockerNameLength" inType="win:UInt32"/>
+      <data name="BlockerName" inType="win:UnicodeString" length="BlockerNameLength"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioBlockerVerboseAccountingArgs_V2">
+      <data name="ScenarioId" inType="win:UInt64"/>
+      <data name="BlockerGuid" inType="win:GUID"/>
+      <data name="ParentBlockerGuid" inType="win:GUID"/>
+      <data name="ActiveTime" inType="win:UInt64"/>
+      <data name="ActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="ActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="NonActiveTime" inType="win:UInt64"/>
+      <data name="NonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="NonActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="UnattributedNonActiveTimeBuckets" inType="win:UInt32"/>
+      <data name="UnattributedNonActiveTimePerBucket" inType="win:UInt64"/>
+      <data name="BlockerType" inType="win:UInt32"/>
+      <data name="DeviceClassNameLength" inType="win:UInt32"/>
+      <data name="DeviceClassName" inType="win:UnicodeString" length="DeviceClassNameLength"/>
+      <data name="DeviceClassGuidLength" inType="win:UInt32"/>
+      <data name="DeviceClassGuid" inType="win:UnicodeString" length="DeviceClassGuidLength"/>
+      <data name="DeviceHardwareIdLength" inType="win:UInt32"/>
+      <data name="DeviceHardwareId" inType="win:UnicodeString" length="DeviceHardwareIdLength"/>
+      <data name="Flags" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V2">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+     </template>
+     <template tid="SystemStopControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BatteryRemainingCapacity" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="PreSleepNotificationControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="TargetState" inType="win:UInt32"/>
+      <data name="EffectiveState" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+     </template>
+     <template tid="PostSleepNotificationControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeAc" inType="win:UInt64"/>
+      <data name="ProgrammedWakeTimeDc" inType="win:UInt64"/>
+      <data name="WakeRequesterTypeAc" inType="win:UInt32"/>
+      <data name="WakeRequesterTypeDc" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+      <data name="WakeSrcFriendlyNameLength" inType="win:UInt32"/>
+      <data name="WakeSrcFriendlyName" inType="win:UnicodeString" length="WakeSrcFriendlyNameLength"/>
+      <data name="WakeSrcClassNameLength" inType="win:UInt32"/>
+      <data name="WakeSrcClassName" inType="win:UnicodeString" length="WakeSrcClassNameLength"/>
+      <data name="WakeSrcAttributeReason" inType="win:UInt32"/>
+     </template>
+     <template tid="DirtyTransitionControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BugcheckCode" inType="win:UInt32"/>
+      <data name="BugcheckParameter1" inType="win:Pointer"/>
+      <data name="BugcheckParameter2" inType="win:Pointer"/>
+      <data name="BugcheckParameter3" inType="win:Pointer"/>
+      <data name="BugcheckParameter4" inType="win:Pointer"/>
+      <data name="SleepInProgress" inType="win:UInt32"/>
+      <data name="PowerButtonTimestamp" inType="win:UInt64"/>
+      <data name="BootAppStatus" inType="win:UInt32"/>
+      <data name="Checkpoint" inType="win:UInt8"/>
+      <data name="ConnectedStandbyInProgress" inType="win:Boolean"/>
+      <data name="SystemSleepTransitionsToOn" inType="win:UInt32"/>
+      <data name="CsEntryScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="CheckpointStatus" inType="win:UInt8"/>
+      <data name="LongPowerButtonPressDetected" inType="win:Boolean"/>
+      <data name="LidReliability" inType="win:Boolean"/>
+      <data name="InputSuppressionState" inType="win:UInt8"/>
+      <data name="PowerButtonSuppressionState" inType="win:UInt8"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="BootAppCheckpoint" inType="win:UInt32"/>
+     </template>
+     <template tid="CsEnterReasonControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="BatteryChargeLimitingMode" inType="win:Boolean"/>
+      <data name="BatteryChargingStatePowerSupplyPresent" inType="win:Boolean"/>
+      <data name="BatteryChargingStateAdequate" inType="win:Boolean"/>
+      <data name="BatteryTripPointSupported" inType="win:Boolean"/>
+     </template>
+     <template tid="CsExitReasonControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="BatteryChargeLimitingMode" inType="win:Boolean"/>
+      <data name="BatteryChargingStatePowerSupplyPresent" inType="win:Boolean"/>
+      <data name="BatteryChargingStateAdequate" inType="win:Boolean"/>
+      <data name="BatteryTripPointSupported" inType="win:Boolean"/>
+     </template>
+     <template tid="BatteryCountChangeControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="ValidBatteryCount" inType="win:UInt32"/>
+      <data name="ErrorBatteryCount" inType="win:UInt32"/>
+      <data name="AbandonedBatteryCount" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="AcDcStateChangeControlArgs_V2">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="AcOnline" inType="win:Boolean"/>
+      <data name="RemainingCapacity" inType="win:UInt32"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V3">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+     </template>
+     <template tid="SystemStopControlArgs_V3">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="BatteryRemainingCapacity" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="PreSleepNotificationControlArgs_V3">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="TargetState" inType="win:UInt32"/>
+      <data name="EffectiveState" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="RequestorCallerType" inType="win:UInt32"/>
+      <data name="RequestorProcessId" inType="win:UInt32"/>
+      <data name="RequestorServiceTag" inType="win:UInt32"/>
+      <data name="RequestorDescriptionLength" inType="win:UInt32"/>
+      <data name="RequestorDescription" inType="win:UnicodeString" length="RequestorDescriptionLength"/>
+     </template>
+     <template tid="CsEnterReasonControlArgs_V3">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="BatteryRemainingCapacityOnEnter" inType="win:UInt32"/>
+      <data name="BatteryFullChargeCapacityOnEnter" inType="win:UInt32"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="BatteryChargeLimitingMode" inType="win:Boolean"/>
+      <data name="BatteryChargingStatePowerSupplyPresent" inType="win:Boolean"/>
+      <data name="BatteryChargingStateAdequate" inType="win:Boolean"/>
+      <data name="BatteryTripPointSupported" inType="win:Boolean"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="CsExitReasonControlArgs_V3">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="PowerStateAc" inType="win:Boolean"/>
+      <data name="IsCsSessionInProgressOnExit" inType="win:Boolean"/>
+      <data name="ScenarioInstanceIdV2" inType="win:UInt64"/>
+      <data name="BootId" inType="win:UInt32"/>
+      <data name="SleepEntered" inType="win:Boolean"/>
+      <data name="ScreenOffEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="ScreenOffFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="ScreenOffDurationInUs" inType="win:UInt64"/>
+      <data name="SleepEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtStart" inType="win:UInt32"/>
+      <data name="SleepFullEnergyCapacityAtEnd" inType="win:UInt32"/>
+      <data name="SleepDurationInUs" inType="win:UInt64"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="BatteryChargeLimitingMode" inType="win:Boolean"/>
+      <data name="BatteryChargingStatePowerSupplyPresent" inType="win:Boolean"/>
+      <data name="BatteryChargingStateAdequate" inType="win:Boolean"/>
+      <data name="BatteryTripPointSupported" inType="win:Boolean"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V4">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+     </template>
+     <template tid="PreSleepNotificationControlArgs_V4">
+      <data name="Timestamp" inType="win:UInt64"/>
+      <data name="TargetState" inType="win:UInt32"/>
+      <data name="EffectiveState" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="RemainingBatteryCapacity" inType="win:UInt32"/>
+      <data name="MaxBatteryCapacity" inType="win:UInt32"/>
+      <data name="LidState" inType="win:UInt8"/>
+      <data name="RequestorCallerType" inType="win:UInt32"/>
+      <data name="RequestorProcessId" inType="win:UInt32"/>
+      <data name="RequestorServiceTag" inType="win:UInt32"/>
+      <data name="RequestorDescriptionLength" inType="win:UInt32"/>
+      <data name="RequestorDescription" inType="win:UnicodeString" length="RequestorDescriptionLength"/>
+      <data name="ExternalMonitorState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V5">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+      <data name="TimerRebaseThresholdInSec" inType="win:UInt32"/>
+      <data name="CumulativeTimerRebaseInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V6">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+      <data name="TimerRebaseThresholdInSec" inType="win:UInt32"/>
+      <data name="CumulativeTimerRebaseInUs" inType="win:UInt64"/>
+      <data name="AusterityMode" inType="win:UInt32"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V7">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+      <data name="TimerRebaseThresholdInSec" inType="win:UInt32"/>
+      <data name="CumulativeTimerRebaseInUs" inType="win:UInt64"/>
+      <data name="AusterityMode" inType="win:UInt32"/>
+      <data name="LidOpenState" inType="win:UInt8"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V8">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+      <data name="TimerRebaseThresholdInSec" inType="win:UInt32"/>
+      <data name="CumulativeTimerRebaseInUs" inType="win:UInt64"/>
+      <data name="AusterityMode" inType="win:UInt32"/>
+      <data name="LidOpenState" inType="win:UInt8"/>
+      <data name="NonDripsIdleCpuInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="ScenarioStopReasonArgs_V9">
+      <data name="EnergyDrain" inType="win:UInt32"/>
+      <data name="DripsResidencyInUs" inType="win:UInt64"/>
+      <data name="OnAc" inType="win:Boolean"/>
+      <data name="HwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="PreVetoCount" inType="win:UInt64"/>
+      <data name="VetoCount" inType="win:UInt64"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="FullChargeCapacity" inType="win:UInt32"/>
+      <data name="NonActivatedCpuInUs" inType="win:UInt64"/>
+      <data name="IRTruncatePercentage" inType="win:UInt8"/>
+      <data name="DesignCapacity" inType="win:UInt32"/>
+      <data name="AudioDurationInUs" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="DisconnectedStandby" inType="win:Boolean"/>
+      <data name="AoAcCompliantNic" inType="win:Boolean"/>
+      <data name="NonAttributedCpuInUs" inType="win:UInt64"/>
+      <data name="EnergySaverPolicy" inType="win:Boolean"/>
+      <data name="VideoTimeoutInSec" inType="win:UInt32"/>
+      <data name="LockConsoleTimeoutInSec" inType="win:UInt32"/>
+      <data name="StandbyTimeoutInSec" inType="win:UInt32"/>
+      <data name="ModernSleepEnabledActionsBitmask" inType="win:UInt32"/>
+      <data name="ModernSleepAppliedActionsBitmask" inType="win:UInt32"/>
+      <data name="EnergyDrainV2Flags" inType="win:UInt32"/>
+      <data name="EnergyDrainV2" inType="win:Int64"/>
+      <data name="DirectedDripsTransitionCount" inType="win:UInt32"/>
+      <data name="IsHibernateEnabled" inType="win:Boolean"/>
+      <data name="HibernateTimeoutInSec" inType="win:UInt32"/>
+      <data name="HibernateBudgetPercentage" inType="win:UInt32"/>
+      <data name="IsLockConsoleTimeoutActive" inType="win:Boolean"/>
+      <data name="IsDebuggerEnabled" inType="win:Boolean"/>
+      <data name="ScenarioInstanceId" inType="win:UInt64"/>
+      <data name="RemainingSleepTimeoutInSeconds" inType="win:UInt32"/>
+      <data name="IdleTimeoutSource" inType="win:UInt32"/>
+      <data name="DripsTransitions" inType="win:UInt32"/>
+      <data name="UserConnectivitySetting" inType="win:UInt32"/>
+      <data name="RemoteDesktopEnabled" inType="win:Boolean"/>
+      <data name="BIRequestActive" inType="win:Boolean"/>
+      <data name="TimerRebaseThresholdInSec" inType="win:UInt32"/>
+      <data name="CumulativeTimerRebaseInUs" inType="win:UInt64"/>
+      <data name="AusterityMode" inType="win:UInt32"/>
+      <data name="LidOpenState" inType="win:UInt8"/>
+      <data name="NonDripsIdleCpuInUs" inType="win:UInt64"/>
+      <data name="ScreenOffSwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="ScreenOffHwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="SleepSwDripsResidencyInUs" inType="win:UInt64"/>
+      <data name="SleepHwDripsResidencyInUs" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_sleepstudy" value="sleepstudy"/>
+    <string id="keyword_sleepstudycontrol" value="sleepstudycontrol"/>
+    <string id="keyword_sleepstudyverbose" value="sleepstudyverbose"/>
+    <string id="task_ScenarioBlocker" value="ScenarioBlocker"/>
+    <string id="task_ScenarioBlockerData" value="ScenarioBlockerData"/>
+    <string id="task_TopOffendersPerfTrack" value="TopOffendersPerfTrack"/>
+    <string id="task_SubsystemContextInfo" value="SubsystemContextInfo"/>
+    <string id="task_ScenarioBlockerVerboseAccounting" value="ScenarioBlockerVerboseAccounting"/>
+    <string id="task_ScenarioBlockerDetailed" value="ScenarioBlockerDetailed"/>
+    <string id="task_ScenarioExitReason" value="ScenarioExitReason"/>
+    <string id="task_ScenarioStartReason" value="ScenarioStartReason"/>
+    <string id="task_ScenarioStopReason" value="ScenarioStopReason"/>
+    <string id="task_ScenarioDeviceRundown" value="ScenarioDeviceRundown"/>
+    <string id="task_ScenarioComponentAccounting" value="ScenarioComponentAccounting"/>
+    <string id="task_ScenarioDeviceAccounting" value="ScenarioDeviceAccounting"/>
+    <string id="task_ScenarioDripsWakeAccounting" value="ScenarioDripsWakeAccounting"/>
+    <string id="task_ScenarioSessionSwitch" value="ScenarioSessionSwitch"/>
+    <string id="task_SystemStartControl" value="SystemStartControl"/>
+    <string id="task_SystemStopControl" value="SystemStopControl"/>
+    <string id="task_PreSleepNotificationControl" value="PreSleepNotificationControl"/>
+    <string id="task_PostSleepNotificationControl" value="PostSleepNotificationControl"/>
+    <string id="task_DirtyTransitionControl" value="DirtyTransitionControl"/>
+    <string id="task_CsEnterReasonControl" value="CsEnterReasonControl"/>
+    <string id="task_CsExitReasonControl" value="CsExitReasonControl"/>
+    <string id="task_ShutdownActionControl" value="ShutdownActionControl"/>
+    <string id="task_BatteryCountChangeControl" value="BatteryCountChangeControl"/>
+    <string id="task_AcDcStateChangeControl" value="AcDcStateChangeControl"/>
+    <string id="task_BootBatteryStatusControl" value="BootBatteryStatusControl"/>
+    <string id="task_BlockerStateChange" value="BlockerStateChange"/>
+    <string id="task_CollectionStateChange" value="CollectionStateChange"/>
+    <string id="task_BlockerStateRundown" value="BlockerStateRundown"/>
+    <string id="task_CollectionStateRundown" value="CollectionStateRundown"/>
+    <string id="task_BlockerCreated" value="BlockerCreated"/>
+    <string id="task_BlockerDeleted" value="BlockerDeleted"/>
+    <string id="task_SessionStateRundown" value="SessionStateRundown"/>
+    <string id="map_Spr:MapMsEnterExitReasonUnknown" value="Unknown"/>
+    <string id="map_Spr:MapMsEnterExitReasonPower Button" value="Power Button"/>
+    <string id="map_Spr:MapMsEnterExitReasonRemote Connection" value="Remote Connection"/>
+    <string id="map_Spr:MapMsEnterExitReasonSC_MONITORPOWER" value="SC_MONITORPOWER"/>
+    <string id="map_Spr:MapMsEnterExitReasonUser Input" value="User Input"/>
+    <string id="map_Spr:MapMsEnterExitReasonAC/DC Display Burst" value="AC/DC Display Burst"/>
+    <string id="map_Spr:MapMsEnterExitReasonUser Display Burst" value="User Display Burst"/>
+    <string id="map_Spr:MapMsEnterExitReasonPoSetSystemState" value="PoSetSystemState"/>
+    <string id="map_Spr:MapMsEnterExitReasonSetThreadExecutionState" value="SetThreadExecutionState"/>
+    <string id="map_Spr:MapMsEnterExitReasonFull Wake" value="Full Wake"/>
+    <string id="map_Spr:MapMsEnterExitReasonSession Unlock" value="Session Unlock"/>
+    <string id="map_Spr:MapMsEnterExitReasonScreen Off Request" value="Screen Off Request"/>
+    <string id="map_Spr:MapMsEnterExitReasonIdle Timeout" value="Idle Timeout"/>
+    <string id="map_Spr:MapMsEnterExitReasonPolicy Change" value="Policy Change"/>
+    <string id="map_Spr:MapMsEnterExitReasonSleep Button" value="Sleep Button"/>
+    <string id="map_Spr:MapMsEnterExitReasonLid" value="Lid"/>
+    <string id="map_Spr:MapMsEnterExitReasonBattery Count Change" value="Battery Count Change"/>
+    <string id="map_Spr:MapMsEnterExitReasonGrace Period" value="Grace Period"/>
+    <string id="map_Spr:MapMsEnterExitReasonGraphics PnP Operation" value="Graphics PnP Operation"/>
+    <string id="map_Spr:MapMsEnterExitReasonDynamic Partitioning" value="Dynamic Partitioning"/>
+    <string id="map_Spr:MapMsEnterExitReasonSleep, Hibernate, or Shutdown" value="Sleep, Hibernate, or Shutdown"/>
+    <string id="map_Spr:MapMsEnterExitReasonSystem Idle Timeout" value="System Idle Timeout"/>
+    <string id="map_Spr:MapMsEnterExitReasonProximity Sensor" value="Proximity Sensor"/>
+    <string id="map_Spr:MapMsEnterExitReasonThermal Standby" value="Thermal Standby"/>
+    <string id="map_Spr:MapMsEnterExitReasonResume PDC" value="Resume PDC"/>
+    <string id="map_Spr:MapMsEnterExitReasonResume from Hibernate" value="Resume from Hibernate"/>
+    <string id="map_Spr:MapMsEnterExitReasonTerminal Arrival/Departure" value="Terminal Arrival/Departure"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal" value="PDC Signal"/>
+    <string id="map_Spr:MapMsEnterExitReasonAC/DC Display Burst Suppressed" value="AC/DC Display Burst Suppressed"/>
+    <string id="map_Spr:MapMsEnterExitReasonTransition to System Sleep State S4/S5" value="Transition to System Sleep State S4/S5"/>
+    <string id="map_Spr:MapMsEnterExitReasonWinrt" value="Winrt"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Keyboard" value="Input Keyboard"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Mouse" value="Input Mouse"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Touchpad" value="Input Touchpad"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Pen" value="Input Pen"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Accelerometer" value="Input Accelerometer"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Hid Device" value="Input Hid Device"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput User Present" value="Input User Present"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Session Switch" value="Input Session Switch"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Initialization" value="Input Initialization"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal: Windows Mobile Power Notification" value="PDC Signal: Windows Mobile Power Notification"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal: Windows Mobile Shell" value="PDC Signal: Windows Mobile Shell"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal: Hey Cortana" value="PDC Signal: Hey Cortana"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal: Holographic Shell" value="PDC Signal: Holographic Shell"/>
+    <string id="map_Spr:MapMsEnterExitReasonPDC Signal: Windows Biometric Framework Fingerprint" value="PDC Signal: Windows Biometric Framework Fingerprint"/>
+    <string id="map_Spr:MapMsEnterExitReasonDirected DRIPS" value="Directed DRIPS"/>
+    <string id="map_Spr:MapMsEnterExitReasonMonitor Dim" value="Monitor Dim"/>
+    <string id="map_Spr:MapMsEnterExitReasonBuiltin Panel" value="Builtin Panel"/>
+    <string id="map_Spr:MapMsEnterExitReasonDisplay Required Undim" value="Display Required Undim"/>
+    <string id="map_Spr:MapMsEnterExitReasonBattery Count Change Suppressed" value="Battery Count Change Suppressed"/>
+    <string id="map_Spr:MapMsEnterExitReasonTransition From Sleep" value="Transition From Sleep"/>
+    <string id="map_Spr:MapMsEnterExitReasonTerminal Initialization" value="Terminal Initialization"/>
+    <string id="map_Spr:MapMsEnterExitReasonInput Touch" value="Input Touch"/>
+    <string id="map_Spr:MapMsEnterExitReasonAusterity Battery Drain Budget Exceeded" value="Austerity Battery Drain Budget Exceeded"/>
+    <string id="map_Spr:MapMsScenarioStopReasonCsExit" value="CsExit"/>
+    <string id="map_Spr:MapMsScenarioStopReasonCritical Battery" value="Critical Battery"/>
+    <string id="map_Spr:SprSessionTypeActive" value="Active"/>
+    <string id="map_Spr:SprSessionTypeScreen Off" value="Screen Off"/>
+    <string id="map_Spr:SprSessionTypeModern Standby" value="Modern Standby"/>
+    <string id="map_Spr:SprSessionTypeSystem Transition" value="System Transition"/>
+    <string id="map_Spr:SuppressionStateDisengaged" value="Disengaged"/>
+    <string id="map_Spr:SuppressionStateEngaged" value="Engaged"/>
+    <string id="map_Spr:SuppressionStateTelemetry Only" value="Telemetry Only"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

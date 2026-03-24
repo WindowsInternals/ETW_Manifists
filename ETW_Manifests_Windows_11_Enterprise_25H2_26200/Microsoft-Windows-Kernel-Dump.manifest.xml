@@ -1,0 +1,92 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-Dump" guid="{17d2a329-4539-5f4d-3435-f510634ce3b9}" resourceFileName="Microsoft-Windows-Kernel-Dump" messageFileName="Microsoft-Windows-Kernel-Dump" symbol="MicrosoftWindowsKernelDump" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="CrashDumpPolicy" message="$(string.task_CrashDumpPolicy)" value="1">
+>
+      <opcodes>
+       <opcode name="PolicyOperationFailed" message="$(string.opcode_CrashDumpPolicyPolicyOperationFailed)" value="11"/>
+       <opcode name="PolicyValueChanged" message="$(string.opcode_CrashDumpPolicyPolicyValueChanged)" value="12"/>
+       <opcode name="CrashDumpDisabledOnBoot" message="$(string.opcode_CrashDumpPolicyCrashDumpDisabledOnBoot)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="CrashDumpConfig" message="$(string.task_CrashDumpConfig)" value="2">
+>
+      <opcodes>
+       <opcode name="DumpDisableFailed" message="$(string.opcode_CrashDumpConfigDumpDisableFailed)" value="14"/>
+       <opcode name="DumpInitializationFailed." message="$(string.opcode_CrashDumpConfigDumpInitializationFailed.)" value="15"/>
+       <opcode name="DumpLoadDriverFailed." message="$(string.opcode_CrashDumpConfigDumpLoadDriverFailed.)" value="16"/>
+       <opcode name="DumpStackInitializationFailed" message="$(string.opcode_CrashDumpConfigDumpStackInitializationFailed)" value="17"/>
+       <opcode name="FreeDumpStackFailed" message="$(string.opcode_CrashDumpConfigFreeDumpStackFailed)" value="18"/>
+       <opcode name="LoadDumpStackFailed" message="$(string.opcode_CrashDumpConfigLoadDumpStackFailed)" value="19"/>
+       <opcode name="DumpDisabled" message="$(string.opcode_CrashDumpConfigDumpDisabled)" value="20"/>
+       <opcode name="DumpReconfigured" message="$(string.opcode_CrashDumpConfigDumpReconfigured)" value="21"/>
+      </opcodes>
+     </task>
+     <task name="DumpConfig" message="$(string.task_DumpConfig)" value="3">
+>
+      <opcodes>
+       <opcode name="Dumpdisabledforcefully" message="$(string.opcode_DumpConfigDumpdisabledforcefully)" value="22"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="CrashDumpPolicyPolicyOperationFailed" version="0" task="CrashDumpPolicy" opcode="PolicyOperationFailed" level="win:Informational" template="CrashDumpPolicyPolicyOperationFailedArgs"/>
+     <event value="2" symbol="CrashDumpPolicyPolicyValueChanged" version="0" task="CrashDumpPolicy" opcode="PolicyValueChanged" level="win:Informational" template="CrashDumpPolicyPolicyValueChangedArgs"/>
+     <event value="3" symbol="CrashDumpPolicyCrashDumpDisabledOnBoot" version="0" task="CrashDumpPolicy" opcode="CrashDumpDisabledOnBoot" level="win:Informational" template="CrashDumpPolicyCrashDumpDisabledOnBootArgs"/>
+     <event value="4" symbol="CrashDumpConfigDumpDisableFailed" version="0" task="CrashDumpConfig" opcode="DumpDisableFailed" level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="5" symbol="CrashDumpConfigDumpInitializationFailed." version="0" task="CrashDumpConfig" opcode="DumpInitializationFailed." level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="6" symbol="CrashDumpConfigDumpLoadDriverFailed." version="0" task="CrashDumpConfig" opcode="DumpLoadDriverFailed." level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="7" symbol="CrashDumpConfigDumpStackInitializationFailed" version="0" task="CrashDumpConfig" opcode="DumpStackInitializationFailed" level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="8" symbol="CrashDumpConfigFreeDumpStackFailed" version="0" task="CrashDumpConfig" opcode="FreeDumpStackFailed" level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="9" symbol="CrashDumpConfigLoadDumpStackFailed" version="0" task="CrashDumpConfig" opcode="LoadDumpStackFailed" level="win:Warning" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="10" symbol="CrashDumpConfigDumpDisabled" version="0" task="CrashDumpConfig" opcode="DumpDisabled" level="win:Informational"/>
+     <event value="11" symbol="CrashDumpConfigDumpReconfigured" version="0" task="CrashDumpConfig" opcode="DumpReconfigured" level="win:Informational" template="CrashDumpConfigDumpDisableFailedArgs"/>
+     <event value="12" symbol="DumpConfigDumpdisabledforcefully" version="0" task="DumpConfig" opcode="Dumpdisabledforcefully" level="win:Informational" template="DumpConfigDumpdisabledforcefullyArgs"/>
+    </events>
+    <templates>
+     <template tid="CrashDumpPolicyPolicyOperationFailedArgs">
+      <data name="OperationType" inType="win:AnsiString"/>
+     </template>
+     <template tid="CrashDumpPolicyPolicyValueChangedArgs">
+      <data name="PolicyValue" inType="win:UInt32"/>
+      <data name="NTStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="CrashDumpPolicyCrashDumpDisabledOnBootArgs">
+      <data name="PolicyValue" inType="win:UInt32"/>
+     </template>
+     <template tid="CrashDumpConfigDumpDisableFailedArgs">
+      <data name="NTStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="DumpConfigDumpdisabledforcefullyArgs">
+      <data name="ForceDumpDisabled" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_CrashDumpPolicy" value="CrashDumpPolicy"/>
+    <string id="opcode_CrashDumpPolicyPolicyOperationFailed" value="PolicyOperationFailed"/>
+    <string id="opcode_CrashDumpPolicyPolicyValueChanged" value="PolicyValueChanged"/>
+    <string id="opcode_CrashDumpPolicyCrashDumpDisabledOnBoot" value="CrashDumpDisabledOnBoot"/>
+    <string id="task_CrashDumpConfig" value="CrashDumpConfig"/>
+    <string id="opcode_CrashDumpConfigDumpDisableFailed" value="DumpDisableFailed"/>
+    <string id="opcode_CrashDumpConfigDumpInitializationFailed." value="DumpInitializationFailed."/>
+    <string id="opcode_CrashDumpConfigDumpLoadDriverFailed." value="DumpLoadDriverFailed."/>
+    <string id="opcode_CrashDumpConfigDumpStackInitializationFailed" value="DumpStackInitializationFailed"/>
+    <string id="opcode_CrashDumpConfigFreeDumpStackFailed" value="FreeDumpStackFailed"/>
+    <string id="opcode_CrashDumpConfigLoadDumpStackFailed" value="LoadDumpStackFailed"/>
+    <string id="opcode_CrashDumpConfigDumpDisabled" value="DumpDisabled"/>
+    <string id="opcode_CrashDumpConfigDumpReconfigured" value="DumpReconfigured"/>
+    <string id="task_DumpConfig" value="DumpConfig"/>
+    <string id="opcode_DumpConfigDumpdisabledforcefully" value="Dumpdisabledforcefully"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

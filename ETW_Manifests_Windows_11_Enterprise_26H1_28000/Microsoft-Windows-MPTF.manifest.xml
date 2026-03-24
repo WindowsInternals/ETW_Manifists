@@ -1,0 +1,794 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MPTF" guid="{ea6c5bea-f5cc-56a4-e146-671bf483d53b}" resourceFileName="Microsoft-Windows-MPTF" messageFileName="Microsoft-Windows-MPTF" symbol="MicrosoftWindowsMPTF" source="Xml" >
+    <keywords>
+     <keyword name="Critical" message="$(string.keyword_Critical)" mask="0x1"/>
+     <keyword name="Diagnostic" message="$(string.keyword_Diagnostic)" mask="0x2"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x4"/>
+     <keyword name="Verbose" message="$(string.keyword_Verbose)" mask="0x8"/>
+     <keyword name="TemperatureSensor" message="$(string.keyword_TemperatureSensor)" mask="0x100"/>
+     <keyword name="ThermalFilter" message="$(string.keyword_ThermalFilter)" mask="0x200"/>
+     <keyword name="CustomizedIO" message="$(string.keyword_CustomizedIO)" mask="0x400"/>
+     <keyword name="MPTFDmfModule" message="$(string.keyword_MPTFDmfModule)" mask="0x100000"/>
+     <keyword name="MPTFCore" message="$(string.keyword_MPTFCore)" mask="0x200000"/>
+     <keyword name="MPTFThermalPolicy" message="$(string.keyword_MPTFThermalPolicy)" mask="0x400000"/>
+     <keyword name="MPTFPowerLimitClient" message="$(string.keyword_MPTFPowerLimitClient)" mask="0x800000"/>
+     <keyword name="MPTFPowerSourceClient" message="$(string.keyword_MPTFPowerSourceClient)" mask="0x1000000"/>
+     <keyword name="MPTFCustomizedIOSignalClient" message="$(string.keyword_MPTFCustomizedIOSignalClient)" mask="0x2000000"/>
+     <keyword name="MPTFPowerTrackerCore" message="$(string.keyword_MPTFPowerTrackerCore)" mask="0x4000000"/>
+     <keyword name="MptfGenericService" message="$(string.keyword_MptfGenericService)" mask="0x8000000"/>
+    </keywords>
+    <tasks>
+     <task name="MSTSTemperatureReadRequest" message="$(string.task_MSTSTemperatureReadRequest)" value="1"/>
+     <task name="MSTSTemperatureNotification" message="$(string.task_MSTSTemperatureNotification)" value="2"/>
+     <task name="MSTSQueryDsmSupport" message="$(string.task_MSTSQueryDsmSupport)" value="3"/>
+     <task name="TfThermalReadIrpReceived" message="$(string.task_TfThermalReadIrpReceived)" value="4"/>
+     <task name="TfThermalReadIrpComplete" message="$(string.task_TfThermalReadIrpComplete)" value="5"/>
+     <task name="MscioQueryInput" message="$(string.task_MscioQueryInput)" value="6"/>
+     <task name="MscioSendOutput" message="$(string.task_MscioSendOutput)" value="7"/>
+     <task name="MscioQueryDsmSupport" message="$(string.task_MscioQueryDsmSupport)" value="8"/>
+     <task name="MscioQuerySignal" message="$(string.task_MscioQuerySignal)" value="9"/>
+     <task name="MscioSendSignal" message="$(string.task_MscioSendSignal)" value="10"/>
+     <task name="TfThermalReadAggregateThresholds" message="$(string.task_TfThermalReadAggregateThresholds)" value="11"/>
+     <task name="TfThermalReadRequestSent" message="$(string.task_TfThermalReadRequestSent)" value="12"/>
+     <task name="PowerSourceClientFailure" message="$(string.task_PowerSourceClientFailure)" value="13"/>
+     <task name="PowerSourceClientStateChange" message="$(string.task_PowerSourceClientStateChange)" value="14"/>
+     <task name="DmfModuleDataEnqueued" message="$(string.task_DmfModuleDataEnqueued)" value="15"/>
+     <task name="DmfModuleDataUpdated" message="$(string.task_DmfModuleDataUpdated)" value="16"/>
+     <task name="DmfModuleDataRundown" message="$(string.task_DmfModuleDataRundown)" value="17"/>
+     <task name="DmfModuleStatusEnqueued" message="$(string.task_DmfModuleStatusEnqueued)" value="18"/>
+     <task name="DmfModuleStatusUpdated" message="$(string.task_DmfModuleStatusUpdated)" value="19"/>
+     <task name="DmfModuleStatusRundown" message="$(string.task_DmfModuleStatusRundown)" value="20"/>
+     <task name="DmfModuleCapabilityEnqueued" message="$(string.task_DmfModuleCapabilityEnqueued)" value="21"/>
+     <task name="DmfModuleCapabilityUpdated" message="$(string.task_DmfModuleCapabilityUpdated)" value="22"/>
+     <task name="DmfModuleCapabilityRundown" message="$(string.task_DmfModuleCapabilityRundown)" value="23"/>
+     <task name="CoreConfigurationParseError" message="$(string.task_CoreConfigurationParseError)" value="24"/>
+     <task name="CoreConfigurationReadError" message="$(string.task_CoreConfigurationReadError)" value="25"/>
+     <task name="CoreConfigurationAlgorithmError" message="$(string.task_CoreConfigurationAlgorithmError)" value="26"/>
+     <task name="CoreConfigurationInterfaceError" message="$(string.task_CoreConfigurationInterfaceError)" value="27"/>
+     <task name="CoreConfigurationDeviceError" message="$(string.task_CoreConfigurationDeviceError)" value="28"/>
+     <task name="CoreInterfaceEvent" message="$(string.task_CoreInterfaceEvent)" value="29"/>
+     <task name="CoreClientEvent" message="$(string.task_CoreClientEvent)" value="30"/>
+     <task name="CoreClientError" message="$(string.task_CoreClientError)" value="31"/>
+     <task name="CoreDStateEvent" message="$(string.task_CoreDStateEvent)" value="32"/>
+     <task name="CoreTimerEvent" message="$(string.task_CoreTimerEvent)" value="33"/>
+     <task name="CoreDataEvent" message="$(string.task_CoreDataEvent)" value="34"/>
+     <task name="CoreListEvent" message="$(string.task_CoreListEvent)" value="35"/>
+     <task name="CoreChannelEvent" message="$(string.task_CoreChannelEvent)" value="36"/>
+     <task name="ProcessingConfigurationEvent" message="$(string.task_ProcessingConfigurationEvent)" value="37"/>
+     <task name="ProcessingStateEvent" message="$(string.task_ProcessingStateEvent)" value="38"/>
+     <task name="ProcessingTimerStateEvent" message="$(string.task_ProcessingTimerStateEvent)" value="39"/>
+     <task name="ProcessingRegistrationEvent" message="$(string.task_ProcessingRegistrationEvent)" value="40"/>
+     <task name="ProcessingUnregistrationEvent" message="$(string.task_ProcessingUnregistrationEvent)" value="41"/>
+     <task name="ProcessingTooSlowEvent" message="$(string.task_ProcessingTooSlowEvent)" value="42"/>
+     <task name="ProcessingInputStormEvent" message="$(string.task_ProcessingInputStormEvent)" value="43"/>
+     <task name="ProcessingTimerResetEvent" message="$(string.task_ProcessingTimerResetEvent)" value="44"/>
+     <task name="ThermalPolicyDriver" message="$(string.task_ThermalPolicyDriver)" value="49"/>
+     <task name="CustomizedIOClientGenericError" message="$(string.task_CustomizedIOClientGenericError)" value="50"/>
+     <task name="CustomizedIOSignalClientInputConfig" message="$(string.task_CustomizedIOSignalClientInputConfig)" value="51"/>
+     <task name="CustomizedIOSignalClientOutputConfig" message="$(string.task_CustomizedIOSignalClientOutputConfig)" value="52"/>
+     <task name="CustomizedIOSignalClientChannelCount" message="$(string.task_CustomizedIOSignalClientChannelCount)" value="53"/>
+     <task name="CustomizedIOSignalClientInputFailure" message="$(string.task_CustomizedIOSignalClientInputFailure)" value="54"/>
+     <task name="CustomizedIOSignalClientArrivalRemoval" message="$(string.task_CustomizedIOSignalClientArrivalRemoval)" value="55"/>
+     <task name="CustomizedIOSignalClientInputChannelMessage" message="$(string.task_CustomizedIOSignalClientInputChannelMessage)" value="56"/>
+     <task name="DmfModuleProcessingAlgorithm" message="$(string.task_DmfModuleProcessingAlgorithm)" value="1009"/>
+     <task name="TfRundown" message="$(string.task_TfRundown)" value="2504"/>
+     <task name="TfSystemEvent" message="$(string.task_TfSystemEvent)" value="2505"/>
+     <task name="TfThermalReadStateUpdate" message="$(string.task_TfThermalReadStateUpdate)" value="2506"/>
+     <task name="MscioRundown" message="$(string.task_MscioRundown)" value="3005"/>
+     <task name="MscioSystemEvent" message="$(string.task_MscioSystemEvent)" value="3006"/>
+     <task name="PowerLimitClientStateChange" message="$(string.task_PowerLimitClientStateChange)" value="10500"/>
+     <task name="PowerLimitConfigurationFormatError" message="$(string.task_PowerLimitConfigurationFormatError)" value="10501"/>
+     <task name="PowerLimitConfigurationValueError" message="$(string.task_PowerLimitConfigurationValueError)" value="10502"/>
+     <task name="PowerLimitGenericError" message="$(string.task_PowerLimitGenericError)" value="10503"/>
+     <task name="PowerLimitClaimInterface" message="$(string.task_PowerLimitClaimInterface)" value="10504"/>
+     <task name="PowerLimitSetPowerError" message="$(string.task_PowerLimitSetPowerError)" value="10505"/>
+     <task name="MptfServiceLoadError" message="$(string.task_MptfServiceLoadError)" value="12000"/>
+     <task name="MptfServiceInitialized" message="$(string.task_MptfServiceInitialized)" value="12001"/>
+     <task name="MptfServicePublishError" message="$(string.task_MptfServicePublishError)" value="12002"/>
+     <task name="MptfServiceValuePublished" message="$(string.task_MptfServiceValuePublished)" value="12003"/>
+     <task name="MptfServiceRundown" message="$(string.task_MptfServiceRundown)" value="12004"/>
+     <task name="MptfServiceStartInitiated" message="$(string.task_MptfServiceStartInitiated)" value="12005"/>
+     <task name="MptfServiceStarted" message="$(string.task_MptfServiceStarted)" value="12006"/>
+     <task name="MptfServiceStopInitiated" message="$(string.task_MptfServiceStopInitiated)" value="12007"/>
+     <task name="MptfServiceStopped" message="$(string.task_MptfServiceStopped)" value="12008"/>
+    </tasks>
+    <maps>
+     <valueMap name="CoreEventLogType">
+      <map value="0x0" message="$(string.map_CoreEventLogTypeInvalid)"/>
+      <map value="0x1" message="$(string.map_CoreEventLogTypeListDataError)"/>
+      <map value="0x2" message="$(string.map_CoreEventLogTypeListRemovalError)"/>
+      <map value="0x3" message="$(string.map_CoreEventLogTypeListInsertionError)"/>
+      <map value="0x4" message="$(string.map_CoreEventLogTypeListReferenceError)"/>
+      <map value="0x5" message="$(string.map_CoreEventLogTypeClient interface failure.)"/>
+      <map value="0x6" message="$(string.map_CoreEventLogTypeClient interface dispatch failure.)"/>
+      <map value="0x7" message="$(string.map_CoreEventLogTypeD0 Entry.)"/>
+      <map value="0x8" message="$(string.map_CoreEventLogTypeInitial value read failure.)"/>
+      <map value="0x9" message="$(string.map_CoreEventLogTypeD0 Exit.)"/>
+      <map value="0xa" message="$(string.map_CoreEventLogTypeData value based start.)"/>
+      <map value="0xb" message="$(string.map_CoreEventLogTypeData value based change.)"/>
+      <map value="0xc" message="$(string.map_CoreEventLogTypeD0 entry based start.)"/>
+      <map value="0xd" message="$(string.map_CoreEventLogTypeD0 exit based stop.)"/>
+      <map value="0xe" message="$(string.map_CoreEventLogTypeDataInvalid)"/>
+      <map value="0xf" message="$(string.map_CoreEventLogTypeClient Arrival)"/>
+      <map value="0x10" message="$(string.map_CoreEventLogTypeClient Removal)"/>
+      <map value="0x11" message="$(string.map_CoreEventLogTypeClient Start Error)"/>
+      <map value="0x12" message="$(string.map_CoreEventLogTypeClientChannelIncompatible)"/>
+     </valueMap>
+     <valueMap name="ThermalPolicyChannelType">
+      <map value="0x0" message="$(string.map_ThermalPolicyChannelTypethermal sensor)"/>
+      <map value="0x1" message="$(string.map_ThermalPolicyChannelTypepassive cooling)"/>
+      <map value="0x2" message="$(string.map_ThermalPolicyChannelTypesystem control)"/>
+     </valueMap>
+     <valueMap name="DeviceStateChange">
+      <map value="0x0" message="$(string.map_DeviceStateChangeInitialized)"/>
+      <map value="0x1" message="$(string.map_DeviceStateChangeDeviceAdded)"/>
+      <map value="0x2" message="$(string.map_DeviceStateChangeHardwareReady)"/>
+      <map value="0x3" message="$(string.map_DeviceStateChangeHardwareRemoved)"/>
+      <map value="0x4" message="$(string.map_DeviceStateChangeDeviceActive)"/>
+      <map value="0x5" message="$(string.map_DeviceStateChangeDeviceInactive)"/>
+      <map value="0x6" message="$(string.map_DeviceStateChangeDmfCapabilitiesGet)"/>
+     </valueMap>
+     <valueMap name="ClaimInterfaceResult">
+      <map value="0x0" message="$(string.map_ClaimInterfaceResultclaimed)"/>
+      <map value="0x1" message="$(string.map_ClaimInterfaceResultignored)"/>
+     </valueMap>
+     <valueMap name="CustomizedIOSignalClientTimerState">
+      <map value="0x0" message="$(string.map_CustomizedIOSignalClientTimerStateTimer Off. Entry to CS)"/>
+      <map value="0x1" message="$(string.map_CustomizedIOSignalClientTimerStateTimer ON. Exit from CS)"/>
+      <map value="0x2" message="$(string.map_CustomizedIOSignalClientTimerStateTimer Off. Device Removed)"/>
+      <map value="0x3" message="$(string.map_CustomizedIOSignalClientTimerStateTimer Off. Release Hardware)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="CoreConfigurationParseError" version="0" task="CoreConfigurationParseError" level="win:Error" keywords="Critical MPTFCore" template="CoreConfigurationParseErrorArgs"/>
+     <event value="2" symbol="CoreConfigurationReadError" version="0" task="CoreConfigurationReadError" level="win:Error" keywords="Critical MPTFCore" template="CoreConfigurationReadErrorArgs"/>
+     <event value="3" symbol="CoreConfigurationAlgorithmError" version="0" task="CoreConfigurationAlgorithmError" level="win:Error" keywords="Critical MPTFCore" template="CoreConfigurationAlgorithmErrorArgs"/>
+     <event value="4" symbol="CoreConfigurationInterfaceError" version="0" task="CoreConfigurationInterfaceError" level="win:Error" keywords="Critical MPTFCore" template="CoreConfigurationInterfaceErrorArgs"/>
+     <event value="5" symbol="CoreConfigurationDeviceError" version="0" task="CoreConfigurationDeviceError" level="win:Error" keywords="Critical MPTFCore" template="CoreConfigurationDeviceErrorArgs"/>
+     <event value="6" symbol="CoreInterfaceEvent" version="0" task="CoreInterfaceEvent" level="win:Error" keywords="Critical MPTFCore" template="CoreInterfaceEventArgs"/>
+     <event value="7" symbol="CoreClientEvent" version="0" task="CoreClientEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="CoreClientEventArgs"/>
+     <event value="8" symbol="CoreClientError" version="0" task="CoreClientError" level="win:Error" keywords="Critical MPTFCore" template="CoreClientEventArgs"/>
+     <event value="9" symbol="CoreDStateEvent" version="0" task="CoreDStateEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="CoreDStateEventArgs"/>
+     <event value="10" symbol="CoreTimerEvent" version="0" task="CoreTimerEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="CoreTimerEventArgs"/>
+     <event value="11" symbol="CoreDataEvent" version="0" task="CoreDataEvent" level="win:Error" keywords="Critical MPTFCore" template="CoreDataEventArgs"/>
+     <event value="12" symbol="CoreListEvent" version="0" task="CoreListEvent" level="win:Error" keywords="Critical MPTFCore" template="CoreDStateEventArgs"/>
+     <event value="13" symbol="CoreChannelEvent" version="0" task="CoreChannelEvent" level="win:Error" keywords="Critical MPTFCore" template="CoreDStateEventArgs"/>
+     <event value="14" symbol="ProcessingConfigurationEvent" version="0" task="ProcessingConfigurationEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="ProcessingConfigurationEventArgs"/>
+     <event value="15" symbol="ProcessingStateEvent" version="0" task="ProcessingStateEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="ProcessingStateEventArgs"/>
+     <event value="16" symbol="ProcessingTimerStateEvent" version="0" task="ProcessingTimerStateEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="ProcessingStateEventArgs"/>
+     <event value="17" symbol="ProcessingRegistrationEvent" version="0" task="ProcessingRegistrationEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="ProcessingRegistrationEventArgs"/>
+     <event value="18" symbol="ProcessingUnregistrationEvent" version="0" task="ProcessingUnregistrationEvent" level="win:Informational" keywords="Diagnostic MPTFCore" template="ProcessingRegistrationEventArgs"/>
+     <event value="19" symbol="ProcessingTooSlowEvent" version="0" task="ProcessingTooSlowEvent" level="win:Warning" keywords="Critical MPTFCore" template="ProcessingTooSlowEventArgs"/>
+     <event value="20" symbol="ProcessingInputStormEvent" version="0" task="ProcessingInputStormEvent" level="win:Warning" keywords="Critical MPTFCore" template="ProcessingInputStormEventArgs"/>
+     <event value="21" symbol="ProcessingTimerResetEvent" version="0" task="ProcessingTimerResetEvent" level="win:Error" keywords="Critical MPTFCore" template="ProcessingInputStormEventArgs"/>
+     <event value="1000" symbol="DmfModuleDataEnqueued" version="0" task="DmfModuleDataEnqueued" level="win:Informational" keywords="Verbose MPTFDmfModule" template="DmfModuleDataEnqueuedArgs"/>
+     <event value="1001" symbol="DmfModuleDataUpdated" version="0" task="DmfModuleDataUpdated" level="win:Informational" keywords="Diagnostic MPTFDmfModule" template="DmfModuleDataEnqueuedArgs"/>
+     <event value="1002" symbol="DmfModuleDataRundown" version="0" task="DmfModuleDataRundown" level="win:Informational" keywords="Critical MPTFDmfModule" template="DmfModuleDataEnqueuedArgs"/>
+     <event value="1003" symbol="DmfModuleStatusEnqueued" version="0" task="DmfModuleStatusEnqueued" level="win:Informational" keywords="Verbose MPTFDmfModule" template="DmfModuleStatusEnqueuedArgs"/>
+     <event value="1004" symbol="DmfModuleStatusUpdated" version="0" task="DmfModuleStatusUpdated" level="win:Informational" keywords="Diagnostic MPTFDmfModule" template="DmfModuleStatusEnqueuedArgs"/>
+     <event value="1005" symbol="DmfModuleStatusRundown" version="0" task="DmfModuleStatusRundown" level="win:Informational" keywords="Critical MPTFDmfModule" template="DmfModuleStatusEnqueuedArgs"/>
+     <event value="1006" symbol="DmfModuleCapabilityEnqueued" version="0" task="DmfModuleCapabilityEnqueued" level="win:Informational" keywords="Verbose MPTFDmfModule" template="DmfModuleCapabilityEnqueuedArgs"/>
+     <event value="1007" symbol="DmfModuleCapabilityUpdated" version="0" task="DmfModuleCapabilityUpdated" level="win:Informational" keywords="Diagnostic MPTFDmfModule" template="DmfModuleCapabilityEnqueuedArgs"/>
+     <event value="1008" symbol="DmfModuleCapabilityRundown" version="0" task="DmfModuleCapabilityRundown" level="win:Informational" keywords="Critical MPTFDmfModule" template="DmfModuleCapabilityEnqueuedArgs"/>
+     <event value="1009" symbol="DmfModuleProcessingAlgorithm" version="0" task="DmfModuleProcessingAlgorithm" level="win:Informational" keywords="Verbose MPTFDmfModule" template="DmfModuleProcessingAlgorithmArgs"/>
+     <event value="2000" symbol="MSTSTemperatureReadRequest" version="0" task="MSTSTemperatureReadRequest" level="win:Informational" keywords="Performance TemperatureSensor" template="MSTSTemperatureReadRequestArgs"/>
+     <event value="2001" symbol="MSTSTemperatureNotification" version="0" task="MSTSTemperatureNotification" level="win:Informational" keywords="Performance TemperatureSensor" template="MSTSTemperatureNotificationArgs"/>
+     <event value="2002" symbol="MSTSQueryDsmSupport" version="0" task="MSTSQueryDsmSupport" level="win:Informational" keywords="Diagnostic TemperatureSensor" template="MSTSQueryDsmSupportArgs"/>
+     <event value="2500" symbol="TfThermalReadIrpReceived" version="0" task="TfThermalReadIrpReceived" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfThermalReadIrpReceivedArgs"/>
+     <event value="2501" symbol="TfThermalReadIrpComplete" version="0" task="TfThermalReadIrpComplete" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfThermalReadIrpCompleteArgs"/>
+     <event value="2502" symbol="TfThermalReadAggregateThresholds" version="0" task="TfThermalReadAggregateThresholds" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfThermalReadAggregateThresholdsArgs"/>
+     <event value="2503" symbol="TfThermalReadRequestSent" version="0" task="TfThermalReadRequestSent" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfThermalReadRequestSentArgs"/>
+     <event value="2504" symbol="TfRundown" version="0" task="TfRundown" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfRundownArgs"/>
+     <event value="2505" symbol="TfSystemEvent" version="0" task="TfSystemEvent" level="win:Informational" keywords="Critical ThermalFilter" template="TfSystemEventArgs"/>
+     <event value="2506" symbol="TfThermalReadStateUpdate" version="0" task="TfThermalReadStateUpdate" level="win:Informational" keywords="Diagnostic ThermalFilter" template="TfThermalReadStateUpdateArgs"/>
+     <event value="3000" symbol="MscioQueryInput" version="0" task="MscioQueryInput" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioQueryInputArgs"/>
+     <event value="3001" symbol="MscioSendOutput" version="0" task="MscioSendOutput" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioSendOutputArgs"/>
+     <event value="3002" symbol="MscioQueryDsmSupport" version="0" task="MscioQueryDsmSupport" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioQueryDsmSupportArgs"/>
+     <event value="3003" symbol="MscioQuerySignal" version="0" task="MscioQuerySignal" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioQuerySignalArgs"/>
+     <event value="3004" symbol="MscioSendSignal" version="0" task="MscioSendSignal" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioQuerySignalArgs"/>
+     <event value="3005" symbol="MscioRundown" version="0" task="MscioRundown" level="win:Informational" keywords="Diagnostic CustomizedIO" template="MscioRundownArgs"/>
+     <event value="3006" symbol="MscioSystemEvent" version="0" task="MscioSystemEvent" level="win:Informational" keywords="Critical CustomizedIO" template="MscioSystemEventArgs"/>
+     <event value="10000" symbol="ThermalPolicyDriver" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10001" symbol="ThermalPolicyDriver10001" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10002" symbol="ThermalPolicyDriver10002" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10003" symbol="ThermalPolicyDriver10003" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10004" symbol="ThermalPolicyDriver10004" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10004Args"/>
+     <event value="10005" symbol="ThermalPolicyDriver10005" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10005Args"/>
+     <event value="10006" symbol="ThermalPolicyDriver10006" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10006Args"/>
+     <event value="10007" symbol="ThermalPolicyDriver10007" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10008" symbol="ThermalPolicyDriver10008" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10006Args"/>
+     <event value="10009" symbol="ThermalPolicyDriver10009" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10004Args"/>
+     <event value="10010" symbol="ThermalPolicyDriver10010" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriverArgs"/>
+     <event value="10011" symbol="ThermalPolicyDriver10011" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10011Args"/>
+     <event value="10012" symbol="ThermalPolicyDriver10012" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10012Args"/>
+     <event value="10013" symbol="ThermalPolicyDriver10013" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10013Args"/>
+     <event value="10014" symbol="ThermalPolicyDriver10014" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10014Args"/>
+     <event value="10015" symbol="ThermalPolicyDriver10015" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10015Args"/>
+     <event value="10016" symbol="ThermalPolicyDriver10016" version="0" task="ThermalPolicyDriver" level="win:Error" keywords="Critical MPTFThermalPolicy" template="ThermalPolicyDriver10015Args"/>
+     <event value="10017" symbol="ThermalPolicyDriver10017" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10017Args"/>
+     <event value="10018" symbol="ThermalPolicyDriver10018" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10014Args"/>
+     <event value="10019" symbol="ThermalPolicyDriver10019" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10014Args"/>
+     <event value="10020" symbol="ThermalPolicyDriver10020" version="0" task="ThermalPolicyDriver" level="win:Informational" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10020Args"/>
+     <event value="10021" symbol="ThermalPolicyDriver10021" version="0" task="ThermalPolicyDriver" level="win:Informational" keywords="Diagnostic MPTFThermalPolicy"/>
+     <event value="10022" symbol="ThermalPolicyDriver10022" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10022Args"/>
+     <event value="10023" symbol="ThermalPolicyDriver10023" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10023Args"/>
+     <event value="10024" symbol="ThermalPolicyDriver10024" version="0" task="ThermalPolicyDriver" level="win:Warning" keywords="Diagnostic MPTFThermalPolicy" template="ThermalPolicyDriver10024Args"/>
+     <event value="10500" symbol="PowerLimitClientStateChange" version="0" task="PowerLimitClientStateChange" level="win:Informational" keywords="Diagnostic MPTFPowerLimitClient" template="PowerLimitClientStateChangeArgs"/>
+     <event value="10501" symbol="PowerLimitConfigurationFormatError" version="0" task="PowerLimitConfigurationFormatError" level="win:Error" keywords="Critical MPTFPowerLimitClient" template="PowerLimitConfigurationFormatErrorArgs"/>
+     <event value="10502" symbol="PowerLimitConfigurationValueError" version="0" task="PowerLimitConfigurationValueError" level="win:Error" keywords="Critical MPTFPowerLimitClient" template="PowerLimitConfigurationValueErrorArgs"/>
+     <event value="10503" symbol="PowerLimitGenericError" version="0" task="PowerLimitGenericError" level="win:Error" keywords="Critical MPTFPowerLimitClient" template="PowerLimitGenericErrorArgs"/>
+     <event value="10504" symbol="PowerLimitClaimInterface" version="0" task="PowerLimitClaimInterface" level="win:Informational" keywords="Diagnostic MPTFPowerLimitClient" template="PowerLimitClaimInterfaceArgs"/>
+     <event value="10505" symbol="PowerLimitSetPowerError" version="0" task="PowerLimitSetPowerError" level="win:Error" keywords="Critical MPTFPowerLimitClient" template="PowerLimitSetPowerErrorArgs"/>
+     <event value="11000" symbol="PowerSourceClientFailure" version="0" task="PowerSourceClientFailure" level="win:Error" keywords="Critical MPTFPowerSourceClient" template="PowerSourceClientFailureArgs"/>
+     <event value="11001" symbol="PowerSourceClientStateChange" version="0" task="PowerSourceClientStateChange" level="win:Informational" keywords="Diagnostic MPTFPowerSourceClient" template="PowerSourceClientStateChangeArgs"/>
+     <event value="11500" symbol="CustomizedIOClientGenericError" version="0" task="CustomizedIOClientGenericError" level="win:Error" keywords="Critical MPTFCustomizedIOSignalClient" template="CustomizedIOClientGenericErrorArgs"/>
+     <event value="11501" symbol="CustomizedIOSignalClientInputConfig" version="0" task="CustomizedIOSignalClientInputConfig" level="win:Informational" keywords="Diagnostic MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientInputConfigArgs"/>
+     <event value="11502" symbol="CustomizedIOSignalClientOutputConfig" version="0" task="CustomizedIOSignalClientOutputConfig" level="win:Informational" keywords="Diagnostic MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientOutputConfigArgs"/>
+     <event value="11503" symbol="CustomizedIOSignalClientChannelCount" version="0" task="CustomizedIOSignalClientChannelCount" level="win:Informational" keywords="Diagnostic MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientChannelCountArgs"/>
+     <event value="11504" symbol="CustomizedIOSignalClientInputFailure" version="0" task="CustomizedIOSignalClientInputFailure" level="win:Error" keywords="Critical MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientInputFailureArgs"/>
+     <event value="11505" symbol="CustomizedIOSignalClientArrivalRemoval" version="0" task="CustomizedIOSignalClientArrivalRemoval" level="win:Informational" keywords="Diagnostic MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientArrivalRemovalArgs"/>
+     <event value="11506" symbol="CustomizedIOSignalClientInputChannelMessage" version="0" task="CustomizedIOSignalClientInputChannelMessage" level="win:Informational" keywords="Diagnostic MPTFCustomizedIOSignalClient" template="CustomizedIOSignalClientInputChannelMessageArgs"/>
+     <event value="12000" symbol="MptfServiceLoadError" version="0" task="MptfServiceLoadError" level="win:Error" keywords="Critical MptfGenericService" template="MptfServiceLoadErrorArgs"/>
+     <event value="12001" symbol="MptfServiceInitialized" version="0" task="MptfServiceInitialized" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceInitializedArgs"/>
+     <event value="12002" symbol="MptfServicePublishError" version="0" task="MptfServicePublishError" level="win:Error" keywords="Critical MptfGenericService" template="MptfServiceLoadErrorArgs"/>
+     <event value="12003" symbol="MptfServiceValuePublished" version="0" task="MptfServiceValuePublished" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceValuePublishedArgs"/>
+     <event value="12004" symbol="MptfServiceRundown" version="0" task="MptfServiceRundown" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceValuePublishedArgs"/>
+     <event value="12005" symbol="MptfServiceStartInitiated" version="0" task="MptfServiceStartInitiated" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceStartInitiatedArgs"/>
+     <event value="12006" symbol="MptfServiceStarted" version="0" task="MptfServiceStarted" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceStartedArgs"/>
+     <event value="12007" symbol="MptfServiceStopInitiated" version="0" task="MptfServiceStopInitiated" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceStopInitiatedArgs"/>
+     <event value="12008" symbol="MptfServiceStopped" version="0" task="MptfServiceStopped" level="win:Informational" keywords="Diagnostic MptfGenericService" template="MptfServiceInitializedArgs"/>
+    </events>
+    <templates>
+     <template tid="CoreConfigurationParseErrorArgs">
+      <data name="RowCount" inType="win:UInt16"/>
+      <data name="ErrorLineLength" inType="win:UInt32"/>
+      <data name="ErrorLine" inType="win:UnicodeString" length="ErrorLineLength"/>
+     </template>
+     <template tid="CoreConfigurationReadErrorArgs">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="CoreConfigurationAlgorithmErrorArgs">
+      <data name="Row" inType="win:UInt32"/>
+      <data name="Base" inType="win:UInt8"/>
+      <data name="Interface" inType="win:UInt8"/>
+      <data name="Parameters" inType="win:UInt8"/>
+      <data name="Memory" inType="win:UInt8"/>
+     </template>
+     <template tid="CoreConfigurationInterfaceErrorArgs">
+      <data name="Row" inType="win:UInt32"/>
+      <data name="Base" inType="win:UInt8"/>
+      <data name="Parameters" inType="win:UInt8"/>
+      <data name="Memory" inType="win:UInt8"/>
+     </template>
+     <template tid="CoreConfigurationDeviceErrorArgs">
+      <data name="Interfaces" inType="win:UInt8"/>
+      <data name="Algorithms" inType="win:UInt8"/>
+     </template>
+     <template tid="CoreInterfaceEventArgs">
+      <data name="EventLogType" inType="win:UInt32" map="CoreEventLogType"/>
+      <data name="Input" inType="win:UInt32"/>
+      <data name="Output" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="CoreClientEventArgs">
+      <data name="EventLogType" inType="win:UInt32"/>
+      <data name="TargetHandle" inType="win:Pointer"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="CoreDStateEventArgs">
+      <data name="EventLogType" inType="win:UInt32"/>
+     </template>
+     <template tid="CoreTimerEventArgs">
+      <data name="EventLogType" inType="win:UInt32"/>
+      <data name="TargetHandle" inType="win:Pointer"/>
+      <data name="Input" inType="win:UInt32"/>
+      <data name="Output" inType="win:UInt32"/>
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="CoreDataEventArgs">
+      <data name="EventLogType" inType="win:UInt32"/>
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Instance" inType="win:UInt32"/>
+      <data name="value" inType="win:UInt32"/>
+     </template>
+     <template tid="ProcessingConfigurationEventArgs">
+      <data name="ModuleIndex" inType="win:UInt16"/>
+      <data name="InputCount" inType="win:UInt16"/>
+      <data name="VirtualNodeCount" inType="win:UInt16"/>
+      <data name="OutputCount" inType="win:UInt16"/>
+     </template>
+     <template tid="ProcessingStateEventArgs">
+      <data name="Enabled" inType="win:UInt8"/>
+     </template>
+     <template tid="ProcessingRegistrationEventArgs">
+      <data name="ModuleIndex" inType="win:UInt16"/>
+      <data name="Direction" inType="win:UInt32"/>
+      <data name="ChannelType" inType="win:UInt32"/>
+      <data name="ChannelInstance" inType="win:UInt32"/>
+     </template>
+     <template tid="ProcessingTooSlowEventArgs">
+      <data name="ModuleIndex" inType="win:UInt16"/>
+      <data name="DelayInMs" inType="win:UInt32"/>
+     </template>
+     <template tid="ProcessingInputStormEventArgs">
+      <data name="DelayInMs" inType="win:UInt32"/>
+     </template>
+     <template tid="DmfModuleDataEnqueuedArgs">
+      <data name="ClientRefStringLength" inType="win:UInt32"/>
+      <data name="ClientRefString" inType="win:UnicodeString" length="ClientRefStringLength"/>
+      <data name="DataCount" inType="win:UInt16"/>
+      <data name="Data" inType="win:UInt8" count="DataCount"/>
+     </template>
+     <template tid="DmfModuleStatusEnqueuedArgs">
+      <data name="ClientRefStringLength" inType="win:UInt32"/>
+      <data name="ClientRefString" inType="win:UnicodeString" length="ClientRefStringLength"/>
+      <data name="StatusCount" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt8" count="StatusCount"/>
+     </template>
+     <template tid="DmfModuleCapabilityEnqueuedArgs">
+      <data name="ClientRefStringLength" inType="win:UInt32"/>
+      <data name="ClientRefString" inType="win:UnicodeString" length="ClientRefStringLength"/>
+      <data name="CapabilityCount" inType="win:UInt16"/>
+      <data name="Capabilities" inType="win:UInt8" count="CapabilityCount"/>
+     </template>
+     <template tid="DmfModuleProcessingAlgorithmArgs">
+      <data name="Type" inType="win:UInt16"/>
+      <data name="AlgorithmId" inType="win:UInt16"/>
+      <data name="Stage" inType="win:UInt16"/>
+      <data name="Domain" inType="win:UInt16"/>
+      <data name="DomainMultiplier" inType="win:UInt16"/>
+      <data name="IsTimerEvent" inType="win:UInt16"/>
+      <data name="InputCount" inType="win:UInt16"/>
+      <data name="OutputCount" inType="win:UInt16"/>
+      <data name="IdleCycles" inType="win:UInt16"/>
+     </template>
+     <template tid="MSTSTemperatureReadRequestArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="CompleteRequest" inType="win:Boolean"/>
+      <data name="UpdateTime" inType="win:FILETIME"/>
+      <data name="ExpirationTime" inType="win:FILETIME"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+      <data name="BytesWritten" inType="win:UInt32"/>
+     </template>
+     <template tid="MSTSTemperatureNotificationArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="CompleteRequest" inType="win:Boolean"/>
+      <data name="CurrentTime" inType="win:FILETIME"/>
+      <data name="ExpirationTime" inType="win:FILETIME"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+      <data name="Temperature" inType="win:UInt32"/>
+      <data name="BytesWritten" inType="win:UInt32"/>
+     </template>
+     <template tid="MSTSQueryDsmSupportArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="DsmSupportBitmask" inType="win:HexInt32"/>
+      <data name="DsmState" inType="win:UInt32"/>
+     </template>
+     <template tid="TfThermalReadIrpReceivedArgs">
+      <data name="ThermalDeviceId" inType="win:UInt32"/>
+      <data name="RequestToken" inType="win:UInt64"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+     </template>
+     <template tid="TfThermalReadIrpCompleteArgs">
+      <data name="ThermalDeviceId" inType="win:UInt32"/>
+      <data name="RequestType" inType="win:UInt32"/>
+      <data name="RequestToken" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+      <data name="ReturnedTemperature" inType="win:UInt32"/>
+     </template>
+     <template tid="TfThermalReadAggregateThresholdsArgs">
+      <data name="ThermalDeviceId" inType="win:UInt32"/>
+      <data name="PendingRequestCount" inType="win:UInt32"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+     </template>
+     <template tid="TfThermalReadRequestSentArgs">
+      <data name="ThermalDeviceId" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+     </template>
+     <template tid="TfRundownArgs">
+      <data name="BiosNameLength" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:UnicodeString" length="BiosNameLength"/>
+      <data name="DeviceId" inType="win:Int32"/>
+      <data name="Capabilities" inType="win:UInt32"/>
+      <data name="CheckMode" inType="win:UInt32"/>
+      <data name="ThermalReadRetryCount" inType="win:UInt32"/>
+      <data name="ThermalReadFailure" inType="win:UInt32"/>
+      <data name="CurrentTemperature" inType="win:UInt32"/>
+      <data name="CurrentState" inType="win:UInt32"/>
+      <data name="Timeout" inType="win:UInt32"/>
+      <data name="LowTemperature" inType="win:UInt32"/>
+      <data name="HighTemperature" inType="win:UInt32"/>
+     </template>
+     <template tid="TfSystemEventArgs">
+      <data name="BiosNameLength" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:UnicodeString" length="BiosNameLength"/>
+      <data name="DeviceId" inType="win:Int32"/>
+      <data name="Capabilities" inType="win:UInt32"/>
+     </template>
+     <template tid="TfThermalReadStateUpdateArgs">
+      <data name="ThermalDeviceId" inType="win:UInt32"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+      <data name="NewState" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioQueryInputArgs">
+      <data name="DeviceHandle" inType="win:UInt64"/>
+      <data name="FunctionId" inType="win:Int32"/>
+      <data name="Value" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioSendOutputArgs">
+      <data name="DeviceHandle" inType="win:UInt64"/>
+      <data name="FunctionId" inType="win:Int32"/>
+      <data name="Value" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioQueryDsmSupportArgs">
+      <data name="DeviceHandle" inType="win:UInt64"/>
+      <data name="DsmGuid" inType="win:GUID"/>
+      <data name="DsmSupportBitmask" inType="win:HexInt32"/>
+      <data name="DsmState" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioQuerySignalArgs">
+      <data name="DeviceHandle" inType="win:UInt64"/>
+      <data name="FunctionId" inType="win:UInt32"/>
+      <data name="Value" inType="win:UInt32"/>
+      <data name="DsmState" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioRundownArgs">
+      <data name="BiosNameLength" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:UnicodeString" length="BiosNameLength"/>
+      <data name="DeviceHandle" inType="win:UInt64"/>
+      <data name="SupportedInputs" inType="win:UInt32"/>
+      <data name="InputState" inType="win:UInt32"/>
+      <data name="InputErrors" inType="win:UInt32"/>
+      <data name="SupportedOutputs" inType="win:UInt32"/>
+      <data name="OutputState" inType="win:UInt32"/>
+      <data name="OutputErrors" inType="win:UInt32"/>
+     </template>
+     <template tid="MscioSystemEventArgs">
+      <data name="BiosNameLength" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:UnicodeString" length="BiosNameLength"/>
+      <data name="SupportedInputs" inType="win:UInt32"/>
+      <data name="SupportedOutputs" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriverArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="InvalidValue" inType="win:Int32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10004Args">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Minimum" inType="win:Int32"/>
+      <data name="Maximum" inType="win:Int32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10005Args">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Minimum" inType="win:Int32"/>
+      <data name="Maximum" inType="win:Int32"/>
+      <data name="Default" inType="win:Int32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10006Args">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Expected" inType="win:Int32"/>
+      <data name="Actual" inType="win:Int32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10011Args">
+      <data name="NamedChannelType" inType="win:UInt32" map="ThermalPolicyChannelType"/>
+      <data name="ActualChannelCount" inType="win:UInt32"/>
+      <data name="MaxChannelCount" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10012Args">
+      <data name="NamedChannelType" inType="win:UInt32"/>
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="MaxBiosNameLength" inType="win:Int32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10013Args">
+      <data name="NamedChannelType" inType="win:UInt32"/>
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+     </template>
+     <template tid="ThermalPolicyDriver10014Args">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="NtStatusError" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10015Args">
+      <data name="NtStatusError" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10017Args">
+      <data name="NamedChannelType" inType="win:UInt32"/>
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Value" inType="win:Int32"/>
+      <data name="NtStatusError" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10020Args">
+      <data name="NamedChannelType" inType="win:UInt32"/>
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Value" inType="win:Boolean"/>
+     </template>
+     <template tid="ThermalPolicyDriver10022Args">
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="ThermalPolicyDriver10023Args">
+      <data name="Type" inType="win:UInt16"/>
+      <data name="DataLength" inType="win:UInt16"/>
+     </template>
+     <template tid="ThermalPolicyDriver10024Args">
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerLimitClientStateChangeArgs">
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="PreviousState" inType="win:UInt32" map="DeviceStateChange"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerLimitConfigurationFormatErrorArgs">
+      <data name="ErrorType" inType="win:UnicodeString"/>
+      <data name="TotalValidConfiguration" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerLimitConfigurationValueErrorArgs">
+      <data name="ErrorType" inType="win:UnicodeString"/>
+      <data name="Version" inType="win:UInt32"/>
+      <data name="DefaultValue" inType="win:UInt32"/>
+      <data name="MaxValue" inType="win:UInt32"/>
+      <data name="MinValue" inType="win:UInt32"/>
+      <data name="DomainId" inType="win:UInt32"/>
+      <data name="Type" inType="win:UInt32"/>
+      <data name="IsTimeParameter" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="TotalValidConfiguration" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerLimitGenericErrorArgs">
+      <data name="ErrorStatus" inType="win:UInt32"/>
+      <data name="ErrorType" inType="win:UnicodeString"/>
+     </template>
+     <template tid="PowerLimitClaimInterfaceArgs">
+      <data name="ClaimInterface" inType="win:UInt32" map="ClaimInterfaceResult"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+     </template>
+     <template tid="PowerLimitSetPowerErrorArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="DeviceIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerSourceClientFailureArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="PowerSourceClientStateChangeArgs">
+      <data name="NewState" inType="win:UInt32"/>
+      <data name="PreviousState" inType="win:UInt32"/>
+     </template>
+     <template tid="CustomizedIOClientGenericErrorArgs">
+      <data name="ErrorStatus" inType="win:UInt32"/>
+      <data name="ErrorType" inType="win:UInt32"/>
+     </template>
+     <template tid="CustomizedIOSignalClientInputConfigArgs">
+      <data name="ConfigVersion" inType="win:Int32"/>
+      <data name="PollingStartValue" inType="win:Int32"/>
+      <data name="TimerTriggerHysteresis" inType="win:Int32"/>
+      <data name="PollingIntervalMs" inType="win:Int32"/>
+      <data name="DefaultPollingTimerMs" inType="win:Int32"/>
+      <data name="MaxValue" inType="win:Int32"/>
+      <data name="MinValue" inType="win:Int32"/>
+      <data name="FunctionId" inType="win:Int32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+     </template>
+     <template tid="CustomizedIOSignalClientOutputConfigArgs">
+      <data name="ConfigVersion" inType="win:Int32"/>
+      <data name="MaxValue" inType="win:Int32"/>
+      <data name="MinValue" inType="win:Int32"/>
+      <data name="DefaultValue" inType="win:Int32"/>
+      <data name="FunctionId" inType="win:Int32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+     </template>
+     <template tid="CustomizedIOSignalClientChannelCountArgs">
+      <data name="InputChannelCount" inType="win:UInt32"/>
+      <data name="OutputChannelCount" inType="win:UInt32"/>
+     </template>
+     <template tid="CustomizedIOSignalClientInputFailureArgs">
+      <data name="ChannelIndex" inType="win:Int32"/>
+      <data name="FunctionId" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+     </template>
+     <template tid="CustomizedIOSignalClientArrivalRemovalArgs">
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="IoTargetState" inType="win:UInt32"/>
+     </template>
+     <template tid="CustomizedIOSignalClientInputChannelMessageArgs">
+      <data name="FunctionId" inType="win:UInt32"/>
+      <data name="BiosName" inType="win:AnsiString"/>
+      <data name="TimerState" inType="win:UInt32" map="CustomizedIOSignalClientTimerState"/>
+     </template>
+     <template tid="MptfServiceLoadErrorArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="MptfServiceInitializedArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+     </template>
+     <template tid="MptfServiceValuePublishedArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Value" inType="win:Int32"/>
+     </template>
+     <template tid="MptfServiceStartInitiatedArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="ThreadJoinable" inType="win:Boolean"/>
+      <data name="HasValue" inType="win:Boolean"/>
+     </template>
+     <template tid="MptfServiceStartedArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="Hasvalue" inType="win:Boolean"/>
+      <data name="ForcePublish" inType="win:Boolean"/>
+     </template>
+     <template tid="MptfServiceStopInitiatedArgs">
+      <data name="ChannelType" inType="win:GUID"/>
+      <data name="ChannelInstance" inType="win:UInt16"/>
+      <data name="ThreadJoinable" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Critical" value="Critical"/>
+    <string id="keyword_Diagnostic" value="Diagnostic"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Verbose" value="Verbose"/>
+    <string id="keyword_TemperatureSensor" value="TemperatureSensor"/>
+    <string id="keyword_ThermalFilter" value="ThermalFilter"/>
+    <string id="keyword_CustomizedIO" value="CustomizedIO"/>
+    <string id="keyword_MPTFDmfModule" value="MPTFDmfModule"/>
+    <string id="keyword_MPTFCore" value="MPTFCore"/>
+    <string id="keyword_MPTFThermalPolicy" value="MPTFThermalPolicy"/>
+    <string id="keyword_MPTFPowerLimitClient" value="MPTFPowerLimitClient"/>
+    <string id="keyword_MPTFPowerSourceClient" value="MPTFPowerSourceClient"/>
+    <string id="keyword_MPTFCustomizedIOSignalClient" value="MPTFCustomizedIOSignalClient"/>
+    <string id="keyword_MPTFPowerTrackerCore" value="MPTFPowerTrackerCore"/>
+    <string id="keyword_MptfGenericService" value="MptfGenericService"/>
+    <string id="task_MSTSTemperatureReadRequest" value="MSTSTemperatureReadRequest"/>
+    <string id="task_MSTSTemperatureNotification" value="MSTSTemperatureNotification"/>
+    <string id="task_MSTSQueryDsmSupport" value="MSTSQueryDsmSupport"/>
+    <string id="task_TfThermalReadIrpReceived" value="TfThermalReadIrpReceived"/>
+    <string id="task_TfThermalReadIrpComplete" value="TfThermalReadIrpComplete"/>
+    <string id="task_MscioQueryInput" value="MscioQueryInput"/>
+    <string id="task_MscioSendOutput" value="MscioSendOutput"/>
+    <string id="task_MscioQueryDsmSupport" value="MscioQueryDsmSupport"/>
+    <string id="task_MscioQuerySignal" value="MscioQuerySignal"/>
+    <string id="task_MscioSendSignal" value="MscioSendSignal"/>
+    <string id="task_TfThermalReadAggregateThresholds" value="TfThermalReadAggregateThresholds"/>
+    <string id="task_TfThermalReadRequestSent" value="TfThermalReadRequestSent"/>
+    <string id="task_PowerSourceClientFailure" value="PowerSourceClientFailure"/>
+    <string id="task_PowerSourceClientStateChange" value="PowerSourceClientStateChange"/>
+    <string id="task_DmfModuleDataEnqueued" value="DmfModuleDataEnqueued"/>
+    <string id="task_DmfModuleDataUpdated" value="DmfModuleDataUpdated"/>
+    <string id="task_DmfModuleDataRundown" value="DmfModuleDataRundown"/>
+    <string id="task_DmfModuleStatusEnqueued" value="DmfModuleStatusEnqueued"/>
+    <string id="task_DmfModuleStatusUpdated" value="DmfModuleStatusUpdated"/>
+    <string id="task_DmfModuleStatusRundown" value="DmfModuleStatusRundown"/>
+    <string id="task_DmfModuleCapabilityEnqueued" value="DmfModuleCapabilityEnqueued"/>
+    <string id="task_DmfModuleCapabilityUpdated" value="DmfModuleCapabilityUpdated"/>
+    <string id="task_DmfModuleCapabilityRundown" value="DmfModuleCapabilityRundown"/>
+    <string id="task_CoreConfigurationParseError" value="CoreConfigurationParseError"/>
+    <string id="task_CoreConfigurationReadError" value="CoreConfigurationReadError"/>
+    <string id="task_CoreConfigurationAlgorithmError" value="CoreConfigurationAlgorithmError"/>
+    <string id="task_CoreConfigurationInterfaceError" value="CoreConfigurationInterfaceError"/>
+    <string id="task_CoreConfigurationDeviceError" value="CoreConfigurationDeviceError"/>
+    <string id="task_CoreInterfaceEvent" value="CoreInterfaceEvent"/>
+    <string id="task_CoreClientEvent" value="CoreClientEvent"/>
+    <string id="task_CoreClientError" value="CoreClientError"/>
+    <string id="task_CoreDStateEvent" value="CoreDStateEvent"/>
+    <string id="task_CoreTimerEvent" value="CoreTimerEvent"/>
+    <string id="task_CoreDataEvent" value="CoreDataEvent"/>
+    <string id="task_CoreListEvent" value="CoreListEvent"/>
+    <string id="task_CoreChannelEvent" value="CoreChannelEvent"/>
+    <string id="task_ProcessingConfigurationEvent" value="ProcessingConfigurationEvent"/>
+    <string id="task_ProcessingStateEvent" value="ProcessingStateEvent"/>
+    <string id="task_ProcessingTimerStateEvent" value="ProcessingTimerStateEvent"/>
+    <string id="task_ProcessingRegistrationEvent" value="ProcessingRegistrationEvent"/>
+    <string id="task_ProcessingUnregistrationEvent" value="ProcessingUnregistrationEvent"/>
+    <string id="task_ProcessingTooSlowEvent" value="ProcessingTooSlowEvent"/>
+    <string id="task_ProcessingInputStormEvent" value="ProcessingInputStormEvent"/>
+    <string id="task_ProcessingTimerResetEvent" value="ProcessingTimerResetEvent"/>
+    <string id="task_ThermalPolicyDriver" value="ThermalPolicyDriver"/>
+    <string id="task_CustomizedIOClientGenericError" value="CustomizedIOClientGenericError"/>
+    <string id="task_CustomizedIOSignalClientInputConfig" value="CustomizedIOSignalClientInputConfig"/>
+    <string id="task_CustomizedIOSignalClientOutputConfig" value="CustomizedIOSignalClientOutputConfig"/>
+    <string id="task_CustomizedIOSignalClientChannelCount" value="CustomizedIOSignalClientChannelCount"/>
+    <string id="task_CustomizedIOSignalClientInputFailure" value="CustomizedIOSignalClientInputFailure"/>
+    <string id="task_CustomizedIOSignalClientArrivalRemoval" value="CustomizedIOSignalClientArrivalRemoval"/>
+    <string id="task_CustomizedIOSignalClientInputChannelMessage" value="CustomizedIOSignalClientInputChannelMessage"/>
+    <string id="task_DmfModuleProcessingAlgorithm" value="DmfModuleProcessingAlgorithm"/>
+    <string id="task_TfRundown" value="TfRundown"/>
+    <string id="task_TfSystemEvent" value="TfSystemEvent"/>
+    <string id="task_TfThermalReadStateUpdate" value="TfThermalReadStateUpdate"/>
+    <string id="task_MscioRundown" value="MscioRundown"/>
+    <string id="task_MscioSystemEvent" value="MscioSystemEvent"/>
+    <string id="task_PowerLimitClientStateChange" value="PowerLimitClientStateChange"/>
+    <string id="task_PowerLimitConfigurationFormatError" value="PowerLimitConfigurationFormatError"/>
+    <string id="task_PowerLimitConfigurationValueError" value="PowerLimitConfigurationValueError"/>
+    <string id="task_PowerLimitGenericError" value="PowerLimitGenericError"/>
+    <string id="task_PowerLimitClaimInterface" value="PowerLimitClaimInterface"/>
+    <string id="task_PowerLimitSetPowerError" value="PowerLimitSetPowerError"/>
+    <string id="task_MptfServiceLoadError" value="MptfServiceLoadError"/>
+    <string id="task_MptfServiceInitialized" value="MptfServiceInitialized"/>
+    <string id="task_MptfServicePublishError" value="MptfServicePublishError"/>
+    <string id="task_MptfServiceValuePublished" value="MptfServiceValuePublished"/>
+    <string id="task_MptfServiceRundown" value="MptfServiceRundown"/>
+    <string id="task_MptfServiceStartInitiated" value="MptfServiceStartInitiated"/>
+    <string id="task_MptfServiceStarted" value="MptfServiceStarted"/>
+    <string id="task_MptfServiceStopInitiated" value="MptfServiceStopInitiated"/>
+    <string id="task_MptfServiceStopped" value="MptfServiceStopped"/>
+    <string id="map_CoreEventLogTypeInvalid" value="Invalid"/>
+    <string id="map_CoreEventLogTypeListDataError" value="ListDataError"/>
+    <string id="map_CoreEventLogTypeListRemovalError" value="ListRemovalError"/>
+    <string id="map_CoreEventLogTypeListInsertionError" value="ListInsertionError"/>
+    <string id="map_CoreEventLogTypeListReferenceError" value="ListReferenceError"/>
+    <string id="map_CoreEventLogTypeClient interface failure." value="Client interface failure."/>
+    <string id="map_CoreEventLogTypeClient interface dispatch failure." value="Client interface dispatch failure."/>
+    <string id="map_CoreEventLogTypeD0 Entry." value="D0 Entry."/>
+    <string id="map_CoreEventLogTypeInitial value read failure." value="Initial value read failure."/>
+    <string id="map_CoreEventLogTypeD0 Exit." value="D0 Exit."/>
+    <string id="map_CoreEventLogTypeData value based start." value="Data value based start."/>
+    <string id="map_CoreEventLogTypeData value based change." value="Data value based change."/>
+    <string id="map_CoreEventLogTypeD0 entry based start." value="D0 entry based start."/>
+    <string id="map_CoreEventLogTypeD0 exit based stop." value="D0 exit based stop."/>
+    <string id="map_CoreEventLogTypeDataInvalid" value="DataInvalid"/>
+    <string id="map_CoreEventLogTypeClient Arrival" value="Client Arrival"/>
+    <string id="map_CoreEventLogTypeClient Removal" value="Client Removal"/>
+    <string id="map_CoreEventLogTypeClient Start Error" value="Client Start Error"/>
+    <string id="map_CoreEventLogTypeClientChannelIncompatible" value="ClientChannelIncompatible"/>
+    <string id="map_ThermalPolicyChannelTypethermal sensor" value="thermal sensor"/>
+    <string id="map_ThermalPolicyChannelTypepassive cooling" value="passive cooling"/>
+    <string id="map_ThermalPolicyChannelTypesystem control" value="system control"/>
+    <string id="map_DeviceStateChangeInitialized" value="Initialized"/>
+    <string id="map_DeviceStateChangeDeviceAdded" value="DeviceAdded"/>
+    <string id="map_DeviceStateChangeHardwareReady" value="HardwareReady"/>
+    <string id="map_DeviceStateChangeHardwareRemoved" value="HardwareRemoved"/>
+    <string id="map_DeviceStateChangeDeviceActive" value="DeviceActive"/>
+    <string id="map_DeviceStateChangeDeviceInactive" value="DeviceInactive"/>
+    <string id="map_DeviceStateChangeDmfCapabilitiesGet" value="DmfCapabilitiesGet"/>
+    <string id="map_ClaimInterfaceResultclaimed" value="claimed"/>
+    <string id="map_ClaimInterfaceResultignored" value="ignored"/>
+    <string id="map_CustomizedIOSignalClientTimerStateTimer Off. Entry to CS" value="Timer Off. Entry to CS"/>
+    <string id="map_CustomizedIOSignalClientTimerStateTimer ON. Exit from CS" value="Timer ON. Exit from CS"/>
+    <string id="map_CustomizedIOSignalClientTimerStateTimer Off. Device Removed" value="Timer Off. Device Removed"/>
+    <string id="map_CustomizedIOSignalClientTimerStateTimer Off. Release Hardware" value="Timer Off. Release Hardware"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

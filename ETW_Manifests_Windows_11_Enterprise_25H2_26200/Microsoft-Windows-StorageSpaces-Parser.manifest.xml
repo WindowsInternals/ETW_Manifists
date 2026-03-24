@@ -1,0 +1,63 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-StorageSpaces-Parser" guid="{5bcf2a5c-2e90-5a03-aa4e-2e459bae21b4}" resourceFileName="Microsoft-Windows-StorageSpaces-Parser" messageFileName="Microsoft-Windows-StorageSpaces-Parser" symbol="MicrosoftWindowsStorageSpacesParser" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Error" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Error" template="task_0101Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" template="task_0200Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Error" template="task_0200Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Error" template="task_0202Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Warning" template="task_0202Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Error" template="task_0101Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0200Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Operation" inType="win:AnsiString"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Cdb" inType="win:UInt8"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

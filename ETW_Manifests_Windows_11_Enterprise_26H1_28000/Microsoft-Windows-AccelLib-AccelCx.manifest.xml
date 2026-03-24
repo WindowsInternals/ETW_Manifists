@@ -1,0 +1,41 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-AccelLib-AccelCx" guid="{9c4cf201-dd11-5e35-9de5-2c2146832011}" resourceFileName="Microsoft-Windows-AccelLib-AccelCx" messageFileName="Microsoft-Windows-AccelLib-AccelCx" symbol="MicrosoftWindowsAccelLibAccelCx" source="Xml" >
+    <keywords>
+     <keyword name="keyword_800000000000" message="$(string.keyword_keyword_800000000000)" mask="0x800000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" keywords="keyword_800000000000" template="task_02Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="HardwareType" inType="win:UInt32"/>
+      <data name="HardwareSubtype" inType="win:UInt32"/>
+      <data name="InstanceId" inType="win:UnicodeString"/>
+      <data name="NumaNode" inType="win:UInt32"/>
+      <data name="AcceleratorCountOnThisNode" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02Args">
+      <data name="HardwareType" inType="win:UInt32"/>
+      <data name="HardwareSubtype" inType="win:UInt32"/>
+      <data name="InstanceId" inType="win:UnicodeString"/>
+      <data name="NumaNode" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_keyword_800000000000" value="keyword_800000000000"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

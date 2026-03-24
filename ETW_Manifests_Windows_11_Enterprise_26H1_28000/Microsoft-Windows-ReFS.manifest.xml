@@ -1,0 +1,2584 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-ReFS" guid="{cd9c6198-bf73-4106-803b-c17d26559018}" resourceFileName="Microsoft-Windows-ReFS" messageFileName="Microsoft-Windows-ReFS" symbol="MicrosoftWindowsReFS" source="Xml" >
+    <keywords>
+     <keyword name="VolumeMount" message="$(string.keyword_VolumeMount)" mask="0x1"/>
+     <keyword name="VolumeFillRatio" message="$(string.keyword_VolumeFillRatio)" mask="0x2"/>
+     <keyword name="VolumeDismount" message="$(string.keyword_VolumeDismount)" mask="0x4"/>
+     <keyword name="Statistics" message="$(string.keyword_Statistics)" mask="0x200000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Volumedismount" message="$(string.task_Volumedismount)" value="1"/>
+    </tasks>
+    <maps>
+     <valueMap name="IrpMajorFunction">
+      <map value="0x3" message="$(string.map_IrpMajorFunctionread)"/>
+      <map value="0x4" message="$(string.map_IrpMajorFunctionwrite)"/>
+     </valueMap>
+     <valueMap name="DevDriveState">
+      <map value="0x0" message="$(string.map_DevDriveStateNot a developer volume)"/>
+      <map value="0x1" message="$(string.map_DevDriveStateFormatted as a developer volume but not trusted on this machine)"/>
+      <map value="0x2" message="$(string.map_DevDriveStateA trusted developer volume)"/>
+     </valueMap>
+     <valueMap name="StorageBusType">
+      <map value="0x0" message="$(string.map_StorageBusTypeUnknown)"/>
+      <map value="0x1" message="$(string.map_StorageBusTypeSCSI)"/>
+      <map value="0x2" message="$(string.map_StorageBusTypeATAPI)"/>
+      <map value="0x3" message="$(string.map_StorageBusTypeATA)"/>
+      <map value="0x4" message="$(string.map_StorageBusTypeIEEE 1394)"/>
+      <map value="0x5" message="$(string.map_StorageBusTypeSSA)"/>
+      <map value="0x6" message="$(string.map_StorageBusTypeFibre channel)"/>
+      <map value="0x7" message="$(string.map_StorageBusTypeUSB)"/>
+      <map value="0x8" message="$(string.map_StorageBusTypeRAID)"/>
+      <map value="0x9" message="$(string.map_StorageBusTypeiSCSI)"/>
+      <map value="0xa" message="$(string.map_StorageBusTypeSAS)"/>
+      <map value="0xb" message="$(string.map_StorageBusTypeSATA)"/>
+      <map value="0xc" message="$(string.map_StorageBusTypeSD)"/>
+      <map value="0xd" message="$(string.map_StorageBusTypeMMC)"/>
+      <map value="0xe" message="$(string.map_StorageBusTypeVirtual)"/>
+      <map value="0xf" message="$(string.map_StorageBusTypeFile backed Virtual)"/>
+      <map value="0x10" message="$(string.map_StorageBusTypeStorage Spaces)"/>
+      <map value="0x11" message="$(string.map_StorageBusTypeNVMe)"/>
+      <map value="0x12" message="$(string.map_StorageBusTypeSCM)"/>
+      <map value="0x13" message="$(string.map_StorageBusTypeUFS)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="4" symbol="task_04_V1" version="1" task="task_0" level="win:Informational" keywords="VolumeMount" template="task_04Args_V1"/>
+     <event value="4" symbol="task_04_V2" version="2" task="task_0" level="win:Informational" keywords="VolumeMount" template="task_04Args_V2"/>
+     <event value="4" symbol="task_04_V3" version="3" task="task_0" level="win:Informational" keywords="VolumeMount" template="task_04Args_V3"/>
+     <event value="4" symbol="task_04_V4" version="4" task="task_0" level="win:Informational" keywords="VolumeMount" template="task_04Args_V4"/>
+     <event value="4" symbol="task_04_V5" version="5" task="task_0" level="win:Informational" keywords="VolumeMount" template="task_04Args_V5"/>
+     <event value="5" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="VolumeMount" template="task_0Args"/>
+     <event value="5" symbol="task_0_V1" version="1" task="task_0" level="win:Error" keywords="VolumeMount" template="task_0Args_V1"/>
+     <event value="5" symbol="task_0_V2" version="2" task="task_0" level="win:Error" keywords="VolumeMount" template="task_0Args_V2"/>
+     <event value="6" symbol="task_06" version="0" task="task_0" level="win:Verbose" keywords="VolumeMount" template="task_06Args"/>
+     <event value="7" symbol="task_07" version="0" task="task_0" level="win:Error" keywords="VolumeMount" template="task_07Args"/>
+     <event value="8" symbol="task_08" version="0" task="task_0" level="win:Informational" keywords="VolumeFillRatio" template="task_08Args"/>
+     <event value="8" symbol="task_08_V1" version="1" task="task_0" level="win:Informational" keywords="VolumeFillRatio" template="task_08Args_V1"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Warning" template="task_0130Args"/>
+     <event value="131" symbol="task_0131" version="0" task="task_0" level="win:Error" template="task_0131Args"/>
+     <event value="132" symbol="task_0132" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+     <event value="133" symbol="task_0133" version="0" task="task_0" level="win:Error" template="task_0132Args"/>
+     <event value="134" symbol="task_0134" version="0" task="task_0" level="win:Error" template="task_0131Args"/>
+     <event value="135" symbol="task_0135" version="0" task="task_0" level="win:Error" template="task_0135Args"/>
+     <event value="136" symbol="task_0136" version="0" task="task_0" level="win:Warning" template="task_0135Args"/>
+     <event value="137" symbol="task_0137" version="0" task="task_0" level="win:Error" template="task_0135Args"/>
+     <event value="138" symbol="task_0138" version="0" task="task_0" level="win:Error" template="task_0135Args"/>
+     <event value="139" symbol="task_0139" version="0" task="task_0" level="win:Warning" template="task_0131Args"/>
+     <event value="140" symbol="task_0140" version="0" task="task_0" level="win:Error" template="task_0131Args"/>
+     <event value="141" symbol="task_0141" version="0" task="task_0" level="win:Warning" template="task_0135Args"/>
+     <event value="142" symbol="task_0142" version="0" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args"/>
+     <event value="142" symbol="task_0142_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args_V1"/>
+     <event value="142" symbol="task_0142_V2" version="2" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args_V2"/>
+     <event value="142" symbol="task_0142_V3" version="3" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args_V3"/>
+     <event value="142" symbol="task_0142_V4" version="4" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args_V4"/>
+     <event value="142" symbol="task_0142_V5" version="5" task="task_0" level="win:Informational" keywords="Statistics" template="task_0142Args_V5"/>
+     <event value="143" symbol="task_0143" version="0" task="task_0" level="win:Warning" template="task_0143Args"/>
+     <event value="145" symbol="task_0145_V2" version="2" task="task_0" level="win:Informational" keywords="Statistics" template="task_0145Args_V2"/>
+     <event value="146" symbol="task_0146_V2" version="2" task="task_0" level="win:Informational" keywords="Statistics" template="task_0146Args_V2"/>
+     <event value="147" symbol="task_0147_V1" version="1" task="task_0" level="win:Warning" keywords="Statistics" template="task_0147Args_V1"/>
+     <event value="147" symbol="task_0147_V2" version="2" task="task_0" level="win:Warning" keywords="Statistics" template="task_0147Args_V2"/>
+     <event value="147" symbol="task_0147_V3" version="3" task="task_0" level="win:Warning" keywords="Statistics" template="task_0147Args_V3"/>
+     <event value="147" symbol="task_0147_V4" version="4" task="task_0" level="win:Warning" keywords="Statistics" template="task_0147Args_V4"/>
+     <event value="147" symbol="task_0147_V5" version="5" task="task_0" level="win:Warning" keywords="Statistics" template="task_0147Args_V5"/>
+     <event value="148" symbol="task_0148" version="0" task="task_0" level="win:Warning" keywords="Statistics" template="task_0148Args"/>
+     <event value="148" symbol="task_0148_V1" version="1" task="task_0" level="win:Warning" keywords="Statistics" template="task_0148Args_V1"/>
+     <event value="148" symbol="task_0148_V2" version="2" task="task_0" level="win:Warning" keywords="Statistics" template="task_0148Args_V2"/>
+     <event value="149" symbol="task_0149" version="0" task="task_0" level="win:Warning" keywords="Statistics" template="task_0149Args"/>
+     <event value="149" symbol="task_0149_V2" version="2" task="task_0" level="win:Warning" keywords="Statistics" template="task_0149Args_V2"/>
+     <event value="150" symbol="task_0150_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0150Args_V1"/>
+     <event value="150" symbol="task_0150_V2" version="2" task="task_0" level="win:Informational" keywords="Statistics" template="task_0150Args_V2"/>
+     <event value="170" symbol="task_0170_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V1"/>
+     <event value="170" symbol="task_0170_V2" version="2" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V2"/>
+     <event value="170" symbol="task_0170_V3" version="3" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V3"/>
+     <event value="170" symbol="task_0170_V4" version="4" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V4"/>
+     <event value="170" symbol="task_0170_V5" version="5" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V5"/>
+     <event value="170" symbol="task_0170_V6" version="6" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V6"/>
+     <event value="170" symbol="task_0170_V7" version="7" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V7"/>
+     <event value="170" symbol="task_0170_V8" version="8" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V8"/>
+     <event value="170" symbol="task_0170_V9" version="9" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V9"/>
+     <event value="170" symbol="task_0170_V10" version="10" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V10"/>
+     <event value="170" symbol="task_0170_V11" version="11" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V11"/>
+     <event value="170" symbol="task_0170_V12" version="12" task="task_0" level="win:Informational" keywords="Statistics" template="task_0170Args_V12"/>
+     <event value="180" symbol="task_0180" version="0" task="task_0" level="win:Warning" template="task_0180Args"/>
+     <event value="181" symbol="task_0181" version="0" task="task_0" level="win:Warning" template="task_0181Args"/>
+     <event value="182" symbol="task_0182" version="0" task="task_0" level="win:Informational" template="task_0182Args"/>
+     <event value="183" symbol="task_0183" version="0" task="task_0" level="win:Warning" template="task_0182Args"/>
+     <event value="200" symbol="task_0200_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0200Args_V1"/>
+     <event value="201" symbol="task_0201_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0201Args_V1"/>
+     <event value="202" symbol="task_0202_V1" version="1" task="task_0" level="win:Informational" keywords="Statistics" template="task_0202Args_V1"/>
+     <event value="237" symbol="task_0237" version="0" task="task_0" level="win:Informational" template="task_0237Args"/>
+     <event value="238" symbol="task_0238" version="0" task="task_0" level="win:Informational" template="task_0238Args"/>
+     <event value="272" symbol="task_0272" version="0" task="task_0" level="win:Informational" template="task_0272Args"/>
+     <event value="273" symbol="task_0273" version="0" task="task_0" level="win:Informational" template="task_0273Args"/>
+     <event value="274" symbol="task_0274" version="0" task="task_0" level="win:Informational" template="task_0274Args"/>
+     <event value="300" symbol="VolumedismountStart" version="0" task="Volumedismount" opcode="win:Start" level="win:Informational" keywords="VolumeDismount" template="VolumedismountStartArgs"/>
+     <event value="300" symbol="VolumedismountStart_V1" version="1" task="Volumedismount" opcode="win:Start" level="win:Informational" keywords="VolumeDismount" template="VolumedismountStartArgs_V1"/>
+     <event value="301" symbol="VolumedismountSuspend" version="0" task="Volumedismount" opcode="win:Suspend" level="win:Informational" keywords="VolumeDismount" template="VolumedismountSuspendArgs"/>
+     <event value="301" symbol="VolumedismountSuspend_V1" version="1" task="Volumedismount" opcode="win:Suspend" level="win:Informational" keywords="VolumeDismount" template="VolumedismountSuspendArgs_V1"/>
+     <event value="302" symbol="VolumedismountResume" version="0" task="Volumedismount" opcode="win:Resume" level="win:Informational" keywords="VolumeDismount" template="VolumedismountResumeArgs"/>
+     <event value="302" symbol="VolumedismountResume_V1" version="1" task="Volumedismount" opcode="win:Resume" level="win:Informational" keywords="VolumeDismount" template="VolumedismountResumeArgs_V1"/>
+     <event value="303" symbol="VolumedismountStop" version="0" task="Volumedismount" opcode="win:Stop" level="win:Informational" keywords="VolumeDismount" template="VolumedismountStopArgs"/>
+     <event value="303" symbol="VolumedismountStop_V1" version="1" task="Volumedismount" opcode="win:Stop" level="win:Informational" keywords="VolumeDismount" template="VolumedismountStopArgs_V1"/>
+     <event value="304" symbol="VolumedismountStop304" version="0" task="Volumedismount" opcode="win:Stop" level="win:Error" keywords="VolumeDismount" template="VolumedismountStop304Args"/>
+     <event value="304" symbol="VolumedismountStop304_V1" version="1" task="Volumedismount" opcode="win:Stop" level="win:Error" keywords="VolumeDismount" template="VolumedismountStop304Args_V1"/>
+     <event value="513" symbol="task_0513" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+     <event value="514" symbol="task_0514" version="0" task="task_0" level="win:Error" template="task_0132Args"/>
+     <event value="515" symbol="task_0515" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+     <event value="516" symbol="task_0516" version="0" task="task_0" level="win:Error" template="task_0132Args"/>
+     <event value="517" symbol="task_0517" version="0" task="task_0" level="win:Error" template="task_0135Args"/>
+     <event value="518" symbol="task_0518" version="0" task="task_0" level="win:Error" template="task_0135Args"/>
+     <event value="519" symbol="task_0519" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+     <event value="520" symbol="task_0520" version="0" task="task_0" level="win:Error" template="task_0132Args"/>
+     <event value="521" symbol="task_0521" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+     <event value="522" symbol="task_0522" version="0" task="task_0" level="win:Warning" template="task_0132Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="StackCount" inType="win:UInt32"/>
+      <data name="Stack" inType="win:Pointer" count="StackCount"/>
+      <data name="SourceLine" inType="win:UInt32"/>
+     </template>
+     <template tid="task_06Args">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="Progress" inType="win:UInt32"/>
+      <data name="StackCount" inType="win:UInt32"/>
+      <data name="Stack" inType="win:Pointer" count="StackCount"/>
+     </template>
+     <template tid="task_07Args">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="MajorVersionExpected" inType="win:UInt8"/>
+      <data name="MinorVersionExpected" inType="win:UInt8"/>
+      <data name="MajorVersionOnDisk" inType="win:UInt8"/>
+      <data name="MinorVersionOnDisk" inType="win:UInt8"/>
+     </template>
+     <template tid="task_08Args">
+      <data name="Context" inType="win:Pointer"/>
+      <data name="FillRatio" inType="win:UInt32"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+     </template>
+     <template tid="task_0130Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="RepairDetail" inType="win:UnicodeString"/>
+      <data name="RepairDataLength" inType="win:UInt16"/>
+      <data name="RepairData" inType="win:Binary" length="RepairDataLength"/>
+     </template>
+     <template tid="task_0131Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="FailureReason" inType="win:HexInt32"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0132Args">
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="FailureReason" inType="win:HexInt32"/>
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0135Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="FailureReason" inType="win:HexInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0142Args">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0143Args">
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="FailureReason" inType="win:HexInt32"/>
+      <data name="ActionTaken" inType="win:UInt32"/>
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0148Args">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="IoType" inType="win:UInt32" map="IrpMajorFunction"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+      <data name="FailureStatus" inType="win:UInt32"/>
+      <data name="TableIndex" inType="win:Int32"/>
+     </template>
+     <template tid="task_0149Args">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="SecondsElapsed" inType="win:UInt32"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="FailedWriteCount" inType="win:UInt32"/>
+      <data name="FailedReadCount" inType="win:UInt32"/>
+      <data name="BadClusterHotfixCount" inType="win:UInt32"/>
+      <data name="ValuesCount" inType="win:UInt32"/>
+      <data name="HighLatencyArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="FailedWriteArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="FailedReadArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="BadClusterHotfixArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="StatusArray" inType="win:HexInt32" count="ValuesCount"/>
+      <data name="TableIndexArray" inType="win:UInt32" count="ValuesCount"/>
+     </template>
+     <template tid="task_0180Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Count" inType="win:Int64"/>
+      <data name="Result" inType="win:Int64"/>
+      <data name="RegionNonCompactibleAllocated" inType="win:HexInt64"/>
+      <data name="RegionStartOfRange" inType="win:HexInt64"/>
+      <data name="RegionCountOfRange" inType="win:HexInt64"/>
+      <data name="RegionFlags" inType="win:HexInt32"/>
+      <data name="RegionFreeCount" inType="win:HexInt32"/>
+      <data name="RegionFreeBits" inType="win:HexInt32"/>
+      <data name="RecentlyDeallocatedTrimBits" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0181Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="SourceFile" inType="win:HexInt32"/>
+      <data name="SourceLine" inType="win:UInt16"/>
+      <data name="SourceTag" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Count" inType="win:Int64"/>
+      <data name="Pos" inType="win:Int64"/>
+      <data name="StartOfRange" inType="win:HexInt64"/>
+      <data name="CountOfRange" inType="win:HexInt64"/>
+      <data name="Start" inType="win:HexInt64"/>
+      <data name="End" inType="win:HexInt64"/>
+     </template>
+     <template tid="task_0182Args">
+      <data name="VolumeIdLength" inType="win:UInt16"/>
+      <data name="VolumeId" inType="win:UnicodeString" length="VolumeIdLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="DedupEnabled" inType="win:Int32"/>
+      <data name="WeakReferenceEnabled" inType="win:Int32"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Int32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0237Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmDWORDDatapointValue" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0238Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmStringDatapointValue" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0272Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmProcessHashValue" inType="win:UInt32"/>
+      <data name="SqmStreamRowLength" inType="win:UInt32"/>
+      <data name="SqmStreamRow" inType="win:UInt16" count="SqmStreamRowLength"/>
+     </template>
+     <template tid="task_0273Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmProcessHashValue" inType="win:UInt32"/>
+      <data name="SqmStreamRowLength" inType="win:UInt32"/>
+      <data name="SqmStreamEntriesSize" inType="win:UInt32"/>
+      <data name="SqmStreamEntries" inType="win:Binary" length="SqmStreamEntriesSize"/>
+      <data name="SqmStreamFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0274Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmDWORD64DatapointValue" inType="win:UInt64"/>
+     </template>
+     <template tid="VolumedismountStartArgs">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="DismountReason" inType="win:AnsiString"/>
+      <data name="NumberOfDirtyMetadataPages" inType="win:Int64"/>
+      <data name="NumberOfDirtyTableListEntries" inType="win:Int32"/>
+     </template>
+     <template tid="VolumedismountSuspendArgs">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="Vcb" inType="win:Pointer"/>
+     </template>
+     <template tid="VolumedismountResumeArgs">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="DismountNotificationDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountNotificationDurationMs" inType="win:UInt64"/>
+     </template>
+     <template tid="VolumedismountStopArgs">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="DismountReason" inType="win:AnsiString"/>
+      <data name="DismountNotificationDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountNotificationDurationMs" inType="win:UInt64"/>
+      <data name="DismountDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountDurationMs" inType="win:UInt64"/>
+      <data name="NumberOfDirtyMetadataPagesOnDismountBegin" inType="win:Int64"/>
+      <data name="NumberOfDirtyTableListEntriesOnDismountBegin" inType="win:Int32"/>
+      <data name="PagesDirtiedDuringDismount" inType="win:Int64"/>
+     </template>
+     <template tid="VolumedismountStop304Args">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="FailureStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_04Args_V1">
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="ClusterSizeBytes" inType="win:UInt32"/>
+      <data name="VolumeSizeBytes" inType="win:UInt64"/>
+      <data name="FreeSpaceBytes" inType="win:UInt64"/>
+      <data name="RedoLogLcnCount" inType="win:UInt64"/>
+      <data name="LogicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="PhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="ActualPhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="MajorVersion" inType="win:UInt8"/>
+      <data name="MinorVersion" inType="win:UInt8"/>
+      <data name="NumberOfPhysicalCopies" inType="win:UInt32"/>
+      <data name="NumberOfLogicalCopies" inType="win:UInt32"/>
+      <data name="VolumeIdForHeat" inType="win:GUID"/>
+      <data name="RootIntegrityStream" inType="win:UInt16"/>
+      <data name="VolumeState" inType="win:HexInt32"/>
+      <data name="UsnSize" inType="win:UInt64"/>
+      <data name="SecurityDescStreamSize" inType="win:UInt64"/>
+      <data name="DurationMicroSec" inType="win:UInt64"/>
+      <data name="DebugVersion" inType="win:Boolean"/>
+      <data name="DebuggerEnabled" inType="win:Boolean"/>
+      <data name="SsdTierSize" inType="win:UInt64"/>
+      <data name="ReadCacheSize" inType="win:UInt64"/>
+      <data name="ReadCacheLineSize" inType="win:UInt32"/>
+      <data name="ContainerRotationEnabled" inType="win:Boolean"/>
+      <data name="DeleteNotificationDisabled" inType="win:Boolean"/>
+      <data name="VcbState" inType="win:HexInt32"/>
+      <data name="VcbState2" inType="win:HexInt32"/>
+      <data name="CheckpointVirtualClock" inType="win:UInt64"/>
+      <data name="LastWriteTime" inType="win:FILETIME"/>
+      <data name="BootSectorFlags" inType="win:HexInt32"/>
+      <data name="RefsDataFlags" inType="win:HexInt32"/>
+      <data name="LastShutdownWasDirty" inType="win:Boolean"/>
+      <data name="StreamsSupported" inType="win:Boolean"/>
+      <data name="UserStreamsAvailable" inType="win:UInt32"/>
+      <data name="SizeOfRandomlyWriteableTier" inType="win:UInt64"/>
+      <data name="SizeOfSmrTier" inType="win:UInt64"/>
+      <data name="LogRestartStartLsn" inType="win:UInt64"/>
+      <data name="LogRestartLastLsn" inType="win:UInt64"/>
+      <data name="LogRestartDurationMicroSec" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Context" inType="win:Pointer"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="StackCount" inType="win:UInt32"/>
+      <data name="Stack" inType="win:Pointer" count="StackCount"/>
+      <data name="SourceLine" inType="win:UInt32"/>
+     </template>
+     <template tid="task_08Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32" map="DevDriveState"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Context" inType="win:Pointer"/>
+      <data name="FillRatio" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0142Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+      <data name="MappedClusters" inType="win:Int64"/>
+      <data name="MappedSpaceStr" inType="win:AnsiString"/>
+      <data name="AvailableMappedClusters" inType="win:Int64"/>
+      <data name="AvailableMappedSpaceStr" inType="win:AnsiString"/>
+      <data name="SlabSizeInBytes" inType="win:UInt64"/>
+      <data name="SlabSizeStr" inType="win:AnsiString"/>
+      <data name="SlabOffsetDeltaInBytes" inType="win:UInt64"/>
+      <data name="SlabsMapped" inType="win:UInt32"/>
+      <data name="SlabsMappedDelta" inType="win:Int32"/>
+      <data name="TotalSlabsCount" inType="win:UInt32"/>
+      <data name="MapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapCount" inType="win:Int32"/>
+      <data name="MapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapFailureCount" inType="win:Int32"/>
+      <data name="MappedBytesSinceMount" inType="win:Int64"/>
+      <data name="MappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalMappedBytes" inType="win:Int64"/>
+      <data name="IntervalMappedBytesStr" inType="win:AnsiString"/>
+      <data name="UnmapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapCount" inType="win:Int32"/>
+      <data name="UnmapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapFailureCount" inType="win:Int32"/>
+      <data name="UnmappedBytesSinceMount" inType="win:Int64"/>
+      <data name="UnmappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalUnmappedBytes" inType="win:Int64"/>
+      <data name="IntervalUnmappedBytesStr" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0147Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="IoType" inType="win:UInt32"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="LatencyMs" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+      <data name="TableIndex" inType="win:Int32"/>
+     </template>
+     <template tid="task_0148Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UInt32"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+      <data name="FailureStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0150Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="SampleDuration" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierMin" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierMax" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierAvg" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierMin" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierMax" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierAvg" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierMin" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierMax" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierAvg" inType="win:UInt64"/>
+      <data name="WriteSerializationAbortedWrites" inType="win:UInt64"/>
+      <data name="WriteSerializationEvents" inType="win:UInt64"/>
+      <data name="WriteSerializationLatencyAvg" inType="win:UInt64"/>
+      <data name="WriteSerializationLatencyMax" inType="win:UInt64"/>
+      <data name="WriteSerializationBlockedEvents" inType="win:UInt64"/>
+      <data name="WriteSerializationBlockedLatencyAvg" inType="win:UInt64"/>
+      <data name="StartGCCallsInvoked" inType="win:UInt64"/>
+      <data name="StartGCCallsFailed" inType="win:UInt64"/>
+      <data name="StartGCFullSpeedCallsInvoked" inType="win:UInt64"/>
+      <data name="StartGCFullSpeedCallsFailed" inType="win:UInt64"/>
+      <data name="PauseGCCallsInvoked" inType="win:UInt64"/>
+      <data name="PauseGCCallsFailed" inType="win:UInt64"/>
+      <data name="StopGCCallsInvoked" inType="win:UInt64"/>
+      <data name="StopGCCallsFailed" inType="win:UInt64"/>
+      <data name="FullSMRBandClusterAllocations" inType="win:UInt64"/>
+      <data name="SharedSMRBandClusterAllocations" inType="win:UInt64"/>
+      <data name="GCReadLatencyTotal" inType="win:UInt64"/>
+      <data name="GCReadLatencyAvg" inType="win:UInt64"/>
+      <data name="GCReadLatencyMax" inType="win:UInt64"/>
+      <data name="GCTotalReadIOs" inType="win:UInt64"/>
+      <data name="GCWriteLatencyTotal" inType="win:UInt64"/>
+      <data name="GCWriteLatencyAvg" inType="win:UInt64"/>
+      <data name="GCWriteLatencyMax" inType="win:UInt64"/>
+      <data name="GCTotalWriteIOs" inType="win:UInt64"/>
+      <data name="DiskFullRequiresGC" inType="win:UInt64"/>
+      <data name="SMRZoneFull" inType="win:UInt64"/>
+      <data name="CMRZoneFull" inType="win:UInt64"/>
+      <data name="InvalidSectorErrors" inType="win:UInt64"/>
+      <data name="IoDeviceErrors" inType="win:UInt64"/>
+      <data name="IoUnalignedWrite" inType="win:UInt64"/>
+      <data name="WriteErrors" inType="win:UInt64"/>
+      <data name="ReadErrors" inType="win:UInt64"/>
+      <data name="SMRWriteHeadRequeries" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0200Args_V1">
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="EventGroupTag" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotCreateOperationDurationMicrosSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotCreateOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotListOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotListOperationDurationMicrosSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotListOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotQueryDeltasOperationDurationMicrosSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotQueryDeltasOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotRevertOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotRevertOperationDurationMicrosSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotRevertOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCount" inType="win:UInt64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationMaxDurationMicroSec" inType="win:UInt64"/>
+      <data name="StreamSnapshotErrorCount" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0201Args_V1">
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="EventGroupTag" inType="win:Int64"/>
+      <data name="BucketLabelsLength" inType="win:UInt16"/>
+      <data name="BucketLabels" inType="win:UnicodeString" length="BucketLabelsLength"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotCreateOperationLatencyBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotListOperationLatencyBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotRevertOperationLatencyBucket15" inType="win:Int64"/>
+     </template>
+     <template tid="task_0202Args_V1">
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="EventGroupTag" inType="win:Int64"/>
+      <data name="BucketLabelsLength" inType="win:UInt16"/>
+      <data name="BucketLabels" inType="win:UnicodeString" length="BucketLabelsLength"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotQueryDeltasOperationLatencyBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotSetShadowBTreeOperationLatencyBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationCountsBucket15" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket1" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket2" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket3" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket4" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket5" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket6" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket7" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket8" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket9" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket10" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket11" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket12" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket13" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket14" inType="win:Int64"/>
+      <data name="StreamSnapshotClearShadowBTreeOperationLatencyBucket15" inType="win:Int64"/>
+     </template>
+     <template tid="VolumedismountStartArgs_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32" map="StorageBusType"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="DismountReason" inType="win:AnsiString"/>
+      <data name="NumberOfDirtyMetadataPages" inType="win:Int64"/>
+      <data name="NumberOfDirtyTableListEntries" inType="win:Int32"/>
+     </template>
+     <template tid="VolumedismountSuspendArgs_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+     </template>
+     <template tid="VolumedismountResumeArgs_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="DismountNotificationDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountNotificationDurationMs" inType="win:UInt64"/>
+     </template>
+     <template tid="VolumedismountStopArgs_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="DismountReason" inType="win:AnsiString"/>
+      <data name="DismountNotificationDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountNotificationDurationMs" inType="win:UInt64"/>
+      <data name="DismountDurationStr" inType="win:UnicodeString"/>
+      <data name="DismountDurationMs" inType="win:UInt64"/>
+      <data name="NumberOfDirtyMetadataPagesOnDismountBegin" inType="win:Int64"/>
+      <data name="NumberOfDirtyTableListEntriesOnDismountBegin" inType="win:Int32"/>
+      <data name="PagesDirtiedDuringDismount" inType="win:Int64"/>
+     </template>
+     <template tid="VolumedismountStop304Args_V1">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="FailureStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_04Args_V2">
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="VendorIdLength" inType="win:UInt16"/>
+      <data name="VendorId" inType="win:UnicodeString" length="VendorIdLength"/>
+      <data name="ProductIdLength" inType="win:UInt16"/>
+      <data name="ProductId" inType="win:UnicodeString" length="ProductIdLength"/>
+      <data name="ProductRevisionLength" inType="win:UInt16"/>
+      <data name="ProductRevision" inType="win:UnicodeString" length="ProductRevisionLength"/>
+      <data name="DeviceSerialNumberLength" inType="win:UInt16"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString" length="DeviceSerialNumberLength"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="ClusterSizeBytes" inType="win:UInt32"/>
+      <data name="VolumeSizeBytes" inType="win:UInt64"/>
+      <data name="FreeSpaceBytes" inType="win:UInt64"/>
+      <data name="RedoLogLcnCount" inType="win:UInt64"/>
+      <data name="LogicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="PhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="ActualPhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="MajorVersion" inType="win:UInt8"/>
+      <data name="MinorVersion" inType="win:UInt8"/>
+      <data name="NumberOfPhysicalCopies" inType="win:UInt32"/>
+      <data name="NumberOfLogicalCopies" inType="win:UInt32"/>
+      <data name="VolumeIdForHeat" inType="win:GUID"/>
+      <data name="RootIntegrityStream" inType="win:UInt16"/>
+      <data name="VolumeState" inType="win:HexInt32"/>
+      <data name="UsnSize" inType="win:UInt64"/>
+      <data name="SecurityDescStreamSize" inType="win:UInt64"/>
+      <data name="DurationMicroSec" inType="win:UInt64"/>
+      <data name="DebugVersion" inType="win:Boolean"/>
+      <data name="DebuggerEnabled" inType="win:Boolean"/>
+      <data name="SsdTierSize" inType="win:UInt64"/>
+      <data name="ReadCacheSize" inType="win:UInt64"/>
+      <data name="ReadCacheLineSize" inType="win:UInt32"/>
+      <data name="ContainerRotationEnabled" inType="win:Boolean"/>
+      <data name="DeleteNotificationDisabled" inType="win:Boolean"/>
+      <data name="VcbState" inType="win:HexInt32"/>
+      <data name="VcbState2" inType="win:HexInt32"/>
+      <data name="CheckpointVirtualClock" inType="win:UInt64"/>
+      <data name="LastWriteTime" inType="win:FILETIME"/>
+      <data name="BootSectorFlags" inType="win:HexInt32"/>
+      <data name="RefsDataFlags" inType="win:HexInt32"/>
+      <data name="LastShutdownWasDirty" inType="win:Boolean"/>
+      <data name="StreamsSupported" inType="win:Boolean"/>
+      <data name="UserStreamsAvailable" inType="win:UInt32"/>
+      <data name="SizeOfRandomlyWriteableTier" inType="win:UInt64"/>
+      <data name="SizeOfSmrTier" inType="win:UInt64"/>
+      <data name="LogRestartStartLsn" inType="win:UInt64"/>
+      <data name="LogRestartLastLsn" inType="win:UInt64"/>
+      <data name="LogRestartDurationMicroSec" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Context" inType="win:Pointer"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="StackCount" inType="win:UInt32"/>
+      <data name="Stack" inType="win:Pointer" count="StackCount"/>
+      <data name="SourceLine" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0142Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0145Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ReadWriteLatencyBucket1" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket2" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket3" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket4" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket5" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket6" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket7" inType="win:Int64"/>
+      <data name="TrimLatencyBucket1" inType="win:Int64"/>
+      <data name="TrimLatencyBucket2" inType="win:Int64"/>
+      <data name="TrimLatencyBucket3" inType="win:Int64"/>
+      <data name="TrimLatencyBucket4" inType="win:Int64"/>
+      <data name="TrimLatencyBucket5" inType="win:Int64"/>
+      <data name="TrimLatencyBucket6" inType="win:Int64"/>
+      <data name="TrimLatencyBucket7" inType="win:Int64"/>
+      <data name="FlushLatencyBucket1" inType="win:Int64"/>
+      <data name="FlushLatencyBucket2" inType="win:Int64"/>
+      <data name="FlushLatencyBucket3" inType="win:Int64"/>
+      <data name="FlushLatencyBucket4" inType="win:Int64"/>
+      <data name="FlushLatencyBucket5" inType="win:Int64"/>
+      <data name="FlushLatencyBucket6" inType="win:Int64"/>
+      <data name="FlushLatencyBucket7" inType="win:Int64"/>
+     </template>
+     <template tid="task_0146Args_V2">
+      <data name="Version" inType="win:UInt32"/>
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ReadWriteLatencyBucket1" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket2" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket3" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket4" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket5" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket6" inType="win:Int64"/>
+      <data name="ReadWriteLatencyBucket7" inType="win:Int64"/>
+      <data name="TrimLatencyBucket1" inType="win:Int64"/>
+      <data name="TrimLatencyBucket2" inType="win:Int64"/>
+      <data name="TrimLatencyBucket3" inType="win:Int64"/>
+      <data name="TrimLatencyBucket4" inType="win:Int64"/>
+      <data name="TrimLatencyBucket5" inType="win:Int64"/>
+      <data name="TrimLatencyBucket6" inType="win:Int64"/>
+      <data name="TrimLatencyBucket7" inType="win:Int64"/>
+      <data name="FlushLatencyBucket1" inType="win:Int64"/>
+      <data name="FlushLatencyBucket2" inType="win:Int64"/>
+      <data name="FlushLatencyBucket3" inType="win:Int64"/>
+      <data name="FlushLatencyBucket4" inType="win:Int64"/>
+      <data name="FlushLatencyBucket5" inType="win:Int64"/>
+      <data name="FlushLatencyBucket6" inType="win:Int64"/>
+      <data name="FlushLatencyBucket7" inType="win:Int64"/>
+      <data name="HighIoLatencyCount" inType="win:UInt32"/>
+      <data name="IntervalDurationUs" inType="win:Int64"/>
+      <data name="NCReadIOCount" inType="win:UInt64"/>
+      <data name="NCReadTotalBytes" inType="win:UInt64"/>
+      <data name="NCReadAvgLatencyNs" inType="win:UInt64"/>
+      <data name="NCWriteIOCount" inType="win:UInt64"/>
+      <data name="NCWriteTotalBytes" inType="win:UInt64"/>
+      <data name="NCWriteAvgLatencyNs" inType="win:UInt64"/>
+      <data name="FileFlushCount" inType="win:UInt64"/>
+      <data name="FileFlushAvgLatencyNs" inType="win:UInt64"/>
+      <data name="DirectoryFlushCount" inType="win:UInt64"/>
+      <data name="DirectoryFlushAvgLatencyNs" inType="win:UInt64"/>
+      <data name="VolumeFlushCount" inType="win:UInt64"/>
+      <data name="VolumeFlushAvgLatencyNs" inType="win:UInt64"/>
+      <data name="FileLevelTrimCount" inType="win:UInt64"/>
+      <data name="FileLevelTrimTotalBytes" inType="win:UInt64"/>
+      <data name="FileLevelTrimExtentsCount" inType="win:UInt64"/>
+      <data name="FileLevelTrimAvgLatencyNs" inType="win:UInt64"/>
+      <data name="VolumeTrimCount" inType="win:UInt64"/>
+      <data name="VolumeTrimTotalBytes" inType="win:UInt64"/>
+      <data name="VolumeTrimExtentsCount" inType="win:UInt64"/>
+      <data name="VolumeTrimAvgLatencyNs" inType="win:UInt64"/>
+      <data name="IoBucketsCount" inType="win:UInt8"/>
+      <data name="TotalBytesBucketsCount" inType="win:UInt8"/>
+      <data name="ExtentsBucketsCount" inType="win:UInt8"/>
+      <data name="IoCount" inType="win:UInt64" count="IoBucketsCount"/>
+      <data name="TotalLatencyUs" inType="win:UInt64" count="IoBucketsCount"/>
+      <data name="TotalBytes" inType="win:UInt64" count="TotalBytesBucketsCount"/>
+      <data name="TrimExtentsCount" inType="win:UInt64" count="ExtentsBucketsCount"/>
+      <data name="IoTypeIndex" inType="win:UInt16" count="IoBucketsCount"/>
+     </template>
+     <template tid="task_0147Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="LatencyMs" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0148Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UInt32"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+      <data name="FailureStatus" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0149Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="SecondsElapsed" inType="win:UInt32"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="FailedWriteCount" inType="win:UInt32"/>
+      <data name="FailedReadCount" inType="win:UInt32"/>
+      <data name="BadClusterHotfixCount" inType="win:UInt32"/>
+      <data name="ValuesCount" inType="win:UInt32"/>
+      <data name="HighLatencyArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="FailedWriteArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="FailedReadArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="BadClusterHotfixArray" inType="win:UInt32" count="ValuesCount"/>
+      <data name="StatusArray" inType="win:HexInt32" count="ValuesCount"/>
+      <data name="TableIndexArray" inType="win:UInt32" count="ValuesCount"/>
+     </template>
+     <template tid="task_0150Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="SampleDuration" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierMin" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierMax" inType="win:UInt64"/>
+      <data name="FreeSpaceInRandomlyWriteableTierAvg" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierMin" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierMax" inType="win:UInt64"/>
+      <data name="FreeSpaceInSMRTierAvg" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierMin" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierMax" inType="win:UInt64"/>
+      <data name="UsableFreeSpaceInSMRTierAvg" inType="win:UInt64"/>
+      <data name="WriteSerializationAbortedWrites" inType="win:UInt64"/>
+      <data name="WriteSerializationEvents" inType="win:UInt64"/>
+      <data name="WriteSerializationLatencyAvg" inType="win:UInt64"/>
+      <data name="WriteSerializationLatencyMax" inType="win:UInt64"/>
+      <data name="WriteSerializationBlockedEvents" inType="win:UInt64"/>
+      <data name="WriteSerializationBlockedLatencyAvg" inType="win:UInt64"/>
+      <data name="StartGCCallsInvoked" inType="win:UInt64"/>
+      <data name="StartGCCallsFailed" inType="win:UInt64"/>
+      <data name="StartGCFullSpeedCallsInvoked" inType="win:UInt64"/>
+      <data name="StartGCFullSpeedCallsFailed" inType="win:UInt64"/>
+      <data name="PauseGCCallsInvoked" inType="win:UInt64"/>
+      <data name="PauseGCCallsFailed" inType="win:UInt64"/>
+      <data name="StopGCCallsInvoked" inType="win:UInt64"/>
+      <data name="StopGCCallsFailed" inType="win:UInt64"/>
+      <data name="FullSMRBandClusterAllocations" inType="win:UInt64"/>
+      <data name="SharedSMRBandClusterAllocations" inType="win:UInt64"/>
+      <data name="GCReadLatencyTotal" inType="win:UInt64"/>
+      <data name="GCReadLatencyAvg" inType="win:UInt64"/>
+      <data name="GCReadLatencyMax" inType="win:UInt64"/>
+      <data name="GCTotalReadIOs" inType="win:UInt64"/>
+      <data name="GCWriteLatencyTotal" inType="win:UInt64"/>
+      <data name="GCWriteLatencyAvg" inType="win:UInt64"/>
+      <data name="GCWriteLatencyMax" inType="win:UInt64"/>
+      <data name="GCTotalWriteIOs" inType="win:UInt64"/>
+      <data name="DiskFullRequiresGC" inType="win:UInt64"/>
+      <data name="SMRZoneFull" inType="win:UInt64"/>
+      <data name="CMRZoneFull" inType="win:UInt64"/>
+      <data name="InvalidSectorErrors" inType="win:UInt64"/>
+      <data name="IoDeviceErrors" inType="win:UInt64"/>
+      <data name="IoUnalignedWrite" inType="win:UInt64"/>
+      <data name="WriteErrors" inType="win:UInt64"/>
+      <data name="ReadErrors" inType="win:UInt64"/>
+      <data name="SMRWriteHeadRequeries" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V2">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+     </template>
+     <template tid="task_04Args_V3">
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="VolumeGuid" inType="win:GUID"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="VendorIdLength" inType="win:UInt16"/>
+      <data name="VendorId" inType="win:UnicodeString" length="VendorIdLength"/>
+      <data name="ProductIdLength" inType="win:UInt16"/>
+      <data name="ProductId" inType="win:UnicodeString" length="ProductIdLength"/>
+      <data name="ProductRevisionLength" inType="win:UInt16"/>
+      <data name="ProductRevision" inType="win:UnicodeString" length="ProductRevisionLength"/>
+      <data name="DeviceSerialNumberLength" inType="win:UInt16"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString" length="DeviceSerialNumberLength"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="ClusterSizeBytes" inType="win:UInt32"/>
+      <data name="VolumeSizeBytes" inType="win:UInt64"/>
+      <data name="FreeSpaceBytes" inType="win:UInt64"/>
+      <data name="RedoLogLcnCount" inType="win:UInt64"/>
+      <data name="LogicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="PhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="ActualPhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="MajorVersion" inType="win:UInt8"/>
+      <data name="MinorVersion" inType="win:UInt8"/>
+      <data name="NumberOfPhysicalCopies" inType="win:UInt32"/>
+      <data name="NumberOfLogicalCopies" inType="win:UInt32"/>
+      <data name="VolumeIdForHeat" inType="win:GUID"/>
+      <data name="RootIntegrityStream" inType="win:UInt16"/>
+      <data name="VolumeState" inType="win:HexInt32"/>
+      <data name="UsnSize" inType="win:UInt64"/>
+      <data name="SecurityDescStreamSize" inType="win:UInt64"/>
+      <data name="DurationMicroSec" inType="win:UInt64"/>
+      <data name="DebugVersion" inType="win:Boolean"/>
+      <data name="DebuggerEnabled" inType="win:Boolean"/>
+      <data name="SsdTierSize" inType="win:UInt64"/>
+      <data name="ReadCacheSize" inType="win:UInt64"/>
+      <data name="ReadCacheLineSize" inType="win:UInt32"/>
+      <data name="ContainerRotationEnabled" inType="win:Boolean"/>
+      <data name="DeleteNotificationDisabled" inType="win:Boolean"/>
+      <data name="VcbState" inType="win:HexInt32"/>
+      <data name="VcbState2" inType="win:HexInt32"/>
+      <data name="CheckpointVirtualClock" inType="win:UInt64"/>
+      <data name="LastWriteTime" inType="win:FILETIME"/>
+      <data name="BootSectorFlags" inType="win:HexInt32"/>
+      <data name="RefsDataFlags" inType="win:HexInt32"/>
+      <data name="LastShutdownWasDirty" inType="win:Boolean"/>
+      <data name="StreamsSupported" inType="win:Boolean"/>
+      <data name="UserStreamsAvailable" inType="win:UInt32"/>
+      <data name="SizeOfRandomlyWriteableTier" inType="win:UInt64"/>
+      <data name="SizeOfSmrTier" inType="win:UInt64"/>
+      <data name="LogRestartStartLsn" inType="win:UInt64"/>
+      <data name="LogRestartLastLsn" inType="win:UInt64"/>
+      <data name="LogRestartDurationMicroSec" inType="win:UInt64"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0142Args_V3">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+      <data name="MappedClusters" inType="win:Int64"/>
+      <data name="MappedSpaceStr" inType="win:AnsiString"/>
+      <data name="AvailableMappedClusters" inType="win:Int64"/>
+      <data name="AvailableMappedSpaceStr" inType="win:AnsiString"/>
+      <data name="SlabSizeInBytes" inType="win:UInt64"/>
+      <data name="SlabSizeStr" inType="win:AnsiString"/>
+      <data name="SlabOffsetDeltaInBytes" inType="win:UInt64"/>
+      <data name="SlabsMapped" inType="win:UInt32"/>
+      <data name="SlabsMappedDelta" inType="win:Int32"/>
+      <data name="TotalSlabsCount" inType="win:UInt32"/>
+      <data name="MapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapCount" inType="win:Int32"/>
+      <data name="MapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapFailureCount" inType="win:Int32"/>
+      <data name="MappedBytesSinceMount" inType="win:Int64"/>
+      <data name="MappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalMappedBytes" inType="win:Int64"/>
+      <data name="IntervalMappedBytesStr" inType="win:AnsiString"/>
+      <data name="UnmapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapCount" inType="win:Int32"/>
+      <data name="UnmapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapFailureCount" inType="win:Int32"/>
+      <data name="UnmappedBytesSinceMount" inType="win:Int64"/>
+      <data name="UnmappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalUnmappedBytes" inType="win:Int64"/>
+      <data name="IntervalUnmappedBytesStr" inType="win:AnsiString"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0147Args_V3">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt32"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="LatencyMs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V3">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalExtents" inType="win:UInt64"/>
+      <data name="TotalExtents0" inType="win:UInt64"/>
+      <data name="TotalExtents1" inType="win:UInt64"/>
+      <data name="TotalExtents2" inType="win:UInt64"/>
+      <data name="TotalExtents3" inType="win:UInt64"/>
+      <data name="TotalExtents4" inType="win:UInt64"/>
+      <data name="TotalExtents5" inType="win:UInt64"/>
+      <data name="TotalExtents6" inType="win:UInt64"/>
+      <data name="TotalExtents7" inType="win:UInt64"/>
+      <data name="TotalExtents8" inType="win:UInt64"/>
+      <data name="TotalExtents9" inType="win:UInt64"/>
+      <data name="TotalExtents10" inType="win:UInt64"/>
+      <data name="TotalExtents11" inType="win:UInt64"/>
+     </template>
+     <template tid="task_04Args_V4">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ClusterSizeBytes" inType="win:UInt32"/>
+      <data name="VolumeSizeBytes" inType="win:UInt64"/>
+      <data name="FreeSpaceBytes" inType="win:UInt64"/>
+      <data name="RedoLogLcnCount" inType="win:UInt64"/>
+      <data name="LogicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="PhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="ActualPhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="MajorVersion" inType="win:UInt8"/>
+      <data name="MinorVersion" inType="win:UInt8"/>
+      <data name="NumberOfPhysicalCopies" inType="win:UInt32"/>
+      <data name="NumberOfLogicalCopies" inType="win:UInt32"/>
+      <data name="VolumeIdForHeat" inType="win:GUID"/>
+      <data name="RootIntegrityStream" inType="win:UInt16"/>
+      <data name="VolumeState" inType="win:HexInt32"/>
+      <data name="UsnSize" inType="win:UInt64"/>
+      <data name="SecurityDescStreamSize" inType="win:UInt64"/>
+      <data name="DurationMicroSec" inType="win:UInt64"/>
+      <data name="DebugVersion" inType="win:Boolean"/>
+      <data name="DebuggerEnabled" inType="win:Boolean"/>
+      <data name="SsdTierSize" inType="win:UInt64"/>
+      <data name="ReadCacheSize" inType="win:UInt64"/>
+      <data name="ReadCacheLineSize" inType="win:UInt32"/>
+      <data name="ContainerRotationEnabled" inType="win:Boolean"/>
+      <data name="DeleteNotificationDisabled" inType="win:Boolean"/>
+      <data name="VcbState" inType="win:HexInt32"/>
+      <data name="VcbState2" inType="win:HexInt32"/>
+      <data name="CheckpointVirtualClock" inType="win:UInt64"/>
+      <data name="LastWriteTime" inType="win:FILETIME"/>
+      <data name="BootSectorFlags" inType="win:HexInt32"/>
+      <data name="RefsDataFlags" inType="win:HexInt32"/>
+      <data name="LastShutdownWasDirty" inType="win:Boolean"/>
+      <data name="StreamsSupported" inType="win:Boolean"/>
+      <data name="UserStreamsAvailable" inType="win:UInt32"/>
+      <data name="SizeOfRandomlyWriteableTier" inType="win:UInt64"/>
+      <data name="SizeOfSmrTier" inType="win:UInt64"/>
+      <data name="LogRestartStartLsn" inType="win:UInt64"/>
+      <data name="LogRestartLastLsn" inType="win:UInt64"/>
+      <data name="LogRestartDurationMicroSec" inType="win:UInt64"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0142Args_V4">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0147Args_V4">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UnicodeString"/>
+      <data name="LatencyMs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V4">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyMs" inType="win:UInt64"/>
+      <data name="HighLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="TotalIoTimeNs" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_04Args_V5">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Vcb" inType="win:Pointer"/>
+      <data name="ClusterSizeBytes" inType="win:UInt32"/>
+      <data name="VolumeSizeBytes" inType="win:UInt64"/>
+      <data name="FreeSpaceBytes" inType="win:UInt64"/>
+      <data name="RedoLogLcnCount" inType="win:UInt64"/>
+      <data name="LogicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="PhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="ActualPhysicalSectorSizeBytes" inType="win:UInt32"/>
+      <data name="MajorVersion" inType="win:UInt8"/>
+      <data name="MinorVersion" inType="win:UInt8"/>
+      <data name="NumberOfPhysicalCopies" inType="win:UInt32"/>
+      <data name="NumberOfLogicalCopies" inType="win:UInt32"/>
+      <data name="VolumeIdForHeat" inType="win:GUID"/>
+      <data name="RootIntegrityStream" inType="win:UInt16"/>
+      <data name="VolumeState" inType="win:HexInt32"/>
+      <data name="UsnSize" inType="win:UInt64"/>
+      <data name="SecurityDescStreamSize" inType="win:UInt64"/>
+      <data name="DurationMicroSec" inType="win:UInt64"/>
+      <data name="DebugVersion" inType="win:Boolean"/>
+      <data name="DebuggerEnabled" inType="win:Boolean"/>
+      <data name="SsdTierSize" inType="win:UInt64"/>
+      <data name="ReadCacheSize" inType="win:UInt64"/>
+      <data name="ReadCacheLineSize" inType="win:UInt32"/>
+      <data name="ContainerRotationEnabled" inType="win:Boolean"/>
+      <data name="DeleteNotificationDisabled" inType="win:Boolean"/>
+      <data name="VcbState" inType="win:HexInt32"/>
+      <data name="VcbState2" inType="win:HexInt32"/>
+      <data name="CheckpointVirtualClock" inType="win:UInt64"/>
+      <data name="LastWriteTime" inType="win:FILETIME"/>
+      <data name="BootSectorFlags" inType="win:HexInt32"/>
+      <data name="RefsDataFlags" inType="win:HexInt32"/>
+      <data name="LastShutdownWasDirty" inType="win:Boolean"/>
+      <data name="StreamsSupported" inType="win:Boolean"/>
+      <data name="UserStreamsAvailable" inType="win:UInt32"/>
+      <data name="SizeOfRandomlyWriteableTier" inType="win:UInt64"/>
+      <data name="SizeOfSmrTier" inType="win:UInt64"/>
+      <data name="LogRestartStartLsn" inType="win:UInt64"/>
+      <data name="LogRestartLastLsn" inType="win:UInt64"/>
+      <data name="LogRestartDurationMicroSec" inType="win:UInt64"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0142Args_V5">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ElapsedSeconds" inType="win:UInt64"/>
+      <data name="AvailableClusters" inType="win:Int64"/>
+      <data name="AvailabeSpaceStr" inType="win:AnsiString"/>
+      <data name="ReservedClusters" inType="win:Int64"/>
+      <data name="ReservedSizeStr" inType="win:AnsiString"/>
+      <data name="MetadataTotalClusters" inType="win:Int64"/>
+      <data name="MetadataSizeStr" inType="win:AnsiString"/>
+      <data name="UsedClusters" inType="win:Int64"/>
+      <data name="UsedSizeStr" inType="win:AnsiString"/>
+      <data name="VolumeSizeInBytes" inType="win:Int64"/>
+      <data name="VolumeSizeStr" inType="win:AnsiString"/>
+      <data name="ClusterSize" inType="win:UInt32"/>
+      <data name="DedupEnabled" inType="win:Boolean"/>
+      <data name="WeakReferenceEnabled" inType="win:Boolean"/>
+      <data name="DirtyStateTrackingEnabled" inType="win:Boolean"/>
+      <data name="MappedClusters" inType="win:Int64"/>
+      <data name="MappedSpaceStr" inType="win:AnsiString"/>
+      <data name="AvailableMappedClusters" inType="win:Int64"/>
+      <data name="AvailableMappedSpaceStr" inType="win:AnsiString"/>
+      <data name="SlabSizeInBytes" inType="win:UInt64"/>
+      <data name="SlabSizeStr" inType="win:AnsiString"/>
+      <data name="SlabOffsetDeltaInBytes" inType="win:UInt64"/>
+      <data name="SlabsMapped" inType="win:UInt32"/>
+      <data name="SlabsMappedDelta" inType="win:Int32"/>
+      <data name="TotalSlabsCount" inType="win:UInt32"/>
+      <data name="MapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapCount" inType="win:Int32"/>
+      <data name="MapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalMapFailureCount" inType="win:Int32"/>
+      <data name="MappedBytesSinceMount" inType="win:Int64"/>
+      <data name="MappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalMappedBytes" inType="win:Int64"/>
+      <data name="IntervalMappedBytesStr" inType="win:AnsiString"/>
+      <data name="UnmapCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapCount" inType="win:Int32"/>
+      <data name="UnmapFailureCountSinceMount" inType="win:Int32"/>
+      <data name="IntervalUnmapFailureCount" inType="win:Int32"/>
+      <data name="UnmappedBytesSinceMount" inType="win:Int64"/>
+      <data name="UnmappedBytesSinceMountStr" inType="win:AnsiString"/>
+      <data name="IntervalUnmappedBytes" inType="win:Int64"/>
+      <data name="IntervalUnmappedBytesStr" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0147Args_V5">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="MaxLatencyMs" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ProcessName" inType="win:AnsiString"/>
+      <data name="FileNameLength" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="FileIdHigh" inType="win:HexInt64"/>
+      <data name="FileIdLow" inType="win:HexInt64"/>
+      <data name="IoType" inType="win:UnicodeString"/>
+      <data name="LatencyMs" inType="win:UInt64"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="FileOffset" inType="win:UInt64"/>
+      <data name="StartingLcn" inType="win:UInt64"/>
+      <data name="ClustersCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0170Args_V5">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyMs" inType="win:UInt64"/>
+      <data name="HighLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="TotalIoTimeNs" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V6">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="VolumeNameLength" inType="win:UInt16"/>
+      <data name="VolumeName" inType="win:UnicodeString" length="VolumeNameLength"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoType" inType="win:UInt16"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyMs" inType="win:UInt64"/>
+      <data name="HighLatencyStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyIoCount" inType="win:UInt32"/>
+      <data name="TotalIoCount" inType="win:UInt64"/>
+      <data name="TotalIoTimeNs" inType="win:UInt64"/>
+      <data name="AverageIops" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+      <data name="TotalExtents" inType="win:UInt64"/>
+      <data name="TotalExtents0" inType="win:UInt64"/>
+      <data name="TotalExtents1" inType="win:UInt64"/>
+      <data name="TotalExtents2" inType="win:UInt64"/>
+      <data name="TotalExtents3" inType="win:UInt64"/>
+      <data name="TotalExtents4" inType="win:UInt64"/>
+      <data name="TotalExtents5" inType="win:UInt64"/>
+      <data name="TotalExtents6" inType="win:UInt64"/>
+      <data name="TotalExtents7" inType="win:UInt64"/>
+      <data name="TotalExtents8" inType="win:UInt64"/>
+      <data name="TotalExtents9" inType="win:UInt64"/>
+      <data name="TotalExtents10" inType="win:UInt64"/>
+      <data name="TotalExtents11" inType="win:UInt64"/>
+      <data name="TotalExtents12" inType="win:UInt64"/>
+      <data name="TotalExtents13" inType="win:UInt64"/>
+      <data name="TotalExtents14" inType="win:UInt64"/>
+      <data name="TotalExtents15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V7">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V8">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V9">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+      <data name="TotalExtents" inType="win:UInt64"/>
+      <data name="ExtentsCountArrayLength" inType="win:UInt16"/>
+      <data name="ExtentsCountArray" inType="win:UInt64" count="ExtentsCountArrayLength"/>
+     </template>
+     <template tid="task_0170Args_V10">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V11">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0170Args_V12">
+      <data name="VolumeCorrelationId" inType="win:GUID"/>
+      <data name="MountStartTimeUtc" inType="win:FILETIME"/>
+      <data name="VolumeName" inType="win:UnicodeString"/>
+      <data name="IsBootVolume" inType="win:Boolean"/>
+      <data name="DevDriveState" inType="win:UInt32"/>
+      <data name="DeviceName" inType="win:UnicodeString"/>
+      <data name="VendorId" inType="win:UnicodeString"/>
+      <data name="ProductId" inType="win:UnicodeString"/>
+      <data name="ProductRevision" inType="win:UnicodeString"/>
+      <data name="DeviceSerialNumber" inType="win:UnicodeString"/>
+      <data name="BusType" inType="win:UInt32"/>
+      <data name="DeviceGuid" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:UInt32"/>
+      <data name="NativeNVMe" inType="win:Boolean"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="TierIndex" inType="win:UInt32"/>
+      <data name="SummaryId" inType="win:UInt64"/>
+      <data name="IoTypeStr" inType="win:UnicodeString"/>
+      <data name="IntervalDurationMs" inType="win:UInt64"/>
+      <data name="IntervalDurationStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyLevelMs" inType="win:UInt64"/>
+      <data name="HighLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="HighLatencyCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt64"/>
+      <data name="TotalTimeNs" inType="win:UInt64"/>
+      <data name="AverageOps" inType="win:UInt64"/>
+      <data name="AverageLatencyNs" inType="win:UInt64"/>
+      <data name="AverageLatencyStr" inType="win:UnicodeString"/>
+      <data name="AverageLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelNs" inType="win:UInt64"/>
+      <data name="MedianLatencyLevelStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyNs" inType="win:UInt64"/>
+      <data name="MaxLatencyStr" inType="win:UnicodeString"/>
+      <data name="MaxLatencyLevelNs" inType="win:UInt64"/>
+      <data name="LatencyBuckets" inType="win:UnicodeString"/>
+      <data name="IoCount0" inType="win:UInt64"/>
+      <data name="IoCount1" inType="win:UInt64"/>
+      <data name="IoCount2" inType="win:UInt64"/>
+      <data name="IoCount3" inType="win:UInt64"/>
+      <data name="IoCount4" inType="win:UInt64"/>
+      <data name="IoCount5" inType="win:UInt64"/>
+      <data name="IoCount6" inType="win:UInt64"/>
+      <data name="IoCount7" inType="win:UInt64"/>
+      <data name="IoCount8" inType="win:UInt64"/>
+      <data name="IoCount9" inType="win:UInt64"/>
+      <data name="IoCount10" inType="win:UInt64"/>
+      <data name="IoCount11" inType="win:UInt64"/>
+      <data name="IoCount12" inType="win:UInt64"/>
+      <data name="IoCount13" inType="win:UInt64"/>
+      <data name="IoCount14" inType="win:UInt64"/>
+      <data name="IoCount15" inType="win:UInt64"/>
+      <data name="TotalTimeNs0" inType="win:UInt64"/>
+      <data name="TotalTimeNs1" inType="win:UInt64"/>
+      <data name="TotalTimeNs2" inType="win:UInt64"/>
+      <data name="TotalTimeNs3" inType="win:UInt64"/>
+      <data name="TotalTimeNs4" inType="win:UInt64"/>
+      <data name="TotalTimeNs5" inType="win:UInt64"/>
+      <data name="TotalTimeNs6" inType="win:UInt64"/>
+      <data name="TotalTimeNs7" inType="win:UInt64"/>
+      <data name="TotalTimeNs8" inType="win:UInt64"/>
+      <data name="TotalTimeNs9" inType="win:UInt64"/>
+      <data name="TotalTimeNs10" inType="win:UInt64"/>
+      <data name="TotalTimeNs11" inType="win:UInt64"/>
+      <data name="TotalTimeNs12" inType="win:UInt64"/>
+      <data name="TotalTimeNs13" inType="win:UInt64"/>
+      <data name="TotalTimeNs14" inType="win:UInt64"/>
+      <data name="TotalTimeNs15" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="AverageBps" inType="win:UInt64"/>
+      <data name="TotalBytes0" inType="win:UInt64"/>
+      <data name="TotalBytes1" inType="win:UInt64"/>
+      <data name="TotalBytes2" inType="win:UInt64"/>
+      <data name="TotalBytes3" inType="win:UInt64"/>
+      <data name="TotalBytes4" inType="win:UInt64"/>
+      <data name="TotalBytes5" inType="win:UInt64"/>
+      <data name="TotalBytes6" inType="win:UInt64"/>
+      <data name="TotalBytes7" inType="win:UInt64"/>
+      <data name="TotalBytes8" inType="win:UInt64"/>
+      <data name="TotalBytes9" inType="win:UInt64"/>
+      <data name="TotalBytes10" inType="win:UInt64"/>
+      <data name="TotalBytes11" inType="win:UInt64"/>
+      <data name="TotalBytes12" inType="win:UInt64"/>
+      <data name="TotalBytes13" inType="win:UInt64"/>
+      <data name="TotalBytes14" inType="win:UInt64"/>
+      <data name="TotalBytes15" inType="win:UInt64"/>
+      <data name="TotalExtents" inType="win:UInt64"/>
+      <data name="ExtentsCountArrayLength" inType="win:UInt16"/>
+      <data name="ExtentsCountArray" inType="win:UInt64" count="ExtentsCountArrayLength"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_VolumeMount" value="VolumeMount"/>
+    <string id="keyword_VolumeFillRatio" value="VolumeFillRatio"/>
+    <string id="keyword_VolumeDismount" value="VolumeDismount"/>
+    <string id="keyword_Statistics" value="Statistics"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Volumedismount" value="Volumedismount"/>
+    <string id="map_IrpMajorFunctionread" value="read"/>
+    <string id="map_IrpMajorFunctionwrite" value="write"/>
+    <string id="map_DevDriveStateNot a developer volume" value="Not a developer volume"/>
+    <string id="map_DevDriveStateFormatted as a developer volume but not trusted on this machine" value="Formatted as a developer volume but not trusted on this machine"/>
+    <string id="map_DevDriveStateA trusted developer volume" value="A trusted developer volume"/>
+    <string id="map_StorageBusTypeUnknown" value="Unknown"/>
+    <string id="map_StorageBusTypeSCSI" value="SCSI"/>
+    <string id="map_StorageBusTypeATAPI" value="ATAPI"/>
+    <string id="map_StorageBusTypeATA" value="ATA"/>
+    <string id="map_StorageBusTypeIEEE 1394" value="IEEE 1394"/>
+    <string id="map_StorageBusTypeSSA" value="SSA"/>
+    <string id="map_StorageBusTypeFibre channel" value="Fibre channel"/>
+    <string id="map_StorageBusTypeUSB" value="USB"/>
+    <string id="map_StorageBusTypeRAID" value="RAID"/>
+    <string id="map_StorageBusTypeiSCSI" value="iSCSI"/>
+    <string id="map_StorageBusTypeSAS" value="SAS"/>
+    <string id="map_StorageBusTypeSATA" value="SATA"/>
+    <string id="map_StorageBusTypeSD" value="SD"/>
+    <string id="map_StorageBusTypeMMC" value="MMC"/>
+    <string id="map_StorageBusTypeVirtual" value="Virtual"/>
+    <string id="map_StorageBusTypeFile backed Virtual" value="File backed Virtual"/>
+    <string id="map_StorageBusTypeStorage Spaces" value="Storage Spaces"/>
+    <string id="map_StorageBusTypeNVMe" value="NVMe"/>
+    <string id="map_StorageBusTypeSCM" value="SCM"/>
+    <string id="map_StorageBusTypeUFS" value="UFS"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

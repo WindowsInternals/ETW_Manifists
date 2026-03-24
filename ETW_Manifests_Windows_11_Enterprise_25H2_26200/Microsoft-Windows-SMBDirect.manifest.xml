@@ -1,0 +1,275 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SMBDirect" guid="{db66ea65-b7bb-4ca9-8748-334cb5c32400}" resourceFileName="Microsoft-Windows-SMBDirect" messageFileName="Microsoft-Windows-SMBDirect" symbol="MicrosoftWindowsSMBDirect" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="NDK_OBJECT_TYPE_VALUE_MAP">
+      <map value="0x0" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPNone)"/>
+      <map value="0x1" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPAdapter)"/>
+      <map value="0x2" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPQueue Pair)"/>
+      <map value="0x3" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPCompletion Queue)"/>
+      <map value="0x4" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPMemory Region)"/>
+      <map value="0x5" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPMemory Window)"/>
+      <map value="0x6" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPProtection Domain)"/>
+      <map value="0x7" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPShared Endpoint)"/>
+      <map value="0x8" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPConnector)"/>
+      <map value="0x9" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPListener)"/>
+      <map value="0xa" message="$(string.map_NDK_OBJECT_TYPE_VALUE_MAPShared Receive Queue)"/>
+     </valueMap>
+     <valueMap name="CONNECTION_REFUSAL_REASON_VALUE_MAP">
+      <map value="0x0" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPNone)"/>
+      <map value="0x1" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPShutdown in progress)"/>
+      <map value="0x2" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPListener closing)"/>
+      <map value="0x3" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPAccept backlog limit exceeded)"/>
+      <map value="0x4" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPInsufficient server resources)"/>
+      <map value="0x5" message="$(string.map_CONNECTION_REFUSAL_REASON_VALUE_MAPApplication refused connection)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="0" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="1" symbol="task_01" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Error" template="task_0100Args"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" template="task_0102Args"/>
+     <event value="150" symbol="task_0150" version="0" task="task_0" level="win:Warning" template="task_0150Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Informational" template="task_0200Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Warning" template="task_0201Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Error" template="task_0202Args"/>
+     <event value="300" symbol="task_0300" version="0" task="task_0" level="win:Critical" template="task_0300Args"/>
+     <event value="301" symbol="task_0301" version="0" task="task_0" level="win:Critical" template="task_0301Args"/>
+     <event value="302" symbol="task_0302" version="0" task="task_0" level="win:Warning" template="task_0302Args"/>
+     <event value="303" symbol="task_0303" version="0" task="task_0" level="win:Critical" template="task_0303Args"/>
+     <event value="304" symbol="task_0304" version="0" task="task_0" level="win:Warning" template="task_0304Args"/>
+     <event value="5000" symbol="task_05000" version="0" task="task_0" level="win:Informational" template="task_05000Args"/>
+     <event value="5002" symbol="task_05002" version="0" task="task_0" level="win:Informational" template="task_05002Args"/>
+     <event value="5003" symbol="task_05003" version="0" task="task_0" level="win:Critical" template="task_05003Args"/>
+     <event value="5004" symbol="task_05004" version="0" task="task_0" level="win:Error" template="task_05004Args"/>
+     <event value="5005" symbol="task_05005" version="0" task="task_0" level="win:Error" template="task_05005Args"/>
+     <event value="5006" symbol="task_05006" version="0" task="task_0" level="win:Error" template="task_05006Args"/>
+     <event value="5007" symbol="task_05007" version="0" task="task_0" level="win:Error" template="task_05006Args"/>
+     <event value="5008" symbol="task_05008" version="0" task="task_0" level="win:Warning" template="task_05006Args"/>
+     <event value="5009" symbol="task_05009" version="0" task="task_0" level="win:Warning" template="task_05006Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="BuildMajor" inType="win:UInt32"/>
+      <data name="BuildMinor" inType="win:UInt32"/>
+      <data name="ProductMajor" inType="win:UInt32"/>
+      <data name="ProductMinor" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0100Args">
+      <data name="RegistryKeyName" inType="win:UnicodeString"/>
+      <data name="ParamName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="Value" inType="win:UInt64"/>
+      <data name="IsDefault" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0102Args">
+      <data name="Name" inType="win:UnicodeString"/>
+      <data name="ValueSize" inType="win:UInt32"/>
+      <data name="Value" inType="win:Binary" length="ValueSize"/>
+      <data name="IsDefault" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0150Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="ParamName" inType="win:UnicodeString"/>
+      <data name="ConfiguredValue" inType="win:UInt64"/>
+      <data name="MinSupportedValue" inType="win:UInt64"/>
+      <data name="MaxSupportedValue" inType="win:UInt64"/>
+      <data name="SelectedValue" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0200Args">
+      <data name="NodeNumber" inType="win:UInt32"/>
+      <data name="GroupNumber" inType="win:UInt32"/>
+      <data name="ProcessorMask" inType="win:UInt64"/>
+      <data name="FirstProcessorNumber" inType="win:UInt32"/>
+      <data name="LastProcessorNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0201Args">
+      <data name="NodeNumber" inType="win:UInt32"/>
+      <data name="BaseAffinityNode" inType="win:UInt32"/>
+      <data name="MaxAffinityNode" inType="win:UInt32"/>
+      <data name="BaseAffinityProcessor" inType="win:UInt32"/>
+      <data name="MaxAffinityProcessor" inType="win:UInt32"/>
+      <data name="ProcessorAffinityMaskSize" inType="win:UInt32"/>
+      <data name="ProcessorAffinityMask" inType="win:Binary" length="ProcessorAffinityMaskSize"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="BaseAffinityNode" inType="win:UInt32"/>
+      <data name="MaxAffinityNode" inType="win:UInt32"/>
+      <data name="BaseAffinityProcessor" inType="win:UInt32"/>
+      <data name="MaxAffinityProcessor" inType="win:UInt32"/>
+      <data name="ProcessorAffinityMaskSize" inType="win:UInt32"/>
+      <data name="ProcessorAffinityMask" inType="win:Binary" length="ProcessorAffinityMaskSize"/>
+     </template>
+     <template tid="task_0300Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="AdapterNdkVersionMajor" inType="win:UInt16"/>
+      <data name="AdapterNdkVersionMinor" inType="win:UInt16"/>
+      <data name="MinSupportedNdkVersionMajor" inType="win:UInt16"/>
+      <data name="MinSupportedNdkVersionMinor" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0301Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="NdkLimitName" inType="win:UnicodeString"/>
+      <data name="NdkLimitValue" inType="win:UInt64"/>
+      <data name="MinSupportedNdkLimitValue" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0302Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="RdmaObjectType" inType="win:UInt32" map="NDK_OBJECT_TYPE_VALUE_MAP"/>
+     </template>
+     <template tid="task_0303Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0304Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="ElapsedUsecs" inType="win:UInt64"/>
+      <data name="ApiName" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_05000Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="NdkMajorVer" inType="win:UInt16"/>
+      <data name="NdkMinorVer" inType="win:UInt16"/>
+      <data name="EffectiveNdkMajorVer" inType="win:UInt16"/>
+      <data name="EffectiveNdkMinorVer" inType="win:UInt16"/>
+      <data name="VendorId" inType="win:HexInt32"/>
+      <data name="DeviceId" inType="win:HexInt32"/>
+      <data name="MaxRegistrationSize" inType="win:UInt64"/>
+      <data name="MaxWindowSize" inType="win:UInt64"/>
+      <data name="FrmrPageCount" inType="win:UInt32"/>
+      <data name="MaxInitiatorRequestSge" inType="win:UInt32"/>
+      <data name="MaxEffectiveInitiatorRequestSge" inType="win:UInt32"/>
+      <data name="MaxReceiveRequestSge" inType="win:UInt32"/>
+      <data name="MaxEffectiveReceiveRequestSge" inType="win:UInt32"/>
+      <data name="MaxReadRequestSge" inType="win:UInt32"/>
+      <data name="MaxEffectiveReadRequestSge" inType="win:UInt32"/>
+      <data name="MaxTransferLength" inType="win:UInt32"/>
+      <data name="MaxEffectiveSendSize" inType="win:UInt32"/>
+      <data name="MaxEffectiveReceiveSize" inType="win:UInt32"/>
+      <data name="MaxInlineDataSize" inType="win:UInt32"/>
+      <data name="MaxInboundReadLimit" inType="win:UInt32"/>
+      <data name="MaxOutboundReadLimit" inType="win:UInt32"/>
+      <data name="MaxReceiveQueueDepth" inType="win:UInt32"/>
+      <data name="MaxEffectiveReceiveQueueDepth" inType="win:UInt32"/>
+      <data name="MaxInitiatorQueueDepth" inType="win:UInt32"/>
+      <data name="MaxEffectiveInitiatorQueueDepth" inType="win:UInt32"/>
+      <data name="MaxSrqDepth" inType="win:UInt32"/>
+      <data name="MaxCqDepth" inType="win:UInt32"/>
+      <data name="LargeRequestThreshold" inType="win:UInt32"/>
+      <data name="MaxCallerData" inType="win:UInt32"/>
+      <data name="MaxCalleeData" inType="win:UInt32"/>
+      <data name="AdapterFlags" inType="win:HexInt32"/>
+      <data name="InOrderDma" inType="win:Boolean"/>
+      <data name="RdmaReadSinkRequired" inType="win:Boolean"/>
+      <data name="CqInterruptModeration" inType="win:Boolean"/>
+      <data name="MultiEngine" inType="win:Boolean"/>
+      <data name="ReadLocalInvalidate" inType="win:Boolean"/>
+      <data name="CqResize" inType="win:Boolean"/>
+      <data name="LoopbackConnections" inType="win:Boolean"/>
+     </template>
+     <template tid="task_05002Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="LocalNetAddressSize" inType="win:UInt32"/>
+      <data name="LocalNetAddress" inType="win:Binary" length="LocalNetAddressSize"/>
+      <data name="RemoteNetAddressSize" inType="win:UInt32"/>
+      <data name="RemoteNetAddress" inType="win:Binary" length="RemoteNetAddressSize"/>
+      <data name="ApplicationInitiated" inType="win:Boolean"/>
+      <data name="TimedOut" inType="win:Boolean"/>
+     </template>
+     <template tid="task_05003Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="LocalNetworkAddressSize" inType="win:UInt32"/>
+      <data name="LocalNetAddress" inType="win:Binary" length="LocalNetworkAddressSize"/>
+      <data name="RemoteNetworkAddressSize" inType="win:UInt32"/>
+      <data name="RemoteNetAddress" inType="win:Binary" length="RemoteNetworkAddressSize"/>
+      <data name="ViolationType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_05004Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="LocalNetAddressSize" inType="win:UInt32"/>
+      <data name="LocalNetAddress" inType="win:Binary" length="LocalNetAddressSize"/>
+      <data name="RemoteNetAddressSize" inType="win:UInt32"/>
+      <data name="RemoteNetAddress" inType="win:Binary" length="RemoteNetAddressSize"/>
+      <data name="NdkConnectStatus" inType="win:HexInt32"/>
+      <data name="NdkCompleteConnectStatus" inType="win:HexInt32"/>
+      <data name="NdkReceiveStatus" inType="win:HexInt32"/>
+      <data name="NdkSendStatus" inType="win:HexInt32"/>
+      <data name="NegotiateStatus" inType="win:HexInt32"/>
+      <data name="TimedOut" inType="win:UInt8"/>
+      <data name="RdmaObjectCreationFailureType" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_05005Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="LocalNetAddressSize" inType="win:UInt32"/>
+      <data name="LocalNetAddress" inType="win:Binary" length="LocalNetAddressSize"/>
+      <data name="RemoteNetAddressSize" inType="win:UInt32"/>
+      <data name="RemoteNetAddress" inType="win:Binary" length="RemoteNetAddressSize"/>
+      <data name="NdkAcceptStatus" inType="win:HexInt32"/>
+      <data name="NdkReceiveStatus" inType="win:HexInt32"/>
+      <data name="NdkSendStatus" inType="win:HexInt32"/>
+      <data name="NegotiateStatus" inType="win:HexInt32"/>
+      <data name="TimedOut" inType="win:UInt8"/>
+      <data name="RefusalReason" inType="win:UInt32" map="CONNECTION_REFUSAL_REASON_VALUE_MAP"/>
+      <data name="RdmaObjectCreationFailureType" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_05006Args">
+      <data name="AdapterIfIndex" inType="win:UInt32"/>
+      <data name="SocketId" inType="win:GUID"/>
+      <data name="LocalNetAddressSize" inType="win:UInt32"/>
+      <data name="LocalNetAddress" inType="win:Binary" length="LocalNetAddressSize"/>
+      <data name="RemoteNetAddressSize" inType="win:UInt32"/>
+      <data name="RemoteNetAddress" inType="win:Binary" length="RemoteNetAddressSize"/>
+      <data name="DeadlineInMs" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPNone" value="None"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPAdapter" value="Adapter"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPQueue Pair" value="Queue Pair"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPCompletion Queue" value="Completion Queue"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPMemory Region" value="Memory Region"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPMemory Window" value="Memory Window"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPProtection Domain" value="Protection Domain"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPShared Endpoint" value="Shared Endpoint"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPConnector" value="Connector"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPListener" value="Listener"/>
+    <string id="map_NDK_OBJECT_TYPE_VALUE_MAPShared Receive Queue" value="Shared Receive Queue"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPNone" value="None"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPShutdown in progress" value="Shutdown in progress"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPListener closing" value="Listener closing"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPAccept backlog limit exceeded" value="Accept backlog limit exceeded"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPInsufficient server resources" value="Insufficient server resources"/>
+    <string id="map_CONNECTION_REFUSAL_REASON_VALUE_MAPApplication refused connection" value="Application refused connection"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

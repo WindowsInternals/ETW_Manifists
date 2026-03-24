@@ -1,0 +1,166 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DeviceGuard" guid="{f717d024-f5b4-4f03-9ab9-331b2dc38ffb}" resourceFileName="Microsoft-Windows-DeviceGuard" messageFileName="Microsoft-Windows-DeviceGuard" symbol="MicrosoftWindowsDeviceGuard" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+>
+      <opcodes>
+       <opcode name="DeviceGuard" message="$(string.opcode_task_0DeviceGuard)" value="102"/>
+       <opcode name="ManageCI" message="$(string.opcode_task_0ManageCI)" value="200"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <bitMap name="AuthorizationTokenErrors">
+      <map value="0x1" message="$(string.map_AuthorizationTokenErrorsUntrusted Signature)"/>
+      <map value="0x2" message="$(string.map_AuthorizationTokenErrorsCorrupt Signature)"/>
+      <map value="0x4" message="$(string.map_AuthorizationTokenErrorsParsing Failure)"/>
+      <map value="0x8" message="$(string.map_AuthorizationTokenErrorsSupplemental Error)"/>
+      <map value="0x100" message="$(string.map_AuthorizationTokenErrorsInvalid Publisher)"/>
+      <map value="0x200" message="$(string.map_AuthorizationTokenErrorsInvalid Base Policy Id)"/>
+      <map value="0x400" message="$(string.map_AuthorizationTokenErrorsInvalid Tenant ID)"/>
+      <map value="0x800" message="$(string.map_AuthorizationTokenErrorsInvalid Device Id)"/>
+      <map value="0x1000" message="$(string.map_AuthorizationTokenErrorsInvalid TBS Hashes)"/>
+     </bitMap>
+     <valueMap name="AuthorizationTypes">
+      <map value="0x1" message="$(string.map_AuthorizationTypesS)"/>
+      <map value="0x2" message="$(string.map_AuthorizationTypesE)"/>
+     </valueMap>
+     <valueMap name="VirtualizationBasedSecurityGroupPolicyConfigureTypes">
+      <map value="0x0" message="$(string.map_VirtualizationBasedSecurityGroupPolicyConfigureTypesDisabled)"/>
+      <map value="0x1" message="$(string.map_VirtualizationBasedSecurityGroupPolicyConfigureTypesEnabled)"/>
+      <map value="0x2" message="$(string.map_VirtualizationBasedSecurityGroupPolicyConfigureTypesEnabled Without Lock)"/>
+      <map value="0x3" message="$(string.map_VirtualizationBasedSecurityGroupPolicyConfigureTypesNot Configured)"/>
+     </valueMap>
+     <valueMap name="KernelShadowStacksGroupPolicyConfigureTypes">
+      <map value="0x0" message="$(string.map_KernelShadowStacksGroupPolicyConfigureTypesNot configured)"/>
+      <map value="0x1" message="$(string.map_KernelShadowStacksGroupPolicyConfigureTypesEnabled in enforcement mode)"/>
+      <map value="0x2" message="$(string.map_KernelShadowStacksGroupPolicyConfigureTypesEnabled in audit mode)"/>
+      <map value="0x3" message="$(string.map_KernelShadowStacksGroupPolicyConfigureTypesDisabled)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="6000" symbol="task_0ManageCI" version="0" task="task_0" opcode="ManageCI" level="win:Error" template="task_0ManageCIArgs"/>
+     <event value="6001" symbol="task_0ManageCI6001" version="0" task="task_0" opcode="ManageCI" level="win:Error" template="task_0ManageCI6001Args"/>
+     <event value="6002" symbol="task_0ManageCI6002" version="0" task="task_0" opcode="ManageCI" level="win:Informational" template="task_0ManageCI6002Args"/>
+     <event value="6003" symbol="task_0ManageCI6003" version="0" task="task_0" opcode="ManageCI" level="win:Informational" template="task_0ManageCI6003Args"/>
+     <event value="7000" symbol="task_0DeviceGuard" version="0" task="task_0" opcode="DeviceGuard" level="win:Informational" template="task_0DeviceGuardArgs"/>
+     <event value="7000" symbol="task_0DeviceGuard_V1" version="1" task="task_0" opcode="DeviceGuard" level="win:Informational" template="task_0DeviceGuardArgs_V1"/>
+     <event value="7000" symbol="task_0DeviceGuard_V2" version="2" task="task_0" opcode="DeviceGuard" level="win:Informational" template="task_0DeviceGuardArgs_V2"/>
+     <event value="7000" symbol="task_0DeviceGuard_V3" version="3" task="task_0" opcode="DeviceGuard" level="win:Informational" template="task_0DeviceGuardArgs_V3"/>
+     <event value="7001" symbol="task_0DeviceGuard7001" version="0" task="task_0" opcode="DeviceGuard" level="win:Error" template="task_0DeviceGuard7001Args"/>
+     <event value="7002" symbol="task_0DeviceGuard7002" version="0" task="task_0" opcode="DeviceGuard" level="win:Error" template="task_0DeviceGuard7001Args"/>
+     <event value="7010" symbol="task_0DeviceGuard7010" version="0" task="task_0" opcode="DeviceGuard" level="win:Informational" template="task_0DeviceGuard7010Args"/>
+     <event value="7011" symbol="task_0DeviceGuard7011" version="0" task="task_0" opcode="DeviceGuard" level="win:Error" template="task_0DeviceGuard7001Args"/>
+     <event value="7012" symbol="task_0DeviceGuard7012" version="0" task="task_0" opcode="DeviceGuard" level="win:Error" template="task_0DeviceGuard7001Args"/>
+     <event value="7013" symbol="task_0DeviceGuard7013" version="0" task="task_0" opcode="DeviceGuard" level="win:Error"/>
+    </events>
+    <templates>
+     <template tid="task_0ManageCIArgs">
+      <data name="PolicyFilePath" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0ManageCI6001Args">
+      <data name="TokenID" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32" map="AuthorizationTokenErrors"/>
+     </template>
+     <template tid="task_0ManageCI6002Args">
+      <data name="Token" inType="win:UnicodeString"/>
+      <data name="TenantID" inType="win:GUID"/>
+      <data name="Type" inType="win:UInt32" map="AuthorizationTypes"/>
+      <data name="TBS256Count" inType="win:UInt32"/>
+      <data name="TBS384Count" inType="win:UInt32"/>
+      <data name="TBS512Count" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0ManageCI6003Args">
+      <data name="Token" inType="win:UnicodeString"/>
+      <data name="HashAlgo" inType="win:UnicodeString"/>
+      <data name="TbsHashLen" inType="win:UInt32"/>
+      <data name="TbsHash" inType="win:Binary" length="TbsHashLen"/>
+     </template>
+     <template tid="task_0DeviceGuardArgs">
+      <data name="VirtualizationBasedSecurity" inType="win:UnicodeString"/>
+      <data name="SecureBoot" inType="win:UnicodeString"/>
+      <data name="DmaProtection" inType="win:UnicodeString"/>
+      <data name="HVCI" inType="win:UnicodeString"/>
+      <data name="LSA" inType="win:UnicodeString"/>
+      <data name="Reboot" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0DeviceGuard7001Args">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ErrorMessage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0DeviceGuard7010Args">
+      <data name="SiPolicy" inType="win:UnicodeString"/>
+      <data name="PolicyFilePath" inType="win:UnicodeString"/>
+      <data name="Reboot" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0DeviceGuardArgs_V1">
+      <data name="VirtualizationBasedSecurity" inType="win:UnicodeString"/>
+      <data name="SecureBoot" inType="win:UnicodeString"/>
+      <data name="DmaProtection" inType="win:UnicodeString"/>
+      <data name="HVCI" inType="win:UnicodeString"/>
+      <data name="LSA" inType="win:UnicodeString"/>
+      <data name="KernelShadowStacks" inType="win:UInt32"/>
+      <data name="Reboot" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0DeviceGuardArgs_V2">
+      <data name="VirtualizationBasedSecurity" inType="win:UInt32" map="VirtualizationBasedSecurityGroupPolicyConfigureTypes"/>
+      <data name="SecureBoot" inType="win:UnicodeString"/>
+      <data name="DmaProtection" inType="win:UnicodeString"/>
+      <data name="HVCI" inType="win:UnicodeString"/>
+      <data name="LSA" inType="win:UnicodeString"/>
+      <data name="KernelShadowStacks" inType="win:UInt32"/>
+      <data name="Reboot" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0DeviceGuardArgs_V3">
+      <data name="VirtualizationBasedSecurity" inType="win:UInt32"/>
+      <data name="SecureBoot" inType="win:UnicodeString"/>
+      <data name="DmaProtection" inType="win:UnicodeString"/>
+      <data name="HVCI" inType="win:UnicodeString"/>
+      <data name="LSA" inType="win:UnicodeString"/>
+      <data name="MachineIdentityIsolation" inType="win:UnicodeString"/>
+      <data name="KernelShadowStacks" inType="win:UInt32" map="KernelShadowStacksGroupPolicyConfigureTypes"/>
+      <data name="Reboot" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0DeviceGuard" value="DeviceGuard"/>
+    <string id="opcode_task_0ManageCI" value="ManageCI"/>
+    <string id="map_AuthorizationTokenErrorsUntrusted Signature" value="Untrusted Signature"/>
+    <string id="map_AuthorizationTokenErrorsCorrupt Signature" value="Corrupt Signature"/>
+    <string id="map_AuthorizationTokenErrorsParsing Failure" value="Parsing Failure"/>
+    <string id="map_AuthorizationTokenErrorsSupplemental Error" value="Supplemental Error"/>
+    <string id="map_AuthorizationTokenErrorsInvalid Publisher" value="Invalid Publisher"/>
+    <string id="map_AuthorizationTokenErrorsInvalid Base Policy Id" value="Invalid Base Policy Id"/>
+    <string id="map_AuthorizationTokenErrorsInvalid Tenant ID" value="Invalid Tenant ID"/>
+    <string id="map_AuthorizationTokenErrorsInvalid Device Id" value="Invalid Device Id"/>
+    <string id="map_AuthorizationTokenErrorsInvalid TBS Hashes" value="Invalid TBS Hashes"/>
+    <string id="map_AuthorizationTypesS" value="S"/>
+    <string id="map_AuthorizationTypesE" value="E"/>
+    <string id="map_VirtualizationBasedSecurityGroupPolicyConfigureTypesDisabled" value="Disabled"/>
+    <string id="map_VirtualizationBasedSecurityGroupPolicyConfigureTypesEnabled" value="Enabled"/>
+    <string id="map_VirtualizationBasedSecurityGroupPolicyConfigureTypesEnabled Without Lock" value="Enabled Without Lock"/>
+    <string id="map_VirtualizationBasedSecurityGroupPolicyConfigureTypesNot Configured" value="Not Configured"/>
+    <string id="map_KernelShadowStacksGroupPolicyConfigureTypesNot configured" value="Not configured"/>
+    <string id="map_KernelShadowStacksGroupPolicyConfigureTypesEnabled in enforcement mode" value="Enabled in enforcement mode"/>
+    <string id="map_KernelShadowStacksGroupPolicyConfigureTypesEnabled in audit mode" value="Enabled in audit mode"/>
+    <string id="map_KernelShadowStacksGroupPolicyConfigureTypesDisabled" value="Disabled"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

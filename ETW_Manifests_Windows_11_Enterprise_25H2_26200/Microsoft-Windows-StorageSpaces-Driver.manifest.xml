@@ -1,0 +1,877 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-StorageSpaces-Driver" guid="{595f7f52-c90a-4026-a125-8eb5e083f15e}" resourceFileName="Microsoft-Windows-StorageSpaces-Driver" messageFileName="Microsoft-Windows-StorageSpaces-Driver" symbol="MicrosoftWindowsStorageSpacesDriver" source="Xml" >
+    <keywords>
+     <keyword name="Io" message="$(string.keyword_Io)" mask="0x1"/>
+     <keyword name="Flush" message="$(string.keyword_Flush)" mask="0x2"/>
+     <keyword name="Dsm" message="$(string.keyword_Dsm)" mask="0x4"/>
+     <keyword name="Log" message="$(string.keyword_Log)" mask="0x8"/>
+     <keyword name="Destage" message="$(string.keyword_Destage)" mask="0x10"/>
+     <keyword name="ReadCache" message="$(string.keyword_ReadCache)" mask="0x40"/>
+     <keyword name="Ksr" message="$(string.keyword_Ksr)" mask="0x80"/>
+     <keyword name="Repair" message="$(string.keyword_Repair)" mask="0x100"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="HealthValue">
+      <map value="0x0" message="$(string.map_HealthValueUnknown)"/>
+      <map value="0x1" message="$(string.map_HealthValueUnhealthy)"/>
+      <map value="0x2" message="$(string.map_HealthValueWarning)"/>
+      <map value="0x3" message="$(string.map_HealthValueHealthy)"/>
+     </valueMap>
+     <valueMap name="PoolTransaction">
+      <map value="0x0" message="$(string.map_PoolTransactionUnknown)"/>
+      <map value="0x1" message="$(string.map_PoolTransactionDoubleIncrement)"/>
+      <map value="0x2" message="$(string.map_PoolTransactionSetPoolInfo)"/>
+      <map value="0x3" message="$(string.map_PoolTransactionCreatePool)"/>
+      <map value="0x4" message="$(string.map_PoolTransactionUpgradePool)"/>
+      <map value="0x5" message="$(string.map_PoolTransactionRebalanceCleanup)"/>
+      <map value="0x6" message="$(string.map_PoolTransactionRebalancePhase1)"/>
+      <map value="0x7" message="$(string.map_PoolTransactionRebalancePhase2)"/>
+      <map value="0x8" message="$(string.map_PoolTransactionScheduleRebalance)"/>
+      <map value="0x9" message="$(string.map_PoolTransactionSetDriveInfo)"/>
+      <map value="0xa" message="$(string.map_PoolTransactionAddDrives)"/>
+      <map value="0xb" message="$(string.map_PoolTransactionRemoveDrives)"/>
+      <map value="0xc" message="$(string.map_PoolTransactionRemoveDrivesEstimate)"/>
+      <map value="0xd" message="$(string.map_PoolTransactionSetDriveMetadata)"/>
+      <map value="0xe" message="$(string.map_PoolTransactionRetireDrives)"/>
+      <map value="0xf" message="$(string.map_PoolTransactionReallocateDrives)"/>
+      <map value="0x10" message="$(string.map_PoolTransactionSetSpaceInfo)"/>
+      <map value="0x11" message="$(string.map_PoolTransactionCreateSpace)"/>
+      <map value="0x12" message="$(string.map_PoolTransactionGrowSpace)"/>
+      <map value="0x13" message="$(string.map_PoolTransactionFinalizeSpace)"/>
+      <map value="0x14" message="$(string.map_PoolTransactionDeleteSpace)"/>
+      <map value="0x15" message="$(string.map_PoolTransactionSnapshotSpace)"/>
+      <map value="0x16" message="$(string.map_PoolTransactionUnlinkSpace)"/>
+      <map value="0x17" message="$(string.map_PoolTransactionRepairPhase2)"/>
+      <map value="0x18" message="$(string.map_PoolTransactionRepairPhase5)"/>
+      <map value="0x19" message="$(string.map_PoolTransactionSetActiveSpaces)"/>
+      <map value="0x1a" message="$(string.map_PoolTransactionSetSpacesFlags)"/>
+      <map value="0x1b" message="$(string.map_PoolTransactionSetTierInfo)"/>
+      <map value="0x1c" message="$(string.map_PoolTransactionCreateTier)"/>
+      <map value="0x1d" message="$(string.map_PoolTransactionDeleteTier)"/>
+      <map value="0x1e" message="$(string.map_PoolTransactionMapExtents)"/>
+      <map value="0x1f" message="$(string.map_PoolTransactionUnmapExtents)"/>
+      <map value="0x20" message="$(string.map_PoolTransactionUpdateSpaces)"/>
+      <map value="0x21" message="$(string.map_PoolTransactionPrepareBoot)"/>
+      <map value="0x22" message="$(string.map_PoolTransactionInsertExtents)"/>
+      <map value="0x23" message="$(string.map_PoolTransactionSetMaxFd)"/>
+     </valueMap>
+     <valueMap name="SpaceTransaction">
+      <map value="0x0" message="$(string.map_SpaceTransactionUnknown)"/>
+      <map value="0x1" message="$(string.map_SpaceTransactionDoubleIncrement)"/>
+      <map value="0x2" message="$(string.map_SpaceTransactionUpgrade)"/>
+      <map value="0x3" message="$(string.map_SpaceTransactionResetDrive)"/>
+      <map value="0x4" message="$(string.map_SpaceTransactionUpdateColumnState)"/>
+      <map value="0x5" message="$(string.map_SpaceTransactionRepairPhase0)"/>
+      <map value="0x6" message="$(string.map_SpaceTransactionRepairPhase1)"/>
+      <map value="0x7" message="$(string.map_SpaceTransactionRepairPhase3)"/>
+      <map value="0x8" message="$(string.map_SpaceTransactionRepairPhase6)"/>
+      <map value="0x9" message="$(string.map_SpaceTransactionMapExtents)"/>
+      <map value="0xa" message="$(string.map_SpaceTransactionAddMetadataDrive)"/>
+      <map value="0xb" message="$(string.map_SpaceTransactionRemoveMetadataDrive)"/>
+      <map value="0xc" message="$(string.map_SpaceTransactionTrim)"/>
+     </valueMap>
+     <valueMap name="CacheOperation">
+      <map value="0x0" message="$(string.map_CacheOperationUnknown)"/>
+      <map value="0x1" message="$(string.map_CacheOperationInitialize)"/>
+      <map value="0x2" message="$(string.map_CacheOperationCreate)"/>
+      <map value="0x3" message="$(string.map_CacheOperationOpen)"/>
+      <map value="0x4" message="$(string.map_CacheOperationReconcile)"/>
+      <map value="0x5" message="$(string.map_CacheOperationReadCheckpoint)"/>
+      <map value="0x6" message="$(string.map_CacheOperationFlush)"/>
+      <map value="0x7" message="$(string.map_CacheOperationWriteCheckpoint)"/>
+      <map value="0x8" message="$(string.map_CacheOperationBuildDestagePackets)"/>
+     </valueMap>
+     <valueMap name="VdtOperation">
+      <map value="0x0" message="$(string.map_VdtOperationUnknown)"/>
+      <map value="0x1" message="$(string.map_VdtOperationInitialize)"/>
+      <map value="0x2" message="$(string.map_VdtOperationCreate)"/>
+      <map value="0x3" message="$(string.map_VdtOperationOpen)"/>
+      <map value="0x4" message="$(string.map_VdtOperationReconcile)"/>
+      <map value="0x5" message="$(string.map_VdtOperationReadCheckpoint)"/>
+      <map value="0x6" message="$(string.map_VdtOperationProcessTiers)"/>
+      <map value="0x7" message="$(string.map_VdtOperationFlush)"/>
+      <map value="0x8" message="$(string.map_VdtOperationWriteCheckpoint)"/>
+     </valueMap>
+     <valueMap name="PathState">
+      <map value="0x0" message="$(string.map_PathStateUnknown)"/>
+      <map value="0x1" message="$(string.map_PathStateClean)"/>
+      <map value="0x2" message="$(string.map_PathStateChange)"/>
+      <map value="0x3" message="$(string.map_PathStateCommit)"/>
+      <map value="0x4" message="$(string.map_PathStateAbort)"/>
+      <map value="0x5" message="$(string.map_PathStateStale)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="102" symbol="task_0" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="200" symbol="task_0200" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Error" template="task_0203Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Warning" template="task_0204Args"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Warning" template="task_0205Args"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Warning" template="task_0206Args"/>
+     <event value="207" symbol="task_0207" version="0" task="task_0" level="win:Informational" template="task_0207Args"/>
+     <event value="208" symbol="task_0208" version="0" task="task_0" level="win:Warning" template="task_0208Args"/>
+     <event value="209" symbol="task_0209" version="0" task="task_0" level="win:Error" template="task_0203Args"/>
+     <event value="210" symbol="task_0210" version="0" task="task_0" level="win:Warning" template="task_0210Args"/>
+     <event value="300" symbol="task_0300" version="0" task="task_0" level="win:Error" template="task_0300Args"/>
+     <event value="301" symbol="task_0301" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="302" symbol="task_0302" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="303" symbol="task_0303" version="0" task="task_0" level="win:Error" template="task_0303Args"/>
+     <event value="304" symbol="task_0304" version="0" task="task_0" level="win:Warning" template="task_0304Args"/>
+     <event value="305" symbol="task_0305" version="0" task="task_0" level="win:Informational" template="task_0304Args"/>
+     <event value="306" symbol="task_0306" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="307" symbol="task_0307" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="309" symbol="task_0309" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="310" symbol="task_0310" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="311" symbol="task_0311" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="312" symbol="task_0312" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="313" symbol="task_0313" version="0" task="task_0" level="win:Error" template="task_0304Args"/>
+     <event value="314" symbol="task_0314" version="0" task="task_0" level="win:Warning" template="task_0314Args"/>
+     <event value="315" symbol="task_0315" version="0" task="task_0" level="win:Error" template="task_0315Args"/>
+     <event value="316" symbol="task_0316" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="400" symbol="task_0400" version="0" task="task_0" level="win:Informational" template="task_0400Args"/>
+     <event value="401" symbol="task_0401" version="0" task="task_0" level="win:Informational" template="task_0400Args"/>
+     <event value="402" symbol="task_0402" version="0" task="task_0" level="win:Warning" template="task_0402Args"/>
+     <event value="403" symbol="task_0403" version="0" task="task_0" level="win:Error" template="task_0403Args"/>
+     <event value="404" symbol="task_0404" version="0" task="task_0" level="win:Informational" template="task_0404Args"/>
+     <event value="405" symbol="task_0405" version="0" task="task_0" level="win:Error" template="task_0405Args"/>
+     <event value="406" symbol="task_0406" version="0" task="task_0" level="win:Error" template="task_0406Args"/>
+     <event value="501" symbol="task_0501" version="0" task="task_0" level="win:Informational" keywords="Ksr"/>
+     <event value="502" symbol="task_0502" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0502Args"/>
+     <event value="503" symbol="task_0503" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0503Args"/>
+     <event value="504" symbol="task_0504" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0Args"/>
+     <event value="505" symbol="task_0505" version="0" task="task_0" level="win:Informational" keywords="Ksr"/>
+     <event value="506" symbol="task_0506" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0502Args"/>
+     <event value="507" symbol="task_0507" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0507Args"/>
+     <event value="508" symbol="task_0508" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0Args"/>
+     <event value="509" symbol="task_0509" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0Args"/>
+     <event value="510" symbol="task_0510" version="0" task="task_0" level="win:Error" keywords="Ksr" template="task_0Args"/>
+     <event value="511" symbol="task_0511" version="0" task="task_0" level="win:Informational" keywords="Ksr" template="task_0304Args"/>
+     <event value="512" symbol="task_0512" version="0" task="task_0" level="win:Informational" keywords="Ksr" template="task_0304Args"/>
+     <event value="513" symbol="task_0513" version="0" task="task_0" level="win:Informational" keywords="Ksr" template="task_0304Args"/>
+     <event value="1000" symbol="task_01000" version="0" task="task_0" level="win:Error" template="task_01000Args"/>
+     <event value="1001" symbol="task_01001" version="0" task="task_0" level="win:Informational" template="task_01001Args"/>
+     <event value="1002" symbol="task_01002" version="0" task="task_0" level="win:Informational" template="task_01002Args"/>
+     <event value="1003" symbol="task_01003" version="0" task="task_0" level="win:Informational" template="task_01003Args"/>
+     <event value="1004" symbol="task_01004" version="0" task="task_0" level="win:Informational" template="task_01004Args"/>
+     <event value="1005" symbol="task_01005" version="0" task="task_0" level="win:Informational" template="task_01005Args"/>
+     <event value="1006" symbol="task_01006" version="0" task="task_0" level="win:Informational" template="task_01006Args"/>
+     <event value="1007" symbol="task_01007" version="0" task="task_0" level="win:Informational" template="task_01007Args"/>
+     <event value="1008" symbol="task_01008" version="0" task="task_0" level="win:Informational" template="task_0304Args"/>
+     <event value="1009" symbol="task_01009" version="0" task="task_0" level="win:Informational" template="task_01009Args"/>
+     <event value="1010" symbol="task_01010" version="0" task="task_0" level="win:Error" template="task_01010Args"/>
+     <event value="1011" symbol="task_01011" version="0" task="task_0" level="win:Informational" template="task_01011Args"/>
+     <event value="1012" symbol="task_01012" version="0" task="task_0" level="win:Informational" template="task_01012Args"/>
+     <event value="1013" symbol="task_01013" version="0" task="task_0" level="win:Error" template="task_01013Args"/>
+     <event value="1017" symbol="task_01017" version="0" task="task_0" level="win:Informational" template="task_01017Args"/>
+     <event value="1018" symbol="task_01018" version="0" task="task_0" level="win:Informational" template="task_01017Args"/>
+     <event value="1019" symbol="task_01019_V2" version="2" task="task_0" level="win:Informational" template="task_01019Args_V2"/>
+     <event value="1020" symbol="task_01020" version="0" task="task_0" level="win:Informational" template="task_01020Args"/>
+     <event value="1021" symbol="task_01021_V1" version="1" task="task_0" level="win:Informational" template="task_01021Args_V1"/>
+     <event value="1022" symbol="task_01022" version="0" task="task_0" level="win:Informational" template="task_01022Args"/>
+     <event value="1023" symbol="task_01023" version="0" task="task_0" level="win:Warning" template="task_01023Args"/>
+     <event value="1024" symbol="task_01024" version="0" task="task_0" level="win:Informational" template="task_01024Args"/>
+     <event value="1025" symbol="task_01025" version="0" task="task_0" level="win:Informational" template="task_01025Args"/>
+     <event value="1026" symbol="task_01026" version="0" task="task_0" level="win:Informational" template="task_01026Args"/>
+     <event value="1027" symbol="task_01027" version="0" task="task_0" level="win:Informational" template="task_01027Args"/>
+     <event value="1028" symbol="task_01028" version="0" task="task_0" level="win:Informational" template="task_01028Args"/>
+     <event value="1029" symbol="task_01029" version="0" task="task_0" level="win:Error" template="task_01022Args"/>
+     <event value="1030" symbol="task_01030" version="0" task="task_0" level="win:Informational" template="task_01030Args"/>
+     <event value="1031" symbol="task_01031" version="0" task="task_0" level="win:Informational" template="task_01031Args"/>
+     <event value="1032" symbol="task_01032" version="0" task="task_0" level="win:Informational" template="task_01031Args"/>
+     <event value="1033" symbol="task_01033" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1034" symbol="task_01034" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1035" symbol="task_01035" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1036" symbol="task_01036" version="0" task="task_0" level="win:Informational" template="task_01033Args"/>
+     <event value="1037" symbol="task_01037" version="0" task="task_0" level="win:Error" template="task_01030Args"/>
+     <event value="1038" symbol="task_01038" version="0" task="task_0" level="win:Informational" template="task_01038Args"/>
+     <event value="1039" symbol="task_01039" version="0" task="task_0" level="win:Error" template="task_01039Args"/>
+     <event value="1040" symbol="task_01040" version="0" task="task_0" level="win:Error" template="task_01040Args"/>
+     <event value="1041" symbol="task_01041" version="0" task="task_0" level="win:Error" template="task_01041Args"/>
+     <event value="1042" symbol="task_01042" version="0" task="task_0" level="win:Error" template="task_01042Args"/>
+     <event value="1043" symbol="task_01043" version="0" task="task_0" level="win:Informational" template="task_01043Args"/>
+     <event value="1044" symbol="task_01044" version="0" task="task_0" level="win:Informational" template="task_01044Args"/>
+     <event value="1045" symbol="task_01045" version="0" task="task_0" level="win:Informational" template="task_01045Args"/>
+     <event value="1046" symbol="task_01046" version="0" task="task_0" level="win:Informational" template="task_01046Args"/>
+     <event value="1047" symbol="task_01047" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="1048" symbol="task_01048" version="0" task="task_0" level="win:Informational" template="task_01046Args"/>
+     <event value="1049" symbol="task_01049" version="0" task="task_0" level="win:Informational" template="task_0304Args"/>
+     <event value="1050" symbol="task_01050" version="0" task="task_0" level="win:Informational" template="task_01050Args"/>
+     <event value="1051" symbol="task_01051" version="0" task="task_0" level="win:Error" template="task_01051Args"/>
+     <event value="1052" symbol="task_01052" version="0" task="task_0" level="win:Informational" template="task_01052Args"/>
+     <event value="1053" symbol="task_01053" version="0" task="task_0" level="win:Informational" template="task_01053Args"/>
+     <event value="1100" symbol="task_01100" version="0" task="task_0" level="win:Informational" template="task_01100Args"/>
+     <event value="1101" symbol="task_01101" version="0" task="task_0" level="win:Error" template="task_01101Args"/>
+     <event value="1102" symbol="task_01102" version="0" task="task_0" level="win:Informational" template="task_01102Args"/>
+     <event value="1103" symbol="task_01103" version="0" task="task_0" level="win:Informational" template="task_01103Args"/>
+     <event value="1104" symbol="task_01104" version="0" task="task_0" level="win:Informational" template="task_01103Args"/>
+     <event value="1105" symbol="task_01105" version="0" task="task_0" level="win:Error" template="task_0300Args"/>
+     <event value="1106" symbol="task_01106" version="0" task="task_0" level="win:Error" template="task_0300Args"/>
+     <event value="1107" symbol="task_01107" version="0" task="task_0" level="win:Error" template="task_01107Args"/>
+     <event value="1108" symbol="task_01108" version="0" task="task_0" level="win:Error" template="task_01108Args"/>
+     <event value="1600" symbol="task_01600" version="0" task="task_0" level="win:Informational" template="task_01600Args"/>
+     <event value="1601" symbol="task_01601" version="0" task="task_0" level="win:Error" template="task_01601Args"/>
+     <event value="1602" symbol="task_01602" version="0" task="task_0" level="win:Informational" template="task_01600Args"/>
+     <event value="2100" symbol="task_02100" version="0" task="task_0" level="win:Informational" keywords="Log" template="task_02100Args"/>
+     <event value="2101" symbol="task_02101" version="0" task="task_0" level="win:Informational" keywords="Log" template="task_02101Args"/>
+     <event value="2102" symbol="task_02102" version="0" task="task_0" level="win:Informational" keywords="Log" template="task_02102Args"/>
+     <event value="2103" symbol="task_02103" version="0" task="task_0" level="win:Informational" keywords="Log" template="task_02101Args"/>
+     <event value="2104" symbol="task_02104" version="0" task="task_0" level="win:Informational" keywords="Log" template="task_02102Args"/>
+     <event value="2600" symbol="task_02600" version="0" task="task_0" level="win:Informational" keywords="Io" template="task_02600Args"/>
+     <event value="2601" symbol="task_02601" version="0" task="task_0" level="win:Informational" keywords="Repair" template="task_02601Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0203Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="DeviceNumber" inType="win:Int32"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="Slot" inType="win:Int32"/>
+     </template>
+     <template tid="task_0204Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Key" inType="win:UInt8"/>
+      <data name="Asc" inType="win:UInt8"/>
+      <data name="Ascq" inType="win:UInt8"/>
+      <data name="DeviceNumber" inType="win:Int32"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="Slot" inType="win:Int32"/>
+     </template>
+     <template tid="task_0205Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="Slot" inType="win:Int32"/>
+     </template>
+     <template tid="task_0206Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Reason" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="State" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0207Args">
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:Int32"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0208Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="DriveId" inType="win:GUID"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="DeviceNumber" inType="win:Int32"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0210Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="StatusCode" inType="win:UInt8"/>
+      <data name="StatusCodeType" inType="win:UInt8"/>
+      <data name="DeviceNumber" inType="win:Int32"/>
+      <data name="DriveManufacturer" inType="win:UnicodeString"/>
+      <data name="DriveModel" inType="win:UnicodeString"/>
+      <data name="DriveSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="Slot" inType="win:Int32"/>
+     </template>
+     <template tid="task_0300Args">
+      <data name="Id1" inType="win:GUID"/>
+      <data name="Id2" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0303Args">
+      <data name="UserId" inType="win:GUID"/>
+      <data name="Id" inType="win:GUID"/>
+      <data name="ColumnData" inType="win:AnsiString"/>
+     </template>
+     <template tid="task_0304Args">
+      <data name="Id" inType="win:GUID"/>
+     </template>
+     <template tid="task_0314Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Lsn" inType="win:UInt64"/>
+      <data name="LastChkLsn" inType="win:UInt64"/>
+      <data name="PrevChkLsn" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ExtendedStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0315Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Lsn" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ExtendedStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0400Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Path" inType="win:Int32"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0402Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="OldHealth" inType="win:UInt32" map="HealthValue"/>
+      <data name="NewHealth" inType="win:UInt32"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0403Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0404Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+      <data name="Operation" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Retries" inType="win:UInt32"/>
+      <data name="SrbStatus" inType="win:UInt8" count="Retries"/>
+      <data name="SenseKey" inType="win:UInt8" count="Retries"/>
+      <data name="AdditionalSenseCode" inType="win:UInt8" count="Retries"/>
+      <data name="AdditionalSenseCodeQualifier" inType="win:UInt8" count="Retries"/>
+     </template>
+     <template tid="task_0405Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="PageBytes" inType="win:UInt32"/>
+      <data name="PageData" inType="win:Binary" length="PageBytes"/>
+     </template>
+     <template tid="task_0406Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="EnclosureManufacturer" inType="win:UnicodeString"/>
+      <data name="EnclosureModel" inType="win:UnicodeString"/>
+      <data name="EnclosureSerial" inType="win:UnicodeString"/>
+      <data name="EnclosureRevision" inType="win:UnicodeString"/>
+      <data name="DescirptorBytes" inType="win:UInt32"/>
+      <data name="DescirptorData" inType="win:Binary" length="DescirptorBytes"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0502Args">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0503Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0507Args">
+      <data name="BlockId" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01000Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01001Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Transaction" inType="win:UInt32"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01002Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="Transaction" inType="win:UInt32" map="PoolTransaction"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+      <data name="DispatchTransactionDurationIn100Ns" inType="win:UInt64"/>
+      <data name="PrepareCommitDurationIn100Ns" inType="win:UInt64"/>
+      <data name="CommitTransactionDurationIn100Ns" inType="win:UInt64"/>
+      <data name="CommitDevicesDurationIn100Ns" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01003Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Transaction" inType="win:UInt32" map="SpaceTransaction"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01004Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Transaction" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01005Args">
+      <data name="Code" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01006Args">
+      <data name="Code" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01007Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Count" inType="win:UInt64"/>
+      <data name="NeedCapacity" inType="win:UInt8"/>
+     </template>
+     <template tid="task_01009Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="BytesProcessed" inType="win:UInt64"/>
+      <data name="BytesSkipped" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01010Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01011Args">
+      <data name="ConfigId" inType="win:GUID"/>
+      <data name="DriveCount" inType="win:UInt32"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01012Args">
+      <data name="ConfigId" inType="win:GUID"/>
+      <data name="ScmCount" inType="win:UInt32"/>
+      <data name="SsdCount" inType="win:UInt32"/>
+      <data name="HddCount" inType="win:UInt32"/>
+      <data name="TotalCount" inType="win:UInt32"/>
+      <data name="AddCount" inType="win:UInt32"/>
+      <data name="RemoveCount" inType="win:UInt32"/>
+      <data name="DriveIds" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_01013Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="SpaceOffset" inType="win:UInt64"/>
+      <data name="ColumnToReallocate" inType="win:UInt32"/>
+      <data name="CopyToReallocate" inType="win:UInt32"/>
+      <data name="ColumnMissingFdInfo" inType="win:UInt32"/>
+      <data name="CopyMissingFdInfo" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01017Args">
+      <data name="Duration" inType="win:UInt64"/>
+      <data name="Frame0" inType="win:HexInt32"/>
+      <data name="Frame1" inType="win:HexInt32"/>
+      <data name="Frame2" inType="win:HexInt32"/>
+      <data name="Frame3" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_01020Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="Manufacturer" inType="win:UnicodeString"/>
+      <data name="Model" inType="win:UnicodeString"/>
+      <data name="Serial" inType="win:UnicodeString"/>
+      <data name="Revision" inType="win:UnicodeString"/>
+      <data name="DriveCount" inType="win:UInt32"/>
+      <data name="DriveIoSummary" inType="win:Int32" count="DriveCount"/>
+     </template>
+     <template tid="task_01022Args">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="AttachedDurationInUs" inType="win:UInt64"/>
+      <data name="DetachDurationInUs" inType="win:UInt64"/>
+      <data name="DetachReason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01023Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="NumberOfEntries" inType="win:UInt32"/>
+      <data name="Limit" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01024Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Limit" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01025Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="NumberOfEntries" inType="win:UInt32"/>
+      <data name="FlushStatus" inType="win:UInt32"/>
+      <data name="FirstWriteStatus" inType="win:UInt32"/>
+      <data name="SecondWriteStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01026Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01027Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="IoStateCountSize" inType="win:UInt16"/>
+      <data name="IoStateCount" inType="win:Int64" count="IoStateCountSize"/>
+      <data name="IoStateBytesSize" inType="win:UInt16"/>
+      <data name="IoStateBytes" inType="win:Int64" count="IoStateBytesSize"/>
+      <data name="IoReasonCountSize" inType="win:UInt16"/>
+      <data name="IoReasonCount" inType="win:Int64" count="IoReasonCountSize"/>
+      <data name="IoReasonBytesSize" inType="win:UInt16"/>
+      <data name="IoReasonBytes" inType="win:Int64" count="IoReasonBytesSize"/>
+      <data name="RepairReplacementCount" inType="win:Int64"/>
+      <data name="RebalanceReplacementCount" inType="win:Int64"/>
+      <data name="FailedReplacementCount" inType="win:Int64"/>
+      <data name="ScopeRegenerationCount" inType="win:Int64"/>
+      <data name="RepairReplacementBytes" inType="win:Int64"/>
+      <data name="RebalanceReplacementBytes" inType="win:Int64"/>
+      <data name="FailedReplacementBytes" inType="win:Int64"/>
+      <data name="ScopeRegenerationBytes" inType="win:Int64"/>
+      <data name="NeedRepairPhase2Count" inType="win:Int64"/>
+      <data name="NeedRepairPhase6Count" inType="win:Int64"/>
+      <data name="RepairPhasesSize" inType="win:UInt16"/>
+      <data name="RepairPhases" inType="win:Int64" count="RepairPhasesSize"/>
+      <data name="RepairStatusSize" inType="win:UInt16"/>
+      <data name="RepairStatus" inType="win:UInt32" count="RepairStatusSize"/>
+     </template>
+     <template tid="task_01028Args">
+      <data name="PauseCount" inType="win:UInt32"/>
+      <data name="Force" inType="win:UInt8"/>
+     </template>
+     <template tid="task_01030Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Operation" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01031Args">
+      <data name="Duration" inType="win:UInt64"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="PausedCount" inType="win:Int32"/>
+      <data name="Frame0" inType="win:HexInt32"/>
+      <data name="Frame1" inType="win:HexInt32"/>
+      <data name="Frame2" inType="win:HexInt32"/>
+      <data name="Frame3" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_01033Args">
+      <data name="Duration" inType="win:UInt64"/>
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Frame0" inType="win:HexInt32"/>
+      <data name="Frame1" inType="win:HexInt32"/>
+      <data name="Frame2" inType="win:HexInt32"/>
+      <data name="Frame3" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_01038Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Copy" inType="win:UInt32"/>
+      <data name="StartLsn" inType="win:UInt64"/>
+      <data name="LastChkLsn" inType="win:UInt64"/>
+      <data name="PrevChkLsn" inType="win:UInt64"/>
+      <data name="SessionNum" inType="win:UInt32"/>
+      <data name="DumpCount" inType="win:UInt64"/>
+      <data name="MissingMask" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01039Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt8"/>
+      <data name="Lsn" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01040Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Operation" inType="win:UInt32" map="CacheOperation"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01041Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Operation" inType="win:UInt32" map="VdtOperation"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01042Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Operation" inType="win:UInt32"/>
+      <data name="Function" inType="win:UInt8"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01043Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="UsedLineCount" inType="win:UInt32"/>
+      <data name="ReservedLineCount" inType="win:UInt32"/>
+      <data name="SynchronizingCount" inType="win:UInt32"/>
+      <data name="ReplayCount" inType="win:UInt32"/>
+      <data name="ActiveCheckpoint" inType="win:UInt32"/>
+      <data name="StartSlot" inType="win:UInt32"/>
+      <data name="EndSlot" inType="win:UInt32"/>
+      <data name="Wrap" inType="win:Boolean"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01044Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ActiveCheckpoint" inType="win:UInt32"/>
+      <data name="StartSlot" inType="win:UInt32"/>
+      <data name="EndSlot" inType="win:UInt32"/>
+      <data name="Wrap" inType="win:Boolean"/>
+      <data name="SequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01045Args">
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01046Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="NumberOfBitmaps" inType="win:UInt32"/>
+      <data name="SstLength" inType="win:UInt32"/>
+      <data name="Sst" inType="win:Binary" length="SstLength"/>
+     </template>
+     <template tid="task_01050Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="ReserveBytesWritten" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01051Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ReserveBytesWritten" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01052Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="SlabOffset" inType="win:UInt64"/>
+      <data name="Column" inType="win:UInt32"/>
+      <data name="SourceCopy" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BitMapSize" inType="win:UInt32"/>
+      <data name="BitMap" inType="win:Binary" length="BitMapSize"/>
+     </template>
+     <template tid="task_01053Args">
+      <data name="ConfigId" inType="win:GUID"/>
+      <data name="MetadataDriveCount" inType="win:UInt32"/>
+      <data name="OldTolerance" inType="win:UInt32"/>
+      <data name="NewTolerance" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01100Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="TotalPaths" inType="win:UInt32"/>
+      <data name="PresentPaths" inType="win:UInt32"/>
+      <data name="Sequence" inType="win:UInt64"/>
+      <data name="PrimaryPathId" inType="win:GUID"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01101Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="PresentPaths" inType="win:UInt32"/>
+      <data name="ReadStatuses" inType="win:UInt32" count="PresentPaths"/>
+      <data name="Sequences" inType="win:UInt64" count="PresentPaths"/>
+      <data name="StoreStates" inType="win:UInt16" map="PathState" count="PresentPaths"/>
+     </template>
+     <template tid="task_01102Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="PresentPaths" inType="win:UInt32"/>
+      <data name="PathId" inType="win:GUID" count="PresentPaths"/>
+      <data name="Flags" inType="win:UInt32" count="PresentPaths"/>
+      <data name="Sequence" inType="win:UInt64" count="PresentPaths"/>
+      <data name="State" inType="win:UInt16" count="PresentPaths"/>
+     </template>
+     <template tid="task_01103Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="PathId" inType="win:GUID"/>
+     </template>
+     <template tid="task_01107Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="TotalPaths" inType="win:UInt32"/>
+      <data name="PresentPaths" inType="win:UInt32"/>
+      <data name="Sequence" inType="win:UInt64"/>
+      <data name="TransactionStatus" inType="win:UInt32"/>
+      <data name="WitnessStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01108Args">
+      <data name="StoreId" inType="win:GUID"/>
+      <data name="TotalPaths" inType="win:UInt32"/>
+      <data name="PresentPaths" inType="win:UInt32"/>
+      <data name="Sequence" inType="win:UInt64"/>
+      <data name="WitnessStatus" inType="win:UInt32"/>
+      <data name="WitnessSequence" inType="win:UInt64"/>
+      <data name="Tolerance" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01600Args">
+      <data name="PathId" inType="win:GUID"/>
+     </template>
+     <template tid="task_01601Args">
+      <data name="PathId" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02100Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="UsedBytes" inType="win:UInt64"/>
+     </template>
+     <template tid="task_02101Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Lsn" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt8"/>
+     </template>
+     <template tid="task_02102Args">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="StartLsn" inType="win:UInt32"/>
+      <data name="Lsn" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02600Args">
+      <data name="SpaceId" inType="win:UInt32"/>
+      <data name="SlabIndex" inType="win:UInt32"/>
+      <data name="ColumnOffset" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Operation" inType="win:UInt16"/>
+      <data name="CopiesMask" inType="win:UInt16"/>
+      <data name="Column" inType="win:UInt16"/>
+      <data name="Error" inType="win:UInt8"/>
+      <data name="Buffer" inType="win:Binary"/>
+     </template>
+     <template tid="task_02601Args">
+      <data name="Id" inType="win:GUID"/>
+      <data name="SlabOffset" inType="win:UInt64"/>
+      <data name="Column" inType="win:UInt32"/>
+      <data name="CopiesMask" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Granularity" inType="win:UInt32"/>
+      <data name="StaleMask" inType="win:UInt64"/>
+      <data name="StaleBytes" inType="win:UInt32"/>
+     </template>
+     <template tid="task_01021Args_V1">
+      <data name="PoolId" inType="win:GUID"/>
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+      <data name="PoolSequenceNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="task_01019Args_V2">
+      <data name="SpaceId" inType="win:GUID"/>
+      <data name="LogType" inType="win:UInt32"/>
+      <data name="Copy" inType="win:UInt32"/>
+      <data name="Lsn" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ExtendedStatus" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Io" value="Io"/>
+    <string id="keyword_Flush" value="Flush"/>
+    <string id="keyword_Dsm" value="Dsm"/>
+    <string id="keyword_Log" value="Log"/>
+    <string id="keyword_Destage" value="Destage"/>
+    <string id="keyword_ReadCache" value="ReadCache"/>
+    <string id="keyword_Ksr" value="Ksr"/>
+    <string id="keyword_Repair" value="Repair"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_HealthValueUnknown" value="Unknown"/>
+    <string id="map_HealthValueUnhealthy" value="Unhealthy"/>
+    <string id="map_HealthValueWarning" value="Warning"/>
+    <string id="map_HealthValueHealthy" value="Healthy"/>
+    <string id="map_PoolTransactionUnknown" value="Unknown"/>
+    <string id="map_PoolTransactionDoubleIncrement" value="DoubleIncrement"/>
+    <string id="map_PoolTransactionSetPoolInfo" value="SetPoolInfo"/>
+    <string id="map_PoolTransactionCreatePool" value="CreatePool"/>
+    <string id="map_PoolTransactionUpgradePool" value="UpgradePool"/>
+    <string id="map_PoolTransactionRebalanceCleanup" value="RebalanceCleanup"/>
+    <string id="map_PoolTransactionRebalancePhase1" value="RebalancePhase1"/>
+    <string id="map_PoolTransactionRebalancePhase2" value="RebalancePhase2"/>
+    <string id="map_PoolTransactionScheduleRebalance" value="ScheduleRebalance"/>
+    <string id="map_PoolTransactionSetDriveInfo" value="SetDriveInfo"/>
+    <string id="map_PoolTransactionAddDrives" value="AddDrives"/>
+    <string id="map_PoolTransactionRemoveDrives" value="RemoveDrives"/>
+    <string id="map_PoolTransactionRemoveDrivesEstimate" value="RemoveDrivesEstimate"/>
+    <string id="map_PoolTransactionSetDriveMetadata" value="SetDriveMetadata"/>
+    <string id="map_PoolTransactionRetireDrives" value="RetireDrives"/>
+    <string id="map_PoolTransactionReallocateDrives" value="ReallocateDrives"/>
+    <string id="map_PoolTransactionSetSpaceInfo" value="SetSpaceInfo"/>
+    <string id="map_PoolTransactionCreateSpace" value="CreateSpace"/>
+    <string id="map_PoolTransactionGrowSpace" value="GrowSpace"/>
+    <string id="map_PoolTransactionFinalizeSpace" value="FinalizeSpace"/>
+    <string id="map_PoolTransactionDeleteSpace" value="DeleteSpace"/>
+    <string id="map_PoolTransactionSnapshotSpace" value="SnapshotSpace"/>
+    <string id="map_PoolTransactionUnlinkSpace" value="UnlinkSpace"/>
+    <string id="map_PoolTransactionRepairPhase2" value="RepairPhase2"/>
+    <string id="map_PoolTransactionRepairPhase5" value="RepairPhase5"/>
+    <string id="map_PoolTransactionSetActiveSpaces" value="SetActiveSpaces"/>
+    <string id="map_PoolTransactionSetSpacesFlags" value="SetSpacesFlags"/>
+    <string id="map_PoolTransactionSetTierInfo" value="SetTierInfo"/>
+    <string id="map_PoolTransactionCreateTier" value="CreateTier"/>
+    <string id="map_PoolTransactionDeleteTier" value="DeleteTier"/>
+    <string id="map_PoolTransactionMapExtents" value="MapExtents"/>
+    <string id="map_PoolTransactionUnmapExtents" value="UnmapExtents"/>
+    <string id="map_PoolTransactionUpdateSpaces" value="UpdateSpaces"/>
+    <string id="map_PoolTransactionPrepareBoot" value="PrepareBoot"/>
+    <string id="map_PoolTransactionInsertExtents" value="InsertExtents"/>
+    <string id="map_PoolTransactionSetMaxFd" value="SetMaxFd"/>
+    <string id="map_SpaceTransactionUnknown" value="Unknown"/>
+    <string id="map_SpaceTransactionDoubleIncrement" value="DoubleIncrement"/>
+    <string id="map_SpaceTransactionUpgrade" value="Upgrade"/>
+    <string id="map_SpaceTransactionResetDrive" value="ResetDrive"/>
+    <string id="map_SpaceTransactionUpdateColumnState" value="UpdateColumnState"/>
+    <string id="map_SpaceTransactionRepairPhase0" value="RepairPhase0"/>
+    <string id="map_SpaceTransactionRepairPhase1" value="RepairPhase1"/>
+    <string id="map_SpaceTransactionRepairPhase3" value="RepairPhase3"/>
+    <string id="map_SpaceTransactionRepairPhase6" value="RepairPhase6"/>
+    <string id="map_SpaceTransactionMapExtents" value="MapExtents"/>
+    <string id="map_SpaceTransactionAddMetadataDrive" value="AddMetadataDrive"/>
+    <string id="map_SpaceTransactionRemoveMetadataDrive" value="RemoveMetadataDrive"/>
+    <string id="map_SpaceTransactionTrim" value="Trim"/>
+    <string id="map_CacheOperationUnknown" value="Unknown"/>
+    <string id="map_CacheOperationInitialize" value="Initialize"/>
+    <string id="map_CacheOperationCreate" value="Create"/>
+    <string id="map_CacheOperationOpen" value="Open"/>
+    <string id="map_CacheOperationReconcile" value="Reconcile"/>
+    <string id="map_CacheOperationReadCheckpoint" value="ReadCheckpoint"/>
+    <string id="map_CacheOperationFlush" value="Flush"/>
+    <string id="map_CacheOperationWriteCheckpoint" value="WriteCheckpoint"/>
+    <string id="map_CacheOperationBuildDestagePackets" value="BuildDestagePackets"/>
+    <string id="map_VdtOperationUnknown" value="Unknown"/>
+    <string id="map_VdtOperationInitialize" value="Initialize"/>
+    <string id="map_VdtOperationCreate" value="Create"/>
+    <string id="map_VdtOperationOpen" value="Open"/>
+    <string id="map_VdtOperationReconcile" value="Reconcile"/>
+    <string id="map_VdtOperationReadCheckpoint" value="ReadCheckpoint"/>
+    <string id="map_VdtOperationProcessTiers" value="ProcessTiers"/>
+    <string id="map_VdtOperationFlush" value="Flush"/>
+    <string id="map_VdtOperationWriteCheckpoint" value="WriteCheckpoint"/>
+    <string id="map_PathStateUnknown" value="Unknown"/>
+    <string id="map_PathStateClean" value="Clean"/>
+    <string id="map_PathStateChange" value="Change"/>
+    <string id="map_PathStateCommit" value="Commit"/>
+    <string id="map_PathStateAbort" value="Abort"/>
+    <string id="map_PathStateStale" value="Stale"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

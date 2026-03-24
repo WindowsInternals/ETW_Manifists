@@ -1,0 +1,37 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Application Hang" guid="{c631c3dc-c676-59e4-2db3-5c0af00f9675}" resourceFileName="Application Hang" messageFileName="Application Hang" symbol="ApplicationHang" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="HangingEvents" message="$(string.task_HangingEvents)" value="101"/>
+    </tasks>
+    <events>
+     <event value="1002" symbol="HangingEvents" version="0" task="HangingEvents" level="win:Error" template="HangingEventsArgs"/>
+    </events>
+    <templates>
+     <template tid="HangingEventsArgs">
+      <data name="AppName" inType="win:UnicodeString"/>
+      <data name="AppVersion" inType="win:AnsiString"/>
+      <data name="ProcessId" inType="win:HexInt32"/>
+      <data name="StartTime" inType="win:HexInt64"/>
+      <data name="TerminationTime" inType="win:UInt32"/>
+      <data name="ExeFileName" inType="win:UnicodeString"/>
+      <data name="ReportId" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="PackageRelativeAppId" inType="win:UnicodeString"/>
+      <data name="HangType" inType="win:AnsiString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_HangingEvents" value="HangingEvents"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

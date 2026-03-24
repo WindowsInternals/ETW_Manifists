@@ -1,0 +1,251 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-Cache" guid="{a2d34bf1-70ab-5b21-c819-5a0dd42748fd}" resourceFileName="Microsoft-Windows-Kernel-Cache" messageFileName="Microsoft-Windows-Kernel-Cache" symbol="MicrosoftWindowsKernelCache" source="Xml" >
+    <keywords>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x20"/>
+    </keywords>
+    <tasks>
+     <task name="VolumeCacheMap" message="$(string.task_VolumeCacheMap)" value="101"/>
+     <task name="CacheGlobalPeriodic" message="$(string.task_CacheGlobalPeriodic)" value="102"/>
+     <task name="CacheVolumePeriodic" message="$(string.task_CacheVolumePeriodic)" value="103"/>
+     <task name="CacheVolumeReadLatencies" message="$(string.task_CacheVolumeReadLatencies)" value="104"/>
+     <task name="CacheVolumeWriteLatencies" message="$(string.task_CacheVolumeWriteLatencies)" value="105"/>
+    </tasks>
+    <events>
+     <event value="101" symbol="VolumeCacheMap" version="0" task="VolumeCacheMap" level="win:Informational" template="VolumeCacheMapArgs"/>
+     <event value="102" symbol="CacheGlobalPeriodic_V3" version="3" task="CacheGlobalPeriodic" level="win:Informational" template="CacheGlobalPeriodicArgs_V3"/>
+     <event value="102" symbol="CacheGlobalPeriodic_V4" version="4" task="CacheGlobalPeriodic" level="win:Informational" template="CacheGlobalPeriodicArgs_V4"/>
+     <event value="103" symbol="CacheVolumePeriodic_V2" version="2" task="CacheVolumePeriodic" level="win:Informational" template="CacheVolumePeriodicArgs_V2"/>
+     <event value="104" symbol="CacheVolumeReadLatencies_V1" version="1" task="CacheVolumeReadLatencies" level="win:Informational" template="CacheVolumeReadLatenciesArgs_V1"/>
+     <event value="105" symbol="CacheVolumeWriteLatencies_V1" version="1" task="CacheVolumeWriteLatencies" level="win:Informational" template="CacheVolumeWriteLatenciesArgs_V1"/>
+    </events>
+    <templates>
+     <template tid="VolumeCacheMapArgs">
+      <data name="VolumeDeviceGuid" inType="win:GUID"/>
+     </template>
+     <template tid="CacheVolumeReadLatenciesArgs_V1">
+      <data name="VolumeDeviceGuid" inType="win:GUID"/>
+      <data name="PeriodDurationMicroSec" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket1" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket2" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket3" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket4" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket5" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket6" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket7" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket8" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket9" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket10" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket11" inType="win:UInt64"/>
+      <data name="SynchronousReadIoCountsBucket12" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket1" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket2" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket3" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket4" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket5" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket6" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket7" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket8" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket9" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket10" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket11" inType="win:UInt64"/>
+      <data name="SynchronousReadTotalLatencyBucket12" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket1" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket2" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket3" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket4" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket5" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket6" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket7" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket8" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket9" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket10" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket11" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingIoCountsBucket12" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket1" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket2" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket3" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket4" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket5" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket6" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket7" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket8" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket9" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket10" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket11" inType="win:UInt64"/>
+      <data name="SynchronousReadNonBlockingTotalLatencyBucket12" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket1" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket2" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket3" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket4" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket5" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket6" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket7" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket8" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket9" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket10" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket11" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoCountsBucket12" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket1" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket2" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket3" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket4" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket5" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket6" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket7" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket8" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket9" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket10" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket11" inType="win:UInt64"/>
+      <data name="AsynchronousReadTotalLatencyBucket12" inType="win:UInt64"/>
+     </template>
+     <template tid="CacheVolumeWriteLatenciesArgs_V1">
+      <data name="VolumeDeviceGuid" inType="win:GUID"/>
+      <data name="PeriodDurationMicroSec" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket1" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket2" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket3" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket4" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket5" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket6" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket7" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket8" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket9" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket10" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket11" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoCountsBucket12" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket1" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket2" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket3" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket4" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket5" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket6" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket7" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket8" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket9" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket10" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket11" inType="win:UInt64"/>
+      <data name="SynchronousWriteTotalLatencyBucket12" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket1" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket2" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket3" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket4" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket5" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket6" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket7" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket8" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket9" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket10" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket11" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingIoCountsBucket12" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket1" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket2" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket3" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket4" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket5" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket6" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket7" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket8" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket9" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket10" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket11" inType="win:UInt64"/>
+      <data name="SynchronousWriteNonBlockingTotalLatencyBucket12" inType="win:UInt64"/>
+     </template>
+     <template tid="CacheVolumePeriodicArgs_V2">
+      <data name="VolumeDeviceGuid" inType="win:GUID"/>
+      <data name="PeriodDurationMicroSec" inType="win:UInt64"/>
+      <data name="TotalDirtyPages" inType="win:UInt64"/>
+      <data name="MaxDirtyPages" inType="win:UInt64"/>
+      <data name="TotalDirtyPageThreshold" inType="win:UInt64"/>
+      <data name="TopDirtyPageThreshold" inType="win:UInt64"/>
+      <data name="BottomDirtyPageThreshold" inType="win:UInt64"/>
+      <data name="DirtyPageSamples" inType="win:UInt64"/>
+      <data name="LazyWriterCalls" inType="win:UInt64"/>
+      <data name="TotalLazyWriterLatency" inType="win:UInt64"/>
+      <data name="TotalLazyWriterPagesFlushed" inType="win:UInt64"/>
+      <data name="LazyWriterAvgPagesPerSecond" inType="win:UInt64"/>
+      <data name="TotalPagesQueuedToDisk" inType="win:UInt64"/>
+      <data name="MaxPagesQueuedToDisk" inType="win:UInt64"/>
+      <data name="PagesQueuedToDiskSamples" inType="win:UInt64"/>
+      <data name="TotalLoggedPagesQueuedToDisk" inType="win:UInt64"/>
+      <data name="MaxLoggedPagesQueuedToDisk" inType="win:UInt64"/>
+      <data name="LoggedPagesQueuedToDiskSamples" inType="win:UInt64"/>
+      <data name="ReadTotalBytes" inType="win:UInt64"/>
+      <data name="ReadPagedInTotalBytes" inType="win:UInt64"/>
+      <data name="ReadAheadTotalBytes" inType="win:UInt64"/>
+      <data name="CacheHitRatio" inType="win:UInt64"/>
+      <data name="TotalWrites" inType="win:UInt64"/>
+      <data name="TotalHardThrottleWrites" inType="win:UInt64"/>
+      <data name="TotalSoftThrottleWrites" inType="win:UInt64"/>
+      <data name="TotalSynchronousReadIoCount" inType="win:UInt64"/>
+      <data name="TotalSynchronousNonBlockingReadIoCount" inType="win:UInt64"/>
+      <data name="TotalFailedSynchronousNonBlockingReadIoCount" inType="win:UInt64"/>
+      <data name="SynchronousReadIoMaxLatency" inType="win:UInt64"/>
+      <data name="SynchronousReadIoNonBlockingMaxLatency" inType="win:UInt64"/>
+      <data name="TotalSynchronousWriteIoCount" inType="win:UInt64"/>
+      <data name="TotalSynchronousNonBlockingWriteIoCount" inType="win:UInt64"/>
+      <data name="TotalFailedSynchronousNonBlockingWriteIoCount" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoMaxLatency" inType="win:UInt64"/>
+      <data name="SynchronousWriteIoNonBlockingMaxLatency" inType="win:UInt64"/>
+      <data name="TotalAsynchronousReadIoCount" inType="win:UInt64"/>
+      <data name="AsynchronousReadIoMaxLatency" inType="win:UInt64"/>
+     </template>
+     <template tid="CacheGlobalPeriodicArgs_V3">
+      <data name="PeriodDurationMicroSec" inType="win:UInt64"/>
+      <data name="EventSamples" inType="win:UInt64"/>
+      <data name="TotalNumberOfMappedVacbs" inType="win:UInt64"/>
+      <data name="TotalPartitionSamples" inType="win:UInt64"/>
+      <data name="TotalVolumeSamples" inType="win:UInt64"/>
+      <data name="TotalPagesYetToWrite" inType="win:UInt64"/>
+      <data name="TotalDirtyPages" inType="win:UInt64"/>
+      <data name="TotalAvailablePages" inType="win:UInt64"/>
+      <data name="TotalNumberWorkerThreads" inType="win:UInt64"/>
+      <data name="TotalNumberActiveWorkerThreads" inType="win:UInt64"/>
+      <data name="TotalAverageAvailablePages" inType="win:UInt64"/>
+      <data name="TotalAverageDirtyPages" inType="win:UInt64"/>
+      <data name="CcCopyReadCalls" inType="win:UInt64"/>
+      <data name="CcAsyncCopyReadCalls" inType="win:UInt64"/>
+      <data name="CcCopyWriteCalls" inType="win:UInt64"/>
+      <data name="CcSetValidDataCalls" inType="win:UInt64"/>
+      <data name="CcFlushCacheCalls" inType="win:UInt64"/>
+      <data name="NumberOfNUMANodes" inType="win:UInt32"/>
+     </template>
+     <template tid="CacheGlobalPeriodicArgs_V4">
+      <data name="PeriodDurationMicroSec" inType="win:UInt64"/>
+      <data name="EventSamples" inType="win:UInt64"/>
+      <data name="TotalNumberOfMappedVacbs" inType="win:UInt64"/>
+      <data name="TotalPartitionSamples" inType="win:UInt64"/>
+      <data name="TotalVolumeSamples" inType="win:UInt64"/>
+      <data name="TotalPagesYetToWrite" inType="win:UInt64"/>
+      <data name="TotalDirtyPages" inType="win:UInt64"/>
+      <data name="TotalAvailablePages" inType="win:UInt64"/>
+      <data name="TotalPhysicalPages" inType="win:UInt64"/>
+      <data name="TotalNumberWorkerThreads" inType="win:UInt64"/>
+      <data name="TotalNumberActiveWorkerThreads" inType="win:UInt64"/>
+      <data name="TotalAverageAvailablePages" inType="win:UInt64"/>
+      <data name="TotalAverageDirtyPages" inType="win:UInt64"/>
+      <data name="CcCopyReadCalls" inType="win:UInt64"/>
+      <data name="CcAsyncCopyReadCalls" inType="win:UInt64"/>
+      <data name="CcCopyWriteCalls" inType="win:UInt64"/>
+      <data name="CcSetValidDataCalls" inType="win:UInt64"/>
+      <data name="CcFlushCacheCalls" inType="win:UInt64"/>
+      <data name="NumberOfNUMANodes" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="task_VolumeCacheMap" value="VolumeCacheMap"/>
+    <string id="task_CacheGlobalPeriodic" value="CacheGlobalPeriodic"/>
+    <string id="task_CacheVolumePeriodic" value="CacheVolumePeriodic"/>
+    <string id="task_CacheVolumeReadLatencies" value="CacheVolumeReadLatencies"/>
+    <string id="task_CacheVolumeWriteLatencies" value="CacheVolumeWriteLatencies"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

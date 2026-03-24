@@ -1,0 +1,59 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-WinHttp-Diagnostics" guid="{64de121b-5f08-5853-ab48-7758f2ea2dd3}" resourceFileName="Microsoft-Windows-WinHttp-Diagnostics" messageFileName="Microsoft-Windows-WinHttp-Diagnostics" symbol="MicrosoftWindowsWinHttpDiagnostics" source="Xml" >
+    <keywords>
+     <keyword name="HttpDiagInfoKeyword" message="$(string.keyword_HttpDiagInfoKeyword)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="HttpDiagInfoKeyword" template="task_0Args"/>
+     <event value="0" symbol="task_0_V1" version="1" task="task_0" level="win:Informational" keywords="HttpDiagInfoKeyword" template="task_0Args_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ModuleName" inType="win:UnicodeString"/>
+      <data name="EventGuid" inType="win:GUID"/>
+      <data name="HttpProtVersion" inType="win:UInt32"/>
+      <data name="Transport" inType="win:UnicodeString"/>
+      <data name="Host" inType="win:AnsiString"/>
+      <data name="Path" inType="win:AnsiString"/>
+      <data name="HttpMethod" inType="win:AnsiString"/>
+      <data name="HttpStatus" inType="win:UInt32"/>
+      <data name="FaultReason" inType="win:UnicodeString"/>
+      <data name="FaultCode" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ParseBuffer" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0Args_V1">
+      <data name="ProcessName" inType="win:UnicodeString"/>
+      <data name="ModuleName" inType="win:UnicodeString"/>
+      <data name="SessionGuid" inType="win:GUID"/>
+      <data name="EventGuid" inType="win:GUID"/>
+      <data name="HttpProtVersion" inType="win:UInt32"/>
+      <data name="Transport" inType="win:UnicodeString"/>
+      <data name="Host" inType="win:AnsiString"/>
+      <data name="Path" inType="win:AnsiString"/>
+      <data name="HttpMethod" inType="win:AnsiString"/>
+      <data name="HttpStatus" inType="win:UInt32"/>
+      <data name="FaultReason" inType="win:UnicodeString"/>
+      <data name="FaultCode" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="ParseBuffer" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_HttpDiagInfoKeyword" value="HttpDiagInfoKeyword"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

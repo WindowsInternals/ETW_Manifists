@@ -1,0 +1,93 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Crashdump" guid="{ecdaacfa-6fe9-477c-b5f0-85b76f8f50aa}" resourceFileName="Microsoft-Windows-Crashdump" messageFileName="Microsoft-Windows-Crashdump" symbol="MicrosoftWindowsCrashdump" source="Xml" >
+    <keywords>
+     <keyword name="Config" message="$(string.keyword_Config)" mask="0x1"/>
+     <keyword name="EarlyCrashDump" message="$(string.keyword_EarlyCrashDump)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="Resumecapablesettings" message="$(string.task_Resumecapablesettings)" value="1">
+>
+      <opcodes>
+       <opcode name="OpCodeResumeCapable" message="$(string.opcode_ResumecapablesettingsOpCodeResumeCapable)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="Transfersizesettings" message="$(string.task_Transfersizesettings)" value="2">
+>
+      <opcodes>
+       <opcode name="OpCodeTransferSizes" message="$(string.opcode_TransfersizesettingsOpCodeTransferSizes)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="Createdumpfilesettings" message="$(string.task_Createdumpfilesettings)" value="3">
+>
+      <opcodes>
+       <opcode name="OpCodeCreateDumpFile" message="$(string.opcode_CreatedumpfilesettingsOpCodeCreateDumpFile)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="EarlyCrashDump" message="$(string.task_EarlyCrashDump)" value="4">
+>
+      <opcodes>
+       <opcode name="Supported" message="$(string.opcode_EarlyCrashDumpSupported)" value="11"/>
+       <opcode name="Initialized" message="$(string.opcode_EarlyCrashDumpInitialized)" value="12"/>
+       <opcode name="PrepareFailure" message="$(string.opcode_EarlyCrashDumpPrepareFailure)" value="13"/>
+       <opcode name="InitializationFailure" message="$(string.opcode_EarlyCrashDumpInitializationFailure)" value="14"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="ResumecapablesettingsOpCodeResumeCapable_V1" version="1" task="Resumecapablesettings" opcode="OpCodeResumeCapable" level="win:Informational" keywords="Config" template="ResumecapablesettingsOpCodeResumeCapableArgs_V1"/>
+     <event value="2" symbol="TransfersizesettingsOpCodeTransferSizes_V1" version="1" task="Transfersizesettings" opcode="OpCodeTransferSizes" level="win:Informational" keywords="Config" template="TransfersizesettingsOpCodeTransferSizesArgs_V1"/>
+     <event value="3" symbol="CreatedumpfilesettingsOpCodeCreateDumpFile_V2" version="2" task="Createdumpfilesettings" opcode="OpCodeCreateDumpFile" level="win:Informational" keywords="Config" template="CreatedumpfilesettingsOpCodeCreateDumpFileArgs_V2"/>
+     <event value="4" symbol="EarlyCrashDumpPrepareFailure" version="0" task="EarlyCrashDump" opcode="PrepareFailure" level="win:Warning" keywords="EarlyCrashDump" template="EarlyCrashDumpPrepareFailureArgs"/>
+     <event value="5" symbol="EarlyCrashDumpInitializationFailure" version="0" task="EarlyCrashDump" opcode="InitializationFailure" level="win:Error" keywords="EarlyCrashDump" template="EarlyCrashDumpInitializationFailureArgs"/>
+     <event value="6" symbol="EarlyCrashDumpInitialized" version="0" task="EarlyCrashDump" opcode="Initialized" level="win:Informational" keywords="EarlyCrashDump"/>
+     <event value="7" symbol="EarlyCrashDumpSupported" version="0" task="EarlyCrashDump" opcode="Supported" level="win:Informational" keywords="EarlyCrashDump"/>
+    </events>
+    <templates>
+     <template tid="EarlyCrashDumpPrepareFailureArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="FailurePoint" inType="win:UInt32"/>
+     </template>
+     <template tid="EarlyCrashDumpInitializationFailureArgs">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="ResumecapablesettingsOpCodeResumeCapableArgs_V1">
+      <data name="ResumeCapable" inType="win:Boolean"/>
+      <data name="ReasonCodes" inType="win:UInt32"/>
+     </template>
+     <template tid="TransfersizesettingsOpCodeTransferSizesArgs_V1">
+      <data name="Minimum" inType="win:UInt32"/>
+      <data name="Maximum" inType="win:UInt32"/>
+     </template>
+     <template tid="CreatedumpfilesettingsOpCodeCreateDumpFileArgs_V2">
+      <data name="IoSpaceEnabled" inType="win:Boolean"/>
+      <data name="PhysicalMemorySizeInBytes" inType="win:UInt64"/>
+      <data name="DumpFileSizeInBytes" inType="win:UInt64"/>
+      <data name="CreateDumpFileDurationInMs" inType="win:UInt64"/>
+      <data name="LargeDumpThresholdGB" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Config" value="Config"/>
+    <string id="keyword_EarlyCrashDump" value="EarlyCrashDump"/>
+    <string id="task_Resumecapablesettings" value="Resumecapablesettings"/>
+    <string id="opcode_ResumecapablesettingsOpCodeResumeCapable" value="OpCodeResumeCapable"/>
+    <string id="task_Transfersizesettings" value="Transfersizesettings"/>
+    <string id="opcode_TransfersizesettingsOpCodeTransferSizes" value="OpCodeTransferSizes"/>
+    <string id="task_Createdumpfilesettings" value="Createdumpfilesettings"/>
+    <string id="opcode_CreatedumpfilesettingsOpCodeCreateDumpFile" value="OpCodeCreateDumpFile"/>
+    <string id="task_EarlyCrashDump" value="EarlyCrashDump"/>
+    <string id="opcode_EarlyCrashDumpSupported" value="Supported"/>
+    <string id="opcode_EarlyCrashDumpInitialized" value="Initialized"/>
+    <string id="opcode_EarlyCrashDumpPrepareFailure" value="PrepareFailure"/>
+    <string id="opcode_EarlyCrashDumpInitializationFailure" value="InitializationFailure"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

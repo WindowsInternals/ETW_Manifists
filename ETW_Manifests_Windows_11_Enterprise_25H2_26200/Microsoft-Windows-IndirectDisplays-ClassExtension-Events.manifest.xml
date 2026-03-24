@@ -1,0 +1,496 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-IndirectDisplays-ClassExtension-Events" guid="{966cd1c0-3f69-42ad-9877-517dce8462b4}" resourceFileName="Microsoft-Windows-IndirectDisplays-ClassExtension-Events" messageFileName="Microsoft-Windows-IndirectDisplays-ClassExtension-Events" symbol="MicrosoftWindowsIndirectDisplaysClassExtensionEvents" source="Xml" >
+    <keywords>
+     <keyword name="DdiCalls" message="$(string.keyword_DdiCalls)" mask="0x1"/>
+     <keyword name="DdiCallbacks" message="$(string.keyword_DdiCallbacks)" mask="0x2"/>
+     <keyword name="ObjectLifetime" message="$(string.keyword_ObjectLifetime)" mask="0x4"/>
+     <keyword name="FrameProcessing" message="$(string.keyword_FrameProcessing)" mask="0x8"/>
+    </keywords>
+    <tasks>
+     <task name="AdapterInitAsync" message="$(string.task_AdapterInitAsync)" value="100"/>
+     <task name="AdapterInitFinished" message="$(string.task_AdapterInitFinished)" value="101"/>
+     <task name="AdapterCommit" message="$(string.task_AdapterCommit)" value="102"/>
+     <task name="AdapterUpdateMaxBandwidth" message="$(string.task_AdapterUpdateMaxBandwidth)" value="103"/>
+     <task name="AdapterDestroy" message="$(string.task_AdapterDestroy)" value="104"/>
+     <task name="AdapterCommitPaths" message="$(string.task_AdapterCommitPaths)" value="105"/>
+     <task name="AdapterDisplayConfigUpdatePath" message="$(string.task_AdapterDisplayConfigUpdatePath)" value="106"/>
+     <task name="AdapterQueryTargetInfo" message="$(string.task_AdapterQueryTargetInfo)" value="107"/>
+     <task name="AdapterDisplayConfigUpdate" message="$(string.task_AdapterDisplayConfigUpdate)" value="108"/>
+     <task name="MonitorCreate" message="$(string.task_MonitorCreate)" value="200"/>
+     <task name="MonitorArrival" message="$(string.task_MonitorArrival)" value="201"/>
+     <task name="MonitorDeparture" message="$(string.task_MonitorDeparture)" value="202"/>
+     <task name="MonitorGetDefaultDescriptionModes" message="$(string.task_MonitorGetDefaultDescriptionModes)" value="203"/>
+     <task name="MonitorQueryTargetModes" message="$(string.task_MonitorQueryTargetModes)" value="204"/>
+     <task name="MonitorAssignSwapChain" message="$(string.task_MonitorAssignSwapChain)" value="205"/>
+     <task name="MonitorUnassignSwapChain" message="$(string.task_MonitorUnassignSwapChain)" value="206"/>
+     <task name="MonitorI2CTransmit" message="$(string.task_MonitorI2CTransmit)" value="207"/>
+     <task name="MonitorI2CReceive" message="$(string.task_MonitorI2CReceive)" value="208"/>
+     <task name="MonitorSetGammaRamp" message="$(string.task_MonitorSetGammaRamp)" value="209"/>
+     <task name="MonitorUpdateModes" message="$(string.task_MonitorUpdateModes)" value="210"/>
+     <task name="MonitorSetupHardwareCursor" message="$(string.task_MonitorSetupHardwareCursor)" value="211"/>
+     <task name="MonitorQueryHardwareCursor" message="$(string.task_MonitorQueryHardwareCursor)" value="212"/>
+     <task name="MonitorTraceTargetModes" message="$(string.task_MonitorTraceTargetModes)" value="213"/>
+     <task name="MonitorTraceMonitorModes" message="$(string.task_MonitorTraceMonitorModes)" value="214"/>
+     <task name="MonitorOpmSetMftContext" message="$(string.task_MonitorOpmSetMftContext)" value="215"/>
+     <task name="MonitorGetPhysicalSize" message="$(string.task_MonitorGetPhysicalSize)" value="216"/>
+     <task name="MonitorQueryTargetModes2" message="$(string.task_MonitorQueryTargetModes2)" value="217"/>
+     <task name="MonitorUpdateModes2" message="$(string.task_MonitorUpdateModes2)" value="218"/>
+     <task name="MonitorSetDefaultHdrMetaData" message="$(string.task_MonitorSetDefaultHdrMetaData)" value="219"/>
+     <task name="MonitorI2CTransmitAndReceive" message="$(string.task_MonitorI2CTransmitAndReceive)" value="220"/>
+     <task name="SwapchainCreate" message="$(string.task_SwapchainCreate)" value="300"/>
+     <task name="SwapchainDestroy" message="$(string.task_SwapchainDestroy)" value="301"/>
+     <task name="SwapchainSetDevice" message="$(string.task_SwapchainSetDevice)" value="302"/>
+     <task name="SwapchainReleaseAndAcquireBuffer" message="$(string.task_SwapchainReleaseAndAcquireBuffer)" value="303"/>
+     <task name="SwapchainGetDirtyRects" message="$(string.task_SwapchainGetDirtyRects)" value="304"/>
+     <task name="SwapchainGetMoveRegions" message="$(string.task_SwapchainGetMoveRegions)" value="305"/>
+     <task name="SwapchainDriverFrameProcessingTask" message="$(string.task_SwapchainDriverFrameProcessingTask)" value="306"/>
+     <task name="SwapchainFinishProcessingFrame" message="$(string.task_SwapchainFinishProcessingFrame)" value="307"/>
+     <task name="SwapchainReportFrameStatistics" message="$(string.task_SwapchainReportFrameStatistics)" value="308"/>
+     <task name="SwapchainReportFrameStatisticsStep" message="$(string.task_SwapchainReportFrameStatisticsStep)" value="309"/>
+     <task name="SwapchainInSystemMemory" message="$(string.task_SwapchainInSystemMemory)" value="310"/>
+     <task name="SwapchainReleaseAndAcquireSystemBuffer" message="$(string.task_SwapchainReleaseAndAcquireSystemBuffer)" value="311"/>
+     <task name="SwapchainGetPhysicallyContiguousAddress" message="$(string.task_SwapchainGetPhysicallyContiguousAddress)" value="312"/>
+     <task name="SwapchainReleaseAndAcquireBuffer2" message="$(string.task_SwapchainReleaseAndAcquireBuffer2)" value="313"/>
+     <task name="OpmGetCertificateSize" message="$(string.task_OpmGetCertificateSize)" value="400"/>
+     <task name="OpmGetCertificate" message="$(string.task_OpmGetCertificate)" value="401"/>
+     <task name="OpmCreateProtectedOutput" message="$(string.task_OpmCreateProtectedOutput)" value="402"/>
+     <task name="OpmGetRandomNumber" message="$(string.task_OpmGetRandomNumber)" value="403"/>
+     <task name="OpmSetSigningKeyAndSequenceNumbers" message="$(string.task_OpmSetSigningKeyAndSequenceNumbers)" value="404"/>
+     <task name="OpmGetInformation" message="$(string.task_OpmGetInformation)" value="405"/>
+     <task name="OpmConfigureProtectedOutput" message="$(string.task_OpmConfigureProtectedOutput)" value="406"/>
+     <task name="OpmDestroyProtectedOutput" message="$(string.task_OpmDestroyProtectedOutput)" value="407"/>
+     <task name="DeviceParseMonitorDescription" message="$(string.task_DeviceParseMonitorDescription)" value="500"/>
+     <task name="Watchdog" message="$(string.task_Watchdog)" value="501"/>
+     <task name="ProcessDdi" message="$(string.task_ProcessDdi)" value="502"/>
+     <task name="ProcessKernelRequest" message="$(string.task_ProcessKernelRequest)" value="503"/>
+     <task name="DeviceParseMonitorDescription2" message="$(string.task_DeviceParseMonitorDescription2)" value="504"/>
+     <task name="CommitVidPn" message="$(string.task_CommitVidPn)" value="600"/>
+     <task name="SetTimings" message="$(string.task_SetTimings)" value="601"/>
+     <task name="SetTimingsPath" message="$(string.task_SetTimingsPath)" value="602"/>
+    </tasks>
+    <maps>
+     <valueMap name="DescriptorType">
+      <map value="0x0" message="$(string.map_DescriptorTypeNone)"/>
+      <map value="0x1" message="$(string.map_DescriptorTypeEDID)"/>
+      <map value="0x2" message="$(string.map_DescriptorTypeDisplayID)"/>
+     </valueMap>
+     <bitMap name="FrameStatsFlags">
+      <map value="0x1" message="$(string.map_FrameStatsFlagsReducedColorFidelity)"/>
+     </bitMap>
+     <bitMap name="BitsPerComponent">
+      <map value="0x1" message="$(string.map_BitsPerComponent6)"/>
+      <map value="0x2" message="$(string.map_BitsPerComponent8)"/>
+      <map value="0x4" message="$(string.map_BitsPerComponent10)"/>
+      <map value="0x8" message="$(string.map_BitsPerComponent12)"/>
+      <map value="0x10" message="$(string.map_BitsPerComponent14)"/>
+      <map value="0x20" message="$(string.map_BitsPerComponent16)"/>
+     </bitMap>
+     <valueMap name="ColorSpace">
+      <map value="0x0" message="$(string.map_ColorSpaceUninitialized)"/>
+      <map value="0x1" message="$(string.map_ColorSpaceSDR)"/>
+      <map value="0x2" message="$(string.map_ColorSpaceHDR10)"/>
+      <map value="0x3" message="$(string.map_ColorSpaceSDRWCG)"/>
+     </valueMap>
+     <valueMap name="ColorMode">
+      <map value="0x0" message="$(string.map_ColorModeUninitialized)"/>
+      <map value="0x1" message="$(string.map_ColorModeSDR)"/>
+      <map value="0x2" message="$(string.map_ColorModeSDRWCG)"/>
+      <map value="0x3" message="$(string.map_ColorModeHDR)"/>
+     </valueMap>
+     <valueMap name="MetaDataType">
+      <map value="0x0" message="$(string.map_MetaDataTypeUninitialized)"/>
+      <map value="0x1" message="$(string.map_MetaDataTypeDefault)"/>
+      <map value="0x2" message="$(string.map_MetaDataTypeUnchanged)"/>
+      <map value="0x3" message="$(string.map_MetaDataTypeNew)"/>
+     </valueMap>
+     <bitMap name="TargetCaps">
+      <map value="0x1" message="$(string.map_TargetCapsWideColorSpace)"/>
+      <map value="0x2" message="$(string.map_TargetCapsHighColorSpace)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="1" symbol="AdapterInitAsync" version="0" task="AdapterInitAsync" level="win:Always" keywords="DdiCalls"/>
+     <event value="2" symbol="AdapterInitFinished" version="0" task="AdapterInitFinished" level="win:Always" keywords="DdiCallbacks" template="AdapterInitFinishedArgs"/>
+     <event value="3" symbol="AdapterCommitStart" version="0" task="AdapterCommit" opcode="win:Start" level="win:Always" keywords="DdiCallbacks" template="AdapterCommitStartArgs"/>
+     <event value="4" symbol="AdapterUpdateMaxBandwidth" version="0" task="AdapterUpdateMaxBandwidth" level="win:Always" keywords="DdiCalls" template="AdapterUpdateMaxBandwidthArgs"/>
+     <event value="5" symbol="AdapterDestroy" version="0" task="AdapterDestroy" level="win:Always" keywords="DdiCalls" template="AdapterInitFinishedArgs"/>
+     <event value="6" symbol="MonitorCreate" version="0" task="MonitorCreate" level="win:Always" keywords="DdiCalls" template="MonitorCreateArgs"/>
+     <event value="7" symbol="MonitorArrival" version="0" task="MonitorArrival" level="win:Always" keywords="DdiCalls" template="MonitorArrivalArgs"/>
+     <event value="8" symbol="MonitorDeparture" version="0" task="MonitorDeparture" level="win:Always" keywords="DdiCalls" template="MonitorArrivalArgs"/>
+     <event value="9" symbol="MonitorGetDefaultDescriptionModes" version="0" task="MonitorGetDefaultDescriptionModes" level="win:Always" keywords="DdiCallbacks" template="MonitorGetDefaultDescriptionModesArgs"/>
+     <event value="10" symbol="MonitorQueryTargetModes" version="0" task="MonitorQueryTargetModes" level="win:Always" keywords="DdiCallbacks" template="MonitorGetDefaultDescriptionModesArgs"/>
+     <event value="11" symbol="MonitorAssignSwapChain" version="0" task="MonitorAssignSwapChain" level="win:Always" keywords="DdiCallbacks" template="MonitorAssignSwapChainArgs"/>
+     <event value="12" symbol="MonitorUnassignSwapChain" version="0" task="MonitorUnassignSwapChain" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="13" symbol="MonitorI2CTransmit" version="0" task="MonitorI2CTransmit" level="win:Always" keywords="DdiCallbacks" template="MonitorI2CTransmitArgs"/>
+     <event value="14" symbol="MonitorI2CReceive" version="0" task="MonitorI2CReceive" level="win:Always" keywords="DdiCallbacks" template="MonitorI2CReceiveArgs"/>
+     <event value="15" symbol="MonitorSetGammaRamp" version="0" task="MonitorSetGammaRamp" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="16" symbol="MonitorUpdateModes" version="0" task="MonitorUpdateModes" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="17" symbol="MonitorSetupHardwareCursor" version="0" task="MonitorSetupHardwareCursor" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="18" symbol="MonitorQueryHardwareCursor" version="0" task="MonitorQueryHardwareCursor" level="win:Always" keywords="DdiCallbacks" template="MonitorQueryHardwareCursorArgs"/>
+     <event value="19" symbol="SwapchainCreate" version="0" task="SwapchainCreate" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="20" symbol="SwapchainDestroy" version="0" task="SwapchainDestroy" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="21" symbol="SwapchainSetDevice" version="0" task="SwapchainSetDevice" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="22" symbol="SwapchainReleaseAndAcquireBuffer" version="0" task="SwapchainReleaseAndAcquireBuffer" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="23" symbol="SwapchainGetDirtyRects" version="0" task="SwapchainGetDirtyRects" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="24" symbol="SwapchainGetMoveRegions" version="0" task="SwapchainGetMoveRegions" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="25" symbol="SwapchainFinishProcessingFrame" version="0" task="SwapchainFinishProcessingFrame" level="win:Always" keywords="DdiCallbacks" template="SwapchainFinishProcessingFrameArgs"/>
+     <event value="26" symbol="SwapchainReportFrameStatistics" version="0" task="SwapchainReportFrameStatistics" level="win:Always" keywords="DdiCallbacks" template="SwapchainReportFrameStatisticsArgs"/>
+     <event value="27" symbol="OpmGetCertificateSize" version="0" task="OpmGetCertificateSize" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="28" symbol="OpmGetCertificate" version="0" task="OpmGetCertificate" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="29" symbol="OpmCreateProtectedOutput" version="0" task="OpmCreateProtectedOutput" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="30" symbol="OpmGetRandomNumber" version="0" task="OpmGetRandomNumber" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="31" symbol="OpmSetSigningKeyAndSequenceNumbers" version="0" task="OpmSetSigningKeyAndSequenceNumbers" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="32" symbol="OpmGetInformation" version="0" task="OpmGetInformation" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="33" symbol="OpmConfigureProtectedOutput" version="0" task="OpmConfigureProtectedOutput" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="34" symbol="OpmDestroyProtectedOutput" version="0" task="OpmDestroyProtectedOutput" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="35" symbol="ProcessDdiStart" version="0" task="ProcessDdi" opcode="win:Start" level="win:Always" keywords="DdiCalls"/>
+     <event value="36" symbol="MonitorTraceTargetModes" version="0" task="MonitorTraceTargetModes" level="win:Always" keywords="DdiCallbacks" template="MonitorTraceTargetModesArgs"/>
+     <event value="37" symbol="MonitorTraceMonitorModes" version="0" task="MonitorTraceMonitorModes" level="win:Always" keywords="DdiCallbacks" template="MonitorTraceMonitorModesArgs"/>
+     <event value="38" symbol="WatchdogStart" version="0" task="Watchdog" opcode="win:Start" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="39" symbol="WatchdogStop" version="0" task="Watchdog" opcode="win:Stop" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="40" symbol="DeviceParseMonitorDescription" version="0" task="DeviceParseMonitorDescription" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="41" symbol="AdapterCommitPaths" version="0" task="AdapterCommitPaths" level="win:Always" keywords="DdiCallbacks" template="AdapterCommitPathsArgs"/>
+     <event value="42" symbol="SwapchainReportFrameStatisticsStep" version="0" task="SwapchainReportFrameStatisticsStep" level="win:Always" keywords="DdiCallbacks" template="SwapchainReportFrameStatisticsStepArgs"/>
+     <event value="43" symbol="MonitorOpmSetMftContext" version="0" task="MonitorOpmSetMftContext" level="win:Always" keywords="DdiCallbacks" template="MonitorOpmSetMftContextArgs"/>
+     <event value="44" symbol="MonitorGetPhysicalSize" version="0" task="MonitorGetPhysicalSize" level="win:Always" keywords="DdiCallbacks" template="MonitorGetPhysicalSizeArgs"/>
+     <event value="45" symbol="AdapterDisplayConfigUpdatePath" version="0" task="AdapterDisplayConfigUpdatePath" level="win:Always" keywords="DdiCalls" template="AdapterDisplayConfigUpdatePathArgs"/>
+     <event value="46" symbol="SwapchainInSystemMemory" version="0" task="SwapchainInSystemMemory" level="win:Always" keywords="DdiCallbacks" template="SwapchainInSystemMemoryArgs"/>
+     <event value="47" symbol="SwapchainReleaseAndAcquireSystemBuffer" version="0" task="SwapchainReleaseAndAcquireSystemBuffer" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="48" symbol="SwapchainGetPhysicallyContiguousAddress" version="0" task="SwapchainGetPhysicallyContiguousAddress" level="win:Always" keywords="DdiCallbacks" template="SwapchainInSystemMemoryArgs"/>
+     <event value="49" symbol="SwapchainDriverFrameProcessingTaskStart" version="0" task="SwapchainDriverFrameProcessingTask" opcode="win:Start" level="win:Always" keywords="DdiCallbacks" template="SwapchainDriverFrameProcessingTaskStartArgs"/>
+     <event value="50" symbol="SwapchainDriverFrameProcessingTaskStop" version="0" task="SwapchainDriverFrameProcessingTask" opcode="win:Stop" level="win:Always" keywords="DdiCallbacks" template="SwapchainDriverFrameProcessingTaskStopArgs"/>
+     <event value="51" symbol="ProcessDdiStop" version="0" task="ProcessDdi" opcode="win:Stop" level="win:Always" keywords="DdiCalls"/>
+     <event value="52" symbol="ProcessKernelRequestStart" version="0" task="ProcessKernelRequest" opcode="win:Start" level="win:Always" keywords="DdiCalls" template="ProcessKernelRequestStartArgs"/>
+     <event value="53" symbol="ProcessKernelRequestStop" version="0" task="ProcessKernelRequest" opcode="win:Stop" level="win:Always" keywords="DdiCalls"/>
+     <event value="54" symbol="SwapchainReleaseAndAcquireBuffer2" version="0" task="SwapchainReleaseAndAcquireBuffer2" level="win:Always" keywords="DdiCallbacks" template="SwapchainCreateArgs"/>
+     <event value="55" symbol="DeviceParseMonitorDescription2" version="0" task="DeviceParseMonitorDescription2" level="win:Always" keywords="DdiCallbacks"/>
+     <event value="56" symbol="MonitorQueryTargetModes2" version="0" task="MonitorQueryTargetModes2" level="win:Always" keywords="DdiCallbacks" template="MonitorGetDefaultDescriptionModesArgs"/>
+     <event value="57" symbol="MonitorUpdateModes2" version="0" task="MonitorUpdateModes2" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="58" symbol="AdapterQueryTargetInfo" version="0" task="AdapterQueryTargetInfo" level="win:Always" keywords="DdiCallbacks" template="AdapterQueryTargetInfoArgs"/>
+     <event value="59" symbol="MonitorSetDefaultHdrMetaData" version="0" task="MonitorSetDefaultHdrMetaData" level="win:Always" keywords="DdiCallbacks" template="MonitorArrivalArgs"/>
+     <event value="60" symbol="AdapterDisplayConfigUpdateStart" version="0" task="AdapterDisplayConfigUpdate" opcode="win:Start" level="win:Always" keywords="DdiCalls" template="AdapterCommitStartArgs"/>
+     <event value="61" symbol="CommitVidPnStart" version="0" task="CommitVidPn" opcode="win:Start" level="win:Always" keywords="DdiCalls" template="CommitVidPnStartArgs"/>
+     <event value="62" symbol="CommitVidPnStop" version="0" task="CommitVidPn" opcode="win:Stop" level="win:Always" keywords="DdiCalls" template="CommitVidPnStopArgs"/>
+     <event value="63" symbol="SetTimingsStart" version="0" task="SetTimings" opcode="win:Start" level="win:Always" keywords="DdiCallbacks" template="SetTimingsStartArgs"/>
+     <event value="64" symbol="SetTimingsStop" version="0" task="SetTimings" opcode="win:Stop" level="win:Always" keywords="DdiCallbacks" template="CommitVidPnStopArgs"/>
+     <event value="65" symbol="AdapterCommitStop" version="0" task="AdapterCommit" opcode="win:Stop" level="win:Always" keywords="DdiCallbacks" template="AdapterCommitStartArgs"/>
+     <event value="66" symbol="AdapterDisplayConfigUpdateStop" version="0" task="AdapterDisplayConfigUpdate" opcode="win:Stop" level="win:Always" keywords="DdiCalls" template="AdapterInitFinishedArgs"/>
+     <event value="67" symbol="SetTimingsPath" version="0" task="SetTimingsPath" level="win:Always" keywords="DdiCallbacks" template="SetTimingsPathArgs"/>
+     <event value="68" symbol="MonitorI2CTransmitAndReceive" version="0" task="MonitorI2CTransmitAndReceive" level="win:Always" keywords="DdiCallbacks" template="MonitorI2CTransmitAndReceiveArgs"/>
+    </events>
+    <templates>
+     <template tid="AdapterInitFinishedArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+     </template>
+     <template tid="AdapterCommitStartArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="PathCount" inType="win:UInt32"/>
+     </template>
+     <template tid="AdapterUpdateMaxBandwidthArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="Bandwidth" inType="win:UInt64"/>
+     </template>
+     <template tid="MonitorCreateArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="DescriptorType" inType="win:UInt32" map="DescriptorType"/>
+     </template>
+     <template tid="MonitorArrivalArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorGetDefaultDescriptionModesArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="InputModeCount" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorAssignSwapChainArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="Handle" inType="win:Pointer"/>
+     </template>
+     <template tid="MonitorI2CTransmitArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="SevenBitI2CAddress" inType="win:UInt32"/>
+      <data name="DataSizeInBytes" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorI2CReceiveArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="SevenBitI2CAddress" inType="win:UInt32"/>
+      <data name="DataSizeInBytes" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorQueryHardwareCursorArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="LastShapeId" inType="win:UInt32"/>
+     </template>
+     <template tid="SwapchainCreateArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="WddmAdapterLuid" inType="win:UInt64"/>
+      <data name="VidPnTargetId" inType="win:UInt32"/>
+     </template>
+     <template tid="SwapchainFinishProcessingFrameArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="WddmAdapterLuid" inType="win:UInt64"/>
+      <data name="VidPnTargetId" inType="win:UInt32"/>
+      <data name="FrameNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="SwapchainReportFrameStatisticsArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="PresentationFrameNumber" inType="win:UInt32"/>
+      <data name="FrameStatus" inType="win:UInt32"/>
+      <data name="ReencodeNumber" inType="win:UInt32"/>
+      <data name="FrameSliceTotal" inType="win:UInt32"/>
+      <data name="CurrentSlice" inType="win:UInt32"/>
+      <data name="FrameAcquireQpcTime" inType="win:UInt64"/>
+      <data name="FrameProcessingStepsCount" inType="win:UInt32"/>
+      <data name="SendStartQpcTime" inType="win:UInt64"/>
+      <data name="SendStopQpcTime" inType="win:UInt64"/>
+      <data name="SendCompleteQpcTime" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt32" map="FrameStatsFlags"/>
+      <data name="ProcessedPixelCount" inType="win:UInt32"/>
+      <data name="FrameSizeInBytes" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorTraceTargetModesArgs">
+      <data name="Valid" inType="win:Boolean"/>
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="TargetModeIndex" inType="win:UInt32"/>
+      <data name="PixelRate" inType="win:UInt64"/>
+      <data name="VSync" inType="win:Float"/>
+      <data name="ActiveWidth" inType="win:UInt32"/>
+      <data name="ActiveHeight" inType="win:UInt32"/>
+      <data name="RequiredBandwidth" inType="win:UInt64"/>
+      <data name="RgbBitsPerComponent" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorTraceMonitorModesArgs">
+      <data name="Valid" inType="win:Boolean"/>
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="MonitorModeIndex" inType="win:UInt32"/>
+      <data name="PixelRate" inType="win:UInt64"/>
+      <data name="VSync" inType="win:Float"/>
+      <data name="ActiveWidth" inType="win:UInt32"/>
+      <data name="ActiveHeight" inType="win:UInt32"/>
+      <data name="VSyncDivider" inType="win:UInt16"/>
+      <data name="RequiredBandwidth" inType="win:UInt64"/>
+      <data name="RgbBitsPerComponent" inType="win:UInt32" map="BitsPerComponent"/>
+      <data name="Preferred" inType="win:Boolean"/>
+     </template>
+     <template tid="AdapterCommitPathsArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="PathIndex" inType="win:UInt32"/>
+      <data name="MonitorConnectorIndex" inType="win:UInt32"/>
+      <data name="PathFlags" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="ColorSpace" inType="win:UInt32" map="ColorSpace"/>
+      <data name="RgbBitsPerComponent" inType="win:UInt32"/>
+     </template>
+     <template tid="SwapchainReportFrameStatisticsStepArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="PresentationFrameNumber" inType="win:UInt32"/>
+      <data name="ReencodeNumber" inType="win:UInt32"/>
+      <data name="CurrentSlice" inType="win:UInt32"/>
+      <data name="StepIndex" inType="win:UInt32"/>
+      <data name="StepType" inType="win:UInt32"/>
+      <data name="QpcTime" inType="win:UInt64"/>
+      <data name="Data1" inType="win:UInt32"/>
+      <data name="Data2" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorOpmSetMftContextArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="MftContext" inType="win:UInt64"/>
+     </template>
+     <template tid="MonitorGetPhysicalSizeArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="PhysicalWidth" inType="win:UInt32"/>
+      <data name="PhysicalHeight" inType="win:UInt32"/>
+     </template>
+     <template tid="AdapterDisplayConfigUpdatePathArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="PathIndex" inType="win:UInt32"/>
+      <data name="MonitorConnectorIndex" inType="win:UInt32"/>
+      <data name="Flags" inType="win:HexInt32"/>
+      <data name="Positionx" inType="win:Int32"/>
+      <data name="Positiony" inType="win:Int32"/>
+      <data name="ResolutionWidth" inType="win:UInt32"/>
+      <data name="ResolutionHeight" inType="win:UInt32"/>
+      <data name="VSync" inType="win:Float"/>
+      <data name="VSyncDivider" inType="win:UInt32"/>
+      <data name="Rotation" inType="win:UInt32"/>
+      <data name="ColorMode" inType="win:UInt32" map="ColorMode"/>
+      <data name="DPI" inType="win:UInt32"/>
+      <data name="PhysicalSizeWidth" inType="win:UInt32"/>
+      <data name="PhysicalSizeHeight" inType="win:UInt32"/>
+      <data name="ColorimetryFlags" inType="win:UInt32"/>
+      <data name="HostAdapterLuid" inType="win:UInt64"/>
+      <data name="HostVidPnTargetId" inType="win:UInt32"/>
+     </template>
+     <template tid="SwapchainInSystemMemoryArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+     </template>
+     <template tid="SwapchainDriverFrameProcessingTaskStartArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="WddmAdapterLuid" inType="win:UInt64"/>
+      <data name="VidPnTargetId" inType="win:UInt32"/>
+      <data name="FrameNumber" inType="win:UInt32"/>
+      <data name="FramePresentQpcTime" inType="win:UInt64"/>
+      <data name="DirtyRectCount" inType="win:UInt32"/>
+      <data name="MetaDataType" inType="win:UInt32" map="MetaDataType"/>
+     </template>
+     <template tid="SwapchainDriverFrameProcessingTaskStopArgs">
+      <data name="SwapChainPointer" inType="win:Pointer"/>
+      <data name="WddmAdapterLuid" inType="win:UInt64"/>
+      <data name="VidPnTargetId" inType="win:UInt32"/>
+      <data name="FrameNumber" inType="win:UInt32"/>
+      <data name="DriverProcessingTimeInMicroseconds" inType="win:UInt64"/>
+      <data name="DriverProcessingTimeStartQpc" inType="win:UInt64"/>
+      <data name="DriverProcessingTimeStopQpc" inType="win:UInt64"/>
+      <data name="QPCFrequency" inType="win:UInt64"/>
+     </template>
+     <template tid="ProcessKernelRequestStartArgs">
+      <data name="KernelEventId" inType="win:UInt32"/>
+     </template>
+     <template tid="AdapterQueryTargetInfoArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="TargetId" inType="win:UInt32"/>
+      <data name="TargetCaps" inType="win:UInt32" map="TargetCaps"/>
+     </template>
+     <template tid="CommitVidPnStartArgs">
+      <data name="KmdAdapterHandle" inType="win:UInt64"/>
+      <data name="AffectedSourceId" inType="win:UInt32"/>
+     </template>
+     <template tid="CommitVidPnStopArgs">
+      <data name="KmdAdapterHandle" inType="win:UInt64"/>
+     </template>
+     <template tid="SetTimingsStartArgs">
+      <data name="KmdAdapterHandle" inType="win:UInt64"/>
+      <data name="PathCount" inType="win:UInt32"/>
+     </template>
+     <template tid="SetTimingsPathArgs">
+      <data name="KmdAdapterHandle" inType="win:UInt64"/>
+      <data name="PathIndex" inType="win:UInt32"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="Changed" inType="win:Boolean"/>
+      <data name="VidPnSourceId" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="ColorSpace" inType="win:UInt32"/>
+      <data name="RgbBitsPerComponent" inType="win:UInt32"/>
+     </template>
+     <template tid="MonitorI2CTransmitAndReceiveArgs">
+      <data name="IddAdapterLuid" inType="win:UInt64"/>
+      <data name="ConnectorIndex" inType="win:UInt32"/>
+      <data name="TransmitSevenBitI2CAddress" inType="win:UInt32"/>
+      <data name="TransmitDataSizeInBytes" inType="win:UInt32"/>
+      <data name="ReceiveSevenBitI2CAddress" inType="win:UInt32"/>
+      <data name="ReceiveDataSizeInBytes" inType="win:UInt32"/>
+      <data name="ReceiveFlags" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_DdiCalls" value="DdiCalls"/>
+    <string id="keyword_DdiCallbacks" value="DdiCallbacks"/>
+    <string id="keyword_ObjectLifetime" value="ObjectLifetime"/>
+    <string id="keyword_FrameProcessing" value="FrameProcessing"/>
+    <string id="task_AdapterInitAsync" value="AdapterInitAsync"/>
+    <string id="task_AdapterInitFinished" value="AdapterInitFinished"/>
+    <string id="task_AdapterCommit" value="AdapterCommit"/>
+    <string id="task_AdapterUpdateMaxBandwidth" value="AdapterUpdateMaxBandwidth"/>
+    <string id="task_AdapterDestroy" value="AdapterDestroy"/>
+    <string id="task_AdapterCommitPaths" value="AdapterCommitPaths"/>
+    <string id="task_AdapterDisplayConfigUpdatePath" value="AdapterDisplayConfigUpdatePath"/>
+    <string id="task_AdapterQueryTargetInfo" value="AdapterQueryTargetInfo"/>
+    <string id="task_AdapterDisplayConfigUpdate" value="AdapterDisplayConfigUpdate"/>
+    <string id="task_MonitorCreate" value="MonitorCreate"/>
+    <string id="task_MonitorArrival" value="MonitorArrival"/>
+    <string id="task_MonitorDeparture" value="MonitorDeparture"/>
+    <string id="task_MonitorGetDefaultDescriptionModes" value="MonitorGetDefaultDescriptionModes"/>
+    <string id="task_MonitorQueryTargetModes" value="MonitorQueryTargetModes"/>
+    <string id="task_MonitorAssignSwapChain" value="MonitorAssignSwapChain"/>
+    <string id="task_MonitorUnassignSwapChain" value="MonitorUnassignSwapChain"/>
+    <string id="task_MonitorI2CTransmit" value="MonitorI2CTransmit"/>
+    <string id="task_MonitorI2CReceive" value="MonitorI2CReceive"/>
+    <string id="task_MonitorSetGammaRamp" value="MonitorSetGammaRamp"/>
+    <string id="task_MonitorUpdateModes" value="MonitorUpdateModes"/>
+    <string id="task_MonitorSetupHardwareCursor" value="MonitorSetupHardwareCursor"/>
+    <string id="task_MonitorQueryHardwareCursor" value="MonitorQueryHardwareCursor"/>
+    <string id="task_MonitorTraceTargetModes" value="MonitorTraceTargetModes"/>
+    <string id="task_MonitorTraceMonitorModes" value="MonitorTraceMonitorModes"/>
+    <string id="task_MonitorOpmSetMftContext" value="MonitorOpmSetMftContext"/>
+    <string id="task_MonitorGetPhysicalSize" value="MonitorGetPhysicalSize"/>
+    <string id="task_MonitorQueryTargetModes2" value="MonitorQueryTargetModes2"/>
+    <string id="task_MonitorUpdateModes2" value="MonitorUpdateModes2"/>
+    <string id="task_MonitorSetDefaultHdrMetaData" value="MonitorSetDefaultHdrMetaData"/>
+    <string id="task_MonitorI2CTransmitAndReceive" value="MonitorI2CTransmitAndReceive"/>
+    <string id="task_SwapchainCreate" value="SwapchainCreate"/>
+    <string id="task_SwapchainDestroy" value="SwapchainDestroy"/>
+    <string id="task_SwapchainSetDevice" value="SwapchainSetDevice"/>
+    <string id="task_SwapchainReleaseAndAcquireBuffer" value="SwapchainReleaseAndAcquireBuffer"/>
+    <string id="task_SwapchainGetDirtyRects" value="SwapchainGetDirtyRects"/>
+    <string id="task_SwapchainGetMoveRegions" value="SwapchainGetMoveRegions"/>
+    <string id="task_SwapchainDriverFrameProcessingTask" value="SwapchainDriverFrameProcessingTask"/>
+    <string id="task_SwapchainFinishProcessingFrame" value="SwapchainFinishProcessingFrame"/>
+    <string id="task_SwapchainReportFrameStatistics" value="SwapchainReportFrameStatistics"/>
+    <string id="task_SwapchainReportFrameStatisticsStep" value="SwapchainReportFrameStatisticsStep"/>
+    <string id="task_SwapchainInSystemMemory" value="SwapchainInSystemMemory"/>
+    <string id="task_SwapchainReleaseAndAcquireSystemBuffer" value="SwapchainReleaseAndAcquireSystemBuffer"/>
+    <string id="task_SwapchainGetPhysicallyContiguousAddress" value="SwapchainGetPhysicallyContiguousAddress"/>
+    <string id="task_SwapchainReleaseAndAcquireBuffer2" value="SwapchainReleaseAndAcquireBuffer2"/>
+    <string id="task_OpmGetCertificateSize" value="OpmGetCertificateSize"/>
+    <string id="task_OpmGetCertificate" value="OpmGetCertificate"/>
+    <string id="task_OpmCreateProtectedOutput" value="OpmCreateProtectedOutput"/>
+    <string id="task_OpmGetRandomNumber" value="OpmGetRandomNumber"/>
+    <string id="task_OpmSetSigningKeyAndSequenceNumbers" value="OpmSetSigningKeyAndSequenceNumbers"/>
+    <string id="task_OpmGetInformation" value="OpmGetInformation"/>
+    <string id="task_OpmConfigureProtectedOutput" value="OpmConfigureProtectedOutput"/>
+    <string id="task_OpmDestroyProtectedOutput" value="OpmDestroyProtectedOutput"/>
+    <string id="task_DeviceParseMonitorDescription" value="DeviceParseMonitorDescription"/>
+    <string id="task_Watchdog" value="Watchdog"/>
+    <string id="task_ProcessDdi" value="ProcessDdi"/>
+    <string id="task_ProcessKernelRequest" value="ProcessKernelRequest"/>
+    <string id="task_DeviceParseMonitorDescription2" value="DeviceParseMonitorDescription2"/>
+    <string id="task_CommitVidPn" value="CommitVidPn"/>
+    <string id="task_SetTimings" value="SetTimings"/>
+    <string id="task_SetTimingsPath" value="SetTimingsPath"/>
+    <string id="map_DescriptorTypeNone" value="None"/>
+    <string id="map_DescriptorTypeEDID" value="EDID"/>
+    <string id="map_DescriptorTypeDisplayID" value="DisplayID"/>
+    <string id="map_FrameStatsFlagsReducedColorFidelity" value="ReducedColorFidelity"/>
+    <string id="map_BitsPerComponent6" value="6"/>
+    <string id="map_BitsPerComponent8" value="8"/>
+    <string id="map_BitsPerComponent10" value="10"/>
+    <string id="map_BitsPerComponent12" value="12"/>
+    <string id="map_BitsPerComponent14" value="14"/>
+    <string id="map_BitsPerComponent16" value="16"/>
+    <string id="map_ColorSpaceUninitialized" value="Uninitialized"/>
+    <string id="map_ColorSpaceSDR" value="SDR"/>
+    <string id="map_ColorSpaceHDR10" value="HDR10"/>
+    <string id="map_ColorSpaceSDRWCG" value="SDRWCG"/>
+    <string id="map_ColorModeUninitialized" value="Uninitialized"/>
+    <string id="map_ColorModeSDR" value="SDR"/>
+    <string id="map_ColorModeSDRWCG" value="SDRWCG"/>
+    <string id="map_ColorModeHDR" value="HDR"/>
+    <string id="map_MetaDataTypeUninitialized" value="Uninitialized"/>
+    <string id="map_MetaDataTypeDefault" value="Default"/>
+    <string id="map_MetaDataTypeUnchanged" value="Unchanged"/>
+    <string id="map_MetaDataTypeNew" value="New"/>
+    <string id="map_TargetCapsWideColorSpace" value="WideColorSpace"/>
+    <string id="map_TargetCapsHighColorSpace" value="HighColorSpace"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

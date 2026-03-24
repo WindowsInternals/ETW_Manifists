@@ -1,0 +1,86 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PerfNet" guid="{cab2b8a5-49b9-4eec-b1b0-fac21da05a3b}" resourceFileName="Microsoft-Windows-PerfNet" messageFileName="Microsoft-Windows-PerfNet" symbol="MicrosoftWindowsPerfNet" source="Xml" >
+    <keywords>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1000" symbol="task_0_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_0Args_V1"/>
+     <event value="1001" symbol="task_01001_V1" version="1" task="task_0" level="win:Warning" keywords="Debug"/>
+     <event value="2000" symbol="task_02000_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_0Args_V1"/>
+     <event value="2001" symbol="task_02001_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_0Args_V1"/>
+     <event value="2001" symbol="task_02001_V2" version="2" task="task_0" level="win:Warning" keywords="Debug" template="task_02002Args_V1"/>
+     <event value="2002" symbol="task_02002_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_02002Args_V1"/>
+     <event value="2003" symbol="task_02003_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_02002Args_V1"/>
+     <event value="2004" symbol="task_02004_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_02002Args_V1"/>
+     <event value="2005" symbol="task_02005_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_02005Args_V1"/>
+     <event value="2006" symbol="task_02006_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_02005Args_V1"/>
+     <event value="2007" symbol="task_02007_V1" version="1" task="task_0" level="win:Warning" keywords="Debug"/>
+     <event value="3000" symbol="task_03000_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="3099" symbol="task_03099_V1" version="1" task="task_0" level="win:Informational" keywords="Debug"/>
+     <event value="3100" symbol="task_03100_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug" template="task_03100Args_V1"/>
+     <event value="3101" symbol="task_03101_V1" version="1" task="task_0" level="win:Warning" keywords="Debug"/>
+     <event value="3102" symbol="task_03102_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="3103" symbol="task_03103_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_03103Args_V1"/>
+     <event value="3199" symbol="task_03199_V1" version="1" task="task_0" level="win:Informational" keywords="Debug"/>
+     <event value="3200" symbol="task_03200_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4000" symbol="task_04000_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4001" symbol="task_04001_V1" version="1" task="task_0" level="win:Error" keywords="Debug"/>
+     <event value="4002" symbol="task_04002_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4010" symbol="task_04010_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_04010Args_V1"/>
+     <event value="4099" symbol="task_04099_V1" version="1" task="task_0" level="win:Informational" keywords="Debug"/>
+     <event value="4100" symbol="task_04100_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug" template="task_03100Args_V1"/>
+     <event value="4105" symbol="task_04105_V1" version="1" task="task_0" level="win:Informational" keywords="Debug" template="task_04105Args_V1"/>
+     <event value="4106" symbol="task_04106_V1" version="1" task="task_0" level="win:Warning" keywords="Debug"/>
+     <event value="4108" symbol="task_04108_V1" version="1" task="task_0" level="win:Error" keywords="Debug" template="task_04105Args_V1"/>
+     <event value="4110" symbol="task_04110_V1" version="1" task="task_0" level="win:Error" keywords="Debug" template="task_04105Args_V1"/>
+     <event value="4111" symbol="task_04111_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4112" symbol="task_04112_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_03103Args_V1"/>
+     <event value="4113" symbol="task_04113_V1" version="1" task="task_0" level="win:Error" keywords="Debug" template="task_04105Args_V1"/>
+     <event value="4114" symbol="task_04114_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+     <event value="4116" symbol="task_04116_V1" version="1" task="task_0" level="win:Warning" keywords="Debug" template="task_03103Args_V1"/>
+     <event value="4121" symbol="task_04121_V1" version="1" task="task_0" level="win:Warning" keywords="Debug"/>
+     <event value="4199" symbol="task_04199_V1" version="1" task="task_0" level="win:Informational" keywords="Debug"/>
+     <event value="4200" symbol="task_04200_V1" version="1" task="task_0" level="win:Verbose" keywords="Debug"/>
+    </events>
+    <templates>
+     <template tid="task_0Args_V1">
+      <data name="Win32Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02002Args_V1">
+      <data name="NTSTATUS" inType="win:UInt32"/>
+     </template>
+     <template tid="task_02005Args_V1">
+      <data name="NTSTATUS" inType="win:UInt32"/>
+      <data name="IOCompletionNTSTATUS" inType="win:UInt32"/>
+     </template>
+     <template tid="task_03100Args_V1">
+      <data name="ValueName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_03103Args_V1">
+      <data name="Available" inType="win:UInt32"/>
+      <data name="Required" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04010Args_V1">
+      <data name="Error" inType="win:UInt32"/>
+     </template>
+     <template tid="task_04105Args_V1">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

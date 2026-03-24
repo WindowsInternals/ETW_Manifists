@@ -1,0 +1,63 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SEC-WFP" guid="{62834e12-795f-5ab2-b404-8d6d870dbbeb}" resourceFileName="Microsoft-Windows-SEC-WFP" messageFileName="Microsoft-Windows-SEC-WFP" symbol="MicrosoftWindowsSECWFP" source="Xml" >
+    <keywords>
+     <keyword name="Event_WfpCallout" message="$(string.keyword_Event_WfpCallout)" mask="0x1"/>
+     <keyword name="Event_WfpCalloutExclusion" message="$(string.keyword_Event_WfpCalloutExclusion)" mask="0x2"/>
+     <keyword name="Event_WfpCalloutAudit" message="$(string.keyword_Event_WfpCalloutAudit)" mask="0x4"/>
+     <keyword name="Event_WfpWfpGuardBlock" message="$(string.keyword_Event_WfpWfpGuardBlock)" mask="0x8"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_01_V1" version="1" task="task_0" level="win:Informational" keywords="Event_WfpCallout" template="task_01Args_V1"/>
+     <event value="2" symbol="task_02_V1" version="1" task="task_0" level="win:Informational" keywords="Event_WfpCalloutExclusion" template="task_01Args_V1"/>
+     <event value="3" symbol="task_03_V1" version="1" task="task_0" level="win:Informational" keywords="Event_WfpCalloutAudit" template="task_01Args_V1"/>
+     <event value="4" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="Event_WfpWfpGuardBlock" template="task_0Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="ModuleTag" inType="win:UInt32"/>
+      <data name="RuleId" inType="win:UInt32"/>
+      <data name="LayerId" inType="win:UInt16"/>
+      <data name="Action" inType="win:UInt32"/>
+      <data name="FieldId" inType="win:UInt16"/>
+      <data name="MatchType" inType="win:UInt32"/>
+      <data name="DataType" inType="win:UInt32"/>
+      <data name="IsBlocked" inType="win:Boolean"/>
+     </template>
+     <template tid="task_01Args_V1">
+      <data name="ModuleTag" inType="win:UInt16"/>
+      <data name="ProcessId" inType="win:HexInt32"/>
+      <data name="ProcessStartKey" inType="win:UInt64"/>
+      <data name="ProcessCreationTime" inType="win:Int64"/>
+      <data name="IsBlocked" inType="win:Boolean"/>
+      <data name="Direction" inType="win:UInt32"/>
+      <data name="IsExistingConnection" inType="win:Boolean"/>
+      <data name="FilterId" inType="win:UInt64"/>
+      <data name="LayerId" inType="win:UInt16"/>
+      <data name="InterfaceIndex" inType="win:UInt32"/>
+      <data name="Protocol" inType="win:UInt8"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Event_WfpCallout" value="Event_WfpCallout"/>
+    <string id="keyword_Event_WfpCalloutExclusion" value="Event_WfpCalloutExclusion"/>
+    <string id="keyword_Event_WfpCalloutAudit" value="Event_WfpCalloutAudit"/>
+    <string id="keyword_Event_WfpWfpGuardBlock" value="Event_WfpWfpGuardBlock"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

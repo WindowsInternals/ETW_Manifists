@@ -1,0 +1,132 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-StorageManagement-PartUtil" guid="{93db76c2-63ab-5de1-88b3-c068686675b8}" resourceFileName="Microsoft-Windows-StorageManagement-PartUtil" messageFileName="Microsoft-Windows-StorageManagement-PartUtil" symbol="MicrosoftWindowsStorageManagementPartUtil" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="PartitionStyle">
+      <map value="0x0" message="$(string.map_PartitionStyleMBR)"/>
+      <map value="0x1" message="$(string.map_PartitionStyleGPT)"/>
+      <map value="0x2" message="$(string.map_PartitionStyleRAW)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="101" symbol="task_0_V1" version="1" task="task_0" level="win:Error" template="task_0Args_V1"/>
+     <event value="102" symbol="task_0102_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="103" symbol="task_0103_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="104" symbol="task_0104_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="105" symbol="task_0105_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="106" symbol="task_0106_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="107" symbol="task_0107_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="108" symbol="task_0108_V1" version="1" task="task_0" level="win:Informational" template="task_0102Args_V1"/>
+     <event value="109" symbol="task_0109_V1" version="1" task="task_0" level="win:Error" template="task_0103Args_V1"/>
+     <event value="110" symbol="task_0110_V1" version="1" task="task_0" level="win:Informational" template="task_0110Args_V1"/>
+     <event value="111" symbol="task_0111_V1" version="1" task="task_0" level="win:Error" template="task_0111Args_V1"/>
+     <event value="112" symbol="task_0112_V1" version="1" task="task_0" level="win:Informational" template="task_0112Args_V1"/>
+     <event value="113" symbol="task_0113_V1" version="1" task="task_0" level="win:Error" template="task_0Args_V1"/>
+     <event value="201" symbol="task_0201_V1" version="1" task="task_0" level="win:Error" template="task_0201Args_V1"/>
+     <event value="202" symbol="task_0202_V1" version="1" task="task_0" level="win:Informational" template="task_0202Args_V1"/>
+     <event value="203" symbol="task_0203_V1" version="1" task="task_0" level="win:Error" template="task_0203Args_V1"/>
+     <event value="204" symbol="task_0204_V1" version="1" task="task_0" level="win:Informational" template="task_0204Args_V1"/>
+     <event value="205" symbol="task_0205_V1" version="1" task="task_0" level="win:Error" template="task_0201Args_V1"/>
+     <event value="207" symbol="task_0207_V1" version="1" task="task_0" level="win:Error" template="task_0201Args_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0102Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskPath" inType="win:UnicodeString"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0103Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskPath" inType="win:UnicodeString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0110Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="PartitionStyle" inType="win:UInt32" map="PartitionStyle"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0111Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="PartitionStyle" inType="win:UInt32"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0112Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0201Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0202Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+      <data name="Alignment" inType="win:UInt32"/>
+      <data name="PartitionStyle" inType="win:UInt32"/>
+      <data name="MbrPartitionType" inType="win:UInt32"/>
+      <data name="MbrBootIndicator" inType="win:UInt32"/>
+      <data name="GptPartitionType" inType="win:GUID"/>
+      <data name="GptPartitionId" inType="win:GUID"/>
+      <data name="GptAttributes" inType="win:UInt64"/>
+      <data name="GptName" inType="win:UnicodeString"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0203Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+      <data name="Alignment" inType="win:UInt32"/>
+      <data name="PartitionStyle" inType="win:UInt32"/>
+      <data name="MbrPartitionType" inType="win:UInt32"/>
+      <data name="MbrBootIndicator" inType="win:UInt32"/>
+      <data name="GptPartitionType" inType="win:GUID"/>
+      <data name="GptPartitionId" inType="win:GUID"/>
+      <data name="GptAttributes" inType="win:UInt64"/>
+      <data name="GptName" inType="win:UnicodeString"/>
+      <data name="Callee" inType="win:AnsiString"/>
+      <data name="HResult" inType="win:Int32"/>
+     </template>
+     <template tid="task_0204Args_V1">
+      <data name="Function" inType="win:AnsiString"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="DurationInUs" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_PartitionStyleMBR" value="MBR"/>
+    <string id="map_PartitionStyleGPT" value="GPT"/>
+    <string id="map_PartitionStyleRAW" value="RAW"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,56 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-CPU-Partition" guid="{3a493674-937f-5a23-f598-d56b9bd10d28}" resourceFileName="Microsoft-Windows-Kernel-CPU-Partition" messageFileName="Microsoft-Windows-Kernel-CPU-Partition" symbol="MicrosoftWindowsKernelCPUPartition" source="Xml" >
+    <keywords>
+     <keyword name="CpuPartitionAffinityViolation" message="$(string.keyword_CpuPartitionAffinityViolation)" mask="0x1"/>
+     <keyword name="CpuPartitionDpcViolation" message="$(string.keyword_CpuPartitionDpcViolation)" mask="0x2"/>
+     <keyword name="CpuPartitionGenericDpcViolation" message="$(string.keyword_CpuPartitionGenericDpcViolation)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="CPUPartitionviolation" message="$(string.task_CPUPartitionviolation)" value="1">
+>
+      <opcodes>
+       <opcode name="AnaffinitizationrequestviolatedCPUPartitions" message="$(string.opcode_CPUPartitionviolationAnaffinitizationrequestviolatedCPUPartitions)" value="11"/>
+       <opcode name="ADPCschedulingrequestviolatedCPUPartitions" message="$(string.opcode_CPUPartitionviolationADPCschedulingrequestviolatedCPUPartitions)" value="12"/>
+       <opcode name="AgenericDPCcallrequestviolatedCPUPartitions" message="$(string.opcode_CPUPartitionviolationAgenericDPCcallrequestviolatedCPUPartitions)" value="13"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <events>
+     <event value="1" symbol="CPUPartitionviolationAnaffinitizationrequestviolatedCPUPartitions" version="0" task="CPUPartitionviolation" opcode="AnaffinitizationrequestviolatedCPUPartitions" level="win:Warning" keywords="CpuPartitionAffinityViolation" template="CPUPartitionviolationAnaffinitizationrequestviolatedCPUPartitionsArgs"/>
+     <event value="2" symbol="CPUPartitionviolationADPCschedulingrequestviolatedCPUPartitions" version="0" task="CPUPartitionviolation" opcode="ADPCschedulingrequestviolatedCPUPartitions" level="win:Warning" keywords="CpuPartitionDpcViolation" template="CPUPartitionviolationADPCschedulingrequestviolatedCPUPartitionsArgs"/>
+     <event value="3" symbol="CPUPartitionviolationAgenericDPCcallrequestviolatedCPUPartitions" version="0" task="CPUPartitionviolation" opcode="AgenericDPCcallrequestviolatedCPUPartitions" level="win:Warning" keywords="CpuPartitionGenericDpcViolation" template="CPUPartitionviolationAgenericDPCcallrequestviolatedCPUPartitionsArgs"/>
+    </events>
+    <templates>
+     <template tid="CPUPartitionviolationAnaffinitizationrequestviolatedCPUPartitionsArgs">
+      <data name="KernelAffinitization" inType="win:Boolean"/>
+      <data name="ThreadID" inType="win:UInt32"/>
+      <data name="GroupCount" inType="win:UInt16"/>
+      <data name="RequestedAffinity" inType="win:UInt8" count="GroupCount"/>
+     </template>
+     <template tid="CPUPartitionviolationADPCschedulingrequestviolatedCPUPartitionsArgs">
+      <data name="DeferredRoutineAddress" inType="win:Pointer"/>
+      <data name="RequestedProcessorNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="CPUPartitionviolationAgenericDPCcallrequestviolatedCPUPartitionsArgs">
+      <data name="DeferredRoutineAddress" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_CpuPartitionAffinityViolation" value="CpuPartitionAffinityViolation"/>
+    <string id="keyword_CpuPartitionDpcViolation" value="CpuPartitionDpcViolation"/>
+    <string id="keyword_CpuPartitionGenericDpcViolation" value="CpuPartitionGenericDpcViolation"/>
+    <string id="task_CPUPartitionviolation" value="CPUPartitionviolation"/>
+    <string id="opcode_CPUPartitionviolationAnaffinitizationrequestviolatedCPUPartitions" value="AnaffinitizationrequestviolatedCPUPartitions"/>
+    <string id="opcode_CPUPartitionviolationADPCschedulingrequestviolatedCPUPartitions" value="ADPCschedulingrequestviolatedCPUPartitions"/>
+    <string id="opcode_CPUPartitionviolationAgenericDPCcallrequestviolatedCPUPartitions" value="AgenericDPCcallrequestviolatedCPUPartitions"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,113 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-AppXDeployment-Server-UndockedDeh" guid="{43833e12-078d-4d7d-8aaf-ae8c8520f18c}" resourceFileName="Microsoft-Windows-AppXDeployment-Server-UndockedDeh" messageFileName="Microsoft-Windows-AppXDeployment-Server-UndockedDeh" symbol="MicrosoftWindowsAppXDeploymentServerUndockedDeh" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="AppXDeployment.Task.Server.OSIM" message="$(string.task_AppXDeployment.Task.Server.OSIM)" value="1"/>
+    </tasks>
+    <maps>
+     <valueMap name="DehPhaseEnumMap">
+      <map value="0x0" message="$(string.map_DehPhaseEnumMapPerUser)"/>
+      <map value="0x1" message="$(string.map_DehPhaseEnumMapPerMachine)"/>
+      <map value="0x2" message="$(string.map_DehPhaseEnumMapSingleton)"/>
+      <map value="0x3" message="$(string.map_DehPhaseEnumMapSystem)"/>
+      <map value="0x4" message="$(string.map_DehPhaseEnumMapOneTime)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="9000" symbol="AppXDeployment.Task.Server.OSIM" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="9001" symbol="AppXDeployment.Task.Server.OSIM9001" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="9002" symbol="AppXDeployment.Task.Server.OSIM9002" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="9003" symbol="AppXDeployment.Task.Server.OSIM9003" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="9004" symbol="AppXDeployment.Task.Server.OSIM9004" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="9005" symbol="AppXDeployment.Task.Server.OSIM9005" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Informational" template="AppXDeployment.Task.Server.OSIMArgs"/>
+     <event value="10001" symbol="AppXDeployment.Task.Server.OSIM10001" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Verbose" template="AppXDeployment.Task.Server.OSIM10001Args"/>
+     <event value="10002" symbol="AppXDeployment.Task.Server.OSIM10002" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Verbose" template="AppXDeployment.Task.Server.OSIM10002Args"/>
+     <event value="10003" symbol="AppXDeployment.Task.Server.OSIM10003" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10003Args"/>
+     <event value="10004" symbol="AppXDeployment.Task.Server.OSIM10004" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10004Args"/>
+     <event value="10005" symbol="AppXDeployment.Task.Server.OSIM10005" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10005Args"/>
+     <event value="10006" symbol="AppXDeployment.Task.Server.OSIM10006" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Verbose" template="AppXDeployment.Task.Server.OSIM10006Args"/>
+     <event value="10007" symbol="AppXDeployment.Task.Server.OSIM10007" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Verbose" template="AppXDeployment.Task.Server.OSIM10007Args"/>
+     <event value="10008" symbol="AppXDeployment.Task.Server.OSIM10008" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10008Args"/>
+     <event value="10009" symbol="AppXDeployment.Task.Server.OSIM10009" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10009Args"/>
+     <event value="10010" symbol="AppXDeployment.Task.Server.OSIM10010" version="0" task="AppXDeployment.Task.Server.OSIM" level="win:Error" template="AppXDeployment.Task.Server.OSIM10010Args"/>
+    </events>
+    <templates>
+     <template tid="AppXDeployment.Task.Server.OSIMArgs">
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="UndockedDehDllParent" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10001Args">
+      <data name="DllName" inType="win:UnicodeString"/>
+      <data name="DllPath" inType="win:UnicodeString"/>
+      <data name="DehPhase" inType="win:HexInt32" map="DehPhaseEnumMap"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10002Args">
+      <data name="DehName" inType="win:UnicodeString"/>
+      <data name="DehPhase" inType="win:HexInt32"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10003Args">
+      <data name="ExceptionWhatString" inType="win:AnsiString"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10004Args">
+      <data name="DehAction" inType="win:UnicodeString"/>
+      <data name="DehName" inType="win:UnicodeString"/>
+      <data name="DehPhase" inType="win:HexInt32"/>
+      <data name="DehState" inType="win:UInt32"/>
+      <data name="ExceptionWhatString" inType="win:AnsiString"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10005Args">
+      <data name="Operation" inType="win:UnicodeString"/>
+      <data name="EntryName" inType="win:UnicodeString"/>
+      <data name="SerializedEntry" inType="win:UnicodeString"/>
+      <data name="StepCounter" inType="win:UInt32"/>
+      <data name="ExceptionWhatString" inType="win:AnsiString"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10006Args">
+      <data name="DehName" inType="win:UnicodeString"/>
+      <data name="DehPhase" inType="win:HexInt32"/>
+      <data name="DehState" inType="win:UInt32"/>
+      <data name="IncomingPackage" inType="win:UnicodeString"/>
+      <data name="OutgoingPackage" inType="win:UnicodeString"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10007Args">
+      <data name="Direction" inType="win:UnicodeString"/>
+      <data name="DehName" inType="win:UnicodeString"/>
+      <data name="PackageFullName" inType="win:UnicodeString"/>
+      <data name="PostOsUpgrade" inType="win:Boolean"/>
+      <data name="DehPhase" inType="win:HexInt32"/>
+      <data name="DehState" inType="win:UInt32"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10008Args">
+      <data name="ItemCounter" inType="win:UInt32"/>
+      <data name="ItemName" inType="win:UnicodeString"/>
+      <data name="StepCounter" inType="win:UInt32"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10009Args">
+      <data name="ItemName" inType="win:UnicodeString"/>
+      <data name="StepCounter" inType="win:UInt32"/>
+     </template>
+     <template tid="AppXDeployment.Task.Server.OSIM10010Args">
+      <data name="File" inType="win:AnsiString"/>
+      <data name="Line" inType="win:UInt32"/>
+      <data name="ExceptionWhatString" inType="win:AnsiString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_AppXDeployment.Task.Server.OSIM" value="AppXDeployment.Task.Server.OSIM"/>
+    <string id="map_DehPhaseEnumMapPerUser" value="PerUser"/>
+    <string id="map_DehPhaseEnumMapPerMachine" value="PerMachine"/>
+    <string id="map_DehPhaseEnumMapSingleton" value="Singleton"/>
+    <string id="map_DehPhaseEnumMapSystem" value="System"/>
+    <string id="map_DehPhaseEnumMapOneTime" value="OneTime"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

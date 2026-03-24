@@ -1,0 +1,2230 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-SMBClient" guid="{988c59c5-0a1c-45b6-a555-0c62276e327d}" resourceFileName="Microsoft-Windows-SMBClient" messageFileName="Microsoft-Windows-SMBClient" symbol="MicrosoftWindowsSMBClient" source="Xml" >
+    <keywords>
+     <keyword name="Smb_Perf" message="$(string.keyword_Smb_Perf)" mask="0x1"/>
+     <keyword name="Networking_Perf" message="$(string.keyword_Networking_Perf)" mask="0x2"/>
+     <keyword name="Smb_Info" message="$(string.keyword_Smb_Info)" mask="0x4"/>
+     <keyword name="InfoCache_Info" message="$(string.keyword_InfoCache_Info)" mask="0x8"/>
+     <keyword name="Smb_TFO" message="$(string.keyword_Smb_TFO)" mask="0x10"/>
+     <keyword name="Smb_MultiChannel" message="$(string.keyword_Smb_MultiChannel)" mask="0x20"/>
+     <keyword name="Smb_Connectivity" message="$(string.keyword_Smb_Connectivity)" mask="0x40"/>
+     <keyword name="Smb_Authentication" message="$(string.keyword_Smb_Authentication)" mask="0x80"/>
+     <keyword name="Smb_Authorization" message="$(string.keyword_Smb_Authorization)" mask="0x100"/>
+     <keyword name="Smb_Security" message="$(string.keyword_Smb_Security)" mask="0x200"/>
+     <keyword name="Smb_Perf_IO" message="$(string.keyword_Smb_Perf_IO)" mask="0x400"/>
+     <keyword name="Smb_Perf_Summary" message="$(string.keyword_Smb_Perf_Summary)" mask="0x800"/>
+     <keyword name="Smb_Perf_Rundown" message="$(string.keyword_Smb_Perf_Rundown)" mask="0x1000"/>
+     <keyword name="Smb_Perf_IO_Optional" message="$(string.keyword_Smb_Perf_IO_Optional)" mask="0x2000"/>
+     <keyword name="Smb_Connectivity_Noisy" message="$(string.keyword_Smb_Connectivity_Noisy)" mask="0x10000"/>
+     <keyword name="PacketStart" message="$(string.keyword_PacketStart)" mask="0x40000000"/>
+     <keyword name="PacketEnd" message="$(string.keyword_PacketEnd)" mask="0x80000000"/>
+     <keyword name="ut:SendPath" message="$(string.keyword_ut:SendPath)" mask="0x100000000"/>
+     <keyword name="ut:ReceivePath" message="$(string.keyword_ut:ReceivePath)" mask="0x200000000"/>
+     <keyword name="keyword_40000000000" message="$(string.keyword_keyword_40000000000)" mask="0x40000000000"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="Smb2PerfRxContextStart" message="$(string.task_Smb2PerfRxContextStart)" value="1"/>
+     <task name="Smb2PerfExchangeStart" message="$(string.task_Smb2PerfExchangeStart)" value="2"/>
+     <task name="Smb2PerfBufferContextStart" message="$(string.task_Smb2PerfBufferContextStart)" value="3"/>
+     <task name="Smb2PerfWorkTransition" message="$(string.task_Smb2PerfWorkTransition)" value="7"/>
+     <task name="Smb2PerfRxContextReadSummary" message="$(string.task_Smb2PerfRxContextReadSummary)" value="8"/>
+     <task name="Smb2PerfRxContextWriteSummary" message="$(string.task_Smb2PerfRxContextWriteSummary)" value="9"/>
+     <task name="Smb2PerfRxContextCreateSummary" message="$(string.task_Smb2PerfRxContextCreateSummary)" value="10"/>
+     <task name="Smb2PerfRxContextCloseSummary" message="$(string.task_Smb2PerfRxContextCloseSummary)" value="11"/>
+     <task name="Smb2PerfRxContextQueryDirectorySummary" message="$(string.task_Smb2PerfRxContextQueryDirectorySummary)" value="12"/>
+     <task name="Smb2PerfRxContextFsctlSummary" message="$(string.task_Smb2PerfRxContextFsctlSummary)" value="13"/>
+     <task name="Smb2PerfExchangeReadSummary" message="$(string.task_Smb2PerfExchangeReadSummary)" value="14"/>
+     <task name="Smb2PerfExchangeWriteSummary" message="$(string.task_Smb2PerfExchangeWriteSummary)" value="15"/>
+     <task name="Smb2PerfExchangeCreateSummary" message="$(string.task_Smb2PerfExchangeCreateSummary)" value="16"/>
+     <task name="Smb2PerfExchangeCloseSummary" message="$(string.task_Smb2PerfExchangeCloseSummary)" value="17"/>
+     <task name="Smb2PerfExchangeQueryDirectorySummary" message="$(string.task_Smb2PerfExchangeQueryDirectorySummary)" value="18"/>
+     <task name="Smb2PerfExchangeFsctlSummary" message="$(string.task_Smb2PerfExchangeFsctlSummary)" value="19"/>
+     <task name="Smb2PerfBufferContextReadSummary" message="$(string.task_Smb2PerfBufferContextReadSummary)" value="20"/>
+     <task name="Smb2PerfBufferContextWriteSummary" message="$(string.task_Smb2PerfBufferContextWriteSummary)" value="21"/>
+     <task name="Smb2PerfBufferContextCreateSummary" message="$(string.task_Smb2PerfBufferContextCreateSummary)" value="22"/>
+     <task name="Smb2PerfBufferContextCloseSummary" message="$(string.task_Smb2PerfBufferContextCloseSummary)" value="23"/>
+     <task name="Smb2PerfBufferContextQueryDirectorySummary" message="$(string.task_Smb2PerfBufferContextQueryDirectorySummary)" value="24"/>
+     <task name="Smb2PerfBufferContextFsctlSummary" message="$(string.task_Smb2PerfBufferContextFsctlSummary)" value="25"/>
+     <task name="Smb2PerfFCBCaptureSummary" message="$(string.task_Smb2PerfFCBCaptureSummary)" value="26"/>
+     <task name="CreateSrvCallError" message="$(string.task_CreateSrvCallError)" value="27"/>
+     <task name="SessionSetupError" message="$(string.task_SessionSetupError)" value="28"/>
+     <task name="CreateVNetRootError" message="$(string.task_CreateVNetRootError)" value="29"/>
+     <task name="CreateFileError" message="$(string.task_CreateFileError)" value="30"/>
+     <task name="CreateFile" message="$(string.task_CreateFile)" value="31"/>
+     <task name="SmbSuspendExchange" message="$(string.task_SmbSuspendExchange)" value="32"/>
+     <task name="SmbResumeExchange" message="$(string.task_SmbResumeExchange)" value="33"/>
+     <task name="SmbResumeBufferCtxt" message="$(string.task_SmbResumeBufferCtxt)" value="34"/>
+     <task name="SmbMidWindowBlocked" message="$(string.task_SmbMidWindowBlocked)" value="35"/>
+     <task name="SmbRechunkRequest" message="$(string.task_SmbRechunkRequest)" value="36"/>
+     <task name="SmbInitializeMidWindow" message="$(string.task_SmbInitializeMidWindow)" value="37"/>
+     <task name="SmbMidWindowState" message="$(string.task_SmbMidWindowState)" value="38"/>
+     <task name="SmbTeardownMidWindow" message="$(string.task_SmbTeardownMidWindow)" value="39"/>
+     <task name="SmbDataReady" message="$(string.task_SmbDataReady)" value="40"/>
+     <task name="SmbSendCompletion" message="$(string.task_SmbSendCompletion)" value="41"/>
+     <task name="NetConnect" message="$(string.task_NetConnect)" value="42"/>
+     <task name="NetConnectCompletion" message="$(string.task_NetConnectCompletion)" value="43"/>
+     <task name="NetSend" message="$(string.task_NetSend)" value="44"/>
+     <task name="NetSendCompletion" message="$(string.task_NetSendCompletion)" value="45"/>
+     <task name="NetReceive" message="$(string.task_NetReceive)" value="46"/>
+     <task name="NetReceiveCompletion" message="$(string.task_NetReceiveCompletion)" value="47"/>
+     <task name="CompressionRequested" message="$(string.task_CompressionRequested)" value="48"/>
+     <task name="DecompressionFailure" message="$(string.task_DecompressionFailure)" value="49"/>
+     <task name="CompressionFailure" message="$(string.task_CompressionFailure)" value="50"/>
+     <task name="SmbSessionExpired" message="$(string.task_SmbSessionExpired)" value="51"/>
+     <task name="Smb3PartSPNReauth" message="$(string.task_Smb3PartSPNReauth)" value="52"/>
+     <task name="SmbReconnect" message="$(string.task_SmbReconnect)" value="53"/>
+     <task name="SmbDeferOpen" message="$(string.task_SmbDeferOpen)" value="54"/>
+     <task name="SmbUndeferOpen" message="$(string.task_SmbUndeferOpen)" value="55"/>
+     <task name="SmbSend" message="$(string.task_SmbSend)" value="56"/>
+     <task name="SmbReceive" message="$(string.task_SmbReceive)" value="57"/>
+     <task name="SmbReceiveInterim" message="$(string.task_SmbReceiveInterim)" value="58"/>
+     <task name="SmbReceiveAsync" message="$(string.task_SmbReceiveAsync)" value="59"/>
+     <task name="SmbRegistryKey" message="$(string.task_SmbRegistryKey)" value="60"/>
+     <task name="SmbUpdateInfoCache" message="$(string.task_SmbUpdateInfoCache)" value="61"/>
+     <task name="SmbFetchInfoCache" message="$(string.task_SmbFetchInfoCache)" value="62"/>
+     <task name="SmbInvalidateInfoCache" message="$(string.task_SmbInvalidateInfoCache)" value="63"/>
+     <task name="SmbUpdateFNFCache" message="$(string.task_SmbUpdateFNFCache)" value="64"/>
+     <task name="SmbFetchFNFCache" message="$(string.task_SmbFetchFNFCache)" value="65"/>
+     <task name="SmbInvalidateFNFCache" message="$(string.task_SmbInvalidateFNFCache)" value="66"/>
+     <task name="SmbPopulateDirCache" message="$(string.task_SmbPopulateDirCache)" value="67"/>
+     <task name="SmbFetchDirCache" message="$(string.task_SmbFetchDirCache)" value="68"/>
+     <task name="SessionStateTransition" message="$(string.task_SessionStateTransition)" value="69"/>
+     <task name="VNetRootStateTransition" message="$(string.task_VNetRootStateTransition)" value="70"/>
+     <task name="OpenHandleStateTransition" message="$(string.task_OpenHandleStateTransition)" value="71"/>
+     <task name="NoSMB1ObservedInLastPeriod" message="$(string.task_NoSMB1ObservedInLastPeriod)" value="72"/>
+     <task name="PersistentHandleFailure" message="$(string.task_PersistentHandleFailure)" value="73"/>
+     <task name="ResilientHandleFailure" message="$(string.task_ResilientHandleFailure)" value="74"/>
+     <task name="HandleOpenFailure" message="$(string.task_HandleOpenFailure)" value="75"/>
+     <task name="ServerNetworkInterfaceInvalid" message="$(string.task_ServerNetworkInterfaceInvalid)" value="76"/>
+     <task name="WskConnectFailure" message="$(string.task_WskConnectFailure)" value="77"/>
+     <task name="RdmaConnectFailure" message="$(string.task_RdmaConnectFailure)" value="78"/>
+     <task name="WskConnectSuccess" message="$(string.task_WskConnectSuccess)" value="79"/>
+     <task name="RdmaConnectSuccess" message="$(string.task_RdmaConnectSuccess)" value="80"/>
+     <task name="WskGetAddressInfoFailure" message="$(string.task_WskGetAddressInfoFailure)" value="81"/>
+     <task name="SetSocketSecurityFailure" message="$(string.task_SetSocketSecurityFailure)" value="82"/>
+     <task name="IPSecFailure" message="$(string.task_IPSecFailure)" value="83"/>
+     <task name="NetworkConnectFailure" message="$(string.task_NetworkConnectFailure)" value="84"/>
+     <task name="DisconnectIndication" message="$(string.task_DisconnectIndication)" value="85"/>
+     <task name="SessionFailure" message="$(string.task_SessionFailure)" value="86"/>
+     <task name="SessionEstablished" message="$(string.task_SessionEstablished)" value="87"/>
+     <task name="ShareConnectionFailure" message="$(string.task_ShareConnectionFailure)" value="88"/>
+     <task name="ShareConnectionEstablished" message="$(string.task_ShareConnectionEstablished)" value="89"/>
+     <task name="ExpiredExchange" message="$(string.task_ExpiredExchange)" value="90"/>
+     <task name="TcpIpTransportArrival" message="$(string.task_TcpIpTransportArrival)" value="91"/>
+     <task name="TcpIpTransportRemoval" message="$(string.task_TcpIpTransportRemoval)" value="92"/>
+     <task name="TdiTransportArrival" message="$(string.task_TdiTransportArrival)" value="93"/>
+     <task name="TdiTransportRemoval" message="$(string.task_TdiTransportRemoval)" value="94"/>
+     <task name="WitnessRegistration" message="$(string.task_WitnessRegistration)" value="95"/>
+     <task name="WitnessDeregistration" message="$(string.task_WitnessDeregistration)" value="96"/>
+     <task name="NegotiateFailure" message="$(string.task_NegotiateFailure)" value="97"/>
+     <task name="CloseFailure" message="$(string.task_CloseFailure)" value="98"/>
+     <task name="RdmaFallback" message="$(string.task_RdmaFallback)" value="99"/>
+     <task name="WitnessMove" message="$(string.task_WitnessMove)" value="100"/>
+     <task name="WitnessMoveSuccess" message="$(string.task_WitnessMoveSuccess)" value="101"/>
+     <task name="WitnessMoveFailure" message="$(string.task_WitnessMoveFailure)" value="102"/>
+     <task name="MultiChannelNetworkConnectFailure" message="$(string.task_MultiChannelNetworkConnectFailure)" value="103"/>
+     <task name="HungConnectionFailure" message="$(string.task_HungConnectionFailure)" value="104"/>
+     <task name="ConnectionForceDisconnected" message="$(string.task_ConnectionForceDisconnected)" value="105"/>
+     <task name="ConnectionDisconnectStateCleared" message="$(string.task_ConnectionDisconnectStateCleared)" value="106"/>
+     <task name="NegotiateResponseEncryptionCapabilitiesFailure" message="$(string.task_NegotiateResponseEncryptionCapabilitiesFailure)" value="107"/>
+     <task name="CertificateMappingNotFound" message="$(string.task_CertificateMappingNotFound)" value="108"/>
+     <task name="SessionEstablishedNoisy" message="$(string.task_SessionEstablishedNoisy)" value="109"/>
+     <task name="SessionSetupErrorNoisy" message="$(string.task_SessionSetupErrorNoisy)" value="110"/>
+     <task name="SmbConnectionInitiatedSelectedInfo" message="$(string.task_SmbConnectionInitiatedSelectedInfo)" value="111"/>
+     <task name="HandlePersistenceNotGranted" message="$(string.task_HandlePersistenceNotGranted)" value="112"/>
+     <task name="ServerMultiChannelIncapable" message="$(string.task_ServerMultiChannelIncapable)" value="113"/>
+     <task name="ServerMultiChannelConstraint" message="$(string.task_ServerMultiChannelConstraint)" value="114"/>
+     <task name="RequestRetryFailure" message="$(string.task_RequestRetryFailure)" value="115"/>
+     <task name="MultiChannelDisabled" message="$(string.task_MultiChannelDisabled)" value="116"/>
+     <task name="Smb2Disabled" message="$(string.task_Smb2Disabled)" value="117"/>
+     <task name="RdmaWithSigning" message="$(string.task_RdmaWithSigning)" value="118"/>
+     <task name="RdmaWithEncryption" message="$(string.task_RdmaWithEncryption)" value="119"/>
+     <task name="InvalidCipherSuiteOrder" message="$(string.task_InvalidCipherSuiteOrder)" value="120"/>
+     <task name="RequireSecureNegotiateIsDeprecated" message="$(string.task_RequireSecureNegotiateIsDeprecated)" value="121"/>
+     <task name="IsolatedTransportServerEntryInfo" message="$(string.task_IsolatedTransportServerEntryInfo)" value="122"/>
+     <task name="SmbRdmaRundownActive" message="$(string.task_SmbRdmaRundownActive)" value="123"/>
+     <task name="SmbRdmaRundownComplete" message="$(string.task_SmbRdmaRundownComplete)" value="124"/>
+     <task name="SmbRdmaReactivation" message="$(string.task_SmbRdmaReactivation)" value="125"/>
+     <task name="SmbRdmaReactivationComplete" message="$(string.task_SmbRdmaReactivationComplete)" value="126"/>
+     <task name="SmbRdmaSMBDirectLoad" message="$(string.task_SmbRdmaSMBDirectLoad)" value="127"/>
+     <task name="SmbComponentCapabilities" message="$(string.task_SmbComponentCapabilities)" value="128"/>
+     <task name="SmbInvalidPortSpecified" message="$(string.task_SmbInvalidPortSpecified)" value="129"/>
+     <task name="SmbConnectionInitiatedNotSelectedInfo" message="$(string.task_SmbConnectionInitiatedNotSelectedInfo)" value="130"/>
+     <task name="SmbDialectChange" message="$(string.task_SmbDialectChange)" value="131"/>
+     <task name="AcquireCredHandleFailure" message="$(string.task_AcquireCredHandleFailure)" value="132"/>
+     <task name="ISCFailure" message="$(string.task_ISCFailure)" value="133"/>
+     <task name="NetworkTokenFailure" message="$(string.task_NetworkTokenFailure)" value="134"/>
+     <task name="LMCompatibilityLevel" message="$(string.task_LMCompatibilityLevel)" value="135"/>
+     <task name="TreeConnectFailure" message="$(string.task_TreeConnectFailure)" value="136"/>
+     <task name="NegotiateValidationFailure" message="$(string.task_NegotiateValidationFailure)" value="137"/>
+     <task name="SigningFailure" message="$(string.task_SigningFailure)" value="138"/>
+     <task name="EncryptionFailure" message="$(string.task_EncryptionFailure)" value="139"/>
+     <task name="DecryptionFailure" message="$(string.task_DecryptionFailure)" value="140"/>
+     <task name="EnableSecuritySignatureNonDefault" message="$(string.task_EnableSecuritySignatureNonDefault)" value="141"/>
+     <task name="RejectedInsecureGuestAuth" message="$(string.task_RejectedInsecureGuestAuth)" value="142"/>
+     <task name="InsecureGuestAuthEnabled" message="$(string.task_InsecureGuestAuthEnabled)" value="143"/>
+     <task name="MADowngradeDetected" message="$(string.task_MADowngradeDetected)" value="144"/>
+     <task name="SessionKeyTooShort" message="$(string.task_SessionKeyTooShort)" value="145"/>
+     <task name="DirectDataPlacementSecurity" message="$(string.task_DirectDataPlacementSecurity)" value="146"/>
+     <task name="UnexpectedSMB1ResponseReceived" message="$(string.task_UnexpectedSMB1ResponseReceived)" value="147"/>
+     <task name="SMB1ResponseReceived" message="$(string.task_SMB1ResponseReceived)" value="148"/>
+     <task name="UninstallSMB1Client" message="$(string.task_UninstallSMB1Client)" value="149"/>
+     <task name="PacketFragment" message="$(string.task_PacketFragment)" value="150"/>
+     <task name="Packet" message="$(string.task_Packet)" value="151"/>
+     <task name="TreeConnectError" message="$(string.task_TreeConnectError)" value="152"/>
+     <task name="SmbSuspendBufferCtxt" message="$(string.task_SmbSuspendBufferCtxt)" value="153"/>
+     <task name="SmbLsassCallDurationInfo" message="$(string.task_SmbLsassCallDurationInfo)" value="154"/>
+     <task name="SmbLsassCallDurationWarning" message="$(string.task_SmbLsassCallDurationWarning)" value="155"/>
+     <task name="AllowedInsecureGuestAuth" message="$(string.task_AllowedInsecureGuestAuth)" value="156"/>
+     <task name="ServerDoesNotSupportSigning" message="$(string.task_ServerDoesNotSupportSigning)" value="157"/>
+     <task name="ServerDoesNotSupportEncryption" message="$(string.task_ServerDoesNotSupportEncryption)" value="158"/>
+     <task name="InsecureGuestLogon" message="$(string.task_InsecureGuestLogon)" value="159"/>
+     <task name="MutualAuthServerDeniedAccess" message="$(string.task_MutualAuthServerDeniedAccess)" value="160"/>
+     <task name="ConnectionEstablished" message="$(string.task_ConnectionEstablished)" value="161"/>
+     <task name="NTLMBlocked" message="$(string.task_NTLMBlocked)" value="162"/>
+     <task name="ShareInitialConnectionEstablished" message="$(string.task_ShareInitialConnectionEstablished)" value="163"/>
+     <task name="ServerCertificateRevocationChecksFailed" message="$(string.task_ServerCertificateRevocationChecksFailed)" value="164"/>
+     <task name="ServerAuthenticationFailure" message="$(string.task_ServerAuthenticationFailure)" value="165"/>
+     <task name="TransportIOVisibility" message="$(string.task_TransportIOVisibility)" value="166"/>
+     <task name="RequestedTransportDisabled" message="$(string.task_RequestedTransportDisabled)" value="167"/>
+     <task name="AttemptNewNegotiatedConnection" message="$(string.task_AttemptNewNegotiatedConnection)" value="168"/>
+    </tasks>
+    <maps>
+     <valueMap name="ut:OpcodeMap">
+      <map value="0xb4" message="$(string.map_ut:OpcodeMapStart State)"/>
+      <map value="0xb5" message="$(string.map_ut:OpcodeMapEnd State)"/>
+     </valueMap>
+     <valueMap name="ConnectionTypeMap">
+      <map value="0x0" message="$(string.map_ConnectionTypeMapNETBT)"/>
+      <map value="0x1" message="$(string.map_ConnectionTypeMapTCPIP)"/>
+      <map value="0x2" message="$(string.map_ConnectionTypeMapRDMA)"/>
+      <map value="0x3" message="$(string.map_ConnectionTypeMapVMBUS)"/>
+      <map value="0x4" message="$(string.map_ConnectionTypeMapQUIC)"/>
+     </valueMap>
+     <valueMap name="Smb2ObjectStateMap">
+      <map value="0x0" message="$(string.map_Smb2ObjectStateMapActive)"/>
+      <map value="0x1" message="$(string.map_Smb2ObjectStateMapDisconnected)"/>
+      <map value="0x2" message="$(string.map_Smb2ObjectStateMapSuspended)"/>
+      <map value="0x3" message="$(string.map_Smb2ObjectStateMapConstruction in progress)"/>
+      <map value="0x4" message="$(string.map_Smb2ObjectStateMapRecovery in progress)"/>
+      <map value="0x5" message="$(string.map_Smb2ObjectStateMapDisconnect in progress)"/>
+      <map value="0x6" message="$(string.map_Smb2ObjectStateMapInvalidation in progress)"/>
+      <map value="0x7" message="$(string.map_Smb2ObjectStateMapInvalid)"/>
+      <map value="0x8" message="$(string.map_Smb2ObjectStateMapDeleted)"/>
+     </valueMap>
+     <valueMap name="Smb2DiagReasonMap">
+      <map value="0x0" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonNotSpecified)"/>
+      <map value="0x1" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonDns)"/>
+      <map value="0x2" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonSetSocketSecurity)"/>
+      <map value="0x3" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonIPSec)"/>
+      <map value="0x4" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonNetworkConnect)"/>
+      <map value="0x5" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonNegotiateValidation)"/>
+      <map value="0x6" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonExchangeExpiry)"/>
+      <map value="0x7" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonDisconnectIndication)"/>
+      <map value="0x8" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonNegativeCache)"/>
+      <map value="0x9" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonAcquireCredHandle)"/>
+      <map value="0xa" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonISC)"/>
+      <map value="0xb" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonSessionSetupResponse)"/>
+      <map value="0xc" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonTreeConnectResponse)"/>
+      <map value="0xd" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonValidateNegotiateFsctl)"/>
+      <map value="0xe" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonHandleReconnect)"/>
+      <map value="0xf" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonCreateResponse)"/>
+      <map value="0x10" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonExchangeCancellation)"/>
+      <map value="0x11" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonObjectSuspended)"/>
+      <map value="0x12" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonUserDisconnect)"/>
+      <map value="0x13" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonHandleClosed)"/>
+      <map value="0x14" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonInternalError)"/>
+      <map value="0x65" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonConsecutiveSessionSetupFailures)"/>
+      <map value="0x66" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonQuicServerCertificateError)"/>
+      <map value="0x67" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonQuicServerConfigFailure)"/>
+      <map value="0x68" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonQuicServerCertificateValidationError)"/>
+      <map value="0xc9" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonMADowngrade)"/>
+      <map value="0xca" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonCreateSigningKey)"/>
+      <map value="0xcb" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonRegisterCryptoKeys)"/>
+      <map value="0xcc" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonQCA)"/>
+      <map value="0xcd" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonEncryptionOnNullSession)"/>
+      <map value="0xce" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonSessionKeyLength)"/>
+      <map value="0x12d" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonExchangeNoBindingObject)"/>
+      <map value="0x12e" message="$(string.map_Smb2DiagReasonMapSmb2DiagReasonExchangeSendFailure)"/>
+      <map value="0x191" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonReceiveContextAllocation)"/>
+      <map value="0x192" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonPaddingAllocation)"/>
+      <map value="0x193" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonExchangeReceiveHandlerError)"/>
+      <map value="0x194" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageBufferAllocation)"/>
+      <map value="0x195" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcEndpointTornDown)"/>
+      <map value="0x196" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageSizeReceiveError)"/>
+      <map value="0x197" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageSizeTooLargeError)"/>
+      <map value="0x198" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageCopyError)"/>
+      <map value="0x199" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcReceiveHandlerError)"/>
+      <map value="0x19a" message="$(string.map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcReceiveError)"/>
+     </valueMap>
+     <valueMap name="Smb2CommandMap">
+      <map value="0x0" message="$(string.map_Smb2CommandMapNegotiate)"/>
+      <map value="0x1" message="$(string.map_Smb2CommandMapSession setup)"/>
+      <map value="0x2" message="$(string.map_Smb2CommandMapLogoff)"/>
+      <map value="0x3" message="$(string.map_Smb2CommandMapTree connect)"/>
+      <map value="0x4" message="$(string.map_Smb2CommandMapTree disconnect)"/>
+      <map value="0x5" message="$(string.map_Smb2CommandMapCreate)"/>
+      <map value="0x6" message="$(string.map_Smb2CommandMapClose)"/>
+      <map value="0x7" message="$(string.map_Smb2CommandMapFlush)"/>
+      <map value="0x8" message="$(string.map_Smb2CommandMapRead)"/>
+      <map value="0x9" message="$(string.map_Smb2CommandMapWrite)"/>
+      <map value="0xa" message="$(string.map_Smb2CommandMapLock)"/>
+      <map value="0xb" message="$(string.map_Smb2CommandMapIoctl)"/>
+      <map value="0xc" message="$(string.map_Smb2CommandMapCancel)"/>
+      <map value="0xd" message="$(string.map_Smb2CommandMapEcho)"/>
+      <map value="0xe" message="$(string.map_Smb2CommandMapQuery directory)"/>
+      <map value="0xf" message="$(string.map_Smb2CommandMapChange notify)"/>
+      <map value="0x10" message="$(string.map_Smb2CommandMapQuery info)"/>
+      <map value="0x11" message="$(string.map_Smb2CommandMapSet info)"/>
+      <map value="0x12" message="$(string.map_Smb2CommandMapOplock break)"/>
+     </valueMap>
+     <valueMap name="ShareTypeMap">
+      <map value="0x0" message="$(string.map_ShareTypeMapSymmetric)"/>
+      <map value="0x1" message="$(string.map_ShareTypeMapAsymmetric)"/>
+     </valueMap>
+     <valueMap name="Smb2PortSelectionMap">
+      <map value="0x0" message="$(string.map_Smb2PortSelectionMapThe port was not selected for this transport.)"/>
+      <map value="0x1" message="$(string.map_Smb2PortSelectionMapThe port was selected from the &lt;server:transport&gt; registry mapping.)"/>
+      <map value="0x2" message="$(string.map_Smb2PortSelectionMapThe port was selected from net use parameters.)"/>
+      <map value="0x3" message="$(string.map_Smb2PortSelectionMapThe port was selected from the device instance&apos;s configuration.)"/>
+      <map value="0x4" message="$(string.map_Smb2PortSelectionMapThe port was selected from the global registry settings.)"/>
+      <map value="0x5" message="$(string.map_Smb2PortSelectionMapThe port was selected from the &lt;server:transport&gt; policy mapping.)"/>
+     </valueMap>
+     <valueMap name="IrpMajorFunctionMap">
+      <map value="0x4" message="$(string.map_IrpMajorFunctionMapIRP_MJ_WRITE)"/>
+     </valueMap>
+     <bitMap name="SmbComponentCapabilitiesBitmap">
+      <map value="0x1" message="$(string.map_SmbComponentCapabilitiesBitmapSupports RDMA via SMBDirect)"/>
+      <map value="0x2" message="$(string.map_SmbComponentCapabilitiesBitmapSupports runtime unlinking from SMBDirect)"/>
+     </bitMap>
+     <valueMap name="SMB2LsassFunctionCallMap">
+      <map value="0x0" message="$(string.map_SMB2LsassFunctionCallMapInitializeSecurityContextW)"/>
+      <map value="0x1" message="$(string.map_SMB2LsassFunctionCallMapAcquireCredentialsHandleW)"/>
+     </valueMap>
+     <valueMap name="AuthProtocolMap">
+      <map value="0x0" message="$(string.map_AuthProtocolMapNone)"/>
+      <map value="0xa" message="$(string.map_AuthProtocolMapNTLM)"/>
+      <map value="0x10" message="$(string.map_AuthProtocolMapKerberos)"/>
+      <map value="0x1f" message="$(string.map_AuthProtocolMapPKU2U)"/>
+     </valueMap>
+     <valueMap name="Smb2DirectDataPlacementSecurityMap">
+      <map value="0x0" message="$(string.map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Disabled)"/>
+      <map value="0x1" message="$(string.map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Enabled)"/>
+      <map value="0x2" message="$(string.map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Enabled (Except For Shares Enabled With Isolated Transport))"/>
+     </valueMap>
+     <valueMap name="InstanceIdMap">
+      <map value="0x0" message="$(string.map_InstanceIdMapRDR_PRIMARY_INSTANCE)"/>
+      <map value="0x1" message="$(string.map_InstanceIdMapRDR_CSV_INSTANCE)"/>
+      <map value="0x2" message="$(string.map_InstanceIdMapRDR_SBL_INSTANCE)"/>
+      <map value="0x3" message="$(string.map_InstanceIdMapRDR_SR_INSTANCE)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="101" symbol="CreateSrvCallError" version="0" task="CreateSrvCallError" level="win:Error" keywords="keyword_400000000000" template="CreateSrvCallErrorArgs"/>
+     <event value="201" symbol="SessionSetupError" version="0" task="SessionSetupError" level="win:Error" keywords="keyword_400000000000" template="CreateSrvCallErrorArgs"/>
+     <event value="301" symbol="TreeConnectError" version="0" task="TreeConnectError" level="win:Error" keywords="keyword_400000000000" template="CreateSrvCallErrorArgs"/>
+     <event value="401" symbol="CreateVNetRootError" version="0" task="CreateVNetRootError" level="win:Error" keywords="keyword_400000000000" template="CreateSrvCallErrorArgs"/>
+     <event value="501" symbol="CreateFileError" version="0" task="CreateFileError" level="win:Error" keywords="keyword_400000000000" template="CreateSrvCallErrorArgs"/>
+     <event value="2000" symbol="PacketFragment" version="0" task="PacketFragment" level="win:Informational" keywords="keyword_40000000000" template="PacketFragmentArgs"/>
+     <event value="20001" symbol="CreateFile" version="0" task="CreateFile" level="win:Informational" keywords="keyword_400000000000" template="CreateFileArgs"/>
+     <event value="30103" symbol="SmbSuspendExchange" version="0" task="SmbSuspendExchange" level="win:Verbose" keywords="Smb_Perf" template="SmbSuspendExchangeArgs"/>
+     <event value="30104" symbol="SmbResumeExchange" version="0" task="SmbResumeExchange" level="win:Verbose" keywords="Smb_Perf" template="SmbResumeExchangeArgs"/>
+     <event value="30105" symbol="SmbSuspendBufferCtxt" version="0" task="SmbSuspendBufferCtxt" level="win:Verbose" keywords="Smb_Perf_IO_Optional" template="SmbSuspendBufferCtxtArgs"/>
+     <event value="30106" symbol="SmbResumeBufferCtxt" version="0" task="SmbResumeBufferCtxt" level="win:Verbose" keywords="Smb_Perf_IO_Optional" template="SmbSuspendBufferCtxtArgs"/>
+     <event value="30108" symbol="SmbMidWindowBlocked" version="0" task="SmbMidWindowBlocked" level="win:Error" keywords="Smb_Info Smb_Perf_IO_Optional" template="SmbMidWindowBlockedArgs"/>
+     <event value="30109" symbol="SmbRechunkRequest" version="0" task="SmbRechunkRequest" level="win:Error" keywords="Smb_Info Smb_Perf_IO_Optional" template="SmbSuspendBufferCtxtArgs"/>
+     <event value="30110" symbol="SmbInitializeMidWindow" version="0" task="SmbInitializeMidWindow" level="win:Verbose" keywords="Smb_Perf_IO_Optional" template="SmbInitializeMidWindowArgs"/>
+     <event value="30111" symbol="SmbMidWindowState" version="0" task="SmbMidWindowState" level="win:Verbose" keywords="Smb_Perf_IO_Optional" template="SmbMidWindowStateArgs"/>
+     <event value="30112" symbol="SmbTeardownMidWindow" version="0" task="SmbTeardownMidWindow" level="win:Verbose" keywords="Smb_Perf_IO_Optional" template="SmbInitializeMidWindowArgs"/>
+     <event value="30113" symbol="SmbDataReady" version="0" task="SmbDataReady" level="win:Verbose" keywords="Smb_Perf" template="SmbDataReadyArgs"/>
+     <event value="30114" symbol="SmbSendCompletion" version="0" task="SmbSendCompletion" level="win:Verbose" keywords="Smb_Perf" template="SmbDataReadyArgs"/>
+     <event value="30203" symbol="NetConnect" version="0" task="NetConnect" level="win:Informational" keywords="Networking_Perf" template="NetConnectArgs"/>
+     <event value="30203" symbol="NetConnect_V2" version="2" task="NetConnect" level="win:Informational" keywords="Networking_Perf" template="NetConnectArgs"/>
+     <event value="30204" symbol="NetConnectCompletion" version="0" task="NetConnectCompletion" level="win:Informational" keywords="Networking_Perf" template="NetConnectCompletionArgs"/>
+     <event value="30204" symbol="NetConnectCompletion_V2" version="2" task="NetConnectCompletion" level="win:Informational" keywords="Networking_Perf" template="NetConnectCompletionArgs_V2"/>
+     <event value="30205" symbol="NetSend" version="0" task="NetSend" level="win:Verbose" keywords="Networking_Perf" template="NetSendArgs"/>
+     <event value="30205" symbol="NetSend_V2" version="2" task="NetSend" level="win:Verbose" keywords="Networking_Perf" template="NetSendArgs"/>
+     <event value="30206" symbol="NetSendCompletion" version="0" task="NetSendCompletion" level="win:Verbose" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30206" symbol="NetSendCompletion_V2" version="2" task="NetSendCompletion" level="win:Verbose" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30207" symbol="NetReceive" version="0" task="NetReceive" level="win:Verbose" keywords="Networking_Perf" template="NetSendArgs"/>
+     <event value="30207" symbol="NetReceive_V2" version="2" task="NetReceive" level="win:Verbose" keywords="Networking_Perf" template="NetSendArgs"/>
+     <event value="30208" symbol="NetReceiveCompletion" version="0" task="NetReceiveCompletion" level="win:Verbose" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30208" symbol="NetReceiveCompletion_V2" version="2" task="NetReceiveCompletion" level="win:Verbose" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30209" symbol="CompressionRequested" version="0" task="CompressionRequested" level="win:Informational" keywords="Networking_Perf" template="CompressionRequestedArgs"/>
+     <event value="30210" symbol="DecompressionFailure" version="0" task="DecompressionFailure" level="win:Informational" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30211" symbol="CompressionFailure" version="0" task="CompressionFailure" level="win:Informational" keywords="Networking_Perf" template="NetSendCompletionArgs"/>
+     <event value="30401" symbol="SmbSessionExpired" version="0" task="SmbSessionExpired" level="win:Error" keywords="Smb_Info" template="SmbSessionExpiredArgs"/>
+     <event value="30402" symbol="Smb3PartSPNReauth" version="0" task="Smb3PartSPNReauth" level="win:Error" keywords="Smb_Info" template="SmbSessionExpiredArgs"/>
+     <event value="30403" symbol="SmbReconnect" version="0" task="SmbReconnect" level="win:Informational" keywords="Smb_Info" template="SmbReconnectArgs"/>
+     <event value="30404" symbol="SmbDeferOpen" version="0" task="SmbDeferOpen" level="win:Informational" keywords="Smb_Info" template="SmbReconnectArgs"/>
+     <event value="30405" symbol="SmbUndeferOpen" version="0" task="SmbUndeferOpen" level="win:Informational" keywords="Smb_Info" template="SmbReconnectArgs"/>
+     <event value="30406" symbol="SmbSend" version="0" task="SmbSend" level="win:Informational" keywords="Smb_Info" template="SmbSendArgs"/>
+     <event value="30407" symbol="SmbReceive" version="0" task="SmbReceive" level="win:Informational" keywords="Smb_Info" template="SmbReceiveArgs"/>
+     <event value="30408" symbol="SmbReceiveInterim" version="0" task="SmbReceiveInterim" level="win:Informational" keywords="Smb_Info" template="SmbReceiveArgs"/>
+     <event value="30409" symbol="SmbReceiveAsync" version="0" task="SmbReceiveAsync" level="win:Informational" keywords="Smb_Info" template="SmbReceiveArgs"/>
+     <event value="30410" symbol="SmbRegistryKey" version="0" task="SmbRegistryKey" level="win:Informational" keywords="Smb_Info" template="SmbRegistryKeyArgs"/>
+     <event value="30501" symbol="SmbUpdateInfoCache" version="0" task="SmbUpdateInfoCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30502" symbol="SmbFetchInfoCache" version="0" task="SmbFetchInfoCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30503" symbol="SmbInvalidateInfoCache" version="0" task="SmbInvalidateInfoCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30504" symbol="SmbUpdateFNFCache" version="0" task="SmbUpdateFNFCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30505" symbol="SmbFetchFNFCache" version="0" task="SmbFetchFNFCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30506" symbol="SmbInvalidateFNFCache" version="0" task="SmbInvalidateFNFCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30507" symbol="SmbPopulateDirCache" version="0" task="SmbPopulateDirCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30508" symbol="SmbFetchDirCache" version="0" task="SmbFetchDirCache" level="win:Verbose" keywords="InfoCache_Info" template="SmbUpdateInfoCacheArgs"/>
+     <event value="30600" symbol="SessionStateTransition" version="0" task="SessionStateTransition" level="win:Informational" keywords="Smb_TFO" template="SessionStateTransitionArgs"/>
+     <event value="30601" symbol="VNetRootStateTransition" version="0" task="VNetRootStateTransition" level="win:Informational" keywords="Smb_TFO" template="VNetRootStateTransitionArgs"/>
+     <event value="30603" symbol="OpenHandleStateTransition" version="0" task="OpenHandleStateTransition" level="win:Informational" keywords="Smb_TFO" template="OpenHandleStateTransitionArgs"/>
+     <event value="30604" symbol="NoSMB1ObservedInLastPeriod" version="0" task="NoSMB1ObservedInLastPeriod" level="win:Informational" keywords="Smb_Info" template="NoSMB1ObservedInLastPeriodArgs"/>
+     <event value="30611" symbol="PersistentHandleFailure_V2" version="2" task="PersistentHandleFailure" level="win:Error" keywords="Smb_TFO" template="HandleOpenFailureArgs"/>
+     <event value="30612" symbol="ResilientHandleFailure_V2" version="2" task="ResilientHandleFailure" level="win:Error" keywords="Smb_TFO" template="HandleOpenFailureArgs"/>
+     <event value="30613" symbol="HandleOpenFailure" version="0" task="HandleOpenFailure" level="win:Error" keywords="Smb_TFO" template="HandleOpenFailureArgs"/>
+     <event value="30701" symbol="ServerNetworkInterfaceInvalid" version="0" task="ServerNetworkInterfaceInvalid" level="win:Warning" keywords="Smb_MultiChannel" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30702" symbol="WskConnectFailure" version="0" task="WskConnectFailure" level="win:Warning" keywords="Smb_MultiChannel" template="WskConnectFailureArgs"/>
+     <event value="30703" symbol="RdmaConnectFailure" version="0" task="RdmaConnectFailure" level="win:Warning" keywords="Smb_MultiChannel" template="WskConnectFailureArgs"/>
+     <event value="30704" symbol="WskConnectSuccess" version="0" task="WskConnectSuccess" level="win:Informational" keywords="Smb_MultiChannel" template="WskConnectFailureArgs"/>
+     <event value="30705" symbol="RdmaConnectSuccess" version="0" task="RdmaConnectSuccess" level="win:Informational" keywords="Smb_MultiChannel" template="WskConnectFailureArgs"/>
+     <event value="30800" symbol="WskGetAddressInfoFailure" version="0" task="WskGetAddressInfoFailure" level="win:Error" keywords="Smb_Connectivity" template="WskGetAddressInfoFailureArgs"/>
+     <event value="30801" symbol="SetSocketSecurityFailure" version="0" task="SetSocketSecurityFailure" level="win:Error" keywords="Smb_Connectivity" template="WskGetAddressInfoFailureArgs"/>
+     <event value="30802" symbol="IPSecFailure" version="0" task="IPSecFailure" level="win:Error" keywords="Smb_Connectivity" template="WskGetAddressInfoFailureArgs"/>
+     <event value="30803" symbol="NetworkConnectFailure" version="0" task="NetworkConnectFailure" level="win:Error" keywords="Smb_Connectivity" template="NetworkConnectFailureArgs"/>
+     <event value="30803" symbol="NetworkConnectFailure_V2" version="2" task="NetworkConnectFailure" level="win:Error" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs"/>
+     <event value="30803" symbol="NetworkConnectFailure_V3" version="3" task="NetworkConnectFailure" level="win:Error" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs_V2"/>
+     <event value="30803" symbol="NetworkConnectFailure_V4" version="4" task="NetworkConnectFailure" level="win:Error" keywords="Smb_Connectivity" template="NetworkConnectFailureArgs_V4"/>
+     <event value="30804" symbol="DisconnectIndication" version="0" task="DisconnectIndication" level="win:Error" keywords="Smb_Connectivity" template="NetworkConnectFailureArgs"/>
+     <event value="30804" symbol="DisconnectIndication_V2" version="2" task="DisconnectIndication" level="win:Error" keywords="Smb_Connectivity" template="DisconnectIndicationArgs_V2"/>
+     <event value="30805" symbol="SessionFailure_V2" version="2" task="SessionFailure" level="win:Warning" keywords="Smb_Connectivity" template="SessionFailureArgs_V2"/>
+     <event value="30806" symbol="SessionEstablished_V2" version="2" task="SessionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="SessionFailureArgs_V2"/>
+     <event value="30806" symbol="SessionEstablished_V3" version="3" task="SessionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="SessionEstablishedArgs_V3"/>
+     <event value="30807" symbol="ShareConnectionFailure_V2" version="2" task="ShareConnectionFailure" level="win:Warning" keywords="Smb_Connectivity" template="SessionFailureArgs_V2"/>
+     <event value="30808" symbol="ShareConnectionEstablished_V2" version="2" task="ShareConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="SessionFailureArgs_V2"/>
+     <event value="30808" symbol="ShareConnectionEstablished_V3" version="3" task="ShareConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="SessionEstablishedArgs_V3"/>
+     <event value="30808" symbol="ShareConnectionEstablished_V4" version="4" task="ShareConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="ShareInitialConnectionEstablishedArgs"/>
+     <event value="30809" symbol="ExpiredExchange" version="0" task="ExpiredExchange" level="win:Error" keywords="Smb_Connectivity" template="ExpiredExchangeArgs"/>
+     <event value="30810" symbol="TcpIpTransportArrival" version="0" task="TcpIpTransportArrival" level="win:Informational" keywords="Smb_Connectivity" template="TcpIpTransportArrivalArgs"/>
+     <event value="30811" symbol="TcpIpTransportRemoval" version="0" task="TcpIpTransportRemoval" level="win:Informational" keywords="Smb_Connectivity" template="TcpIpTransportArrivalArgs"/>
+     <event value="30812" symbol="TdiTransportArrival" version="0" task="TdiTransportArrival" level="win:Informational" keywords="Smb_Connectivity" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30813" symbol="TdiTransportRemoval" version="0" task="TdiTransportRemoval" level="win:Informational" keywords="Smb_Connectivity" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30814" symbol="WitnessRegistration" version="0" task="WitnessRegistration" level="win:Informational" keywords="Smb_Connectivity" template="WitnessRegistrationArgs"/>
+     <event value="30815" symbol="WitnessDeregistration" version="0" task="WitnessDeregistration" level="win:Informational" keywords="Smb_Connectivity" template="WitnessDeregistrationArgs"/>
+     <event value="30816" symbol="NegotiateFailure" version="0" task="NegotiateFailure" level="win:Error" keywords="Smb_Connectivity" template="WskGetAddressInfoFailureArgs"/>
+     <event value="30817" symbol="CloseFailure" version="0" task="CloseFailure" level="win:Error" keywords="Smb_Connectivity" template="CloseFailureArgs"/>
+     <event value="30818" symbol="RdmaFallback" version="0" task="RdmaFallback" level="win:Warning" keywords="Smb_Connectivity" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30819" symbol="WitnessMove_V2" version="2" task="WitnessMove" level="win:Informational" keywords="Smb_TFO" template="WitnessDeregistrationArgs"/>
+     <event value="30820" symbol="WitnessMoveSuccess_V2" version="2" task="WitnessMoveSuccess" level="win:Informational" keywords="Smb_TFO" template="WitnessDeregistrationArgs"/>
+     <event value="30821" symbol="WitnessMoveFailure_V2" version="2" task="WitnessMoveFailure" level="win:Error" keywords="Smb_TFO" template="WitnessDeregistrationArgs"/>
+     <event value="30822" symbol="MultiChannelNetworkConnectFailure" version="0" task="MultiChannelNetworkConnectFailure" level="win:Informational" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs"/>
+     <event value="30822" symbol="MultiChannelNetworkConnectFailure_V2" version="2" task="MultiChannelNetworkConnectFailure" level="win:Informational" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs_V2"/>
+     <event value="30823" symbol="HungConnectionFailure_V2" version="2" task="HungConnectionFailure" level="win:Error" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs"/>
+     <event value="30824" symbol="ConnectionForceDisconnected_V1" version="1" task="ConnectionForceDisconnected" level="win:Informational" keywords="Smb_Connectivity" template="MultiChannelNetworkConnectFailureArgs"/>
+     <event value="30825" symbol="ConnectionDisconnectStateCleared_V1" version="1" task="ConnectionDisconnectStateCleared" level="win:Informational" keywords="Smb_Connectivity" template="ConnectionDisconnectStateClearedArgs_V1"/>
+     <event value="30826" symbol="NegotiateResponseEncryptionCapabilitiesFailure" version="0" task="NegotiateResponseEncryptionCapabilitiesFailure" level="win:Error" keywords="Smb_Connectivity" template="NegotiateResponseEncryptionCapabilitiesFailureArgs"/>
+     <event value="30827" symbol="CertificateMappingNotFound" version="0" task="CertificateMappingNotFound" level="win:Informational" keywords="Smb_Connectivity" template="CertificateMappingNotFoundArgs"/>
+     <event value="30828" symbol="SessionEstablishedNoisy" version="0" task="SessionEstablishedNoisy" level="win:Informational" keywords="Smb_Connectivity_Noisy" template="SessionEstablishedNoisyArgs"/>
+     <event value="30829" symbol="SessionSetupErrorNoisy" version="0" task="SessionSetupErrorNoisy" level="win:Error" keywords="Smb_Connectivity_Noisy" template="SessionEstablishedNoisyArgs"/>
+     <event value="30830" symbol="SmbConnectionInitiatedSelectedInfo" version="0" task="SmbConnectionInitiatedSelectedInfo" level="win:Informational" keywords="Smb_Connectivity_Noisy" template="SmbConnectionInitiatedSelectedInfoArgs"/>
+     <event value="30830" symbol="SmbConnectionInitiatedSelectedInfo_V2" version="2" task="SmbConnectionInitiatedSelectedInfo" level="win:Informational" keywords="Smb_Connectivity_Noisy" template="SmbConnectionInitiatedSelectedInfoArgs_V2"/>
+     <event value="30831" symbol="MutualAuthServerDeniedAccess" version="0" task="MutualAuthServerDeniedAccess" level="win:Informational" keywords="Smb_Connectivity" template="MutualAuthServerDeniedAccessArgs"/>
+     <event value="30831" symbol="MutualAuthServerDeniedAccess_V2" version="2" task="MutualAuthServerDeniedAccess" level="win:Informational" keywords="Smb_Connectivity" template="ConnectionEstablishedArgs"/>
+     <event value="30831" symbol="MutualAuthServerDeniedAccess_V3" version="3" task="MutualAuthServerDeniedAccess" level="win:Informational" keywords="Smb_Connectivity" template="ConnectionEstablishedArgs_V2"/>
+     <event value="30832" symbol="ConnectionEstablished" version="0" task="ConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="ConnectionEstablishedArgs"/>
+     <event value="30832" symbol="ConnectionEstablished_V2" version="2" task="ConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="ConnectionEstablishedArgs_V2"/>
+     <event value="30833" symbol="ShareInitialConnectionEstablished" version="0" task="ShareInitialConnectionEstablished" level="win:Informational" keywords="Smb_Connectivity" template="ShareInitialConnectionEstablishedArgs"/>
+     <event value="30834" symbol="ServerCertificateRevocationChecksFailed" version="0" task="ServerCertificateRevocationChecksFailed" level="win:Informational" keywords="Smb_Connectivity" template="ServerCertificateRevocationChecksFailedArgs"/>
+     <event value="30834" symbol="ServerCertificateRevocationChecksFailed_V1" version="1" task="ServerCertificateRevocationChecksFailed" level="win:Informational" keywords="Smb_Connectivity" template="ServerCertificateRevocationChecksFailedArgs_V1"/>
+     <event value="30835" symbol="ServerAuthenticationFailure" version="0" task="ServerAuthenticationFailure" level="win:Informational" keywords="Smb_Connectivity" template="ServerAuthenticationFailureArgs"/>
+     <event value="30835" symbol="ServerAuthenticationFailure_V1" version="1" task="ServerAuthenticationFailure" level="win:Informational" keywords="Smb_Connectivity" template="ServerCertificateRevocationChecksFailedArgs_V1"/>
+     <event value="30836" symbol="TransportIOVisibility" version="0" task="TransportIOVisibility" level="win:Informational" keywords="Smb_Connectivity" template="TransportIOVisibilityArgs"/>
+     <event value="30837" symbol="RequestedTransportDisabled" version="0" task="RequestedTransportDisabled" level="win:Informational" keywords="Smb_Connectivity" template="RequestedTransportDisabledArgs"/>
+     <event value="30838" symbol="AttemptNewNegotiatedConnection_V1" version="1" task="AttemptNewNegotiatedConnection" level="win:Informational" keywords="Smb_Connectivity" template="RequestedTransportDisabledArgs"/>
+     <event value="30900" symbol="HandlePersistenceNotGranted_V2" version="2" task="HandlePersistenceNotGranted" level="win:Warning" keywords="Smb_TFO" template="HandleOpenFailureArgs"/>
+     <event value="30904" symbol="ServerMultiChannelIncapable_V2" version="2" task="ServerMultiChannelIncapable" level="win:Informational" keywords="Smb_MultiChannel" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30905" symbol="ServerMultiChannelConstraint_V2" version="2" task="ServerMultiChannelConstraint" level="win:Error" keywords="Smb_MultiChannel" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30906" symbol="RequestRetryFailure" version="0" task="RequestRetryFailure" level="win:Error" keywords="Smb_TFO" template="RequestRetryFailureArgs"/>
+     <event value="30907" symbol="MultiChannelDisabled" version="0" task="MultiChannelDisabled" level="win:Warning" keywords="Smb_MultiChannel" template="SmbRegistryKeyArgs"/>
+     <event value="30908" symbol="Smb2Disabled" version="0" task="Smb2Disabled" level="win:Warning" keywords="Smb_Info" template="SmbRegistryKeyArgs"/>
+     <event value="30909" symbol="RdmaWithSigning" version="0" task="RdmaWithSigning" level="win:Informational" keywords="Smb_Info" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30910" symbol="RdmaWithEncryption" version="0" task="RdmaWithEncryption" level="win:Informational" keywords="Smb_Info" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="30911" symbol="InvalidCipherSuiteOrder" version="0" task="InvalidCipherSuiteOrder" level="win:Error" keywords="Smb_Info" template="InvalidCipherSuiteOrderArgs"/>
+     <event value="30912" symbol="RequireSecureNegotiateIsDeprecated" version="0" task="RequireSecureNegotiateIsDeprecated" level="win:Warning" keywords="Smb_Info"/>
+     <event value="30913" symbol="IsolatedTransportServerEntryInfo" version="0" task="IsolatedTransportServerEntryInfo" level="win:Informational" keywords="Smb_Info" template="IsolatedTransportServerEntryInfoArgs"/>
+     <event value="30914" symbol="SmbRdmaRundownActive" version="0" task="SmbRdmaRundownActive" level="win:Informational" keywords="Smb_Info" template="SmbRdmaRundownActiveArgs"/>
+     <event value="30915" symbol="SmbRdmaRundownComplete" version="0" task="SmbRdmaRundownComplete" level="win:Informational" keywords="Smb_Info" template="SmbRdmaRundownCompleteArgs"/>
+     <event value="30916" symbol="SmbRdmaReactivation" version="0" task="SmbRdmaReactivation" level="win:Informational" keywords="Smb_Info"/>
+     <event value="30917" symbol="SmbRdmaReactivationComplete" version="0" task="SmbRdmaReactivationComplete" level="win:Informational" keywords="Smb_Info" template="SmbRdmaRundownCompleteArgs"/>
+     <event value="30918" symbol="SmbRdmaSMBDirectLoad" version="0" task="SmbRdmaSMBDirectLoad" level="win:Informational" keywords="Smb_Info" template="SmbRdmaSMBDirectLoadArgs"/>
+     <event value="30918" symbol="SmbRdmaSMBDirectLoad_V1" version="1" task="SmbRdmaSMBDirectLoad" level="win:Informational" keywords="Smb_Info" template="SmbRdmaSMBDirectLoadArgs_V1"/>
+     <event value="30950" symbol="SmbComponentCapabilities" version="0" task="SmbComponentCapabilities" level="win:Informational" keywords="Smb_Info" template="SmbComponentCapabilitiesArgs"/>
+     <event value="30951" symbol="SmbInvalidPortSpecified" version="0" task="SmbInvalidPortSpecified" level="win:Informational" keywords="Smb_Info" template="SmbInvalidPortSpecifiedArgs"/>
+     <event value="30952" symbol="SmbConnectionInitiatedNotSelectedInfo" version="0" task="SmbConnectionInitiatedNotSelectedInfo" level="win:Warning" keywords="Smb_Info" template="SmbConnectionInitiatedNotSelectedInfoArgs"/>
+     <event value="30953" symbol="SmbDialectChange" version="0" task="SmbDialectChange" level="win:Informational" keywords="Smb_Info" template="SmbDialectChangeArgs"/>
+     <event value="30954" symbol="SmbLsassCallDurationInfo" version="0" task="SmbLsassCallDurationInfo" level="win:Informational" keywords="Smb_Info" template="SmbLsassCallDurationInfoArgs"/>
+     <event value="30955" symbol="SmbLsassCallDurationWarning" version="0" task="SmbLsassCallDurationWarning" level="win:Warning" keywords="Smb_Info" template="SmbLsassCallDurationWarningArgs"/>
+     <event value="31000" symbol="AcquireCredHandleFailure" version="0" task="AcquireCredHandleFailure" level="win:Error" keywords="Smb_Authentication" template="AcquireCredHandleFailureArgs"/>
+     <event value="31001" symbol="ISCFailure" version="0" task="ISCFailure" level="win:Error" keywords="Smb_Authentication" template="AcquireCredHandleFailureArgs"/>
+     <event value="31002" symbol="NetworkTokenFailure" version="0" task="NetworkTokenFailure" level="win:Error" keywords="Smb_Authentication" template="WskGetAddressInfoFailureArgs"/>
+     <event value="31003" symbol="LMCompatibilityLevel" version="0" task="LMCompatibilityLevel" level="win:Warning" keywords="Smb_Authentication" template="SmbRegistryKeyArgs"/>
+     <event value="31010" symbol="TreeConnectFailure" version="0" task="TreeConnectFailure" level="win:Error" keywords="Smb_Authorization" template="CloseFailureArgs"/>
+     <event value="31012" symbol="NegotiateValidationFailure" version="0" task="NegotiateValidationFailure" level="win:Error" keywords="Smb_Security" template="NegotiateValidationFailureArgs"/>
+     <event value="31013" symbol="SigningFailure" version="0" task="SigningFailure" level="win:Error" keywords="Smb_Security" template="SigningFailureArgs"/>
+     <event value="31013" symbol="SigningFailure_V2" version="2" task="SigningFailure" level="win:Error" keywords="Smb_Security" template="SigningFailureArgs_V2"/>
+     <event value="31014" symbol="EncryptionFailure" version="0" task="EncryptionFailure" level="win:Error" keywords="Smb_Security" template="EncryptionFailureArgs"/>
+     <event value="31014" symbol="EncryptionFailure_V2" version="2" task="EncryptionFailure" level="win:Error" keywords="Smb_Security" template="EncryptionFailureArgs_V2"/>
+     <event value="31015" symbol="DecryptionFailure" version="0" task="DecryptionFailure" level="win:Error" keywords="Smb_Security" template="EncryptionFailureArgs"/>
+     <event value="31016" symbol="EnableSecuritySignatureNonDefault" version="0" task="EnableSecuritySignatureNonDefault" level="win:Warning" keywords="Smb_Security" template="SmbRegistryKeyArgs"/>
+     <event value="31017" symbol="RejectedInsecureGuestAuth" version="0" task="RejectedInsecureGuestAuth" level="win:Error" keywords="Smb_Authentication" template="RejectedInsecureGuestAuthArgs"/>
+     <event value="31018" symbol="InsecureGuestAuthEnabled" version="0" task="InsecureGuestAuthEnabled" level="win:Warning" keywords="Smb_Authentication" template="SmbRegistryKeyArgs"/>
+     <event value="31019" symbol="MADowngradeDetected" version="0" task="MADowngradeDetected" level="win:Error" keywords="Smb_Authentication" template="MADowngradeDetectedArgs"/>
+     <event value="31020" symbol="SessionKeyTooShort" version="0" task="SessionKeyTooShort" level="win:Error" keywords="Smb_Authentication" template="SessionKeyTooShortArgs"/>
+     <event value="31021" symbol="DirectDataPlacementSecurity" version="0" task="DirectDataPlacementSecurity" level="win:Warning" keywords="Smb_Security" template="DirectDataPlacementSecurityArgs"/>
+     <event value="31022" symbol="AllowedInsecureGuestAuth" version="0" task="AllowedInsecureGuestAuth" level="win:Warning" keywords="Smb_Authentication" template="RejectedInsecureGuestAuthArgs"/>
+     <event value="31023" symbol="NTLMBlocked" version="0" task="NTLMBlocked" level="win:Warning" keywords="Smb_Authentication" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="31997" symbol="InsecureGuestLogon" version="0" task="InsecureGuestLogon" level="win:Informational" keywords="Smb_Info" template="ServerNetworkInterfaceInvalidArgs"/>
+     <event value="31998" symbol="ServerDoesNotSupportSigning" version="0" task="ServerDoesNotSupportSigning" level="win:Informational" keywords="Smb_Info" template="ServerDoesNotSupportSigningArgs"/>
+     <event value="31999" symbol="ServerDoesNotSupportEncryption" version="0" task="ServerDoesNotSupportEncryption" level="win:Informational" keywords="Smb_Info" template="ServerDoesNotSupportEncryptionArgs"/>
+     <event value="32000" symbol="UnexpectedSMB1ResponseReceived" version="0" task="UnexpectedSMB1ResponseReceived" level="win:Warning" keywords="Smb_Info" template="UnexpectedSMB1ResponseReceivedArgs"/>
+     <event value="32002" symbol="SMB1ResponseReceived" version="0" task="SMB1ResponseReceived" level="win:Informational" keywords="Smb_Info" template="SMB1ResponseReceivedArgs"/>
+     <event value="32003" symbol="UninstallSMB1Client" version="0" task="UninstallSMB1Client" level="win:Informational" keywords="Smb_Info" template="NoSMB1ObservedInLastPeriodArgs"/>
+     <event value="32004" symbol="Smb2PerfRxContextStart" version="0" task="Smb2PerfRxContextStart" opcode="win:Start" level="win:Informational" keywords="Smb_Perf_IO" template="Smb2PerfRxContextStartArgs"/>
+     <event value="32005" symbol="Smb2PerfExchangeStart" version="0" task="Smb2PerfExchangeStart" opcode="win:Start" level="win:Informational" keywords="Smb_Perf_IO_Optional" template="Smb2PerfExchangeStartArgs"/>
+     <event value="32006" symbol="Smb2PerfBufferContextStart" version="0" task="Smb2PerfBufferContextStart" opcode="win:Start" level="win:Informational" keywords="Smb_Perf_IO_Optional" template="Smb2PerfBufferContextStartArgs"/>
+     <event value="32007" symbol="Smb2PerfWorkTransition" version="0" task="Smb2PerfWorkTransition" level="win:Informational" keywords="Smb_Perf_IO_Optional" template="Smb2PerfWorkTransitionArgs"/>
+     <event value="32008" symbol="Smb2PerfRxContextReadSummary" version="0" task="Smb2PerfRxContextReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextReadSummaryArgs"/>
+     <event value="32008" symbol="Smb2PerfRxContextReadSummary_V2" version="2" task="Smb2PerfRxContextReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextReadSummaryArgs_V2"/>
+     <event value="32009" symbol="Smb2PerfRxContextWriteSummary" version="0" task="Smb2PerfRxContextWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextWriteSummaryArgs"/>
+     <event value="32009" symbol="Smb2PerfRxContextWriteSummary_V2" version="2" task="Smb2PerfRxContextWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextWriteSummaryArgs_V2"/>
+     <event value="32010" symbol="Smb2PerfRxContextCreateSummary" version="0" task="Smb2PerfRxContextCreateSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextCreateSummaryArgs"/>
+     <event value="32011" symbol="Smb2PerfRxContextCloseSummary" version="0" task="Smb2PerfRxContextCloseSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextCloseSummaryArgs"/>
+     <event value="32012" symbol="Smb2PerfRxContextQueryDirectorySummary" version="0" task="Smb2PerfRxContextQueryDirectorySummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextQueryDirectorySummaryArgs"/>
+     <event value="32013" symbol="Smb2PerfRxContextFsctlSummary" version="0" task="Smb2PerfRxContextFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextFsctlSummaryArgs"/>
+     <event value="32013" symbol="Smb2PerfRxContextFsctlSummary_V2" version="2" task="Smb2PerfRxContextFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfRxContextFsctlSummaryArgs_V2"/>
+     <event value="32028" symbol="Smb2PerfExchangeReadSummary" version="0" task="Smb2PerfExchangeReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeReadSummaryArgs"/>
+     <event value="32028" symbol="Smb2PerfExchangeReadSummary_V2" version="2" task="Smb2PerfExchangeReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeReadSummaryArgs_V2"/>
+     <event value="32029" symbol="Smb2PerfExchangeWriteSummary" version="0" task="Smb2PerfExchangeWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeWriteSummaryArgs"/>
+     <event value="32029" symbol="Smb2PerfExchangeWriteSummary_V2" version="2" task="Smb2PerfExchangeWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeWriteSummaryArgs_V2"/>
+     <event value="32030" symbol="Smb2PerfExchangeCreateSummary" version="0" task="Smb2PerfExchangeCreateSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeCreateSummaryArgs"/>
+     <event value="32031" symbol="Smb2PerfExchangeCloseSummary" version="0" task="Smb2PerfExchangeCloseSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeCloseSummaryArgs"/>
+     <event value="32032" symbol="Smb2PerfExchangeQueryDirectorySummary" version="0" task="Smb2PerfExchangeQueryDirectorySummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeQueryDirectorySummaryArgs"/>
+     <event value="32033" symbol="Smb2PerfExchangeFsctlSummary" version="0" task="Smb2PerfExchangeFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeFsctlSummaryArgs"/>
+     <event value="32033" symbol="Smb2PerfExchangeFsctlSummary_V2" version="2" task="Smb2PerfExchangeFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfExchangeFsctlSummaryArgs_V2"/>
+     <event value="32048" symbol="Smb2PerfBufferContextReadSummary" version="0" task="Smb2PerfBufferContextReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextReadSummaryArgs"/>
+     <event value="32048" symbol="Smb2PerfBufferContextReadSummary_V2" version="2" task="Smb2PerfBufferContextReadSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextReadSummaryArgs_V2"/>
+     <event value="32049" symbol="Smb2PerfBufferContextWriteSummary" version="0" task="Smb2PerfBufferContextWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextWriteSummaryArgs"/>
+     <event value="32049" symbol="Smb2PerfBufferContextWriteSummary_V2" version="2" task="Smb2PerfBufferContextWriteSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextWriteSummaryArgs_V2"/>
+     <event value="32050" symbol="Smb2PerfBufferContextCreateSummary" version="0" task="Smb2PerfBufferContextCreateSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextCreateSummaryArgs"/>
+     <event value="32051" symbol="Smb2PerfBufferContextCloseSummary" version="0" task="Smb2PerfBufferContextCloseSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextCloseSummaryArgs"/>
+     <event value="32052" symbol="Smb2PerfBufferContextQueryDirectorySummary" version="0" task="Smb2PerfBufferContextQueryDirectorySummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextQueryDirectorySummaryArgs"/>
+     <event value="32053" symbol="Smb2PerfBufferContextFsctlSummary" version="0" task="Smb2PerfBufferContextFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextFsctlSummaryArgs"/>
+     <event value="32053" symbol="Smb2PerfBufferContextFsctlSummary_V2" version="2" task="Smb2PerfBufferContextFsctlSummary" level="win:Informational" keywords="Smb_Perf_Summary" template="Smb2PerfBufferContextFsctlSummaryArgs_V2"/>
+     <event value="32068" symbol="Smb2PerfFCBCaptureSummary" version="0" task="Smb2PerfFCBCaptureSummary" level="win:Informational" keywords="Smb_Perf_Rundown" template="Smb2PerfFCBCaptureSummaryArgs"/>
+     <event value="40000" symbol="Packet" version="0" task="Packet" level="win:Informational" keywords="keyword_40000000000" template="PacketArgs"/>
+    </events>
+    <templates>
+     <template tid="CreateSrvCallErrorArgs">
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Location" inType="win:UInt32"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="PacketFragmentArgs">
+      <data name="ReassembledEventID" inType="win:UInt16"/>
+      <data name="FragmentSize" inType="win:UInt32"/>
+      <data name="FragmentData" inType="win:Binary" length="FragmentSize"/>
+     </template>
+     <template tid="CreateFileArgs">
+      <data name="CurrentOrNextState" inType="win:UInt8" map="ut:OpcodeMap"/>
+      <data name="Context" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbSuspendExchangeArgs">
+      <data name="RxContext" inType="win:Pointer"/>
+      <data name="Exchange" inType="win:Pointer"/>
+      <data name="ListHead" inType="win:Pointer"/>
+     </template>
+     <template tid="SmbResumeExchangeArgs">
+      <data name="RxContext" inType="win:Pointer"/>
+      <data name="Exchange" inType="win:Pointer"/>
+      <data name="ExchangeState" inType="win:UInt32"/>
+      <data name="ExchangeStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbSuspendBufferCtxtArgs">
+      <data name="BufferCtxt" inType="win:Pointer"/>
+      <data name="Exchange" inType="win:Pointer"/>
+      <data name="MidCharge" inType="win:UInt32"/>
+      <data name="Window" inType="win:Pointer"/>
+      <data name="CurrentWindowLimit" inType="win:UInt32"/>
+      <data name="ThrottlingWindowLimit" inType="win:UInt32"/>
+      <data name="CurrentWindowSize" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbMidWindowBlockedArgs">
+      <data name="Window" inType="win:Pointer"/>
+      <data name="HungSession" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbInitializeMidWindowArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="MidWindow" inType="win:Pointer"/>
+     </template>
+     <template tid="SmbMidWindowStateArgs">
+      <data name="MidWindow" inType="win:Pointer"/>
+      <data name="CurrentWindowSize" inType="win:UInt32"/>
+      <data name="CurrentWindowLimit" inType="win:UInt32"/>
+      <data name="ThrottlingWindowLimit" inType="win:UInt32"/>
+      <data name="OldestPendingMid" inType="win:UInt64"/>
+      <data name="NextAvailableMid" inType="win:UInt64"/>
+      <data name="CreditsGranted" inType="win:Int32"/>
+     </template>
+     <template tid="SmbDataReadyArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="VcEndpoint" inType="win:Pointer"/>
+     </template>
+     <template tid="NetConnectArgs">
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="NetConnectCompletionArgs">
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ConnectionType" inType="win:UInt32" map="ConnectionTypeMap"/>
+     </template>
+     <template tid="NetSendArgs">
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="SendMdl" inType="win:Pointer"/>
+      <data name="SendLength" inType="win:UInt32"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="NetSendCompletionArgs">
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="SendMdl" inType="win:Pointer"/>
+      <data name="SendLength" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="CompressionRequestedArgs">
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="Smb2Fobx" inType="win:Pointer"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbSessionExpiredArgs">
+      <data name="SessionEntry" inType="win:Pointer"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="SmbReconnectArgs">
+      <data name="Fcb" inType="win:Pointer"/>
+      <data name="SrvOpen" inType="win:Pointer"/>
+     </template>
+     <template tid="SmbSendArgs">
+      <data name="Count" inType="win:UInt32"/>
+      <data name="Command" inType="win:AnsiString"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MidCharge" inType="win:UInt16"/>
+      <data name="CreditRequested" inType="win:UInt16"/>
+      <data name="SendLength" inType="win:UInt32"/>
+      <data name="VcEndpoint" inType="win:Pointer"/>
+     </template>
+     <template tid="SmbReceiveArgs">
+      <data name="Command" inType="win:AnsiString"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="AsyncId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="CreditGranted" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="VcEndpoint" inType="win:Pointer"/>
+     </template>
+     <template tid="SmbRegistryKeyArgs">
+      <data name="RegName" inType="win:UnicodeString"/>
+      <data name="RegValue" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbUpdateInfoCacheArgs">
+      <data name="RxContext" inType="win:Pointer"/>
+      <data name="Fcb" inType="win:Pointer"/>
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="SessionStateTransitionArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="OldState" inType="win:UInt16"/>
+      <data name="NewState" inType="win:UInt16" map="Smb2ObjectStateMap"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="NameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="NameLength"/>
+     </template>
+     <template tid="VNetRootStateTransitionArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="OldState" inType="win:UInt16"/>
+      <data name="NewState" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="NameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="NameLength"/>
+     </template>
+     <template tid="OpenHandleStateTransitionArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="PersistentFID" inType="win:UInt64"/>
+      <data name="VolatileFID" inType="win:UInt64"/>
+      <data name="CreateGUID" inType="win:GUID"/>
+      <data name="OldState" inType="win:UInt16"/>
+      <data name="NewState" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="PreviousStatus" inType="win:UInt32"/>
+      <data name="PreviousReason" inType="win:UInt32" map="Smb2DiagReasonMap"/>
+     </template>
+     <template tid="NoSMB1ObservedInLastPeriodArgs">
+      <data name="Days" inType="win:UInt32"/>
+     </template>
+     <template tid="HandleOpenFailureArgs">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="PersistentFID" inType="win:UInt64"/>
+      <data name="VolatileFID" inType="win:UInt64"/>
+      <data name="CreateGUID" inType="win:GUID"/>
+      <data name="OldState" inType="win:UInt16"/>
+      <data name="NewState" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="PreviousStatus" inType="win:UInt32"/>
+      <data name="PreviousReason" inType="win:UInt32"/>
+     </template>
+     <template tid="ServerNetworkInterfaceInvalidArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="WskConnectFailureArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="WskGetAddressInfoFailureArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="NetworkConnectFailureArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary" length="AddressLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="ExpiredExchangeArgs">
+      <data name="Smb2Command" inType="win:UInt16" map="Smb2CommandMap"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="RetryCount" inType="win:UInt32"/>
+      <data name="ElapsedTimeInMs" inType="win:UInt32"/>
+     </template>
+     <template tid="TcpIpTransportArrivalArgs">
+      <data name="NameLength" inType="win:UInt16"/>
+      <data name="Name" inType="win:UnicodeString" length="NameLength"/>
+      <data name="IfIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="WitnessRegistrationArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ShareType" inType="win:UInt8" map="ShareTypeMap"/>
+      <data name="NameLength" inType="win:UInt16"/>
+      <data name="Name" inType="win:UnicodeString" length="NameLength"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+     </template>
+     <template tid="WitnessDeregistrationArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ShareType" inType="win:UInt8"/>
+      <data name="NameLength" inType="win:UInt16"/>
+      <data name="Name" inType="win:UnicodeString" length="NameLength"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+     </template>
+     <template tid="CloseFailureArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+     </template>
+     <template tid="MultiChannelNetworkConnectFailureArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="LocalAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="NegotiateResponseEncryptionCapabilitiesFailureArgs">
+      <data name="ClientCipherSuiteOrderLength" inType="win:UInt32"/>
+      <data name="ClientCipherSuiteOrder" inType="win:UnicodeString" length="ClientCipherSuiteOrderLength"/>
+      <data name="ServerChosenEncryptionCipherLength" inType="win:UInt32"/>
+      <data name="ServerChosenEncryptionCipher" inType="win:UnicodeString" length="ServerChosenEncryptionCipherLength"/>
+     </template>
+     <template tid="CertificateMappingNotFoundArgs">
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="SessionEstablishedNoisyArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+     </template>
+     <template tid="SmbConnectionInitiatedSelectedInfoArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="MutualAuthServerDeniedAccessArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:AnsiString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="ConnectionEstablishedArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:AnsiString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="ShareInitialConnectionEstablishedArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary" length="AddressLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="SigningUsed" inType="win:Boolean"/>
+      <data name="EncryptionUsed" inType="win:Boolean"/>
+      <data name="CompressionRequested" inType="win:Boolean"/>
+      <data name="NTLMBlocked" inType="win:Boolean"/>
+     </template>
+     <template tid="ServerCertificateRevocationChecksFailedArgs">
+      <data name="HResult" inType="win:Int32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32" map="Smb2PortSelectionMap"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="ServerAuthenticationFailureArgs">
+      <data name="HResult" inType="win:Int32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="TransportIOVisibilityArgs">
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="IrpMajorFunction" inType="win:UInt32" map="IrpMajorFunctionMap"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="SessionEntry" inType="win:Pointer"/>
+      <data name="BindingObject" inType="win:Pointer"/>
+     </template>
+     <template tid="RequestedTransportDisabledArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+     </template>
+     <template tid="RequestRetryFailureArgs">
+      <data name="IrpCode" inType="win:UInt8"/>
+      <data name="RestartCount" inType="win:UInt32"/>
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="ObjectNameLength" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:UnicodeString" length="ObjectNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="HistoryCount" inType="win:UInt32"/>
+      <data name="HistoryEntry" inType="win:UInt64" count="HistoryCount"/>
+     </template>
+     <template tid="InvalidCipherSuiteOrderArgs">
+      <data name="CipherSuiteOrder" inType="win:UnicodeString"/>
+     </template>
+     <template tid="IsolatedTransportServerEntryInfoArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ShareNameLength" inType="win:UInt16"/>
+      <data name="ShareName" inType="win:UnicodeString" length="ShareNameLength"/>
+      <data name="AsymmetricFlag" inType="win:Boolean"/>
+      <data name="IsolatedTransportFlag" inType="win:Boolean"/>
+      <data name="IsIsolatedTransportServerEntry" inType="win:Boolean"/>
+     </template>
+     <template tid="SmbRdmaRundownActiveArgs">
+      <data name="ActiveRdmaResourceCount" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbRdmaRundownCompleteArgs">
+      <data name="NoOp" inType="win:Boolean"/>
+     </template>
+     <template tid="SmbRdmaSMBDirectLoadArgs">
+      <data name="IsSuccess" inType="win:Boolean"/>
+      <data name="LoadStatus" inType="win:HexInt32"/>
+      <data name="ServicePathLength" inType="win:UInt16"/>
+      <data name="ServicePath" inType="win:UnicodeString" length="ServicePathLength"/>
+     </template>
+     <template tid="SmbComponentCapabilitiesArgs">
+      <data name="ComponentCapabilities" inType="win:HexInt32" map="SmbComponentCapabilitiesBitmap"/>
+      <data name="PatchNumber" inType="win:HexInt32"/>
+     </template>
+     <template tid="SmbInvalidPortSpecifiedArgs">
+      <data name="PortNumber" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="TransportNameLength" inType="win:UInt16"/>
+      <data name="TransportName" inType="win:UnicodeString" length="TransportNameLength"/>
+     </template>
+     <template tid="SmbConnectionInitiatedNotSelectedInfoArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+     </template>
+     <template tid="SmbDialectChangeArgs">
+      <data name="SmbDialect" inType="win:UnicodeString"/>
+      <data name="OldDialect" inType="win:HexInt32"/>
+      <data name="NewDialect" inType="win:HexInt32"/>
+     </template>
+     <template tid="SmbLsassCallDurationInfoArgs">
+      <data name="FunctionName" inType="win:UInt32" map="SMB2LsassFunctionCallMap"/>
+      <data name="CallDuration" inType="win:Int32"/>
+      <data name="ThresholdDuration" inType="win:Int32"/>
+     </template>
+     <template tid="SmbLsassCallDurationWarningArgs">
+      <data name="FunctionName" inType="win:UInt32"/>
+      <data name="CallDuration" inType="win:Int32"/>
+      <data name="ThresholdDuration" inType="win:Int32"/>
+     </template>
+     <template tid="AcquireCredHandleFailureArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SecurityStatus" inType="win:UInt32"/>
+      <data name="LogonId" inType="win:UInt64"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="PrincipalNameLength" inType="win:UInt16"/>
+      <data name="PrincipalName" inType="win:UnicodeString" length="PrincipalNameLength"/>
+      <data name="UserNameLength" inType="win:UInt16"/>
+      <data name="UserName" inType="win:UnicodeString" length="UserNameLength"/>
+     </template>
+     <template tid="NegotiateValidationFailureArgs">
+      <data name="Dialect" inType="win:UInt16"/>
+      <data name="SecurityMode" inType="win:UInt16"/>
+      <data name="Capabilities" inType="win:UInt32"/>
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Dialect2" inType="win:UInt16"/>
+      <data name="SecurityMode2" inType="win:UInt16"/>
+      <data name="Capabilities2" inType="win:UInt32"/>
+      <data name="Guid2" inType="win:GUID"/>
+     </template>
+     <template tid="SigningFailureArgs">
+      <data name="Smb2Command" inType="win:UInt16"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="MessageSize" inType="win:UInt32"/>
+      <data name="FragmentOffset" inType="win:UInt32"/>
+      <data name="FragmentSize" inType="win:UInt32"/>
+      <data name="FragmentData" inType="win:Binary" length="FragmentSize"/>
+     </template>
+     <template tid="EncryptionFailureArgs">
+      <data name="Smb2Command" inType="win:UInt16"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="RetryCount" inType="win:UInt32"/>
+      <data name="ElapsedTimeInMs" inType="win:UInt32"/>
+     </template>
+     <template tid="RejectedInsecureGuestAuthArgs">
+      <data name="UserNameLength" inType="win:UInt16"/>
+      <data name="UserName" inType="win:UnicodeString" length="UserNameLength"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="MADowngradeDetectedArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SecurityStatus" inType="win:UInt32"/>
+      <data name="LogonId" inType="win:UInt64"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="UserNameLength" inType="win:UInt16"/>
+      <data name="UserName" inType="win:UnicodeString" length="UserNameLength"/>
+      <data name="OldAuthProtocolId" inType="win:UInt16"/>
+      <data name="NewAuthProtocolId" inType="win:UInt16"/>
+      <data name="OldMutualAuthState" inType="win:Boolean"/>
+      <data name="NewMutualAuthState" inType="win:Boolean"/>
+      <data name="ClusteredServer" inType="win:Boolean"/>
+     </template>
+     <template tid="SessionKeyTooShortArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="SessionKeyLength" inType="win:UInt32"/>
+      <data name="RequiredSessionKeyLength" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="UserName" inType="win:UnicodeString"/>
+      <data name="AuthProtocol" inType="win:UInt32" map="AuthProtocolMap"/>
+     </template>
+     <template tid="DirectDataPlacementSecurityArgs">
+      <data name="OldValue" inType="win:UInt32"/>
+      <data name="NewValue" inType="win:UInt32" map="Smb2DirectDataPlacementSecurityMap"/>
+     </template>
+     <template tid="ServerDoesNotSupportSigningArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ClientRequireSigning" inType="win:Boolean"/>
+     </template>
+     <template tid="ServerDoesNotSupportEncryptionArgs">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ClientRequireEncryption" inType="win:Boolean"/>
+     </template>
+     <template tid="UnexpectedSMB1ResponseReceivedArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Dialect" inType="win:UInt16"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="SMB1ResponseReceivedArgs">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Dialect" inType="win:UInt16"/>
+      <data name="SecurityMode" inType="win:UInt16"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+     </template>
+     <template tid="Smb2PerfRxContextStartArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileName" inType="win:UnicodeString" length="FileNameLength"/>
+      <data name="MajorFunction" inType="win:UInt8"/>
+      <data name="MinorFunction" inType="win:UInt8"/>
+     </template>
+     <template tid="Smb2PerfExchangeStartArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="MajorFunction" inType="win:UInt8"/>
+      <data name="MinorFunction" inType="win:UInt8"/>
+     </template>
+     <template tid="Smb2PerfBufferContextStartArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="MajorFunction" inType="win:UInt8"/>
+      <data name="MinorFunction" inType="win:UInt8"/>
+      <data name="Smb2Command" inType="win:UInt16"/>
+     </template>
+     <template tid="Smb2PerfWorkTransitionArgs">
+      <data name="BlockType" inType="win:UInt32"/>
+     </template>
+     <template tid="Smb2PerfRxContextReadSummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8" map="InstanceIdMap"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="ReadProcessing" inType="win:UInt64"/>
+      <data name="HitCountReadProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextWriteSummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="WriteProcessing" inType="win:UInt64"/>
+      <data name="HitCountWriteProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextCreateSummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="CreateProcessing" inType="win:UInt64"/>
+      <data name="HitCountCreateProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextCloseSummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="CloseProcessing" inType="win:UInt64"/>
+      <data name="HitCountCloseProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextQueryDirectorySummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="QueryDirectoryProcessing" inType="win:UInt64"/>
+      <data name="HitCountQueryDirectoryProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextFsctlSummaryArgs">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="FsctlProcessing" inType="win:UInt64"/>
+      <data name="HitCountFsctlProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeReadSummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="ReadStart" inType="win:UInt64"/>
+      <data name="HitCountReadStart" inType="win:UInt64"/>
+      <data name="ReadBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="HitCountReadBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeWriteSummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="WriteStart" inType="win:UInt64"/>
+      <data name="HitCountWriteStart" inType="win:UInt64"/>
+      <data name="WriteBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="HitCountWriteBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeCreateSummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="CreateStart" inType="win:UInt64"/>
+      <data name="HitCountCreateStart" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeCloseSummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="CloseStart" inType="win:UInt64"/>
+      <data name="HitCountCloseStart" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeQueryDirectorySummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="QueryDirectoryStart" inType="win:UInt64"/>
+      <data name="HitCountQueryDirectoryStart" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeFsctlSummaryArgs">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="FsctlStart" inType="win:UInt64"/>
+      <data name="HitCountFsctlStart" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextReadSummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="WriteRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="HitCountWriteRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="ReadReceive" inType="win:UInt64"/>
+      <data name="HitCountReadReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextWriteSummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="ReadRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="HitCountReadRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="WriteReceive" inType="win:UInt64"/>
+      <data name="HitCountWriteReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextCreateSummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="CreateReceive" inType="win:UInt64"/>
+      <data name="HitCountCreateReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextCloseSummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="CloseReceive" inType="win:UInt64"/>
+      <data name="HitCountCloseReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextQueryDirectorySummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="QueryDirectoryReceive" inType="win:UInt64"/>
+      <data name="HitCountQueryDirectoryReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextFsctlSummaryArgs">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="FsctlReceive" inType="win:UInt64"/>
+      <data name="HitCountFsctlReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfFCBCaptureSummaryArgs">
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="PrefixLength" inType="win:UInt16"/>
+      <data name="Prefix" inType="win:UnicodeString" length="PrefixLength"/>
+      <data name="ServerShareLength" inType="win:UInt16"/>
+      <data name="ServerShare" inType="win:UnicodeString" length="ServerShareLength"/>
+     </template>
+     <template tid="PacketArgs">
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="PeerAddressLength" inType="win:UInt32"/>
+      <data name="PeerAddress" inType="win:Binary" length="PeerAddressLength"/>
+      <data name="PacketSize" inType="win:UInt32"/>
+      <data name="PacketData" inType="win:Binary" length="PacketSize"/>
+     </template>
+     <template tid="ConnectionDisconnectStateClearedArgs_V1">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+     </template>
+     <template tid="ServerCertificateRevocationChecksFailedArgs_V1">
+      <data name="HResult" inType="win:Int32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:AnsiString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="SmbRdmaSMBDirectLoadArgs_V1">
+      <data name="IsSuccess" inType="win:Boolean"/>
+      <data name="LoadStatus" inType="win:HexInt32"/>
+      <data name="ServicePathLength" inType="win:UInt16"/>
+      <data name="ServicePath" inType="win:UnicodeString" length="ServicePathLength"/>
+      <data name="DeviceNameLength" inType="win:UInt16"/>
+      <data name="DeviceName" inType="win:UnicodeString" length="DeviceNameLength"/>
+     </template>
+     <template tid="NetConnectCompletionArgs_V2">
+      <data name="VcEndpoint" inType="win:Pointer"/>
+      <data name="Socket" inType="win:Pointer"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+     </template>
+     <template tid="DisconnectIndicationArgs_V2">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary" length="AddressLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="InterfaceId" inType="win:UInt32"/>
+     </template>
+     <template tid="SessionFailureArgs_V2">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary" length="AddressLength"/>
+     </template>
+     <template tid="MultiChannelNetworkConnectFailureArgs_V2">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="LocalAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+     </template>
+     <template tid="SmbConnectionInitiatedSelectedInfoArgs_V2">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="ConnectionEstablishedArgs_V2">
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+     <template tid="SigningFailureArgs_V2">
+      <data name="Smb2Command" inType="win:UInt16"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="MessageSize" inType="win:UInt32"/>
+      <data name="FragmentOffset" inType="win:UInt32"/>
+      <data name="FragmentSize" inType="win:UInt32"/>
+      <data name="FragmentData" inType="win:Binary" length="FragmentSize"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+     </template>
+     <template tid="EncryptionFailureArgs_V2">
+      <data name="Smb2Command" inType="win:UInt16"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="RetryCount" inType="win:UInt32"/>
+      <data name="ElapsedTimeInMs" inType="win:UInt32"/>
+      <data name="RemoteAddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="RemoteAddressLength"/>
+      <data name="LocalAddressLength" inType="win:UInt32"/>
+      <data name="LocalAddress" inType="win:Binary" length="LocalAddressLength"/>
+     </template>
+     <template tid="Smb2PerfRxContextReadSummaryArgs_V2">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="FileObject" inType="win:UInt64"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="ReadProcessing" inType="win:UInt64"/>
+      <data name="HitCountReadProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+      <data name="AttemptTurboIORead" inType="win:UInt64"/>
+      <data name="HitCountAttemptTurboIORead" inType="win:UInt64"/>
+      <data name="AttemptTurboIOInit" inType="win:UInt64"/>
+      <data name="HitCountAttemptTurboIOInit" inType="win:UInt64"/>
+      <data name="TurboIORxCompletion" inType="win:UInt64"/>
+      <data name="HitCountTurboIORxCompletion" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextWriteSummaryArgs_V2">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="FileObject" inType="win:UInt64"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="WriteProcessing" inType="win:UInt64"/>
+      <data name="HitCountWriteProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+      <data name="AttemptTurboIOWrite" inType="win:UInt64"/>
+      <data name="HitCountAttemptTurboIOWrite" inType="win:UInt64"/>
+      <data name="AttemptTurboIOInit" inType="win:UInt64"/>
+      <data name="HitCountAttemptTurboIOInit" inType="win:UInt64"/>
+      <data name="TurboIORxCompletion" inType="win:UInt64"/>
+      <data name="HitCountTurboIORxCompletion" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfRxContextFsctlSummaryArgs_V2">
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="IRP" inType="win:UInt64"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Construction" inType="win:UInt64"/>
+      <data name="HitCountConstruction" inType="win:UInt64"/>
+      <data name="DispatchProcessing" inType="win:UInt64"/>
+      <data name="HitCountDispatchProcessing" inType="win:UInt64"/>
+      <data name="FsctlProcessing" inType="win:UInt64"/>
+      <data name="HitCountFsctlProcessing" inType="win:UInt64"/>
+      <data name="CallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="HitCountCallMiniRdr_MRXSMB" inType="win:UInt64"/>
+      <data name="LowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="HitCountLowIoCompletionRoutine" inType="win:UInt64"/>
+      <data name="CompleteIRP" inType="win:UInt64"/>
+      <data name="HitCountCompleteIRP" inType="win:UInt64"/>
+      <data name="PostIOCompletion" inType="win:UInt64"/>
+      <data name="HitCountPostIOCompletion" inType="win:UInt64"/>
+      <data name="PostIORetry" inType="win:UInt64"/>
+      <data name="HitCountPostIORetry" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeReadSummaryArgs_V2">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="ReadStart" inType="win:UInt64"/>
+      <data name="HitCountReadStart" inType="win:UInt64"/>
+      <data name="ReadBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="HitCountReadBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="TurboIOStart" inType="win:UInt64"/>
+      <data name="HitCountTurboIOStart" inType="win:UInt64"/>
+      <data name="TurboIOComplete" inType="win:UInt64"/>
+      <data name="HitCountTurboIOComplete" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeWriteSummaryArgs_V2">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="RxContext" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="WriteStart" inType="win:UInt64"/>
+      <data name="HitCountWriteStart" inType="win:UInt64"/>
+      <data name="WriteBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="HitCountWriteBuildAndSendChunks" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="TurboIOStart" inType="win:UInt64"/>
+      <data name="HitCountTurboIOStart" inType="win:UInt64"/>
+      <data name="TurboIOComplete" inType="win:UInt64"/>
+      <data name="HitCountTurboIOComplete" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfExchangeFsctlSummaryArgs_V2">
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="RestartCount" inType="win:UInt64"/>
+      <data name="ResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="HitCountResolvingConnectionObjects" inType="win:UInt64"/>
+      <data name="CommandProcessing" inType="win:UInt64"/>
+      <data name="HitCountCommandProcessing" inType="win:UInt64"/>
+      <data name="FsctlStart" inType="win:UInt64"/>
+      <data name="HitCountFsctlStart" inType="win:UInt64"/>
+      <data name="CommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="HitCountCommandFinalizationCallback" inType="win:UInt64"/>
+      <data name="Finalize" inType="win:UInt64"/>
+      <data name="HitCountFinalize" inType="win:UInt64"/>
+      <data name="PostFinalizeWorker" inType="win:UInt64"/>
+      <data name="HitCountPostFinalizeWorker" inType="win:UInt64"/>
+      <data name="FinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="HitCountFinalizeWorkerHitCount" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextReadSummaryArgs_V2">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="WriteRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="HitCountWriteRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="ReadReceive" inType="win:UInt64"/>
+      <data name="HitCountReadReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextWriteSummaryArgs_V2">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="Exchange" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="ReadRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="HitCountReadRDMABufferRegistration" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="WriteReceive" inType="win:UInt64"/>
+      <data name="HitCountWriteReceive" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2PerfBufferContextFsctlSummaryArgs_V2">
+      <data name="BufferContext" inType="win:UInt64"/>
+      <data name="InstanceId" inType="win:UInt8"/>
+      <data name="TotalDuration" inType="win:UInt64"/>
+      <data name="Initialized" inType="win:UInt64"/>
+      <data name="HitCountInitialized" inType="win:UInt64"/>
+      <data name="RDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="HitCountRDMAGetDescriptors" inType="win:UInt64"/>
+      <data name="AssociateMID" inType="win:UInt64"/>
+      <data name="HitCountAssociateMID" inType="win:UInt64"/>
+      <data name="Assembly" inType="win:UInt64"/>
+      <data name="HitCountAssembly" inType="win:UInt64"/>
+      <data name="BeginSmbSend" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSend" inType="win:UInt64"/>
+      <data name="BeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="HitCountBeginSmbSendAsyncPostWorkerCount" inType="win:UInt64"/>
+      <data name="SmbdPrepareSend" inType="win:UInt64"/>
+      <data name="HitCountSmbdPrepareSend" inType="win:UInt64"/>
+      <data name="ServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="HitCountServerTimeTakenToReply" inType="win:UInt64"/>
+      <data name="FsctlReceive" inType="win:UInt64"/>
+      <data name="HitCountFsctlReceive" inType="win:UInt64"/>
+      <data name="ByteCount" inType="win:UInt64"/>
+     </template>
+     <template tid="SessionEstablishedArgs_V3">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="Address" inType="win:Binary" length="AddressLength"/>
+      <data name="SigningUsed" inType="win:Boolean"/>
+      <data name="EncryptionUsed" inType="win:Boolean"/>
+     </template>
+     <template tid="NetworkConnectFailureArgs_V4">
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ServerNameLength" inType="win:UInt16"/>
+      <data name="ServerName" inType="win:UnicodeString" length="ServerNameLength"/>
+      <data name="AddressLength" inType="win:UInt32"/>
+      <data name="RemoteAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="LocalAddress" inType="win:Binary" length="AddressLength"/>
+      <data name="InstanceNameLength" inType="win:UInt16"/>
+      <data name="InstanceName" inType="win:UnicodeString" length="InstanceNameLength"/>
+      <data name="ConnectionType" inType="win:UInt32"/>
+      <data name="PortSelectionOrigin" inType="win:UInt32"/>
+      <data name="ConnectionIdSize" inType="win:UInt32"/>
+      <data name="ConnectionId" inType="win:Binary" length="ConnectionIdSize"/>
+      <data name="ClientCertSha1HashSize" inType="win:UInt32"/>
+      <data name="ClientCertSha1Hash" inType="win:Binary" length="ClientCertSha1HashSize"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Smb_Perf" value="Smb_Perf"/>
+    <string id="keyword_Networking_Perf" value="Networking_Perf"/>
+    <string id="keyword_Smb_Info" value="Smb_Info"/>
+    <string id="keyword_InfoCache_Info" value="InfoCache_Info"/>
+    <string id="keyword_Smb_TFO" value="Smb_TFO"/>
+    <string id="keyword_Smb_MultiChannel" value="Smb_MultiChannel"/>
+    <string id="keyword_Smb_Connectivity" value="Smb_Connectivity"/>
+    <string id="keyword_Smb_Authentication" value="Smb_Authentication"/>
+    <string id="keyword_Smb_Authorization" value="Smb_Authorization"/>
+    <string id="keyword_Smb_Security" value="Smb_Security"/>
+    <string id="keyword_Smb_Perf_IO" value="Smb_Perf_IO"/>
+    <string id="keyword_Smb_Perf_Summary" value="Smb_Perf_Summary"/>
+    <string id="keyword_Smb_Perf_Rundown" value="Smb_Perf_Rundown"/>
+    <string id="keyword_Smb_Perf_IO_Optional" value="Smb_Perf_IO_Optional"/>
+    <string id="keyword_Smb_Connectivity_Noisy" value="Smb_Connectivity_Noisy"/>
+    <string id="keyword_PacketStart" value="PacketStart"/>
+    <string id="keyword_PacketEnd" value="PacketEnd"/>
+    <string id="keyword_ut:SendPath" value="ut:SendPath"/>
+    <string id="keyword_ut:ReceivePath" value="ut:ReceivePath"/>
+    <string id="keyword_keyword_40000000000" value="keyword_40000000000"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_Smb2PerfRxContextStart" value="Smb2PerfRxContextStart"/>
+    <string id="task_Smb2PerfExchangeStart" value="Smb2PerfExchangeStart"/>
+    <string id="task_Smb2PerfBufferContextStart" value="Smb2PerfBufferContextStart"/>
+    <string id="task_Smb2PerfWorkTransition" value="Smb2PerfWorkTransition"/>
+    <string id="task_Smb2PerfRxContextReadSummary" value="Smb2PerfRxContextReadSummary"/>
+    <string id="task_Smb2PerfRxContextWriteSummary" value="Smb2PerfRxContextWriteSummary"/>
+    <string id="task_Smb2PerfRxContextCreateSummary" value="Smb2PerfRxContextCreateSummary"/>
+    <string id="task_Smb2PerfRxContextCloseSummary" value="Smb2PerfRxContextCloseSummary"/>
+    <string id="task_Smb2PerfRxContextQueryDirectorySummary" value="Smb2PerfRxContextQueryDirectorySummary"/>
+    <string id="task_Smb2PerfRxContextFsctlSummary" value="Smb2PerfRxContextFsctlSummary"/>
+    <string id="task_Smb2PerfExchangeReadSummary" value="Smb2PerfExchangeReadSummary"/>
+    <string id="task_Smb2PerfExchangeWriteSummary" value="Smb2PerfExchangeWriteSummary"/>
+    <string id="task_Smb2PerfExchangeCreateSummary" value="Smb2PerfExchangeCreateSummary"/>
+    <string id="task_Smb2PerfExchangeCloseSummary" value="Smb2PerfExchangeCloseSummary"/>
+    <string id="task_Smb2PerfExchangeQueryDirectorySummary" value="Smb2PerfExchangeQueryDirectorySummary"/>
+    <string id="task_Smb2PerfExchangeFsctlSummary" value="Smb2PerfExchangeFsctlSummary"/>
+    <string id="task_Smb2PerfBufferContextReadSummary" value="Smb2PerfBufferContextReadSummary"/>
+    <string id="task_Smb2PerfBufferContextWriteSummary" value="Smb2PerfBufferContextWriteSummary"/>
+    <string id="task_Smb2PerfBufferContextCreateSummary" value="Smb2PerfBufferContextCreateSummary"/>
+    <string id="task_Smb2PerfBufferContextCloseSummary" value="Smb2PerfBufferContextCloseSummary"/>
+    <string id="task_Smb2PerfBufferContextQueryDirectorySummary" value="Smb2PerfBufferContextQueryDirectorySummary"/>
+    <string id="task_Smb2PerfBufferContextFsctlSummary" value="Smb2PerfBufferContextFsctlSummary"/>
+    <string id="task_Smb2PerfFCBCaptureSummary" value="Smb2PerfFCBCaptureSummary"/>
+    <string id="task_CreateSrvCallError" value="CreateSrvCallError"/>
+    <string id="task_SessionSetupError" value="SessionSetupError"/>
+    <string id="task_CreateVNetRootError" value="CreateVNetRootError"/>
+    <string id="task_CreateFileError" value="CreateFileError"/>
+    <string id="task_CreateFile" value="CreateFile"/>
+    <string id="task_SmbSuspendExchange" value="SmbSuspendExchange"/>
+    <string id="task_SmbResumeExchange" value="SmbResumeExchange"/>
+    <string id="task_SmbResumeBufferCtxt" value="SmbResumeBufferCtxt"/>
+    <string id="task_SmbMidWindowBlocked" value="SmbMidWindowBlocked"/>
+    <string id="task_SmbRechunkRequest" value="SmbRechunkRequest"/>
+    <string id="task_SmbInitializeMidWindow" value="SmbInitializeMidWindow"/>
+    <string id="task_SmbMidWindowState" value="SmbMidWindowState"/>
+    <string id="task_SmbTeardownMidWindow" value="SmbTeardownMidWindow"/>
+    <string id="task_SmbDataReady" value="SmbDataReady"/>
+    <string id="task_SmbSendCompletion" value="SmbSendCompletion"/>
+    <string id="task_NetConnect" value="NetConnect"/>
+    <string id="task_NetConnectCompletion" value="NetConnectCompletion"/>
+    <string id="task_NetSend" value="NetSend"/>
+    <string id="task_NetSendCompletion" value="NetSendCompletion"/>
+    <string id="task_NetReceive" value="NetReceive"/>
+    <string id="task_NetReceiveCompletion" value="NetReceiveCompletion"/>
+    <string id="task_CompressionRequested" value="CompressionRequested"/>
+    <string id="task_DecompressionFailure" value="DecompressionFailure"/>
+    <string id="task_CompressionFailure" value="CompressionFailure"/>
+    <string id="task_SmbSessionExpired" value="SmbSessionExpired"/>
+    <string id="task_Smb3PartSPNReauth" value="Smb3PartSPNReauth"/>
+    <string id="task_SmbReconnect" value="SmbReconnect"/>
+    <string id="task_SmbDeferOpen" value="SmbDeferOpen"/>
+    <string id="task_SmbUndeferOpen" value="SmbUndeferOpen"/>
+    <string id="task_SmbSend" value="SmbSend"/>
+    <string id="task_SmbReceive" value="SmbReceive"/>
+    <string id="task_SmbReceiveInterim" value="SmbReceiveInterim"/>
+    <string id="task_SmbReceiveAsync" value="SmbReceiveAsync"/>
+    <string id="task_SmbRegistryKey" value="SmbRegistryKey"/>
+    <string id="task_SmbUpdateInfoCache" value="SmbUpdateInfoCache"/>
+    <string id="task_SmbFetchInfoCache" value="SmbFetchInfoCache"/>
+    <string id="task_SmbInvalidateInfoCache" value="SmbInvalidateInfoCache"/>
+    <string id="task_SmbUpdateFNFCache" value="SmbUpdateFNFCache"/>
+    <string id="task_SmbFetchFNFCache" value="SmbFetchFNFCache"/>
+    <string id="task_SmbInvalidateFNFCache" value="SmbInvalidateFNFCache"/>
+    <string id="task_SmbPopulateDirCache" value="SmbPopulateDirCache"/>
+    <string id="task_SmbFetchDirCache" value="SmbFetchDirCache"/>
+    <string id="task_SessionStateTransition" value="SessionStateTransition"/>
+    <string id="task_VNetRootStateTransition" value="VNetRootStateTransition"/>
+    <string id="task_OpenHandleStateTransition" value="OpenHandleStateTransition"/>
+    <string id="task_NoSMB1ObservedInLastPeriod" value="NoSMB1ObservedInLastPeriod"/>
+    <string id="task_PersistentHandleFailure" value="PersistentHandleFailure"/>
+    <string id="task_ResilientHandleFailure" value="ResilientHandleFailure"/>
+    <string id="task_HandleOpenFailure" value="HandleOpenFailure"/>
+    <string id="task_ServerNetworkInterfaceInvalid" value="ServerNetworkInterfaceInvalid"/>
+    <string id="task_WskConnectFailure" value="WskConnectFailure"/>
+    <string id="task_RdmaConnectFailure" value="RdmaConnectFailure"/>
+    <string id="task_WskConnectSuccess" value="WskConnectSuccess"/>
+    <string id="task_RdmaConnectSuccess" value="RdmaConnectSuccess"/>
+    <string id="task_WskGetAddressInfoFailure" value="WskGetAddressInfoFailure"/>
+    <string id="task_SetSocketSecurityFailure" value="SetSocketSecurityFailure"/>
+    <string id="task_IPSecFailure" value="IPSecFailure"/>
+    <string id="task_NetworkConnectFailure" value="NetworkConnectFailure"/>
+    <string id="task_DisconnectIndication" value="DisconnectIndication"/>
+    <string id="task_SessionFailure" value="SessionFailure"/>
+    <string id="task_SessionEstablished" value="SessionEstablished"/>
+    <string id="task_ShareConnectionFailure" value="ShareConnectionFailure"/>
+    <string id="task_ShareConnectionEstablished" value="ShareConnectionEstablished"/>
+    <string id="task_ExpiredExchange" value="ExpiredExchange"/>
+    <string id="task_TcpIpTransportArrival" value="TcpIpTransportArrival"/>
+    <string id="task_TcpIpTransportRemoval" value="TcpIpTransportRemoval"/>
+    <string id="task_TdiTransportArrival" value="TdiTransportArrival"/>
+    <string id="task_TdiTransportRemoval" value="TdiTransportRemoval"/>
+    <string id="task_WitnessRegistration" value="WitnessRegistration"/>
+    <string id="task_WitnessDeregistration" value="WitnessDeregistration"/>
+    <string id="task_NegotiateFailure" value="NegotiateFailure"/>
+    <string id="task_CloseFailure" value="CloseFailure"/>
+    <string id="task_RdmaFallback" value="RdmaFallback"/>
+    <string id="task_WitnessMove" value="WitnessMove"/>
+    <string id="task_WitnessMoveSuccess" value="WitnessMoveSuccess"/>
+    <string id="task_WitnessMoveFailure" value="WitnessMoveFailure"/>
+    <string id="task_MultiChannelNetworkConnectFailure" value="MultiChannelNetworkConnectFailure"/>
+    <string id="task_HungConnectionFailure" value="HungConnectionFailure"/>
+    <string id="task_ConnectionForceDisconnected" value="ConnectionForceDisconnected"/>
+    <string id="task_ConnectionDisconnectStateCleared" value="ConnectionDisconnectStateCleared"/>
+    <string id="task_NegotiateResponseEncryptionCapabilitiesFailure" value="NegotiateResponseEncryptionCapabilitiesFailure"/>
+    <string id="task_CertificateMappingNotFound" value="CertificateMappingNotFound"/>
+    <string id="task_SessionEstablishedNoisy" value="SessionEstablishedNoisy"/>
+    <string id="task_SessionSetupErrorNoisy" value="SessionSetupErrorNoisy"/>
+    <string id="task_SmbConnectionInitiatedSelectedInfo" value="SmbConnectionInitiatedSelectedInfo"/>
+    <string id="task_HandlePersistenceNotGranted" value="HandlePersistenceNotGranted"/>
+    <string id="task_ServerMultiChannelIncapable" value="ServerMultiChannelIncapable"/>
+    <string id="task_ServerMultiChannelConstraint" value="ServerMultiChannelConstraint"/>
+    <string id="task_RequestRetryFailure" value="RequestRetryFailure"/>
+    <string id="task_MultiChannelDisabled" value="MultiChannelDisabled"/>
+    <string id="task_Smb2Disabled" value="Smb2Disabled"/>
+    <string id="task_RdmaWithSigning" value="RdmaWithSigning"/>
+    <string id="task_RdmaWithEncryption" value="RdmaWithEncryption"/>
+    <string id="task_InvalidCipherSuiteOrder" value="InvalidCipherSuiteOrder"/>
+    <string id="task_RequireSecureNegotiateIsDeprecated" value="RequireSecureNegotiateIsDeprecated"/>
+    <string id="task_IsolatedTransportServerEntryInfo" value="IsolatedTransportServerEntryInfo"/>
+    <string id="task_SmbRdmaRundownActive" value="SmbRdmaRundownActive"/>
+    <string id="task_SmbRdmaRundownComplete" value="SmbRdmaRundownComplete"/>
+    <string id="task_SmbRdmaReactivation" value="SmbRdmaReactivation"/>
+    <string id="task_SmbRdmaReactivationComplete" value="SmbRdmaReactivationComplete"/>
+    <string id="task_SmbRdmaSMBDirectLoad" value="SmbRdmaSMBDirectLoad"/>
+    <string id="task_SmbComponentCapabilities" value="SmbComponentCapabilities"/>
+    <string id="task_SmbInvalidPortSpecified" value="SmbInvalidPortSpecified"/>
+    <string id="task_SmbConnectionInitiatedNotSelectedInfo" value="SmbConnectionInitiatedNotSelectedInfo"/>
+    <string id="task_SmbDialectChange" value="SmbDialectChange"/>
+    <string id="task_AcquireCredHandleFailure" value="AcquireCredHandleFailure"/>
+    <string id="task_ISCFailure" value="ISCFailure"/>
+    <string id="task_NetworkTokenFailure" value="NetworkTokenFailure"/>
+    <string id="task_LMCompatibilityLevel" value="LMCompatibilityLevel"/>
+    <string id="task_TreeConnectFailure" value="TreeConnectFailure"/>
+    <string id="task_NegotiateValidationFailure" value="NegotiateValidationFailure"/>
+    <string id="task_SigningFailure" value="SigningFailure"/>
+    <string id="task_EncryptionFailure" value="EncryptionFailure"/>
+    <string id="task_DecryptionFailure" value="DecryptionFailure"/>
+    <string id="task_EnableSecuritySignatureNonDefault" value="EnableSecuritySignatureNonDefault"/>
+    <string id="task_RejectedInsecureGuestAuth" value="RejectedInsecureGuestAuth"/>
+    <string id="task_InsecureGuestAuthEnabled" value="InsecureGuestAuthEnabled"/>
+    <string id="task_MADowngradeDetected" value="MADowngradeDetected"/>
+    <string id="task_SessionKeyTooShort" value="SessionKeyTooShort"/>
+    <string id="task_DirectDataPlacementSecurity" value="DirectDataPlacementSecurity"/>
+    <string id="task_UnexpectedSMB1ResponseReceived" value="UnexpectedSMB1ResponseReceived"/>
+    <string id="task_SMB1ResponseReceived" value="SMB1ResponseReceived"/>
+    <string id="task_UninstallSMB1Client" value="UninstallSMB1Client"/>
+    <string id="task_PacketFragment" value="PacketFragment"/>
+    <string id="task_Packet" value="Packet"/>
+    <string id="task_TreeConnectError" value="TreeConnectError"/>
+    <string id="task_SmbSuspendBufferCtxt" value="SmbSuspendBufferCtxt"/>
+    <string id="task_SmbLsassCallDurationInfo" value="SmbLsassCallDurationInfo"/>
+    <string id="task_SmbLsassCallDurationWarning" value="SmbLsassCallDurationWarning"/>
+    <string id="task_AllowedInsecureGuestAuth" value="AllowedInsecureGuestAuth"/>
+    <string id="task_ServerDoesNotSupportSigning" value="ServerDoesNotSupportSigning"/>
+    <string id="task_ServerDoesNotSupportEncryption" value="ServerDoesNotSupportEncryption"/>
+    <string id="task_InsecureGuestLogon" value="InsecureGuestLogon"/>
+    <string id="task_MutualAuthServerDeniedAccess" value="MutualAuthServerDeniedAccess"/>
+    <string id="task_ConnectionEstablished" value="ConnectionEstablished"/>
+    <string id="task_NTLMBlocked" value="NTLMBlocked"/>
+    <string id="task_ShareInitialConnectionEstablished" value="ShareInitialConnectionEstablished"/>
+    <string id="task_ServerCertificateRevocationChecksFailed" value="ServerCertificateRevocationChecksFailed"/>
+    <string id="task_ServerAuthenticationFailure" value="ServerAuthenticationFailure"/>
+    <string id="task_TransportIOVisibility" value="TransportIOVisibility"/>
+    <string id="task_RequestedTransportDisabled" value="RequestedTransportDisabled"/>
+    <string id="task_AttemptNewNegotiatedConnection" value="AttemptNewNegotiatedConnection"/>
+    <string id="map_ut:OpcodeMapStart State" value="Start State"/>
+    <string id="map_ut:OpcodeMapEnd State" value="End State"/>
+    <string id="map_ConnectionTypeMapNETBT" value="NETBT"/>
+    <string id="map_ConnectionTypeMapTCPIP" value="TCPIP"/>
+    <string id="map_ConnectionTypeMapRDMA" value="RDMA"/>
+    <string id="map_ConnectionTypeMapVMBUS" value="VMBUS"/>
+    <string id="map_ConnectionTypeMapQUIC" value="QUIC"/>
+    <string id="map_Smb2ObjectStateMapActive" value="Active"/>
+    <string id="map_Smb2ObjectStateMapDisconnected" value="Disconnected"/>
+    <string id="map_Smb2ObjectStateMapSuspended" value="Suspended"/>
+    <string id="map_Smb2ObjectStateMapConstruction in progress" value="Construction in progress"/>
+    <string id="map_Smb2ObjectStateMapRecovery in progress" value="Recovery in progress"/>
+    <string id="map_Smb2ObjectStateMapDisconnect in progress" value="Disconnect in progress"/>
+    <string id="map_Smb2ObjectStateMapInvalidation in progress" value="Invalidation in progress"/>
+    <string id="map_Smb2ObjectStateMapInvalid" value="Invalid"/>
+    <string id="map_Smb2ObjectStateMapDeleted" value="Deleted"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonNotSpecified" value="Smb2DiagReasonNotSpecified"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonDns" value="Smb2DiagReasonDns"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonSetSocketSecurity" value="Smb2DiagReasonSetSocketSecurity"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonIPSec" value="Smb2DiagReasonIPSec"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonNetworkConnect" value="Smb2DiagReasonNetworkConnect"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonNegotiateValidation" value="Smb2DiagReasonNegotiateValidation"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonExchangeExpiry" value="Smb2DiagReasonExchangeExpiry"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonDisconnectIndication" value="Smb2DiagReasonDisconnectIndication"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonNegativeCache" value="Smb2DiagReasonNegativeCache"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonAcquireCredHandle" value="Smb2DiagReasonAcquireCredHandle"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonISC" value="Smb2DiagReasonISC"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonSessionSetupResponse" value="Smb2DiagReasonSessionSetupResponse"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonTreeConnectResponse" value="Smb2DiagReasonTreeConnectResponse"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonValidateNegotiateFsctl" value="Smb2DiagReasonValidateNegotiateFsctl"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonHandleReconnect" value="Smb2DiagReasonHandleReconnect"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonCreateResponse" value="Smb2DiagReasonCreateResponse"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonExchangeCancellation" value="Smb2DiagReasonExchangeCancellation"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonObjectSuspended" value="Smb2DiagReasonObjectSuspended"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonUserDisconnect" value="Smb2DiagReasonUserDisconnect"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonHandleClosed" value="Smb2DiagReasonHandleClosed"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonInternalError" value="Smb2DiagReasonInternalError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonConsecutiveSessionSetupFailures" value="Smb2DiagReasonConsecutiveSessionSetupFailures"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonQuicServerCertificateError" value="Smb2DiagReasonQuicServerCertificateError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonQuicServerConfigFailure" value="Smb2DiagReasonQuicServerConfigFailure"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonQuicServerCertificateValidationError" value="Smb2DiagReasonQuicServerCertificateValidationError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonMADowngrade" value="Smb2DiagReasonMADowngrade"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonCreateSigningKey" value="Smb2DiagReasonCreateSigningKey"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonRegisterCryptoKeys" value="Smb2DiagReasonRegisterCryptoKeys"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonQCA" value="Smb2DiagReasonQCA"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonEncryptionOnNullSession" value="Smb2DiagReasonEncryptionOnNullSession"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonSessionKeyLength" value="Smb2DiagReasonSessionKeyLength"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonExchangeNoBindingObject" value="Smb2DiagReasonExchangeNoBindingObject"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagReasonExchangeSendFailure" value="Smb2DiagReasonExchangeSendFailure"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonReceiveContextAllocation" value="Smb2DiagDisconnectReasonReceiveContextAllocation"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonPaddingAllocation" value="Smb2DiagDisconnectReasonPaddingAllocation"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonExchangeReceiveHandlerError" value="Smb2DiagDisconnectReasonExchangeReceiveHandlerError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageBufferAllocation" value="Smb2DiagDisconnectReasonMessageBufferAllocation"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcEndpointTornDown" value="Smb2DiagDisconnectReasonVcEndpointTornDown"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageSizeReceiveError" value="Smb2DiagDisconnectReasonMessageSizeReceiveError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageSizeTooLargeError" value="Smb2DiagDisconnectReasonMessageSizeTooLargeError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonMessageCopyError" value="Smb2DiagDisconnectReasonMessageCopyError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcReceiveHandlerError" value="Smb2DiagDisconnectReasonVcReceiveHandlerError"/>
+    <string id="map_Smb2DiagReasonMapSmb2DiagDisconnectReasonVcReceiveError" value="Smb2DiagDisconnectReasonVcReceiveError"/>
+    <string id="map_Smb2CommandMapNegotiate" value="Negotiate"/>
+    <string id="map_Smb2CommandMapSession setup" value="Session setup"/>
+    <string id="map_Smb2CommandMapLogoff" value="Logoff"/>
+    <string id="map_Smb2CommandMapTree connect" value="Tree connect"/>
+    <string id="map_Smb2CommandMapTree disconnect" value="Tree disconnect"/>
+    <string id="map_Smb2CommandMapCreate" value="Create"/>
+    <string id="map_Smb2CommandMapClose" value="Close"/>
+    <string id="map_Smb2CommandMapFlush" value="Flush"/>
+    <string id="map_Smb2CommandMapRead" value="Read"/>
+    <string id="map_Smb2CommandMapWrite" value="Write"/>
+    <string id="map_Smb2CommandMapLock" value="Lock"/>
+    <string id="map_Smb2CommandMapIoctl" value="Ioctl"/>
+    <string id="map_Smb2CommandMapCancel" value="Cancel"/>
+    <string id="map_Smb2CommandMapEcho" value="Echo"/>
+    <string id="map_Smb2CommandMapQuery directory" value="Query directory"/>
+    <string id="map_Smb2CommandMapChange notify" value="Change notify"/>
+    <string id="map_Smb2CommandMapQuery info" value="Query info"/>
+    <string id="map_Smb2CommandMapSet info" value="Set info"/>
+    <string id="map_Smb2CommandMapOplock break" value="Oplock break"/>
+    <string id="map_ShareTypeMapSymmetric" value="Symmetric"/>
+    <string id="map_ShareTypeMapAsymmetric" value="Asymmetric"/>
+    <string id="map_Smb2PortSelectionMapThe port was not selected for this transport." value="The port was not selected for this transport."/>
+    <string id="map_Smb2PortSelectionMapThe port was selected from the &lt;server:transport&gt; registry mapping." value="The port was selected from the &lt;server:transport&gt; registry mapping."/>
+    <string id="map_Smb2PortSelectionMapThe port was selected from net use parameters." value="The port was selected from net use parameters."/>
+    <string id="map_Smb2PortSelectionMapThe port was selected from the device instance&apos;s configuration." value="The port was selected from the device instance&apos;s configuration."/>
+    <string id="map_Smb2PortSelectionMapThe port was selected from the global registry settings." value="The port was selected from the global registry settings."/>
+    <string id="map_Smb2PortSelectionMapThe port was selected from the &lt;server:transport&gt; policy mapping." value="The port was selected from the &lt;server:transport&gt; policy mapping."/>
+    <string id="map_IrpMajorFunctionMapIRP_MJ_WRITE" value="IRP_MJ_WRITE"/>
+    <string id="map_SmbComponentCapabilitiesBitmapSupports RDMA via SMBDirect" value="Supports RDMA via SMBDirect"/>
+    <string id="map_SmbComponentCapabilitiesBitmapSupports runtime unlinking from SMBDirect" value="Supports runtime unlinking from SMBDirect"/>
+    <string id="map_SMB2LsassFunctionCallMapInitializeSecurityContextW" value="InitializeSecurityContextW"/>
+    <string id="map_SMB2LsassFunctionCallMapAcquireCredentialsHandleW" value="AcquireCredentialsHandleW"/>
+    <string id="map_AuthProtocolMapNone" value="None"/>
+    <string id="map_AuthProtocolMapNTLM" value="NTLM"/>
+    <string id="map_AuthProtocolMapKerberos" value="Kerberos"/>
+    <string id="map_AuthProtocolMapPKU2U" value="PKU2U"/>
+    <string id="map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Disabled" value="Security Transforms Disabled"/>
+    <string id="map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Enabled" value="Security Transforms Enabled"/>
+    <string id="map_Smb2DirectDataPlacementSecurityMapSecurity Transforms Enabled (Except For Shares Enabled With Isolated Transport)" value="Security Transforms Enabled (Except For Shares Enabled With Isolated Transport)"/>
+    <string id="map_InstanceIdMapRDR_PRIMARY_INSTANCE" value="RDR_PRIMARY_INSTANCE"/>
+    <string id="map_InstanceIdMapRDR_CSV_INSTANCE" value="RDR_CSV_INSTANCE"/>
+    <string id="map_InstanceIdMapRDR_SBL_INSTANCE" value="RDR_SBL_INSTANCE"/>
+    <string id="map_InstanceIdMapRDR_SR_INSTANCE" value="RDR_SR_INSTANCE"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

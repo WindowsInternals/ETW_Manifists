@@ -1,0 +1,123 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Watchdog-Events" guid="{70e74dd8-39db-5f6f-6fd1-f5581b29e834}" resourceFileName="Microsoft-Windows-Watchdog-Events" messageFileName="Microsoft-Windows-Watchdog-Events" symbol="MicrosoftWindowsWatchdogEvents" source="Xml" >
+    <keywords>
+     <keyword name="WdLogAssert" message="$(string.keyword_WdLogAssert)" mask="0x1"/>
+     <keyword name="WdLogError" message="$(string.keyword_WdLogError)" mask="0x2"/>
+     <keyword name="WdLogWarning" message="$(string.keyword_WdLogWarning)" mask="0x4"/>
+     <keyword name="WdLogEvent" message="$(string.keyword_WdLogEvent)" mask="0x8"/>
+     <keyword name="WdLogTrace" message="$(string.keyword_WdLogTrace)" mask="0x10"/>
+     <keyword name="WdLogLowResource" message="$(string.keyword_WdLogLowResource)" mask="0x20"/>
+     <keyword name="WdLogDmmEvent" message="$(string.keyword_WdLogDmmEvent)" mask="0x40"/>
+     <keyword name="WdLogPresentTokenEvent" message="$(string.keyword_WdLogPresentTokenEvent)" mask="0x80"/>
+     <keyword name="WdLogPower" message="$(string.keyword_WdLogPower)" mask="0x100"/>
+     <keyword name="WdLogDebug" message="$(string.keyword_WdLogDebug)" mask="0x200"/>
+     <keyword name="WdLogUnknown" message="$(string.keyword_WdLogUnknown)" mask="0x400"/>
+    </keywords>
+    <tasks>
+     <task name="LogAssert" message="$(string.task_LogAssert)" value="1"/>
+     <task name="LogError" message="$(string.task_LogError)" value="2"/>
+     <task name="LogWarning" message="$(string.task_LogWarning)" value="3"/>
+     <task name="LogEvent" message="$(string.task_LogEvent)" value="4"/>
+     <task name="LogTrace" message="$(string.task_LogTrace)" value="5"/>
+     <task name="LogLowResource" message="$(string.task_LogLowResource)" value="6"/>
+     <task name="LogPresentTokenEvent" message="$(string.task_LogPresentTokenEvent)" value="7"/>
+     <task name="LogDmmEvent" message="$(string.task_LogDmmEvent)" value="8"/>
+     <task name="LogPower" message="$(string.task_LogPower)" value="9"/>
+     <task name="LogDebug" message="$(string.task_LogDebug)" value="10"/>
+     <task name="LogUnknown" message="$(string.task_LogUnknown)" value="11"/>
+    </tasks>
+    <maps>
+     <valueMap name="WdLogLevel">
+      <map value="0x0" message="$(string.map_WdLogLevelCriticalError)"/>
+      <map value="0x1" message="$(string.map_WdLogLevelAssert)"/>
+      <map value="0x2" message="$(string.map_WdLogLevelError)"/>
+      <map value="0x3" message="$(string.map_WdLogLevelWarning)"/>
+      <map value="0x4" message="$(string.map_WdLogLevelEvent)"/>
+      <map value="0x5" message="$(string.map_WdLogLevelTrace)"/>
+      <map value="0x6" message="$(string.map_WdLogLevelLow Resource)"/>
+      <map value="0x7" message="$(string.map_WdLogLevelDmm Event)"/>
+      <map value="0x8" message="$(string.map_WdLogLevelPresent Token Event)"/>
+      <map value="0x9" message="$(string.map_WdLogLevelPower)"/>
+      <map value="0xa" message="$(string.map_WdLogLevelDebug)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="100" symbol="LogAssert" version="0" task="LogAssert" level="win:Always" keywords="WdLogAssert" template="LogAssertArgs"/>
+     <event value="101" symbol="LogError" version="0" task="LogError" level="win:Always" keywords="WdLogError" template="LogErrorArgs"/>
+     <event value="102" symbol="LogWarning" version="0" task="LogWarning" level="win:Always" keywords="WdLogWarning" template="LogErrorArgs"/>
+     <event value="103" symbol="LogEvent" version="0" task="LogEvent" level="win:Always" keywords="WdLogEvent" template="LogErrorArgs"/>
+     <event value="104" symbol="LogTrace" version="0" task="LogTrace" level="win:Always" keywords="WdLogTrace" template="LogErrorArgs"/>
+     <event value="105" symbol="LogLowResource" version="0" task="LogLowResource" level="win:Always" keywords="WdLogLowResource" template="LogErrorArgs"/>
+     <event value="106" symbol="LogDmmEvent" version="0" task="LogDmmEvent" level="win:Always" keywords="WdLogDmmEvent" template="LogErrorArgs"/>
+     <event value="107" symbol="LogPresentTokenEvent" version="0" task="LogPresentTokenEvent" level="win:Always" keywords="WdLogPresentTokenEvent" template="LogErrorArgs"/>
+     <event value="108" symbol="LogPower" version="0" task="LogPower" level="win:Always" keywords="WdLogPower" template="LogErrorArgs"/>
+     <event value="109" symbol="LogDebug" version="0" task="LogDebug" level="win:Always" keywords="WdLogDebug" template="LogErrorArgs"/>
+     <event value="110" symbol="LogUnknown" version="0" task="LogUnknown" level="win:Always" keywords="WdLogUnknown" template="LogErrorArgs"/>
+    </events>
+    <templates>
+     <template tid="LogAssertArgs">
+      <data name="ReturnAddress" inType="win:Pointer"/>
+      <data name="LogEntry" inType="win:UInt32"/>
+      <data name="Level" inType="win:UInt32" map="WdLogLevel"/>
+      <data name="Param1" inType="win:UInt64"/>
+      <data name="Param2" inType="win:UInt64"/>
+      <data name="Param3" inType="win:UInt64"/>
+      <data name="Param4" inType="win:UInt64"/>
+      <data name="Param5" inType="win:UInt64"/>
+     </template>
+     <template tid="LogErrorArgs">
+      <data name="ReturnAddress" inType="win:Pointer"/>
+      <data name="LogEntry" inType="win:UInt32"/>
+      <data name="Level" inType="win:UInt32"/>
+      <data name="Param1" inType="win:UInt64"/>
+      <data name="Param2" inType="win:UInt64"/>
+      <data name="Param3" inType="win:UInt64"/>
+      <data name="Param4" inType="win:UInt64"/>
+      <data name="Param5" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_WdLogAssert" value="WdLogAssert"/>
+    <string id="keyword_WdLogError" value="WdLogError"/>
+    <string id="keyword_WdLogWarning" value="WdLogWarning"/>
+    <string id="keyword_WdLogEvent" value="WdLogEvent"/>
+    <string id="keyword_WdLogTrace" value="WdLogTrace"/>
+    <string id="keyword_WdLogLowResource" value="WdLogLowResource"/>
+    <string id="keyword_WdLogDmmEvent" value="WdLogDmmEvent"/>
+    <string id="keyword_WdLogPresentTokenEvent" value="WdLogPresentTokenEvent"/>
+    <string id="keyword_WdLogPower" value="WdLogPower"/>
+    <string id="keyword_WdLogDebug" value="WdLogDebug"/>
+    <string id="keyword_WdLogUnknown" value="WdLogUnknown"/>
+    <string id="task_LogAssert" value="LogAssert"/>
+    <string id="task_LogError" value="LogError"/>
+    <string id="task_LogWarning" value="LogWarning"/>
+    <string id="task_LogEvent" value="LogEvent"/>
+    <string id="task_LogTrace" value="LogTrace"/>
+    <string id="task_LogLowResource" value="LogLowResource"/>
+    <string id="task_LogPresentTokenEvent" value="LogPresentTokenEvent"/>
+    <string id="task_LogDmmEvent" value="LogDmmEvent"/>
+    <string id="task_LogPower" value="LogPower"/>
+    <string id="task_LogDebug" value="LogDebug"/>
+    <string id="task_LogUnknown" value="LogUnknown"/>
+    <string id="map_WdLogLevelCriticalError" value="CriticalError"/>
+    <string id="map_WdLogLevelAssert" value="Assert"/>
+    <string id="map_WdLogLevelError" value="Error"/>
+    <string id="map_WdLogLevelWarning" value="Warning"/>
+    <string id="map_WdLogLevelEvent" value="Event"/>
+    <string id="map_WdLogLevelTrace" value="Trace"/>
+    <string id="map_WdLogLevelLow Resource" value="Low Resource"/>
+    <string id="map_WdLogLevelDmm Event" value="Dmm Event"/>
+    <string id="map_WdLogLevelPresent Token Event" value="Present Token Event"/>
+    <string id="map_WdLogLevelPower" value="Power"/>
+    <string id="map_WdLogLevelDebug" value="Debug"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

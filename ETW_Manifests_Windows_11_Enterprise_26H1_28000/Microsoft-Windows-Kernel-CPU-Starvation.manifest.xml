@@ -1,0 +1,92 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-CPU-Starvation" guid="{7f54ca8a-6c72-5cbc-b96f-d0ef905b8bce}" resourceFileName="Microsoft-Windows-Kernel-CPU-Starvation" messageFileName="Microsoft-Windows-Kernel-CPU-Starvation" symbol="MicrosoftWindowsKernelCPUStarvation" source="Xml" >
+    <keywords>
+     <keyword name="DpcSoftTimeout" message="$(string.keyword_DpcSoftTimeout)" mask="0x1"/>
+     <keyword name="DpcProfiling" message="$(string.keyword_DpcProfiling)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="DPCSoftTimeout" message="$(string.task_DPCSoftTimeout)" value="1">
+>
+      <opcodes>
+       <opcode name="SingleDPCSoftTimeoutReached" message="$(string.opcode_DPCSoftTimeoutSingleDPCSoftTimeoutReached)" value="11"/>
+       <opcode name="CumulativeDPCSoftTimeoutReached" message="$(string.opcode_DPCSoftTimeoutCumulativeDPCSoftTimeoutReached)" value="12"/>
+      </opcodes>
+     </task>
+     <task name="DPCProfiling" message="$(string.task_DPCProfiling)" value="2">
+>
+      <opcodes>
+       <opcode name="DPCProfilingThresholdReached" message="$(string.opcode_DPCProfilingDPCProfilingThresholdReached)" value="13"/>
+       <opcode name="DPCProfilingStackCapture" message="$(string.opcode_DPCProfilingDPCProfilingStackCapture)" value="14"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="DpcProfilingStackBeginReasonMap">
+      <map value="0x0" message="$(string.map_DpcProfilingStackBeginReasonMapcumulative execution)"/>
+      <map value="0x1" message="$(string.map_DpcProfilingStackBeginReasonMapsingle Dpc execution)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="DPCSoftTimeoutSingleDPCSoftTimeoutReached" version="0" task="DPCSoftTimeout" opcode="SingleDPCSoftTimeoutReached" level="win:Warning" keywords="DpcSoftTimeout" template="DPCSoftTimeoutSingleDPCSoftTimeoutReachedArgs"/>
+     <event value="2" symbol="DPCSoftTimeoutCumulativeDPCSoftTimeoutReached" version="0" task="DPCSoftTimeout" opcode="CumulativeDPCSoftTimeoutReached" level="win:Warning" keywords="DpcSoftTimeout" template="DPCSoftTimeoutCumulativeDPCSoftTimeoutReachedArgs"/>
+     <event value="3" symbol="DPCProfilingDPCProfilingThresholdReached_V1" version="1" task="DPCProfiling" opcode="DPCProfilingThresholdReached" level="win:Warning" keywords="DpcProfiling" template="DPCProfilingDPCProfilingThresholdReachedArgs_V1"/>
+     <event value="3" symbol="DPCProfilingDPCProfilingThresholdReached_V2" version="2" task="DPCProfiling" opcode="DPCProfilingThresholdReached" level="win:Warning" keywords="DpcProfiling" template="DPCProfilingDPCProfilingThresholdReachedArgs_V2"/>
+     <event value="4" symbol="DPCProfilingDPCProfilingStackCapture" version="0" task="DPCProfiling" opcode="DPCProfilingStackCapture" level="win:Warning" keywords="DpcProfiling" template="DPCProfilingDPCProfilingStackCaptureArgs"/>
+    </events>
+    <templates>
+     <template tid="DPCSoftTimeoutSingleDPCSoftTimeoutReachedArgs">
+      <data name="DpcRoutineKey" inType="win:Pointer"/>
+      <data name="ThreadID" inType="win:UInt32"/>
+      <data name="CpuNumber" inType="win:UInt32"/>
+      <data name="TickCount" inType="win:UInt32"/>
+      <data name="SoftTimeoutTicks" inType="win:UInt32"/>
+      <data name="ModuleNameLength" inType="win:UInt16"/>
+      <data name="ModuleName" inType="win:UnicodeString" length="ModuleNameLength"/>
+     </template>
+     <template tid="DPCSoftTimeoutCumulativeDPCSoftTimeoutReachedArgs">
+      <data name="ThreadID" inType="win:UInt32"/>
+      <data name="CpuNumber" inType="win:UInt32"/>
+      <data name="CumulativeTickCount" inType="win:UInt32"/>
+      <data name="CumulativeSoftTimeoutTicks" inType="win:UInt32"/>
+     </template>
+     <template tid="DPCProfilingDPCProfilingStackCaptureArgs">
+      <data name="DpcSequenceNumber" inType="win:UInt32"/>
+      <data name="Tick" inType="win:UInt32"/>
+     </template>
+     <template tid="DPCProfilingDPCProfilingThresholdReachedArgs_V1">
+      <data name="ThreadID" inType="win:UInt32"/>
+      <data name="CpuNumber" inType="win:UInt32"/>
+      <data name="DpcSequenceNumber" inType="win:UInt32"/>
+      <data name="ThresholdTicks" inType="win:UInt32"/>
+      <data name="Cumulative" inType="win:UInt8"/>
+     </template>
+     <template tid="DPCProfilingDPCProfilingThresholdReachedArgs_V2">
+      <data name="DpcSequenceNumber" inType="win:UInt32"/>
+      <data name="ThresholdTicks" inType="win:UInt32"/>
+      <data name="SingleTickCount" inType="win:UInt32"/>
+      <data name="CumulativeTickCount" inType="win:UInt32"/>
+      <data name="Cause" inType="win:UInt32" map="DpcProfilingStackBeginReasonMap"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_DpcSoftTimeout" value="DpcSoftTimeout"/>
+    <string id="keyword_DpcProfiling" value="DpcProfiling"/>
+    <string id="task_DPCSoftTimeout" value="DPCSoftTimeout"/>
+    <string id="opcode_DPCSoftTimeoutSingleDPCSoftTimeoutReached" value="SingleDPCSoftTimeoutReached"/>
+    <string id="opcode_DPCSoftTimeoutCumulativeDPCSoftTimeoutReached" value="CumulativeDPCSoftTimeoutReached"/>
+    <string id="task_DPCProfiling" value="DPCProfiling"/>
+    <string id="opcode_DPCProfilingDPCProfilingThresholdReached" value="DPCProfilingThresholdReached"/>
+    <string id="opcode_DPCProfilingDPCProfilingStackCapture" value="DPCProfilingStackCapture"/>
+    <string id="map_DpcProfilingStackBeginReasonMapcumulative execution" value="cumulative execution"/>
+    <string id="map_DpcProfilingStackBeginReasonMapsingle Dpc execution" value="single Dpc execution"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

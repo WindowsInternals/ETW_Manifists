@@ -1,0 +1,141 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PCRPF" guid="{5909c524-5e57-5275-803f-ddb7b74c52f2}" resourceFileName="Microsoft-Windows-PCRPF" messageFileName="Microsoft-Windows-PCRPF" symbol="MicrosoftWindowsPCRPF" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="TransformTimelineMap">
+      <map value="0x0" message="$(string.map_TransformTimelineMapFinal)"/>
+      <map value="0x1" message="$(string.map_TransformTimelineMapImminent)"/>
+      <map value="0x2" message="$(string.map_TransformTimelineMapAnticipated)"/>
+     </valueMap>
+     <valueMap name="SubscriberNotificationScenarioMap">
+      <map value="0x0" message="$(string.map_SubscriberNotificationScenarioMapStageTransform)"/>
+      <map value="0x1" message="$(string.map_SubscriberNotificationScenarioMapCancelTransform)"/>
+      <map value="0x2" message="$(string.map_SubscriberNotificationScenarioMapCleanupTransform)"/>
+      <map value="0x3" message="$(string.map_SubscriberNotificationScenarioMapRollback)"/>
+     </valueMap>
+     <bitMap name="TpmPcrBitmapMap">
+      <map value="0x1" message="$(string.map_TpmPcrBitmapMap0)"/>
+      <map value="0x2" message="$(string.map_TpmPcrBitmapMap1)"/>
+      <map value="0x4" message="$(string.map_TpmPcrBitmapMap2)"/>
+      <map value="0x8" message="$(string.map_TpmPcrBitmapMap3)"/>
+      <map value="0x10" message="$(string.map_TpmPcrBitmapMap4)"/>
+      <map value="0x20" message="$(string.map_TpmPcrBitmapMap5)"/>
+      <map value="0x40" message="$(string.map_TpmPcrBitmapMap6)"/>
+      <map value="0x80" message="$(string.map_TpmPcrBitmapMap7)"/>
+      <map value="0x100" message="$(string.map_TpmPcrBitmapMap8)"/>
+      <map value="0x200" message="$(string.map_TpmPcrBitmapMap9)"/>
+      <map value="0x400" message="$(string.map_TpmPcrBitmapMap10)"/>
+      <map value="0x800" message="$(string.map_TpmPcrBitmapMap11)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="257" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="258" symbol="task_0258" version="0" task="task_0" level="win:Informational" template="task_0258Args"/>
+     <event value="259" symbol="task_0259" version="0" task="task_0" level="win:Error" template="task_0259Args"/>
+     <event value="260" symbol="task_0260" version="0" task="task_0" level="win:Informational" template="task_0260Args"/>
+     <event value="261" symbol="task_0261" version="0" task="task_0" level="win:Informational" template="task_0258Args"/>
+     <event value="262" symbol="task_0262" version="0" task="task_0" level="win:Error" template="task_0259Args"/>
+     <event value="263" symbol="task_0263" version="0" task="task_0" level="win:Informational" template="task_0263Args"/>
+     <event value="264" symbol="task_0264" version="0" task="task_0" level="win:Error" template="task_0264Args"/>
+     <event value="265" symbol="task_0265" version="0" task="task_0" level="win:Informational" template="task_0265Args"/>
+     <event value="266" symbol="task_0266" version="0" task="task_0" level="win:Informational" template="task_0266Args"/>
+     <event value="267" symbol="task_0267" version="0" task="task_0" level="win:Informational" template="task_0267Args"/>
+     <event value="268" symbol="task_0268" version="0" task="task_0" level="win:Informational"/>
+     <event value="269" symbol="task_0269" version="0" task="task_0" level="win:Error" template="task_0269Args"/>
+     <event value="270" symbol="task_0270" version="0" task="task_0" level="win:Error" template="task_0270Args"/>
+     <event value="271" symbol="task_0271" version="0" task="task_0" level="win:Informational" template="task_0258Args"/>
+     <event value="272" symbol="task_0272" version="0" task="task_0" level="win:Informational" template="task_0272Args"/>
+     <event value="273" symbol="task_0273" version="0" task="task_0" level="win:Informational" template="task_0272Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="TransformName" inType="win:UnicodeString"/>
+      <data name="TransformTimeline" inType="win:UInt32" map="TransformTimelineMap"/>
+     </template>
+     <template tid="task_0258Args">
+      <data name="TransformName" inType="win:UnicodeString"/>
+      <data name="TransformTimeline" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0259Args">
+      <data name="TransformName" inType="win:UnicodeString"/>
+      <data name="TransformTimeline" inType="win:UInt32"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0260Args">
+      <data name="TransformName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0263Args">
+      <data name="SubscriberName" inType="win:UnicodeString"/>
+      <data name="SubscriberNotificationScenario" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0264Args">
+      <data name="SubscriberName" inType="win:UnicodeString"/>
+      <data name="SubscriberNotificationScenario" inType="win:UInt32" map="SubscriberNotificationScenarioMap"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0265Args">
+      <data name="NumberOfPredictions" inType="win:UInt32"/>
+      <data name="TransformList" inType="win:UnicodeString"/>
+      <data name="PcrBitmap" inType="win:UInt32" map="TpmPcrBitmapMap"/>
+      <data name="USN" inType="win:UInt64"/>
+      <data name="CurrentBootMatchingPcrsBitmap" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0266Args">
+      <data name="DeviceDesc" inType="win:UnicodeString"/>
+      <data name="DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="FirmwareResourceId" inType="win:UnicodeString"/>
+      <data name="MeasurementsFilename" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0267Args">
+      <data name="FirmwarePcrChangeMask" inType="win:UInt32"/>
+      <data name="DeviceDesc" inType="win:UnicodeString"/>
+      <data name="DeviceInstanceId" inType="win:UnicodeString"/>
+      <data name="FirmwareResourceId" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0269Args">
+      <data name="ActivityName" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0270Args">
+      <data name="ErrorCode" inType="win:Int32"/>
+     </template>
+     <template tid="task_0272Args">
+      <data name="USN" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_TransformTimelineMapFinal" value="Final"/>
+    <string id="map_TransformTimelineMapImminent" value="Imminent"/>
+    <string id="map_TransformTimelineMapAnticipated" value="Anticipated"/>
+    <string id="map_SubscriberNotificationScenarioMapStageTransform" value="StageTransform"/>
+    <string id="map_SubscriberNotificationScenarioMapCancelTransform" value="CancelTransform"/>
+    <string id="map_SubscriberNotificationScenarioMapCleanupTransform" value="CleanupTransform"/>
+    <string id="map_SubscriberNotificationScenarioMapRollback" value="Rollback"/>
+    <string id="map_TpmPcrBitmapMap0" value="0"/>
+    <string id="map_TpmPcrBitmapMap1" value="1"/>
+    <string id="map_TpmPcrBitmapMap2" value="2"/>
+    <string id="map_TpmPcrBitmapMap3" value="3"/>
+    <string id="map_TpmPcrBitmapMap4" value="4"/>
+    <string id="map_TpmPcrBitmapMap5" value="5"/>
+    <string id="map_TpmPcrBitmapMap6" value="6"/>
+    <string id="map_TpmPcrBitmapMap7" value="7"/>
+    <string id="map_TpmPcrBitmapMap8" value="8"/>
+    <string id="map_TpmPcrBitmapMap9" value="9"/>
+    <string id="map_TpmPcrBitmapMap10" value="10"/>
+    <string id="map_TpmPcrBitmapMap11" value="11"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

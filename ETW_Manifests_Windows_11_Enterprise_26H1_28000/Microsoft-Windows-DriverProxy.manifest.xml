@@ -1,0 +1,55 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DriverProxy" guid="{45c0e4cb-5120-5f84-0418-8a18ed702e9a}" resourceFileName="Microsoft-Windows-DriverProxy" messageFileName="Microsoft-Windows-DriverProxy" symbol="MicrosoftWindowsDriverProxy" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="Serviceability" message="$(string.task_Serviceability)" value="1"/>
+     <task name="Performance" message="$(string.task_Performance)" value="2"/>
+     <task name="Log" message="$(string.task_Log)" value="3"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="Serviceability" version="0" task="Serviceability" level="win:Informational" template="ServiceabilityArgs"/>
+     <event value="2" symbol="Performance" version="0" task="Performance" level="win:Informational" template="PerformanceArgs"/>
+     <event value="3" symbol="Log" version="0" task="Log" level="win:Informational" template="LogArgs"/>
+    </events>
+    <templates>
+     <template tid="ServiceabilityArgs">
+      <data name="DriverNameLength" inType="win:UInt16"/>
+      <data name="Driver" inType="win:UnicodeString" length="DriverNameLength"/>
+      <data name="AvgServiceLockAcquisitionTimeInLastLogPeriodInMicroSeconds" inType="win:UInt64"/>
+      <data name="AvgServiceLockAcquisitionTimeInMicroSeconds" inType="win:UInt64"/>
+      <data name="TotalAcquisitionCount" inType="win:UInt32"/>
+      <data name="FailedAcquisitionCount" inType="win:UInt32"/>
+     </template>
+     <template tid="PerformanceArgs">
+      <data name="DriverNameLength" inType="win:UInt16"/>
+      <data name="Driver" inType="win:UnicodeString" length="DriverNameLength"/>
+      <data name="LastServiceStatus" inType="win:HexInt32"/>
+      <data name="LastServiceFinalPhase" inType="win:UInt32"/>
+      <data name="LastServiceLockAcquisitionTimeTotalInMicroSeconds" inType="win:UInt64"/>
+      <data name="LastServiceLockAcquisitionTimePreProcessPhaseInMicroSeconds" inType="win:UInt64"/>
+      <data name="LastServiceLockAcquisitionTimeAcquireRundownPhaseInMicroSeconds" inType="win:UInt64"/>
+      <data name="LastServiceLockAcquisitionTimeStalledPhaseInMicroSeconds" inType="win:UInt64"/>
+      <data name="LastServiceLockAcquisitionTimePostProcessPhaseInMicroSeconds" inType="win:UInt64"/>
+     </template>
+     <template tid="LogArgs">
+      <data name="DriverNameLength" inType="win:UInt16"/>
+      <data name="Driver" inType="win:UnicodeString" length="DriverNameLength"/>
+      <data name="Message" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_Serviceability" value="Serviceability"/>
+    <string id="task_Performance" value="Performance"/>
+    <string id="task_Log" value="Log"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>
