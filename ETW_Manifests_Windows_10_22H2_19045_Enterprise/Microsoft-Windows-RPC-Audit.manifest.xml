@@ -1,0 +1,64 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-RPC-Audit" guid="{3c578d57-f85a-5fc9-dea0-8c663ccff942}" resourceFileName="Microsoft-Windows-RPC-Audit" messageFileName="Microsoft-Windows-RPC-Audit" symbol="MicrosoftWindowsRPCAudit" source="Xml" >
+    <keywords>
+     <keyword name="Success" message="$(string.keyword_Success)" mask="0x1"/>
+     <keyword name="Fail" message="$(string.keyword_Fail)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" keywords="Success" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" keywords="Fail" template="task_02Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="InterfaceUuid" inType="win:GUID"/>
+      <data name="OpNum" inType="win:UInt32"/>
+      <data name="SubjectUserSid" inType="win:SID"/>
+      <data name="SubjectLogonId" inType="win:UInt64"/>
+      <data name="LocalIpAddressLength" inType="win:UInt32"/>
+      <data name="LocalIpAddress" inType="win:Binary" length="LocalIpAddressLength"/>
+      <data name="RemoteIpAddressLength" inType="win:UInt32"/>
+      <data name="RemoteIpAddress" inType="win:Binary" length="RemoteIpAddressLength"/>
+      <data name="ProtocolSequence" inType="win:UInt32"/>
+      <data name="AuthenticationService" inType="win:UInt32"/>
+      <data name="AuthenticationLevel" inType="win:UInt32"/>
+      <data name="Endpoint" inType="win:UnicodeString"/>
+      <data name="RemoteHost" inType="win:UnicodeString"/>
+      <data name="BufferSize" inType="win:UInt32"/>
+      <data name="Buffer" inType="win:Binary" length="BufferSize"/>
+     </template>
+     <template tid="task_02Args">
+      <data name="InterfaceUuid" inType="win:GUID"/>
+      <data name="OpNum" inType="win:UInt32"/>
+      <data name="SubjectUserSid" inType="win:SID"/>
+      <data name="SubjectLogonId" inType="win:UInt64"/>
+      <data name="LocalIpAddressLength" inType="win:UInt32"/>
+      <data name="LocalIpAddress" inType="win:Binary" length="LocalIpAddressLength"/>
+      <data name="RemoteIpAddressLength" inType="win:UInt32"/>
+      <data name="RemoteIpAddress" inType="win:Binary" length="RemoteIpAddressLength"/>
+      <data name="ProtocolSequence" inType="win:UInt32"/>
+      <data name="AuthenticationService" inType="win:UInt32"/>
+      <data name="AuthenticationLevel" inType="win:UInt32"/>
+      <data name="Endpoint" inType="win:UnicodeString"/>
+      <data name="RemoteHost" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="IsBlockedByWFP" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Success" value="Success"/>
+    <string id="keyword_Fail" value="Fail"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

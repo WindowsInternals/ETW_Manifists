@@ -13,7 +13,7 @@ if ($BuildNumber -ge 22000) {
 
 # Configuration using script root directory
 $ScriptDir = $PSScriptRoot
-$FolderName = "ETW_Manifests_$($RealOSName)_$($EditionID)_$($DisplayVersion)_$($BuildNumber)"
+$FolderName = "ETW_Manifests_$($RealOSName)_$($DisplayVersion)_$($BuildNumber)_$($EditionID)"
 $OutputDir = Join-Path $ScriptDir $FolderName
 $ProvidersFile = Join-Path $OutputDir "providers_list.txt"
 $PerfViewPath = Join-Path $ScriptDir "PerfView.exe"

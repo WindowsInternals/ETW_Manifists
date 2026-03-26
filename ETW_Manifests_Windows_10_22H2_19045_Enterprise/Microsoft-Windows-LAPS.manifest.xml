@@ -1,0 +1,177 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-LAPS" guid="{4fcc72a9-d7ca-5dd2-8d34-6f41a0cdb7e0}" resourceFileName="Microsoft-Windows-LAPS" messageFileName="Microsoft-Windows-LAPS" symbol="MicrosoftWindowsLAPS" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="10000" symbol="task_0" version="0" task="task_0" level="win:Informational"/>
+     <event value="10001" symbol="task_010001" version="0" task="task_0" level="win:Error"/>
+     <event value="10002" symbol="task_010002" version="0" task="task_0" level="win:Informational"/>
+     <event value="10003" symbol="task_010003" version="0" task="task_0" level="win:Informational"/>
+     <event value="10004" symbol="task_010004" version="0" task="task_0" level="win:Informational"/>
+     <event value="10005" symbol="task_010005" version="0" task="task_0" level="win:Informational" template="task_010005Args"/>
+     <event value="10006" symbol="task_010006" version="0" task="task_0" level="win:Error"/>
+     <event value="10007" symbol="task_010007" version="0" task="task_0" level="win:Warning"/>
+     <event value="10008" symbol="task_010008" version="0" task="task_0" level="win:Warning"/>
+     <event value="10009" symbol="task_010009" version="0" task="task_0" level="win:Informational"/>
+     <event value="10010" symbol="task_010010" version="0" task="task_0" level="win:Informational"/>
+     <event value="10011" symbol="task_010011" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10012" symbol="task_010012" version="0" task="task_0" level="win:Informational"/>
+     <event value="10013" symbol="task_010013" version="0" task="task_0" level="win:Error" template="task_010013Args"/>
+     <event value="10014" symbol="task_010014" version="0" task="task_0" level="win:Informational"/>
+     <event value="10015" symbol="task_010015" version="0" task="task_0" level="win:Informational" template="task_010015Args"/>
+     <event value="10016" symbol="task_010016" version="0" task="task_0" level="win:Informational"/>
+     <event value="10017" symbol="task_010017" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10018" symbol="task_010018" version="0" task="task_0" level="win:Informational"/>
+     <event value="10019" symbol="task_010019" version="0" task="task_0" level="win:Error" template="task_010019Args"/>
+     <event value="10020" symbol="task_010020" version="0" task="task_0" level="win:Informational" template="task_010013Args"/>
+     <event value="10021" symbol="task_010021" version="0" task="task_0" level="win:Informational" template="task_010021Args"/>
+     <event value="10022" symbol="task_010022" version="0" task="task_0" level="win:Informational" template="task_010022Args"/>
+     <event value="10023" symbol="task_010023" version="0" task="task_0" level="win:Informational" template="task_010023Args"/>
+     <event value="10024" symbol="task_010024" version="0" task="task_0" level="win:Informational"/>
+     <event value="10025" symbol="task_010025" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10026" symbol="task_010026" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10027" symbol="task_010027" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10028" symbol="task_010028" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10029" symbol="task_010029" version="0" task="task_0" level="win:Informational"/>
+     <event value="10030" symbol="task_010030" version="0" task="task_0" level="win:Informational" template="task_010030Args"/>
+     <event value="10031" symbol="task_010031" version="0" task="task_0" level="win:Warning" template="task_010013Args"/>
+     <event value="10032" symbol="task_010032" version="0" task="task_0" level="win:Error" template="task_010032Args"/>
+     <event value="10033" symbol="task_010033" version="0" task="task_0" level="win:Warning"/>
+     <event value="10034" symbol="task_010034" version="0" task="task_0" level="win:Error" template="task_010030Args"/>
+     <event value="10035" symbol="task_010035" version="0" task="task_0" level="win:Error" template="task_010030Args"/>
+     <event value="10036" symbol="task_010036" version="0" task="task_0" level="win:Error" template="task_010030Args"/>
+     <event value="10037" symbol="task_010037" version="0" task="task_0" level="win:Error"/>
+     <event value="10038" symbol="task_010038" version="0" task="task_0" level="win:Error" template="task_010019Args"/>
+     <event value="10039" symbol="task_010039" version="0" task="task_0" level="win:Informational" template="task_010013Args"/>
+     <event value="10040" symbol="task_010040" version="0" task="task_0" level="win:Warning" template="task_010005Args"/>
+     <event value="10041" symbol="task_010041" version="0" task="task_0" level="win:Informational" template="task_010041Args"/>
+     <event value="10042" symbol="task_010042" version="0" task="task_0" level="win:Informational" template="task_010013Args"/>
+     <event value="10043" symbol="task_010043" version="0" task="task_0" level="win:Warning" template="task_010043Args"/>
+     <event value="10044" symbol="task_010044" version="0" task="task_0" level="win:Informational" template="task_010013Args"/>
+     <event value="10045" symbol="task_010045" version="0" task="task_0" level="win:Warning" template="task_010013Args"/>
+     <event value="10046" symbol="task_010046" version="0" task="task_0" level="win:Informational" template="task_010013Args"/>
+     <event value="10047" symbol="task_010047" version="0" task="task_0" level="win:Informational"/>
+     <event value="10048" symbol="task_010048" version="0" task="task_0" level="win:Error"/>
+     <event value="10049" symbol="task_010049" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10050" symbol="task_010050" version="0" task="task_0" level="win:Informational"/>
+     <event value="10051" symbol="task_010051" version="0" task="task_0" level="win:Informational"/>
+     <event value="10052" symbol="task_010052" version="0" task="task_0" level="win:Informational"/>
+     <event value="10053" symbol="task_010053" version="0" task="task_0" level="win:Informational"/>
+     <event value="10054" symbol="task_010054" version="0" task="task_0" level="win:Informational"/>
+     <event value="10055" symbol="task_010055" version="0" task="task_0" level="win:Informational" template="task_010030Args"/>
+     <event value="10056" symbol="task_010056" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="10057" symbol="task_010057" version="0" task="task_0" level="win:Error" template="task_010013Args"/>
+     <event value="10058" symbol="task_010058" version="0" task="task_0" level="win:Warning" template="task_010058Args"/>
+     <event value="10059" symbol="task_010059" version="0" task="task_0" level="win:Error" template="task_010059Args"/>
+     <event value="10060" symbol="task_010060" version="0" task="task_0" level="win:Warning"/>
+     <event value="10061" symbol="task_010061" version="0" task="task_0" level="win:Warning"/>
+     <event value="10062" symbol="task_010062" version="0" task="task_0" level="win:Warning"/>
+     <event value="10063" symbol="task_010063" version="0" task="task_0" level="win:Warning"/>
+     <event value="10064" symbol="task_010064" version="0" task="task_0" level="win:Warning"/>
+     <event value="10065" symbol="task_010065" version="0" task="task_0" level="win:Error" template="task_010030Args"/>
+     <event value="10066" symbol="task_010066" version="0" task="task_0" level="win:Error" template="task_010030Args"/>
+     <event value="10067" symbol="task_010067" version="0" task="task_0" level="win:Warning" template="task_010013Args"/>
+     <event value="10068" symbol="task_010068" version="0" task="task_0" level="win:Informational"/>
+     <event value="10069" symbol="task_010069" version="0" task="task_0" level="win:Informational"/>
+     <event value="10070" symbol="task_010070" version="0" task="task_0" level="win:Informational"/>
+     <event value="10071" symbol="task_010071" version="0" task="task_0" level="win:Informational"/>
+     <event value="10072" symbol="task_010072" version="0" task="task_0" level="win:Error" template="task_010005Args"/>
+     <event value="20000" symbol="task_020000" version="0" task="task_0" level="win:Warning"/>
+    </events>
+    <templates>
+     <template tid="task_010005Args">
+      <data name="Data1" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010013Args">
+      <data name="Data1" inType="win:UnicodeString"/>
+      <data name="Data2" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010015Args">
+      <data name="Data1" inType="win:HexInt32"/>
+      <data name="Data2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010019Args">
+      <data name="Data1" inType="win:UnicodeString"/>
+      <data name="Data2" inType="win:HexInt32"/>
+      <data name="Data3" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010021Args">
+      <data name="PolicySource" inType="win:UnicodeString"/>
+      <data name="BackupDirectory" inType="win:UnicodeString"/>
+      <data name="AdminAccountName" inType="win:UnicodeString"/>
+      <data name="PasswordAgeDays" inType="win:Int32"/>
+      <data name="PasswordComplexity" inType="win:Int32"/>
+      <data name="PasswordLength" inType="win:Int32"/>
+      <data name="PasswordExpirationProtectionEnabled" inType="win:Int32"/>
+      <data name="PasswordEncryptionEnabled" inType="win:Int32"/>
+      <data name="PasswordEncryptionTargetPrincipal" inType="win:UnicodeString"/>
+      <data name="PasswordEncryptionHistorySize" inType="win:Int32"/>
+      <data name="BackupDSRMPassword" inType="win:Int32"/>
+      <data name="PostAuthResetDelay" inType="win:Int32"/>
+      <data name="PostAuthActions" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010022Args">
+      <data name="PolicySource" inType="win:UnicodeString"/>
+      <data name="BackupDirectory" inType="win:UnicodeString"/>
+      <data name="AdminAccountName" inType="win:UnicodeString"/>
+      <data name="PasswordAgeDays" inType="win:Int32"/>
+      <data name="PasswordComplexity" inType="win:Int32"/>
+      <data name="PasswordLength" inType="win:Int32"/>
+      <data name="PostAuthResetDelay" inType="win:Int32"/>
+      <data name="PostAuthActions" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010023Args">
+      <data name="PolicySource" inType="win:UnicodeString"/>
+      <data name="BackupDirectory" inType="win:UnicodeString"/>
+      <data name="AdminAccountName" inType="win:UnicodeString"/>
+      <data name="PasswordAgeDays" inType="win:Int32"/>
+      <data name="PasswordComplexity" inType="win:Int32"/>
+      <data name="PasswordLength" inType="win:Int32"/>
+      <data name="PasswordExpirationProtectionEnabled" inType="win:Int32"/>
+     </template>
+     <template tid="task_010030Args">
+      <data name="Data1" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010032Args">
+      <data name="Data1" inType="win:HexInt32"/>
+      <data name="Data2" inType="win:UnicodeString"/>
+      <data name="Data3" inType="win:HexInt32"/>
+      <data name="Data4" inType="win:HexInt32"/>
+      <data name="Data5" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_010041Args">
+      <data name="Data1" inType="win:UnicodeString"/>
+      <data name="Data2" inType="win:HexInt32"/>
+      <data name="Data3" inType="win:FILETIME"/>
+     </template>
+     <template tid="task_010043Args">
+      <data name="Data1" inType="win:UnicodeString"/>
+      <data name="Data2" inType="win:HexInt32"/>
+      <data name="Data3" inType="win:Int32"/>
+      <data name="Data4" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_010058Args">
+      <data name="Data1" inType="win:Int32"/>
+      <data name="Data2" inType="win:Int32"/>
+     </template>
+     <template tid="task_010059Args">
+      <data name="Data1" inType="win:Int32"/>
+      <data name="Data2" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

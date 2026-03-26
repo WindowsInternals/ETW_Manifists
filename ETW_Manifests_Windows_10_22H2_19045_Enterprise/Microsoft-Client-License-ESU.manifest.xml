@@ -1,0 +1,87 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Client-License-ESU" guid="{b714b892-f158-5534-4459-c019aff66d48}" resourceFileName="Microsoft-Client-License-ESU" messageFileName="Microsoft-Client-License-ESU" symbol="MicrosoftClientLicenseESU" source="Xml" >
+    <keywords>
+     <keyword name="CLIPESU_KEYWORD" message="$(string.keyword_CLIPESU_KEYWORD)" mask="0x1"/>
+     <keyword name="CLIPESU_PERF_KEYWORD" message="$(string.keyword_CLIPESU_PERF_KEYWORD)" mask="0x2"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="100" symbol="task_0" version="0" task="task_0" level="win:Error"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Warning"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Error" template="task_0105Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" template="task_0105Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Error" template="task_0107Args"/>
+     <event value="108" symbol="task_0108" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Informational" template="task_0102Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Error" template="task_0110Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Informational" template="task_0111Args"/>
+     <event value="112" symbol="task_0112" version="0" task="task_0" level="win:Error" template="task_0105Args"/>
+     <event value="113" symbol="task_0113" version="0" task="task_0" level="win:Informational" template="task_0111Args"/>
+     <event value="114" symbol="task_0114" version="0" task="task_0" level="win:Error" template="task_0111Args"/>
+     <event value="115" symbol="task_0115" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="116" symbol="task_0116" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="117" symbol="task_0117" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="118" symbol="task_0118" version="0" task="task_0" level="win:Informational" template="task_0102Args"/>
+     <event value="119" symbol="task_0119" version="0" task="task_0" level="win:Informational" template="task_0102Args"/>
+     <event value="120" symbol="task_0120" version="0" task="task_0" level="win:Error"/>
+     <event value="121" symbol="task_0121" version="0" task="task_0" level="win:Informational"/>
+     <event value="122" symbol="task_0122" version="0" task="task_0" level="win:Informational"/>
+     <event value="123" symbol="task_0123" version="0" task="task_0" level="win:Informational"/>
+     <event value="124" symbol="task_0124" version="0" task="task_0" level="win:Informational"/>
+     <event value="125" symbol="task_0125" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="126" symbol="task_0126" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="127" symbol="task_0127" version="0" task="task_0" level="win:Informational"/>
+     <event value="128" symbol="task_0128" version="0" task="task_0" level="win:Informational"/>
+     <event value="129" symbol="task_0129" version="0" task="task_0" level="win:Informational" template="task_0104Args"/>
+     <event value="130" symbol="task_0130" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="131" symbol="task_0131" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="132" symbol="task_0132" version="0" task="task_0" level="win:Error" template="task_0102Args"/>
+     <event value="133" symbol="task_0133" version="0" task="task_0" level="win:Informational"/>
+    </events>
+    <templates>
+     <template tid="task_0102Args">
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="string" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="string" inType="win:UnicodeString"/>
+      <data name="HRESULT" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0107Args">
+      <data name="UInt1" inType="win:UInt32"/>
+      <data name="UInt2" inType="win:UInt32"/>
+      <data name="HRESULT" inType="win:HexInt32"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="HRESULT" inType="win:HexInt32"/>
+      <data name="UInt1" inType="win:UInt32"/>
+      <data name="UInt2" inType="win:UInt32"/>
+      <data name="string" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0111Args">
+      <data name="UInt" inType="win:UInt32"/>
+      <data name="string" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_CLIPESU_KEYWORD" value="CLIPESU_KEYWORD"/>
+    <string id="keyword_CLIPESU_PERF_KEYWORD" value="CLIPESU_PERF_KEYWORD"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>
